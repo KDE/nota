@@ -13,8 +13,8 @@
 
 #ifdef STATIC_MAUIKIT
 #include "./mauikit/src/mauikit.h"
-
 #endif
+
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
