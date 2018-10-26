@@ -4,6 +4,8 @@ import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 
+import FMList 1.0
+
 Maui.ApplicationWindow
 {
     id: root
@@ -22,13 +24,20 @@ Maui.ApplicationWindow
     Maui.FileDialog
     {
         id: fileDialog
+        onlyDirs: false
+        filterType: FMList.IMAGE
+        sortBy: FMList.MIME
+        multipleSelection: true
     }
 
     headBar.leftContent: [
         Maui.ToolButton
         {
             iconName: "document-open"
-            onClicked: fileDialog.show()
+            onClicked: fileDialog.show(function (paths)
+            {
+                console.log("CALLBACK", paths)
+            })
         },
         Maui.ToolButton
         {
