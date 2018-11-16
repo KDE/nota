@@ -14,6 +14,8 @@ Maui.ApplicationWindow
 
     property int sidebarWidth: Kirigami.Units.gridUnit * 11 > Screen.width  * 0.3 ? Screen.width : Kirigami.Units.gridUnit * 11
 
+    property bool terminalVisible: false
+    property alias terminal : terminalLoader.item
     pageStack.defaultColumnWidth: sidebarWidth
     pageStack.initialPage: [browserView, editorView]
     pageStack.interactive: isMobile
@@ -25,7 +27,7 @@ Maui.ApplicationWindow
             text: qsTr("Show terminal")
             checkable: true
             checked: terminal.visible
-            onTriggered: terminal.visible = !terminal.visible
+            onTriggered: terminalVisible = !terminalVisible
         }
     ]
 
@@ -70,7 +72,7 @@ Maui.ApplicationWindow
     Maui.FileBrowser
     {
         id: browserView
-        headBarVisible: false
+        headBar.visible: false
         detailsView: true
         list.filterType: FMList.TEXT
         trackChanges: false
@@ -101,20 +103,57 @@ Maui.ApplicationWindow
             Layout.fillHeight: true
             Layout.fillWidth: true
 
-            headBar.rightContent:
-                Maui.ToolButton
+            headBar.rightContent: Maui.ToolButton
             {
                 iconName: "document-save"
             }
+
+            anchors.top: parent.top
+            anchors.bottom: terminalVisible ? handle.top : parent.bottom
         }
 
-        Maui.Terminal
+        Rectangle
         {
-            id: terminal
+            id: handle
+            visible: terminalVisible
+
             Layout.fillWidth: true
-            Layout.preferredHeight: unit *200
-            Layout.minimumHeight: unit *100
-            kterminal.colorScheme: "DarkPastels"
+            height: 5
+            color: "transparent"
+
+            Kirigami.Separator
+            {
+                anchors
+                {
+                    bottom: parent.bottom
+                    right: parent.right
+                    left: parent.left
+                }
+            }
+
+            MouseArea
+            {
+                anchors.fill: parent
+                drag.target: parent
+                drag.axis: Drag.YAxis
+                drag.smoothed: true
+                cursorShape: Qt.SizeVerCursor
+            }
+        }
+
+        Loader
+        {
+            id: terminalLoader
+            visible: terminalVisible
+            focus: true
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.alignment: Qt.AlignBottom
+            Layout.minimumHeight: 100
+            Layout.maximumHeight: root.height * 0.3
+            anchors.bottom: parent.bottom
+            anchors.top: handle.bottom
+            source: !isMobile ? "Terminal.qml" : undefined
         }
     }
 }
