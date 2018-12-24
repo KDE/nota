@@ -24,6 +24,11 @@ Maui.ApplicationWindow
     mainMenu: [
         Maui.MenuItem
         {
+            text: qsTr("Save As")
+            onTriggered: saveFile()
+        },
+        Maui.MenuItem
+        {
             text: qsTr("Show terminal")
             checkable: true
             checked: terminal.visible
@@ -44,10 +49,21 @@ Maui.ApplicationWindow
         Maui.ToolButton
         {
             iconName: "document-open"
-            onClicked: fileDialog.show(function (paths)
-            {
-                console.log("CALLBACK", paths, fileDialog.textField.text)
-            })
+            onClicked: {
+                fileDialog.onlyDirs = false;
+                fileDialog.mode = 0;
+                fileDialog.show(function (paths) {
+                    var filepath = "";
+
+                    if (typeof paths === "object") {
+                        filepath = paths[0];
+                    } else {
+                        filepath = paths;
+                    }
+
+                    editor.document.load("file://" + filepath);
+                });
+            }
         },
         Maui.ToolButton
         {
@@ -56,7 +72,6 @@ Maui.ApplicationWindow
     ]
 
     headBar.rightContent: [
-
         Maui.ToolButton
         {
             id: recent
@@ -107,6 +122,13 @@ Maui.ApplicationWindow
             headBar.rightContent: Maui.ToolButton
             {
                 iconName: "document-save"
+                onClicked: {
+                    if (editor.document.fileUrl == "") {
+                        saveFile();
+                    } else {
+                        saveFile(editor.document.fileUrl);
+                    }
+                }
             }
 
             anchors.top: parent.top
@@ -158,8 +180,22 @@ Maui.ApplicationWindow
         }
     }
 
-//    Component.onCompleted:
-//    {
-//        editor.document.load("/home/camilo/Coding/qml/mauikit-kde/src/controls/AboutDialog.qml")
-//    }
+    function saveFile(path) {
+        if (path) {
+            editor.document.saveAs(path);
+        } else {
+            fileDialog.mode = 1;
+            fileDialog.show(function (paths) {
+                var filepath = "";
+
+                if (typeof paths === "object") {
+                    filepath = paths[0];
+                } else {
+                    filepath = paths;
+                }
+
+                editor.document.saveAs("file://" + filepath + "/" + fileDialog.textField.text);
+            });
+        }
+    }
 }
