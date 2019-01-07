@@ -62,6 +62,7 @@ Maui.ApplicationWindow
                     }
 
                     editor.document.load("file://" + filepath);
+                    setTabMetadata(filepath);
                 });
             }
         },
@@ -84,6 +85,8 @@ Maui.ApplicationWindow
         }
     ]
 
+
+
     Maui.FileBrowser
     {
         id: browserView
@@ -93,6 +96,7 @@ Maui.ApplicationWindow
         trackChanges: false
         thumbnailsSize: iconSizes.small
         showEmblems: false
+        z: 1
 
         floatingBar: false
         onItemClicked:
@@ -101,33 +105,123 @@ Maui.ApplicationWindow
 
             if(Maui.FM.isDir(item.path))
                 openFolder(item.path)
-            else
+            else {
                 editor.document.load("file://"+item.path)
                 console.log("OPENIGN FILE", item.path)
+
+                setTabMetadata(item.path);
+            }
         }
 
     }
-
 
     ColumnLayout
     {
         id: editorView
         anchors.fill: parent
+
+        TabBar {
+            id: tabsBar
+            Layout.fillWidth: true
+
+            onCurrentIndexChanged: {
+                console.log("Tab["+currentIndex+"] Activated\nPath: "+tabsListModel.get(currentIndex).path)
+                editor.body.text = tabsListModel.get(currentIndex).content
+            }
+
+            ListModel {
+                id: tabsListModel
+
+                ListElement {
+                    title: "Untitled"
+                    path: ""
+                    content: ""
+                    shouldFocus: true
+                }
+            }
+
+            Repeater {
+                model: tabsListModel
+
+                TabButton {
+                    width: 150
+                    checked: shouldFocus
+
+                    contentItem: Item {
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
+
+                        Text {
+                            anchors.centerIn: parent
+                            text: title
+                        }
+
+                        Text {
+                            anchors.verticalCenter: parent.verticalCenter
+                            anchors.right: parent.right
+                            padding: 10
+
+                            visible: tabsListModel.count > 1
+
+                            text: "x"
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    var removedIndex = index
+                                    tabsListModel.remove(removedIndex)
+                                    console.log("Tab["+removedIndex+"] closed")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            TabButton
+            {
+                width: this.height
+
+                contentItem: Item {
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+
+                    Text {
+                        anchors.centerIn: parent
+                        text: "+"
+                        font.pixelSize: 16
+                    }
+                }
+
+                onPressed: {
+                    tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
+                    tabsListModel.append({
+                      title: "Untitled",
+                      path: "",
+                      content: "",
+                      shouldFocus: true
+                    })
+                }
+            }
+        }
+
         Maui.Editor
         {
             id: editor
             Layout.fillHeight: true
             Layout.fillWidth: true
+            anchors.topMargin: tabsBar.height
 
             headBar.rightContent: Maui.ToolButton
             {
                 iconName: "document-save"
                 onClicked: {
-                    if (editor.document.fileUrl == "") {
-                        saveFile();
-                    } else {
-                        saveFile(editor.document.fileUrl);
-                    }
+//                    if (editor.document.fileUrl == "") {
+//                        saveFile();
+//                    } else {
+//                        saveFile(editor.document.fileUrl);
+//                    }
+                    saveFile(tabsListModel.get(tabsBar.currentIndex).path);
                 }
             }
 
@@ -180,6 +274,13 @@ Maui.ApplicationWindow
         }
     }
 
+    Connections {
+        target: editor.body
+        onTextChanged: {
+            tabsListModel.setProperty(tabsBar.currentIndex, "content", editor.body.text)
+        }
+    }
+
     function saveFile(path) {
         if (path) {
             editor.document.saveAs(path);
@@ -195,7 +296,13 @@ Maui.ApplicationWindow
                 }
 
                 editor.document.saveAs("file://" + filepath + "/" + fileDialog.textField.text);
+                setTabMetadata(filepath + "/" + fileDialog.textField.text);
             });
         }
+    }
+
+    function setTabMetadata(filepath) {
+        tabsListModel.setProperty(tabsBar.currentIndex, "title", filepath.split("/").slice(-1)[0])
+        tabsListModel.setProperty(tabsBar.currentIndex, "path", "file://" + filepath)
     }
 }
