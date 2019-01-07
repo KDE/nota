@@ -151,29 +151,40 @@ Maui.ApplicationWindow
                         Layout.fillHeight: true
                         Layout.fillWidth: true
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: title
-                        }
 
-                        Text {
-                            anchors.verticalCenter: parent.verticalCenter
-                            anchors.right: parent.right
-                            padding: 10
+                        RowLayout
+                        {
+                            anchors.fill: parent
+                            spacing: space.small
 
-                            visible: tabsListModel.count > 1
+                            Label
+                            {
+                                Layout.fillHeight: true
+                                Layout.fillWidth: true
+                                Layout.alignment: Qt.AlignCenter
+                                text: title
+                                font.pointSize: fontSizes.default
+                                color: textColor
+                                horizontalAlignment: Qt.AlignHCenter
+                                verticalAlignment:  Qt.AlignVCenter
+                                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                                elide: Text.ElideRight
+                            }
 
-                            text: "x"
+                            Maui.ToolButton
+                            {
+                                Layout.fillHeight: true
 
-                            MouseArea {
-                                anchors.fill: parent
-                                onClicked: {
+                                iconName: "window-close"
+                                onClicked:
+                                {
                                     var removedIndex = index
                                     tabsListModel.remove(removedIndex)
                                     console.log("Tab["+removedIndex+"] closed")
                                 }
                             }
                         }
+
                     }
                 }
             }
@@ -186,10 +197,12 @@ Maui.ApplicationWindow
                     Layout.fillHeight: true
                     Layout.fillWidth: true
 
-                    Text {
+
+                    Maui.ToolButton
+                    {
                         anchors.centerIn: parent
-                        text: "+"
-                        font.pixelSize: 16
+enabled: false
+                        iconName: "list-add"
                     }
                 }
 
@@ -270,7 +283,7 @@ Maui.ApplicationWindow
             Layout.maximumHeight: root.height * 0.3
             anchors.bottom: parent.bottom
             anchors.top: handle.bottom
-            source: !isMobile ? "Terminal.qml" : undefined
+//            source: !isMobile ? "Terminal.qml" : undefined
         }
     }
 
