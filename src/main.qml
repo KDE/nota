@@ -176,8 +176,9 @@ Maui.ApplicationWindow
                                 Layout.fillHeight: true
 
                                 iconName: "window-close"
-                                onClicked:
-                                {
+                                visible: tabsListModel.count > 1
+
+                                onClicked: {
                                     var removedIndex = index
                                     tabsListModel.remove(removedIndex)
                                     console.log("Tab["+removedIndex+"] closed")
@@ -197,11 +198,10 @@ Maui.ApplicationWindow
                     Layout.fillHeight: true
                     Layout.fillWidth: true
 
-
                     Maui.ToolButton
                     {
                         anchors.centerIn: parent
-enabled: false
+                        enabled: false
                         iconName: "list-add"
                     }
                 }
@@ -229,12 +229,12 @@ enabled: false
             {
                 iconName: "document-save"
                 onClicked: {
-//                    if (editor.document.fileUrl == "") {
-//                        saveFile();
-//                    } else {
-//                        saveFile(editor.document.fileUrl);
-//                    }
-                    saveFile(tabsListModel.get(tabsBar.currentIndex).path);
+                    if (tabsListModel.get(tabsBar.currentIndex).path === "") {
+                        saveFile();
+                    } else {
+                        saveFile(tabsListModel.get(tabsBar.currentIndex).path);
+                    }
+
                 }
             }
 
@@ -290,7 +290,7 @@ enabled: false
     Connections {
         target: editor.body
         onTextChanged: {
-            tabsListModel.setProperty(tabsBar.currentIndex, "content", editor.body.text)
+            tabsListModel.setProperty(tabsBar.currentIndex, "content", editor.body.text);
         }
     }
 
@@ -308,8 +308,8 @@ enabled: false
                     filepath = paths;
                 }
 
-                editor.document.saveAs("file://" + filepath + "/" + fileDialog.textField.text);
-                setTabMetadata(filepath + "/" + fileDialog.textField.text);
+                editor.document.saveAs("file://" + filepath);
+                setTabMetadata(filepath);
             });
         }
     }
