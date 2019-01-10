@@ -125,7 +125,7 @@ Maui.ApplicationWindow
             Layout.fillWidth: true
 
             onCurrentIndexChanged: {
-                console.log("Tab["+currentIndex+"] Activated\nPath: "+tabsListModel.get(currentIndex).path)
+//                console.log("Tab["+currentIndex+"] Activated\nPath: "+tabsListModel.get(currentIndex).path)
                 editor.body.text = tabsListModel.get(currentIndex).content
             }
 
@@ -151,38 +151,31 @@ Maui.ApplicationWindow
                         Layout.fillHeight: true
                         Layout.fillWidth: true
 
-
-                        RowLayout
+                        Label
                         {
-                            anchors.fill: parent
-                            spacing: space.small
+                            text: title
+                            font.pointSize: fontSizes.default
+                            anchors.centerIn: parent
+                            color: textColor
+                            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                            elide: Text.ElideRight
+                        }
 
-                            Label
-                            {
-                                Layout.fillHeight: true
-                                Layout.fillWidth: true
-                                Layout.alignment: Qt.AlignCenter
-                                text: title
-                                font.pointSize: fontSizes.default
-                                color: textColor
-                                horizontalAlignment: Qt.AlignHCenter
-                                verticalAlignment:  Qt.AlignVCenter
-                                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                                elide: Text.ElideRight
-                            }
+                        Maui.ToolButton
+                        {
+                            Layout.fillHeight: true
+                            anchors.right: parent.right
+                            anchors.verticalCenter: parent.verticalCenter
+                            padding: 2
 
-                            Maui.ToolButton
-                            {
-                                Layout.fillHeight: true
+                            iconName: "tab-close"
+                            icon.color: "transparent"
+                            visible: tabsListModel.count > 1
 
-                                iconName: "window-close"
-                                visible: tabsListModel.count > 1
-
-                                onClicked: {
-                                    var removedIndex = index
-                                    tabsListModel.remove(removedIndex)
-                                    console.log("Tab["+removedIndex+"] closed")
-                                }
+                            onClicked: {
+                                var removedIndex = index
+                                tabsListModel.remove(removedIndex)
+//                                console.log("Tab["+removedIndex+"] closed")
                             }
                         }
 
