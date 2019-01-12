@@ -1,6 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
+import QtQml.Models 2.3
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import QtQuick.Window 2.0
@@ -61,7 +62,7 @@ Maui.ApplicationWindow
                         filepath = paths;
                     }
 
-                    editor.document.load("file://" + filepath);
+                    tabsObjectModel.get(tabsBar.currentIndex).document.load("file://" + filepath);
                     setTabMetadata(filepath);
                 });
             }
@@ -85,8 +86,6 @@ Maui.ApplicationWindow
         }
     ]
 
-
-
     Maui.FileBrowser
     {
         id: browserView
@@ -106,7 +105,7 @@ Maui.ApplicationWindow
             if(Maui.FM.isDir(item.path))
                 openFolder(item.path)
             else {
-                editor.document.load("file://"+item.path)
+                tabsObjectModel.get(tabsBar.currentIndex).document.load("file://"+item.path)
                 console.log("OPENIGN FILE", item.path)
 
                 setTabMetadata(item.path);
@@ -124,21 +123,9 @@ Maui.ApplicationWindow
             id: tabsBar
             Layout.fillWidth: true
 
-            onCurrentIndexChanged: {
-//                console.log("Tab["+currentIndex+"] Activated\nPath: "+tabsListModel.get(currentIndex).path)
-                editor.body.text = tabsListModel.get(currentIndex).content
-            }
+            ListModel { id: tabsListModel }
 
-            ListModel {
-                id: tabsListModel
-
-                ListElement {
-                    title: "Untitled"
-                    path: ""
-                    content: ""
-                    shouldFocus: true
-                }
-            }
+            ObjectModel { id: tabsObjectModel }
 
             Repeater {
                 model: tabsListModel
@@ -174,8 +161,8 @@ Maui.ApplicationWindow
 
                             onClicked: {
                                 var removedIndex = index
+                                tabsObjectModel.remove(removedIndex)
                                 tabsListModel.remove(removedIndex)
-//                                console.log("Tab["+removedIndex+"] closed")
                             }
                         }
 
@@ -200,39 +187,44 @@ Maui.ApplicationWindow
                 }
 
                 onPressed: {
+                    var component = Qt.createComponent("Editor.qml");
+                    if (component.status === Component.Ready){
+                        var object = component.createObject(tabsObjectModel, {
+                            onSaveClicked : function() {
+                                editorSaveClicked();
+                            }
+                        });
+                        tabsObjectModel.append(object);
+                    }
+
                     tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
                     tabsListModel.append({
                       title: "Untitled",
                       path: "",
-                      content: "",
                       shouldFocus: true
                     })
                 }
             }
         }
 
-        Maui.Editor
-        {
-            id: editor
+        StackLayout {
+            id: editorStack
             Layout.fillHeight: true
             Layout.fillWidth: true
+
             anchors.topMargin: tabsBar.height
-
-            headBar.rightContent: Maui.ToolButton
-            {
-                iconName: "document-save"
-                onClicked: {
-                    if (tabsListModel.get(tabsBar.currentIndex).path === "") {
-                        saveFile();
-                    } else {
-                        saveFile(tabsListModel.get(tabsBar.currentIndex).path);
-                    }
-
-                }
-            }
-
             anchors.top: parent.top
             anchors.bottom: terminalVisible ? handle.top : parent.bottom
+
+            currentIndex: tabsBar.currentIndex
+
+            Repeater {
+                model: tabsObjectModel
+
+                Loader {
+                    source: modelData
+                }
+            }
         }
 
         Rectangle
@@ -280,11 +272,22 @@ Maui.ApplicationWindow
         }
     }
 
-    Connections {
-        target: editor.body
-        onTextChanged: {
-            tabsListModel.setProperty(tabsBar.currentIndex, "content", editor.body.text);
+    Component.onCompleted: {
+        var component = Qt.createComponent("Editor.qml");
+        if (component.status === Component.Ready){
+            var object = component.createObject(tabsObjectModel, {
+                onSaveClicked : function() {
+                    editorSaveClicked();
+                }
+            });
+            tabsObjectModel.append(object);
         }
+
+        tabsListModel.append({
+          title: "Untitled",
+          path: "",
+          shouldFocus: true
+        })
     }
 
     function saveFile(path) {
@@ -301,7 +304,7 @@ Maui.ApplicationWindow
                     filepath = paths;
                 }
 
-                editor.document.saveAs("file://" + filepath);
+                tabsObjectModel.get(tabsBar.currentIndex).document.saveAs("file://" + filepath);
                 setTabMetadata(filepath);
             });
         }
@@ -310,5 +313,13 @@ Maui.ApplicationWindow
     function setTabMetadata(filepath) {
         tabsListModel.setProperty(tabsBar.currentIndex, "title", filepath.split("/").slice(-1)[0])
         tabsListModel.setProperty(tabsBar.currentIndex, "path", "file://" + filepath)
+    }
+
+    function editorSaveClicked() {
+        if (tabsListModel.get(tabsBar.currentIndex).path === "") {
+            saveFile();
+        } else {
+            saveFile(tabsListModel.get(tabsBar.currentIndex).path);
+        }
     }
 }
