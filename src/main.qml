@@ -119,9 +119,11 @@ Maui.ApplicationWindow
         id: editorView
         anchors.fill: parent
 
-        TabBar {
+        TabBar
+        {
             id: tabsBar
             Layout.fillWidth: true
+            Layout.preferredHeight: toolBarHeight
             height: toolBarHeight
 
             background: Rectangle
