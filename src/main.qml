@@ -122,11 +122,12 @@ Maui.ApplicationWindow
         TabBar {
             id: tabsBar
             Layout.fillWidth: true
+            height: toolBarHeight
 
             background: Rectangle
             {
                 color: viewBackgroundColor
-
+                implicitHeight: toolBarHeight
                 Kirigami.Separator
                 {
                     color: borderColor
@@ -143,15 +144,23 @@ Maui.ApplicationWindow
 
             ObjectModel { id: tabsObjectModel }
 
-            Repeater {
+            Repeater
+            {
                 model: tabsListModel
 
-                TabButton {
+                TabButton
+                {
                     width: 150 * unit
                     height: toolBarHeight
                     checked: shouldFocus
 
-                    contentItem: Item {
+                    background: Rectangle
+                    {
+                        color: checked ? backgroundColor : viewBackgroundColor
+                    }
+
+                    contentItem: Item
+                    {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
 
@@ -191,7 +200,8 @@ Maui.ApplicationWindow
             {
                 width: this.height
 
-                contentItem: Item {
+                contentItem: Item
+                {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
 
@@ -203,28 +213,30 @@ Maui.ApplicationWindow
                     }
                 }
 
-                onPressed: {
+                onPressed:
+                {
                     var component = Qt.createComponent("Editor.qml");
                     if (component.status === Component.Ready){
                         var object = component.createObject(tabsObjectModel, {
-                            onSaveClicked : function() {
-                                editorSaveClicked();
-                            }
-                        });
+                                                                onSaveClicked : function() {
+                                                                    editorSaveClicked();
+                                                                }
+                                                            });
                         tabsObjectModel.append(object);
                     }
 
                     tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
                     tabsListModel.append({
-                      title: "Untitled",
-                      path: "",
-                      shouldFocus: true
-                    })
+                                             title: "Untitled",
+                                             path: "",
+                                             shouldFocus: true
+                                         })
                 }
             }
         }
 
-        StackLayout {
+        StackLayout
+        {
             id: editorStack
             Layout.fillHeight: true
             Layout.fillWidth: true
@@ -235,10 +247,12 @@ Maui.ApplicationWindow
 
             currentIndex: tabsBar.currentIndex
 
-            Repeater {
+            Repeater
+            {
                 model: tabsObjectModel
 
-                Loader {
+                Loader
+                {
                     source: modelData
                 }
             }
@@ -285,26 +299,27 @@ Maui.ApplicationWindow
             Layout.maximumHeight: root.height * 0.3
             anchors.bottom: parent.bottom
             anchors.top: handle.bottom
-//            source: !isMobile ? "Terminal.qml" : undefined
+            //            source: !isMobile ? "Terminal.qml" : undefined
         }
     }
 
-    Component.onCompleted: {
+    Component.onCompleted:
+    {
         var component = Qt.createComponent("Editor.qml");
         if (component.status === Component.Ready){
             var object = component.createObject(tabsObjectModel, {
-                onSaveClicked : function() {
-                    editorSaveClicked();
-                }
-            });
+                                                    onSaveClicked : function() {
+                                                        editorSaveClicked();
+                                                    }
+                                                });
             tabsObjectModel.append(object);
         }
 
         tabsListModel.append({
-          title: "Untitled",
-          path: "",
-          shouldFocus: true
-        })
+                                 title: "Untitled",
+                                 path: "",
+                                 shouldFocus: true
+                             })
 
         if(isMobile)
             pageStack.currentIndex = 1
