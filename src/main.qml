@@ -23,11 +23,20 @@ Maui.ApplicationWindow
     pageStack.separatorVisible: pageStack.wideMode
 
     mainMenu: [
+
+        Maui.MenuItem
+        {
+            text: qsTr("Places Sidebar")
+            icon.name: "document-new"
+            onTriggered: pageStack.currentIndex = 0
+        },
+
         Maui.MenuItem
         {
             text: qsTr("Save As")
             onTriggered: saveFile()
         },
+
         Maui.MenuItem
         {
             text: qsTr("Show terminal")
@@ -118,124 +127,151 @@ Maui.ApplicationWindow
     {
         id: editorView
         anchors.fill: parent
-
-        TabBar
+        Item
         {
-            id: tabsBar
             Layout.fillWidth: true
             Layout.preferredHeight: toolBarHeight
-            height: toolBarHeight
 
-            background: Rectangle
+            Kirigami.Separator
             {
-                color: viewBackgroundColor
-                implicitHeight: toolBarHeight
-                Kirigami.Separator
+                color: borderColor
+                z: tabsBar.z + 1
+                anchors
                 {
-                    color: borderColor
-                    anchors
-                    {
-                        bottom: parent.bottom
-                        right: parent.right
-                        left: parent.left
-                    }
+                    bottom: parent.bottom
+                    right: parent.right
+                    left: parent.left
                 }
             }
 
-            ListModel { id: tabsListModel }
-
-            ObjectModel { id: tabsObjectModel }
-
-            Repeater
+            Rectangle
             {
-                model: tabsListModel
+                anchors.fill: parent
+                color: Qt.darker(backgroundColor, 1.1)
+            }
 
-                TabButton
+            RowLayout
+            {
+
+                anchors.fill : parent
+
+                TabBar
                 {
-                    width: 150 * unit
-                    height: toolBarHeight
-                    checked: shouldFocus
+                    id: tabsBar
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    clip: true
+
+                    ListModel { id: tabsListModel }
+
+                    ObjectModel { id: tabsObjectModel }
 
                     background: Rectangle
                     {
-                        color: checked ? backgroundColor : viewBackgroundColor
+                        color: "transparent"
                     }
 
-                    contentItem: Item
+                    Repeater
                     {
-                        Layout.fillHeight: true
-                        Layout.fillWidth: true
+                        model: tabsListModel
 
-                        Label
+                        TabButton
                         {
-                            text: title
-                            font.pointSize: fontSizes.default
-                            anchors.centerIn: parent
-                            color: textColor
-                            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                            elide: Text.ElideRight
-                        }
+                            width: 150 * unit
+                            checked: shouldFocus
+                            implicitHeight: toolBarHeight
 
-                        Maui.ToolButton
-                        {
-                            Layout.fillHeight: true
-                            anchors.right: parent.right
-                            anchors.verticalCenter: parent.verticalCenter
-                            padding: 2 * unit
+                            background: Rectangle
+                            {
+                                color: checked ? backgroundColor : viewBackgroundColor
 
-                            iconName: "tab-close"
-                            icon.color: "transparent"
-                            visible: tabsListModel.count > 1
+                                Kirigami.Separator
+                                {
+                                    color: borderColor
+                                    z: tabsBar.z + 1
+                                    visible: tabsListModel.count > 1
+                                    anchors
+                                    {
+                                        bottom: parent.bottom
+                                        top: parent.top
+                                        right: parent.right
+                                    }
+                                }
 
-                            onClicked: {
-                                var removedIndex = index
-                                tabsObjectModel.remove(removedIndex)
-                                tabsListModel.remove(removedIndex)
+                            }
+
+                            contentItem: Item
+                            {
+                                height: toolBarHeight
+                                width: 150 *unit
+                                anchors.bottom: tabsBar.bottom
+
+                                Label
+                                {
+                                    text: title
+                                    //                             verticalAlignment: Qt.AlignVCenter
+                                    font.pointSize: fontSizes.default
+                                    anchors.centerIn: parent
+                                    color: textColor
+                                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                                    elide: Text.ElideRight
+                                }
+
+                                Maui.ToolButton
+                                {
+                                    Layout.fillHeight: true
+                                    anchors.right: parent.right
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    padding: 2 * unit
+
+                                    iconName: "dialog-close"
+                                    //                             icon.color: "transparent"
+                                    visible: tabsListModel.count > 1
+
+                                    onClicked:
+                                    {
+                                        var removedIndex = index
+                                        tabsObjectModel.remove(removedIndex)
+                                        tabsListModel.remove(removedIndex)
+                                    }
+                                }
+
                             }
                         }
-
                     }
                 }
-            }
 
-            TabButton
-            {
-                width: this.height
-
-                contentItem: Item
+                Maui.ToolButton
                 {
+                    implicitWidth: toolBarHeight
                     Layout.fillHeight: true
-                    Layout.fillWidth: true
 
-                    Maui.ToolButton
+                    iconName: "list-add"
+
+
+                    onClicked:
                     {
-                        anchors.centerIn: parent
-                        enabled: false
-                        iconName: "list-add"
-                    }
-                }
+                        var component = Qt.createComponent("Editor.qml");
+                        if (component.status === Component.Ready){
+                            var object = component.createObject(tabsObjectModel, {
+                                                                    onSaveClicked : function() {
+                                                                        editorSaveClicked();
+                                                                    }
+                                                                });
+                            tabsObjectModel.append(object);
+                        }
 
-                onPressed:
-                {
-                    var component = Qt.createComponent("Editor.qml");
-                    if (component.status === Component.Ready){
-                        var object = component.createObject(tabsObjectModel, {
-                                                                onSaveClicked : function() {
-                                                                    editorSaveClicked();
-                                                                }
-                                                            });
-                        tabsObjectModel.append(object);
+                        tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
+                        tabsListModel.append({
+                                                 title: "Untitled",
+                                                 path: "",
+                                                 shouldFocus: true
+                                             })
                     }
-
-                    tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
-                    tabsListModel.append({
-                                             title: "Untitled",
-                                             path: "",
-                                             shouldFocus: true
-                                         })
                 }
             }
         }
+
 
         StackLayout
         {
