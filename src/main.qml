@@ -123,6 +123,22 @@ Maui.ApplicationWindow
             id: tabsBar
             Layout.fillWidth: true
 
+            background: Rectangle
+            {
+                color: viewBackgroundColor
+
+                Kirigami.Separator
+                {
+                    color: borderColor
+                    anchors
+                    {
+                        bottom: parent.bottom
+                        right: parent.right
+                        left: parent.left
+                    }
+                }
+            }
+
             ListModel { id: tabsListModel }
 
             ObjectModel { id: tabsObjectModel }
@@ -131,7 +147,8 @@ Maui.ApplicationWindow
                 model: tabsListModel
 
                 TabButton {
-                    width: 150
+                    width: 150 * unit
+                    height: toolBarHeight
                     checked: shouldFocus
 
                     contentItem: Item {
@@ -153,7 +170,7 @@ Maui.ApplicationWindow
                             Layout.fillHeight: true
                             anchors.right: parent.right
                             anchors.verticalCenter: parent.verticalCenter
-                            padding: 2
+                            padding: 2 * unit
 
                             iconName: "tab-close"
                             icon.color: "transparent"
@@ -233,7 +250,7 @@ Maui.ApplicationWindow
             visible: terminalVisible
 
             Layout.fillWidth: true
-            height: 5
+            height: 5 * unit
             color: "transparent"
 
             Kirigami.Separator
@@ -288,6 +305,9 @@ Maui.ApplicationWindow
           path: "",
           shouldFocus: true
         })
+
+        if(isMobile)
+            pageStack.currentIndex = 1
     }
 
     function saveFile(path) {
