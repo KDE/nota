@@ -201,7 +201,7 @@ Maui.ApplicationWindow
                     Maui.ToolButton
                     {
                         anchors.centerIn: parent
-enabled: false
+                        enabled: false
                         iconName: "list-add"
                     }
                 }
@@ -209,11 +209,11 @@ enabled: false
                 onPressed: {
                     tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
                     tabsListModel.append({
-                      title: "Untitled",
-                      path: "",
-                      content: "",
-                      shouldFocus: true
-                    })
+                                             title: "Untitled",
+                                             path: "",
+                                             content: "",
+                                             shouldFocus: true
+                                         })
                 }
             }
         }
@@ -229,11 +229,11 @@ enabled: false
             {
                 iconName: "document-save"
                 onClicked: {
-//                    if (editor.document.fileUrl == "") {
-//                        saveFile();
-//                    } else {
-//                        saveFile(editor.document.fileUrl);
-//                    }
+                    //                    if (editor.document.fileUrl == "") {
+                    //                        saveFile();
+                    //                    } else {
+                    //                        saveFile(editor.document.fileUrl);
+                    //                    }
                     saveFile(tabsListModel.get(tabsBar.currentIndex).path);
                 }
             }
@@ -283,7 +283,7 @@ enabled: false
             Layout.maximumHeight: root.height * 0.3
             anchors.bottom: parent.bottom
             anchors.top: handle.bottom
-//            source: !isMobile ? "Terminal.qml" : undefined
+            //            source: !isMobile ? "Terminal.qml" : undefined
         }
     }
 
