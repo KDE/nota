@@ -2,9 +2,5 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Terminal.qml</file>
-<<<<<<< HEAD
-        <file>Editor.qml</file>
-=======
->>>>>>> 60d817ad6061fbfcf19799a2c75ff2bd8fe6cc46
     </qresource>
 </RCC>
