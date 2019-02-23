@@ -1,6 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
+import QtQml.Models 2.3
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import QtQuick.Window 2.0
@@ -22,11 +23,20 @@ Maui.ApplicationWindow
     pageStack.separatorVisible: pageStack.wideMode
 
     mainMenu: [
+
+        Maui.MenuItem
+        {
+            text: qsTr("Places Sidebar")
+            icon.name: "document-new"
+            onTriggered: pageStack.currentIndex = 0
+        },
+
         Maui.MenuItem
         {
             text: qsTr("Save As")
             onTriggered: saveFile()
         },
+
         Maui.MenuItem
         {
             text: qsTr("Show terminal")
@@ -61,7 +71,7 @@ Maui.ApplicationWindow
                         filepath = paths;
                     }
 
-                    editor.document.load("file://" + filepath);
+                    tabsObjectModel.get(tabsBar.currentIndex).document.load("file://" + filepath);
                     setTabMetadata(filepath);
                 });
             }
@@ -85,8 +95,6 @@ Maui.ApplicationWindow
         }
     ]
 
-
-
     Maui.FileBrowser
     {
         id: browserView
@@ -106,7 +114,7 @@ Maui.ApplicationWindow
             if(Maui.FM.isDir(item.path))
                 openFolder(item.path)
             else {
-                editor.document.load("file://"+item.path)
+                tabsObjectModel.get(tabsBar.currentIndex).document.load("file://"+item.path)
                 console.log("OPENIGN FILE", item.path)
 
                 setTabMetadata(item.path);
@@ -119,114 +127,168 @@ Maui.ApplicationWindow
     {
         id: editorView
         anchors.fill: parent
-
-        TabBar {
-            id: tabsBar
+        Item
+        {
             Layout.fillWidth: true
+            Layout.preferredHeight: toolBarHeight
 
-            onCurrentIndexChanged: {
-                console.log("Tab["+currentIndex+"] Activated\nPath: "+tabsListModel.get(currentIndex).path)
-                editor.body.text = tabsListModel.get(currentIndex).content
-            }
-
-            ListModel {
-                id: tabsListModel
-
-                ListElement {
-                    title: "Untitled"
-                    path: ""
-                    content: ""
-                    shouldFocus: true
+            Kirigami.Separator
+            {
+                color: borderColor
+                z: tabsBar.z + 1
+                anchors
+                {
+                    bottom: parent.bottom
+                    right: parent.right
+                    left: parent.left
                 }
             }
 
-            Repeater {
-                model: tabsListModel
+            Rectangle
+            {
+                anchors.fill: parent
+                color: Qt.darker(backgroundColor, 1.1)
+            }
 
-                TabButton {
-                    width: 150
-                    checked: shouldFocus
+            RowLayout
+            {
 
-                    contentItem: Item {
-                        Layout.fillHeight: true
-                        Layout.fillWidth: true
+                anchors.fill : parent
 
+                TabBar
+                {
+                    id: tabsBar
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    clip: true
 
-                        RowLayout
+                    ListModel { id: tabsListModel }
+
+                    ObjectModel { id: tabsObjectModel }
+
+                    background: Rectangle
+                    {
+                        color: "transparent"
+                    }
+
+                    Repeater
+                    {
+                        model: tabsListModel
+
+                        TabButton
                         {
-                            anchors.fill: parent
-                            spacing: space.small
+                            width: 150 * unit
+                            checked: shouldFocus
+                            implicitHeight: toolBarHeight
 
-                            Label
+                            background: Rectangle
                             {
-                                Layout.fillHeight: true
-                                Layout.fillWidth: true
-                                Layout.alignment: Qt.AlignCenter
-                                text: title
-                                font.pointSize: fontSizes.default
-                                color: textColor
-                                horizontalAlignment: Qt.AlignHCenter
-                                verticalAlignment:  Qt.AlignVCenter
-                                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                                elide: Text.ElideRight
+                                color: checked ? backgroundColor : viewBackgroundColor
+
+                                Kirigami.Separator
+                                {
+                                    color: borderColor
+                                    z: tabsBar.z + 1
+                                    visible: tabsListModel.count > 1
+                                    anchors
+                                    {
+                                        bottom: parent.bottom
+                                        top: parent.top
+                                        right: parent.right
+                                    }
+                                }
+
                             }
 
-                            Maui.ToolButton
+                            contentItem: Item
                             {
-                                Layout.fillHeight: true
+                                height: toolBarHeight
+                                width: 150 *unit
+                                anchors.bottom: tabsBar.bottom
 
-                                iconName: "window-close"
-                                onClicked:
+                                Label
                                 {
-                                    var removedIndex = index
-                                    tabsListModel.remove(removedIndex)
-                                    console.log("Tab["+removedIndex+"] closed")
+                                    text: title
+                                    //                             verticalAlignment: Qt.AlignVCenter
+                                    font.pointSize: fontSizes.default
+                                    anchors.centerIn: parent
+                                    color: textColor
+                                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                                    elide: Text.ElideRight
                                 }
+
+                                Maui.ToolButton
+                                {
+                                    Layout.fillHeight: true
+                                    anchors.right: parent.right
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    padding: 2 * unit
+
+                                    iconName: "dialog-close"
+                                    //                             icon.color: "transparent"
+                                    visible: tabsListModel.count > 1
+
+                                    onClicked:
+                                    {
+                                        var removedIndex = index
+                                        tabsObjectModel.remove(removedIndex)
+                                        tabsListModel.remove(removedIndex)
+                                    }
+                                }
+
                             }
                         }
-
                     }
                 }
-            }
 
-            TabButton
-            {
-                width: this.height
-
-                contentItem: Item {
+                Maui.ToolButton
+                {
+                    implicitWidth: toolBarHeight
                     Layout.fillHeight: true
-                    Layout.fillWidth: true
+
+                    iconName: "list-add"
 
 
-                    Maui.ToolButton
+                    onClicked:
                     {
-                        anchors.centerIn: parent
-                        enabled: false
-                        iconName: "list-add"
-                    }
-                }
 
-                onPressed: {
-                    tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
-                    tabsListModel.append({
-                                             title: "Untitled",
-                                             path: "",
-                                             content: "",
-                                             shouldFocus: true
-                                         })
+                        var component = Qt.createComponent("Editor.qml");
+                        if (component.status === Component.Ready){
+                            var object = component.createObject(tabsObjectModel, {
+                                                                    onSaveClicked : function() {
+                                                                        editorSaveClicked();
+                                                                    }
+                                                                });
+                            tabsObjectModel.append(object);
+                        }
+
+                        tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
+                        tabsListModel.append({
+                                                 title: "Untitled",
+                                                 path: "",
+                                                 shouldFocus: true
+                                             })
+                    }
                 }
             }
         }
 
-        Maui.Editor
+
+        StackLayout
         {
-            id: editor
+            id: editorStack
             Layout.fillHeight: true
             Layout.fillWidth: true
-            anchors.topMargin: tabsBar.height
 
-            headBar.rightContent: Maui.ToolButton
+            anchors.topMargin: tabsBar.height
+            anchors.top: parent.top
+            anchors.bottom: terminalVisible ? handle.top : parent.bottom
+
+            currentIndex: tabsBar.currentIndex
+
+            Repeater
             {
+<<<<<<< HEAD
                 iconName: "document-save"
                 onClicked: {
                     //                    if (editor.document.fileUrl == "") {
@@ -235,11 +297,15 @@ Maui.ApplicationWindow
                     //                        saveFile(editor.document.fileUrl);
                     //                    }
                     saveFile(tabsListModel.get(tabsBar.currentIndex).path);
+=======
+                model: tabsObjectModel
+
+                Loader
+                {
+                    source: modelData
+>>>>>>> 89356cdcd02abfcad3ee15ce0da8b3cd5081e451
                 }
             }
-
-            anchors.top: parent.top
-            anchors.bottom: terminalVisible ? handle.top : parent.bottom
         }
 
         Rectangle
@@ -248,7 +314,7 @@ Maui.ApplicationWindow
             visible: terminalVisible
 
             Layout.fillWidth: true
-            height: 5
+            height: 5 * unit
             color: "transparent"
 
             Kirigami.Separator
@@ -287,11 +353,26 @@ Maui.ApplicationWindow
         }
     }
 
-    Connections {
-        target: editor.body
-        onTextChanged: {
-            tabsListModel.setProperty(tabsBar.currentIndex, "content", editor.body.text)
+    Component.onCompleted:
+    {
+        var component = Qt.createComponent("Editor.qml");
+        if (component.status === Component.Ready){
+            var object = component.createObject(tabsObjectModel, {
+                                                    onSaveClicked : function() {
+                                                        editorSaveClicked();
+                                                    }
+                                                });
+            tabsObjectModel.append(object);
         }
+
+        tabsListModel.append({
+                                 title: "Untitled",
+                                 path: "",
+                                 shouldFocus: true
+                             })
+
+        if(isMobile)
+            pageStack.currentIndex = 1
     }
 
     function saveFile(path) {
@@ -308,8 +389,8 @@ Maui.ApplicationWindow
                     filepath = paths;
                 }
 
-                editor.document.saveAs("file://" + filepath + "/" + fileDialog.textField.text);
-                setTabMetadata(filepath + "/" + fileDialog.textField.text);
+                tabsObjectModel.get(tabsBar.currentIndex).document.saveAs("file://" + filepath);
+                setTabMetadata(filepath);
             });
         }
     }
@@ -317,5 +398,13 @@ Maui.ApplicationWindow
     function setTabMetadata(filepath) {
         tabsListModel.setProperty(tabsBar.currentIndex, "title", filepath.split("/").slice(-1)[0])
         tabsListModel.setProperty(tabsBar.currentIndex, "path", "file://" + filepath)
+    }
+
+    function editorSaveClicked() {
+        if (tabsListModel.get(tabsBar.currentIndex).path === "") {
+            saveFile();
+        } else {
+            saveFile(tabsListModel.get(tabsBar.currentIndex).path);
+        }
     }
 }
