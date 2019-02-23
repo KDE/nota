@@ -288,22 +288,12 @@ Maui.ApplicationWindow
 
             Repeater
             {
-<<<<<<< HEAD
-                iconName: "document-save"
-                onClicked: {
-                    //                    if (editor.document.fileUrl == "") {
-                    //                        saveFile();
-                    //                    } else {
-                    //                        saveFile(editor.document.fileUrl);
-                    //                    }
-                    saveFile(tabsListModel.get(tabsBar.currentIndex).path);
-=======
+
                 model: tabsObjectModel
 
                 Loader
                 {
                     source: modelData
->>>>>>> 89356cdcd02abfcad3ee15ce0da8b3cd5081e451
                 }
             }
         }
