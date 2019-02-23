@@ -241,7 +241,6 @@ Maui.ApplicationWindow
                     }
                 }
 
-<<<<<<< HEAD
                 Maui.ToolButton
                 {
                     implicitWidth: toolBarHeight
@@ -288,9 +287,6 @@ Maui.ApplicationWindow
             currentIndex: tabsBar.currentIndex
 
             Repeater
-=======
-            headBar.rightContent: Maui.ToolButton
->>>>>>> 60d817ad6061fbfcf19799a2c75ff2bd8fe6cc46
             {
 
                 model: tabsObjectModel
@@ -300,9 +296,6 @@ Maui.ApplicationWindow
                     source: modelData
                 }
             }
-
-            anchors.top: parent.top
-            anchors.bottom: terminalVisible ? handle.top : parent.bottom
         }
 
         Rectangle
@@ -311,11 +304,7 @@ Maui.ApplicationWindow
             visible: terminalVisible
 
             Layout.fillWidth: true
-<<<<<<< HEAD
             height: 5 * unit
-=======
-            height: 5
->>>>>>> 60d817ad6061fbfcf19799a2c75ff2bd8fe6cc46
             color: "transparent"
 
             Kirigami.Separator
@@ -350,7 +339,6 @@ Maui.ApplicationWindow
             Layout.maximumHeight: root.height * 0.3
             anchors.bottom: parent.bottom
             anchors.top: handle.bottom
-<<<<<<< HEAD
             //            source: !isMobile ? "Terminal.qml" : undefined
         }
     }
@@ -407,9 +395,6 @@ Maui.ApplicationWindow
             saveFile();
         } else {
             saveFile(tabsListModel.get(tabsBar.currentIndex).path);
-=======
-            source: !isMobile ? "Terminal.qml" : undefined
->>>>>>> 60d817ad6061fbfcf19799a2c75ff2bd8fe6cc46
         }
     }
 }
