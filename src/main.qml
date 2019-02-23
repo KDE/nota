@@ -292,22 +292,12 @@ Maui.ApplicationWindow
             headBar.rightContent: Maui.ToolButton
 >>>>>>> 60d817ad6061fbfcf19799a2c75ff2bd8fe6cc46
             {
-<<<<<<< HEAD
-                iconName: "document-save"
-                onClicked: {
-                    //                    if (editor.document.fileUrl == "") {
-                    //                        saveFile();
-                    //                    } else {
-                    //                        saveFile(editor.document.fileUrl);
-                    //                    }
-                    saveFile(tabsListModel.get(tabsBar.currentIndex).path);
-=======
+
                 model: tabsObjectModel
 
                 Loader
                 {
                     source: modelData
->>>>>>> 89356cdcd02abfcad3ee15ce0da8b3cd5081e451
                 }
             }
 
