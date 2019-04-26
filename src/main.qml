@@ -23,20 +23,11 @@ Maui.ApplicationWindow
     pageStack.separatorVisible: pageStack.wideMode
 
     mainMenu: [
-
-        Maui.MenuItem
-        {
-            text: qsTr("Places Sidebar")
-            icon.name: "document-new"
-            onTriggered: pageStack.currentIndex = 0
-        },
-
         Maui.MenuItem
         {
             text: qsTr("Save As")
             onTriggered: saveFile()
         },
-
         Maui.MenuItem
         {
             text: qsTr("Show terminal")
@@ -71,7 +62,7 @@ Maui.ApplicationWindow
                         filepath = paths;
                     }
 
-                    tabsObjectModel.get(tabsBar.currentIndex).document.load("file://" + filepath);
+                    editor.document.load("file://" + filepath);
                     setTabMetadata(filepath);
                 });
             }
@@ -95,6 +86,8 @@ Maui.ApplicationWindow
         }
     ]
 
+
+
     Maui.FileBrowser
     {
         id: browserView
@@ -114,7 +107,7 @@ Maui.ApplicationWindow
             if(Maui.FM.isDir(item.path))
                 openFolder(item.path)
             else {
-                tabsObjectModel.get(tabsBar.currentIndex).document.load("file://"+item.path)
+                editor.document.load("file://"+item.path)
                 console.log("OPENIGN FILE", item.path)
 
                 setTabMetadata(item.path);
@@ -127,6 +120,7 @@ Maui.ApplicationWindow
     {
         id: editorView
         anchors.fill: parent
+
         Item
         {
             Layout.fillWidth: true
@@ -197,7 +191,6 @@ Maui.ApplicationWindow
                                         right: parent.right
                                     }
                                 }
-
                             }
 
                             contentItem: Item
@@ -273,29 +266,28 @@ Maui.ApplicationWindow
             }
         }
 
-
-        StackLayout
+        Maui.Editor
         {
-            id: editorStack
+            id: editor
             Layout.fillHeight: true
             Layout.fillWidth: true
-
             anchors.topMargin: tabsBar.height
-            anchors.top: parent.top
-            anchors.bottom: terminalVisible ? handle.top : parent.bottom
 
-            currentIndex: tabsBar.currentIndex
-
-            Repeater
+            headBar.rightContent: Maui.ToolButton
             {
-
-                model: tabsObjectModel
-
-                Loader
-                {
-                    source: modelData
+                iconName: "document-save"
+                onClicked: {
+                    //                    if (editor.document.fileUrl == "") {
+                    //                        saveFile();
+                    //                    } else {
+                    //                        saveFile(editor.document.fileUrl);
+                    //                    }
+                    saveFile(tabsListModel.get(tabsBar.currentIndex).path);
                 }
             }
+
+            anchors.top: parent.top
+            anchors.bottom: terminalVisible ? handle.top : parent.bottom
         }
 
         Rectangle
@@ -304,7 +296,7 @@ Maui.ApplicationWindow
             visible: terminalVisible
 
             Layout.fillWidth: true
-            height: 5 * unit
+            height: 5
             color: "transparent"
 
             Kirigami.Separator
@@ -343,26 +335,11 @@ Maui.ApplicationWindow
         }
     }
 
-    Component.onCompleted:
-    {
-        var component = Qt.createComponent("Editor.qml");
-        if (component.status === Component.Ready){
-            var object = component.createObject(tabsObjectModel, {
-                                                    onSaveClicked : function() {
-                                                        editorSaveClicked();
-                                                    }
-                                                });
-            tabsObjectModel.append(object);
+    Connections {
+        target: editor.body
+        onTextChanged: {
+            tabsListModel.setProperty(tabsBar.currentIndex, "content", editor.body.text)
         }
-
-        tabsListModel.append({
-                                 title: "Untitled",
-                                 path: "",
-                                 shouldFocus: true
-                             })
-
-        if(isMobile)
-            pageStack.currentIndex = 1
     }
 
     function saveFile(path) {
@@ -379,8 +356,8 @@ Maui.ApplicationWindow
                     filepath = paths;
                 }
 
-                tabsObjectModel.get(tabsBar.currentIndex).document.saveAs("file://" + filepath);
-                setTabMetadata(filepath);
+                editor.document.saveAs("file://" + filepath + "/" + fileDialog.textField.text);
+                setTabMetadata(filepath + "/" + fileDialog.textField.text);
             });
         }
     }
@@ -388,13 +365,5 @@ Maui.ApplicationWindow
     function setTabMetadata(filepath) {
         tabsListModel.setProperty(tabsBar.currentIndex, "title", filepath.split("/").slice(-1)[0])
         tabsListModel.setProperty(tabsBar.currentIndex, "path", "file://" + filepath)
-    }
-
-    function editorSaveClicked() {
-        if (tabsListModel.get(tabsBar.currentIndex).path === "") {
-            saveFile();
-        } else {
-            saveFile(tabsListModel.get(tabsBar.currentIndex).path);
-        }
     }
 }
