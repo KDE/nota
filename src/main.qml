@@ -17,10 +17,6 @@ Maui.ApplicationWindow
 
     property bool terminalVisible: false
     property alias terminal : terminalLoader.item
-    pageStack.defaultColumnWidth: sidebarWidth
-    pageStack.initialPage: [browserView, editorView]
-    pageStack.interactive: isMobile
-    pageStack.separatorVisible: pageStack.wideMode
 
     mainMenu: [
         Maui.MenuItem
@@ -88,31 +84,40 @@ Maui.ApplicationWindow
 
 
 
-    Maui.FileBrowser
+    globalDrawer: Maui.GlobalDrawer
     {
-        id: browserView
-        headBar.visible: false
-        list.viewType : FMList.LIST_VIEW
-        list.filterType: FMList.TEXT
-        trackChanges: false
-        thumbnailsSize: iconSizes.small
-        showEmblems: false
-        z: 1
+        width: Kirigami.Units.gridUnit * 14
+        modal: root.width < Kirigami.Units.gridUnit * 62
+        handleVisible: modal
 
-        floatingBar: false
-        onItemClicked:
-        {
-            var item = list.get(index)
+        contentItem: Maui.FileBrowser
+            {
+                id: browserView
 
-            if(Maui.FM.isDir(item.path))
-                openFolder(item.path)
-            else {
-                editor.document.load("file://"+item.path)
-                console.log("OPENIGN FILE", item.path)
+                headBar.visible: false
+                list.viewType : FMList.LIST_VIEW
+                list.filterType: FMList.TEXT
+                trackChanges: false
+                thumbnailsSize: iconSizes.small
+                showEmblems: false
+                z: 1
 
-                setTabMetadata(item.path);
+                floatingBar: false
+                onItemClicked:
+                {
+                    var item = list.get(index)
+
+                    if(Maui.FM.isDir(item.path))
+                        openFolder(item.path)
+                    else {
+                        editor.document.load("file://"+item.path)
+                        console.log("OPENIGN FILE", item.path)
+
+                        setTabMetadata(item.path);
+                    }
+                }
+
             }
-        }
 
     }
 
