@@ -13,8 +13,6 @@ Maui.ApplicationWindow
     id: root
     title: qsTr("Nota")
 
-    property int sidebarWidth: Kirigami.Units.gridUnit * 11 > Screen.width  * 0.3 ? Screen.width : Kirigami.Units.gridUnit * 11
-
     property bool terminalVisible: false
     property alias terminal : terminalLoader.item
 
@@ -24,6 +22,9 @@ Maui.ApplicationWindow
             text: qsTr("Save As")
             onTriggered: saveFile()
         },
+
+        MenuSeparator {},
+
         Maui.MenuItem
         {
             text: qsTr("Show terminal")
@@ -91,33 +92,33 @@ Maui.ApplicationWindow
         handleVisible: modal
 
         contentItem: Maui.FileBrowser
+        {
+            id: browserView
+
+            headBar.visible: false
+            list.viewType : FMList.LIST_VIEW
+            list.filterType: FMList.TEXT
+            trackChanges: false
+            thumbnailsSize: iconSizes.small
+            showEmblems: false
+            z: 1
+
+            floatingBar: false
+            onItemClicked:
             {
-                id: browserView
+                var item = list.get(index)
 
-                headBar.visible: false
-                list.viewType : FMList.LIST_VIEW
-                list.filterType: FMList.TEXT
-                trackChanges: false
-                thumbnailsSize: iconSizes.small
-                showEmblems: false
-                z: 1
+                if(Maui.FM.isDir(item.path))
+                    openFolder(item.path)
+                else {
+                    editor.document.load("file://"+item.path)
+                    console.log("OPENIGN FILE", item.path)
 
-                floatingBar: false
-                onItemClicked:
-                {
-                    var item = list.get(index)
-
-                    if(Maui.FM.isDir(item.path))
-                        openFolder(item.path)
-                    else {
-                        editor.document.load("file://"+item.path)
-                        console.log("OPENIGN FILE", item.path)
-
-                        setTabMetadata(item.path);
-                    }
+                    setTabMetadata(item.path);
                 }
-
             }
+
+        }
 
     }
 
@@ -202,7 +203,7 @@ Maui.ApplicationWindow
                             {
                                 height: toolBarHeight
                                 width: 150 *unit
-                                anchors.bottom: tabsBar.bottom
+                                anchors.bottom: parent.bottom
 
                                 Label
                                 {
