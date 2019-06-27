@@ -17,7 +17,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTORCC ON)
 
 set(nota_SRCS
-    main.cpp
+    src/main.cpp
     )
 
 set(nota_HDRS
