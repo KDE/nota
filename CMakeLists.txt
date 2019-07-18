@@ -53,7 +53,7 @@ endif()
 target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg)
 
 install(TARGETS nota ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-# install(FILES org.kde.pix.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 #TODO: port to ecm_install_icons()
 # install(FILES assets/pix.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
