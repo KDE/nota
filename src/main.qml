@@ -6,8 +6,6 @@ import org.kde.kirigami 2.4 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import QtQuick.Window 2.0
 
-import FMList 1.0
-
 Maui.ApplicationWindow
 {
     id: root
@@ -17,7 +15,7 @@ Maui.ApplicationWindow
     property alias terminal : terminalLoader.item
 
     mainMenu: [
-        Maui.MenuItem
+        MenuItem
         {
             text: qsTr("Save As")
             onTriggered: saveFile()
@@ -25,7 +23,7 @@ Maui.ApplicationWindow
 
         MenuSeparator {},
 
-        Maui.MenuItem
+        MenuItem
         {
             text: qsTr("Show terminal")
             checkable: true
@@ -38,15 +36,15 @@ Maui.ApplicationWindow
     {
         id: fileDialog
         onlyDirs: false
-        filterType: FMList.TEXT
-        sortBy: FMList.MODIFIED
+        filterType: Maui.FMList.TEXT
+        sortBy: Maui.FMList.MODIFIED
         mode: modes.OPEN
     }
 
     headBar.leftContent: [
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "document-open"
+            icon.name: "document-open"
             onClicked: {
                 fileDialog.onlyDirs = false;
                 fileDialog.mode = 0;
@@ -64,22 +62,22 @@ Maui.ApplicationWindow
                 });
             }
         },
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "document-new"
+            icon.name: "document-new"
         }
     ]
 
     headBar.rightContent: [
-        Maui.ToolButton
+        ToolButton
         {
             id: recent
-            iconName: "view-media-recent"
+            icon.name: "view-media-recent"
         },
-        Maui.ToolButton
+        ToolButton
         {
             id: gallery
-            iconName: "view-books"
+            icon.name: "view-books"
         }
     ]
 
@@ -95,9 +93,9 @@ Maui.ApplicationWindow
         {
             id: browserView
 
-            headBar.visible: false
-            list.viewType : FMList.LIST_VIEW
-            list.filterType: FMList.TEXT
+            headBar.visible: true
+            list.viewType : Maui.FMList.LIST_VIEW
+            list.filterType: Maui.FMList.TEXT
             trackChanges: false
             thumbnailsSize: iconSizes.small
             showEmblems: false
@@ -216,14 +214,14 @@ Maui.ApplicationWindow
                                     elide: Text.ElideRight
                                 }
 
-                                Maui.ToolButton
+                                ToolButton
                                 {
                                     Layout.fillHeight: true
                                     anchors.right: parent.right
                                     anchors.verticalCenter: parent.verticalCenter
                                     padding: 2 * unit
 
-                                    iconName: "dialog-close"
+                                    icon.name: "dialog-close"
                                     //                             icon.color: "transparent"
                                     visible: tabsListModel.count > 1
 
@@ -240,12 +238,12 @@ Maui.ApplicationWindow
                     }
                 }
 
-                Maui.ToolButton
+                ToolButton
                 {
                     implicitWidth: toolBarHeight
                     Layout.fillHeight: true
 
-                    iconName: "list-add"
+                    icon.name: "list-add"
 
 
                     onClicked:
@@ -279,9 +277,9 @@ Maui.ApplicationWindow
             Layout.fillWidth: true
             anchors.topMargin: tabsBar.height
 
-            headBar.rightContent: Maui.ToolButton
+            headBar.rightContent: ToolButton
             {
-                iconName: "document-save"
+                icon.name: "document-save"
                 onClicked: {
                     //                    if (editor.document.fileUrl == "") {
                     //                        saveFile();
