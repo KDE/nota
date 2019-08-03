@@ -275,7 +275,7 @@ Maui.ApplicationWindow
             Layout.fillHeight: true
             Layout.fillWidth: true
             anchors.topMargin: tabsBar.height
-
+stickyHeadBar: false
             headBar.rightContent: ToolButton
             {
                 icon.name: "document-save"
