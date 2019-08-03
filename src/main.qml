@@ -101,7 +101,6 @@ Maui.ApplicationWindow
             showEmblems: false
             z: 1
 
-            floatingBar: false
             onItemClicked:
             {
                 var item = list.get(index)
@@ -209,7 +208,7 @@ Maui.ApplicationWindow
                                     //                             verticalAlignment: Qt.AlignVCenter
                                     font.pointSize: fontSizes.default
                                     anchors.centerIn: parent
-                                    color: textColor
+                                    color: Kirigami.Theme.textColor
                                     wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                                     elide: Text.ElideRight
                                 }
