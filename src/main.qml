@@ -57,7 +57,7 @@ Maui.ApplicationWindow
                         filepath = paths;
                     }
 
-                    editor.document.load("file://" + filepath);
+                    editor.document.load(filepath);
                     setTabMetadata(filepath);
                 });
             }
@@ -108,7 +108,7 @@ Maui.ApplicationWindow
                 if(Maui.FM.isDir(item.path))
                     openFolder(item.path)
                 else {
-                    editor.document.load("file://"+item.path)
+                    editor.document.load(item.path)
                     console.log("OPENIGN FILE", item.path)
 
                     setTabMetadata(item.path);
@@ -359,7 +359,7 @@ Maui.ApplicationWindow
                     filepath = paths;
                 }
 
-                editor.document.saveAs("file://" + filepath + "/" + fileDialog.textField.text);
+                editor.document.saveAs(filepath + "/" + fileDialog.textField.text);
                 setTabMetadata(filepath + "/" + fileDialog.textField.text);
             });
         }
@@ -367,6 +367,6 @@ Maui.ApplicationWindow
 
     function setTabMetadata(filepath) {
         tabsListModel.setProperty(tabsBar.currentIndex, "title", filepath.split("/").slice(-1)[0])
-        tabsListModel.setProperty(tabsBar.currentIndex, "path", "file://" + filepath)
+        tabsListModel.setProperty(tabsBar.currentIndex, "path", filepath)
     }
 }
