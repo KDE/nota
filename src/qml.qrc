@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>Terminal.qml</file>
         <file>Editor.qml</file>
+        <file>views/DocumentsView.qml</file>
     </qresource>
 </RCC>

@@ -26,6 +26,7 @@ set(nota_HDRS
 
 set(nota_ASSETS
     src/qml.qrc
+    assets/img_assets.qrc
     )
 
 add_executable(nota
@@ -43,14 +44,14 @@ else()
     find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config KIO Attica)
     find_package(Qt5 REQUIRED COMPONENTS WebEngine)
 
-    target_link_libraries(nota KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
+#    target_link_libraries(nota KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
 endif()
 
 if (TARGET create-apk-nota)
     set_target_properties(create-apk-nota PROPERTIES ANDROID_APK_DIR "${MAUIKIT_ANDROID_DIR}")
 endif()
 
-target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg)
+target_link_libraries(nota Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg)
 
 install(TARGETS nota ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})

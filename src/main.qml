@@ -1,10 +1,12 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.2
+import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
 import QtQml.Models 2.3
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import QtQuick.Window 2.0
+
+import "views"
 
 Maui.ApplicationWindow
 {
@@ -13,15 +15,20 @@ Maui.ApplicationWindow
 
     property bool terminalVisible: false
     property alias terminal : terminalLoader.item
+    property var views : ({editor: 0, documents: 1, recent: 2})
+    property int currentView : views.editor
+
+    ObjectModel { id: tabsObjectModel }
+
+    rightIcon.visible: false
+
+    onCurrentViewChanged:
+    {
+        _drawer.visible = currentView === views.editor
+    }
 
     mainMenu: [
-        MenuItem
-        {
-            text: qsTr("Save As")
-            onTriggered: saveFile()
-        },
 
-        MenuSeparator {},
 
         MenuItem
         {
@@ -41,50 +48,64 @@ Maui.ApplicationWindow
         mode: modes.OPEN
     }
 
-    headBar.leftContent: [
+    headBar.rightContent: [
         ToolButton
         {
             icon.name: "document-open"
             onClicked: {
                 fileDialog.onlyDirs = false;
-                fileDialog.mode = 0;
+                fileDialog.mode = fileDialog.modes.OPEN;
+                fileDialog.singleSelection = false
                 fileDialog.show(function (paths) {
-                    var filepath = "";
-
-                    if (typeof paths === "object") {
-                        filepath = paths[0];
-                    } else {
-                        filepath = paths;
-                    }
-
-                    editor.document.load(filepath);
-                    setTabMetadata(filepath);
+                    for(var i in paths)
+                        openTab(paths[i])
                 });
             }
         },
         ToolButton
         {
             icon.name: "document-new"
+            onClicked: openTab("")
         }
     ]
 
-    headBar.rightContent: [
-        ToolButton
-        {
-            id: recent
-            icon.name: "view-media-recent"
-        },
-        ToolButton
-        {
-            id: gallery
-            icon.name: "view-books"
-        }
-    ]
+    headBar.leftContent: Kirigami.ActionToolBar
+    {
+        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
+        position: ToolBar.Header
+        Layout.fillWidth: true
+
+        actions: [
+            Action
+            {
+                text: qsTr("Editor")
+                icon.name: "editor"
+                checked: currentView === views.editor
+                onTriggered: currentView = views.editor
+            },
+            Action
+            {
+                text: qsTr("Documents")
+                icon.name: "view-pim-journal" // to do
+                checked: currentView === views.documents
+                onTriggered: currentView = views.documents
+
+            },
+            Action
+            {
+                text: qsTr("Recent")
+                icon.name: "view-media-recent" // to do
+                checked: currentView === views.recent
+                onTriggered: currentView = views.recent
+            }
+        ]
+    }
 
 
 
     globalDrawer: Maui.GlobalDrawer
     {
+        id : _drawer
         width: Kirigami.Units.gridUnit * 14
         modal: root.width < Kirigami.Units.gridUnit * 62
         handleVisible: modal
@@ -97,9 +118,8 @@ Maui.ApplicationWindow
             list.viewType : Maui.FMList.LIST_VIEW
             list.filterType: Maui.FMList.TEXT
             trackChanges: false
-            thumbnailsSize: iconSizes.small
             showEmblems: false
-            z: 1
+            z: parent.z+1
 
             onItemClicked:
             {
@@ -107,266 +127,222 @@ Maui.ApplicationWindow
 
                 if(Maui.FM.isDir(item.path))
                     openFolder(item.path)
-                else {
-                    editor.document.load(item.path)
-                    console.log("OPENIGN FILE", item.path)
-
-                    setTabMetadata(item.path);
-                }
+                else
+                    openTab(item.path)
             }
-
         }
-
     }
 
-    ColumnLayout
+    SwipeView
     {
-        id: editorView
+        id: _swipeView
         anchors.fill: parent
+        currentIndex: currentView
 
-        Item
+        onCurrentItemChanged: currentItem.forceActiveFocus()
+        onCurrentIndexChanged: currentView = currentIndex
+
+        ColumnLayout
         {
-            Layout.fillWidth: true
-            Layout.preferredHeight: toolBarHeight
-
-            Kirigami.Separator
-            {
-                color: borderColor
-                z: tabsBar.z + 1
-                anchors
-                {
-                    bottom: parent.bottom
-                    right: parent.right
-                    left: parent.left
-                }
-            }
+            id: editorView
+            spacing: 0
 
             Rectangle
             {
-                anchors.fill: parent
-                color: Qt.darker(backgroundColor, 1.1)
-            }
+                Layout.fillWidth: true
+                Layout.preferredHeight: toolBarHeight
+                Kirigami.Theme.colorSet: Kirigami.Theme.View
+                Kirigami.Theme.inherit: false
+                color: Kirigami.Theme.backgroundColor
 
-            RowLayout
-            {
-
-                anchors.fill : parent
-
-                TabBar
+                RowLayout
                 {
-                    id: tabsBar
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    clip: true
+                    anchors.fill : parent
+                    spacing: 0
 
-                    ListModel { id: tabsListModel }
-
-                    ObjectModel { id: tabsObjectModel }
-
-                    background: Rectangle
+                    TabBar
                     {
-                        color: "transparent"
-                    }
+                        id: tabsBar
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        currentIndex : _editorList.currentIndex
+                        clip: true
 
-                    Repeater
-                    {
-                        model: tabsListModel
+                        ListModel { id: tabsListModel }
 
-                        TabButton
+                        background: Rectangle
                         {
-                            width: 150 * unit
-                            checked: shouldFocus
-                            implicitHeight: toolBarHeight
+                            color: "transparent"
+                        }
 
-                            background: Rectangle
+                        Repeater
+                        {
+                            model: tabsListModel
+
+                            TabButton
                             {
-                                color: checked ? backgroundColor : viewBackgroundColor
+                                width: 150 * unit
+                                checked: index === _editorList.currentIndex
+                                implicitHeight: toolBarHeight
 
-                                Kirigami.Separator
+                                onClicked: _editorList.currentIndex = index
+
+                                background: Rectangle
                                 {
-                                    color: borderColor
-                                    z: tabsBar.z + 1
-                                    visible: tabsListModel.count > 1
-                                    anchors
+                                    color: checked ? Kirigami.Theme.focusColor : Kirigami.Theme.backgroundColor
+
+                                    Kirigami.Separator
                                     {
-                                        bottom: parent.bottom
-                                        top: parent.top
-                                        right: parent.right
-                                    }
-                                }
-                            }
-
-                            contentItem: Item
-                            {
-                                height: toolBarHeight
-                                width: 150 *unit
-                                anchors.bottom: parent.bottom
-
-                                Label
-                                {
-                                    text: title
-                                    //                             verticalAlignment: Qt.AlignVCenter
-                                    font.pointSize: fontSizes.default
-                                    anchors.centerIn: parent
-                                    color: Kirigami.Theme.textColor
-                                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                                    elide: Text.ElideRight
-                                }
-
-                                ToolButton
-                                {
-                                    Layout.fillHeight: true
-                                    anchors.right: parent.right
-                                    anchors.verticalCenter: parent.verticalCenter
-                                    padding: 2 * unit
-
-                                    icon.name: "dialog-close"
-                                    //                             icon.color: "transparent"
-                                    visible: tabsListModel.count > 1
-
-                                    onClicked:
-                                    {
-                                        var removedIndex = index
-                                        tabsObjectModel.remove(removedIndex)
-                                        tabsListModel.remove(removedIndex)
+                                        color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
+                                        z: tabsBar.z + 1
+                                        width : 2
+                                        //                                    visible: tabsListModel.count > 1
+                                        anchors
+                                        {
+                                            bottom: parent.bottom
+                                            top: parent.top
+                                            right: parent.right
+                                        }
                                     }
                                 }
 
+                                contentItem: RowLayout
+                                {
+                                    height: toolBarHeight
+                                    width: 150 *unit
+                                    anchors.bottom: parent.bottom
+
+                                    Label
+                                    {
+                                        text: title
+                                        //                             verticalAlignment: Qt.AlignVCenter
+                                        font.pointSize: fontSizes.default
+                                        Layout.fillWidth: true
+                                        Layout.fillHeight: true
+                                        Layout.alignment: Qt.AlignCenter
+                                        anchors.centerIn: parent
+                                        color: Kirigami.Theme.textColor
+                                        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                                        elide: Text.ElideRight
+                                    }
+
+                                    ToolButton
+                                    {
+                                        //                                        Layout.fillHeight: true
+                                        Layout.margins: space.medium
+                                        icon.name: "dialog-close"
+                                        //                             icon.color: "transparent"
+                                        //                                        visible: tabsListModel.count > 1
+
+                                        onClicked:
+                                        {
+                                            var removedIndex = index
+                                            tabsObjectModel.remove(removedIndex)
+                                            tabsListModel.remove(removedIndex)
+                                        }
+                                    }
+
+                                }
                             }
                         }
                     }
-                }
 
-                ToolButton
-                {
-                    implicitWidth: toolBarHeight
-                    Layout.fillHeight: true
-
-                    icon.name: "list-add"
-
-
-                    onClicked:
+                    ToolButton
                     {
-
-                        var component = Qt.createComponent("Editor.qml");
-                        if (component.status === Component.Ready){
-                            var object = component.createObject(tabsObjectModel, {
-                                                                    onSaveClicked : function() {
-                                                                        editorSaveClicked();
-                                                                    }
-                                                                });
-                            tabsObjectModel.append(object);
-                        }
-
-                        tabsListModel.setProperty(tabsBar.currentIndex, "shouldFocus", false);
-                        tabsListModel.append({
-                                                 title: "Untitled",
-                                                 path: "",
-                                                 shouldFocus: true
-                                             })
+                        Layout.margins: space.medium
+                        Layout.alignment: Qt.AlignVCenter
+                        icon.name: "list-add"
+                        flat: true
+                        onClicked: openTab("")
                     }
                 }
             }
-        }
-
-        Maui.Editor
-        {
-            id: editor
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            anchors.topMargin: tabsBar.height
-            stickyHeadBar: false
-            headBar.rightContent: ToolButton
-            {
-                icon.name: "document-save"
-                onClicked: {
-                    //                    if (editor.document.fileUrl == "") {
-                    //                        saveFile();
-                    //                    } else {
-                    //                        saveFile(editor.document.fileUrl);
-                    //                    }
-                    saveFile(tabsListModel.get(tabsBar.currentIndex).path);
-                }
-            }
-
-            anchors.top: parent.top
-            anchors.bottom: terminalVisible ? handle.top : parent.bottom
-        }
-
-        Rectangle
-        {
-            id: handle
-            visible: terminalVisible
-
-            Layout.fillWidth: true
-            height: 5
-            color: "transparent"
 
             Kirigami.Separator
             {
-                anchors
-                {
-                    bottom: parent.bottom
-                    right: parent.right
-                    left: parent.left
-                }
+                color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
+                Layout.fillWidth: true
+                Layout.preferredHeight: 1
             }
 
-            MouseArea
+
+            ListView
             {
-                anchors.fill: parent
-                drag.target: parent
-                drag.axis: Drag.YAxis
-                drag.smoothed: true
-                cursorShape: Qt.SizeVerCursor
+                id: _editorList
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                orientation: ListView.Horizontal
+                model: tabsObjectModel
+                snapMode: ListView.SnapOneItem
+                spacing: 0
+                interactive: isMobile
+                highlightFollowsCurrentItem: true
+                highlightMoveDuration: 0
+
+
+                Maui.Holder
+                {
+                    id: _holder
+                    visible: !tabsListModel.count
+                    emoji: "qrc:/Type.png"
+                    emojiSize: iconSizes.huge
+                    isMask: false
+                    title: qsTr("Create a new document")
+                    body: qsTr("You can reate a new document by clicking the New File button, or the tab bar Add icon.
+                Alternative you can open existing files from the left places sidebar or by clicking the Open button")
+                }
+
+            }
+
+            Loader
+            {
+                id: terminalLoader
+                visible: terminalVisible
+                focus: true
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignBottom
+                Layout.minimumHeight: 100
+                Layout.maximumHeight: 200
+                //            anchors.bottom: parent.bottom
+                //            anchors.top: handle.bottom
+                source: !isMobile ? "Terminal.qml" : undefined
             }
         }
 
-        Loader
+
+        DocumentsView
         {
-            id: terminalLoader
-            visible: terminalVisible
-            focus: true
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            Layout.alignment: Qt.AlignBottom
-            Layout.minimumHeight: 100
-            Layout.maximumHeight: root.height * 0.3
-            anchors.bottom: parent.bottom
-            anchors.top: handle.bottom
-            //            source: !isMobile ? "Terminal.qml" : undefined
+            id: _documentsView
         }
     }
 
-    Connections {
-        target: editor.body
-        onTextChanged: {
-            tabsListModel.setProperty(tabsBar.currentIndex, "content", editor.body.text)
+
+    function openTab(path)
+    {
+        var component = Qt.createComponent("Editor.qml");
+        if (component.status === Component.Ready)
+        {
+            var object = component.createObject(tabsObjectModel);
+            tabsObjectModel.append(object);
         }
-    }
 
-    function saveFile(path) {
-        if (path) {
-            editor.document.saveAs(path);
-        } else {
-            fileDialog.mode = 1;
-            fileDialog.show(function (paths) {
-                var filepath = "";
+        tabsListModel.append({
+                                 title: qsTr("Untitled"),
+                                 path: path,
+                             })
 
-                if (typeof paths === "object") {
-                    filepath = paths[0];
-                } else {
-                    filepath = paths;
-                }
+        _editorList.currentIndex = tabsObjectModel.count - 1
 
-                editor.document.saveAs(filepath + "/" + fileDialog.textField.text);
-                setTabMetadata(filepath + "/" + fileDialog.textField.text);
-            });
+        if(path && Maui.FM.fileExists(path))
+        {
+            setTabMetadata(path)
+            tabsObjectModel.get(tabsObjectModel.count - 1).document.load(path)
+            browserView.openFolder(path)
         }
     }
 
     function setTabMetadata(filepath) {
-        tabsListModel.setProperty(tabsBar.currentIndex, "title", filepath.split("/").slice(-1)[0])
+        tabsListModel.setProperty(tabsBar.currentIndex, "title", Maui.FM.getFileInfo(filepath).label)
         tabsListModel.setProperty(tabsBar.currentIndex, "path", filepath)
     }
 }
