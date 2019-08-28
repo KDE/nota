@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>Type.png</file>
+        <file>nota.svg</file>
     </qresource>
 </RCC>

@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
+#include <QIcon>
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
 #else
@@ -28,6 +28,8 @@ int main(int argc, char *argv[])
     app.setApplicationName("nota");
     app.setApplicationVersion("1.0");
     app.setApplicationDisplayName("Nota");
+
+    app.setWindowIcon(QIcon(":/nota.svg"));
 
 #ifdef STATIC_KIRIGAMI
     KirigamiPlugin::getInstance().registerTypes();
