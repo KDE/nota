@@ -84,6 +84,19 @@
        id="linearGradient4186"
        xlink:href="#Shadow"
        inkscape:collect="always" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1200"
+       x="-0.013456935"
+       width="1.0269139"
+       y="-0.010827721"
+       height="1.0216554">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.13456935"
+         id="feGaussianBlur1202" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -92,9 +105,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.25"
-     inkscape:cx="197.22927"
-     inkscape:cy="-72.895018"
+     inkscape:zoom="9.1923882"
+     inkscape:cx="-11.482742"
+     inkscape:cy="7.0847077"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -372,6 +385,31 @@
            rx="0.12772158"
            ry="0.2277707" />
       </g>
+    </g>
+    <g
+       id="g1134-3"
+       transform="translate(0.36974528,-6.2403022)"
+       style="opacity:0.3;fill:#7f898e;fill-opacity:1;filter:url(#filter1200)">
+      <rect
+         style="opacity:1;fill:#7f898e;fill-opacity:1;stroke:none;stroke-width:5.52697945;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.04545456"
+         id="rect990-5-2-4-7-1"
+         width="24"
+         height="4"
+         x="20.130255"
+         y="1109.2795"
+         rx="0.25544316"
+         ry="0.2277707" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:34.1860466px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#7f898e;fill-opacity:1;stroke:none;stroke-width:0.85465115;stroke-opacity:1"
+         x="17.891766"
+         y="1106.9718"
+         id="text1051-1-5-8"><tspan
+           sodipodi:role="line"
+           id="tspan1049-8-3-9"
+           x="17.891766"
+           y="1106.9718"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Archivo Black';-inkscape-font-specification:'Archivo Black, ';fill:#7f898e;fill-opacity:1;stroke:none;stroke-width:0.85465115;stroke-opacity:1">N</tspan></text>
     </g>
     <g
        id="g1134"
