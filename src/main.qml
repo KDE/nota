@@ -18,8 +18,11 @@ Maui.ApplicationWindow
     property var views : ({editor: 0, documents: 1, recent: 2})
     property int currentView : views.editor
 
-    about.appIcon: "qrc:/nota.svg"
-    about.appDescription: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
+    Component.onCompleted:
+    {
+        Maui.App.iconName = "qrc:/nota.svg"
+        Maui.App.description = qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
+    }
 
     ObjectModel { id: tabsObjectModel }
 
