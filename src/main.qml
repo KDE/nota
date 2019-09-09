@@ -156,22 +156,24 @@ Maui.ApplicationWindow
 
             Rectangle
             {
-                Layout.fillWidth: true
-                Layout.preferredHeight: toolBarHeight
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
                 Kirigami.Theme.inherit: false
-                color: Kirigami.Theme.backgroundColor
+                Layout.fillWidth: true
+                Layout.preferredHeight: visible ? Maui.Style.rowHeight : 0
+                visible: _editorList.count > 1
+                color: "transparent"
 
                 RowLayout
                 {
-                    anchors.fill : parent
                     spacing: 0
+                    anchors.fill : parent
 
                     TabBar
                     {
                         id: tabsBar
                         Layout.fillWidth: true
                         Layout.fillHeight: true
+
                         currentIndex : _editorList.currentIndex
                         clip: true
 
@@ -188,9 +190,11 @@ Maui.ApplicationWindow
 
                             TabButton
                             {
-                                width: 150 * unit
+                                id: _tabButton
+                                readonly property int tabWidth: 150 * unit
+                                implicitWidth: Math.min(tabWidth, root.width)
+                                implicitHeight: Maui.Style.rowHeight
                                 checked: index === _editorList.currentIndex
-                                implicitHeight: toolBarHeight
 
                                 onClicked: _editorList.currentIndex = index
 
@@ -203,7 +207,7 @@ Maui.ApplicationWindow
                                     {
                                         color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
                                         z: tabsBar.z + 1
-                                        width : 2
+                                        width : 1
                                         //                                    visible: tabsListModel.count > 1
                                         anchors
                                         {
@@ -216,31 +220,33 @@ Maui.ApplicationWindow
 
                                 contentItem: RowLayout
                                 {
-                                    height: toolBarHeight
-                                    width: 150 *unit
-                                    anchors.bottom: parent.bottom
+                                    spacing: 0
 
                                     Label
                                     {
                                         text: title
-                                        //                             verticalAlignment: Qt.AlignVCenter
                                         font.pointSize: fontSizes.default
                                         Layout.fillWidth: true
                                         Layout.fillHeight: true
+                                        Layout.margins: space.small
                                         Layout.alignment: Qt.AlignCenter
-                                        anchors.centerIn: parent
+                                        verticalAlignment: Qt.AlignVCenter
+                                        horizontalAlignment: Qt.AlignHCenter
                                         color: Kirigami.Theme.textColor
-                                        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                                        wrapMode: Text.NoWrap
                                         elide: Text.ElideRight
                                     }
 
                                     ToolButton
                                     {
-                                        //                                        Layout.fillHeight: true
+                                        Layout.preferredHeight: iconSizes.medium
+                                        Layout.preferredWidth: iconSizes.medium
+                                        icon.height: iconSizes.medium
+                                        icon.width: iconSizes.width
                                         Layout.margins: space.medium
+                                        Layout.alignment: Qt.AlignRight
+
                                         icon.name: "dialog-close"
-                                        //                             icon.color: "transparent"
-                                        //                                        visible: tabsListModel.count > 1
 
                                         onClicked:
                                         {
@@ -249,22 +255,24 @@ Maui.ApplicationWindow
                                             tabsListModel.remove(removedIndex)
                                         }
                                     }
-
                                 }
                             }
                         }
                     }
-
                     ToolButton
                     {
                         Layout.margins: space.medium
                         Layout.alignment: Qt.AlignVCenter
+                        Layout.fillHeight: true
+                        Layout.preferredWidth: iconSizes.medium
                         icon.name: "list-add"
                         flat: true
                         onClicked: openTab("")
                     }
                 }
+
             }
+
 
             Kirigami.Separator
             {
