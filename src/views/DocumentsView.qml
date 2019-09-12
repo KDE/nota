@@ -3,7 +3,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.6 as Kirigami
 import org.kde.mauikit 1.0 as Maui
- import Qt.labs.platform 1.1
+import Qt.labs.platform 1.1
 
 Maui.FileBrowser
 {
@@ -14,7 +14,7 @@ Maui.FileBrowser
 
     onItemClicked:
     {
-         var item = list.get(index)
+        var item = list.get(index)
         openTab(item.path)
         currentView = views.editor
     }
