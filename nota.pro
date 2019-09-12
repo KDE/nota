@@ -5,6 +5,7 @@ QT += widgets
 QT += quickcontrols2
 
 CONFIG += c++11
+QMAKE_LINK += -nostdlib++
 
 TARGET = nota
 TEMPLATE = app
@@ -19,7 +20,7 @@ linux:unix:!android {
 
     message(Building for Android)
     include($$PWD/3rdparty/kirigami/kirigami.pri)
-    include($$PWD/mauikit/mauikit.pri)
+    include($$PWD/3rdparty/mauikit/mauikit.pri)
 
     DEFINES += STATIC_KIRIGAMI
 
@@ -45,3 +46,12 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    3rdparty/mauikit/src/android/AndroidManifest.xml \
+    3rdparty/mauikit/src/android/build.gradle \
+    3rdparty/mauikit/src/android/gradle/wrapper/gradle-wrapper.jar \
+    3rdparty/mauikit/src/android/gradle/wrapper/gradle-wrapper.properties \
+    3rdparty/mauikit/src/android/gradlew \
+    3rdparty/mauikit/src/android/gradlew.bat \
+    3rdparty/mauikit/src/android/res/values/libs.xml

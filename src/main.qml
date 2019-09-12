@@ -107,8 +107,6 @@ Maui.ApplicationWindow
         ]
     }
 
-
-
     globalDrawer: Maui.GlobalDrawer
     {
         id : _drawer
@@ -156,6 +154,7 @@ Maui.ApplicationWindow
 
             Rectangle
             {
+                id: _tabBar
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
                 Kirigami.Theme.inherit: false
                 Layout.fillWidth: true
@@ -201,26 +200,14 @@ Maui.ApplicationWindow
                                 background: Rectangle
                                 {
                                     color: checked ? Kirigami.Theme.focusColor : Kirigami.Theme.backgroundColor
-                                    opacity: checked ? 0.4 : 1
-
-                                    Kirigami.Separator
-                                    {
-                                        color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
-                                        z: tabsBar.z + 1
-                                        width : 1
-                                        //                                    visible: tabsListModel.count > 1
-                                        anchors
-                                        {
-                                            bottom: parent.bottom
-                                            top: parent.top
-                                            right: parent.right
-                                        }
-                                    }
+//                                    opacity: checked ? 0.4 : 1
                                 }
 
                                 contentItem: RowLayout
                                 {
                                     spacing: 0
+                                    height: parent.height
+                                    width: parent.width
 
                                     Label
                                     {
@@ -256,6 +243,20 @@ Maui.ApplicationWindow
                                         }
                                     }
                                 }
+
+                                Kirigami.Separator
+                                {
+                                    color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
+//                                        z: tabsBar.z + 1
+                                    width : 1
+                                    //                                    visible: tabsListModel.count > 1
+                                    anchors
+                                    {
+                                        bottom: parent.bottom
+                                        top: parent.top
+                                        right: parent.right
+                                    }
+                                }
                             }
                         }
                     }
@@ -279,6 +280,7 @@ Maui.ApplicationWindow
                 color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
                 Layout.fillWidth: true
                 Layout.preferredHeight: 1
+                visible: _tabBar.visible
             }
 
 

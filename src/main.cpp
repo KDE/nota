@@ -12,7 +12,7 @@
 #endif
 
 #ifdef STATIC_MAUIKIT
-#include "./mauikit/src/mauikit.h"
+#include "3rdparty/mauikit/src/mauikit.h"
 #endif
 
 int main(int argc, char *argv[])
