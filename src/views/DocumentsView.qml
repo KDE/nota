@@ -9,13 +9,13 @@ Maui.FileBrowser
 {
     id: browser
     currentPath: StandardPaths.writableLocation(StandardPaths.DocumentsLocation)
-    list.filterType: Maui.FMList.TEXT
-    list.viewType : Maui.FMList.ICON_VIEW
+//    currentFMList.filterType: Maui.FMList.TEXT
+//    browserView.viewType : Maui.FMList.ICON_VIEW
 
     onItemClicked:
     {
-        var item = list.get(index)
-        openTab(item.path)
+        var item = currentFMList.get(index)
+        root.openTab(item.path)
         currentView = views.editor
     }
 }

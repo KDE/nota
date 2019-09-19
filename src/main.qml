@@ -13,14 +13,14 @@ Maui.ApplicationWindow
     id: root
     title: qsTr("Nota")
 
-    property bool terminalVisible: false
+    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false)
     property alias terminal : terminalLoader.item
     property var views : ({editor: 0, documents: 1, recent: 2})
     property int currentView : views.editor
 
     Component.onCompleted:
     {
-//        Maui.App.iconName = "qrc:/nota.svg"
+        Maui.App.iconName = "qrc:/img/nota.svg"
         Maui.App.description = qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
     }
     about.appIcon: "qrc:/buho.svg"
@@ -113,8 +113,9 @@ Maui.ApplicationWindow
     {
         id : _drawer
         width: Kirigami.Units.gridUnit * 14
+        height: root.height - headBar.height - ( modal ? _editorList.currentItem.footBar.height : 0)
         modal: root.width < Kirigami.Units.gridUnit * 62
-        handleVisible: modal
+        handleVisible: false
 
         contentItem: Maui.FileBrowser
         {
@@ -122,20 +123,21 @@ Maui.ApplicationWindow
 
             headBar.position: ToolBar.Footer
             headBar.visible: true
-            list.viewType : Maui.FMList.LIST_VIEW
-            list.filterType: Maui.FMList.TEXT
-            trackChanges: false
+            viewType : Maui.FMList.LIST_VIEW
+            filterType: Maui.FMList.TEXT
             showEmblems: false
-            z: parent.z+1
+
+            headBar.rightLayout.visible: false
+            headBar.rightLayout.width: 0
 
             onItemClicked:
             {
-                var item = list.get(index)
+                var item = currentFMList.get(index)
 
                 if(Maui.FM.isDir(item.path))
                     openFolder(item.path)
                 else
-                    openTab(item.path)
+                    root.openTab(item.path)
             }
         }
     }
@@ -187,13 +189,13 @@ Maui.ApplicationWindow
 
                         Repeater
                         {
+                            id: _repeater
                             model: tabsListModel
 
                             TabButton
                             {
                                 id: _tabButton
-                                readonly property int tabWidth: 150 * unit
-                                implicitWidth: Math.min(tabWidth, root.width)
+                                implicitWidth: tabsBar.width / _repeater.count
                                 implicitHeight: Maui.Style.rowHeight
                                 checked: index === _editorList.currentIndex
 
