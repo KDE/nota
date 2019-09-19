@@ -4,7 +4,8 @@ QT += sql
 QT += widgets
 QT += quickcontrols2
 
-CONFIG += c++11
+CONFIG += ordered
+CONFIG += c++17
 QMAKE_LINK += -nostdlib++
 
 TARGET = nota
@@ -56,3 +57,8 @@ DISTFILES += \
     3rdparty/mauikit/src/android/gradlew \
     3rdparty/mauikit/src/android/gradlew.bat \
     3rdparty/mauikit/src/android/res/values/libs.xml
+
+contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
+    ANDROID_PACKAGE_SOURCE_DIR = \
+        $$PWD/3rdparty/mauikit/src/android
+}

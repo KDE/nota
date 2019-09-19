@@ -20,9 +20,11 @@ Maui.ApplicationWindow
 
     Component.onCompleted:
     {
-        Maui.App.iconName = "qrc:/nota.svg"
+//        Maui.App.iconName = "qrc:/nota.svg"
         Maui.App.description = qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
     }
+    about.appIcon: "qrc:/buho.svg"
+
 
     ObjectModel { id: tabsObjectModel }
 
