@@ -117,27 +117,53 @@ Maui.ApplicationWindow
         modal: root.width < Kirigami.Units.gridUnit * 62
         handleVisible: false
 
-        contentItem: Maui.FileBrowser
+        contentItem: Maui.Page
         {
-            id: browserView
-
-            headBar.position: ToolBar.Footer
-            headBar.visible: true
-            viewType : Maui.FMList.LIST_VIEW
-            filterType: Maui.FMList.TEXT
-            showEmblems: false
-
-            headBar.rightLayout.visible: false
-            headBar.rightLayout.width: 0
-
-            onItemClicked:
+            headBar.middleContent: ComboBox
             {
-                var item = currentFMList.get(index)
+                Layout.fillWidth: true
 
-                if(Maui.FM.isDir(item.path))
-                    openFolder(item.path)
-                else
-                    root.openTab(item.path)
+                model: Maui.BaseModel
+                {
+                    list: Maui.PlacesList
+                    {
+                        groups: [
+                            Maui.FMList.PLACES_PATH,
+                            Maui.FMList.DRIVES_PATH,
+                            Maui.FMList.TAGS_PATH]
+                    }
+                }
+
+                textRole: "label"
+                onActivated:
+                {
+                    currentIndex = index
+                    browserView.openFolder(model.list.get(index).path)
+                }
+            }
+
+            Maui.FileBrowser
+            {
+                id: browserView
+                anchors.fill: parent
+                headBar.position: ToolBar.Footer
+                headBar.visible: true
+                viewType : Maui.FMList.LIST_VIEW
+                filterType: Maui.FMList.TEXT
+                showEmblems: false
+
+                headBar.rightLayout.visible: false
+                headBar.rightLayout.width: 0
+
+                onItemClicked:
+                {
+                    var item = currentFMList.get(index)
+
+                    if(Maui.FM.isDir(item.path))
+                        openFolder(item.path)
+                    else
+                        root.openTab(item.path)
+                }
             }
         }
     }
@@ -204,7 +230,7 @@ Maui.ApplicationWindow
                                 background: Rectangle
                                 {
                                     color: checked ? Kirigami.Theme.focusColor : Kirigami.Theme.backgroundColor
-//                                    opacity: checked ? 0.4 : 1
+                                    //                                    opacity: checked ? 0.4 : 1
                                 }
 
                                 contentItem: RowLayout
@@ -251,7 +277,7 @@ Maui.ApplicationWindow
                                 Kirigami.Separator
                                 {
                                     color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
-//                                        z: tabsBar.z + 1
+                                    //                                        z: tabsBar.z + 1
                                     width : 1
                                     //                                    visible: tabsListModel.count > 1
                                     anchors
