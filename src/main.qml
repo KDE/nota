@@ -50,9 +50,9 @@ Maui.ApplicationWindow
     Maui.FileDialog
     {
         id: fileDialog
-        onlyDirs: false
-        filterType: Maui.FMList.TEXT
-        sortBy: Maui.FMList.MODIFIED
+        settings.onlyDirs: false
+        settings.filterType: Maui.FMList.TEXT
+        settings.sortBy: Maui.FMList.MODIFIED
         mode: modes.OPEN
     }
 
@@ -61,7 +61,7 @@ Maui.ApplicationWindow
         {
             icon.name: "document-open"
             onClicked: {
-                fileDialog.onlyDirs = false;
+                fileDialog.settings.onlyDirs = false;
                 fileDialog.mode = fileDialog.modes.OPEN;
                 fileDialog.singleSelection = false
                 fileDialog.show(function (paths) {
@@ -149,7 +149,7 @@ Maui.ApplicationWindow
                 headBar.position: ToolBar.Footer
                 headBar.visible: true
                 viewType : Maui.FMList.LIST_VIEW
-                filterType: Maui.FMList.TEXT
+                settings.filterType: Maui.FMList.TEXT
                 showEmblems: false
 
                 headBar.rightLayout.visible: false
