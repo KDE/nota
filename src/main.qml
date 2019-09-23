@@ -13,18 +13,13 @@ Maui.ApplicationWindow
     id: root
     title: qsTr("Nota")
 
-    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false)
+    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
     property alias terminal : terminalLoader.item
     property var views : ({editor: 0, documents: 1, recent: 2})
     property int currentView : views.editor
 
-    Component.onCompleted:
-    {
-        Maui.App.iconName = "qrc:/img/nota.svg"
-        Maui.App.description = qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
-    }
-    about.appIcon: "qrc:/buho.svg"
-
+    Maui.App.iconName: "qrc:/img/nota.svg"
+    Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
 
     ObjectModel { id: tabsObjectModel }
 
@@ -36,14 +31,16 @@ Maui.ApplicationWindow
     }
 
     mainMenu: [
-
-
         MenuItem
         {
             text: qsTr("Show terminal")
             checkable: true
             checked: terminal.visible
-            onTriggered: terminalVisible = !terminalVisible
+            onTriggered:
+            {
+                terminalVisible = !terminalVisible
+                Maui.FM.saveSettings("TERMINAL",terminalVisible, "MAINVIEW")
+            }
         }
     ]
 
