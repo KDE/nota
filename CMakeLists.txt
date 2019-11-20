@@ -5,7 +5,8 @@ find_package(ECM 1.7.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
 find_package(MauiKit REQUIRED)
-find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Qml Quick Sql Svg QuickControls2 Widgets)
+find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Qml Quick Sql Svg QuickControls2 Widgets Xml)
+find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config KIO Attica SyntaxHighlighting)
 include(KDEInstallDirs)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
@@ -21,7 +22,7 @@ set(nota_SRCS
     )
 
 set(nota_HDRS
-    
+
     )
 
 set(nota_ASSETS
@@ -36,19 +37,13 @@ add_executable(nota
     )
 
 if (ANDROID)
-    find_package(Qt5 REQUIRED COMPONENTS AndroidExtras)
+    find_package(Qt5 REQUIRED COMPONENTS AndroidExtras WebView)
 
-    target_link_libraries(vvave Qt5::AndroidExtras)
-#     kde_source_files_enable_exceptions(pix src/pix.cpp)
-else() 
-    find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config KIO Attica)
+    target_link_libraries(nota MauiKit Qt5::AndroidExtras)
+else()
     find_package(Qt5 REQUIRED COMPONENTS WebEngine)
 
 #    target_link_libraries(nota KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
-endif()
-
-if (TARGET create-apk-nota)
-    set_target_properties(create-apk-nota PROPERTIES ANDROID_APK_DIR "${MAUIKIT_ANDROID_DIR}")
 endif()
 
 target_link_libraries(nota Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg)
