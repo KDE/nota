@@ -147,8 +147,6 @@ Maui.ApplicationWindow
                 headBar.visible: true
                 viewType : Maui.FMList.LIST_VIEW
                 settings.filterType: Maui.FMList.TEXT
-                showEmblems: false
-
                 headBar.rightLayout.visible: false
                 headBar.rightLayout.width: 0
 
