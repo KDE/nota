@@ -101,7 +101,7 @@ Maui.ApplicationWindow
 
             onItemClicked:
             {
-                var item = list.get(index)
+                var item = browserView.currentFMList.get(index)
 
                 if(Maui.FM.isDir(item.path))
                     openFolder(item.path)
