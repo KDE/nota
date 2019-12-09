@@ -240,7 +240,7 @@ Maui.ApplicationWindow
                                         font.pointSize: fontSizes.default
                                         Layout.fillWidth: true
                                         Layout.fillHeight: true
-                                        Layout.margins: space.small
+                                        Layout.margins: Maui.Style.space.small
                                         Layout.alignment: Qt.AlignCenter
                                         verticalAlignment: Qt.AlignVCenter
                                         horizontalAlignment: Qt.AlignHCenter
@@ -251,11 +251,11 @@ Maui.ApplicationWindow
 
                                     ToolButton
                                     {
-                                        Layout.preferredHeight: iconSizes.medium
-                                        Layout.preferredWidth: iconSizes.medium
-                                        icon.height: iconSizes.medium
-                                        icon.width: iconSizes.width
-                                        Layout.margins: space.medium
+                                        Layout.preferredHeight: Maui.Style.iconSizes.medium
+                                        Layout.preferredWidth: Maui.Style.iconSizes.medium
+                                        icon.height: Maui.Style.iconSizes.medium
+                                        icon.width: Maui.Style.iconSizes.width
+                                        Layout.margins: Maui.Style.space.medium
                                         Layout.alignment: Qt.AlignRight
 
                                         icon.name: "dialog-close"
@@ -287,10 +287,10 @@ Maui.ApplicationWindow
                     }
                     ToolButton
                     {
-                        Layout.margins: space.medium
+                        Layout.margins: Maui.Style.space.medium
                         Layout.alignment: Qt.AlignVCenter
                         Layout.fillHeight: true
-                        Layout.preferredWidth: iconSizes.medium
+                        Layout.preferredWidth: Maui.Style.iconSizes.medium
                         icon.name: "list-add"
                         flat: true
                         onClicked: openTab("")
@@ -328,7 +328,7 @@ Maui.ApplicationWindow
                     id: _holder
                     visible: !tabsListModel.count
                     emoji: "qrc:/Type.png"
-                    emojiSize: iconSizes.huge
+                    emojiSize: Maui.Style.iconSizes.huge
                     isMask: false
                     title: qsTr("Create a new document")
                     body: qsTr("You can reate a new document by clicking the New File button, or the tab bar Add icon.
