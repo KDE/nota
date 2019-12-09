@@ -110,7 +110,7 @@ Maui.ApplicationWindow
     {
         id : _drawer
         width: Kirigami.Units.gridUnit * 14
-        height: root.height - headBar.height - ( modal ? _editorList.currentItem.footBar.height : 0)
+//        height: root.height - headBar.height - ( modal ? _editorList.currentItem.footBar.height : 0)
         modal: root.width < Kirigami.Units.gridUnit * 62
         handleVisible: false
 
