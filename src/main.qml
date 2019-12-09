@@ -35,9 +35,9 @@ Maui.ApplicationWindow
     Maui.FileDialog
     {
         id: fileDialog
-        onlyDirs: false
-        filterType: Maui.FMList.TEXT
-        sortBy: Maui.FMList.MODIFIED
+        settings.onlyDirs: false
+        settings.filterType: Maui.FMList.TEXT
+        settings.sortBy: Maui.FMList.MODIFIED
         mode: modes.OPEN
     }
 
@@ -94,11 +94,9 @@ Maui.ApplicationWindow
             id: browserView
 
             headBar.visible: true
-            list.viewType : Maui.FMList.LIST_VIEW
-            list.filterType: Maui.FMList.TEXT
-            trackChanges: false
+            viewType : Maui.FMList.LIST_VIEW
+            settings.filterType: Maui.FMList.TEXT
             thumbnailsSize: iconSizes.small
-            showEmblems: false
             z: 1
 
             onItemClicked:
