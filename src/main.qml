@@ -254,6 +254,7 @@ Maui.ApplicationWindow
                     emoji: "qrc:/Type.png"
                     emojiSize: Maui.Style.iconSizes.huge
                     isMask: false
+                    onActionTriggered: openTab()
                     title: qsTr("Create a new document")
                     body: qsTr("You can reate a new document by clicking the New File button, or the tab bar Add icon.
                 Alternative you can open existing files from the left places sidebar or by clicking the Open button")
