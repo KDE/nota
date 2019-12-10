@@ -177,127 +177,51 @@ Maui.ApplicationWindow
             id: editorView
             spacing: 0
 
-            Rectangle
-            {
-                id: _tabBar
-                Kirigami.Theme.colorSet: Kirigami.Theme.View
-                Kirigami.Theme.inherit: false
-                Layout.fillWidth: true
-                Layout.preferredHeight: visible ? Maui.Style.rowHeight : 0
-                visible: _editorList.count > 1
-                color: "transparent"
-
-                RowLayout
-                {
-                    spacing: 0
-                    anchors.fill : parent
-
-                    TabBar
+            Maui.TabBar
                     {
-                        id: tabsBar
+                        id: _tabBar
+                        visible: _editorList.count > 1
                         Layout.fillWidth: true
-                        Layout.fillHeight: true
+                        Layout.preferredHeight: _tabBar.implicitHeight
 
+                        position: TabBar.Header
                         currentIndex : _editorList.currentIndex
-                        clip: true
 
-                        ListModel { id: tabsListModel }
+                         ListModel { id: tabsListModel }
 
-                        background: Rectangle
-                        {
-                            color: "transparent"
-                        }
+//                        Keys.onPressed:
+//                        {
+//                            if(event.key == Qt.Key_Return)
+//                            {
+//                                _browserList.currentIndex = currentIndex
+//                                control.currentPath =  tabsObjectModel.get(currentIndex).path
+//                            }
+//                        }
 
                         Repeater
                         {
                             id: _repeater
                             model: tabsListModel
 
-                            TabButton
+                            Maui.TabButton
                             {
                                 id: _tabButton
-                                implicitWidth: tabsBar.width / _repeater.count
-                                implicitHeight: Maui.Style.rowHeight
-                                checked: index === _editorList.currentIndex
+                                implicitHeight: _tabBar.implicitHeight
+                                implicitWidth: Math.max(_tabBar.width / _repeater.count, 120)
+                                checked: index === _tabBar.currentIndex
+
+                                text: title
 
                                 onClicked: _editorList.currentIndex = index
-
-                                background: Rectangle
+                                onCloseClicked:
                                 {
-                                    color: checked ? Kirigami.Theme.focusColor : Kirigami.Theme.backgroundColor
-                                    //                                    opacity: checked ? 0.4 : 1
-                                }
-
-                                contentItem: RowLayout
-                                {
-                                    spacing: 0
-                                    height: parent.height
-                                    width: parent.width
-
-                                    Label
-                                    {
-                                        text: title
-                                        font.pointSize: fontSizes.default
-                                        Layout.fillWidth: true
-                                        Layout.fillHeight: true
-                                        Layout.margins: Maui.Style.space.small
-                                        Layout.alignment: Qt.AlignCenter
-                                        verticalAlignment: Qt.AlignVCenter
-                                        horizontalAlignment: Qt.AlignHCenter
-                                        color: Kirigami.Theme.textColor
-                                        wrapMode: Text.NoWrap
-                                        elide: Text.ElideRight
-                                    }
-
-                                    ToolButton
-                                    {
-                                        Layout.preferredHeight: Maui.Style.iconSizes.medium
-                                        Layout.preferredWidth: Maui.Style.iconSizes.medium
-                                        icon.height: Maui.Style.iconSizes.medium
-                                        icon.width: Maui.Style.iconSizes.width
-                                        Layout.margins: Maui.Style.space.medium
-                                        Layout.alignment: Qt.AlignRight
-
-                                        icon.name: "dialog-close"
-
-                                        onClicked:
-                                        {
-                                            var removedIndex = index
-                                            tabsObjectModel.remove(removedIndex)
-                                            tabsListModel.remove(removedIndex)
-                                        }
-                                    }
-                                }
-
-                                Kirigami.Separator
-                                {
-                                    color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
-                                    //                                        z: tabsBar.z + 1
-                                    width : 1
-                                    //                                    visible: tabsListModel.count > 1
-                                    anchors
-                                    {
-                                        bottom: parent.bottom
-                                        top: parent.top
-                                        right: parent.right
-                                    }
+                                    const removedIndex = index
+                                    tabsObjectModel.remove(removedIndex)
+                                    tabsListModel.remove(removedIndex)
                                 }
                             }
                         }
                     }
-                    ToolButton
-                    {
-                        Layout.margins: Maui.Style.space.medium
-                        Layout.alignment: Qt.AlignVCenter
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: Maui.Style.iconSizes.medium
-                        icon.name: "list-add"
-                        flat: true
-                        onClicked: openTab("")
-                    }
-                }
-
-            }
 
 
             Kirigami.Separator
