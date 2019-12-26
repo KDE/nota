@@ -68,16 +68,9 @@ Maui.Editor
             fileDialog.show(function (paths) {
 
                 console.log("save as", paths)
-                var filepath = "";
 
-                if (typeof paths === "object") {
-                    filepath = paths[0];
-                } else {
-                    filepath = paths;
-                }
-
-                document.saveAs(filepath);
-                setTabMetadata(filepath);
+                document.saveAs(paths[0]);
+                setTabMetadata(paths[0]);
             });
         }
     }

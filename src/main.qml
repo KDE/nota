@@ -110,7 +110,7 @@ Maui.ApplicationWindow
     {
         id : _drawer
         width: Kirigami.Units.gridUnit * 14
-//        height: root.height - headBar.height - ( modal ? _editorList.currentItem.footBar.height : 0)
+        //        height: root.height - headBar.height - ( modal ? _editorList.currentItem.footBar.height : 0)
         modal: root.width < Kirigami.Units.gridUnit * 62
         handleVisible: false
 
@@ -178,50 +178,49 @@ Maui.ApplicationWindow
             spacing: 0
 
             Maui.TabBar
+            {
+                id: _tabBar
+                visible: _editorList.count > 1
+                Layout.fillWidth: true
+                Layout.preferredHeight: _tabBar.implicitHeight
+                position: TabBar.Header
+                currentIndex : _editorList.currentIndex
+
+                ListModel { id: tabsListModel }
+
+                //                        Keys.onPressed:
+                //                        {
+                //                            if(event.key == Qt.Key_Return)
+                //                            {
+                //                                _browserList.currentIndex = currentIndex
+                //                                control.currentPath =  tabsObjectModel.get(currentIndex).path
+                //                            }
+                //                        }
+
+                Repeater
+                {
+                    id: _repeater
+                    model: tabsListModel
+
+                    Maui.TabButton
                     {
-                        id: _tabBar
-                        visible: _editorList.count > 1
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: _tabBar.implicitHeight
+                        id: _tabButton
+                        implicitHeight: _tabBar.implicitHeight
+                        implicitWidth: Math.max(_tabBar.width / _repeater.count, 120)
+                        checked: index === _tabBar.currentIndex
 
-                        position: TabBar.Header
-                        currentIndex : _editorList.currentIndex
+                        text: title
 
-                         ListModel { id: tabsListModel }
-
-//                        Keys.onPressed:
-//                        {
-//                            if(event.key == Qt.Key_Return)
-//                            {
-//                                _browserList.currentIndex = currentIndex
-//                                control.currentPath =  tabsObjectModel.get(currentIndex).path
-//                            }
-//                        }
-
-                        Repeater
+                        onClicked: _editorList.currentIndex = index
+                        onCloseClicked:
                         {
-                            id: _repeater
-                            model: tabsListModel
-
-                            Maui.TabButton
-                            {
-                                id: _tabButton
-                                implicitHeight: _tabBar.implicitHeight
-                                implicitWidth: Math.max(_tabBar.width / _repeater.count, 120)
-                                checked: index === _tabBar.currentIndex
-
-                                text: title
-
-                                onClicked: _editorList.currentIndex = index
-                                onCloseClicked:
-                                {
-                                    const removedIndex = index
-                                    tabsObjectModel.remove(removedIndex)
-                                    tabsListModel.remove(removedIndex)
-                                }
-                            }
+                            const removedIndex = index
+                            tabsObjectModel.remove(removedIndex)
+                            tabsListModel.remove(removedIndex)
                         }
                     }
+                }
+            }
 
 
             Kirigami.Separator
@@ -231,7 +230,6 @@ Maui.ApplicationWindow
                 Layout.preferredHeight: 1
                 visible: _tabBar.visible
             }
-
 
             ListView
             {
@@ -310,7 +308,7 @@ Maui.ApplicationWindow
     }
 
     function setTabMetadata(filepath) {
-        tabsListModel.setProperty(tabsBar.currentIndex, "title", Maui.FM.getFileInfo(filepath).label)
-        tabsListModel.setProperty(tabsBar.currentIndex, "path", filepath)
+        tabsListModel.setProperty(_tabBar.currentIndex, "title", Maui.FM.getFileInfo(filepath).label)
+        tabsListModel.setProperty(_tabBar.currentIndex, "path", filepath)
     }
 }
