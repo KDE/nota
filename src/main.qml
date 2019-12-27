@@ -13,8 +13,8 @@ Maui.ApplicationWindow
     id: root
     title: qsTr("Nota")
 
-    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
-    property alias terminal : terminalLoader.item
+//    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
+//    property alias terminal : terminalLoader.item
     property var views : ({editor: 0, documents: 1, recent: 2})
     property int currentView : views.editor
 
@@ -30,19 +30,19 @@ Maui.ApplicationWindow
         _drawer.visible = currentView === views.editor
     }
 
-    mainMenu: [
-        MenuItem
-        {
-            text: qsTr("Show terminal")
-            checkable: true
-            checked: terminal.visible
-            onTriggered:
-            {
-                terminalVisible = !terminalVisible
-                Maui.FM.saveSettings("TERMINAL",terminalVisible, "MAINVIEW")
-            }
-        }
-    ]
+//    mainMenu: [
+//        MenuItem
+//        {
+//            text: qsTr("Show terminal")
+//            checkable: true
+//            checked: terminal.visible
+//            onTriggered:
+//            {
+//                terminalVisible = !terminalVisible
+//                Maui.FM.saveSettings("TERMINAL",terminalVisible, "MAINVIEW")
+//            }
+//        }
+//    ]
 
     Maui.FileDialog
     {
@@ -260,19 +260,19 @@ Maui.ApplicationWindow
 
             }
 
-            Loader
-            {
-                id: terminalLoader
-                visible: terminalVisible
-                focus: true
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignBottom
-                Layout.minimumHeight: 100
-                Layout.maximumHeight: 200
-                //            anchors.bottom: parent.bottom
-                //            anchors.top: handle.bottom
-                source: !isMobile ? "Terminal.qml" : undefined
-            }
+//            Loader
+//            {
+//                id: terminalLoader
+//                visible: terminalVisible
+//                focus: true
+//                Layout.fillWidth: true
+//                Layout.alignment: Qt.AlignBottom
+//                Layout.minimumHeight: 100
+//                Layout.maximumHeight: 200
+//                //            anchors.bottom: parent.bottom
+//                //            anchors.top: handle.bottom
+//                source: !isMobile ? "Terminal.qml" : undefined
+//            }
         }
 
 

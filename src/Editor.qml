@@ -10,14 +10,14 @@ Maui.Editor
     width: _editorList.width
 
     footBar.leftContent:
-    [
+        [
         ToolButton
         {
             icon.name: "view-list-details"
             onClicked: _drawer.visible = !_drawer.visible
             checked : _drawer.visible
             checkable: false
-        },
+        }/*,
 
         ToolButton
             {
@@ -26,14 +26,14 @@ Maui.Editor
                 onClicked: terminalVisible = !terminalVisible
                 checked : terminalVisible
                 checkable: false
-            }
+            }*/
     ]
 
     headBar.rightContent: Kirigami.ActionToolBar
     {
         position: ToolBar.Header
         Layout.fillWidth: true
-        hiddenActions: t_actions
+        //        hiddenActions: t_actions
 
         display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
 
