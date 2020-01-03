@@ -20,6 +20,7 @@ class FileLoader : public QObject
 
 	signals:
 		void resultReady(FMH::MODEL_LIST items);
+		void itemReady(FMH::MODEL item);
 };
 
 class DocumentsModel : public MauiList
@@ -37,6 +38,8 @@ class DocumentsModel : public MauiList
 
 	private:
 		void setList(const FMH::MODEL_LIST &list);
+		void append(const FMH::MODEL &item);
+
 		FMH::MODEL_LIST m_list;
 
 	signals:

@@ -17,7 +17,7 @@ Maui.Page
         onCleared:  _gridView.model.filter = text
     }
 
-    Maui.GridView
+    Maui.ListBrowser
     {
         id: _gridView
         anchors.fill: parent
@@ -29,36 +29,21 @@ Maui.Page
             }
         }
 
-        itemSize: 100
-        adaptContent: true
-
-        delegate: Maui.ItemDelegate
+        delegate: Maui.ListBrowserDelegate
         {
-            id: delegate
-            isCurrentItem:  GridView.isCurrentItem
-            height: _gridView.cellHeight
-            width: _gridView.cellWidth
+            height: Maui.Style.rowHeight *2
+            width: parent.width
+            label1.text: model.label
+            label2.text: model.path
             padding: Maui.Style.space.medium
-            hoverEnabled: true
-            ToolTip.delay: 1000
-            ToolTip.timeout: 5000
-            ToolTip.visible: hovered
-            ToolTip.text: model.path
-
-            Maui.GridItemTemplate
-            {
-                anchors.fill: parent
-                label1.text: model.label
-                iconSource: model.icon
-                iconSizeHint: Maui.Style.iconSizes.huge
-            }
-
             onClicked:
             {
                 root.openTab(_gridView.model.get(index).path)
                 _actionGroup.currentIndex = views.editor
             }
         }
+
+
     }
 
 
