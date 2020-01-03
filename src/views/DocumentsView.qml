@@ -3,19 +3,48 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.6 as Kirigami
 import org.kde.mauikit 1.0 as Maui
-import Qt.labs.platform 1.1
+import org.maui.nota 1.0 as Nota
 
-Maui.FileBrowser
+Maui.Page
 {
-    id: browser
-    currentPath: StandardPaths.writableLocation(StandardPaths.DocumentsLocation)
-//    currentFMList.filterType: Maui.FMList.TEXT
-//    browserView.viewType : Maui.FMList.ICON_VIEW
+    id: control
 
-    onItemClicked:
+    headBar.middleContent: Maui.TextField
     {
-        var item = currentFMList.get(index)
-        root.openTab(item.path)
-        currentView = views.editor
+        Layout.fillWidth: true
+        placeholderText: qsTr("Filter...")
+        onAccepted: _gridView.model.filter = text
+        onCleared:  _gridView.model.filter = text
     }
+
+    Maui.ListBrowser
+    {
+        id: _gridView
+        anchors.fill: parent
+        model: Maui.BaseModel
+        {
+            list: Nota.Documents
+            {
+
+            }
+        }
+
+        delegate: Maui.ListBrowserDelegate
+        {
+            height: Maui.Style.rowHeight *2
+            width: parent.width
+            label1.text: model.label
+            label2.text: model.path
+            padding: Maui.Style.space.medium
+            onClicked:
+            {
+                root.openTab(_gridView.model.get(index).path)
+                _actionGroup.currentIndex = views.editor
+            }
+        }
+
+
+    }
+
+
 }
