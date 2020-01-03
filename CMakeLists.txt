@@ -19,10 +19,11 @@ set(CMAKE_AUTORCC ON)
 
 set(nota_SRCS
     src/main.cpp
+    src/models/documentsmodel.cpp
     )
 
 set(nota_HDRS
-
+    src/models/documentsmodel.h
     )
 
 set(nota_ASSETS
@@ -43,10 +44,9 @@ if (ANDROID)
 else()
     find_package(Qt5 REQUIRED COMPONENTS WebEngine)
 
-#    target_link_libraries(nota KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
 endif()
 
-target_link_libraries(nota Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg)
+target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
 
 install(TARGETS nota ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
