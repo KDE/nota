@@ -9,25 +9,7 @@ Maui.Editor
     height: _editorList.height
     width: _editorList.width
 
-    footBar.leftContent:
-        [
-        ToolButton
-        {
-            icon.name: "view-list-details"
-            onClicked: _drawer.visible = !_drawer.visible
-            checked : _drawer.visible
-            checkable: false
-        }/*,
-
-        ToolButton
-            {
-                visible: terminal
-                icon.name: "utilities-terminal"
-                onClicked: terminalVisible = !terminalVisible
-                checked : terminalVisible
-                checkable: false
-            }*/
-    ]
+    footBar.visible: false
 
     headBar.rightContent: Kirigami.ActionToolBar
     {

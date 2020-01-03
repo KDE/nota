@@ -13,10 +13,9 @@ Maui.ApplicationWindow
     id: root
     title: qsTr("Nota")
 
-//    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
-//    property alias terminal : terminalLoader.item
+    //    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
+    //    property alias terminal : terminalLoader.item
     property var views : ({editor: 0, documents: 1, recent: 2})
-    property int currentView : views.editor
 
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
@@ -25,24 +24,20 @@ Maui.ApplicationWindow
 
     rightIcon.visible: false
 
-    onCurrentViewChanged:
-    {
-        _drawer.visible = currentView === views.editor
-    }
 
-//    mainMenu: [
-//        MenuItem
-//        {
-//            text: qsTr("Show terminal")
-//            checkable: true
-//            checked: terminal.visible
-//            onTriggered:
-//            {
-//                terminalVisible = !terminalVisible
-//                Maui.FM.saveSettings("TERMINAL",terminalVisible, "MAINVIEW")
-//            }
-//        }
-//    ]
+    //    mainMenu: [
+    //        MenuItem
+    //        {
+    //            text: qsTr("Show terminal")
+    //            checkable: true
+    //            checked: terminal.visible
+    //            onTriggered:
+    //            {
+    //                terminalVisible = !terminalVisible
+    //                Maui.FM.saveSettings("TERMINAL",terminalVisible, "MAINVIEW")
+    //            }
+    //        }
+    //    ]
 
     Maui.FileDialog
     {
@@ -53,73 +48,93 @@ Maui.ApplicationWindow
         mode: modes.OPEN
     }
 
+    Maui.FloatingButton
+    {
+        id: _overlayButton
+        z: 999
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.margins: Maui.Style.toolBarHeight
+        anchors.bottomMargin: Maui.Style.toolBarHeight
+        height: Maui.Style.toolBarHeight
+        width: height
+
+        icon.name: "document-new"
+        icon.color: Kirigami.Theme.highlightedTextColor
+
+        onClicked: openTab("")
+
+        Maui.Badge
+        {
+            iconName: "list-add"
+            anchors
+            {
+                horizontalCenter: parent.right
+                verticalCenter: parent.top
+            }
+        }
+    }
+
+
     headBar.rightContent: [
         ToolButton
         {
             icon.name: "document-open"
-            onClicked: {
-                fileDialog.settings.onlyDirs = false;
-                fileDialog.mode = fileDialog.modes.OPEN;
-                fileDialog.singleSelection = false
-                fileDialog.show(function (paths) {
+            onClicked:
+            {
+                fileDialog.mode = fileDialog.modes.OPEN
+                fileDialog.settings.onlyDirs = false
+                fileDialog.settings.singleSelection = false
+                fileDialog.show(function (paths)
+                {
                     for(var i in paths)
                         openTab(paths[i])
                 });
             }
-        },
-        ToolButton
-        {
-            icon.name: "document-new"
-            onClicked: openTab("")
         }
     ]
 
-    headBar.leftContent: Kirigami.ActionToolBar
+    headBar.middleContent: Maui.ActionGroup
     {
-        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-        position: ToolBar.Header
-        Layout.fillWidth: true
+        id: _actionGroup
+        currentIndex: _swipeView.currentIndex
+        Layout.fillHeight: true
+        width: implicitWidth
 
-        actions: [
-            Action
-            {
-                text: qsTr("Editor")
-                icon.name: "editor"
-                checked: currentView === views.editor
-                onTriggered: currentView = views.editor
-            },
-            Action
-            {
-                text: qsTr("Documents")
-                icon.name: "view-pim-journal" // to do
-                checked: currentView === views.documents
-                onTriggered: currentView = views.documents
+        Action
+        {
+            text: qsTr("Editor")
+            icon.name: "document-edit"
+        }
 
-            },
-            Action
-            {
-                text: qsTr("Recent")
-                icon.name: "view-media-recent" // to do
-                checked: currentView === views.recent
-                onTriggered: currentView = views.recent
-            }
-        ]
+        Action
+        {
+            text: qsTr("Documents")
+            icon.name: "view-pim-journal" // to do
+        }
+
+        Action
+        {
+            text: qsTr("Recent")
+            icon.name: "view-media-recent" // to do
+        }
     }
 
-    globalDrawer: Maui.GlobalDrawer
+    sideBar: Maui.AbstractSideBar
     {
         id : _drawer
         width: Kirigami.Units.gridUnit * 14
+        visible: _actionGroup.currentIndex === views.editor
         //        height: root.height - headBar.height - ( modal ? _editorList.currentItem.footBar.height : 0)
         modal: root.width < Kirigami.Units.gridUnit * 62
-        handleVisible: false
 
-        contentItem: Maui.Page
+        Maui.Page
         {
+            anchors.fill: parent
             headBar.middleContent: ComboBox
             {
                 Layout.fillWidth: true
-
+                z : _drawer.z + 9999
                 model: Maui.BaseModel
                 {
                     list: Maui.PlacesList
@@ -153,8 +168,7 @@ Maui.ApplicationWindow
                 onItemClicked:
                 {
                     var item = currentFMList.get(index)
-
-                    if(Maui.FM.isDir(item.path))
+                    if(item.isdir == "true")
                         openFolder(item.path)
                     else
                         root.openTab(item.path)
@@ -167,10 +181,10 @@ Maui.ApplicationWindow
     {
         id: _swipeView
         anchors.fill: parent
-        currentIndex: currentView
+        currentIndex: _actionGroup.currentIndex
 
         onCurrentItemChanged: currentItem.forceActiveFocus()
-        onCurrentIndexChanged: currentView = currentIndex
+        onCurrentIndexChanged: _actionGroup.currentIndex = currentIndex
 
         ColumnLayout
         {
@@ -244,35 +258,34 @@ Maui.ApplicationWindow
                 highlightFollowsCurrentItem: true
                 highlightMoveDuration: 0
 
-
                 Maui.Holder
                 {
                     id: _holder
                     visible: !tabsListModel.count
-                    emoji: "qrc:/Type.png"
+                    emoji: "qrc:/img/document-edit.svg"
                     emojiSize: Maui.Style.iconSizes.huge
-                    isMask: false
+                    isMask: true
                     onActionTriggered: openTab()
                     title: qsTr("Create a new document")
-                    body: qsTr("You can reate a new document by clicking the New File button, or the tab bar Add icon.
+                    body: qsTr("You can create a new document by clicking the New File button, or here.<br>
                 Alternative you can open existing files from the left places sidebar or by clicking the Open button")
                 }
 
             }
 
-//            Loader
-//            {
-//                id: terminalLoader
-//                visible: terminalVisible
-//                focus: true
-//                Layout.fillWidth: true
-//                Layout.alignment: Qt.AlignBottom
-//                Layout.minimumHeight: 100
-//                Layout.maximumHeight: 200
-//                //            anchors.bottom: parent.bottom
-//                //            anchors.top: handle.bottom
-//                source: !isMobile ? "Terminal.qml" : undefined
-//            }
+            //            Loader
+            //            {
+            //                id: terminalLoader
+            //                visible: terminalVisible
+            //                focus: true
+            //                Layout.fillWidth: true
+            //                Layout.alignment: Qt.AlignBottom
+            //                Layout.minimumHeight: 100
+            //                Layout.maximumHeight: 200
+            //                //            anchors.bottom: parent.bottom
+            //                //            anchors.top: handle.bottom
+            //                source: !isMobile ? "Terminal.qml" : undefined
+            //            }
         }
 
 
@@ -303,7 +316,7 @@ Maui.ApplicationWindow
         {
             setTabMetadata(path)
             tabsObjectModel.get(tabsObjectModel.count - 1).document.load(path)
-            browserView.openFolder(path)
+            browserView.openFolder(Maui.FM.fileDir(path))
         }
     }
 

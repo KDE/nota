@@ -8,14 +8,17 @@ import Qt.labs.platform 1.1
 Maui.FileBrowser
 {
     id: browser
-    currentPath: StandardPaths.writableLocation(StandardPaths.DocumentsLocation)
-//    currentFMList.filterType: Maui.FMList.TEXT
-//    browserView.viewType : Maui.FMList.ICON_VIEW
+    settings.filterType: Maui.FMList.TEXT
 
     onItemClicked:
     {
         var item = currentFMList.get(index)
-        root.openTab(item.path)
-        currentView = views.editor
+        if(item.isdir == "true")
+            openFolder(item.path)
+        else
+        {
+            root.openTab(item.path)
+            _actionGroup.currentIndex = views.editor
+        }
     }
 }

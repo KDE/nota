@@ -27,7 +27,7 @@ set(nota_HDRS
 
 set(nota_ASSETS
     src/qml.qrc
-    assets/img_assets.qrc
+    src/assets/img_assets.qrc
     )
 
 add_executable(nota
