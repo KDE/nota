@@ -123,10 +123,11 @@ Maui.ApplicationWindow
     sideBar: Maui.AbstractSideBar
     {
         id : _drawer
-        width: Kirigami.Units.gridUnit * 14
-        visible: _actionGroup.currentIndex === views.editor
-        //        height: root.height - headBar.height - ( modal ? _editorList.currentItem.footBar.height : 0)
-        modal: root.width < Kirigami.Units.gridUnit * 62
+        focus: true
+        width: visible ? Math.min(Kirigami.Units.gridUnit * (Kirigami.Settings.isMobile? 14 : 18), root.width) : 0
+        modal: !isWide
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+        dragMargin: Maui.Style.space.big
 
         Maui.Page
         {

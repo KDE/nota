@@ -23,6 +23,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
 #ifdef Q_OS_ANDROID
 	QGuiApplication app(argc, argv);
+    if (!MAUIAndroid::checkRunTimePermissions())
+            return -1;
 #else
 	QApplication app(argc, argv);
 #endif
@@ -30,7 +32,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 	app.setApplicationName("nota");
 	app.setApplicationVersion("1.0");
 	app.setApplicationDisplayName("Nota");
-
+    app.setOrganizationName("Maui");
+    app.setOrganizationDomain("org.maui.nota");
 	app.setWindowIcon(QIcon(":/nota.svg"));
 
 #ifdef STATIC_KIRIGAMI

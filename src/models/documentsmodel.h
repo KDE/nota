@@ -30,7 +30,7 @@ class DocumentsModel : public MauiList
 
 	public:
 		DocumentsModel(QObject *parent = nullptr);
-		~DocumentsModel();
+        ~DocumentsModel() override;
 
 		FMH::MODEL_LIST items() const override final;
 

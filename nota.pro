@@ -1,12 +1,9 @@
-QT += qml
-QT += quick
-QT += sql
-QT += widgets
-QT += quickcontrols2
+QT *= qml \
+     quick \
+     sql
 
 CONFIG += ordered
 CONFIG += c++17
-QMAKE_LINK += -nostdlib++
 
 TARGET = nota
 TEMPLATE = app
@@ -20,6 +17,16 @@ linux:unix:!android {
 } else:android {
 
     message(Building for Android)
+    QMAKE_LINK += -nostdlib++
+    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android_files
+
+    DEFINES *= \
+        COMPONENT_FM \
+        COMPONENT_TAGGING \
+        COMPONENT_EDITOR \
+        MAUIKIT_STYLE \
+        ANDROID_OPENSSL
+
     include($$PWD/3rdparty/kirigami/kirigami.pri)
     include($$PWD/3rdparty/mauikit/mauikit.pri)
 
@@ -32,7 +39,11 @@ linux:unix:!android {
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
-        $$PWD/src/main.cpp
+        $$PWD/src/main.cpp \
+        $$PWD/src/models/documentsmodel.cpp
+
+HEADERS += \
+        $$PWD/src/models/documentsmodel.h
 
 RESOURCES += \
     $$PWD/src/qml.qrc \
@@ -48,17 +59,3 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-DISTFILES += \
-    3rdparty/mauikit/src/android/AndroidManifest.xml \
-    3rdparty/mauikit/src/android/build.gradle \
-    3rdparty/mauikit/src/android/gradle/wrapper/gradle-wrapper.jar \
-    3rdparty/mauikit/src/android/gradle/wrapper/gradle-wrapper.properties \
-    3rdparty/mauikit/src/android/gradlew \
-    3rdparty/mauikit/src/android/gradlew.bat \
-    3rdparty/mauikit/src/android/res/values/libs.xml
-
-contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
-    ANDROID_PACKAGE_SOURCE_DIR = \
-        $$PWD/3rdparty/mauikit/src/android
-}
