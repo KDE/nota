@@ -1,6 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QIcon>
+
+#include "nota_version.h"
+
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
 #else
@@ -30,10 +33,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 #endif
 
 	app.setApplicationName("nota");
-	app.setApplicationVersion("1.0");
-	app.setApplicationDisplayName("Nota");
+    app.setApplicationVersion(NOTA_VERSION_STRING);
+    app.setApplicationDisplayName("Nota");
     app.setOrganizationName("Maui");
     app.setOrganizationDomain("org.maui.nota");
+
 	app.setWindowIcon(QIcon(":/nota.svg"));
 
 #ifdef STATIC_KIRIGAMI

@@ -1,5 +1,6 @@
-project(nota)
 cmake_minimum_required(VERSION 3.0)
+set(NOTA_VERSION 1.0.0)
+project(nota VERSION ${NOTA_VERSION})
 
 find_package(ECM 1.7.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
@@ -11,8 +12,9 @@ include(KDEInstallDirs)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMInstallIcons)
-include(FeatureSummary)
 include(ECMAddAppIcon)
+include(ECMSetupVersion)
+include(FeatureSummary)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTORCC ON)
@@ -35,6 +37,11 @@ add_executable(nota
     ${nota_SRCS}
     ${nota_HDRS}
     ${nota_ASSETS}
+    )
+
+ecm_setup_version(${NOTA_VERSION}
+    VARIABLE_PREFIX NOTA
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/nota_version.h"
     )
 
 if (ANDROID)
