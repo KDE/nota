@@ -1,6 +1,7 @@
 QT *= qml \
      quick \
-     sql
+     sql \
+     svg
 
 CONFIG += ordered
 CONFIG += c++17
@@ -48,10 +49,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         $$PWD/src/main.cpp \
-        $$PWD/src/models/documentsmodel.cpp
+        $$PWD/src/models/documentsmodel.cpp \
+        $$PWD/src/models/editormodel.cpp
 
 HEADERS += \
-        $$PWD/src/models/documentsmodel.h
+        $$PWD/src/models/documentsmodel.h \
+        $$PWD/src/models/editormodel.h
 
 RESOURCES += \
     $$PWD/src/qml.qrc \

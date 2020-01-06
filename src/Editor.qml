@@ -6,8 +6,8 @@ import org.kde.kirigami 2.7 as Kirigami
 
 Maui.Editor
 {
-    height: _editorList.height
-    width: _editorList.width
+    height: _editorListView.height
+    width: _editorListView.width
 
     footBar.visible: false
 
@@ -38,7 +38,7 @@ Maui.Editor
             fileDialog.show(function (paths)
             {
                 document.saveAs(paths[0]);
-                setTabMetadata(paths[0]);
+                _editorList.update(_tabBar.currentIndex, paths[0]);
             });
         }
     }

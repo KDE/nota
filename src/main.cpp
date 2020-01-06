@@ -20,7 +20,9 @@
 #include "3rdparty/mauikit/src/mauikit.h"
 #endif
 
+//Models
 #include "src/models/documentsmodel.h"
+#include "src/models/editormodel.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -50,7 +52,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 	MauiKit::getInstance().registerTypes();
 #endif
 
-	qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
+    qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
+    qmlRegisterType<EditorModel> ("org.maui.nota", 1, 0, "Editor");
 
 	QQmlApplicationEngine engine;
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));

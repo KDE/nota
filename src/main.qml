@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.3
 import QtQml.Models 2.3
 import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.0 as Maui
+import org.maui.nota 1.0 as Nota
 import QtQuick.Window 2.0
 
 import "views"
@@ -195,13 +196,20 @@ Maui.ApplicationWindow
             Maui.TabBar
             {
                 id: _tabBar
-                visible: _editorList.count > 1
+                visible: _editorListView.count > 1
                 Layout.fillWidth: true
                 Layout.preferredHeight: _tabBar.implicitHeight
                 position: TabBar.Header
-                currentIndex : _editorList.currentIndex
+                currentIndex : _editorListView.currentIndex
 
-                ListModel { id: tabsListModel }
+                Maui.BaseModel
+                {
+                    id: _editorModel
+                    list: Nota.Editor
+                    {
+                        id: _editorList
+                    }
+                }
 
                 //                        Keys.onPressed:
                 //                        {
@@ -215,7 +223,7 @@ Maui.ApplicationWindow
                 Repeater
                 {
                     id: _repeater
-                    model: tabsListModel
+                    model: _editorModel
 
                     Maui.TabButton
                     {
@@ -224,45 +232,46 @@ Maui.ApplicationWindow
                         implicitWidth: Math.max(_tabBar.width / _repeater.count, 120)
                         checked: index === _tabBar.currentIndex
 
-                        text: title
+                        text: model.label
 
-                        onClicked: _editorList.currentIndex = index
+                        onClicked: _editorListView.currentIndex = index
                         onCloseClicked:
                         {
                             const removedIndex = index
                             tabsObjectModel.remove(removedIndex)
-                            tabsListModel.remove(removedIndex)
+                            _editorList.remove(removedIndex)
                         }
                     }
                 }
             }
 
 
-            Kirigami.Separator
-            {
-                color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
-                Layout.fillWidth: true
-                Layout.preferredHeight: 1
-                visible: _tabBar.visible
-            }
+//            Kirigami.Separator
+//            {
+//                color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
+//                Layout.fillWidth: true
+//                Layout.preferredHeight: 1
+//                visible: _tabBar.visible
+//            }
 
             ListView
             {
-                id: _editorList
+                id: _editorListView
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 orientation: ListView.Horizontal
                 model: tabsObjectModel
                 snapMode: ListView.SnapOneItem
                 spacing: 0
-                interactive: isMobile
+                interactive: Kirigami.Settings.isMobile && count > 1
                 highlightFollowsCurrentItem: true
                 highlightMoveDuration: 0
+                onMovementEnded: currentIndex = indexAt(contentX, contentY)
 
                 Maui.Holder
                 {
                     id: _holder
-                    visible: !tabsListModel.count
+                    visible: !_editorListView.count
                     emoji: "qrc:/img/document-edit.svg"
                     emojiSize: Maui.Style.iconSizes.huge
                     isMask: true
@@ -302,27 +311,16 @@ Maui.ApplicationWindow
         var component = Qt.createComponent("Editor.qml");
         if (component.status === Component.Ready)
         {
-            var object = component.createObject(tabsObjectModel);
-            tabsObjectModel.append(object);
+            tabsObjectModel.append(component.createObject(tabsObjectModel));
+            _editorList.append(path)
+
+            _editorListView.currentIndex = tabsObjectModel.count - 1
+
+            if(path && Maui.FM.fileExists(path))
+            {
+                tabsObjectModel.get(tabsObjectModel.count - 1).document.load(path)
+                browserView.openFolder(Maui.FM.fileDir(path))
+            }
         }
-
-        tabsListModel.append({
-                                 title: qsTr("Untitled"),
-                                 path: path,
-                             })
-
-        _editorList.currentIndex = tabsObjectModel.count - 1
-
-        if(path && Maui.FM.fileExists(path))
-        {
-            setTabMetadata(path)
-            tabsObjectModel.get(tabsObjectModel.count - 1).document.load(path)
-            browserView.openFolder(Maui.FM.fileDir(path))
-        }
-    }
-
-    function setTabMetadata(filepath) {
-        tabsListModel.setProperty(_tabBar.currentIndex, "title", Maui.FM.getFileInfo(filepath).label)
-        tabsListModel.setProperty(_tabBar.currentIndex, "path", filepath)
     }
 }

@@ -23,10 +23,7 @@ Maui.Page
         anchors.fill: parent
         model: Maui.BaseModel
         {
-            list: Nota.Documents
-            {
-
-            }
+            list: Nota.Documents {}
         }
 
         delegate: Maui.ListBrowserDelegate
@@ -35,6 +32,7 @@ Maui.Page
             width: parent.width
             label1.text: model.label
             label2.text: model.path
+
             padding: Maui.Style.space.medium
             onClicked:
             {
@@ -42,9 +40,5 @@ Maui.Page
                 _actionGroup.currentIndex = views.editor
             }
         }
-
-
     }
-
-
 }

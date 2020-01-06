@@ -22,10 +22,12 @@ set(CMAKE_AUTORCC ON)
 set(nota_SRCS
     src/main.cpp
     src/models/documentsmodel.cpp
+    src/models/editormodel.cpp
     )
 
 set(nota_HDRS
     src/models/documentsmodel.h
+    src/models/editormodel.h
     )
 
 set(nota_ASSETS
