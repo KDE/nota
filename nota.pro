@@ -8,6 +8,14 @@ CONFIG += c++17
 TARGET = nota
 TEMPLATE = app
 
+VERSION_MAJOR = 1
+VERSION_MINOR = 0
+VERSION_BUILD = 0
+
+VERSION = $${VERSION_MAJOR}.$${VERSION_MINOR}.$${VERSION_BUILD}
+
+DEFINES += NOTA_VERSION_STRING=\\\"$$VERSION\\\"
+
 linux:unix:!android {
 
     message(Building for Linux KDE)
@@ -59,3 +67,6 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+#include($$PWD/version.pri)
+

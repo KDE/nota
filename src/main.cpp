@@ -2,7 +2,9 @@
 #include <QQmlApplicationEngine>
 #include <QIcon>
 
+#ifndef STATIC_MAUIKIT
 #include "nota_version.h"
+#endif
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
