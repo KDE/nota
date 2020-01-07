@@ -14,9 +14,8 @@ DocumentsModel::DocumentsModel(QObject * parent) : MauiList (parent)
 
 	connect(&m_worker, &QThread::finished, loader, &QObject::deleteLater);
 
-	connect(this, &DocumentsModel::start, loader, &FileLoader::fetch);
-	//	connect(loader, &FileLoader::resultReady, this, &DocumentsModel::setList);
-	connect(loader, &FileLoader::itemReady, this, &DocumentsModel::append);
+    connect(this, &DocumentsModel::start, loader, &FileLoader::fetch);
+    connect(loader, &FileLoader::itemReady, this, &DocumentsModel::append);
 
 	m_worker.start();
 }
@@ -24,7 +23,7 @@ DocumentsModel::DocumentsModel(QObject * parent) : MauiList (parent)
 DocumentsModel::~DocumentsModel()
 {
 	m_worker.quit();
-	m_worker.wait();
+    m_worker.wait();
 }
 
 void DocumentsModel::setList(const FMH::MODEL_LIST &list)
@@ -57,8 +56,7 @@ void FileLoader::fetch(const QList<QUrl> & urls)
 			emit this->itemReady (item);
 		}
 	}
-
-	emit this->resultReady(res);
+//	emit this->resultReady(res);
 }
 
 FMH::MODEL_LIST DocumentsModel::items() const
@@ -68,5 +66,5 @@ FMH::MODEL_LIST DocumentsModel::items() const
 
 void DocumentsModel::componentComplete()
 {
-	emit this->start({FMH::HomePath});
+    emit this->start({FMH::DocumentsPath, FMH::DownloadsPath, FMH::DesktopPath});
 }
