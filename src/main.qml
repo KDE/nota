@@ -25,7 +25,6 @@ Maui.ApplicationWindow
 
     rightIcon.visible: false
 
-
     //    mainMenu: [
     //        MenuItem
     //        {
@@ -75,7 +74,6 @@ Maui.ApplicationWindow
             }
         }
     }
-
 
     headBar.rightContent: [
         ToolButton
@@ -179,6 +177,15 @@ Maui.ApplicationWindow
         }
     }
 
+    Maui.BaseModel
+    {
+        id: _editorModel
+        list: Nota.Editor
+        {
+            id: _editorList
+        }
+    }
+
     SwipeView
     {
         id: _swipeView
@@ -202,14 +209,6 @@ Maui.ApplicationWindow
                 position: TabBar.Header
                 currentIndex : _editorListView.currentIndex
 
-                Maui.BaseModel
-                {
-                    id: _editorModel
-                    list: Nota.Editor
-                    {
-                        id: _editorList
-                    }
-                }
 
                 //                        Keys.onPressed:
                 //                        {
@@ -303,16 +302,23 @@ Maui.ApplicationWindow
         {
             id: _documentsView
         }
+
+        RecentView
+        {
+            id:_recentView
+        }
     }
 
 
     function openTab(path)
     {
+        if(!_editorList.append(path))
+            return ;
+
         var component = Qt.createComponent("Editor.qml");
         if (component.status === Component.Ready)
         {
             tabsObjectModel.append(component.createObject(tabsObjectModel));
-            _editorList.append(path)
 
             _editorListView.currentIndex = tabsObjectModel.count - 1
 

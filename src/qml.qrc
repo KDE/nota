@@ -4,5 +4,6 @@
         <file>Terminal.qml</file>
         <file>Editor.qml</file>
         <file>views/DocumentsView.qml</file>
+        <file>views/RecentView.qml</file>
     </qresource>
 </RCC>

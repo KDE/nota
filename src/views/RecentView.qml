@@ -9,9 +9,6 @@ Maui.Page
 {
     id: control
 
-    property alias model : _documentsModel
-    property alias list : _documentsList
-
     headBar.middleContent: Maui.TextField
     {
         Layout.fillWidth: true
@@ -20,25 +17,30 @@ Maui.Page
         onCleared:  _gridView.model.filter = text
     }
 
-    Maui.ListBrowser
+    Maui.GridView
     {
         id: _gridView
         anchors.fill: parent
+
+        itemSize: 100
+
         model: Maui.BaseModel
         {
-            id: _documentsModel
-            list: Nota.Documents
-            {
-                id: _documentsList
-            }
+            list: _editorList.history
         }
 
-        delegate: Maui.ListBrowserDelegate
+        delegate: Maui.ItemDelegate
         {
-            height: Maui.Style.rowHeight *2
-            width: parent.width
-            label1.text: model.label
-            label2.text: model.path
+            height: _gridView.cellHeight
+            width: _gridView.cellWidth
+
+            Maui.GridItemTemplate
+            {
+                anchors.fill: parent
+                label1.text: model.label
+                iconSource: model.icon
+                iconSizeHint: Maui.Style.iconSizes.huge
+            }
 
             padding: Maui.Style.space.medium
             onClicked:

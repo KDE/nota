@@ -11,20 +11,40 @@
 #include <MauiKit/mauilist.h>
 #endif
 
-class EditorModel : public MauiList
+class HistoryModel : public MauiList
 {
     Q_OBJECT
-public:
-    EditorModel();
 
+public:
+    explicit HistoryModel(QObject *parent = nullptr);
     FMH::MODEL_LIST items() const override final;
+
+    void append(const QUrl &url);
+    QList<QUrl> getHistory();
 
 private:
     FMH::MODEL_LIST m_list;
-    void appendToHistory(const QUrl &url);
+    void setList();
+};
+
+class EditorModel : public MauiList
+{
+    Q_OBJECT
+    Q_PROPERTY(HistoryModel * history READ getHistory CONSTANT FINAL)
+public:
+    explicit EditorModel(QObject *parent = nullptr);
+
+    FMH::MODEL_LIST items() const override final;
+    HistoryModel *getHistory() const;
+
+private:
+    FMH::MODEL_LIST m_list;
+    void appendToHistory(const QUrl &url) const;
+
+    HistoryModel *m_history;
 
 public slots:
-    void append(const QUrl &url);
+    bool append(const QUrl &url);
     bool contains(const QUrl &url) const;
     void remove(const int &index);
     void update(const int &index, const QUrl &url);
