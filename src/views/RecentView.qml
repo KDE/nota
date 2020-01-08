@@ -9,45 +9,45 @@ Maui.Page
 {
     id: control
 
-    headBar.middleContent: Maui.TextField
-    {
-        Layout.fillWidth: true
-        placeholderText: qsTr("Filter...")
-        onAccepted: _gridView.model.filter = text
-        onCleared:  _gridView.model.filter = text
-    }
+//    headBar.middleContent: Maui.TextField
+//    {
+//        Layout.fillWidth: true
+//        placeholderText: qsTr("Filter...")
+//        onAccepted: _gridView.model.filter = text
+//        onCleared:  _gridView.model.filter = text
+//    }
 
-    Maui.GridView
-    {
-        id: _gridView
-        anchors.fill: parent
+//    Maui.GridView
+//    {
+//        id: _gridView
+//        anchors.fill: parent
 
-        itemSize: 100
+//        itemSize: 100
 
-        model: Maui.BaseModel
-        {
-            list: _editorList.history
-        }
+//        model: Maui.BaseModel
+//        {
+//            list: _editorList.history
+//        }
 
-        delegate: Maui.ItemDelegate
-        {
-            height: _gridView.cellHeight
-            width: _gridView.cellWidth
+//        delegate: Maui.ItemDelegate
+//        {
+//            height: _gridView.cellHeight
+//            width: _gridView.cellWidth
 
-            Maui.GridItemTemplate
-            {
-                anchors.fill: parent
-                label1.text: model.label
-                iconSource: model.icon
-                iconSizeHint: Maui.Style.iconSizes.huge
-            }
+//            Maui.GridItemTemplate
+//            {
+//                anchors.fill: parent
+//                label1.text: model.label
+//                iconSource: model.icon
+//                iconSizeHint: Maui.Style.iconSizes.huge
+//            }
 
-            padding: Maui.Style.space.medium
-            onClicked:
-            {
-                root.openTab(_gridView.model.get(index).path)
-                _actionGroup.currentIndex = views.editor
-            }
-        }
-    }
+//            padding: Maui.Style.space.medium
+//            onClicked:
+//            {
+//                root.openTab(_gridView.model.get(index).path)
+//                _actionGroup.currentIndex = views.editor
+//            }
+//        }
+//    }
 }

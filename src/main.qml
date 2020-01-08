@@ -72,7 +72,81 @@ Maui.ApplicationWindow
                 horizontalCenter: parent.right
                 verticalCenter: parent.top
             }
+
+            onClicked: _newDocumentMenu.open()
         }
+
+        Maui.Dialog
+        {
+            id: _newDocumentMenu
+            maxHeight: 300
+            maxWidth: 400
+            defaultButtons: false
+            footBar.middleContent: Button
+            {
+                text: qsTr("Add new template file")
+            }
+
+            ColumnLayout
+            {
+                anchors.fill: parent
+                anchors.margins: Maui.Style.space.big
+                spacing: Maui.Style.space.big
+
+                Maui.ItemDelegate
+                {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    Maui.ListItemTemplate
+                    {
+                        anchors.fill:parent
+                        iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
+                        iconSource: "text-x-generic"
+                        label1.text: qsTr("Text file")
+                        label2.text: qsTr("Simple text file with syntax highlighting")
+                    }
+
+                    onClicked:
+                    {
+                        openTab("")
+                        close()
+                    }
+                }
+
+
+                Maui.ItemDelegate
+                {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    Maui.ListItemTemplate
+                    {
+                        anchors.fill:parent
+                        iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
+                        iconSource: "text-enriched"
+                        label1.text: qsTr("Rich text file")
+                        label2.text: qsTr("With support for basic text format editing")
+                    }
+                }
+
+                Maui.ItemDelegate
+                {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    Maui.ListItemTemplate
+                    {
+                        anchors.fill:parent
+                        iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
+                        iconSource: "text-html"
+                        label1.text: qsTr("HTML text file")
+                        label2.text: qsTr("Text file with HTML markup support")
+                    }
+                }
+            }
+        }
+
     }
 
     headBar.rightContent: [
@@ -245,13 +319,13 @@ Maui.ApplicationWindow
             }
 
 
-//            Kirigami.Separator
-//            {
-//                color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
-//                Layout.fillWidth: true
-//                Layout.preferredHeight: 1
-//                visible: _tabBar.visible
-//            }
+            //            Kirigami.Separator
+            //            {
+            //                color: Qt.tint(Kirigami.Theme.textColor, Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.7))
+            //                Layout.fillWidth: true
+            //                Layout.preferredHeight: 1
+            //                visible: _tabBar.visible
+            //            }
 
             ListView
             {
