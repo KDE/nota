@@ -39,6 +39,45 @@ Maui.ApplicationWindow
     //        }
     //    ]
 
+    onClosing:
+    {
+        var urls = [];
+        for(var i in tabsObjectModel)
+        {
+            const doc = tabsObjectModel.get(i)
+            if(doc)
+            {
+                if(doc.document.modified)
+                    urls.push(doc.document.fileUrl)
+            }
+        }
+
+        if(urls.length > 0 && !_exitDialog.discard)
+        {
+            close.accepted = false
+            _exitDialog.urls = urls
+            _exitDialog.open()
+        }else close.accepted = true
+    }
+
+    Maui.Dialog
+    {
+        id: _exitDialog
+        property var urls : []
+
+        property bool discard : false
+
+        title: qsTr("Un saved files")
+        message: qsTr("Some files were modified and not saved locally. Do you want to save them?")
+
+        rejectButton.text: qsTr("Discard")
+        onRejected:
+        {
+            discard = true
+            root.close()
+        }
+    }
+
     Maui.FileDialog
     {
         id: fileDialog
