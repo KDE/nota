@@ -31,11 +31,15 @@ class EditorModel : public MauiList
 {
     Q_OBJECT
     Q_PROPERTY(HistoryModel * history READ getHistory CONSTANT FINAL)
+    Q_PROPERTY(QStringList urls READ getUrls NOTIFY urlsChanged)
+
 public:
     explicit EditorModel(QObject *parent = nullptr);
 
     FMH::MODEL_LIST items() const override final;
     HistoryModel *getHistory() const;
+
+    QStringList getUrls() const;
 
 private:
     FMH::MODEL_LIST m_list;
@@ -48,6 +52,10 @@ public slots:
     bool contains(const QUrl &url) const;
     void remove(const int &index);
     void update(const int &index, const QUrl &url);
+    QVariantList getFiles() const;
+
+signals:
+    void urlsChanged();
 };
 
 #endif // EDITORMODEL_H

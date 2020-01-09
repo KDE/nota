@@ -18,6 +18,15 @@ HistoryModel *EditorModel::getHistory() const
     return this->m_history;
 }
 
+QStringList EditorModel::getUrls() const
+{
+    return std::accumulate(this->m_list.constBegin(), this->m_list.constEnd(), QStringList(), [](QStringList &urls, const FMH::MODEL &item)
+    {
+        urls << item[FMH::MODEL_KEY::PATH];
+        return urls;
+    });
+}
+
 void EditorModel::appendToHistory(const QUrl &url) const
 {
     qDebug() << "APOPENIGN TO HISTORY "<< url;
@@ -42,7 +51,7 @@ bool EditorModel::append(const QUrl &url)
 
     this->appendToHistory(url);
     emit this->postItemAppended();
-
+    emit this->urlsChanged();
     return true;
 }
 
@@ -71,6 +80,11 @@ void EditorModel::update(const int &index, const QUrl &url)
     this->m_list[index] = item;
 
     emit this->updateModel(index, FMH::modelRoles(item));
+}
+
+QVariantList EditorModel::getFiles() const
+{
+    return FMH::toMapList(this->m_list);
 }
 
 HistoryModel::HistoryModel(QObject *parent) : MauiList(parent)

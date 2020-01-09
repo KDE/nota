@@ -41,21 +41,28 @@ Maui.ApplicationWindow
 
     onClosing:
     {
-        var urls = [];
-        for(var i in tabsObjectModel)
+        var files = [];
+        for(var i = 0; i<tabsObjectModel.count; i++)
         {
             const doc = tabsObjectModel.get(i)
             if(doc)
             {
+                console.log("CHECKING UNSAVED FILES", i, doc.document.fileUrl)
                 if(doc.document.modified)
-                    urls.push(doc.document.fileUrl)
+                 {
+                    const url = doc.document.fileUrl
+                    if(url.isEmpty)
+                       files.push({'file': ({'label': "Untitled", 'path': "", 'icon': "text-plain"}), 'action': function() {doc.saveFile()}})
+                    else
+                        files.push({'file': Maui.FM.getFileInfo(doc.document.fileUrl), 'action': function() {doc.saveFile(url)}})
+                }
             }
         }
 
-        if(urls.length > 0 && !_exitDialog.discard)
+        if(files.length > 0 && !_exitDialog.discard)
         {
             close.accepted = false
-            _exitDialog.urls = urls
+            _exitDialog.files = files
             _exitDialog.open()
         }else close.accepted = true
     }
@@ -63,12 +70,60 @@ Maui.ApplicationWindow
     Maui.Dialog
     {
         id: _exitDialog
-        property var urls : []
+        property var files : ({})
 
         property bool discard : false
 
-        title: qsTr("Un saved files")
-        message: qsTr("Some files were modified and not saved locally. Do you want to save them?")
+        page.title: qsTr("Un saved files")
+//        message: qsTr("Some files were modified and not saved locally. Do you want to save them?")
+
+        maxHeight: 500
+        maxWidth: 400
+        page.padding: Maui.Style.space.big
+
+        ListView
+        {
+            id: _unsavedFilesListView
+            anchors.fill: parent
+            spacing: Maui.Style.space.medium
+            model: _exitDialog.files
+            clip: true
+
+            delegate : Maui.ItemDelegate
+            {
+                width: parent.width
+                height: Maui.Style.rowHeight * 1.2
+
+                RowLayout
+                {
+                    anchors.fill: parent
+
+                    Maui.ListItemTemplate
+                    {
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
+
+                        label1.text: modelData.file.label
+                        label2.text: modelData.file.path
+                        iconSource: modelData.file.icon
+                        iconSizeHint: Maui.Style.iconSizes.big
+                    }
+
+                    Row
+                    {
+                        Layout.fillHeight: true
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+                        Layout.preferredWidth: implicitWidth
+
+                        Button
+                        {
+                            text: qsTr("Save")
+                            onClicked: Object.call(modelData.action)
+                        }
+                    }
+                }
+            }
+        }
 
         rejectButton.text: qsTr("Discard")
         onRejected:
