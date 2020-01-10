@@ -1,7 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
-import QtQml.Models 2.3
 import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import org.maui.nota 1.0 as Nota
@@ -21,8 +20,6 @@ Maui.ApplicationWindow
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
 
-    ObjectModel { id: tabsObjectModel }
-
     rightIcon.visible: false
 
     //    mainMenu: [
@@ -41,41 +38,30 @@ Maui.ApplicationWindow
 
     onClosing:
     {
-        var files = [];
-        for(var i = 0; i<tabsObjectModel.count; i++)
+        var files = []
+        for(var i = 0; i<_editorListView.count; i++)
         {
-            const doc = tabsObjectModel.get(i)
-            if(doc)
-            {
-                console.log("CHECKING UNSAVED FILES", i, doc.document.fileUrl)
-                if(doc.document.modified)
-                 {
-                    const url = doc.document.fileUrl
-                    if(url.isEmpty)
-                       files.push({'file': ({'label': "Untitled", 'path': "", 'icon': "text-plain"}), 'action': function() {doc.saveFile()}})
-                    else
-                        files.push({'file': Maui.FM.getFileInfo(doc.document.fileUrl), 'action': function() {doc.saveFile(url)}})
-                }
-            }
+            const doc = _editorListView.itemAtIndex(i)
+            if(doc.document.modified)
+                files.push({'file': _editorModel.get(i), 'index': i})
         }
 
-        if(files.length > 0 && !_exitDialog.discard)
+        if(files.length > 0 && !_unsavedDialog.discard)
         {
             close.accepted = false
-            _exitDialog.files = files
-            _exitDialog.open()
+            _unsavedDialog.files = files
+            _unsavedDialog.open()
         }else close.accepted = true
     }
 
     Maui.Dialog
     {
-        id: _exitDialog
-        property var files : ({})
+        id: _unsavedDialog
+        property var files : []
 
         property bool discard : false
-
+        acceptButton.visible: false
         page.title: qsTr("Un saved files")
-//        message: qsTr("Some files were modified and not saved locally. Do you want to save them?")
 
         maxHeight: 500
         maxWidth: 400
@@ -86,7 +72,7 @@ Maui.ApplicationWindow
             id: _unsavedFilesListView
             anchors.fill: parent
             spacing: Maui.Style.space.medium
-            model: _exitDialog.files
+            model: _unsavedDialog.files
             clip: true
 
             delegate : Maui.ItemDelegate
@@ -118,7 +104,7 @@ Maui.ApplicationWindow
                         Button
                         {
                             text: qsTr("Save")
-                            onClicked: Object.call(modelData.action)
+                            onClicked: Object.call(_editorListView.itemAtIndex(modelData.index).saveFile(modelData.file.path))
                         }
                     }
                 }
@@ -204,7 +190,7 @@ Maui.ApplicationWindow
                     onClicked:
                     {
                         openTab("")
-                        close()
+                        _newDocumentMenu.close()
                     }
                 }
 
@@ -240,7 +226,6 @@ Maui.ApplicationWindow
                 }
             }
         }
-
     }
 
     headBar.rightContent: [
@@ -404,9 +389,33 @@ Maui.ApplicationWindow
                         onClicked: _editorListView.currentIndex = index
                         onCloseClicked:
                         {
-                            const removedIndex = index
-                            tabsObjectModel.remove(removedIndex)
-                            _editorList.remove(removedIndex)
+                            if( _editorListView.itemAtIndex(_tabButton.index).document.modified)
+                                _saveDialog.open()
+                            else
+                                _editorList.remove(index)
+                        }
+
+                        Maui.Dialog
+                        {
+                            id: _saveDialog
+                            page.padding: Maui.Style.space.huge
+                            title: _editorModel.get(_tabButton.index).path
+                            message: qsTr("This file has been modified, you can save now your changes or discard them")
+
+                            acceptButton.text: qsTr("Save")
+                            rejectButton.text: qsTr("Discard")
+
+                            onAccepted:
+                            {
+                                _editorListView.itemAtIndex(_tabButton.index).saveFile(_editorModel.get(_tabButton.index).path)
+                                _saveDialog.close()
+                            }
+
+                            onRejected:
+                            {
+                                _editorList.remove(_tabButton.index)
+                                _saveDialog.close()
+                            }
                         }
                     }
                 }
@@ -427,7 +436,7 @@ Maui.ApplicationWindow
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 orientation: ListView.Horizontal
-                model: tabsObjectModel
+                model: _editorModel
                 snapMode: ListView.SnapOneItem
                 spacing: 0
                 interactive: Kirigami.Settings.isMobile && count > 1
@@ -442,10 +451,15 @@ Maui.ApplicationWindow
                     emoji: "qrc:/img/document-edit.svg"
                     emojiSize: Maui.Style.iconSizes.huge
                     isMask: true
-                    onActionTriggered: openTab()
+                    onActionTriggered: openTab("")
                     title: qsTr("Create a new document")
                     body: qsTr("You can create a new document by clicking the New File button, or here.<br>
                 Alternative you can open existing files from the left places sidebar or by clicking the Open button")
+                }
+
+                delegate: Editor
+                {
+                    Component.onCompleted: fileUrl = model.path
                 }
 
             }
@@ -483,18 +497,9 @@ Maui.ApplicationWindow
         if(!_editorList.append(path))
             return ;
 
-        var component = Qt.createComponent("Editor.qml");
-        if (component.status === Component.Ready)
-        {
-            tabsObjectModel.append(component.createObject(tabsObjectModel));
+        _editorListView.currentIndex = _editorListView.count - 1
 
-            _editorListView.currentIndex = tabsObjectModel.count - 1
-
-            if(path && Maui.FM.fileExists(path))
-            {
-                tabsObjectModel.get(tabsObjectModel.count - 1).document.load(path)
-                browserView.openFolder(Maui.FM.fileDir(path))
-            }
-        }
+        if(path && Maui.FM.fileExists(path))
+            browserView.openFolder(Maui.FM.fileDir(path))
     }
 }

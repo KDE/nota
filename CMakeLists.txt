@@ -55,7 +55,7 @@ else()
 
 endif()
 
-target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
+target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg Qt5::QuickControls2 KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
 
 install(TARGETS nota ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})

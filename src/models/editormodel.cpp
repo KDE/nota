@@ -26,7 +26,6 @@ QStringList EditorModel::getUrls() const
         return urls;
     });
 }
-
 void EditorModel::appendToHistory(const QUrl &url) const
 {
     qDebug() << "APOPENIGN TO HISTORY "<< url;
@@ -38,18 +37,20 @@ bool EditorModel::append(const QUrl &url)
 {
     qDebug()<< "Appending new file "<< url << this->contains(url);
 
-    if(this->contains(url))
-        return false;
-
     emit this->preItemAppended();
-    if(url.isLocalFile()) //for now only support local files
+    if(!url.isEmpty())
     {
-        if(FMH::fileExists(url))
-            this->m_list << FMH::getFileInfoModel(url);
-    }else
-        this->m_list << FMH::MODEL {{FMH::MODEL_KEY::PATH, ""}, {FMH::MODEL_KEY::LABEL, "Untitled"}};
+        if(this->contains(url))
+            return false;
 
-    this->appendToHistory(url);
+        if(url.isLocalFile() && FMH::fileExists(url)) //for now only support local files
+        {
+                this->m_list << FMH::getFileInfoModel(url);
+                this->appendToHistory(url);
+        }
+
+    }else this->m_list << FMH::MODEL {{FMH::MODEL_KEY::ICON, "text-plain"}, {FMH::MODEL_KEY::PATH, ""}, {FMH::MODEL_KEY::LABEL, "Untitled"}};
+
     emit this->postItemAppended();
     emit this->urlsChanged();
     return true;
