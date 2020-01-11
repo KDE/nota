@@ -5,7 +5,7 @@ import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import org.maui.nota 1.0 as Nota
 import QtQuick.Window 2.0
-
+import QtQml.Models 2.3
 import "views"
 
 Maui.ApplicationWindow
@@ -36,20 +36,24 @@ Maui.ApplicationWindow
     //        }
     //    ]
 
+    ObjectModel
+    {
+        id: _documentModel
+    }
+
     onClosing:
     {
-        var files = []
+        _unsavedFilesModel.clear()
         for(var i = 0; i<_editorListView.count; i++)
         {
-            const doc = _editorListView.itemAtIndex(i)
+            const doc =  _documentModel.get(i)
             if(doc.document.modified)
-                files.push({'file': _editorModel.get(i), 'index': i})
+                _unsavedFilesModel.append({'file': _editorModel.get(i), 'documentIndex': i})
         }
 
-        if(files.length > 0 && !_unsavedDialog.discard)
+        if(_unsavedFilesModel.count > 0 && !_unsavedDialog.discard)
         {
             close.accepted = false
-            _unsavedDialog.files = files
             _unsavedDialog.open()
         }else close.accepted = true
     }
@@ -57,12 +61,11 @@ Maui.ApplicationWindow
     Maui.Dialog
     {
         id: _unsavedDialog
-        property var files : []
 
         property bool discard : false
         acceptButton.visible: false
         page.title: qsTr("Un saved files")
-
+        headBar.visible: true
         maxHeight: 500
         maxWidth: 400
         page.padding: Maui.Style.space.big
@@ -72,11 +75,19 @@ Maui.ApplicationWindow
             id: _unsavedFilesListView
             anchors.fill: parent
             spacing: Maui.Style.space.medium
-            model: _unsavedDialog.files
+            model: ListModel
+            {
+                id: _unsavedFilesModel
+            }
+
+            onCountChanged: if(count === 0) _unsavedDialog.close()
+
             clip: true
 
             delegate : Maui.ItemDelegate
             {
+                id: _unsavedFileDelegate
+                property int index_ : index
                 width: parent.width
                 height: Maui.Style.rowHeight * 1.2
 
@@ -89,9 +100,9 @@ Maui.ApplicationWindow
                         Layout.fillHeight: true
                         Layout.fillWidth: true
 
-                        label1.text: modelData.file.label
-                        label2.text: modelData.file.path
-                        iconSource: modelData.file.icon
+                        label1.text: model.file.label
+                        label2.text: model.file.path
+                        iconSource: model.file.icon
                         iconSizeHint: Maui.Style.iconSizes.big
                     }
 
@@ -104,7 +115,22 @@ Maui.ApplicationWindow
                         Button
                         {
                             text: qsTr("Save")
-                            onClicked: Object.call(_editorListView.itemAtIndex(modelData.index).saveFile(modelData.file.path))
+                            onClicked:
+                            {
+                               _documentModel.get(model.documentIndex).saveFile(model.file.path, model.documentIndex)
+//                                closeTab(model.index)
+                                _unsavedFilesModel.remove(_unsavedFileDelegate.index_)
+                            }
+                        }
+
+                        Button
+                        {
+                            text: qsTr("Discard")
+                            onClicked:
+                            {
+                                closeTab(model.documentIndex)
+                                _unsavedFilesModel.remove(_unsavedFileDelegate.index_)
+                            }
                         }
                     }
                 }
@@ -276,7 +302,7 @@ Maui.ApplicationWindow
     {
         id : _drawer
         focus: true
-        width: visible ? Math.min(Kirigami.Units.gridUnit * (Kirigami.Settings.isMobile? 14 : 18), root.width) : 0
+        width: visible ? Math.min(Kirigami.Units.gridUnit * (Kirigami.Settings.isMobile? 14 : 16), root.width) : 0
         modal: !isWide
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
         dragMargin: Maui.Style.space.big
@@ -380,6 +406,7 @@ Maui.ApplicationWindow
                     Maui.TabButton
                     {
                         id: _tabButton
+                        readonly property int index_ : index
                         implicitHeight: _tabBar.implicitHeight
                         implicitWidth: Math.max(_tabBar.width / _repeater.count, 120)
                         checked: index === _tabBar.currentIndex
@@ -389,32 +416,33 @@ Maui.ApplicationWindow
                         onClicked: _editorListView.currentIndex = index
                         onCloseClicked:
                         {
-                            if( _editorListView.itemAtIndex(_tabButton.index).document.modified)
+                            console.log("CLOSING EDITOR AT", _tabButton.index_)
+                            if( _documentModel.get(_tabButton.index_).document.modified)
                                 _saveDialog.open()
                             else
-                                _editorList.remove(index)
+                                closeTab(_tabButton.index_)
                         }
 
                         Maui.Dialog
                         {
                             id: _saveDialog
                             page.padding: Maui.Style.space.huge
-                            title: _editorModel.get(_tabButton.index).path
-                            message: qsTr("This file has been modified, you can save now your changes or discard them")
+                            title: qsTr("Save file")
+                            message: qsTr(String("This file has been modified, you can save your changes now or discard them.\n")) + _editorModel.get(_tabButton.index).path
 
                             acceptButton.text: qsTr("Save")
                             rejectButton.text: qsTr("Discard")
 
                             onAccepted:
                             {
-                                _editorListView.itemAtIndex(_tabButton.index).saveFile(_editorModel.get(_tabButton.index).path)
+                                _documentModel.get(_tabButton.index_).saveFile(_editorModel.get(_tabButton.index_).path, _tabButton.index_)
                                 _saveDialog.close()
                             }
 
                             onRejected:
                             {
-                                _editorList.remove(_tabButton.index)
                                 _saveDialog.close()
+                                _editorList.remove(_tabButton.index_)
                             }
                         }
                     }
@@ -436,14 +464,14 @@ Maui.ApplicationWindow
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 orientation: ListView.Horizontal
-                model: _editorModel
+                model: _documentModel
                 snapMode: ListView.SnapOneItem
                 spacing: 0
                 interactive: Kirigami.Settings.isMobile && count > 1
                 highlightFollowsCurrentItem: true
                 highlightMoveDuration: 0
                 onMovementEnded: currentIndex = indexAt(contentX, contentY)
-
+                cacheBuffer: count
                 Maui.Holder
                 {
                     id: _holder
@@ -457,10 +485,10 @@ Maui.ApplicationWindow
                 Alternative you can open existing files from the left places sidebar or by clicking the Open button")
                 }
 
-                delegate: Editor
-                {
-                    Component.onCompleted: fileUrl = model.path
-                }
+//                delegate: Editor
+//                {
+//                    Component.onCompleted: fileUrl = model.path
+//                }
 
             }
 
@@ -491,15 +519,27 @@ Maui.ApplicationWindow
         }
     }
 
-
     function openTab(path)
     {
         if(!_editorList.append(path))
             return ;
 
-        _editorListView.currentIndex = _editorListView.count - 1
+        var component = Qt.createComponent("Editor.qml");
+        if (component.status === Component.Ready)
+        {
+            _documentModel.append(component.createObject(_documentModel));
 
-        if(path && Maui.FM.fileExists(path))
-            browserView.openFolder(Maui.FM.fileDir(path))
+            _editorListView.currentIndex = _documentModel.count - 1
+            _documentModel.get(_documentModel.count - 1).fileUrl = path
+
+            if(path && Maui.FM.fileExists(path))
+                browserView.openFolder(Maui.FM.fileDir(path))
+        }
+    }
+
+    function closeTab(index)
+    {
+        _documentModel.remove(index)
+        _editorList.remove(index)
     }
 }

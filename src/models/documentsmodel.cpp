@@ -9,13 +9,13 @@ DocumentsModel::DocumentsModel(QObject * parent) : MauiList (parent)
 	qRegisterMetaType<FMH::MODEL_LIST>("MODEL_LIST");
 	qRegisterMetaType<FMH::MODEL>("MODEL");
 
-	FileLoader *loader = new FileLoader;
+    FilesFetcher *loader = new FilesFetcher;
 	loader->moveToThread(&m_worker);
 
 	connect(&m_worker, &QThread::finished, loader, &QObject::deleteLater);
 
-    connect(this, &DocumentsModel::start, loader, &FileLoader::fetch);
-    connect(loader, &FileLoader::itemReady, this, &DocumentsModel::append);
+    connect(this, &DocumentsModel::start, loader, &FilesFetcher::fetch);
+    connect(loader, &FilesFetcher::itemReady, this, &DocumentsModel::append);
 
 	m_worker.start();
 }
@@ -41,7 +41,7 @@ void DocumentsModel::append(const FMH::MODEL &item)
 	emit this->postItemAppended ();
 }
 
-void FileLoader::fetch(const QList<QUrl> & urls)
+void FilesFetcher::fetch(const QList<QUrl> & urls)
 {
 	FMH::MODEL_LIST res;
 

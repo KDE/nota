@@ -16,13 +16,13 @@ Maui.Page
     {
         Layout.fillWidth: true
         placeholderText: qsTr("Filter...")
-        onAccepted: _gridView.model.filter = text
-        onCleared:  _gridView.model.filter = text
+        onAccepted: _listView.model.filter = text
+        onCleared:  _listView.model.filter = text
     }
 
     Maui.ListBrowser
     {
-        id: _gridView
+        id: _listView
         anchors.fill: parent
         model: Maui.BaseModel
         {
@@ -33,17 +33,25 @@ Maui.Page
             }
         }
 
-        delegate: Maui.ListBrowserDelegate
+        delegate: Maui.ItemDelegate
         {
             height: Maui.Style.rowHeight *2
-            width: parent.width
-            label1.text: model.label
-            label2.text: model.path
+            width: _listView.width
 
             padding: Maui.Style.space.medium
+
+            Maui.ListItemTemplate
+            {
+                anchors.fill: parent
+                label1.text: model.label
+                label2.text: model.path
+                iconSource: model.icon
+                iconSizeHint: Maui.Style.iconSizes.big
+            }
+
             onClicked:
             {
-                root.openTab(_gridView.model.get(index).path)
+                root.openTab(_listView.model.get(index).path)
                 _actionGroup.currentIndex = views.editor
             }
         }

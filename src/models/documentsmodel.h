@@ -12,7 +12,7 @@
 #include <MauiKit/mauilist.h>
 #endif
 
-class FileLoader : public QObject
+class FilesFetcher : public QObject
 {
 		Q_OBJECT
 	public slots:

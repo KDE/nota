@@ -16,17 +16,17 @@ Maui.Editor
         {
             id: saveBtn
             icon.name: "document-save"
-            onClicked:  saveFile(document.fileUrl)
+            onClicked:  saveFile(document.fileUrl, _tabBar.currentIndex)
         },
         ToolButton
         {
             icon.name: "document-save-as"
             text: qsTr("Save as...")
-            onClicked: saveFile()
+            onClicked: saveFile("", _tabBar.currentIndex)
         }
     ]
 
-    function saveFile(path)
+    function saveFile(path, index)
     {
         if (path && Maui.FM.fileExists(path))
         {
@@ -38,7 +38,7 @@ Maui.Editor
             fileDialog.show(function (paths)
             {
                 document.saveAs(paths[0]);
-                _editorList.update(_tabBar.currentIndex, paths[0]);
+                _editorList.update(index, paths[0]);
             });
         }
     }

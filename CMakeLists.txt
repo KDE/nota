@@ -6,7 +6,7 @@ find_package(ECM 1.7.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
 find_package(MauiKit REQUIRED)
-find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Qml Quick Sql Svg QuickControls2 Widgets Xml)
+find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Qml Sql Svg)
 find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config KIO Attica SyntaxHighlighting)
 include(KDEInstallDirs)
 include(KDECompilerSettings NO_POLICY_SCOPE)
@@ -55,7 +55,7 @@ else()
 
 endif()
 
-target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Widgets Qt5::Svg Qt5::QuickControls2 KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
+target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Svg  KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
 
 install(TARGETS nota ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
