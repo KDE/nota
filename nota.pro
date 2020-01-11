@@ -58,7 +58,7 @@ HEADERS += \
 
 RESOURCES += \
     $$PWD/src/qml.qrc \
-    $$PWD/assets/img_assets.qrc
+    $$PWD/src/assets/img_assets.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

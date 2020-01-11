@@ -467,11 +467,12 @@ Maui.ApplicationWindow
                 model: _documentModel
                 snapMode: ListView.SnapOneItem
                 spacing: 0
-                interactive: Kirigami.Settings.isMobile && count > 1
+                interactive: Maui.Handy.isTouch && count > 1
                 highlightFollowsCurrentItem: true
                 highlightMoveDuration: 0
                 onMovementEnded: currentIndex = indexAt(contentX, contentY)
                 cacheBuffer: count
+
                 Maui.Holder
                 {
                     id: _holder
