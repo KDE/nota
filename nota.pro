@@ -20,7 +20,6 @@ DEFINES += NOTA_VERSION_STRING=\\\"$$VERSION\\\"
 linux:unix:!android {
 
     message(Building for Linux KDE)
-    QT += webengine
     LIBS += -lMauiKit
 
 } else:android {
