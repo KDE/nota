@@ -148,6 +148,7 @@ Maui.ApplicationWindow
                     onClicked:
                     {
                         openTab("")
+                        _editorListView.currentItem.body.textFormat = TextEdit.PlainText
                         _newDocumentMenu.close()
                     }
                 }
@@ -165,6 +166,13 @@ Maui.ApplicationWindow
                         iconSource: "text-enriched"
                         label1.text: qsTr("Rich text file")
                         label2.text: qsTr("With support for basic text format editing")
+                    }
+
+                    onClicked:
+                    {
+                        openTab("")
+                        _editorListView.currentItem.body.textFormat = TextEdit.RichText
+                        _newDocumentMenu.close()
                     }
                 }
 
