@@ -43,11 +43,8 @@ Maui.Page
             }
 
             padding: Maui.Style.space.medium
-            onClicked:
-            {
-                root.openTab(_gridView.model.get(index).path)
-                _actionGroup.currentIndex = views.editor
-            }
+            onClicked: root.openTab(_gridView.model.get(index).path)
+
         }
     }
 }

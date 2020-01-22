@@ -83,6 +83,11 @@ void EditorModel::update(const int &index, const QUrl &url)
     emit this->updateModel(index, FMH::modelRoles(item));
 }
 
+int EditorModel::urlIndex(const QUrl &url)
+{
+    return this->indexOf(FMH::MODEL_KEY::PATH, url.toString());
+}
+
 QVariantList EditorModel::getFiles() const
 {
     return FMH::toMapList(this->m_list);

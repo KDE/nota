@@ -52,6 +52,7 @@ public slots:
     bool contains(const QUrl &url) const;
     void remove(const int &index);
     void update(const int &index, const QUrl &url);
+    int urlIndex(const QUrl &url);
     QVariantList getFiles() const;
 
 signals:

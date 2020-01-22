@@ -49,11 +49,7 @@ Maui.Page
                 iconSizeHint: Maui.Style.iconSizes.big
             }
 
-            onClicked:
-            {
-                root.openTab(_listView.model.get(index).path)
-                _actionGroup.currentIndex = views.editor
-            }
+            onClicked: root.openTab(_listView.model.get(index).path)
         }
     }
 }
