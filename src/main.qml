@@ -351,7 +351,7 @@ Maui.ApplicationWindow
                         implicitWidth: Math.max(_tabBar.width / _repeater.count, 120)
                         checked: index === _tabBar.currentIndex
 
-                        text: model.label + model.index
+                        text: model.label
 
                         onClicked: _editorListView.currentIndex = index
                         onCloseClicked:
