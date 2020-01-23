@@ -28,6 +28,7 @@ set(nota_SRCS
 set(nota_HDRS
     src/models/documentsmodel.h
     src/models/editormodel.h
+    src/nota.h
     )
 
 set(nota_ASSETS

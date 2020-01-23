@@ -1,4 +1,5 @@
 #include <QQmlApplicationEngine>
+#include <QCommandLineParser>
 #include <QIcon>
 
 #ifndef STATIC_MAUIKIT
@@ -18,6 +19,8 @@
 #ifdef STATIC_MAUIKIT
 #include "3rdparty/mauikit/src/mauikit.h"
 #endif
+
+#include "nota.h"
 
 //Models
 #include "src/models/documentsmodel.h"
@@ -43,6 +46,14 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
 	app.setWindowIcon(QIcon(":/nota.svg"));
 
+    QCommandLineParser parser;
+    parser.setApplicationDescription("Simple text editor");
+    const QCommandLineOption versionOption = parser.addVersionOption();
+    parser.addOption(versionOption);
+    parser.process(app);
+
+    const QStringList args = parser.positionalArguments();
+
 #ifdef STATIC_KIRIGAMI
 	KirigamiPlugin::getInstance().registerTypes();
 #endif
@@ -51,14 +62,34 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 	MauiKit::getInstance().registerTypes();
 #endif
 
+    static auto nota = new Nota;
+
+    QQmlApplicationEngine engine;
+    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
+                     &app, [url, args](QObject *obj, const QUrl &objUrl)
+    {
+        if (!obj && url == objUrl)
+            QCoreApplication::exit(-1);
+
+        if(!args.isEmpty())
+            nota->requestFiles(args);
+
+    }, Qt::QueuedConnection);
+
+    qmlRegisterSingletonType<Nota>("org.maui.nota", 1, 0, "Nota",
+                                  [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+        return nota;
+    });
+
+
     qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
     qmlRegisterType<EditorModel> ("org.maui.nota", 1, 0, "Editor");
     qmlRegisterType<HistoryModel> ();
 
-	QQmlApplicationEngine engine;
-	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-    if (engine.rootObjects().isEmpty())
-        return -1;
+    engine.load(url);
 
     return app.exec();
 }

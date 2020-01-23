@@ -16,25 +16,8 @@ Maui.ApplicationWindow
     //    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
     //    property alias terminal : terminalLoader.item
     property var views : ({editor: 0, documents: 1, recent: 2})
-
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
-
-    rightIcon.visible: false
-
-    //    mainMenu: [
-    //        MenuItem
-    //        {
-    //            text: qsTr("Show terminal")
-    //            checkable: true
-    //            checked: terminal.visible
-    //            onTriggered:
-    //            {
-    //                terminalVisible = !terminalVisible
-    //                Maui.FM.saveSettings("TERMINAL",terminalVisible, "MAINVIEW")
-    //            }
-    //        }
-    //    ]
 
     ObjectModel
     {
@@ -356,7 +339,6 @@ Maui.ApplicationWindow
                         onClicked: _editorListView.currentIndex = index
                         onCloseClicked:
                         {
-                            console.log("CLOSING EDITOR AT", model.index)
                             if( _documentModel.get(model.index).document.modified)
                             {
                                 _saveDialog.fileIndex = model.index
@@ -415,6 +397,7 @@ Maui.ApplicationWindow
                 interactive: Maui.Handy.isTouch && count > 1
                 highlightFollowsCurrentItem: true
                 highlightMoveDuration: 0
+                highlightResizeDuration : 0
                 onMovementEnded: currentIndex = indexAt(contentX, contentY)
                 cacheBuffer: count
 
@@ -462,6 +445,16 @@ Maui.ApplicationWindow
         RecentView
         {
             id:_recentView
+        }
+    }
+
+    Connections
+    {
+        target: Nota.Nota
+        onOpenFiles:
+        {
+            for(var i in urls)
+                openTab(urls[i])
         }
     }
 
