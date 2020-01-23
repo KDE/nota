@@ -54,6 +54,7 @@ SOURCES += \
         $$PWD/src/models/editormodel.cpp
 
 HEADERS += \
+        $$PWD/src/nota.h\
         $$PWD/src/models/documentsmodel.h \
         $$PWD/src/models/editormodel.h
 
