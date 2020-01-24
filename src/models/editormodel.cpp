@@ -66,8 +66,10 @@ void EditorModel::remove(const int &index)
     if(index > this->getCount() || index < 0)
         return;
 
-    emit this->preItemRemoved(index);
-    this->m_list.remove(index);
+    const auto index_ = this->mappedIndex(index);
+
+    emit this->preItemRemoved(index_);
+    this->m_list.remove(index_);
     emit this->postItemRemoved();
 }
 
@@ -77,10 +79,12 @@ void EditorModel::update(const int &index, const QUrl &url)
     if(index > this->getCount() || index < 0)
         return;
 
-    const auto item = FMH::getFileInfoModel(url);
-    this->m_list[index] = item;
+    const auto index_ = this->mappedIndex(index);
 
-    emit this->updateModel(index, FMH::modelRoles(item));
+    const auto item = FMH::getFileInfoModel(url);
+    this->m_list[index_] = item;
+
+    emit this->updateModel(index_, FMH::modelRoles(item));
 }
 
 int EditorModel::urlIndex(const QUrl &url)
