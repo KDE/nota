@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Nota
 Name[ca]=Nota
+Name[ca@valencia]=Nota
 Name[es]=Nota
 Name[et]=Nota
 Name[it]=Nota
@@ -14,6 +15,7 @@ Name[x-test]=xxNotaxx
 Name[zh_TW]=Nota
 Comment=Simple Text Editor
 Comment[ca]=Editor de text senzill
+Comment[ca@valencia]=Editor de text senzill
 Comment[es]=Editor simple de texto
 Comment[et]=Lihtne tekstiredaktor
 Comment[it]=Semplice editor di testo
@@ -32,6 +34,7 @@ Type=Application
 Categories=Qt;KDE;Utility;TextEditor;
 GenericName=Simple Text Editor
 GenericName[ca]=Editor de text senzill
+GenericName[ca@valencia]=Editor de text senzill
 GenericName[es]=Editor simple de texto
 GenericName[et]=Lihtne tekstiredaktor
 GenericName[it]=Semplice editor di testo
