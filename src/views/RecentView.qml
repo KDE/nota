@@ -31,19 +31,31 @@ Maui.Page
 
         delegate: Maui.ItemDelegate
         {
+            id: _delegate
+            isCurrentItem : GridView.isCurrentItem
             height: _gridView.cellHeight
             width: _gridView.cellWidth
 
+            background: Item {}
+
+
             Maui.GridItemTemplate
             {
-                anchors.fill: parent
+                isCurrentItem: _delegate.isCurrentItem
+                anchors.centerIn: parent
+                height: parent.height
+                width: _gridView.itemSize
                 label1.text: model.label
                 iconSource: model.icon
-                iconSizeHint: Maui.Style.iconSizes.huge
+                iconSizeHint: height * 0.5
             }
 
             padding: Maui.Style.space.medium
-            onClicked: root.openTab(_gridView.model.get(index).path)
+            onClicked:
+            {
+                _gridView.currentIndex = index
+                root.openTab(_gridView.model.get(index).path)
+            }
 
         }
     }
