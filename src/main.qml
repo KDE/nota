@@ -86,12 +86,22 @@ Maui.ApplicationWindow
         onClicked: openTab("")
 
         Maui.Badge
-        {
-            iconName: "list-add"
+        {            
             anchors
             {
                 horizontalCenter: parent.right
                 verticalCenter: parent.top
+            }
+
+            border.color: Kirigami.Theme.textColor
+            color: hovered || pressed ? Kirigami.Theme.positiveTextColor : Kirigami.Theme.backgroundColor
+
+            Maui.PlusSign
+            {
+                height: Maui.Style.iconSizes.tiny
+                width: height
+                anchors.centerIn: parent
+                color: Kirigami.Theme.textColor
             }
 
             onClicked: _newDocumentMenu.open()
