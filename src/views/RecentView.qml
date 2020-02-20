@@ -9,6 +9,7 @@ Maui.Page
 {
     id: control
 
+    property bool selectionMode :  false
     headBar.middleContent: Maui.TextField
     {
         Layout.fillWidth: true
@@ -17,12 +18,29 @@ Maui.Page
         onCleared:  _gridView.model.filter = text
     }
 
+    headBar.rightContent: ToolButton
+    {
+        icon.name: "item-select"
+        onClicked: control.selectionMode = !control.selectionMode
+        checked: control.selectionMode
+    }
+
     Maui.GridView
     {
         id: _gridView
         anchors.fill: parent
-
         itemSize: 100
+        enableLassoSelection: true
+        topMargin: Maui.Style.contentMargins
+
+        onItemsSelected:
+        {
+            for(var i in indexes)
+            {
+               const item =  model.get(indexes[i])
+                _selectionbar.append(item.path, item)
+            }
+        }
 
         model: Maui.BaseModel
         {
@@ -32,25 +50,56 @@ Maui.Page
         delegate: Maui.ItemDelegate
         {
             id: _delegate
+            padding: Maui.Style.space.tiny
             isCurrentItem : GridView.isCurrentItem
             height: _gridView.cellHeight
             width: _gridView.cellWidth
+            property bool isSelected: _selectionbar.contains(model.path)
 
             background: Item {}
 
-
             Maui.GridItemTemplate
             {
+                id: _template
                 isCurrentItem: _delegate.isCurrentItem
                 anchors.centerIn: parent
-                height: parent.height
-                width: _gridView.itemSize
+                height: parent.height - 10
+                width: _gridView.itemSize  -10
                 label1.text: model.label
                 iconSource: model.icon
-                iconSizeHint: height * 0.5
+                iconSizeHint: height * 0.6
+                emblem.iconName: isSelected ? "checkbox" : " "
+                emblem.visible: (control.selectionMode || isSelected)
+                emblem.size: Maui.Style.iconSizes.medium
+
+                emblem.border.color: emblem.Kirigami.Theme.textColor
+                emblem.color: isSelected ? emblem.Kirigami.Theme.highlightColor : Qt.rgba(emblem.Kirigami.Theme.backgroundColor.r, emblem.Kirigami.Theme.backgroundColor.g, emblem.Kirigami.Theme.backgroundColor.b, 0.7)
+
+                Connections
+                {
+                    target: _template.emblem
+                    onClicked: _selectionbar.append(model.path, _gridView.model.get(index))
+                }
             }
 
-            padding: Maui.Style.space.medium
+            Connections
+            {
+                target: _selectionbar
+                onUriRemoved:
+                {
+                    if(uri === model.path)
+                        _delegate.isSelected = false
+                }
+
+                onUriAdded:
+                {
+                    if(uri === model.path)
+                        _delegate.isSelected = true
+                }
+
+                onCleared: _delegate.isSelected = false
+            }
+
             onClicked:
             {
                 _gridView.currentIndex = index
