@@ -29,8 +29,18 @@ Maui.Page
     {
         id: _gridView
         anchors.fill: parent
+        itemSize: 100
+        enableLassoSelection: true
+        topMargin: Maui.Style.contentMargins
 
-        itemSize: 120
+        onItemsSelected:
+        {
+            for(var i in indexes)
+            {
+               const item =  model.get(indexes[i])
+                _selectionbar.append(item.path, item)
+            }
+        }
 
         model: Maui.BaseModel
         {
@@ -40,6 +50,7 @@ Maui.Page
         delegate: Maui.ItemDelegate
         {
             id: _delegate
+            padding: Maui.Style.space.tiny
             isCurrentItem : GridView.isCurrentItem
             height: _gridView.cellHeight
             width: _gridView.cellWidth
@@ -52,8 +63,8 @@ Maui.Page
                 id: _template
                 isCurrentItem: _delegate.isCurrentItem
                 anchors.centerIn: parent
-                height: parent.height
-                width: _gridView.itemSize
+                height: parent.height - 10
+                width: _gridView.itemSize  -10
                 label1.text: model.label
                 iconSource: model.icon
                 iconSizeHint: height * 0.6
@@ -89,7 +100,6 @@ Maui.Page
                 onCleared: _delegate.isSelected = false
             }
 
-            padding: Maui.Style.space.medium
             onClicked:
             {
                 _gridView.currentIndex = index
