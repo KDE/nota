@@ -159,9 +159,8 @@ Maui.ApplicationWindow
             {
                 id: browserView
                 anchors.fill: parent
-                headBar.position: ToolBar.Footer
-                headBar.visible: true
-                viewType : Maui.FMList.LIST_VIEW
+                currentPath: Maui.FM.homePath()
+                settings.viewType : Maui.FMList.LIST_VIEW
                 settings.filterType: Maui.FMList.TEXT
                 headBar.rightLayout.visible: false
                 headBar.rightLayout.width: 0
