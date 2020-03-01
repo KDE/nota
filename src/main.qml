@@ -78,7 +78,6 @@ Maui.ApplicationWindow
             {
                 fileDialog.mode = fileDialog.modes.OPEN
                 fileDialog.settings.onlyDirs = false
-                fileDialog.settings.singleSelection = false
                 fileDialog.show(function (paths)
                 {
                     for(var i in paths)
