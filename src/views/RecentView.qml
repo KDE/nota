@@ -54,7 +54,7 @@ Maui.Page
             isCurrentItem : GridView.isCurrentItem
             height: _gridView.cellHeight
             width: _gridView.cellWidth
-            property bool isSelected: _selectionbar.contains(model.path)
+            property alias checked :_template.checked
 
             background: Item {}
 
@@ -68,18 +68,9 @@ Maui.Page
                 label1.text: model.label
                 iconSource: model.icon
                 iconSizeHint: height * 0.6
-                emblem.iconName: isSelected ? "checkbox" : " "
-                emblem.visible: (control.selectionMode || isSelected)
-                emblem.size: Maui.Style.iconSizes.medium
-
-                emblem.border.color: emblem.Kirigami.Theme.textColor
-                emblem.color: isSelected ? emblem.Kirigami.Theme.highlightColor : Qt.rgba(emblem.Kirigami.Theme.backgroundColor.r, emblem.Kirigami.Theme.backgroundColor.g, emblem.Kirigami.Theme.backgroundColor.b, 0.7)
-
-                Connections
-                {
-                    target: _template.emblem
-                    onClicked: _selectionbar.append(model.path, _gridView.model.get(index))
-                }
+                checkable: selectionMode
+                checked: _selectionbar.contains(model.path)
+                onToggled: _selectionbar.append(model.path, _gridView.model.get(index))
             }
 
             Connections
@@ -88,16 +79,16 @@ Maui.Page
                 onUriRemoved:
                 {
                     if(uri === model.path)
-                        _delegate.isSelected = false
+                        _delegate.checked = false
                 }
 
                 onUriAdded:
                 {
                     if(uri === model.path)
-                        _delegate.isSelected = true
+                        _delegate.checked = true
                 }
 
-                onCleared: _delegate.isSelected = false
+                onCleared: _delegate.checked = false
             }
 
             onClicked:

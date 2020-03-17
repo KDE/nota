@@ -54,8 +54,7 @@ Maui.Page
             width: parent.width
             leftPadding: Maui.Style.space.small
             rightPadding: Maui.Style.space.small
-
-            property bool isSelected: _selectionbar.contains(model.path)
+            property alias checked :_template.checked
 
             Maui.ListItemTemplate
             {
@@ -65,18 +64,8 @@ Maui.Page
                 label2.text: model.path
                 iconSource: model.icon
                 iconSizeHint: Maui.Style.iconSizes.big
-                emblem.iconName: isSelected ? "checkbox" : " "
-                emblem.visible: (control.selectionMode || isSelected)
-                emblem.size: Maui.Style.iconSizes.medium
-
-                emblem.border.color: emblem.Kirigami.Theme.textColor
-                emblem.color: isSelected ? emblem.Kirigami.Theme.highlightColor : Qt.rgba(emblem.Kirigami.Theme.backgroundColor.r, emblem.Kirigami.Theme.backgroundColor.g, emblem.Kirigami.Theme.backgroundColor.b, 0.7)
-
-                Connections
-                {
-                    target: _template.emblem
-                    onClicked: _selectionbar.append(model.path, _gridView.model.get(index))
-                }
+                checked: _selectionbar.contains(model.path)
+                onToggled: _selectionbar.append(model.path, _listView.model.get(index))
             }
 
             Connections
@@ -85,16 +74,16 @@ Maui.Page
                 onUriRemoved:
                 {
                     if(uri === model.path)
-                        _delegate.isSelected = false
+                        _delegate.checked = false
                 }
 
                 onUriAdded:
                 {
                     if(uri === model.path)
-                        _delegate.isSelected = true
+                        _delegate.checked = true
                 }
 
-                onCleared: _delegate.isSelected = false
+                onCleared: _delegate.checked = false
             }
 
             onClicked: root.openTab(_listView.model.get(index).path)

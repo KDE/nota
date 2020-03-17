@@ -395,7 +395,6 @@ Maui.ApplicationWindow
                 //            }
             }
 
-
             MauiLab.AppViewLoader
             {
                 MauiLab.AppView.iconName: "view-pim-journal"
