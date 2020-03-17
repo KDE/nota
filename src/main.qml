@@ -87,33 +87,7 @@ Maui.ApplicationWindow
         }
     ]
 
-    headBar.middleContent: Maui.ActionGroup
-    {
-        id: _actionGroup
-        currentIndex: _swipeView.currentIndex
-        Layout.fillHeight: true
-        width: implicitWidth
-
-        Action
-        {
-            text: qsTr("Editor")
-            icon.name: "document-edit"
-        }
-
-        Action
-        {
-            text: qsTr("Documents")
-            icon.name: "view-pim-journal" // to do
-        }
-
-        Action
-        {
-            text: qsTr("Recent")
-            icon.name: "view-media-recent" // to do
-        }
-    }
-
-    sideBar: Maui.AbstractSideBar
+     sideBar: Maui.AbstractSideBar
     {
         id : _drawer
         width: visible ? Math.min(Kirigami.Units.gridUnit * 14, root.width) : 0
@@ -189,21 +163,19 @@ Maui.ApplicationWindow
     {
         anchors.fill: parent
 
-        SwipeView
+        MauiLab.AppViews
         {
             id: _swipeView
             Layout.fillHeight: true
             Layout.fillWidth: true
-            currentIndex: _actionGroup.currentIndex
-            interactive: Kirigami.Settings.hasTransientTouchInput
-            onCurrentItemChanged: currentItem.forceActiveFocus()
-            onCurrentIndexChanged: _actionGroup.currentIndex = currentIndex
-            clip: true
 
             ColumnLayout
             {
                 id: editorView
                 spacing: 0
+
+                MauiLab.AppView.iconName: "document-edit"
+                MauiLab.AppView.title: qsTr("Editor")
 
                 Maui.TabBar
                 {
@@ -423,14 +395,25 @@ Maui.ApplicationWindow
                 //            }
             }
 
-            DocumentsView
+
+            MauiLab.AppViewLoader
             {
-                id: _documentsView
+                MauiLab.AppView.iconName: "view-pim-journal"
+                MauiLab.AppView.title: qsTr("Documents")
+                DocumentsView
+                {
+                    id: _documentsView
+                }
             }
 
-            RecentView
+            MauiLab.AppViewLoader
             {
-                id:_recentView
+                MauiLab.AppView.iconName: "view-media-recent"
+                MauiLab.AppView.title: qsTr("Recent")
+                RecentView
+                {
+                    id:_recentView
+                }
             }
         }
 
@@ -486,7 +469,7 @@ Maui.ApplicationWindow
 
     function openTab(path)
     {
-        _actionGroup.currentIndex = views.editor
+        _swipeView.currentIndex = views.editor
 
         const index = _editorList.urlIndex(path)
         if(index >= 0)
