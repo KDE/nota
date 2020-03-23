@@ -34,7 +34,7 @@ Maui.Editor
         } else
         {
             fileDialog.mode = fileDialog.modes.SAVE;
-            fileDialog.settings.singleSelection = true
+//            fileDialog.settings.singleSelection = true
             fileDialog.show(function (paths)
             {
                 document.saveAs(paths[0]);
