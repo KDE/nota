@@ -312,8 +312,9 @@ Maui.ApplicationWindow
 
                             ColumnLayout
                             {
-                                anchors.fill: parent
-                                anchors.margins: Maui.Style.space.big
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                Layout.margins: Maui.Style.space.big
                                 spacing: Maui.Style.space.big
 
                                 Maui.ItemDelegate
