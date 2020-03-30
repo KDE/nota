@@ -9,7 +9,17 @@ Maui.Editor
     height: _editorListView.height
     width: _editorListView.width
 
-    footBar.visible: false
+    footBar.visible: true
+
+    footBar.leftContent: Maui.TextField
+    {
+        placeholderText: qsTr("Find")
+        onAccepted:
+        {
+            console.log("FIND THE QUERY", text)
+            document.find(text)
+        }
+    }
 
     headBar.rightContent: [
         ToolButton
