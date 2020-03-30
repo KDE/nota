@@ -12,7 +12,7 @@ import "views"
 Maui.ApplicationWindow
 {
     id: root
-    title: currentTab.title
+    title: currentTab ? currentTab.title : ""
 
     //    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
     //    property alias terminal : terminalLoader.item
