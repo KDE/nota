@@ -37,7 +37,7 @@ Maui.Page
         {
             for(var i in indexes)
             {
-               const item =  model.get(indexes[i])
+                const item =  model.get(indexes[i])
                 _selectionbar.append(item.path, item)
             }
         }
@@ -47,24 +47,37 @@ Maui.Page
             list: _editorList.history
         }
 
-        delegate: Maui.ItemDelegate
+        delegate: Item
         {
             id: _delegate
-            padding: Maui.Style.space.tiny
-            isCurrentItem : GridView.isCurrentItem
-            height: _gridView.cellHeight
-            width: _gridView.cellWidth
+
+            property bool isCurrentItem : GridView.isCurrentItem
             property alias checked :_template.checked
 
-            background: Item {}
+            height: _gridView.cellHeight
+            width: _gridView.cellWidth
+
+            Maui.ItemDelegate
+            {
+                padding: Maui.Style.space.tiny
+                isCurrentItem : GridView.isCurrentItem
+                anchors.centerIn: parent
+                height: _gridView.cellHeight - 10
+                width: _gridView.itemSize - 10
+                draggable: true
+                Drag.keys: ["text/uri-list"]
+                Drag.mimeData: Drag.active ?
+                                   {
+                                       "text/uri-list": control.filterSelectedItems(model.path)
+                                   } : {}
+
+                background: Item {}
 
             Maui.GridItemTemplate
             {
                 id: _template
                 isCurrentItem: _delegate.isCurrentItem
-                anchors.centerIn: parent
-                height: parent.height - 10
-                width: _gridView.itemSize  -10
+                anchors.fill: parent
                 label1.text: model.label
                 iconSource: model.icon
                 iconSizeHint: height * 0.6
@@ -94,9 +107,33 @@ Maui.Page
             onClicked:
             {
                 _gridView.currentIndex = index
-                root.openTab(_gridView.model.get(index).path)
+                if(Maui.Handy.singleClick)
+                {
+                    root.openTab(_gridView.model.get(index).path)
+                }
+            }
+
+            onDoubleClicked:
+            {
+                _gridView.currentIndex = index
+                if(!Maui.Handy.singleClick)
+                {
+                    root.openTab(_gridView.model.get(index).path)
+                }
             }
 
         }
     }
+}
+
+function filterSelectedItems(path)
+{
+    if(_selectionbar && _selectionbar.count > 0 && _selectionbar.contains(path))
+    {
+        const uris = _selectionbar.uris
+        return uris.join("\n")
+    }
+
+    return path
+}
 }

@@ -12,13 +12,15 @@ import "views"
 Maui.ApplicationWindow
 {
     id: root
-    title: qsTr("Nota")
+    title: currentTab.title
 
     //    property bool terminalVisible: Maui.FM.loadSettings("TERMINAL", "MAINVIEW", false) == "true"
     //    property alias terminal : terminalLoader.item
     property var views : ({editor: 0, documents: 1, recent: 2})
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
+
+    property alias currentTab : _editorListView.currentItem
 
     ObjectModel
     {
@@ -453,9 +455,21 @@ Maui.ApplicationWindow
                 icon.name: "document-export"
             }
         }
-
     }
 
+    DropArea
+    {
+        id: _dropArea
+        anchors.fill: parent
+        onDropped:
+        {
+            if(drop.urls)
+            {
+                var urls = drop.urls.join(",")
+                Nota.Nota.requestFiles(urls.split(","))
+            }
+        }
+    }
 
     Connections
     {

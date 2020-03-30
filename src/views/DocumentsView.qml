@@ -55,6 +55,13 @@ Maui.Page
             leftPadding: Maui.Style.space.small
             rightPadding: Maui.Style.space.small
             property alias checked :_template.checked
+            isCurrentItem: ListView.isCurrentItem || checked
+            draggable: true
+            Drag.keys: ["text/uri-list"]
+            Drag.mimeData: Drag.active ?
+                               {
+                                   "text/uri-list": control.filterSelectedItems(model.path)
+                               } : {}
 
             Maui.ListItemTemplate
             {
@@ -66,6 +73,7 @@ Maui.Page
                 iconSizeHint: Maui.Style.iconSizes.big
                 checked: _selectionbar.contains(model.path)
                 onToggled: _selectionbar.append(model.path, _listView.model.get(index))
+                isCurrentItem: parent.isCurrentItem
             }
 
             Connections
@@ -86,7 +94,34 @@ Maui.Page
                 onCleared: _delegate.checked = false
             }
 
-            onClicked: root.openTab(_listView.model.get(index).path)
+            onClicked:
+            {
+                _listView.currentIndex = index
+                if(Maui.Handy.singleClick)
+                {
+                    root.openTab(_listView.model.get(index).path)
+                }
+            }
+
+            onDoubleClicked:
+            {
+                _listView.currentIndex = index
+                if(!Maui.Handy.singleClick)
+                {
+                    root.openTab(_listView.model.get(index).path)
+                }
+            }
         }
     }
+
+function filterSelectedItems(path)
+{
+    if(_selectionbar && _selectionbar.count > 0 && _selectionbar.contains(path))
+    {
+        const uris = _selectionbar.uris
+        return uris.join("\n")
+    }
+
+    return path
+}
 }

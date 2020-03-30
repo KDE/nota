@@ -13,7 +13,7 @@
 class Nota :  public QObject
 {
     Q_OBJECT
-public:
+public slots:
     void requestFiles(const QStringList &urls)
     {
         qDebug() << "REQUEST FILES" << urls;
