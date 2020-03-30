@@ -19,6 +19,7 @@ Maui.ApplicationWindow
     property var views : ({editor: 0, documents: 1, recent: 2})
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
+    Maui.App.handleAccounts: false
 
     property alias currentTab : _editorListView.currentItem
 
