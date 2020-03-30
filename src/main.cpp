@@ -18,6 +18,9 @@
 
 #ifdef STATIC_MAUIKIT
 #include "3rdparty/mauikit/src/mauikit.h"
+#include "mauiapp.h"
+#else
+#include <MauiKit/mauiapp.h>
 #endif
 
 #include "nota.h"
@@ -32,27 +35,30 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
 #ifdef Q_OS_ANDROID
 	QGuiApplication app(argc, argv);
-    if (!MAUIAndroid::checkRunTimePermissions({"android.permission.WRITE_EXTERNAL_STORAGE"}))
-        return -1;
+	if (!MAUIAndroid::checkRunTimePermissions({"android.permission.WRITE_EXTERNAL_STORAGE"}))
+		return -1;
 #else
 	QApplication app(argc, argv);
 #endif
 
 	app.setApplicationName("nota");
-    app.setApplicationVersion(NOTA_VERSION_STRING);
-    app.setApplicationDisplayName("Nota");
-    app.setOrganizationName("Maui");
-    app.setOrganizationDomain("org.maui.nota");
-
+	app.setApplicationVersion(NOTA_VERSION_STRING);
+	app.setApplicationDisplayName("Nota");
+	app.setOrganizationName("Maui");
+	app.setOrganizationDomain("org.maui.nota");
 	app.setWindowIcon(QIcon(":/nota.svg"));
+	MauiApp::instance()->setHandleAccounts(false); //for now index can not handle cloud accounts
+	MauiApp::instance()->setCredits ({QVariantMap({{"name", "Camilo Higuita"}, {"email", "milo.h@aol.com"}, {"year", "2019-2020"}}),
+									 QVariantMap({{"name", "Anupam Basak"}, {"email", "anupam.basak27@gmail.com"}, {"year", "2019-2020"}})}); //for now index can not handle cloud accounts
 
-    QCommandLineParser parser;
-    parser.setApplicationDescription("Simple text editor");
-    const QCommandLineOption versionOption = parser.addVersionOption();
-    parser.addOption(versionOption);
-    parser.process(app);
 
-    const QStringList args = parser.positionalArguments();
+	QCommandLineParser parser;
+	parser.setApplicationDescription("Simple text editor");
+	const QCommandLineOption versionOption = parser.addVersionOption();
+	parser.addOption(versionOption);
+	parser.process(app);
+
+	const QStringList args = parser.positionalArguments();
 
 #ifdef STATIC_KIRIGAMI
 	KirigamiPlugin::getInstance().registerTypes();
@@ -62,34 +68,34 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 	MauiKit::getInstance().registerTypes();
 #endif
 
-    static auto nota = new Nota;
+	static auto nota = new Nota;
 
-    QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url, args](QObject *obj, const QUrl &objUrl)
-    {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
+	QQmlApplicationEngine engine;
+	const QUrl url(QStringLiteral("qrc:/main.qml"));
+	QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
+					 &app, [url, args](QObject *obj, const QUrl &objUrl)
+	{
+		if (!obj && url == objUrl)
+			QCoreApplication::exit(-1);
 
-        if(!args.isEmpty())
-            nota->requestFiles(args);
+		if(!args.isEmpty())
+			nota->requestFiles(args);
 
-    }, Qt::QueuedConnection);
+	}, Qt::QueuedConnection);
 
-    qmlRegisterSingletonType<Nota>("org.maui.nota", 1, 0, "Nota",
-                                  [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
-        Q_UNUSED(engine)
-        Q_UNUSED(scriptEngine)
-        return nota;
-    });
+	qmlRegisterSingletonType<Nota>("org.maui.nota", 1, 0, "Nota",
+								  [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
+		Q_UNUSED(engine)
+		Q_UNUSED(scriptEngine)
+		return nota;
+	});
 
 
-    qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
-    qmlRegisterType<EditorModel> ("org.maui.nota", 1, 0, "Editor");
-    qmlRegisterType<HistoryModel> ();
+	qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
+	qmlRegisterType<EditorModel> ("org.maui.nota", 1, 0, "Editor");
+	qmlRegisterType<HistoryModel> ();
 
-    engine.load(url);
+	engine.load(url);
 
-    return app.exec();
+	return app.exec();
 }
