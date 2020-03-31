@@ -231,6 +231,7 @@ Maui.ApplicationWindow
                         Layout.preferredHeight: _tabBar.implicitHeight
                         position: TabBar.Header
                         currentIndex : _editorListView.currentIndex
+                        onNewTabClicked: root.openTab("")
 
                         Repeater
                         {
@@ -242,7 +243,7 @@ Maui.ApplicationWindow
                                 id: _tabButton
                                 readonly property int index_ : index
                                 implicitHeight: _tabBar.implicitHeight
-                                implicitWidth: Math.max(_tabBar.width / _repeater.count, 120)
+                                implicitWidth: Math.max(parent.width / _repeater.count, 120)
                                 checked: index === _tabBar.currentIndex
 
                                 text: model.label
