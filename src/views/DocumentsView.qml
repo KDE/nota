@@ -71,6 +71,7 @@ Maui.Page
                 label2.text: model.path
                 iconSource: model.icon
                 iconSizeHint: Maui.Style.iconSizes.big
+                checkable: selectionMode
                 checked: _selectionbar.contains(model.path)
                 onToggled: _selectionbar.append(model.path, _listView.model.get(index))
                 isCurrentItem: parent.isCurrentItem

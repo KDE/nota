@@ -9,20 +9,12 @@ Maui.Page
 {
     id: control
 
-    property bool selectionMode :  false
     headBar.middleContent: Maui.TextField
     {
         Layout.fillWidth: true
         placeholderText: qsTr("Filter...")
         onAccepted: _gridView.model.filter = text
         onCleared:  _gridView.model.filter = text
-    }
-
-    headBar.rightContent: ToolButton
-    {
-        icon.name: "item-select"
-        onClicked: control.selectionMode = !control.selectionMode
-        checked: control.selectionMode
     }
 
     Maui.GridView

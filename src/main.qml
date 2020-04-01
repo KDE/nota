@@ -18,6 +18,8 @@ Maui.ApplicationWindow
     Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
     Maui.App.handleAccounts: false
 
+    property bool selectionMode :  false
+
     property alias currentTab : _editorListView.currentItem
 
     property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false) == "true"
@@ -104,6 +106,12 @@ Maui.ApplicationWindow
                         openTab(paths[i])
                 });
             }
+        },
+        ToolButton
+        {
+            icon.name: "item-select"
+            onClicked: selectionMode = !selectionMode
+            checked: selectionMode
         }
     ]
 
