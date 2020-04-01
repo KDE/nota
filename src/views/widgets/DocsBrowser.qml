@@ -33,7 +33,7 @@ MauiLab.AltBrowser
     headBar.leftContent: Maui.ToolActions
     {
         autoExclusive: true
-        expanded: true
+        expanded: isWide
         currentIndex : control.viewType === MauiLab.AltBrowser.ViewType.List ? 0 : 1
 
         Action
@@ -66,11 +66,12 @@ MauiLab.AltBrowser
         property bool isCurrentItem : GridView.isCurrentItem
         property alias checked :_gridTemplate.checked
 
-        height: control.currentView.cellHeight
-        width: control.currentView.cellWidth
+        height: control.gridView.cellHeight
+        width: control.gridView.cellWidth
 
         Maui.ItemDelegate
         {
+            id: _gridItemDelegate
             padding: Maui.Style.space.tiny
             isCurrentItem : GridView.isCurrentItem
             anchors.centerIn: parent
@@ -78,73 +79,76 @@ MauiLab.AltBrowser
             width: control.gridView.itemSize - 10
             draggable: true
             Drag.keys: ["text/uri-list"]
+
             Drag.mimeData: Drag.active ?
                                {
                                    "text/uri-list": control.filterSelectedItems(model.path)
                                } : {}
 
         background: Item {}
-
-        Maui.GridItemTemplate
-        {
-            id: _gridTemplate
-            isCurrentItem: _gridDelegate.isCurrentItem || checked
-            anchors.fill: parent
-            label1.text: model.label
-            iconSource: model.icon
-            iconSizeHint: height * 0.6
-            checkable: selectionMode
-            checked: _selectionbar.contains(model.path)
-            onToggled: _selectionbar.append(model.path, control.model.get(index))
-        }
-
-        Connections
-        {
-            target: _selectionbar
-            onUriRemoved:
+            Maui.GridItemTemplate
             {
-                if(uri === model.path)
-                    _gridDelegate.checked = false
+                id: _gridTemplate
+                isCurrentItem: _gridDelegate.isCurrentItem || checked
+                hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
+                anchors.fill: parent
+                label1.text: model.label
+                iconSource: model.icon
+                iconSizeHint: height * 0.6
+                checkable: selectionMode
+                checked: _selectionbar.contains(model.path)
+                onToggled: _selectionbar.append(model.path, control.model.get(index))
             }
 
-            onUriAdded:
+            Connections
             {
-                if(uri === model.path)
-                    _gridDelegate.checked = true
+                target: _selectionbar
+                onUriRemoved:
+                {
+                    if(uri === model.path)
+                        _gridDelegate.checked = false
+                }
+
+                onUriAdded:
+                {
+                    if(uri === model.path)
+                        _gridDelegate.checked = true
+                }
+
+                onCleared: _gridDelegate.checked = false
             }
 
-            onCleared: _gridDelegate.checked = false
-        }
-
-        onClicked:
-        {
-            control.currentIndex = index
-            if(Maui.Handy.singleClick)
+            onClicked:
             {
-                root.openTab(control.model.get(index).path)
+                control.currentIndex = index
+                if(Maui.Handy.singleClick)
+                {
+                    root.openTab(control.model.get(index).path)
+                }
+            }
+
+            onDoubleClicked:
+            {
+                control.currentIndex = index
+                if(!Maui.Handy.singleClick)
+                {
+                    root.openTab(control.model.get(index).path)
+                }
             }
         }
-
-        onDoubleClicked:
-        {
-            control.currentIndex = index
-            if(!Maui.Handy.singleClick)
-            {
-                root.openTab(control.model.get(index).path)
-            }
-        }
-    }
 }
 
 listDelegate: Maui.ItemDelegate
 {
     id: _listDelegate
+
+    property alias checked :_listTemplate.checked
+    isCurrentItem: ListView.isCurrentItem || checked
+
     height: Maui.Style.rowHeight *1.5
     width: parent.width
     leftPadding: Maui.Style.space.small
     rightPadding: Maui.Style.space.small
-    property alias checked :_listTemplate.checked
-    isCurrentItem: ListView.isCurrentItem || checked
     draggable: true
     Drag.keys: ["text/uri-list"]
     Drag.mimeData: Drag.active ?
@@ -163,7 +167,7 @@ listDelegate: Maui.ItemDelegate
         checkable: selectionMode
         checked: _selectionbar.contains(model.path)
         onToggled: _selectionbar.append(model.path, control.model.get(index))
-        isCurrentItem: parent.isCurrentItem
+        isCurrentItem: _listDelegate.isCurrentItem
     }
 
     Connections

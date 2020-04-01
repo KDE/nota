@@ -110,7 +110,15 @@ Maui.ApplicationWindow
         ToolButton
         {
             icon.name: "item-select"
-            onClicked: selectionMode = !selectionMode
+            onClicked:
+            {
+                 selectionMode = !selectionMode
+                if(_swipeView.currentIndex === views.editor)
+                {
+                    _swipeView.currentIndex = views.documents
+                }
+            }
+
             checked: selectionMode
         }
     ]
@@ -118,6 +126,8 @@ Maui.ApplicationWindow
      sideBar: Maui.AbstractSideBar
     {
         id : _drawer
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
         width: visible ? Math.min(Kirigami.Units.gridUnit * 14, root.width) : 0
         collapsed: !isWide
         collapsible: true
@@ -133,6 +143,9 @@ Maui.ApplicationWindow
         Maui.Page
         {
             anchors.fill: parent
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
             headBar.middleContent: ComboBox
             {
                 Layout.fillWidth: true
@@ -165,6 +178,7 @@ Maui.ApplicationWindow
                 settings.filterType: Maui.FMList.TEXT
                 headBar.rightLayout.visible: false
                 headBar.rightLayout.width: 0
+                Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
                 onItemClicked:
                 {
