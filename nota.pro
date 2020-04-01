@@ -22,13 +22,14 @@ linux:unix:!android {
     message(Building for Linux KDE)
     LIBS += -lMauiKit
 
-} else:android {
+} else {
 
-    message(Building for Android)
-    QMAKE_LINK += -nostdlib++
-    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android_files
-   DISTFILES += \
-$$PWD/android_files/AndroidManifest.xml
+    android {
+        message(Building for Android)
+        QMAKE_LINK += -nostdlib++
+        ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android_files
+        DISTFILES += $$PWD/android_files/AndroidManifest.xml
+     }
 
     DEFINES *= \
         COMPONENT_FM \
@@ -42,8 +43,9 @@ $$PWD/android_files/AndroidManifest.xml
 
     DEFINES += STATIC_KIRIGAMI
 
-} else {
-    message("Unknown configuration")
+    macos {
+        DEFINES += EMBEDDED_TERMINAL
+    }
 }
 
 DEFINES += QT_DEPRECATED_WARNINGS
