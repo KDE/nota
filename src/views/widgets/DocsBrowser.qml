@@ -121,7 +121,12 @@ MauiLab.AltBrowser
             onClicked:
             {
                 control.currentIndex = index
-                if(Maui.Handy.singleClick)
+                if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+                {
+                    const item = control.model.get(control.currentIndex)
+                   _selectionbar.append(item.path, item)
+
+                }else if(Maui.Handy.singleClick)
                 {
                     root.openTab(control.model.get(index).path)
                 }
@@ -130,7 +135,7 @@ MauiLab.AltBrowser
             onDoubleClicked:
             {
                 control.currentIndex = index
-                if(!Maui.Handy.singleClick)
+                if(!Maui.Handy.singleClick && !selectionMode)
                 {
                     root.openTab(control.model.get(index).path)
                 }
@@ -191,7 +196,12 @@ listDelegate: Maui.ItemDelegate
     onClicked:
     {
         control.currentIndex = index
-        if(Maui.Handy.singleClick)
+        if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+        {
+            const item = control.model.get(control.currentIndex)
+           _selectionbar.append(item.path, item)
+
+        }else if(Maui.Handy.singleClick)
         {
             root.openTab(control.model.get(index).path)
         }
@@ -200,7 +210,7 @@ listDelegate: Maui.ItemDelegate
     onDoubleClicked:
     {
         control.currentIndex = index
-        if(!Maui.Handy.singleClick)
+        if(!Maui.Handy.singleClick && !selectionMode)
         {
             root.openTab(control.model.get(index).path)
         }

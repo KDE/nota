@@ -109,6 +109,7 @@ Maui.ApplicationWindow
         },
         ToolButton
         {
+            visible: Maui.Handy.isTouch
             icon.name: "item-select"
             onClicked:
             {
@@ -180,13 +181,36 @@ Maui.ApplicationWindow
                 headBar.rightLayout.width: 0
                 Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
+                selectionBar: _selectionbar
+
                 onItemClicked:
                 {
                     var item = currentFMList.get(index)
-                    if(item.isdir == "true")
-                        openFolder(item.path)
-                    else
-                        root.openTab(item.path)
+                    if(Maui.Handy.singleClick)
+                    {
+                        if(item.isdir == "true")
+                        {
+                            openFolder(item.path)
+                        }else
+                        {
+                            root.openTab(item.path)
+                        }
+                    }
+                }
+
+                onItemDoubleClicked:
+                {
+                    var item = currentFMList.get(index)
+                    if(!Maui.Handy.singleClick)
+                    {
+                        if(item.isdir == "true")
+                        {
+                            openFolder(item.path)
+                        }else
+                        {
+                            root.openTab(item.path)
+                        }
+                    }
                 }
             }
         }
