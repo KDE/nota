@@ -7,26 +7,29 @@ import org.kde.mauikit 1.1 as MauiLab
 import org.maui.nota 1.0 as Nota
 import QtQuick.Window 2.0
 import QtQml.Models 2.3
+
 import "views"
 
 Maui.ApplicationWindow
 {
     id: root
     title: currentTab ? currentTab.title : ""
-    property var views : ({editor: 0, documents: 1, recent: 2})
+
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
     Maui.App.handleAccounts: false
+//    Maui.App.enableCSD: true
 
-    property bool selectionMode :  false
+    readonly property var views : ({editor: 0, documents: 1, recent: 2})
 
     property alias currentTab : _editorListView.currentItem
+    property alias terminal : terminalLoader.item
 
     property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false) == "true"
+    property bool selectionMode :  false
+
     onTerminalVisibleChanged: if(terminalVisible && currentTab) syncTerminal(currentTab.fileUrl)
     onCurrentTabChanged:  if(terminalVisible && currentTab) syncTerminal(currentTab.fileUrl)
-
-    property alias terminal : terminalLoader.item
 
     mainMenu: [
     MenuSeparator {visible: terminal},
