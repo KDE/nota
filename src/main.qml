@@ -183,7 +183,7 @@ Maui.ApplicationWindow
                 headBar.rightLayout.visible: false
                 headBar.rightLayout.width: 0
                 Kirigami.Theme.colorSet: Kirigami.Theme.Window
-
+                selectionMode: root.selectionModec
                 selectionBar: _selectionbar
 
                 onItemClicked:
