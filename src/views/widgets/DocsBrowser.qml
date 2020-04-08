@@ -86,61 +86,61 @@ MauiLab.AltBrowser
                                } : {}
 
         background: Item {}
-            Maui.GridItemTemplate
+        Maui.GridItemTemplate
+        {
+            id: _gridTemplate
+            isCurrentItem: _gridDelegate.isCurrentItem || checked
+            hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
+            anchors.fill: parent
+            label1.text: model.label
+            iconSource: model.icon
+            iconSizeHint: height * 0.6
+            checkable: selectionMode
+            checked: _selectionbar.contains(model.path)
+            onToggled: _selectionbar.append(model.path, control.model.get(index))
+        }
+
+        Connections
+        {
+            target: _selectionbar
+            onUriRemoved:
             {
-                id: _gridTemplate
-                isCurrentItem: _gridDelegate.isCurrentItem || checked
-                hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
-                anchors.fill: parent
-                label1.text: model.label
-                iconSource: model.icon
-                iconSizeHint: height * 0.6
-                checkable: selectionMode
-                checked: _selectionbar.contains(model.path)
-                onToggled: _selectionbar.append(model.path, control.model.get(index))
+                if(uri === model.path)
+                    _gridDelegate.checked = false
             }
 
-            Connections
+            onUriAdded:
             {
-                target: _selectionbar
-                onUriRemoved:
-                {
-                    if(uri === model.path)
-                        _gridDelegate.checked = false
-                }
-
-                onUriAdded:
-                {
-                    if(uri === model.path)
-                        _gridDelegate.checked = true
-                }
-
-                onCleared: _gridDelegate.checked = false
+                if(uri === model.path)
+                    _gridDelegate.checked = true
             }
 
-            onClicked:
-            {
-                control.currentIndex = index
-                if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
-                {
-                    const item = control.model.get(control.currentIndex)
-                   _selectionbar.append(item.path, item)
+            onCleared: _gridDelegate.checked = false
+        }
 
-                }else if(Maui.Handy.singleClick)
-                {
-                    root.openTab(control.model.get(index).path)
-                }
-            }
-
-            onDoubleClicked:
+        onClicked:
+        {
+            control.currentIndex = index
+            if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
             {
-                control.currentIndex = index
-                if(!Maui.Handy.singleClick && !selectionMode)
-                {
-                    root.openTab(control.model.get(index).path)
-                }
+                const item = control.model.get(control.currentIndex)
+                _selectionbar.append(item.path, item)
+
+            }else if(Maui.Handy.singleClick)
+            {
+                root.openTab(control.model.get(index).path)
             }
         }
+
+        onDoubleClicked:
+        {
+            control.currentIndex = index
+            if(!Maui.Handy.singleClick && !selectionMode)
+            {
+                root.openTab(control.model.get(index).path)
+            }
+        }
+    }
 }
 
 listDelegate: Maui.ItemDelegate
@@ -199,7 +199,7 @@ listDelegate: Maui.ItemDelegate
         if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
         {
             const item = control.model.get(control.currentIndex)
-           _selectionbar.append(item.path, item)
+            _selectionbar.append(item.path, item)
 
         }else if(Maui.Handy.singleClick)
         {
