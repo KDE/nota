@@ -21,20 +21,26 @@ Maui.Editor
         }
     }
 
-    headBar.rightContent: [
-        ToolButton
+    headBar.rightContent: Maui.ToolActions
+    {
+        autoExclusive: false
+        checkable: false
+        expanded: true
+
+        Action
         {
-            id: saveBtn
+            text: qsTr("Save")
             icon.name: "document-save"
-            onClicked:  saveFile(document.fileUrl, _tabBar.currentIndex)
-        },
-        ToolButton
+            onTriggered: saveFile(document.fileUrl, _tabBar.currentIndex)
+        }
+
+        Action
         {
             icon.name: "document-save-as"
             text: qsTr("Save as...")
-            onClicked: saveFile("", _tabBar.currentIndex)
+            onTriggered: saveFile("", _tabBar.currentIndex)
         }
-    ]
+    }
 
     function saveFile(path, index)
     {

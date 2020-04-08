@@ -16,7 +16,7 @@ Maui.ApplicationWindow
     title: currentTab ? currentTab.title : ""
 
     Maui.App.iconName: "qrc:/img/nota.svg"
-    Maui.App.description: qsTr("Nota is a simple text editor for Plasma Mobile, GNU/Linux distros and Android")
+    Maui.App.description: qsTr("Nota allows you to edit text files.")
     Maui.App.handleAccounts: false
 //    Maui.App.enableCSD: true
 
