@@ -45,6 +45,7 @@ linux:unix:!android {
 
     macos {
         DEFINES += EMBEDDED_TERMINAL
+        ICON = $$PWD/macos_files/nota.icns
     }
 }
 
