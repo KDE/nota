@@ -19,6 +19,7 @@ Maui.ApplicationWindow
     Maui.App.description: qsTr("Nota allows you to edit text files.")
     Maui.App.handleAccounts: false
     //    Maui.App.enableCSD: true
+    color: translucency ? "transparent" : Kirigami.Theme.backgroundColor
 
     readonly property var views : ({editor: 0, documents: 1, recent: 2})
 
@@ -28,13 +29,16 @@ Maui.ApplicationWindow
 
     property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false) == "true"
     property bool selectionMode :  false
+    property bool translucency : Maui.Handy.isLinux
 
     //Global editor props
     property bool enableSidebar : true
     property bool showLineNumbers : true
     property bool enableSyntaxHighlighting : true
-    property bool supportTerminal : true
+    property bool showSyntaxHighlightingLanguages: false
 
+    property string theme
+    property color backgroundColor
     property string fontFamily : "Noto Sans Mono"
     property int fontSize : 10
 
@@ -114,7 +118,6 @@ Maui.ApplicationWindow
                 discard = true
                 root.close()
             }
-
             onAccepted: close()
         }
     }
@@ -145,15 +148,12 @@ Maui.ApplicationWindow
 
                 Switch
                 {
+                    enabled: terminalLoader.item
                     Layout.fillWidth: true
                     checkable: true
-                    checked: root.supportTerminal
-                    Kirigami.FormData.label: qsTr("Embedded Terminal")
-                    onToggled:
-                    {
-                        root.supportTerminal = !root.supportTerminal
-                        Maui.FM.saveSettings("EMBEDDED_TERMINAL", supportTerminal, "GENERAL")
-                    }
+                    checked: root.terminalVisible
+                    Kirigami.FormData.label: qsTr("Enable Embedded Terminal")
+                    onToggled: toogleTerminal()
                 }
             }
 
@@ -171,6 +171,19 @@ Maui.ApplicationWindow
                     onToggled:
                     {
                         root.showLineNumbers = !root.showLineNumbers
+                        Maui.FM.saveSettings("SHOW_LINE_NUMBERS", showLineNumbers, "EDITOR")
+                    }
+                }
+
+                Switch
+                {
+                    Layout.fillWidth: true
+                    checkable: true
+                    checked: root.showLineNumbers
+                    Kirigami.FormData.label: qsTr("Show Syntax Highlighting Languages")
+                    onToggled:
+                    {
+                        root.showSyntaxHighlightingLanguages = !root.showSyntaxHighlightingLanguages
                         Maui.FM.saveSettings("SHOW_LINE_NUMBERS", showLineNumbers, "EDITOR")
                     }
                 }
@@ -207,8 +220,113 @@ Maui.ApplicationWindow
                     Layout.fillWidth: true
                     Kirigami.FormData.label: qsTr("Size")
                     from: 0; to : 500
-                    value: currentTab ? currentTab.body.font.pointSize : 12
+                    value: currentTab ? currentTab.body.font.pointSize : Maui.Style.fontSizes.default
                     onValueChanged: root.fontSize = value
+                }
+            }
+
+            MauiLab.SettingsSection
+            {
+                title: qsTr("Style")
+                description: qsTr("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
+                visible: root.enableSyntaxHighlighting
+
+                ComboBox
+                {
+                    Layout.fillWidth: true
+                    Kirigami.FormData.label: qsTr("Theme")
+                    model:  _dummyDocumentHandler.getThemes()
+                    onActivated: root.theme = currentText
+
+                    Maui.DocumentHandler
+                    {
+                        id: _dummyDocumentHandler
+                    }
+                }
+
+                Row
+                {
+                    Layout.fillWidth: true
+                    Kirigami.FormData.label: qsTr("Color")
+                    spacing: Maui.Style.space.medium
+
+                    Rectangle
+                    {
+                        height: 22
+                        width: 22
+                        radius: Maui.Style.radiusV
+                        color: "#333"
+                        border.color: Qt.darker(color)
+
+                        MouseArea
+                        {
+                            anchors.fill: parent
+                            onClicked: root.backgroundColor = parent.color
+                        }
+                    }
+
+                    Rectangle
+                    {
+                        height: 22
+                        width: 22
+                        radius: Maui.Style.radiusV
+                        color: "#fafafa"
+                        border.color: Qt.darker(color)
+
+                        MouseArea
+                        {
+                            anchors.fill: parent
+                            onClicked: root.backgroundColor = parent.color
+                        }
+                    }
+
+                    Rectangle
+                    {
+                        height: 22
+                        width: 22
+                        radius: Maui.Style.radiusV
+                        color: "#fff3e6"
+                        border.color: Qt.darker(color)
+                        MouseArea
+                        {
+                            anchors.fill: parent
+                            onClicked: root.backgroundColor = parent.color
+                        }
+                    }
+
+                    Rectangle
+                    {
+                        height: 22
+                        width: 22
+                        radius: Maui.Style.radiusV
+                        color: "#4c425b"
+                        border.color: Qt.darker(color)
+                        MouseArea
+                        {
+                            anchors.fill: parent
+                            onClicked: root.backgroundColor = parent.color
+                        }
+                    }
+                }
+            }
+
+            MauiLab.SettingsSection
+            {
+                title: qsTr("Interface")
+                description: qsTr("Configure the app UI.")
+
+                Switch
+                {
+                    Kirigami.FormData.label: qsTr("Translucent Sidebar")
+                    checkable: true
+                    checked:  root.translucency
+                    onToggled:  root.translucency = !root.translucency
+                }
+
+                Switch
+                {
+                    Kirigami.FormData.label: qsTr("Dark Mode")
+                    checkable: true
                 }
             }
         }
@@ -270,6 +388,12 @@ Maui.ApplicationWindow
         }
     ]
 
+    background: Rectangle
+    {
+        color: Kirigami.Theme.backgroundColor
+        opacity: 0
+    }
+
     sideBar: Maui.AbstractSideBar
     {
         id : _drawer
@@ -288,11 +412,22 @@ Maui.ApplicationWindow
             onClicked: _drawer.close()
         }
 
+        background: Rectangle
+        {
+            color: Kirigami.Theme.backgroundColor
+            opacity: translucency ? 0.5 : 1
+        }
+
         Maui.Page
         {
             anchors.fill: parent
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.Window
+            background: Rectangle
+            {
+                color: Kirigami.Theme.backgroundColor
+                opacity: translucency ? 0.7 : 1
+            }
 
             headBar.middleContent: ComboBox
             {
@@ -326,9 +461,10 @@ Maui.ApplicationWindow
                 settings.filterType: Maui.FMList.TEXT
                 headBar.rightLayout.visible: false
                 headBar.rightLayout.width: 0
-                Kirigami.Theme.colorSet: Kirigami.Theme.Window
                 selectionMode: root.selectionModec
                 selectionBar: _selectionbar
+
+                Kirigami.Theme.backgroundColor: "transparent"
 
                 onItemClicked:
                 {
@@ -528,8 +664,7 @@ Maui.ApplicationWindow
                             onClicked: openTab("")
 
                             Maui.Badge
-                            {
-                                iconName: "list-add"
+                            {                                
                                 anchors
                                 {
                                     horizontalCenter: parent.right
@@ -537,6 +672,14 @@ Maui.ApplicationWindow
                                 }
 
                                 onClicked: _newDocumentMenu.open()
+
+                                Maui.PlusSign
+                                {
+                                    color: parent.Kirigami.Theme.textColor
+                                    height: 10
+                                    width: height
+                                    anchors.centerIn: parent
+                                }
                             }
 
                             Maui.Dialog

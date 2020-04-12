@@ -12,9 +12,12 @@ Maui.Editor
     showLineNumbers: root.showLineNumbers
     body.font.family: root.fontFamily
     body.font.pointSize: root.fontSize
+    document.backgroundColor: document.enableSyntaxHighlighting ? root.backgroundColor : Kirigami.Theme.backgroundColor
+    showSyntaxHighlightingLanguages: root.showSyntaxHighlightingLanguages
+    document.theme: root.theme
+    document.enableSyntaxHighlighting: root.enableSyntaxHighlighting
 
     footBar.visible: true
-
     footBar.leftContent: Maui.TextField
     {
         placeholderText: qsTr("Find")
