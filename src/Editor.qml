@@ -9,6 +9,10 @@ Maui.Editor
     height: _editorListView.height
     width: _editorListView.width
 
+    showLineNumbers: root.showLineNumbers
+    body.font.family: root.fontFamily
+    body.font.pointSize: root.fontSize
+
     footBar.visible: true
 
     footBar.leftContent: Maui.TextField
@@ -49,9 +53,10 @@ Maui.Editor
             document.saveAs(path);
         } else
         {
-            fileDialog.mode = fileDialog.modes.SAVE;
+            _dialogLoader.sourceComponent = _fileDialogComponent
+            dialog.mode = dialog.modes.SAVE;
 //            fileDialog.settings.singleSelection = true
-            fileDialog.show(function (paths)
+            dialog.show(function (paths)
             {
                 document.saveAs(paths[0]);
                 _editorList.update(index, paths[0]);

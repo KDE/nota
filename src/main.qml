@@ -18,32 +18,53 @@ Maui.ApplicationWindow
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota allows you to edit text files.")
     Maui.App.handleAccounts: false
-//    Maui.App.enableCSD: true
+    //    Maui.App.enableCSD: true
 
     readonly property var views : ({editor: 0, documents: 1, recent: 2})
 
     property alias currentTab : _editorListView.currentItem
     property alias terminal : terminalLoader.item
+    property alias dialog : _dialogLoader.item
 
     property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false) == "true"
     property bool selectionMode :  false
+
+    //Global editor props
+    property bool enableSidebar : true
+    property bool showLineNumbers : true
+    property bool enableSyntaxHighlighting : true
+    property bool supportTerminal : true
+
+    property string fontFamily : "Noto Sans Mono"
+    property int fontSize : 10
 
     onTerminalVisibleChanged: if(terminalVisible && currentTab) syncTerminal(currentTab.fileUrl)
     onCurrentTabChanged:  if(terminalVisible && currentTab) syncTerminal(currentTab.fileUrl)
 
     mainMenu: [
-    MenuSeparator {visible: terminal},
 
-    MenuItem
-    {
-        visible: terminal
-        text: qsTr("Show Terminal")
-        icon.name: "utilities-terminal"
-        onTriggered: toogleTerminal()
-        checked : terminalVisible
-        checkable: true
-    }]
+        MenuItem
+        {
+            text: qsTr("Settings")
+            icon.name: "settings-configure"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _settingsDialogComponent
+                dialog.open()
+            }
+        },
 
+        MenuSeparator {visible: terminal},
+
+        MenuItem
+        {
+            visible: terminal
+            text: qsTr("Show Terminal")
+            icon.name: "utilities-terminal"
+            onTriggered: toogleTerminal()
+            checked : terminalVisible
+            checkable: true
+        }]
 
     ObjectModel
     {
@@ -52,7 +73,9 @@ Maui.ApplicationWindow
 
     onClosing:
     {
-        if(!_unsavedDialog.discard)
+        _dialogLoader.sourceComponent = _unsavedDialogComponent
+
+        if(!dialog.discard)
         {
             for(var i = 0; i<_editorListView.count; i++)
             {
@@ -60,7 +83,7 @@ Maui.ApplicationWindow
                 if(doc.document.modified)
                 {
                     close.accepted = false
-                    _unsavedDialog.open()
+                    dialog.open()
                     return
                 }
             }
@@ -69,30 +92,147 @@ Maui.ApplicationWindow
         close.accepted = true
     }
 
-    Maui.Dialog
+    Loader
     {
-        id: _unsavedDialog
-        property bool discard : false
-        title: qsTr("Un saved files")
-        message: qsTr("You have un saved files. You can go back and save them or choose to dicard all changes and exit.")
-        page.padding: Maui.Style.space.big
-        acceptButton.text: qsTr("Go back")
-        rejectButton.text: qsTr("Discard")
-        onRejected: {
-            discard = true
-            root.close()
-        }
-
-        onAccepted: _unsavedDialog.close()
+        id: _dialogLoader
     }
 
-    Maui.FileDialog
+    Component
     {
-        id: fileDialog
-        settings.onlyDirs: false
-        settings.filterType: Maui.FMList.TEXT
-        settings.sortBy: Maui.FMList.MODIFIED
-        mode: modes.OPEN
+        id: _unsavedDialogComponent
+
+        Maui.Dialog
+        {
+            property bool discard : false
+            title: qsTr("Un saved files")
+            message: qsTr("You have un saved files. You can go back and save them or choose to dicard all changes and exit.")
+            page.padding: Maui.Style.space.big
+            acceptButton.text: qsTr("Go back")
+            rejectButton.text: qsTr("Discard")
+            onRejected:
+            {
+                discard = true
+                root.close()
+            }
+
+            onAccepted: close()
+        }
+    }
+
+    Component
+    {
+        id: _settingsDialogComponent
+
+        MauiLab.SettingsDialog
+        {
+            MauiLab.SettingsSection
+            {
+                title: qsTr("General")
+                description: qsTr("Configure the app UI and plugins.")
+
+                Switch
+                {
+                    Layout.fillWidth: true
+                    checkable: true
+                    checked: root.enableSidebar
+                    Kirigami.FormData.label: qsTr("Enable Places Sidebar")
+                    onToggled:
+                    {
+                        root.enableSidebar = !root.enableSidebar
+                        Maui.FM.saveSettings("ENABLE_SIDEBAR", enableSidebar, "GENERAL")
+                    }
+                }
+
+                Switch
+                {
+                    Layout.fillWidth: true
+                    checkable: true
+                    checked: root.supportTerminal
+                    Kirigami.FormData.label: qsTr("Embedded Terminal")
+                    onToggled:
+                    {
+                        root.supportTerminal = !root.supportTerminal
+                        Maui.FM.saveSettings("EMBEDDED_TERMINAL", supportTerminal, "GENERAL")
+                    }
+                }
+            }
+
+            MauiLab.SettingsSection
+            {
+                title: qsTr("Editor")
+                description: qsTr("Configure the look and feel of the editor. The settings are applied globally")
+
+                Switch
+                {
+                    Layout.fillWidth: true
+                    checkable: true
+                    checked: root.showLineNumbers
+                    Kirigami.FormData.label: qsTr("Show line numbers")
+                    onToggled:
+                    {
+                        root.showLineNumbers = !root.showLineNumbers
+                        Maui.FM.saveSettings("SHOW_LINE_NUMBERS", showLineNumbers, "EDITOR")
+                    }
+                }
+
+                Switch
+                {
+                    Layout.fillWidth: true
+                    Kirigami.FormData.label: qsTr("Enable Syntax Highlighting")
+                    checkable: true
+                    checked: root.enableSyntaxHighlighting
+                    onToggled:
+                    {
+                        root.enableSyntaxHighlighting = !root.enableSyntaxHighlighting
+                        Maui.FM.saveSettings("ENABLE_SYNTAX_HIGHLIGHTING", enableSyntaxHighlighting, "EDITOR")
+                    }
+                }
+            }
+
+            MauiLab.SettingsSection
+            {
+                title: qsTr("Fonts")
+                description: qsTr("Configure the global editor font family and size")
+
+                ComboBox
+                {
+                    Layout.fillWidth: true
+                    Kirigami.FormData.label: qsTr("Family")
+                    model: Qt.fontFamilies()
+                    onActivated: root.fontFamily = currentText
+                }
+
+                SpinBox
+                {
+                    Layout.fillWidth: true
+                    Kirigami.FormData.label: qsTr("Size")
+                    from: 0; to : 500
+                    value: currentTab ? currentTab.body.font.pointSize : 12
+                    onValueChanged: root.fontSize = value
+                }
+            }
+        }
+    }
+
+    Component
+    {
+        id: _fileDialogComponent
+        Maui.FileDialog
+        {
+            settings.onlyDirs: false
+            settings.filterType: Maui.FMList.TEXT
+            settings.sortBy: Maui.FMList.MODIFIED
+            mode: modes.OPEN
+        }
+    }
+
+
+
+    headBar.leftContent: ToolButton
+    {
+        icon.name: "view-split-left-right"
+        checked: _drawer.visible
+        onClicked: _drawer.visible ? _drawer.close() : _drawer.open()
     }
 
     headBar.rightContent: [
@@ -101,12 +241,15 @@ Maui.ApplicationWindow
             icon.name: "document-open"
             onClicked:
             {
-                fileDialog.mode = fileDialog.modes.OPEN
-                fileDialog.settings.onlyDirs = false
-                fileDialog.show(function (paths)
+                _dialogLoader.sourceComponent = _fileDialogComponent
+                dialog.mode = dialog.modes.OPEN
+                dialog.settings.onlyDirs = false
+                dialog.show(function (paths)
                 {
                     for(var i in paths)
+                    {
                         openTab(paths[i])
+                    }
                 });
             }
         },
@@ -116,7 +259,7 @@ Maui.ApplicationWindow
             icon.name: "item-select"
             onClicked:
             {
-                 selectionMode = !selectionMode
+                selectionMode = !selectionMode
                 if(_swipeView.currentIndex === views.editor)
                 {
                     _swipeView.currentIndex = views.documents
@@ -127,7 +270,7 @@ Maui.ApplicationWindow
         }
     ]
 
-     sideBar: Maui.AbstractSideBar
+    sideBar: Maui.AbstractSideBar
     {
         id : _drawer
         Kirigami.Theme.inherit: false
@@ -137,11 +280,12 @@ Maui.ApplicationWindow
         collapsible: true
         dragMargin: Maui.Style.space.big
         overlay.visible: collapsed && position > 0 && visible
+        visible: _swipeView.currentIndex === views.editor
 
         Connections
         {
             target: _drawer.overlay
-            onClicked: _drawer.visible = false
+            onClicked: _drawer.close()
         }
 
         Maui.Page
