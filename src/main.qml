@@ -348,6 +348,7 @@ Maui.ApplicationWindow
 
     headBar.leftContent: ToolButton
     {
+        visible: root.enableSidebar
         icon.name: "view-split-left-right"
         checked: _drawer.visible
         onClicked: _drawer.visible ? _drawer.close() : _drawer.open()
@@ -404,7 +405,7 @@ Maui.ApplicationWindow
         collapsible: true
         dragMargin: Maui.Style.space.big
         overlay.visible: collapsed && position > 0 && visible
-        visible: _swipeView.currentIndex === views.editor
+        visible: (_swipeView.currentIndex === views.editor) && enableSidebar
 
         Connections
         {
@@ -889,7 +890,7 @@ Maui.ApplicationWindow
             _editorListView.currentIndex = _documentModel.count - 1
             _documentModel.get(_documentModel.count - 1).fileUrl = path
 
-            if(path && Maui.FM.fileExists(path))
+            if(path && Maui.FM.fileExists(path) && root.enableSidebar)
                 browserView.openFolder(Maui.FM.fileDir(path))
         }
     }
