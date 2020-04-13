@@ -179,7 +179,7 @@ Maui.ApplicationWindow
                 {
                     Layout.fillWidth: true
                     checkable: true
-                    checked: root.showLineNumbers
+                    checked: root.showSyntaxHighlightingLanguages
                     Kirigami.FormData.label: qsTr("Show Syntax Highlighting Languages")
                     onToggled:
                     {
@@ -319,6 +319,7 @@ Maui.ApplicationWindow
                 {
                     Kirigami.FormData.label: qsTr("Translucent Sidebar")
                     checkable: true
+                    enabled: root.enableSidebar
                     checked:  root.translucency
                     onToggled:  root.translucency = !root.translucency
                 }
@@ -327,6 +328,7 @@ Maui.ApplicationWindow
                 {
                     Kirigami.FormData.label: qsTr("Dark Mode")
                     checkable: true
+                    enabled: false
                 }
             }
         }
