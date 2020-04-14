@@ -346,7 +346,7 @@ Maui.ApplicationWindow
         }
     }
 
-    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor ? (root.currentTab.height > Kirigami.Units.gridUnit*30) : true
+    headBar.visible: _swipeView.currentIndex === views.editor ? (root.height > Kirigami.Units.gridUnit*30) : true
 
     headBar.leftContent: ToolButton
     {
@@ -465,7 +465,7 @@ Maui.ApplicationWindow
                 settings.filterType: Maui.FMList.TEXT
                 headBar.rightLayout.visible: false
                 headBar.rightLayout.width: 0
-                selectionMode: root.selectionModec
+                selectionMode: root.selectionMode
                 selectionBar: _selectionbar
 
                 Kirigami.Theme.backgroundColor: "transparent"
@@ -658,7 +658,7 @@ Maui.ApplicationWindow
                             anchors.right: parent.right
                             anchors.bottom: parent.bottom
                             anchors.margins: Maui.Style.toolBarHeightAlt
-                            anchors.bottomMargin: Maui.Style.toolBarHeight + root.currentTab.footer.height
+                            anchors.bottomMargin: Maui.Style.toolBarHeight + (root.currentTab ? root.currentTab.footer.height : 0)
                             height: Maui.Style.toolBarHeight
                             width: height
 
