@@ -28,6 +28,7 @@ Maui.Editor
         }
     }
 
+    headBar.position: Kirigami.Settings.isMobile ? ToolBar.Footer : ToolBar.Header
     headBar.rightContent: Maui.ToolActions
     {
         autoExclusive: false

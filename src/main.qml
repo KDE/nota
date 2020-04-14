@@ -319,7 +319,7 @@ Maui.ApplicationWindow
                 {
                     Kirigami.FormData.label: qsTr("Translucent Sidebar")
                     checkable: true
-                    enabled: root.enableSidebar
+                    enabled: root.enableSidebar && Maui.Handy.isLinux
                     checked:  root.translucency
                     onToggled:  root.translucency = !root.translucency
                 }
@@ -345,8 +345,7 @@ Maui.ApplicationWindow
             mode: modes.OPEN
         }
     }
-
-
+    headBar.visible: root.currentTab ? (root.currentTab.height > Kirigami.Units.gridUnit*30) : true
 
     headBar.leftContent: ToolButton
     {
@@ -408,6 +407,7 @@ Maui.ApplicationWindow
         dragMargin: Maui.Style.space.big
         overlay.visible: collapsed && position > 0 && visible
         visible: (_swipeView.currentIndex === views.editor) && enableSidebar
+        enabled: root.enableSidebar
 
         Connections
         {
@@ -656,8 +656,8 @@ Maui.ApplicationWindow
                             z: 999
                             anchors.right: parent.right
                             anchors.bottom: parent.bottom
-                            anchors.margins: Maui.Style.toolBarHeight
-                            anchors.bottomMargin: Maui.Style.toolBarHeight
+                            anchors.margins: Maui.Style.toolBarHeightAlt
+                            anchors.bottomMargin: Maui.Style.toolBarHeight + root.currentTab.footer.height
                             height: Maui.Style.toolBarHeight
                             width: height
 
