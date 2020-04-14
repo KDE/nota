@@ -345,7 +345,8 @@ Maui.ApplicationWindow
             mode: modes.OPEN
         }
     }
-    headBar.visible: root.currentTab ? (root.currentTab.height > Kirigami.Units.gridUnit*30) : true
+
+    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor ? (root.currentTab.height > Kirigami.Units.gridUnit*30) : true
 
     headBar.leftContent: ToolButton
     {
