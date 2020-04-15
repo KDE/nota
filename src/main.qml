@@ -32,6 +32,7 @@ Maui.ApplicationWindow
     property bool translucency : Maui.Handy.isLinux
 
     //Global editor props
+    property bool focusMode : false
     property bool enableSidebar : true
     property bool showLineNumbers : true
     property bool enableSyntaxHighlighting : true
@@ -317,6 +318,18 @@ Maui.ApplicationWindow
 
                 Switch
                 {
+                    Kirigami.FormData.label: qsTr("Focus Mode")
+                    checkable: true
+                    checked:  root.focusMode
+                    onToggled:
+                    {
+                        root.focusMode = !root.focusMode
+                        root.enableSidebar = false
+                    }
+                }
+
+                Switch
+                {
                     Kirigami.FormData.label: qsTr("Translucent Sidebar")
                     checkable: true
                     enabled: root.enableSidebar && Maui.Handy.isLinux
@@ -346,7 +359,9 @@ Maui.ApplicationWindow
         }
     }
 
-    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor ? (root.currentTab.height > Kirigami.Units.gridUnit*30) : true
+//    autoHideHeader: focusMode
+//    floatingHeader: focusMode
+    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && !focusMode ? (root.currentTab.height > Kirigami.Units.gridUnit*30) : !focusMode
 
     headBar.leftContent: ToolButton
     {
@@ -773,6 +788,8 @@ Maui.ApplicationWindow
                 {
                     MauiLab.AppView.iconName: "view-pim-journal"
                     MauiLab.AppView.title: qsTr("Documents")
+                    visible: !focusMode
+
                     DocumentsView
                     {
                         id: _documentsView
@@ -783,6 +800,8 @@ Maui.ApplicationWindow
                 {
                     MauiLab.AppView.iconName: "view-media-recent"
                     MauiLab.AppView.title: qsTr("Recent")
+                    visible: !focusMode
+
                     RecentView
                     {
                         id:_recentView
