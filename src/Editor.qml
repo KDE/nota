@@ -17,6 +17,9 @@ Maui.Editor
     document.theme: root.theme
     document.enableSyntaxHighlighting: root.enableSyntaxHighlighting
 
+    floatingHeader: root.focusMode
+    autoHideHeader: root.focusMode
+
     footBar.visible: true
     footBar.leftContent: Maui.TextField
     {
@@ -27,8 +30,15 @@ Maui.Editor
             document.find(text)
         }
     }
+    headBar.middleContent: Button
+    {
+        visible: root.focusMode
+        text: qsTr("Focus")
+        checked: root.focusMode
+        onClicked: root.focusMode = false
+    }
 
-    headBar.position: Kirigami.Settings.isMobile ? ToolBar.Footer : ToolBar.Header
+    altHeader: Kirigami.Settings.isMobile
     headBar.rightContent: Maui.ToolActions
     {
         autoExclusive: false
