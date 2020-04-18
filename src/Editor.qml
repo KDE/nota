@@ -17,10 +17,10 @@ Maui.Editor
     document.theme: root.theme
     document.enableSyntaxHighlighting: root.enableSyntaxHighlighting
 
-    floatingHeader: root.focusMode
+//    floatingHeader: root.focusMode
     autoHideHeader: root.focusMode
 
-    footBar.visible: true
+    footBar.visible: false
     footBar.leftContent: Maui.TextField
     {
         placeholderText: qsTr("Find")
