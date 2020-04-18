@@ -18,8 +18,8 @@ Maui.ApplicationWindow
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota allows you to edit text files.")
     Maui.App.handleAccounts: false
-        Maui.App.enableCSD: true
-    color: translucency ? "transparent" : Kirigami.Theme.backgroundColor
+    Maui.App.enableCSD: true
+    background.opacity: translucency ? 0.5 : 1
 
     readonly property var views : ({editor: 0, documents: 1, recent: 2})
 
@@ -406,12 +406,6 @@ Maui.ApplicationWindow
         }
     ]
 
-    background: Rectangle
-    {
-        color: Kirigami.Theme.backgroundColor
-        opacity: 0
-    }
-
     sideBar: Maui.AbstractSideBar
     {
         id : _drawer
@@ -683,7 +677,7 @@ Maui.ApplicationWindow
                             onClicked: openTab("")
 
                             Maui.Badge
-                            {                                
+                            {
                                 anchors
                                 {
                                     horizontalCenter: parent.right
