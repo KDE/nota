@@ -359,9 +359,7 @@ Maui.ApplicationWindow
         }
     }
 
-//    autoHideHeader: focusMode
-//    floatingHeader: focusMode
-    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && !focusMode ? (root.currentTab.height > Kirigami.Units.gridUnit*30) : !focusMode
+    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && !focusMode ? (root.currentTab.height > Kirigami.Units.gridUnit*30 && !Kirigami.Settings.isMobile) : !focusMode
 
     headBar.leftContent: ToolButton
     {
@@ -921,9 +919,9 @@ Maui.ApplicationWindow
     }
 
     function syncTerminal(path)
-    {
+    {/*
         if(root.terminal && root.terminalVisible)
-            root.terminal.session.sendText("cd '" + String(Maui.FM.fileDir(path)).replace("file://", "") + "'\n")
+            root.terminal.session.sendText("cd '" + String(Maui.FM.fileDir(path)).replace("file://", "") + "'\n")*/
     }
 
     function toogleTerminal()
