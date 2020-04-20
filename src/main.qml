@@ -49,7 +49,7 @@ Maui.ApplicationWindow
     MauiLab.Doodle
     {
         id: _doodleDialog
-        sourceItem: root.currentTab ? root.currentTab : null
+        sourceItem: root.currentTab ? root.currentTab.body : null
     }
 
       mainMenu: [
@@ -364,7 +364,7 @@ Maui.ApplicationWindow
         }
     }
 
-    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && !focusMode ? (root.currentTab.height > Kirigami.Units.gridUnit*30 && !Kirigami.Settings.isMobile) : !focusMode
+    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && Kirigami.Settings.isMobile ? root.currentTab.height > Kirigami.Units.gridUnit*30 : !focusMode
 
     headBar.leftContent: ToolButton
     {
@@ -855,7 +855,7 @@ Maui.ApplicationWindow
             SplitView.minimumHeight : 100
             source: "Terminal.qml"
 
-            Behavior on Layout.preferredHeight
+            Behavior on SplitView.preferredHeight
             {
                 NumberAnimation
                 {
