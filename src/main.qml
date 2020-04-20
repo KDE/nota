@@ -33,7 +33,7 @@ Maui.ApplicationWindow
 
     //Global editor props
     property bool focusMode : false
-    property bool enableSidebar : true
+    property bool enableSidebar : !focusMode
     property bool showLineNumbers : true
     property bool enableSyntaxHighlighting : true
     property bool showSyntaxHighlightingLanguages: false
@@ -46,7 +46,13 @@ Maui.ApplicationWindow
     onTerminalVisibleChanged: if(terminalVisible && currentTab) syncTerminal(currentTab.fileUrl)
     onCurrentTabChanged:  if(terminalVisible && currentTab) syncTerminal(currentTab.fileUrl)
 
-    mainMenu: [
+    MauiLab.Doodle
+    {
+        id: _doodleDialog
+        sourceItem: root.currentTab ? root.currentTab : null
+    }
+
+      mainMenu: [
 
         MenuItem
         {
@@ -324,7 +330,6 @@ Maui.ApplicationWindow
                     onToggled:
                     {
                         root.focusMode = !root.focusMode
-                        root.enableSidebar = false
                     }
                 }
 

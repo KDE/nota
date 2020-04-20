@@ -2,10 +2,12 @@ import QtQuick 2.9
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
 import org.kde.mauikit 1.0 as Maui
+import org.kde.mauikit 1.1 as MauiLab
 import org.kde.kirigami 2.7 as Kirigami
 
 Maui.Editor
 {
+    id: control
     height: _editorListView.height
     width: _editorListView.width
 
@@ -32,14 +34,16 @@ Maui.Editor
     }
     headBar.middleContent: Button
     {
-        visible: root.focusMode
+//        visible: root.focusMode
+        icon.name: "quickview"
         text: qsTr("Focus")
         checked: root.focusMode
-        onClicked: root.focusMode = false
+        onClicked: root.focusMode = !root.focusMode
     }
 
     altHeader: Kirigami.Settings.isMobile
-    headBar.rightContent: Maui.ToolActions
+    headBar.rightContent:[
+        Maui.ToolActions
     {
         autoExclusive: false
         checkable: false
@@ -58,7 +62,14 @@ Maui.Editor
             text: qsTr("Save as...")
             onTriggered: saveFile("", _tabBar.currentIndex)
         }
-    }
+    },
+
+    ToolButton
+    {
+        icon.name: "tool_pen"
+        onClicked: _doodleDialog.open()
+        checked: _doodleDialog.visible
+    }]
 
     function saveFile(path, index)
     {
