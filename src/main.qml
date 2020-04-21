@@ -529,7 +529,7 @@ Maui.ApplicationWindow
         anchors.fill: parent
         spacing: 0
 
-        flickable: _swipeView.currentItem.item.flickable
+        flickable: _swipeView.currentItem.item ? _swipeView.currentItem.item.flickable : null
 
         MauiLab.AppViews
         {
