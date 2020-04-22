@@ -132,9 +132,7 @@ Maui.ApplicationWindow
     {
         id: _settingsDialogComponent
         Widgets.SettingsDialog
-        {
-
-        }
+        {}
      }
 
     Component
