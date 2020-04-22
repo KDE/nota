@@ -6,5 +6,6 @@
         <file>views/DocumentsView.qml</file>
         <file>views/RecentView.qml</file>
         <file>views/widgets/DocsBrowser.qml</file>
+        <file>views/widgets/SettingsDialog.qml</file>
     </qresource>
 </RCC>

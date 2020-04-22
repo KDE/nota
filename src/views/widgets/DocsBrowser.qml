@@ -29,7 +29,6 @@ MauiLab.AltBrowser
         }
     }
 
-    headBar.rightSretch: false
     headBar.leftContent: Maui.ToolActions
     {
         autoExclusive: true
