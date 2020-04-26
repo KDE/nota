@@ -19,7 +19,6 @@ Maui.ApplicationWindow
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota allows you to edit text files.")
     Maui.App.handleAccounts: false
-    Maui.App.enableCSD: true
     background.opacity: translucency ? 0.5 : 1
 
     readonly property var views : ({editor: 0, documents: 1, recent: 2})
