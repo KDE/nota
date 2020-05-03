@@ -28,18 +28,35 @@ SplitView
 
     handle: Rectangle
     {
-        implicitWidth: 10
-        implicitHeight: 10
+        implicitWidth: 6
+        implicitHeight: 6
         color: SplitHandle.pressed ? Kirigami.Theme.highlightColor
                                    : (SplitHandle.hovered ? Qt.lighter(Kirigami.Theme.backgroundColor, 1.1) : Kirigami.Theme.backgroundColor)
 
+        Rectangle
+        {
+            anchors.centerIn: parent
+            width: 48
+            height: parent.height
+            color: _splitSeparator.color
+        }
+
         Kirigami.Separator
         {
+            id: _splitSeparator
             anchors.bottom: parent.bottom
             anchors.right: parent.right
             anchors.left: parent.left
         }
+
+        Kirigami.Separator
+        {
+            anchors.top: parent.top
+            anchors.right: parent.right
+            anchors.left: parent.left
+        }
     }
+
 
     Maui.Editor
     {
@@ -107,6 +124,36 @@ SplitView
                 onClicked: _doodleDialog.open()
                 checked: _doodleDialog.visible
             }]
+
+        Keys.enabled: true
+        Keys.onPressed:
+        {
+            if((event.key === Qt.Key_S) && (event.modifiers & Qt.ControlModifier))
+            {
+                 saveFile(document.fileUrl, _tabBar.currentIndex)
+            }
+
+            if(event.key === Qt.F4)
+            {
+                 toggleTerminal()
+            }
+
+            if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
+            {
+                 syncTerminal(control.fileUrl)
+                control.terminal.forceActiveFocus()
+            }
+
+            if((event.key === Qt.Key_O) && (event.modifiers & Qt.ControlModifier))
+            {
+                 openFile()
+            }
+
+            if((event.key === Qt.Key_N) && (event.modifiers & Qt.ControlModifier))
+            {
+                 openTab("")
+            }
+        }
     }
 
     Loader
@@ -154,9 +201,6 @@ SplitView
         if(control.terminal && control.terminal.visible && Maui.FM.fileExists(path))
             control.terminal.session.sendText("cd '" + String(Maui.FM.fileDir(path)).replace("file://", "") + "'\n")
     }
-
-
-
 }
 
 

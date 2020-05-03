@@ -70,7 +70,7 @@ Maui.ApplicationWindow
             visible: Nota.Nota.supportsEmbededTerminal()
             text: qsTr("Show Terminal")
             icon.name: "utilities-terminal"
-            onTriggered: toogleTerminal()
+            onTriggered: toggleTerminal()
             checked : terminalVisible
             checkable: true
         }]
@@ -160,19 +160,8 @@ Maui.ApplicationWindow
         ToolButton
         {
             icon.name: "document-open"
-            onClicked:
-            {
-                _dialogLoader.sourceComponent = _fileDialogComponent
-                dialog.mode = dialog.modes.OPEN
-                dialog.settings.onlyDirs = false
-                dialog.show(function (paths)
-                {
-                    for(var i in paths)
-                    {
-                        openTab(paths[i])
-                    }
-                });
-            }
+            onClicked: openFile()
+
         },
         ToolButton
         {
@@ -663,9 +652,23 @@ Maui.ApplicationWindow
         }
     }
 
-    function toogleTerminal()
+    function toggleTerminal()
     {
         terminalVisible = !terminalVisible
         Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
+    }
+
+    function openFile()
+    {
+        _dialogLoader.sourceComponent = _fileDialogComponent
+        dialog.mode = dialog.modes.OPEN
+        dialog.settings.onlyDirs = false
+        dialog.show(function (paths)
+        {
+            for(var i in paths)
+            {
+                openTab(paths[i])
+            }
+        });
     }
 }
