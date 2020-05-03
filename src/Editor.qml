@@ -77,15 +77,31 @@ SplitView
         autoHideHeader: root.focusMode
 
         footBar.visible: false
-        footBar.leftContent: Maui.TextField
-        {
-            placeholderText: qsTr("Find")
-            onAccepted:
+        footBar.leftContent: [
+
+            Maui.TextField
             {
-                console.log("FIND THE QUERY", text)
-                document.find(text)
+                id: _findField
+                placeholderText: qsTr("Find")
+                onAccepted:
+                {
+                    console.log("FIND THE QUERY", text)
+                    document.find(text)
+                }
+            },
+
+            Maui.TextField
+            {
+                placeholderText: qsTr("Replace")
+            },
+
+            Button
+            {
+                text: qsTr("Replace")
             }
-        }
+
+        ]
+
         headBar.middleContent: Button
         {
             //        visible: root.focusMode
@@ -152,6 +168,18 @@ SplitView
             if((event.key === Qt.Key_N) && (event.modifiers & Qt.ControlModifier))
             {
                  openTab("")
+            }
+
+            if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
+            {
+                footBar.visible = !footBar.visible
+                if(footBar.visible)
+                {
+                    _findField.forceActiveFocus()
+                }else
+                {
+                    _editor.forceActiveFocus()
+                }
             }
         }
     }
