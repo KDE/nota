@@ -204,7 +204,7 @@ MauiLab.SettingsDialog
                 MouseArea
                 {
                     anchors.fill: parent
-                    onClicked: switchBackgroundColor(parent.color, Qt.lighter(parent.color, 2,5))
+                    onClicked: switchBackgroundColor(parent.color, Qt.lighter(parent.color, 2.5))
                 }
             }
         }
