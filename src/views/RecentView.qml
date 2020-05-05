@@ -14,5 +14,6 @@ DocsBrowser
     model: Maui.BaseModel
     {
         list: _editorList.history
+        sort: "modified"
     }
 }

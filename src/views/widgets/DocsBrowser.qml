@@ -143,6 +143,19 @@ MauiLab.AltBrowser
     }
 }
 
+//listView.section.labelPositioning: ViewSection.CurrentLabelAtStart
+listView.section.criteria: model.sort === "title" ?  ViewSection.FirstCharacter : ViewSection.FullString
+listView.section.property: model.sort
+listView.section.delegate: Maui.LabelDelegate
+{
+    id: delegate
+    width: parent.width
+    height: Maui.Style.toolBarHeightAlt
+    label: model.sort === "modified" ? Maui.FM.formatDate(Date(section), "MM/dd/yyyy") : (model.sort === "size" ? Maui.FM.formatSize(section)  : String(section).replace("file://", "").toUpperCase())
+    labelTxt.font.pointSize: Maui.Style.fontSizes.big
+    isSection: true
+}
+
 listDelegate: Maui.ItemDelegate
 {
     id: _listDelegate

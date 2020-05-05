@@ -19,5 +19,8 @@ DocsBrowser
         {
             id: _documentsList
         }
+
+        sort: "place"
+
     }
 }

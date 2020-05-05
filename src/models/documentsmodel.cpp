@@ -51,7 +51,9 @@ void FilesFetcher::fetch(const QList<QUrl> & urls)
 
 		while (it.hasNext())
 		{
-			const auto item = FMH::getFileInfoModel (QUrl::fromLocalFile (it.next ()));
+            const auto url = QUrl::fromLocalFile (it.next());
+            auto item = FMH::getFileInfoModel (url);
+            item[FMH::MODEL_KEY::PLACE] = FMH::fileDir(url);
 			res << item;
 			emit this->itemReady (item);
 		}
