@@ -34,6 +34,7 @@ MauiLab.AltBrowser
         autoExclusive: true
         expanded: isWide
         currentIndex : control.viewType === MauiLab.AltBrowser.ViewType.List ? 0 : 1
+        display: ToolButton.TextBesideIcon
 
         Action
         {
@@ -166,6 +167,8 @@ listDelegate: Maui.ItemDelegate
         anchors.fill: parent
         label1.text: model.label
         label2.text: model.path
+        label3.text: Maui.FM.formatDate(model.modified, "MM/dd/yyyy")
+        label4.text: model.mime
         iconSource: model.icon
         iconSizeHint: Maui.Style.iconSizes.big
         checkable: selectionMode
