@@ -29,18 +29,26 @@ Maui.ApplicationWindow
     property bool selectionMode :  false
     property bool translucency : Maui.Handy.isLinux
 
-    property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false) == "true"
+    property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false)
     //Global editor props
     property bool focusMode : false
-    property bool enableSidebar : !focusMode
-    property bool showLineNumbers : true
-    property bool enableSyntaxHighlighting : true
+    property bool enableSidebar : Maui.FM.loadSettings("ENABLE_SIDEBAR", "EXTENSIONS", !focusMode) == "true"
+
+    property bool showLineNumbers : Maui.FM.loadSettings("SHOW_LINE_NUMBERS", "EDITOR", true) == "true"
+    property bool enableSyntaxHighlighting : Maui.FM.loadSettings("ENABLE_SYNTAX_HIGHLIGHTING", "EDITOR", true) == "true"
     property bool showSyntaxHighlightingLanguages: false
 
-    property string theme
-    property color backgroundColor
-    property string fontFamily : "Noto Sans Mono"
-    property int fontSize : 10
+    property string theme : Maui.FM.loadSettings("THEME", "EDITOR", "Default")
+    property color backgroundColor : Maui.FM.loadSettings("BACKGROUND_COLOR", "EDITOR", root.Kirigami.Theme.backgroundColor)
+    property color textColor : Maui.FM.loadSettings("TEXT_COLOR", "EDITOR", root.Kirigami.Theme.textColor)
+
+    property font font : Maui.FM.loadSettings("FONT", "EDITOR", defaultFont)
+
+    readonly property font defaultFont:
+    {
+        family: "Noto Sans Mono"
+        pointSize: Maui.Style.fontSizes.default
+    }
 
     onCurrentTabChanged: syncSidebar(currentTab.fileUrl)
 
@@ -61,19 +69,8 @@ Maui.ApplicationWindow
                 _dialogLoader.sourceComponent = _settingsDialogComponent
                 dialog.open()
             }
-        },
-
-        MenuSeparator {visible: Nota.Nota.supportsEmbededTerminal()},
-
-        MenuItem
-        {
-            visible: Nota.Nota.supportsEmbededTerminal()
-            text: qsTr("Show Terminal")
-            icon.name: "utilities-terminal"
-            onTriggered: toggleTerminal()
-            checked : terminalVisible
-            checkable: true
-        }]
+        }
+        ]
 
     ObjectModel
     {
@@ -192,6 +189,12 @@ Maui.ApplicationWindow
         overlay.visible: collapsed && position > 0 && visible
         visible: (_swipeView.currentIndex === views.editor) && enableSidebar
         enabled: root.enableSidebar
+
+        onVisibleChanged:
+        {
+            if(currentTab)
+                syncSidebar(currentTab.fileUrl)
+        }
 
         Connections
         {

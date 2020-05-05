@@ -65,9 +65,10 @@ SplitView
         SplitView.fillWidth: true
 
         showLineNumbers: root.showLineNumbers
-        body.font.family: root.fontFamily
-        body.font.pointSize: root.fontSize
-        document.backgroundColor: document.enableSyntaxHighlighting ? root.backgroundColor : Kirigami.Theme.backgroundColor
+        body.color: root.textColor
+        body.font.family: root.font.family
+        body.font.pointSize: root.font.pointSize
+        document.backgroundColor: root.backgroundColor
         showSyntaxHighlightingLanguages: root.showSyntaxHighlightingLanguages
         document.theme: root.theme
         document.enableSyntaxHighlighting: root.enableSyntaxHighlighting
@@ -149,9 +150,10 @@ SplitView
                  saveFile(document.fileUrl, _tabBar.currentIndex)
             }
 
-            if(event.key === Qt.F4)
+            if(event.key === Qt.Key_F4)
             {
-                 toggleTerminal()
+                root.terminalVisible = !root.terminalVisible
+                Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
             }
 
             if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
@@ -168,6 +170,11 @@ SplitView
             if((event.key === Qt.Key_N) && (event.modifiers & Qt.ControlModifier))
             {
                  openTab("")
+            }
+
+            if((event.key === Qt.Key_L) && (event.modifiers & Qt.ControlModifier))
+            {
+                root.showLineNumbers = !root.showLineNumbers
             }
 
             if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))

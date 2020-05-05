@@ -11,7 +11,7 @@ DocsBrowser
     id: control
 
     property alias list : _documentsList
-
+    headBar.visible: true
     model: Maui.BaseModel
     {
         id: _documentsModel

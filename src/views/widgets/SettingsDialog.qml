@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import org.kde.mauikit 1.1 as MauiLab
+import org.maui.nota 1.0 as Nota
 
 MauiLab.SettingsDialog
 {
@@ -21,18 +22,22 @@ MauiLab.SettingsDialog
             onToggled:
             {
                 root.enableSidebar = !root.enableSidebar
-                Maui.FM.saveSettings("ENABLE_SIDEBAR", enableSidebar, "GENERAL")
+                Maui.FM.saveSettings("ENABLE_SIDEBAR", enableSidebar, "EXTENSIONS")
             }
         }
 
         Switch
         {
-            enabled: terminalLoader.item
+            enabled: Nota.Nota.supportsEmbededTerminal()
             Layout.fillWidth: true
             checkable: true
             checked: root.terminalVisible
             Kirigami.FormData.label: qsTr("Enable Embedded Terminal")
-            onToggled: toogleTerminal()
+            onToggled:
+            {
+                root.terminalVisible = !root.terminalVisible
+                Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
+            }
         }
     }
 
@@ -63,7 +68,7 @@ MauiLab.SettingsDialog
             onToggled:
             {
                 root.showSyntaxHighlightingLanguages = !root.showSyntaxHighlightingLanguages
-                Maui.FM.saveSettings("SHOW_LINE_NUMBERS", showLineNumbers, "EDITOR")
+                Maui.FM.saveSettings("SHOW_SYNTAXHIGHLIGHTING_BOX", showSyntaxHighlightingLanguages, "EDITOR")
             }
         }
 
@@ -91,7 +96,12 @@ MauiLab.SettingsDialog
             Layout.fillWidth: true
             Kirigami.FormData.label: qsTr("Family")
             model: Qt.fontFamilies()
-            onActivated: root.fontFamily = currentText
+            Component.onCompleted: currentIndex = find(root.font.family, Qt.MatchExactly)
+            onActivated:
+            {
+                root.font.family = currentText
+                Maui.FM.saveSettings("FONT", root.font, "EDITOR")
+            }
         }
 
         SpinBox
@@ -99,8 +109,12 @@ MauiLab.SettingsDialog
             Layout.fillWidth: true
             Kirigami.FormData.label: qsTr("Size")
             from: 0; to : 500
-            value: currentTab ? currentTab.body.font.pointSize : Maui.Style.fontSizes.default
-            onValueChanged: root.fontSize = value
+            value: root.font.pointSize
+            onValueChanged:
+            {
+                root.font.pointSize = value
+                Maui.FM.saveSettings("FONT", root.font, "EDITOR")
+            }
         }
     }
 
@@ -115,7 +129,13 @@ MauiLab.SettingsDialog
             Layout.fillWidth: true
             Kirigami.FormData.label: qsTr("Theme")
             model:  _dummyDocumentHandler.getThemes()
-            onActivated: root.theme = currentText
+            Component.onCompleted: currentIndex = find(root.theme, Qt.MatchExactly)
+
+            onActivated:
+            {
+                root.theme = currentText
+                Maui.FM.saveSettings("THEME", root.theme, "EDITOR")
+            }
 
             Maui.DocumentHandler
             {
@@ -140,7 +160,7 @@ MauiLab.SettingsDialog
                 MouseArea
                 {
                     anchors.fill: parent
-                    onClicked: root.backgroundColor = parent.color
+                    onClicked: switchBackgroundColor(parent.color, "#fafafa")
                 }
             }
 
@@ -155,7 +175,7 @@ MauiLab.SettingsDialog
                 MouseArea
                 {
                     anchors.fill: parent
-                    onClicked: root.backgroundColor = parent.color
+                    onClicked: switchBackgroundColor(parent.color, "#333")
                 }
             }
 
@@ -169,7 +189,8 @@ MauiLab.SettingsDialog
                 MouseArea
                 {
                     anchors.fill: parent
-                    onClicked: root.backgroundColor = parent.color
+                    onClicked: switchBackgroundColor(parent.color, Qt.darker(parent.color, 2))
+
                 }
             }
 
@@ -183,7 +204,7 @@ MauiLab.SettingsDialog
                 MouseArea
                 {
                     anchors.fill: parent
-                    onClicked: root.backgroundColor = parent.color
+                    onClicked: switchBackgroundColor(parent.color, Qt.lighter(parent.color, 2,5))
                 }
             }
         }
@@ -220,5 +241,14 @@ MauiLab.SettingsDialog
             checkable: true
             enabled: false
         }
+    }
+
+    function switchBackgroundColor(backgroundColor, textColor)
+    {
+        root.backgroundColor = backgroundColor
+        root.textColor = textColor
+
+        Maui.FM.saveSettings("BACKGROUND_COLOR", root.backgroundColor, "EDITOR")
+        Maui.FM.saveSettings("TEXT_COLOR", root.textColor, "EDITOR")
     }
 }
