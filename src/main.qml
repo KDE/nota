@@ -143,7 +143,9 @@ Maui.ApplicationWindow
         }
     }
 
-    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && Kirigami.Settings.isMobile ? root.currentTab.height > Kirigami.Units.gridUnit*30 : !focusMode
+
+
+    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && Kirigami.Settings.isMobile ?  ! Qt.inputMethod.visible : !focusMode
 
     headBar.leftContent: ToolButton
     {
@@ -309,7 +311,7 @@ Maui.ApplicationWindow
         {
             id: _swipeView
             anchors.fill: parent
-
+            currentIndex: !root.currentTab ? views.recent : views.editor
             Maui.Page
             {
                 id: editorView

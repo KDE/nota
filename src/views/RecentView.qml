@@ -15,5 +15,6 @@ DocsBrowser
     {
         list: _editorList.history
         sort: "modified"
+        sortOrder: Qt.DescendingOrder
     }
 }
