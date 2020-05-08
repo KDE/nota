@@ -1,11 +1,13 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Terminal.qml</file>
-        <file>Editor.qml</file>
         <file>views/DocumentsView.qml</file>
         <file>views/RecentView.qml</file>
         <file>views/widgets/DocsBrowser.qml</file>
         <file>views/widgets/SettingsDialog.qml</file>
+        <file>views/EditorLayout.qml</file>
+        <file>views/Editor.qml</file>
+        <file>views/Terminal.qml</file>
+        <file>views/EditorView.qml</file>
     </qresource>
 </RCC>

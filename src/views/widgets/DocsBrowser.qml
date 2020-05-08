@@ -128,7 +128,7 @@ MauiLab.AltBrowser
 
             }else if(Maui.Handy.singleClick)
             {
-                root.openTab(control.model.get(index).path)
+                editorView.openTab(control.model.get(index).path)
             }
         }
 
@@ -137,7 +137,7 @@ MauiLab.AltBrowser
             control.currentIndex = index
             if(!Maui.Handy.singleClick && !selectionMode)
             {
-                root.openTab(control.model.get(index).path)
+                editorView.openTab(control.model.get(index).path)
             }
         }
     }
@@ -218,7 +218,7 @@ listDelegate: Maui.ItemDelegate
 
         }else if(Maui.Handy.singleClick)
         {
-            root.openTab(control.model.get(index).path)
+            editorView.openTab(control.model.get(index).path)
         }
     }
 
@@ -227,7 +227,7 @@ listDelegate: Maui.ItemDelegate
         control.currentIndex = index
         if(!Maui.Handy.singleClick && !selectionMode)
         {
-            root.openTab(control.model.get(index).path)
+            editorView.openTab(control.model.get(index).path)
         }
     }
 }

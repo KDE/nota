@@ -5,8 +5,6 @@ import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.0 as Maui
 import org.kde.mauikit 1.1 as MauiLab
 import org.maui.nota 1.0 as Nota
-import QtQuick.Window 2.0
-import QtQml.Models 2.3
 
 import "views"
 import "views/widgets" as Widgets
@@ -14,7 +12,7 @@ import "views/widgets" as Widgets
 Maui.ApplicationWindow
 {
     id: root
-    title: currentTab ? currentTab.title : ""
+    title: currentEditor ? currentTab.title : ""
 
     Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota allows you to edit text files.")
@@ -23,12 +21,13 @@ Maui.ApplicationWindow
 
     readonly property var views : ({editor: 0, documents: 1, recent: 2})
 
-    property alias currentTab : _editorListView.currentItem
+    property alias currentTab : editorView.currentTab
+    property alias currentEditor: editorView.currentEditor
     property alias dialog : _dialogLoader.item
 
     property bool selectionMode :  false
     property bool translucency : Maui.Handy.isLinux
-
+    property bool supportSplit : true
     property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false)
     //Global editor props
     property bool focusMode : false
@@ -50,12 +49,12 @@ Maui.ApplicationWindow
         pointSize: Maui.Style.fontSizes.default
     }
 
-    onCurrentTabChanged: syncSidebar(currentTab.fileUrl)
+    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
     MauiLab.Doodle
     {
         id: _doodleDialog
-        sourceItem: root.currentTab ? root.currentTab.body : null
+        sourceItem: root.currentEditor ? root.currentEditor.body : null
     }
 
     mainMenu: [
@@ -72,10 +71,6 @@ Maui.ApplicationWindow
         }
         ]
 
-    ObjectModel
-    {
-        id: _documentModel
-    }
 
     onClosing:
     {
@@ -83,9 +78,9 @@ Maui.ApplicationWindow
 
         if(!dialog.discard)
         {
-            for(var i = 0; i<_editorListView.count; i++)
+            for(var i = 0; i < editorView.count; i++)
             {
-                const doc =  _documentModel.get(i)
+                const doc =  editorView.model.get(i)
                 if(doc.document.modified)
                 {
                     close.accepted = false
@@ -143,9 +138,7 @@ Maui.ApplicationWindow
         }
     }
 
-
-
-    headBar.visible: root.currentTab && _swipeView.currentIndex === views.editor && Kirigami.Settings.isMobile ?  ! Qt.inputMethod.visible : !focusMode
+    headBar.visible: root.currentEditor && _swipeView.currentIndex === views.editor && Kirigami.Settings.isMobile ?  ! Qt.inputMethod.visible : !focusMode
 
     headBar.leftContent: ToolButton
     {
@@ -156,6 +149,7 @@ Maui.ApplicationWindow
     }
 
     headBar.rightContent: [
+
         ToolButton
         {
             icon.name: "document-open"
@@ -194,8 +188,8 @@ Maui.ApplicationWindow
 
         onVisibleChanged:
         {
-            if(currentTab)
-                syncSidebar(currentTab.fileUrl)
+            if(currentEditor)
+                syncSidebar(currentEditor.fileUrl)
         }
 
         Connections
@@ -268,7 +262,7 @@ Maui.ApplicationWindow
                             openFolder(item.path)
                         }else
                         {
-                            root.openTab(item.path)
+                            editorView.openTab(item.path)
                         }
                     }
                 }
@@ -283,7 +277,7 @@ Maui.ApplicationWindow
                             openFolder(item.path)
                         }else
                         {
-                            root.openTab(item.path)
+                            editorView.openTab(item.path)
                         }
                     }
                 }
@@ -311,222 +305,13 @@ Maui.ApplicationWindow
         {
             id: _swipeView
             anchors.fill: parent
-            currentIndex: !root.currentTab ? views.recent : views.editor
-            Maui.Page
+            currentIndex: !root.currentEditor ? views.recent : views.editor
+
+            EditorView
             {
                 id: editorView
                 MauiLab.AppView.iconName: "document-edit"
                 MauiLab.AppView.title: qsTr("Editor")
-
-                header: Maui.TabBar
-                {
-                    id: _tabBar
-                    visible: _editorListView.count > 1
-                    width: parent.width
-                    position: TabBar.Header
-                    currentIndex : _editorListView.currentIndex
-                    onNewTabClicked: root.openTab("")
-
-                    Repeater
-                    {
-                        id: _repeater
-                        model: _editorModel
-
-                        Maui.TabButton
-                        {
-                            id: _tabButton
-                            readonly property int index_ : index
-                            implicitHeight: _tabBar.implicitHeight
-                            implicitWidth: Math.max(parent.width / _repeater.count, 120)
-                            checked: index === _tabBar.currentIndex
-
-                            text: model.label
-
-                            onClicked: _editorListView.currentIndex = index
-                            onCloseClicked:
-                            {
-                                if( _documentModel.get(model.index).document.modified)
-                                {
-                                    _saveDialog.fileIndex = model.index
-                                    _saveDialog.open()
-                                }
-                                else
-                                    closeTab(model.index)
-                            }
-
-                            Maui.Dialog
-                            {
-                                id: _saveDialog
-                                property int fileIndex
-                                page.padding: Maui.Style.space.huge
-                                title: qsTr("Save file")
-                                message: qsTr(String("This file has been modified, you can save your changes now or discard them.\n")) + _editorModel.get(_tabButton.index).path
-
-                                acceptButton.text: qsTr("Save")
-                                rejectButton.text: qsTr("Discard")
-
-                                onAccepted:
-                                {
-                                    _documentModel.get(fileIndex).saveFile(_editorModel.get(fileIndex).path, fileIndex)
-                                    closeTab(fileIndex)
-                                    _saveDialog.close()
-                                }
-
-                                onRejected:
-                                {
-                                    _saveDialog.close()
-                                    closeTab(fileIndex)
-                                }
-                            }
-                        }
-                    }
-                }
-
-                Maui.Holder
-                {
-                    id: _holder
-                    visible: !_editorListView.count
-                    emoji: "qrc:/img/document-edit.svg"
-                    emojiSize: Maui.Style.iconSizes.huge
-                    isMask: true
-                    onActionTriggered: openTab("")
-                    title: qsTr("Create a new document")
-                    body: qsTr("You can create a new document by clicking the New File button, or here.<br>
-                    Alternative you can open existing files from the left places sidebar or by clicking the Open button")
-                }
-
-                Maui.FloatingButton
-                {
-                    id: _overlayButton
-                    z: 999
-                    anchors.right: parent.right
-                    anchors.bottom: parent.bottom
-                    anchors.margins: Maui.Style.toolBarHeightAlt
-                    anchors.bottomMargin: Maui.Style.toolBarHeight + (root.currentTab ? root.currentTab.footBar.height : 0)
-                    height: Maui.Style.toolBarHeight
-                    width: height
-
-                    icon.name: "document-new"
-                    icon.color: Kirigami.Theme.highlightedTextColor
-
-                    onClicked: openTab("")
-
-                    Maui.Badge
-                    {
-                        anchors
-                        {
-                            horizontalCenter: parent.right
-                            verticalCenter: parent.top
-                        }
-
-                        onClicked: _newDocumentMenu.open()
-
-                        Maui.PlusSign
-                        {
-                            color: parent.Kirigami.Theme.textColor
-                            height: 10
-                            width: height
-                            anchors.centerIn: parent
-                        }
-                    }
-
-                    Maui.Dialog
-                    {
-                        id: _newDocumentMenu
-                        maxHeight: 300
-                        maxWidth: 400
-                        defaultButtons: false
-                        footBar.middleContent: Button
-                        {
-                            text: qsTr("New template")
-                        }
-
-                        ColumnLayout
-                        {
-                            Layout.fillWidth: true
-                            Layout.fillHeight: true
-                            Layout.margins: Maui.Style.space.big
-                            spacing: Maui.Style.space.big
-
-                            Maui.ItemDelegate
-                            {
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-
-                                Maui.ListItemTemplate
-                                {
-                                    anchors.fill:parent
-                                    iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                                    iconSource: "text-x-generic"
-                                    label1.text: qsTr("Text file")
-                                    label2.text: qsTr("Simple text file with syntax highlighting")
-                                }
-
-                                onClicked:
-                                {
-                                    openTab("")
-                                    _editorListView.currentItem.body.textFormat = TextEdit.PlainText
-                                    _newDocumentMenu.close()
-                                }
-                            }
-
-
-                            Maui.ItemDelegate
-                            {
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-
-                                Maui.ListItemTemplate
-                                {
-                                    anchors.fill:parent
-                                    iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                                    iconSource: "text-enriched"
-                                    label1.text: qsTr("Rich text file")
-                                    label2.text: qsTr("With support for basic text format editing")
-                                }
-
-                                onClicked:
-                                {
-                                    openTab("")
-                                    _editorListView.currentItem.body.textFormat = TextEdit.RichText
-                                    _newDocumentMenu.close()
-                                }
-                            }
-
-                            Maui.ItemDelegate
-                            {
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-
-                                Maui.ListItemTemplate
-                                {
-                                    anchors.fill:parent
-                                    iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                                    iconSource: "text-html"
-                                    label1.text: qsTr("HTML text file")
-                                    label2.text: qsTr("Text file with HTML markup support")
-                                }
-                            }
-                        }
-                    }
-                }
-
-                ListView
-                {
-                    id: _editorListView
-                    anchors.fill: parent
-                    orientation: ListView.Horizontal
-                    model: _documentModel
-                    snapMode: ListView.SnapOneItem
-                    spacing: 0
-                    interactive: Maui.Handy.isTouch && count > 1
-                    highlightFollowsCurrentItem: true
-                    highlightMoveDuration: 0
-                    highlightResizeDuration : 0
-                    onMovementEnded: currentIndex = indexAt(contentX, contentY)
-                    cacheBuffer: count
-                    clip: true
-                }
             }
 
             MauiLab.AppViewLoader
@@ -575,7 +360,7 @@ Maui.ApplicationWindow
                 {
                     const paths =  _selectionbar.uris
                     for(var i in paths)
-                        openTab(paths[i])
+                        editorView.openTab(paths[i])
 
                     _selectionbar.clear()
                 }
@@ -598,13 +383,46 @@ Maui.ApplicationWindow
     DropArea
     {
         id: _dropArea
+        property var urls : []
         anchors.fill: parent
         onDropped:
         {
             if(drop.urls)
             {
-                var urls = drop.urls.join(",")
-                Nota.Nota.requestFiles(urls.split(","))
+                var m_urls = drop.urls.join(",")
+                _dropArea.urls = m_urls.split(",")
+                _dropAreaMenu.popup()
+
+//                Nota.Nota.requestFiles( _dropArea.urls )
+            }
+        }
+
+        Menu
+        {
+            id: _dropAreaMenu
+
+            MenuItem
+            {
+                text: qsTr("Open in new tab")
+                onTriggered:
+                {
+                     Nota.Nota.requestFiles( _dropArea.urls )
+                }
+            }
+
+            MenuItem
+            {
+                enabled: _dropArea.urls.length === 1
+                text: qsTr("Open in new split")
+                onTriggered:
+                {
+                    currentTab.split(_dropArea.urls[0], root.currentTab.orientation)
+                }
+            }
+
+            MenuItem
+            {
+                text: qsTr("Cancel")
             }
         }
     }
@@ -615,38 +433,8 @@ Maui.ApplicationWindow
         onOpenFiles:
         {
             for(var i in urls)
-                openTab(urls[i])
+               editorView.openTab(urls[i])
         }
-    }
-
-    function openTab(path)
-    {
-        _swipeView.currentIndex = views.editor
-
-        const index = _editorList.urlIndex(path)
-        if(index >= 0)
-            _editorListView.currentIndex = index;
-
-        if(!_editorList.append(path))
-            return ;
-
-        var component = Qt.createComponent("Editor.qml");
-        if (component.status === Component.Ready)
-        {
-            _documentModel.append(component.createObject(_documentModel));
-
-            _editorListView.currentIndex = _documentModel.count - 1
-            _documentModel.get(_documentModel.count - 1).fileUrl = path
-            syncSidebar(path)
-        }
-    }
-
-    function closeTab(index)
-    {
-        console.log("CLOSING FILE", index, _editorList.count, _documentModel.count)
-        _editorList.remove(index)
-        _documentModel.remove(index)
-        console.log("CLOSING FILE", index, _editorList.count, _documentModel.count)
     }
 
     function syncSidebar(path)
@@ -663,17 +451,4 @@ Maui.ApplicationWindow
         Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
     }
 
-    function openFile()
-    {
-        _dialogLoader.sourceComponent = _fileDialogComponent
-        dialog.mode = dialog.modes.OPEN
-        dialog.settings.onlyDirs = false
-        dialog.show(function (paths)
-        {
-            for(var i in paths)
-            {
-                openTab(paths[i])
-            }
-        });
-    }
 }
