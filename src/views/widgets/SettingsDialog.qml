@@ -207,6 +207,28 @@ MauiLab.SettingsDialog
                     onClicked: switchBackgroundColor(parent.color, Qt.lighter(parent.color, 2.5))
                 }
             }
+
+            Rectangle
+            {
+                height: 22
+                width: 22
+                radius: Maui.Style.radiusV
+                color: "transparent"
+                border.color: Kirigami.Theme.textColor
+                Maui.X
+                {
+                    height: 16
+                    width: 16
+                    anchors.centerIn: parent
+                    color: Kirigami.Theme.textColor
+                }
+
+                MouseArea
+                {
+                    anchors.fill: parent
+                    onClicked: switchBackgroundColor(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor)
+                }
+            }
         }
     }
 

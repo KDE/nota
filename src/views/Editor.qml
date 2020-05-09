@@ -5,6 +5,7 @@ import org.kde.mauikit 1.0 as Maui
 import org.kde.mauikit 1.1 as MauiLab
 import org.kde.kirigami 2.7 as Kirigami
 import QtQml.Models 2.3
+import org.maui.nota 1.0 as Nota
 
 Maui.Editor
 {
@@ -125,4 +126,61 @@ Maui.Editor
             }
         }
     }
+
+    DropArea
+    {
+        id: _dropArea
+        property var urls : []
+        anchors.fill: parent
+        onDropped:
+        {
+            if(drop.urls)
+            {
+                var m_urls = drop.urls.join(",")
+                _dropArea.urls = m_urls.split(",")
+                _dropAreaMenu.popup()
+
+//                Nota.Nota.requestFiles( _dropArea.urls )
+            }
+        }
+
+        Menu
+        {
+            id: _dropAreaMenu
+
+            MenuItem
+            {
+                text: qsTr("Open here")
+                onTriggered:
+                {
+                    control.fileUrl = _dropArea.urls[0]
+                }
+            }
+
+            MenuItem
+            {
+                text: qsTr("Open in new tab")
+                onTriggered:
+                {
+                     Nota.Nota.requestFiles( _dropArea.urls )
+                }
+            }
+
+            MenuItem
+            {
+                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1
+                text: qsTr("Open in new split")
+                onTriggered:
+                {
+                    currentTab.split(_dropArea.urls[0], Qt.Horizontal)
+                }
+            }
+
+            MenuItem
+            {
+                text: qsTr("Cancel")
+            }
+        }
+    }
+
 }

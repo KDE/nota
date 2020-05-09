@@ -16,7 +16,7 @@ Maui.Page
     property alias listView: _editorListView
     property alias count: _editorListView.count
     readonly property alias model : _documentModel
-
+property alias plugin: _pluginLayout
     ObjectModel
     {
         id: _documentModel
@@ -149,7 +149,7 @@ Maui.Page
                     {
                         anchors.fill:parent
                         iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                        iconSource: "text-x-generic"
+                        iconSource: "folder-open"
                         label1.text: qsTr("Open file")
                         label2.text: qsTr("Open one or multiple files from the file system")
                     }
@@ -357,10 +357,17 @@ Maui.Page
             }
             ]
 
+        ColumnLayout
+        {
+            id: _pluginLayout
+            anchors.fill: parent
+            spacing: 0
+
             ListView
             {
                 id: _editorListView
-                anchors.fill: parent
+                Layout.fillWidth: true
+                Layout.fillHeight: true
                 orientation: ListView.Horizontal
                 model: _documentModel
                 snapMode: ListView.SnapOneItem
@@ -372,8 +379,8 @@ Maui.Page
                 onMovementEnded: currentIndex = indexAt(contentX, contentY)
                 cacheBuffer: count
                 clip: true
-             }
-
+            }
+        }
     }
 
     Maui.Holder

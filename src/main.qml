@@ -57,6 +57,26 @@ Maui.ApplicationWindow
         sourceItem: root.currentEditor ? root.currentEditor.body : null
     }
 
+    Maui.NewDialog
+    {
+        id: _pluginLoader
+onFinished:     {
+            const url = text
+            if(Maui.FM.fileExists(url))
+            {
+
+                const component = Qt.createComponent(url);
+
+                if (component.status === Component.Ready)
+                {
+                    console.log("setting plugin <<", url)
+                    const object = component.createObject(editorView.plugin);
+
+                }
+            }
+        }
+    }
+
     mainMenu: [
 
         MenuItem
@@ -68,7 +88,14 @@ Maui.ApplicationWindow
                 _dialogLoader.sourceComponent = _settingsDialogComponent
                 dialog.open()
             }
+        },
+
+        MenuItem
+        {
+            text: "Load plugin"
+            onTriggered: _pluginLoader.open()
         }
+
         ]
 
 
@@ -294,6 +321,22 @@ Maui.ApplicationWindow
         }
     }
 
+    DropArea
+    {
+        id: _dropArea
+        property var urls : []
+        anchors.fill: parent
+        onDropped:
+        {
+            if(drop.urls)
+            {
+                var m_urls = drop.urls.join(",")
+                _dropArea.urls = m_urls.split(",")
+                Nota.Nota.requestFiles( _dropArea.urls )
+            }
+        }
+    }
+
     Maui.Page
     {
         anchors.fill: parent
@@ -380,52 +423,6 @@ Maui.ApplicationWindow
         }
     }
 
-    DropArea
-    {
-        id: _dropArea
-        property var urls : []
-        anchors.fill: parent
-        onDropped:
-        {
-            if(drop.urls)
-            {
-                var m_urls = drop.urls.join(",")
-                _dropArea.urls = m_urls.split(",")
-                _dropAreaMenu.popup()
-
-//                Nota.Nota.requestFiles( _dropArea.urls )
-            }
-        }
-
-        Menu
-        {
-            id: _dropAreaMenu
-
-            MenuItem
-            {
-                text: qsTr("Open in new tab")
-                onTriggered:
-                {
-                     Nota.Nota.requestFiles( _dropArea.urls )
-                }
-            }
-
-            MenuItem
-            {
-                enabled: _dropArea.urls.length === 1
-                text: qsTr("Open in new split")
-                onTriggered:
-                {
-                    currentTab.split(_dropArea.urls[0], root.currentTab.orientation)
-                }
-            }
-
-            MenuItem
-            {
-                text: qsTr("Cancel")
-            }
-        }
-    }
 
     Connections
     {

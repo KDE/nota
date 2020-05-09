@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QFileInfo>
+#include <QProcess>
 
 #ifdef STATIC_MAUIKIT
 #include "fmstatic.h"
@@ -40,6 +41,17 @@ public slots:
 		return false;
 #endif
 	}
+
+    bool run(const QString &process, const QStringList &params = {})
+    {
+            auto m_process = new QProcess;
+//            connect(myProcess,SIGNAL(readyReadStandardError()),this,SLOT(vEdProcess()));
+//            connect(myProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(processStandardOutput()));
+            connect(m_process,SIGNAL(finished(int)),m_process,SLOT(deleteLater()));
+            connect(this,&QObject::destroyed,m_process,&QProcess::kill);
+            m_process->start(process, params);
+            return true;
+    }
 
 signals:
 	void openFiles(QStringList urls);
