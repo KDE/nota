@@ -60,7 +60,9 @@ Maui.ApplicationWindow
     Maui.NewDialog
     {
         id: _pluginLoader
-onFinished:     {
+        title: qsTr("Plugin")
+        message: qsTr("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
+        onFinished:     {
             const url = text
             if(Maui.FM.fileExists(url))
             {
@@ -93,10 +95,11 @@ onFinished:     {
         MenuItem
         {
             text: "Load plugin"
+            icon.name: "plugin"
             onTriggered: _pluginLoader.open()
         }
 
-        ]
+    ]
 
 
     onClosing:
@@ -151,7 +154,7 @@ onFinished:     {
         id: _settingsDialogComponent
         Widgets.SettingsDialog
         {}
-     }
+    }
 
     Component
     {
@@ -180,7 +183,7 @@ onFinished:     {
         ToolButton
         {
             icon.name: "document-open"
-            onClicked: openFile()
+            onClicked: editorView.openFile()
 
         },
         ToolButton
@@ -430,7 +433,7 @@ onFinished:     {
         onOpenFiles:
         {
             for(var i in urls)
-               editorView.openTab(urls[i])
+                editorView.openTab(urls[i])
         }
     }
 

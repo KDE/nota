@@ -47,6 +47,10 @@ linux:unix:!android {
         DEFINES += EMBEDDED_TERMINAL
         ICON = $$PWD/macos_files/nota.icns
     }
+
+    win32 {
+        RC_ICONS = $$PWD/windows_files/nota.ico
+    }
 }
 
 DEFINES += QT_DEPRECATED_WARNINGS

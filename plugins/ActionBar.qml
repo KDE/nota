@@ -9,7 +9,7 @@ import org.maui.nota 1.0 as Nota
 Maui.ToolBar
 {
 Layout.fillWidth: true
-
+position: ToolBar.Footer
 ToolButton
 {
 icon.name: "debug-run"

@@ -16,7 +16,7 @@ Maui.Page
     property alias listView: _editorListView
     property alias count: _editorListView.count
     readonly property alias model : _documentModel
-property alias plugin: _pluginLayout
+    property alias plugin: _pluginLayout
     ObjectModel
     {
         id: _documentModel
@@ -95,7 +95,7 @@ property alias plugin: _pluginLayout
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.margins: Maui.Style.toolBarHeightAlt
-        anchors.bottomMargin: Maui.Style.toolBarHeight + (root.currentEditor ? root.currentEditor.footBar.height : 0)
+        anchors.bottomMargin: Maui.Style.toolBarHeight + (root.currentEditor && root.currentEditor.footBar.visible ? root.currentEditor.footBar.height : 0)
         height: Maui.Style.toolBarHeight
         width: height
 
@@ -233,65 +233,65 @@ property alias plugin: _pluginLayout
 
         headBar.leftContent: [
 
-        Maui.ToolActions
-        {
-            expanded: true
-            autoExclusive: false
-            checkable: false
-
-            Action
+            Maui.ToolActions
             {
-                icon.name: "edit-undo"
-                enabled: currentEditor.body.canUndo
-                onTriggered: currentEditor.body.undo()
-            }
+                expanded: true
+                autoExclusive: false
+                checkable: false
 
-            Action
+                Action
+                {
+                    icon.name: "edit-undo"
+                    enabled: currentEditor.body.canUndo
+                    onTriggered: currentEditor.body.undo()
+                }
+
+                Action
+                {
+                    icon.name: "edit-redo"
+                    enabled: currentEditor.body.canRedo
+                    onTriggered: currentEditor.body.redo()
+                }
+            },
+
+            Maui.ToolActions
             {
-                icon.name: "edit-redo"
-                enabled: currentEditor.body.canRedo
-                onTriggered: currentEditor.body.redo()
-            }
-        },
+                visible: (currentEditor.document.isRich || currentEditor.body.textFormat === Text.RichText) && !currentEditor.body.readOnly
+                expanded: true
+                autoExclusive: false
+                checkable: false
 
-        Maui.ToolActions
-        {
-            visible: (currentEditor.document.isRich || currentEditor.body.textFormat === Text.RichText) && !currentEditor.body.readOnly
-            expanded: true
-            autoExclusive: false
-            checkable: false
+                Action
+                {
+                    icon.name: "format-text-bold"
+                    checked: currentEditor.document.bold
+                    onTriggered: currentEditor.document.bold = !currentEditor.document.bold
+                }
 
-            Action
-            {
-                icon.name: "format-text-bold"
-                checked: currentEditor.document.bold
-                onTriggered: currentEditor.document.bold = !currentEditor.document.bold
-            }
+                Action
+                {
+                    icon.name: "format-text-italic"
+                    checked: currentEditor.document.italic
+                    onTriggered: currentEditor.document.italic = !currentEditor.document.italic
+                }
 
-            Action
-            {
-                icon.name: "format-text-italic"
-                checked: currentEditor.document.italic
-                onTriggered: currentEditor.document.italic = !currentEditor.document.italic
-            }
+                Action
+                {
+                    icon.name: "format-text-underline"
+                    checked: currentEditor.document.underline
+                    onTriggered: currentEditor.document.underline = !currentEditor.document.underline
+                }
 
-            Action
-            {
-                icon.name: "format-text-underline"
-                checked: currentEditor.document.underline
-                onTriggered: currentEditor.document.underline = !currentEditor.document.underline
+                Action
+                {
+                    icon.name: "format-text-uppercase"
+                    checked: currentEditor.document.uppercase
+                    onTriggered: currentEditor.document.uppercase = !currentEditor.document.uppercase
+                }
             }
-
-            Action
-            {
-                icon.name: "format-text-uppercase"
-                checked: currentEditor.document.uppercase
-                onTriggered: currentEditor.document.uppercase = !currentEditor.document.uppercase
-            }
-        }
         ]
 
-
+        headBar.visible: _editorListView.count > 0
         headBar.middleContent: Button
         {
             //        visible: root.focusMode
@@ -355,7 +355,7 @@ property alias plugin: _pluginLayout
                     onTriggered: saveFile("", _tabBar.currentIndex)
                 }
             }
-            ]
+        ]
 
         ColumnLayout
         {
@@ -451,7 +451,7 @@ property alias plugin: _pluginLayout
             //            fileDialog.settings.singleSelection = true
             dialog.show(function (paths)
             {
-                 control.currentEditor.document.saveAs(paths[0]);
+                control.currentEditor.document.saveAs(paths[0]);
                 _editorList.update(index, paths[0]);
             });
         }
