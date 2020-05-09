@@ -29,14 +29,14 @@ linux:unix:!android {
         QMAKE_LINK += -nostdlib++
         ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android_files
         DISTFILES += $$PWD/android_files/AndroidManifest.xml
-     }
+        DEFINES *= ANDROID_OPENSSL
+    }
 
     DEFINES *= \
         COMPONENT_FM \
         COMPONENT_TAGGING \
         COMPONENT_EDITOR \
-        MAUIKIT_STYLE \
-        ANDROID_OPENSSL
+        MAUIKIT_STYLE
 
     include($$PWD/3rdparty/kirigami/kirigami.pri)
     include($$PWD/3rdparty/mauikit/mauikit.pri)
