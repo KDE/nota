@@ -27,7 +27,6 @@ Maui.ApplicationWindow
 
     property bool selectionMode :  false
     property bool translucency : Maui.Handy.isLinux
-    property bool supportSplit : true
     property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false)
     //Global editor props
     property bool focusMode : false
@@ -36,6 +35,7 @@ Maui.ApplicationWindow
     property bool showLineNumbers : Maui.FM.loadSettings("SHOW_LINE_NUMBERS", "EDITOR", true) == "true"
     property bool enableSyntaxHighlighting : Maui.FM.loadSettings("ENABLE_SYNTAX_HIGHLIGHTING", "EDITOR", true) == "true"
     property bool showSyntaxHighlightingLanguages: false
+    property bool supportSplit :!Kirigami.Settings.isMobile && root.width > 600
 
     property string theme : Maui.FM.loadSettings("THEME", "EDITOR", "Default")
     property color backgroundColor : Maui.FM.loadSettings("BACKGROUND_COLOR", "EDITOR", root.Kirigami.Theme.backgroundColor)

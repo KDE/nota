@@ -168,7 +168,7 @@ Maui.Editor
 
             MenuItem
             {
-                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1
+                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && root.supportSplit
                 text: qsTr("Open in new split")
                 onTriggered:
                 {

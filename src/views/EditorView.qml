@@ -313,6 +313,7 @@ Maui.Page
             Maui.ToolActions
             {
                 id: _splitButton
+                visible: supportSplit
                 expanded: isWide
                 autoExclusive: true
                 display: ToolButton.TextBesideIcon
