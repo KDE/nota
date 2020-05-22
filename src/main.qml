@@ -14,7 +14,6 @@ Maui.ApplicationWindow
     id: root
     title: currentEditor ? currentTab.title : ""
 
-    Maui.App.iconName: "qrc:/img/nota.svg"
     Maui.App.description: qsTr("Nota allows you to edit text files.")
     Maui.App.handleAccounts: false
     background.opacity: translucency ? 0.5 : 1

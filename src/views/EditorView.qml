@@ -17,6 +17,7 @@ Maui.Page
     property alias count: _editorListView.count
     readonly property alias model : _documentModel
     property alias plugin: _pluginLayout
+
     ObjectModel
     {
         id: _documentModel
@@ -86,8 +87,6 @@ Maui.Page
         }
     }
 
-
-
     Maui.FloatingButton
     {
         id: _overlayButton
@@ -95,7 +94,7 @@ Maui.Page
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.margins: Maui.Style.toolBarHeightAlt
-        anchors.bottomMargin: Maui.Style.toolBarHeight + (root.currentEditor && root.currentEditor.footBar.visible ? root.currentEditor.footBar.height : 0)
+        anchors.bottomMargin: Maui.Style.toolBarHeight + (root.currentEditor && root.currentEditor.footBar.visible ? root.currentEditor.footBar.height : 0) + (currentTab.terminal ? currentTab.terminal.height : 0)
         height: Maui.Style.toolBarHeight
         width: height
 
