@@ -1,10 +1,11 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
+
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
+import org.kde.mauikit 1.2 as Maui
 import org.maui.nota 1.0 as Nota
+
 import QtQuick.Window 2.0
 import QtQml.Models 2.3
 
@@ -127,8 +128,8 @@ Maui.Page
             id: _newDocumentMenu
             maxHeight: 300
             maxWidth: 400
-            defaultButtons: false
-
+            rejectButton.visible : false
+            page.padding: 0
             acceptButton.visible: true
             acceptButton.text: qsTr("New template")
 
@@ -136,89 +137,106 @@ Maui.Page
             {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                Layout.margins: Maui.Style.space.big
-                spacing: Maui.Style.space.big
 
-                Maui.ItemDelegate
+                spacing: 0
+
+                Maui.AlternateListItem
+                {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    alt: true
+                    Maui.ItemDelegate
+                    {
+                        anchors.fill: parent
+
+                        Maui.ListItemTemplate
+                        {
+                            anchors.fill:parent
+                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
+                            iconSource: "folder-open"
+                            label1.text: qsTr("Open file")
+                            label2.text: qsTr("Open one or multiple files from the file system")
+                        }
+
+                        onClicked:
+                        {
+                            openFile()
+                            _newDocumentMenu.close()
+                        }
+                    }
+                }
+
+                Maui.AlternateListItem
                 {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
 
-                    Maui.ListItemTemplate
+                    Maui.ItemDelegate
                     {
-                        anchors.fill:parent
-                        iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                        iconSource: "folder-open"
-                        label1.text: qsTr("Open file")
-                        label2.text: qsTr("Open one or multiple files from the file system")
-                    }
+                        anchors.fill: parent
 
-                    onClicked:
-                    {
-                        openFile()
-                        _newDocumentMenu.close()
+                        Maui.ListItemTemplate
+                        {
+                            anchors.fill:parent
+                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
+                            iconSource: "text-x-generic"
+                            label1.text: qsTr("Text file")
+                            label2.text: qsTr("Simple text file with syntax highlighting")
+                        }
+
+                        onClicked:
+                        {
+                            openTab("")
+                            _editorListView.currentItem.body.textFormat = TextEdit.PlainText
+                            _newDocumentMenu.close()
+                        }
                     }
                 }
 
 
-
-                Maui.ItemDelegate
+                Maui.AlternateListItem
                 {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-
-                    Maui.ListItemTemplate
+alt: true
+                    Maui.ItemDelegate
                     {
-                        anchors.fill:parent
-                        iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                        iconSource: "text-x-generic"
-                        label1.text: qsTr("Text file")
-                        label2.text: qsTr("Simple text file with syntax highlighting")
-                    }
+                        anchors.fill: parent
+                        Maui.ListItemTemplate
+                        {
+                            anchors.fill:parent
+                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
+                            iconSource: "text-enriched"
+                            label1.text: qsTr("Rich text file")
+                            label2.text: qsTr("With support for basic text format editing")
+                        }
 
-                    onClicked:
-                    {
-                        openTab("")
-                        _editorListView.currentItem.body.textFormat = TextEdit.PlainText
-                        _newDocumentMenu.close()
+                        onClicked:
+                        {
+                            openTab("")
+                            _editorListView.currentItem.body.textFormat = TextEdit.RichText
+                            _newDocumentMenu.close()
+                        }
                     }
                 }
 
-
-                Maui.ItemDelegate
+                Maui.AlternateListItem
                 {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
 
-                    Maui.ListItemTemplate
+                    Maui.ItemDelegate
                     {
-                        anchors.fill:parent
-                        iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                        iconSource: "text-enriched"
-                        label1.text: qsTr("Rich text file")
-                        label2.text: qsTr("With support for basic text format editing")
-                    }
+                        anchors.fill: parent
 
-                    onClicked:
-                    {
-                        openTab("")
-                        _editorListView.currentItem.body.textFormat = TextEdit.RichText
-                        _newDocumentMenu.close()
-                    }
-                }
-
-                Maui.ItemDelegate
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-
-                    Maui.ListItemTemplate
-                    {
-                        anchors.fill:parent
-                        iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                        iconSource: "text-html"
-                        label1.text: qsTr("HTML text file")
-                        label2.text: qsTr("Text file with HTML markup support")
+                        Maui.ListItemTemplate
+                        {
+                            anchors.fill:parent
+                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
+                            iconSource: "text-html"
+                            label1.text: qsTr("HTML text file")
+                            label2.text: qsTr("Text file with HTML markup support")
+                        }
                     }
                 }
             }
