@@ -10,15 +10,15 @@ MauiLab.SettingsDialog
 {
     MauiLab.SettingsSection
     {
-        title: qsTr("General")
-        description: qsTr("Configure the app UI, behaviour and plugins.")
+        title: i18n("General")
+        description: i18n("Configure the app UI, behaviour and plugins.")
 
         Switch
         {
             Layout.fillWidth: true
             checkable: true
             checked: root.enableSidebar
-            Kirigami.FormData.label: qsTr("Enable places sidebar")
+            Kirigami.FormData.label: i18n("Enable places sidebar")
             onToggled:
             {
                 root.enableSidebar = !root.enableSidebar
@@ -31,7 +31,7 @@ MauiLab.SettingsDialog
             Layout.fillWidth: true
             checkable: true
             checked: root.defaultBlankFile
-            Kirigami.FormData.label: qsTr("Open blank file by default")
+            Kirigami.FormData.label: i18n("Open blank file by default")
             onToggled:
             {
                 root.defaultBlankFile = !root.defaultBlankFile
@@ -45,7 +45,7 @@ MauiLab.SettingsDialog
             Layout.fillWidth: true
             checkable: true
             checked: root.terminalVisible
-            Kirigami.FormData.label: qsTr("Enable embedded terminal")
+            Kirigami.FormData.label: i18n("Enable embedded terminal")
             onToggled:
             {
                 root.terminalVisible = !root.terminalVisible
@@ -56,15 +56,15 @@ MauiLab.SettingsDialog
 
     MauiLab.SettingsSection
     {
-        title: qsTr("Editor")
-        description: qsTr("Configure the look and feel of the editor. The settings are applied globally")
+        title: i18n("Editor")
+        description: i18n("Configure the look and feel of the editor. The settings are applied globally")
 
         Switch
         {
             Layout.fillWidth: true
             checkable: true
             checked: root.showLineNumbers
-            Kirigami.FormData.label: qsTr("Show line numbers")
+            Kirigami.FormData.label: i18n("Show line numbers")
             onToggled:
             {
                 root.showLineNumbers = !root.showLineNumbers
@@ -77,7 +77,7 @@ MauiLab.SettingsDialog
             Layout.fillWidth: true
             checkable: true
             checked: root.showSyntaxHighlightingLanguages
-            Kirigami.FormData.label: qsTr("Show syntax highlighting languages")
+            Kirigami.FormData.label: i18n("Show syntax highlighting languages")
             onToggled:
             {
                 root.showSyntaxHighlightingLanguages = !root.showSyntaxHighlightingLanguages
@@ -88,7 +88,7 @@ MauiLab.SettingsDialog
         Switch
         {
             Layout.fillWidth: true
-            Kirigami.FormData.label: qsTr("Enable syntax highlighting")
+            Kirigami.FormData.label: i18n("Enable syntax highlighting")
             checkable: true
             checked: root.enableSyntaxHighlighting
             onToggled:
@@ -101,13 +101,13 @@ MauiLab.SettingsDialog
 
     MauiLab.SettingsSection
     {
-        title: qsTr("Fonts")
-        description: qsTr("Configure the global editor font family and size")
+        title: i18n("Fonts")
+        description: i18n("Configure the global editor font family and size")
 
         ComboBox
         {
             Layout.fillWidth: true
-            Kirigami.FormData.label: qsTr("Family")
+            Kirigami.FormData.label: i18n("Family")
             model: Qt.fontFamilies()
             Component.onCompleted: currentIndex = find(root.font.family, Qt.MatchExactly)
             onActivated:
@@ -120,7 +120,7 @@ MauiLab.SettingsDialog
         SpinBox
         {
             Layout.fillWidth: true
-            Kirigami.FormData.label: qsTr("Size")
+            Kirigami.FormData.label: i18n("Size")
             from: 0; to : 500
             value: root.font.pointSize
             onValueChanged:
@@ -133,14 +133,14 @@ MauiLab.SettingsDialog
 
     MauiLab.SettingsSection
     {
-        title: qsTr("Style")
-        description: qsTr("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
+        title: i18n("Style")
+        description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
         visible: root.enableSyntaxHighlighting
 
         ComboBox
         {
             Layout.fillWidth: true
-            Kirigami.FormData.label: qsTr("Theme")
+            Kirigami.FormData.label: i18n("Theme")
             model:  _dummyDocumentHandler.getThemes()
             Component.onCompleted: currentIndex = find(root.theme, Qt.MatchExactly)
 
@@ -159,7 +159,7 @@ MauiLab.SettingsDialog
         Row
         {
             Layout.fillWidth: true
-            Kirigami.FormData.label: qsTr("Color")
+            Kirigami.FormData.label: i18n("Color")
             spacing: Maui.Style.space.medium
 
             Rectangle
@@ -247,12 +247,12 @@ MauiLab.SettingsDialog
 
     MauiLab.SettingsSection
     {
-        title: qsTr("Interface")
-        description: qsTr("Configure the app UI.")
+        title: i18n("Interface")
+        description: i18n("Configure the app UI.")
 
         Switch
         {
-            Kirigami.FormData.label: qsTr("Focus Mode")
+            Kirigami.FormData.label: i18n("Focus Mode")
             checkable: true
             checked:  root.focusMode
             onToggled:
@@ -263,7 +263,7 @@ MauiLab.SettingsDialog
 
         Switch
         {
-            Kirigami.FormData.label: qsTr("Translucent Sidebar")
+            Kirigami.FormData.label: i18n("Translucent Sidebar")
             checkable: true
             enabled: root.enableSidebar && Maui.Handy.isLinux
             checked:  root.translucency
@@ -272,7 +272,7 @@ MauiLab.SettingsDialog
 
         Switch
         {
-            Kirigami.FormData.label: qsTr("Dark Mode")
+            Kirigami.FormData.label: i18n("Dark Mode")
             checkable: true
             enabled: false
         }

@@ -38,14 +38,14 @@ MauiLab.AltBrowser
 
         Action
         {
-            text: qsTr("List")
+            text: i18n("List")
             icon.name: "view-list-details"
             onTriggered: control.viewType = MauiLab.AltBrowser.ViewType.List
         }
 
         Action
         {
-            text: qsTr("Grid")
+            text: i18n("Grid")
             icon.name: "view-list-icons"
             onTriggered: control.viewType= MauiLab.AltBrowser.ViewType.Grid
         }
@@ -54,7 +54,7 @@ MauiLab.AltBrowser
     headBar.middleContent: Maui.TextField
     {
         Layout.fillWidth: true
-        placeholderText: qsTr("Filter...")
+        placeholderText: i18n("Filter...")
         onAccepted: control.model.filter = text
         onCleared:  control.model.filter = text
     }

@@ -65,11 +65,11 @@ Maui.Page
                     id: _saveDialog
                     property int fileIndex
                     page.padding: Maui.Style.space.huge
-                    title: qsTr("Save file")
-                    message: qsTr(String("This file has been modified, you can save your changes now or discard them.\n")) + _editorModel.get(_tabButton.index).path
+                    title: i18n("Save file")
+                    message: i18n(String("This file has been modified, you can save your changes now or discard them.\n")) + _editorModel.get(_tabButton.index).path
 
-                    acceptButton.text: qsTr("Save")
-                    rejectButton.text: qsTr("Discard")
+                    acceptButton.text: i18n("Save")
+                    rejectButton.text: i18n("Discard")
 
                     onAccepted:
                     {
@@ -131,7 +131,7 @@ Maui.Page
             rejectButton.visible : false
             page.padding: 0
             acceptButton.visible: true
-            acceptButton.text: qsTr("New template")
+            acceptButton.text: i18n("New template")
 
             ColumnLayout
             {
@@ -154,8 +154,8 @@ Maui.Page
                             anchors.fill:parent
                             iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
                             iconSource: "folder-open"
-                            label1.text: qsTr("Open file")
-                            label2.text: qsTr("Open one or multiple files from the file system")
+                            label1.text: i18n("Open file")
+                            label2.text: i18n("Open one or multiple files from the file system")
                         }
 
                         onClicked:
@@ -180,8 +180,8 @@ Maui.Page
                             anchors.fill:parent
                             iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
                             iconSource: "text-x-generic"
-                            label1.text: qsTr("Text file")
-                            label2.text: qsTr("Simple text file with syntax highlighting")
+                            label1.text: i18n("Text file")
+                            label2.text: i18n("Simple text file with syntax highlighting")
                         }
 
                         onClicked:
@@ -207,8 +207,8 @@ alt: true
                             anchors.fill:parent
                             iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
                             iconSource: "text-enriched"
-                            label1.text: qsTr("Rich text file")
-                            label2.text: qsTr("With support for basic text format editing")
+                            label1.text: i18n("Rich text file")
+                            label2.text: i18n("With support for basic text format editing")
                         }
 
                         onClicked:
@@ -234,8 +234,8 @@ alt: true
                             anchors.fill:parent
                             iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
                             iconSource: "text-html"
-                            label1.text: qsTr("HTML text file")
-                            label2.text: qsTr("Text file with HTML markup support")
+                            label1.text: i18n("HTML text file")
+                            label2.text: i18n("Text file with HTML markup support")
                         }
                     }
                 }
@@ -313,7 +313,7 @@ alt: true
         {
             //        visible: root.focusMode
             icon.name: "quickview"
-            text: qsTr("Focus")
+            text: i18n("Focus")
             checked: root.focusMode
             onClicked: root.focusMode = !root.focusMode
         }
@@ -339,7 +339,7 @@ alt: true
                 Action
                 {
                     icon.name: "view-split-left-right"
-                    text: qsTr("Split horizontal")
+                    text: i18n("Split horizontal")
                     onTriggered: root.currentTab.split("", Qt.Horizontal)
                     checked:  root.currentTab && root.currentTab.orientation === Qt.Horizontal && root.currentTab.count > 1
                 }
@@ -347,7 +347,7 @@ alt: true
                 Action
                 {
                     icon.name: "view-split-top-bottom"
-                    text: qsTr("Split vertical")
+                    text: i18n("Split vertical")
                     onTriggered: root.currentTab.split("", Qt.Vertical)
                     checked:  root.currentTab && root.currentTab.orientation === Qt.Vertical && root.currentTab.count > 1
                 }
@@ -361,7 +361,7 @@ alt: true
 
                 Action
                 {
-                    text: qsTr("Save")
+                    text: i18n("Save")
                     icon.name: "document-save"
                     onTriggered: saveFile( control.currentEditor.fileUrl, _tabBar.currentIndex)
                 }
@@ -369,7 +369,7 @@ alt: true
                 Action
                 {
                     icon.name: "document-save-as"
-                    text: qsTr("Save as...")
+                    text: i18n("Save as...")
                     onTriggered: saveFile("", _tabBar.currentIndex)
                 }
             }
@@ -409,8 +409,8 @@ alt: true
         emojiSize: Maui.Style.iconSizes.huge
         isMask: true
         onActionTriggered: openTab("")
-        title: qsTr("Create a new document")
-        body: qsTr("You can create a new document by clicking the New File button, or here.<br>
+        title: i18n("Create a new document")
+        body: i18n("You can create a new document by clicking the New File button, or here.<br>
         Alternative you can open existing files from the left places sidebar or by clicking the Open button")
     }
 

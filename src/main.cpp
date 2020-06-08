@@ -1,5 +1,7 @@
 #include <QQmlApplicationEngine>
 #include <QCommandLineParser>
+#include <QQmlContext>
+
 #include <QIcon>
 
 #ifndef STATIC_MAUIKIT
@@ -28,6 +30,8 @@
 //Models
 #include "src/models/documentsmodel.h"
 #include "src/models/editormodel.h"
+
+#include <KI18n/KLocalizedContext>
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -85,13 +89,14 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     }, Qt::QueuedConnection);
 
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+
     qmlRegisterSingletonType<Nota>("org.maui.nota", 1, 0, "Nota",
                                   [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
         return nota;
     });
-
 
     qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
     qmlRegisterType<EditorModel> ("org.maui.nota", 1, 0, "Editor");

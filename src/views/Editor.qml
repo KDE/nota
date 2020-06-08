@@ -53,7 +53,7 @@ Maui.Editor
         Maui.TextField
         {
             id: _findField
-            placeholderText: qsTr("Find")
+            placeholderText: i18n("Find")
             onAccepted:
             {
                 console.log("FIND THE QUERY", text)
@@ -63,12 +63,12 @@ Maui.Editor
 
         Maui.TextField
         {
-            placeholderText: qsTr("Replace")
+            placeholderText: i18n("Replace")
         },
 
         Button
         {
-            text: qsTr("Replace")
+            text: i18n("Replace")
         }
 
     ]
@@ -150,7 +150,7 @@ Maui.Editor
 
             MenuItem
             {
-                text: qsTr("Open here")
+                text: i18n("Open here")
                 onTriggered:
                 {
                     control.fileUrl = _dropArea.urls[0]
@@ -159,7 +159,7 @@ Maui.Editor
 
             MenuItem
             {
-                text: qsTr("Open in new tab")
+                text: i18n("Open in new tab")
                 onTriggered:
                 {
                      Nota.Nota.requestFiles( _dropArea.urls )
@@ -169,7 +169,7 @@ Maui.Editor
             MenuItem
             {
                 enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && root.supportSplit
-                text: qsTr("Open in new split")
+                text: i18n("Open in new split")
                 onTriggered:
                 {
                     currentTab.split(_dropArea.urls[0], Qt.Horizontal)
@@ -178,7 +178,7 @@ Maui.Editor
 
             MenuItem
             {
-                text: qsTr("Cancel")
+                text: i18n("Cancel")
             }
         }
     }

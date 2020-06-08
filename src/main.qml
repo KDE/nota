@@ -14,7 +14,7 @@ Maui.ApplicationWindow
     id: root
     title: currentEditor ? currentTab.title : ""
 
-    Maui.App.description: qsTr("Nota allows you to edit text files.")
+    Maui.App.description: i18n("Nota allows you to edit text files.")
     Maui.App.handleAccounts: false
     background.opacity: translucency ? 0.5 : 1
 
@@ -60,8 +60,8 @@ Maui.ApplicationWindow
     Maui.NewDialog
     {
         id: _pluginLoader
-        title: qsTr("Plugin")
-        message: qsTr("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
+        title: i18n("Plugin")
+        message: i18n("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
         onFinished:     {
             const url = text
             if(Maui.FM.fileExists(url))
@@ -83,7 +83,7 @@ Maui.ApplicationWindow
 
         MenuItem
         {
-            text: qsTr("Settings")
+            text: i18n("Settings")
             icon.name: "settings-configure"
             onTriggered:
             {
@@ -135,11 +135,11 @@ Maui.ApplicationWindow
         Maui.Dialog
         {
             property bool discard : false
-            title: qsTr("Un saved files")
-            message: qsTr("You have un saved files. You can go back and save them or choose to dicard all changes and exit.")
+            title: i18n("Un saved files")
+            message: i18n("You have un saved files. You can go back and save them or choose to dicard all changes and exit.")
             page.padding: Maui.Style.space.big
-            acceptButton.text: qsTr("Go back")
-            rejectButton.text: qsTr("Discard")
+            acceptButton.text: i18n("Go back")
+            rejectButton.text: i18n("Discard")
             onRejected:
             {
                 discard = true
@@ -362,14 +362,14 @@ Maui.ApplicationWindow
             {
                 id: editorView
                 MauiLab.AppView.iconName: "document-edit"
-                MauiLab.AppView.title: qsTr("Editor")
+                MauiLab.AppView.title: i18n("Editor")
 
             }
 
             MauiLab.AppViewLoader
             {
                 MauiLab.AppView.iconName: "view-pim-journal"
-                MauiLab.AppView.title: qsTr("Documents")
+                MauiLab.AppView.title: i18n("Documents")
                 visible: !focusMode
 
                 DocumentsView
@@ -381,7 +381,7 @@ Maui.ApplicationWindow
             MauiLab.AppViewLoader
             {
                 MauiLab.AppView.iconName: "view-media-recent"
-                MauiLab.AppView.title: qsTr("Recent")
+                MauiLab.AppView.title: i18n("Recent")
                 visible: !focusMode
 
                 RecentView
@@ -406,7 +406,7 @@ Maui.ApplicationWindow
 
             Action
             {
-                text: qsTr("Open")
+                text: i18n("Open")
                 icon.name: "document-open"
                 onTriggered:
                 {
@@ -420,13 +420,13 @@ Maui.ApplicationWindow
 
             Action
             {
-                text: qsTr("Share")
+                text: i18n("Share")
                 icon.name: "document-share"
             }
 
             Action
             {
-                text: qsTr("Export")
+                text: i18n("Export")
                 icon.name: "document-export"
             }
         }
