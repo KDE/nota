@@ -11,14 +11,14 @@ MauiLab.SettingsDialog
     MauiLab.SettingsSection
     {
         title: qsTr("General")
-        description: qsTr("Configure the app UI and plugins.")
+        description: qsTr("Configure the app UI, behaviour and plugins.")
 
         Switch
         {
             Layout.fillWidth: true
             checkable: true
             checked: root.enableSidebar
-            Kirigami.FormData.label: qsTr("Enable Places Sidebar")
+            Kirigami.FormData.label: qsTr("Enable places sidebar")
             onToggled:
             {
                 root.enableSidebar = !root.enableSidebar
@@ -28,11 +28,24 @@ MauiLab.SettingsDialog
 
         Switch
         {
+            Layout.fillWidth: true
+            checkable: true
+            checked: root.defaultBlankFile
+            Kirigami.FormData.label: qsTr("Open blank file by default")
+            onToggled:
+            {
+                root.defaultBlankFile = !root.defaultBlankFile
+                Maui.FM.saveSettings("DEFAULT_BLANK_FILE", defaultBlankFile, "SETTINGS")
+            }
+        }
+
+        Switch
+        {
             enabled: Nota.Nota.supportsEmbededTerminal()
             Layout.fillWidth: true
             checkable: true
             checked: root.terminalVisible
-            Kirigami.FormData.label: qsTr("Enable Embedded Terminal")
+            Kirigami.FormData.label: qsTr("Enable embedded terminal")
             onToggled:
             {
                 root.terminalVisible = !root.terminalVisible
@@ -64,7 +77,7 @@ MauiLab.SettingsDialog
             Layout.fillWidth: true
             checkable: true
             checked: root.showSyntaxHighlightingLanguages
-            Kirigami.FormData.label: qsTr("Show Syntax Highlighting Languages")
+            Kirigami.FormData.label: qsTr("Show syntax highlighting languages")
             onToggled:
             {
                 root.showSyntaxHighlightingLanguages = !root.showSyntaxHighlightingLanguages
@@ -75,7 +88,7 @@ MauiLab.SettingsDialog
         Switch
         {
             Layout.fillWidth: true
-            Kirigami.FormData.label: qsTr("Enable Syntax Highlighting")
+            Kirigami.FormData.label: qsTr("Enable syntax highlighting")
             checkable: true
             checked: root.enableSyntaxHighlighting
             onToggled:

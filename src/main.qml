@@ -30,6 +30,7 @@ Maui.ApplicationWindow
     //Global editor props
     property bool focusMode : false
     property bool enableSidebar : Maui.FM.loadSettings("ENABLE_SIDEBAR", "EXTENSIONS", !focusMode) == "true"
+    property bool defaultBlankFile : Maui.FM.loadSettings("DEFAULT_BLANK_FILE", "SETTINGS", false) == "true"
 
     property bool showLineNumbers : Maui.FM.loadSettings("SHOW_LINE_NUMBERS", "EDITOR", true) == "true"
     property bool enableSyntaxHighlighting : Maui.FM.loadSettings("ENABLE_SYNTAX_HIGHLIGHTING", "EDITOR", true) == "true"
@@ -339,6 +340,11 @@ Maui.ApplicationWindow
         }
     }
 
+    Component.onCompleted:if(root.defaultBlankFile)
+    {
+        editorView.openTab("")
+    }
+
     Maui.Page
     {
         anchors.fill: parent
@@ -357,6 +363,7 @@ Maui.ApplicationWindow
                 id: editorView
                 MauiLab.AppView.iconName: "document-edit"
                 MauiLab.AppView.title: qsTr("Editor")
+
             }
 
             MauiLab.AppViewLoader
