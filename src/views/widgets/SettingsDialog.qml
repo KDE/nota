@@ -134,7 +134,7 @@ MauiLab.SettingsDialog
     MauiLab.SettingsSection
     {
         title: i18n("Style")
-        description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
+        description: i18n("Configure the style of the syntax highlighting. This configuration in not applied for rich text formats.")
         visible: root.enableSyntaxHighlighting
 
         ComboBox
