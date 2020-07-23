@@ -15,7 +15,7 @@ Maui.Page
     property alias currentTab : _editorListView.currentItem
     property Item currentEditor: currentTab ? currentTab.currentItem : null
     property alias listView: _editorListView
-    property alias count: _editorListView.count
+    readonly property alias count: _editorListView.count
     readonly property alias model : _documentModel
     property alias plugin: _pluginLayout
 
@@ -36,7 +36,7 @@ Maui.Page
         Repeater
         {
             id: _repeater
-            model: _editorModel
+            model: _documentModel.count
 
             Maui.TabButton
             {
@@ -46,43 +46,24 @@ Maui.Page
                 implicitWidth: Math.max(parent.width / _repeater.count, 120)
                 checked: index === _tabBar.currentIndex
 
-                text: model.label
+                text: _documentModel.get(index).title
 
                 onClicked: _editorListView.currentIndex = index
                 onCloseClicked:
                 {
-                    if( _documentModel.get(model.index).editor.document.modified)
+                    if( tabHasUnsavedFiles(model.index) )
                     {
-                        _saveDialog.fileIndex = model.index
-                        _saveDialog.open()
+                        _dialogLoader.sourceComponent = _unsavedDialogComponent
+                        dialog.callback = function () { closeTab(model.index) }
+
+                        if(tabHasUnsavedFiles(model.index))
+                        {
+                            dialog.open()
+                            return
+                        }
                     }
                     else
                         closeTab(model.index)
-                }
-
-                Maui.Dialog
-                {
-                    id: _saveDialog
-                    property int fileIndex
-                    page.padding: Maui.Style.space.huge
-                    title: i18n("Save file")
-                    message: i18n(String("This file has been modified, you can save your changes now or discard them.\n")) + _editorModel.get(_tabButton.index).path
-
-                    acceptButton.text: i18n("Save")
-                    rejectButton.text: i18n("Discard")
-
-                    onAccepted:
-                    {
-                        saveFile(_editorModel.get(fileIndex).path, fileIndex, _documentModel.get(fileIndex))
-                        closeTab(fileIndex)
-                        _saveDialog.close()
-                    }
-
-                    onRejected:
-                    {
-                        _saveDialog.close()
-                        closeTab(fileIndex)
-                    }
                 }
             }
         }
@@ -245,13 +226,15 @@ Maui.Page
             {
                 autoExclusive: false
                 checkable: false
-                expanded: true
+                expanded: isWide
+                display: ToolButton.TextBesideIcon
 
                 Action
                 {
                     text: i18n("Save")
                     icon.name: "document-save"
-                    onTriggered: saveFile( control.currentEditor.fileUrl, _tabBar.currentIndex, control.currentEditor)
+                    enabled: currentEditor ? currentEditor.document.modified : false
+                    onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
                 }
 
                 Action
@@ -302,6 +285,46 @@ Maui.Page
         Alternative you can open existing files from the left places sidebar or by clicking the Open button")
     }
 
+    function unsavedTabSplits(index) //which split indexes are unsaved
+    {
+        var indexes = []
+        const tab =  control.model.get(index)
+        for(var i = 0; i < tab.count; i++)
+        {
+            if(tab.model.get(i).document.modified)
+            {
+                indexes.push(i)
+            }
+        }
+        return indexes
+    }
+
+    function tabHasUnsavedFiles(index) //if a tab has at least one unsaved file in a split
+    {
+        return unsavedTabSplits(index).length
+    }
+
+    function fileIndex(path) //find the [tab, split] index for a path
+    {
+        if(path.length === 0)
+        {
+            return [-1, -1]
+        }
+
+        for(var i = 0; i < control.count; i++)
+        {
+            const tab =  control.model.get(i)
+            for(var j = 0; j < tab.count; j++)
+            {
+                const doc = tab.model.get(j)
+                if(doc.fileUrl.toString() === path)
+                {
+                    return [i, j]
+                }
+            }
+        }
+        return [-1,-1]
+    }
 
     function openFile()
     {
@@ -320,38 +343,39 @@ Maui.Page
     function openTab(path)
     {
         _swipeView.currentIndex = views.editor
+        const index = fileIndex(path)
 
-        const index = _editorList.urlIndex(path)
-        if(index >= 0)
-            _editorListView.currentIndex = index;
-
-        if(!_editorList.append(path))
-            return ;
+        if(index[0] >= 0)
+        {
+            _editorListView.currentIndex = index[0]
+            currentTab.currentIndex = index[1]
+            return
+        }
 
         var component = Qt.createComponent("qrc:/views/editor/EditorLayout.qml");
         if (component.status === Component.Ready)
         {
             _documentModel.append(component.createObject(_documentModel, {"path": path}))
+            _historyList.append(path)
             _editorListView.currentIndex = _documentModel.count - 1
         }
     }
 
-    function closeTab(index)
+    function closeTab(index) //no questions asked
     {
-        console.log("CLOSING FILE", index, _editorList.count, _documentModel.count)
-        _editorList.remove(index)
+        var item = _documentModel.get(index)
+        item.destroy()
         _documentModel.remove(index)
-        console.log("CLOSING FILE", index, _editorList.count, _documentModel.count)
     }
 
-    function saveFile(path, index, item)
+    function saveFile(path, item)
     {
         if(!item)
             return
 
         if (path && Maui.FM.fileExists(path))
         {
-            item.document.saveAs(path);
+            item.document.saveAs(path)
         } else
         {
             _dialogLoader.sourceComponent = _fileDialogComponent
@@ -359,8 +383,8 @@ Maui.Page
             //            fileDialog.settings.singleSelection = true
             dialog.show(function (paths)
             {
-                item.document.saveAs(paths[0]);
-                _editorList.update(index, paths[0]);
+                item.document.saveAs(paths[0])
+                _historyList.append(paths[0])
             });
         }
     }

@@ -63,6 +63,19 @@ MauiLab.SettingsDialog
         {
             Layout.fillWidth: true
             checkable: true
+            checked: root.autoSave
+            Kirigami.FormData.label: i18n("Auto save")
+            onToggled:
+            {
+                root.autoSave = !root.autoSave
+                Maui.FM.saveSettings("AUTO_SAVE", autoSave, "EDITOR")
+            }
+        }
+
+        Switch
+        {
+            Layout.fillWidth: true
+            checkable: true
             checked: root.showLineNumbers
             Kirigami.FormData.label: i18n("Show line numbers")
             onToggled:

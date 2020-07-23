@@ -13,7 +13,7 @@ DocsBrowser
     viewType: MauiLab.AltBrowser.ViewType.Grid
     model: Maui.BaseModel
     {
-        list: _editorList.history
+        list: _historyList
         sort: "modified"
         sortOrder: Qt.DescendingOrder
     }

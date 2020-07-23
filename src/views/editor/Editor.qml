@@ -31,6 +31,8 @@ Maui.Editor
     showSyntaxHighlightingLanguages: root.showSyntaxHighlightingLanguages
     document.theme: root.theme
     document.enableSyntaxHighlighting: root.enableSyntaxHighlighting
+    document.autoSave: root.autoSave
+
     onFileUrlChanged: syncTerminal(control.fileUrl)
 
     MouseArea
@@ -76,7 +78,7 @@ Maui.Editor
     {
         if((event.key === Qt.Key_S) && (event.modifiers & Qt.ControlModifier))
         {
-            saveFile(document.fileUrl, _tabBar.currentIndex)
+            saveFile(document.fileUrl, control)
         }
 
         if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))

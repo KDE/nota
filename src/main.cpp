@@ -29,7 +29,7 @@
 
 //Models
 #include "src/models/documentsmodel.h"
-#include "src/models/editormodel.h"
+#include "src/models/historymodel.h"
 
 #include <KI18n/KLocalizedContext>
 
@@ -104,8 +104,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     });
 
     qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
-    qmlRegisterType<EditorModel> ("org.maui.nota", 1, 0, "Editor");
-    qmlRegisterType<HistoryModel> ();
+    qmlRegisterType<HistoryModel> ("org.maui.nota", 1, 0, "History");
 
     engine.load(url);
 

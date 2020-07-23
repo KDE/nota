@@ -31,6 +31,7 @@ Maui.ApplicationWindow
     property bool defaultBlankFile : Maui.FM.loadSettings("DEFAULT_BLANK_FILE", "SETTINGS", false) == "true"
 
     property bool showLineNumbers : Maui.FM.loadSettings("SHOW_LINE_NUMBERS", "EDITOR", true) == "true"
+    property bool autoSave : Maui.FM.loadSettings("AUTO_SAVE", "EDITOR", false) == "true"
     property bool enableSyntaxHighlighting : Maui.FM.loadSettings("ENABLE_SYNTAX_HIGHLIGHTING", "EDITOR", true) == "true"
     property bool showSyntaxHighlightingLanguages: false
     property bool supportSplit :!Kirigami.Settings.isMobile && root.width > 600
@@ -101,12 +102,13 @@ Maui.ApplicationWindow
     {
         _dialogLoader.sourceComponent = _unsavedDialogComponent
 
+        dialog.callback = function () {root.close()}
+
         if(!dialog.discard)
         {
             for(var i = 0; i < editorView.count; i++)
             {
-                const doc =  editorView.model.get(i)
-                if(doc.document.modified)
+                if(editorView.tabHasUnsavedFiles(i))
                 {
                     close.accepted = false
                     dialog.open()
@@ -130,6 +132,7 @@ Maui.ApplicationWindow
         Maui.Dialog
         {
             property bool discard : false
+            property var callback : ({})
             title: i18n("Un saved files")
             message: i18n("You have un saved files. You can go back and save them or choose to dicard all changes and exit.")
             page.padding: Maui.Style.space.big
@@ -138,7 +141,12 @@ Maui.ApplicationWindow
             onRejected:
             {
                 discard = true
-                root.close()
+
+                if(callback instanceof Function)
+                {
+                    callback()
+                }
+                close()
             }
             onAccepted: close()
         }
@@ -201,16 +209,6 @@ Maui.ApplicationWindow
     sideBar: PlacesSidebar
     {
         id : _drawer
-
-    }
-
-    Maui.BaseModel
-    {
-        id: _editorModel
-        list: Nota.Editor
-        {
-            id: _editorList
-        }
     }
 
     DropArea
@@ -233,6 +231,8 @@ Maui.ApplicationWindow
     {
         editorView.openTab("")
     }
+
+    Nota.History { id: _historyList }
 
     Maui.Page
     {
@@ -275,7 +275,6 @@ Maui.ApplicationWindow
 
                 RecentView
                 {
-                    id:_recentView
                 }
             }
         }

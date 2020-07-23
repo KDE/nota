@@ -1,8 +1,8 @@
-import QtQuick 2.9
-import QtQuick.Controls 2.13
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.0 as Maui
+import org.kde.mauikit 1.2 as Maui
 import QtQml.Models 2.3
 import org.maui.nota 1.0 as Nota
 
@@ -188,35 +188,6 @@ Item
         }
     }
 
-
-    Maui.Dialog
-    {
-        id: _saveDialog
-        property int splitIndex : -1
-        page.padding: Maui.Style.space.huge
-        title: i18n("Save file")
-        message: i18n(String("This file has been modified, you can save your changes now or discard them.\n")) + currentItem.fileUrl
-
-        acceptButton.text: i18n("Save")
-        rejectButton.text: i18n("Discard")
-
-        onAccepted:
-        {
-            var item = _splitView.itemAt(splitIndex)
-            saveFile(item.fileUrl, _editorListView.currentIndex, item)
-
-            _saveDialog.close()
-//            control.destroyItem(splitIndex)
-        }
-
-        onRejected:
-        {
-            _saveDialog.close()
-            control.destroyItem(splitIndex)
-        }
-    }
-
-
     function syncTerminal(path)
     {
         if(control.terminal && control.terminal.visible && Maui.FM.fileExists(path))
@@ -231,7 +202,6 @@ Item
             pop()
             return
         }//close the innactive split
-
 
         _splitView.orientation = orientation
 
@@ -263,28 +233,28 @@ Item
         {
             return //can not pop all the browsers, leave at leats 1
         }
-        closeSplit(_splitView.currentIndex === 1 ? 0 : 1)
 
+        closeSplit(_splitView.currentIndex === 1 ? 0 : 1)
     }
 
-    function closeSplit(index)
+    function closeSplit(index) //closes a split but triggering a warning before
     {
         if(index >= _splitView.count)
         {
             return
         }
 
-        var item = _splitView.itemAt(index)
+        const item = _splitView.itemAt(index)
         if( item.document.modified)
         {
-            _saveDialog.splitIndex = index
-            console.log("Save this", index, item.fileUrl)
-            _saveDialog.open()
-        }
-        else destroyItem(index)
+            _dialogLoader.sourceComponent = _unsavedDialogComponent
+            dialog.callback = function () { destroyItem(index) }
+            dialog.open()
+            return
+        } else destroyItem(index)
     }
 
-    function destroyItem(index)
+    function destroyItem(index) //deestroys a split view withouth warning
     {
         var item = _splitView.itemAt(index)
         item.destroy()
