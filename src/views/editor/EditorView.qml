@@ -73,7 +73,7 @@ Maui.Page
 
                     onAccepted:
                     {
-                        _documentModel.get(fileIndex).saveFile(_editorModel.get(fileIndex).path, fileIndex)
+                        saveFile(_editorModel.get(fileIndex).path, fileIndex, _documentModel.get(fileIndex))
                         closeTab(fileIndex)
                         _saveDialog.close()
                     }
@@ -123,124 +123,12 @@ Maui.Page
             }
         }
 
-        Maui.Dialog
+        NewFileDialog
         {
             id: _newDocumentMenu
             maxHeight: 300
             maxWidth: 400
-            rejectButton.visible : false
-            page.padding: 0
-            acceptButton.visible: true
-            acceptButton.text: i18n("New template")
-
-            ColumnLayout
-            {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                spacing: 0
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    alt: true
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "folder-open"
-                            label1.text: i18n("Open file")
-                            label2.text: i18n("Open one or multiple files from the file system")
-                        }
-
-                        onClicked:
-                        {
-                            openFile()
-                            _newDocumentMenu.close()
-                        }
-                    }
-                }
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "text-x-generic"
-                            label1.text: i18n("Text file")
-                            label2.text: i18n("Simple text file with syntax highlighting")
-                        }
-
-                        onClicked:
-                        {
-                            openTab("")
-                            _editorListView.currentItem.body.textFormat = TextEdit.PlainText
-                            _newDocumentMenu.close()
-                        }
-                    }
-                }
-
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-alt: true
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "text-enriched"
-                            label1.text: i18n("Rich text file")
-                            label2.text: i18n("With support for basic text format editing")
-                        }
-
-                        onClicked:
-                        {
-                            openTab("")
-                            _editorListView.currentItem.body.textFormat = TextEdit.RichText
-                            _newDocumentMenu.close()
-                        }
-                    }
-                }
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "text-html"
-                            label1.text: i18n("HTML text file")
-                            label2.text: i18n("Text file with HTML markup support")
-                        }
-                    }
-                }
-            }
-        }
+         }
     }
 
     Maui.Page
@@ -363,14 +251,14 @@ alt: true
                 {
                     text: i18n("Save")
                     icon.name: "document-save"
-                    onTriggered: saveFile( control.currentEditor.fileUrl, _tabBar.currentIndex)
+                    onTriggered: saveFile( control.currentEditor.fileUrl, _tabBar.currentIndex, control.currentEditor)
                 }
 
                 Action
                 {
                     icon.name: "document-save-as"
                     text: i18n("Save as...")
-                    onTriggered: saveFile("", _tabBar.currentIndex)
+                    onTriggered: saveFile("", _tabBar.currentIndex, control.currentEditor)
                 }
             }
         ]
@@ -440,11 +328,10 @@ alt: true
         if(!_editorList.append(path))
             return ;
 
-        var component = Qt.createComponent("qrc:/views/EditorLayout.qml");
+        var component = Qt.createComponent("qrc:/views/editor/EditorLayout.qml");
         if (component.status === Component.Ready)
         {
-            _documentModel.append(component.createObject(_documentModel, {"path": path}));
-
+            _documentModel.append(component.createObject(_documentModel, {"path": path}))
             _editorListView.currentIndex = _documentModel.count - 1
         }
     }
@@ -457,11 +344,14 @@ alt: true
         console.log("CLOSING FILE", index, _editorList.count, _documentModel.count)
     }
 
-    function saveFile(path, index)
+    function saveFile(path, index, item)
     {
+        if(!item)
+            return
+
         if (path && Maui.FM.fileExists(path))
         {
-            control.currentEditor.document.saveAs(path);
+            item.document.saveAs(path);
         } else
         {
             _dialogLoader.sourceComponent = _fileDialogComponent
@@ -469,7 +359,7 @@ alt: true
             //            fileDialog.settings.singleSelection = true
             dialog.show(function (paths)
             {
-                control.currentEditor.document.saveAs(paths[0]);
+                item.document.saveAs(paths[0]);
                 _editorList.update(index, paths[0]);
             });
         }

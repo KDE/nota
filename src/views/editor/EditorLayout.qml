@@ -30,7 +30,7 @@ Item
     {
         if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))
         {
-             split("", Qt.Vertical)
+            split("", Qt.Vertical)
         }
     }
 
@@ -40,6 +40,7 @@ Item
     {
         anchors.fill: parent
         orientation: Qt.Vertical
+
         SplitView
         {
             id: _splitView
@@ -66,50 +67,50 @@ Item
 
 
                 states: [  State
-                {
-                    when: _splitView.orientation === Qt.Horizontal
-
-                    AnchorChanges
                     {
-                        target: _splitSeparator1
-                        anchors.top: parent.top
-                        anchors.bottom: parent.bottom
-                        anchors.left: parent.left
-                        anchors.right: undefined
-                    }
+                        when: _splitView.orientation === Qt.Horizontal
 
-                    AnchorChanges
+                        AnchorChanges
+                        {
+                            target: _splitSeparator1
+                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.left: parent.left
+                            anchors.right: undefined
+                        }
+
+                        AnchorChanges
+                        {
+                            target: _splitSeparator2
+                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.right: parent.right
+                            anchors.left: undefined
+                        }
+                    },
+
+                    State
                     {
-                        target: _splitSeparator2
-                        anchors.top: parent.top
-                        anchors.bottom: parent.bottom
-                        anchors.right: parent.right
-                        anchors.left: undefined
-                    }
-                },
+                        when: _splitView.orientation === Qt.Vertical
 
-                State
-                {
-                    when: _splitView.orientation === Qt.Vertical
+                        AnchorChanges
+                        {
+                            target: _splitSeparator1
+                            anchors.top: parent.top
+                            anchors.bottom: undefined
+                            anchors.left: parent.left
+                            anchors.right: parent.right
+                        }
 
-                    AnchorChanges
-                    {
-                        target: _splitSeparator1
-                        anchors.top: parent.top
-                        anchors.bottom: undefined
-                        anchors.left: parent.left
-                        anchors.right: parent.right
+                        AnchorChanges
+                        {
+                            target: _splitSeparator2
+                            anchors.top: undefined
+                            anchors.bottom: parent.bottom
+                            anchors.right: parent.right
+                            anchors.left: parent.left
+                        }
                     }
-
-                    AnchorChanges
-                    {
-                        target: _splitSeparator2
-                        anchors.top: undefined
-                        anchors.bottom: parent.bottom
-                        anchors.right: parent.right
-                        anchors.left: parent.left
-                    }
-                }
 
                 ]
 
@@ -188,6 +189,34 @@ Item
     }
 
 
+    Maui.Dialog
+    {
+        id: _saveDialog
+        property int splitIndex : -1
+        page.padding: Maui.Style.space.huge
+        title: i18n("Save file")
+        message: i18n(String("This file has been modified, you can save your changes now or discard them.\n")) + currentItem.fileUrl
+
+        acceptButton.text: i18n("Save")
+        rejectButton.text: i18n("Discard")
+
+        onAccepted:
+        {
+            var item = _splitView.itemAt(splitIndex)
+            saveFile(item.fileUrl, _editorListView.currentIndex, item)
+
+            _saveDialog.close()
+//            control.destroyItem(splitIndex)
+        }
+
+        onRejected:
+        {
+            _saveDialog.close()
+            control.destroyItem(splitIndex)
+        }
+    }
+
+
     function syncTerminal(path)
     {
         if(control.terminal && control.terminal.visible && Maui.FM.fileExists(path))
@@ -197,6 +226,13 @@ Item
 
     function split(path, orientation)
     {
+        if(orientation === _splitView.orientation && path.length === 0 && _splitView.count === 2)
+        {
+            pop()
+            return
+        }//close the innactive split
+
+
         _splitView.orientation = orientation
 
         if(_splitView.count === 1 && !root.supportSplit)
@@ -209,7 +245,7 @@ Item
             return
         }
 
-        const component = Qt.createComponent("qrc:/views/Editor.qml");
+        const component = Qt.createComponent("qrc:/views/editor/Editor.qml");
 
         if (component.status === Component.Ready)
         {
@@ -227,9 +263,32 @@ Item
         {
             return //can not pop all the browsers, leave at leats 1
         }
-const index = _splitView.currentIndex === 1 ? 0 : 1
+        closeSplit(_splitView.currentIndex === 1 ? 0 : 1)
+
+    }
+
+    function closeSplit(index)
+    {
+        if(index >= _splitView.count)
+        {
+            return
+        }
+
+        var item = _splitView.itemAt(index)
+        if( item.document.modified)
+        {
+            _saveDialog.splitIndex = index
+            console.log("Save this", index, item.fileUrl)
+            _saveDialog.open()
+        }
+        else destroyItem(index)
+    }
+
+    function destroyItem(index)
+    {
+        var item = _splitView.itemAt(index)
+        item.destroy()
         splitObjectModel.remove(index)
-        _splitView.takeItem(index)
         _splitView.currentIndex = 0
     }
 }

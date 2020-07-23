@@ -1,12 +1,12 @@
-import QtQuick 2.13
-import QtQuick.Controls 2.13
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
+import org.kde.mauikit 1.2 as Maui
 import org.maui.nota 1.0 as Nota
 
 import "views"
+import "views/editor"
 import "views/widgets" as Widgets
 
 Maui.ApplicationWindow
@@ -14,8 +14,6 @@ Maui.ApplicationWindow
     id: root
     title: currentEditor ? currentTab.title : ""
 
-    Maui.App.description: i18n("Nota allows you to edit text files.")
-    Maui.App.handleAccounts: false
     background.opacity: translucency ? 0.5 : 1
 
     readonly property var views : ({editor: 0, documents: 1, recent: 2})
@@ -51,7 +49,7 @@ Maui.ApplicationWindow
 
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
-    MauiLab.Doodle
+    Maui.Doodle
     {
         id: _doodleDialog
         sourceItem: root.currentEditor ? root.currentEditor.body : null
@@ -72,8 +70,7 @@ Maui.ApplicationWindow
                 if (component.status === Component.Ready)
                 {
                     console.log("setting plugin <<", url)
-                    const object = component.createObject(editorView.plugin);
-
+                    const object = component.createObject(editorView.plugin)
                 }
             }
         }
@@ -98,9 +95,7 @@ Maui.ApplicationWindow
             icon.name: "plugin"
             onTriggered: _pluginLoader.open()
         }
-
     ]
-
 
     onClosing:
     {
@@ -203,116 +198,10 @@ Maui.ApplicationWindow
         }
     ]
 
-    sideBar: Maui.AbstractSideBar
+    sideBar: PlacesSidebar
     {
         id : _drawer
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
-        width: visible ? Math.min(Kirigami.Units.gridUnit * 14, root.width) : 0
-        collapsed: !isWide
-        collapsible: true
-        dragMargin: Maui.Style.space.big
-        overlay.visible: collapsed && position > 0 && visible
-        visible: (_swipeView.currentIndex === views.editor) && enableSidebar
-        enabled: root.enableSidebar
 
-        onVisibleChanged:
-        {
-            if(currentEditor)
-                syncSidebar(currentEditor.fileUrl)
-        }
-
-        Connections
-        {
-            target: _drawer.overlay
-            onClicked: _drawer.close()
-        }
-
-        background: Rectangle
-        {
-            color: Kirigami.Theme.backgroundColor
-            opacity: translucency ? 0.5 : 1
-        }
-
-        Maui.Page
-        {
-            anchors.fill: parent
-            Kirigami.Theme.inherit: false
-            Kirigami.Theme.colorSet: Kirigami.Theme.Window
-            background: Rectangle
-            {
-                color: Kirigami.Theme.backgroundColor
-                opacity: translucency ? 0.7 : 1
-            }
-            headBar.visible: true
-            headBar.middleContent: ComboBox
-            {
-                Layout.fillWidth: true
-                z : _drawer.z + 9999
-                model: Maui.BaseModel
-                {
-                    list: Maui.PlacesList
-                    {
-                        groups: [
-                            Maui.FMList.PLACES_PATH,
-                            Maui.FMList.DRIVES_PATH,
-                            Maui.FMList.TAGS_PATH]
-                    }
-                }
-
-                textRole: "label"
-                onActivated:
-                {
-                    currentIndex = index
-                    browserView.openFolder(model.list.get(index).path)
-                }
-            }
-
-            Maui.FileBrowser
-            {
-                id: browserView
-                anchors.fill: parent
-                currentPath: Maui.FM.homePath()
-                settings.viewType : Maui.FMList.LIST_VIEW
-                settings.filterType: Maui.FMList.TEXT
-                headBar.rightLayout.visible: false
-                headBar.rightLayout.width: 0
-                selectionMode: root.selectionMode
-                selectionBar: _selectionbar
-
-                Kirigami.Theme.backgroundColor: "transparent"
-
-                onItemClicked:
-                {
-                    var item = currentFMList.get(index)
-                    if(Maui.Handy.singleClick)
-                    {
-                        if(item.isdir == "true")
-                        {
-                            openFolder(item.path)
-                        }else
-                        {
-                            editorView.openTab(item.path)
-                        }
-                    }
-                }
-
-                onItemDoubleClicked:
-                {
-                    var item = currentFMList.get(index)
-                    if(!Maui.Handy.singleClick)
-                    {
-                        if(item.isdir == "true")
-                        {
-                            openFolder(item.path)
-                        }else
-                        {
-                            editorView.openTab(item.path)
-                        }
-                    }
-                }
-            }
-        }
     }
 
     Maui.BaseModel
@@ -352,7 +241,7 @@ Maui.ApplicationWindow
 
         flickable: _swipeView.currentItem.item ? _swipeView.currentItem.item.flickable : null
 
-        MauiLab.AppViews
+        Maui.AppViews
         {
             id: _swipeView
             anchors.fill: parent
@@ -361,15 +250,15 @@ Maui.ApplicationWindow
             EditorView
             {
                 id: editorView
-                MauiLab.AppView.iconName: "document-edit"
-                MauiLab.AppView.title: i18n("Editor")
+                Maui.AppView.iconName: "document-edit"
+                Maui.AppView.title: i18n("Editor")
 
             }
 
-            MauiLab.AppViewLoader
+            Maui.AppViewLoader
             {
-                MauiLab.AppView.iconName: "view-pim-journal"
-                MauiLab.AppView.title: i18n("Documents")
+                Maui.AppView.iconName: "view-pim-journal"
+                Maui.AppView.title: i18n("Documents")
                 visible: !focusMode
 
                 DocumentsView
@@ -378,10 +267,10 @@ Maui.ApplicationWindow
                 }
             }
 
-            MauiLab.AppViewLoader
+            Maui.AppViewLoader
             {
-                MauiLab.AppView.iconName: "view-media-recent"
-                MauiLab.AppView.title: i18n("Recent")
+                Maui.AppView.iconName: "view-media-recent"
+                Maui.AppView.title: i18n("Recent")
                 visible: !focusMode
 
                 RecentView
@@ -391,7 +280,7 @@ Maui.ApplicationWindow
             }
         }
 
-        footer: MauiLab.SelectionBar
+        footer: Maui.SelectionBar
         {
             id: _selectionbar
 

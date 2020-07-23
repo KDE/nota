@@ -51,15 +51,20 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     app.setOrganizationName("Maui");
     app.setOrganizationDomain("org.maui.nota");
     app.setWindowIcon(QIcon(":/nota.svg"));
+
     MauiApp::instance()->setHandleAccounts(false); //for now nota can not handle cloud accounts
     MauiApp::instance()->setCredits ({QVariantMap({{"name", "Camilo Higuita"}, {"email", "milo.h@aol.com"}, {"year", "2019-2020"}}),
                                      QVariantMap({{"name", "Anupam Basak"}, {"email", "anupam.basak27@gmail.com"}, {"year", "2019-2020"}})});
+
     MauiApp::instance()->setIconName("qrc:/img/nota.svg");
     MauiApp::instance()->setWebPage("https://mauikit.org");
     MauiApp::instance()->setReportPage("https://invent.kde.org/maui/nota/-/issues");
 
+    MauiApp::instance()->setDescription("Nota allows you to browse, create, and edit simple and rich text files.");
+    MauiApp::instance()->setHandleAccounts(false);
+
     QCommandLineParser parser;
-    parser.setApplicationDescription("Simple text editor");
+    parser.setApplicationDescription(MauiApp::instance()->getDescription());
     const QCommandLineOption versionOption = parser.addVersionOption();
     parser.addOption(versionOption);
     parser.process(app);
