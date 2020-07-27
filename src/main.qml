@@ -81,6 +81,13 @@ Maui.ApplicationWindow
 
         MenuItem
         {
+            icon.name: "document-open"
+            text: i18n("Open")
+            onTriggered: editorView.openFile()
+        },
+
+        MenuItem
+        {
             text: i18n("Settings")
             icon.name: "settings-configure"
             onTriggered:
@@ -182,13 +189,6 @@ Maui.ApplicationWindow
     }
 
     headBar.rightContent: [
-
-        ToolButton
-        {
-            icon.name: "document-open"
-            onClicked: editorView.openFile()
-
-        },
         ToolButton
         {
             visible: Maui.Handy.isTouch
