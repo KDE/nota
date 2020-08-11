@@ -19,7 +19,9 @@ MauiLab.AltBrowser
     Connections
     {
         target: control.currentView
-        onItemsSelected:
+        ignoreUnknownSignals: true
+
+        function onItemsSelected(indexes)
         {
             for(var i in indexes)
             {
@@ -86,6 +88,7 @@ MauiLab.AltBrowser
                                } : {}
 
         background: Item {}
+
         Maui.GridItemTemplate
         {
             id: _gridTemplate
@@ -103,19 +106,24 @@ MauiLab.AltBrowser
         Connections
         {
             target: _selectionbar
-            onUriRemoved:
+            ignoreUnknownSignals: true
+
+            function onUriRemoved(uri)
             {
                 if(uri === model.path)
                     _gridDelegate.checked = false
             }
 
-            onUriAdded:
+            function onUriAdded(uri)
             {
                 if(uri === model.path)
                     _gridDelegate.checked = true
             }
 
-            onCleared: _gridDelegate.checked = false
+            function onCleared()
+            {
+                _gridDelegate.checked = false
+            }
         }
 
         onClicked:
@@ -193,19 +201,24 @@ listDelegate: Maui.ItemDelegate
     Connections
     {
         target: _selectionbar
-        onUriRemoved:
+        ignoreUnknownSignals: true
+
+        function onUriRemoved(uri)
         {
             if(uri === model.path)
             _listDelegate.checked = false
         }
 
-        onUriAdded:
+        function onUriAdded(uri)
         {
             if(uri === model.path)
             _listDelegate.checked = true
         }
 
-        onCleared: _listDelegate.checked = false
+        function onCleared()
+        {
+            _listDelegate.checked = false
+        }
     }
 
     onClicked:
