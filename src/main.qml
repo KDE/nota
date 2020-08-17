@@ -142,7 +142,8 @@ Maui.ApplicationWindow
             property var callback : ({})
             title: i18n("Un saved files")
             message: i18n("You have un saved files. You can go back and save them or choose to dicard all changes and exit.")
-            page.padding: Maui.Style.space.big
+            page.margins: Maui.Style.space.big
+            template.iconSource: "emblem-warning"
             acceptButton.text: i18n("Go back")
             rejectButton.text: i18n("Discard")
             onRejected:
@@ -352,7 +353,7 @@ Maui.ApplicationWindow
     {
         if(path && Maui.FM.fileExists(path) && root.enableSidebar)
         {
-            browserView.openFolder(Maui.FM.fileDir(path))
+            _drawer.browser.openFolder(Maui.FM.fileDir(path))
         }
     }
 

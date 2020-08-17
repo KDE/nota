@@ -31,7 +31,7 @@ Maui.Page
         width: parent.width
         position: TabBar.Header
         currentIndex : _editorListView.currentIndex
-        onNewTabClicked: root.openTab("")
+        onNewTabClicked: editorView.openTab("")
 
         Repeater
         {
