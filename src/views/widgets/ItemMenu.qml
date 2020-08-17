@@ -86,7 +86,7 @@ Menu
         icon.name: "folder-open"
         onTriggered:
         {
-            Maui.FM.showInFolder([control.model.get(index).path])
+            Maui.FM.openLocation([control.model.get(index).path])
             close()
         }
     }
@@ -110,7 +110,7 @@ Menu
         icon.name: "document-copy"
         onTriggered:
         {
-            Maui.Handy.copyToClipboard(control.model.get(index).path)
+            Maui.Handy.copyToClipboard({"urls": [control.model.get(index).path]}, false)
         }
     }
 
