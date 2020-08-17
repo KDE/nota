@@ -15,7 +15,7 @@ Maui.Dialog
     acceptButton.visible: true
     acceptButton.text: i18n("New template")
 
-    ColumnLayout
+   stack: ColumnLayout
     {
         Layout.fillWidth: true
         Layout.fillHeight: true

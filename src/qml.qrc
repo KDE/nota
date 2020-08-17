@@ -11,5 +11,6 @@
         <file>views/editor/EditorView.qml</file>
         <file>views/editor/Editor.qml</file>
         <file>views/editor/EditorLayout.qml</file>
+        <file>views/widgets/ItemMenu.qml</file>
     </qresource>
 </RCC>

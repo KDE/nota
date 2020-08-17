@@ -178,6 +178,23 @@ Maui.ApplicationWindow
         }
     }
 
+    Component
+    {
+        id: _shareDialogComponent
+        Maui.ShareDialog {}
+    }
+
+    Component
+    {
+        id: _tagsDialogComponent
+        Maui.TagsDialog
+        {
+            onTagsReady: composerList.updateToUrls(tags)
+            composerList.strict: false
+            taglist.strict: false
+        }
+    }
+
     headBar.visible: root.currentEditor && _swipeView.currentIndex === views.editor && Kirigami.Settings.isMobile ?  ! Qt.inputMethod.visible : !focusMode
 
     headBar.leftContent: ToolButton
@@ -343,6 +360,11 @@ Maui.ApplicationWindow
     {
         terminalVisible = !terminalVisible
         Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
+    }
+
+    function addToSelection(item)
+    {
+        _selectionbar.append(item.path, item)
     }
 
 }
