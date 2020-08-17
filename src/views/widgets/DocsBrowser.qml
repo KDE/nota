@@ -2,11 +2,10 @@ import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
+import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.8 as Kirigami
 
-MauiLab.AltBrowser
+Maui.AltBrowser
 {
     id: control
     enableLassoSelection: true
@@ -40,21 +39,21 @@ MauiLab.AltBrowser
     {
         autoExclusive: true
         expanded: isWide
-        currentIndex : control.viewType === MauiLab.AltBrowser.ViewType.List ? 0 : 1
+        currentIndex : control.viewType === Maui.AltBrowser.ViewType.List ? 0 : 1
         display: ToolButton.TextBesideIcon
 
         Action
         {
             text: i18n("List")
             icon.name: "view-list-details"
-            onTriggered: control.viewType = MauiLab.AltBrowser.ViewType.List
+            onTriggered: control.viewType = Maui.AltBrowser.ViewType.List
         }
 
         Action
         {
             text: i18n("Grid")
             icon.name: "view-list-icons"
-            onTriggered: control.viewType= MauiLab.AltBrowser.ViewType.Grid
+            onTriggered: control.viewType= Maui.AltBrowser.ViewType.Grid
         }
     }
 
