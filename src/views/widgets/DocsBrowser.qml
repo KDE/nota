@@ -10,7 +10,8 @@ Maui.AltBrowser
     id: control
     enableLassoSelection: true
 
-    gridView.itemSize: 100
+    gridView.itemSize: 120
+    gridView.itemHeight: itemSize * 1.3
     gridView.topMargin: Maui.Style.contentMargins
     listView.topMargin: Maui.Style.contentMargins
     listView.spacing: Maui.Style.space.medium
@@ -25,9 +26,7 @@ Maui.AltBrowser
     Connections
     {
         target: control.currentView
-        ignoreUnknownSignals: true
-
-        function onItemsSelected(indexes)
+        onItemsSelected:
         {
             for(var i in indexes)
             {
@@ -83,8 +82,8 @@ Maui.AltBrowser
             padding: Maui.Style.space.tiny
             isCurrentItem : GridView.isCurrentItem
             anchors.centerIn: parent
-            height: parent.height- 10
-            width: control.gridView.itemSize - 10
+            height: parent.height- 15
+            width: control.gridView.itemSize - 20
             draggable: true
             Drag.keys: ["text/uri-list"]
 
@@ -93,33 +92,8 @@ Maui.AltBrowser
                                    "text/uri-list": control.filterSelectedItems(model.path)
                                } : {}
 
-<<<<<<< HEAD
             background: Item {}
             Maui.GridItemTemplate
-=======
-        background: Item {}
-
-        Maui.GridItemTemplate
-        {
-            id: _gridTemplate
-            isCurrentItem: _gridDelegate.isCurrentItem || checked
-            hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
-            anchors.fill: parent
-            label1.text: model.label
-            iconSource: model.icon
-            iconSizeHint: height * 0.6
-            checkable: selectionMode
-            checked: _selectionbar.contains(model.path)
-            onToggled: _selectionbar.append(model.path, control.model.get(index))
-        }
-
-        Connections
-        {
-            target: _selectionbar
-            ignoreUnknownSignals: true
-
-            function onUriRemoved(uri)
->>>>>>> b687406ebb99f2efec1f3d552aa6f6ed5554a1da
             {
                 id: _gridTemplate
                 isCurrentItem: _gridDelegate.isCurrentItem || checked
@@ -133,11 +107,7 @@ Maui.AltBrowser
                 onToggled: addToSelection(control.model.get(index))
             }
 
-<<<<<<< HEAD
             Connections
-=======
-            function onUriAdded(uri)
->>>>>>> b687406ebb99f2efec1f3d552aa6f6ed5554a1da
             {
                 target: _selectionbar
                 function onUriRemoved(uri)
@@ -158,20 +128,7 @@ Maui.AltBrowser
                 }
             }
 
-<<<<<<< HEAD
             onClicked:
-=======
-            function onCleared()
-            {
-                _gridDelegate.checked = false
-            }
-        }
-
-        onClicked:
-        {
-            control.currentIndex = index
-            if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
->>>>>>> b687406ebb99f2efec1f3d552aa6f6ed5554a1da
             {
                 control.currentIndex = index
                 if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
@@ -252,11 +209,6 @@ Maui.AltBrowser
     Connections
     {
         target: _selectionbar
-<<<<<<< HEAD
-=======
-        ignoreUnknownSignals: true
-
->>>>>>> b687406ebb99f2efec1f3d552aa6f6ed5554a1da
         function onUriRemoved(uri)
         {
             if(uri === model.path)
