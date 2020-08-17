@@ -328,12 +328,34 @@ Maui.ApplicationWindow
             {
                 text: i18n("Share")
                 icon.name: "document-share"
+                onTriggered:
+                {
+                    _dialogLoader.sourceComponent = _shareDialogComponent
+                    dialog.urls = _selectionbar.uris
+                    dialog.open()
+                }
             }
 
             Action
             {
                 text: i18n("Export")
                 icon.name: "document-export"
+                onTriggered:
+                {
+                    _dialogLoader.sourceComponent= _fileDialogComponent
+                    dialog.mode = dialog.modes.OPEN
+                    dialog.settings.onlyDirs = true
+                    dialog.show(function(paths)
+                    {
+                        for(var url of _selectionbar.uris)
+                        {
+                            for(var i in paths)
+                            {
+                                Maui.FM.copy(url, paths[i])
+                            }
+                        }
+                    });
+                }
             }
         }
     }
