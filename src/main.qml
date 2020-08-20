@@ -35,6 +35,7 @@ Maui.ApplicationWindow
     property bool enableSyntaxHighlighting : Maui.FM.loadSettings("ENABLE_SYNTAX_HIGHLIGHTING", "EDITOR", true) == "true"
     property bool showSyntaxHighlightingLanguages: false
     property bool supportSplit :!Kirigami.Settings.isMobile && root.width > 600
+    property int tabIndicatorWidth : Maui.FM.loadSettings("TAB_INDICATOR_WIDTH", "EDITOR", 150)
 
     property string theme : Maui.FM.loadSettings("THEME", "EDITOR", "Default")
     property color backgroundColor : Maui.FM.loadSettings("BACKGROUND_COLOR", "EDITOR", root.Kirigami.Theme.backgroundColor)
@@ -270,7 +271,7 @@ Maui.ApplicationWindow
                 id: editorView
                 Maui.AppView.iconName: "document-edit"
                 Maui.AppView.title: i18n("Editor")
-
+                tabIndicatorWidth: root.tabIndicatorWidth
             }
 
             Maui.AppViewLoader
