@@ -27,7 +27,6 @@ Maui.Page
     header: Maui.TabBar
     {
         id: _tabBar
-        visible: _editorListView.count > 1
         width: parent.width
         position: TabBar.Header
         currentIndex : _editorListView.currentIndex
