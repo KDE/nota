@@ -33,7 +33,7 @@ Maui.ApplicationWindow
     property bool showLineNumbers : Maui.FM.loadSettings("SHOW_LINE_NUMBERS", "EDITOR", true) == "true"
     property bool autoSave : Maui.FM.loadSettings("AUTO_SAVE", "EDITOR", false) == "true"
     property bool enableSyntaxHighlighting : Maui.FM.loadSettings("ENABLE_SYNTAX_HIGHLIGHTING", "EDITOR", true) == "true"
-    property bool showSyntaxHighlightingLanguages: false
+    property bool showSyntaxHighlightingLanguages: Maui.FM.loadSettings("SHOW_SYNTAXHIGHLIGHTING_BOX", "EDITOR", true)
     property bool supportSplit :!Kirigami.Settings.isMobile && root.width > 600
     property int tabIndicatorWidth : Maui.FM.loadSettings("TAB_INDICATOR_WIDTH", "EDITOR", 150)
 

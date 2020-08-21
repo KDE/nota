@@ -11,6 +11,7 @@ Maui.Editor
 {
     id: control
     readonly property int _index : ObjectModel.index
+    property bool showFindAndReplace: false
 
     SplitView.fillHeight: true
     SplitView.fillWidth: true
@@ -48,7 +49,7 @@ Maui.Editor
         }
     }
 
-    footBar.visible: false
+    footBar.visible: showSyntaxHighlightingLanguages || showFindAndReplace
     footBar.leftContent: [
 
         Maui.TextField
@@ -115,8 +116,9 @@ Maui.Editor
 
         if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
         {
-            footBar.visible = !footBar.visible
-            if(footBar.visible)
+            control.showFindAndReplace = !control.showFindAndReplace
+
+            if(control.showFindAndReplace)
             {
                 _findField.forceActiveFocus()
             }else
