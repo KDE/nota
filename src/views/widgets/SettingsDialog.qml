@@ -134,22 +134,6 @@ Maui.SettingsDialog
                 }
             }
         }
-
-        Maui.SettingTemplate
-        {
-            label1.text:  i18n("Tab indicator width")
-
-            SpinBox
-            {
-                from: 0; to : 500
-                value: root.tabIndicatorWidth
-                onValueChanged:
-                {
-                    root.tabIndicatorWidth = value
-                    Maui.FM.saveSettings("TAB_INDICATOR_WIDTH", value, "EDITOR")
-                }
-            }
-        }
     }
 
     Maui.SettingsSection

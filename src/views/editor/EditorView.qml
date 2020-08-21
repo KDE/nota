@@ -18,7 +18,6 @@ Maui.Page
     readonly property alias count: _editorListView.count
     readonly property alias model : _documentModel
     property alias plugin: _pluginLayout
-    property int tabIndicatorWidth
 
     ObjectModel
     {
@@ -43,7 +42,7 @@ Maui.Page
                 id: _tabButton
                 readonly property int index_ : index
                 implicitHeight: _tabBar.implicitHeight
-                implicitWidth: control.tabIndicatorWidth
+                implicitWidth: 250
                 checked: index === _tabBar.currentIndex
 
                 text: _documentModel.get(index).title
