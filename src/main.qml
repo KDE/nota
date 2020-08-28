@@ -79,14 +79,14 @@ Maui.ApplicationWindow
 
     mainMenu: [
 
-        MenuItem
+        Action
         {
             icon.name: "document-open"
             text: i18n("Open")
             onTriggered: editorView.openFile()
         },
 
-        MenuItem
+        Action
         {
             text: i18n("Settings")
             icon.name: "settings-configure"
@@ -97,7 +97,7 @@ Maui.ApplicationWindow
             }
         },
 
-        MenuItem
+        Action
         {
             text: "Load plugin"
             icon.name: "plugin"
