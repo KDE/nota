@@ -11,7 +11,7 @@ Maui.AltBrowser
     enableLassoSelection: true
 
     gridView.itemSize: 120
-    gridView.itemHeight: itemSize * 1.3
+    gridView.itemHeight: gridView.itemSize * 1.3
     gridView.topMargin: Maui.Style.contentMargins
     listView.topMargin: Maui.Style.contentMargins
     listView.spacing: Maui.Style.space.medium

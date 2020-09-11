@@ -137,13 +137,13 @@ Item
         Loader
         {
             id: terminalLoader
-            active: Nota.Nota.supportsEmbededTerminal()
-            visible: active && terminalVisible && terminal
+            active: true
+//            visible: active && terminalVisible && terminal
             SplitView.fillWidth: true
             SplitView.preferredHeight: 200
             SplitView.maximumHeight: parent.height * 0.5
             SplitView.minimumHeight : 100
-            source: "Terminal.qml"
+            source: "../Terminal.qml"
             onLoaded: syncTerminal(control.currentEditor.fileUrl)
 
             Behavior on SplitView.preferredHeight

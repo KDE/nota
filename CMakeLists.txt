@@ -69,7 +69,9 @@ install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 #install(FILES org.kde.nota.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 #TODO: port to ecm_install_icons()
-ecm_install_icons(ICONS src/assets/nota.svg
-                  DESTINATION share/icons)
+#ecm_install_icons(ICONS src/assets/nota.svg
+#                  DESTINATION share/icons)
+install(FILES src/assets/nota.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
+
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)

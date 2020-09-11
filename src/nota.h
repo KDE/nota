@@ -14,6 +14,20 @@
 class Nota :  public QObject
 {
 	Q_OBJECT
+
+public:
+    static Nota * instance()
+    {
+        static Nota nota;
+        return &nota;
+    }
+
+    Nota(const Nota &) = delete;
+    Nota &operator=(const Nota &) = delete;
+    Nota(Nota &&) = delete;
+    Nota &operator=(Nota &&) = delete;
+
+
 public slots:
 	void requestFiles(const QStringList &urls)
 	{
@@ -55,6 +69,9 @@ public slots:
 
 signals:
 	void openFiles(QStringList urls);
+
+private:
+    explicit Nota(QObject *parent = nullptr) {};
 };
 
 

@@ -25,11 +25,7 @@ void HistoryModel::append(const QUrl &url)
     this->m_list << FMH::getFileInfoModel(url);
     emit this->postItemAppended();
 
-    qDebug()<< urls;
-
     urls << url;
-
-    qDebug()<< urls << QUrl::toStringList(urls);
 
     UTIL::saveSettings("URLS", QUrl::toStringList(urls), "HISTORY");
 }

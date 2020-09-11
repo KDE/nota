@@ -1,8 +1,9 @@
 #include <QQmlApplicationEngine>
 #include <QCommandLineParser>
 #include <QQmlContext>
-
 #include <QIcon>
+
+#include <KI18n/KLocalizedContext>
 
 #ifndef STATIC_MAUIKIT
 #include "nota_version.h"
@@ -31,7 +32,8 @@
 #include "src/models/documentsmodel.h"
 #include "src/models/historymodel.h"
 
-#include <KI18n/KLocalizedContext>
+
+#define NOTA_URI "org.maui.nota"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -49,7 +51,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     app.setApplicationVersion(NOTA_VERSION_STRING);
     app.setApplicationDisplayName("Nota");
     app.setOrganizationName("Maui");
-    app.setOrganizationDomain("org.maui.nota");
+    app.setOrganizationDomain(NOTA_URI);
     app.setWindowIcon(QIcon(":/nota.svg"));
 
     MauiApp::instance()->setHandleAccounts(false); //for now nota can not handle cloud accounts
@@ -79,8 +81,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     MauiKit::getInstance().registerTypes();
 #endif
 
-    static auto nota = new Nota;
-
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
@@ -90,21 +90,15 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
 
         if(!args.isEmpty())
-            nota->requestFiles(args);
+            Nota::instance()->requestFiles(args);
 
     }, Qt::QueuedConnection);
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
-    qmlRegisterSingletonType<Nota>("org.maui.nota", 1, 0, "Nota",
-                                  [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
-        Q_UNUSED(engine)
-        Q_UNUSED(scriptEngine)
-        return nota;
-    });
-
-    qmlRegisterType<DocumentsModel> ("org.maui.nota", 1, 0, "Documents");
-    qmlRegisterType<HistoryModel> ("org.maui.nota", 1, 0, "History");
+    qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
+    qmlRegisterType<DocumentsModel> (NOTA_URI, 1, 0, "Documents");
+    qmlRegisterType<HistoryModel> (NOTA_URI, 1, 0, "History");
 
     engine.load(url);
 
