@@ -16,5 +16,8 @@ DocsBrowser
         list: _historyList
         sort: "modified"
         sortOrder: Qt.DescendingOrder
+        recursiveFilteringEnabled: true
+        sortCaseSensitivity: Qt.CaseInsensitive
+        filterCaseSensitivity: Qt.CaseInsensitive
     }
 }

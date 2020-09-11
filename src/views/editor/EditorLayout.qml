@@ -137,8 +137,8 @@ Item
         Loader
         {
             id: terminalLoader
-            active: true
-//            visible: active && terminalVisible && terminal
+            active: Nota.Nota.supportsEmbededTerminal()
+            visible: active && terminalVisible && terminal
             SplitView.fillWidth: true
             SplitView.preferredHeight: 200
             SplitView.maximumHeight: parent.height * 0.5

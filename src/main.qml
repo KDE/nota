@@ -363,7 +363,7 @@ Maui.ApplicationWindow
     Connections
     {
         target: Nota.Nota
-        onOpenFiles:
+        function onOpenFiles(urls)
         {
             for(var i in urls)
                 editorView.openTab(urls[i])

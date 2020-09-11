@@ -28,7 +28,10 @@ Maui.AbstractSideBar
     Connections
     {
         target: _drawer.overlay
-        onClicked: _drawer.close()
+        function onClicked()
+        {
+            _drawer.close()
+        }
     }
 
     background: Rectangle

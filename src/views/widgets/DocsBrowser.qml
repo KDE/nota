@@ -16,6 +16,8 @@ Maui.AltBrowser
     listView.topMargin: Maui.Style.contentMargins
     listView.spacing: Maui.Style.space.medium
 
+    property alias menu : _menu
+
     ItemMenu
     {
         id: _menu
@@ -26,7 +28,7 @@ Maui.AltBrowser
     Connections
     {
         target: control.currentView
-        onItemsSelected:
+        function onItemsSelected(indexes)
         {
             for(var i in indexes)
             {
@@ -160,20 +162,10 @@ Maui.AltBrowser
     }
 
     //listView.section.labelPositioning: ViewSection.CurrentLabelAtStart
-    listView.section.criteria: model.sort === "title" ?  ViewSection.FirstCharacter : ViewSection.FullString
-    listView.section.property: model.sort
-    listView.section.delegate: Maui.LabelDelegate
-    {
-        id: delegate
-        width: parent.width
-        height: Maui.Style.toolBarHeightAlt
-        label: model.sort === "modified" ? Maui.FM.formatDate(Date(section), "MM/dd/yyyy") : (model.sort === "size" ? Maui.FM.formatSize(section)  : String(section).replace("file://", "").toUpperCase())
-        labelTxt.font.pointSize: Maui.Style.fontSizes.big
-        isSection: true
-    }
 
-    listDelegate: Maui.ItemDelegate
-    {
+
+listDelegate: Maui.ItemDelegate
+{
         id: _listDelegate
 
         property alias checked :_listTemplate.checked
