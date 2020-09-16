@@ -106,7 +106,7 @@ Maui.AltBrowser
                 iconSizeHint: height * 0.6
                 checkable: selectionMode
                 checked: _selectionbar.contains(model.path)
-                onToggled: addToSelection(control.model.get(index))
+                onToggled: addToSelection(model)
             }
 
             Connections
@@ -135,12 +135,11 @@ Maui.AltBrowser
                 control.currentIndex = index
                 if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
                 {
-                    const item = control.model.get(control.currentIndex)
-                    addToSelection(item.path, item)
+                    addToSelection(model)
 
                 }else if(Maui.Handy.singleClick)
                 {
-                    editorView.openTab(control.model.get(index).path)
+                    editorView.openTab(model.path)
                 }
             }
 
@@ -149,7 +148,7 @@ Maui.AltBrowser
                 control.currentIndex = index
                 if(!Maui.Handy.singleClick && !selectionMode)
                 {
-                    editorView.openTab(control.model.get(index).path)
+                    editorView.openTab(model.path)
                 }
             }
 
@@ -194,7 +193,7 @@ listDelegate: Maui.ItemDelegate
         iconSizeHint: Maui.Style.iconSizes.big
         checkable: selectionMode
         checked: _selectionbar.contains(model.path)
-        onToggled: addToSelection(control.model.get(index))
+        onToggled: addToSelection(model)
         isCurrentItem: _listDelegate.isCurrentItem
     }
 
@@ -224,12 +223,11 @@ listDelegate: Maui.ItemDelegate
         control.currentIndex = index
         if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
         {
-            const item = control.model.get(control.currentIndex)
-            addToSelection(item)
+            addToSelection(model)
 
         }else if(Maui.Handy.singleClick)
         {
-            editorView.openTab(control.model.get(index).path)
+            editorView.openTab(model.path)
         }
     }
 
@@ -238,7 +236,7 @@ listDelegate: Maui.ItemDelegate
         control.currentIndex = index
         if(!Maui.Handy.singleClick && !selectionMode)
         {
-            editorView.openTab(control.model.get(index).path)
+            editorView.openTab(model.path)
         }
     }
 
