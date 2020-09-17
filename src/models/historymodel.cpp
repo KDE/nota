@@ -5,6 +5,11 @@
 #include <MauiKit/utils.h>
 #endif
 
+static bool isTextDocument(const QUrl &url)
+{
+    return FMH::checkFileType(FMH::FILTER_TYPE::TEXT, FMH::getMime(url));
+}
+
 HistoryModel::HistoryModel(QObject *parent) : MauiList(parent)
 {
     this->setList();
@@ -18,7 +23,7 @@ FMH::MODEL_LIST HistoryModel::items() const
 void HistoryModel::append(const QUrl &url)
 {
     auto urls = this->getHistory();
-    if(urls.contains(url.toString()))
+    if(urls.contains(url.toString()) || !isTextDocument(url))
         return;
 
     emit this->preItemAppended();
@@ -33,7 +38,7 @@ void HistoryModel::append(const QUrl &url)
 QList<QUrl> HistoryModel::getHistory()
 {
     auto res =  QUrl::fromStringList(UTIL::loadSettings("URLS", "HISTORY", QStringList()).toStringList());
-    res.removeAll({});
+    res.removeAll(QString(""));
     return res;
 }
 
@@ -41,7 +46,7 @@ void HistoryModel::setList()
 {
     for(const auto &url : this->getHistory())
     {
-        if(url.isLocalFile() && !FMH::fileExists(url))
+        if(!url.isLocalFile() && !FMH::fileExists(url) && !isTextDocument(url))
             continue;
 
         emit this->preItemAppended();

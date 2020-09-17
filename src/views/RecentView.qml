@@ -20,4 +20,10 @@ DocsBrowser
         sortCaseSensitivity: Qt.CaseInsensitive
         filterCaseSensitivity: Qt.CaseInsensitive
     }
+    
+    holder.visible: _historyList.count === 0
+    holder.emoji: "qrc:/assets/dialog-information.svg"
+    holder.title : i18n("No Recent Files!")
+    holder.body: i18n("Here you will see your recently opened files")
+    holder.emojiSize: Maui.Style.iconSizes.huge
 }

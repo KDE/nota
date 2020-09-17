@@ -12,6 +12,13 @@ DocsBrowser
 
     property alias list : _documentsList
     headBar.visible: true
+    
+    holder.visible: _documentsList.count === 0
+    holder.emoji: "qrc:/assets/dialog-information.svg"
+    holder.title : i18n("No Documents!")
+    holder.body: i18n("Add a new source to browse your text files")
+    holder.emojiSize: Maui.Style.iconSizes.huge
+    
     model: Maui.BaseModel
     {
         id: _documentsModel
@@ -44,8 +51,7 @@ DocsBrowser
         label1.font.pointSize: Maui.Style.fontSizes.big
         label1.font.weight: Font.Bold
     }
-
-
+    
     listDelegate: Maui.ItemDelegate
     {
         id: _listDelegate
