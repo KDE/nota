@@ -16,7 +16,7 @@ Maui.ApplicationWindow
 
     background.opacity: translucency ? 0.5 : 1
 
-    readonly property var views : ({editor: 0, documents: 1, recent: 2})
+    readonly property var views : ({editor: 0, recent: 1, documents: 2})
 
     property alias currentTab : editorView.currentTab
     property alias currentEditor: editorView.currentEditor
@@ -274,6 +274,17 @@ Maui.ApplicationWindow
 
             Maui.AppViewLoader
             {
+                Maui.AppView.iconName: "view-media-recent"
+                Maui.AppView.title: i18n("Recent")
+                visible: !focusMode
+
+                RecentView
+                {
+                }
+            }
+
+            Maui.AppViewLoader
+            {
                 Maui.AppView.iconName: "view-pim-journal"
                 Maui.AppView.title: i18n("Documents")
                 visible: !focusMode
@@ -281,17 +292,6 @@ Maui.ApplicationWindow
                 DocumentsView
                 {
                     id: _documentsView
-                }
-            }
-
-            Maui.AppViewLoader
-            {
-                Maui.AppView.iconName: "view-media-recent"
-                Maui.AppView.title: i18n("Recent")
-                visible: !focusMode
-
-                RecentView
-                {
                 }
             }
         }

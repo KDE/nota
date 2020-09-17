@@ -1,5 +1,5 @@
-import QtQuick 2.10
-import QtQuick.Controls 2.10
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
 import org.kde.mauikit 1.2 as Maui
@@ -9,7 +9,7 @@ Maui.AltBrowser
 {
     id: control
     enableLassoSelection: true
-
+    focus: true
     gridView.itemSize: 120
     gridView.itemHeight: gridView.itemSize * 1.3
     gridView.topMargin: Maui.Style.contentMargins
