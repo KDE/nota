@@ -60,7 +60,7 @@ DocsBrowser
         isCurrentItem: ListView.isCurrentItem || checked
 
         height: Maui.Style.rowHeight *1.5
-        width: parent.width
+        width: ListView.view.width
         leftPadding: Maui.Style.space.small
         rightPadding: Maui.Style.space.small
         draggable: true

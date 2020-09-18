@@ -7,8 +7,6 @@ import org.maui.nota 1.0 as Nota
 
 Maui.AbstractSideBar
 {
-    Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: Kirigami.Theme.Window
     width: visible ? Math.min(Kirigami.Units.gridUnit * 14, root.width) : 0
     collapsed: !isWide
     collapsible: true
@@ -43,8 +41,6 @@ Maui.AbstractSideBar
     Maui.Page
     {
         anchors.fill: parent
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
         background: Rectangle
         {
             color: Kirigami.Theme.backgroundColor
@@ -86,7 +82,6 @@ Maui.AbstractSideBar
             selectionMode: root.selectionMode
             selectionBar: _selectionbar
             floatingFooter: false
-            Kirigami.Theme.backgroundColor: "transparent"
 
             onItemClicked:
             {
