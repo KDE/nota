@@ -12,9 +12,6 @@ Maui.AltBrowser
     focus: true
     gridView.itemSize: 120
     gridView.itemHeight: gridView.itemSize * 1.3
-    gridView.topMargin: Maui.Style.contentMargins
-    listView.topMargin: Maui.Style.contentMargins
-    listView.spacing: Maui.Style.space.medium
 
     property alias menu : _menu
 
@@ -94,92 +91,88 @@ Maui.AltBrowser
                                    "text/uri-list": control.filterSelectedItems(model.path)
                                } : {}
 
-            background: Item {}
-            Maui.GridItemTemplate
+        background: Item {}
+        Maui.GridItemTemplate
+        {
+            id: _gridTemplate
+            isCurrentItem: _gridDelegate.isCurrentItem || checked
+            hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
+            anchors.fill: parent
+            label1.text: model.label
+            iconSource: model.icon
+            iconSizeHint: height * 0.6
+            checkable: selectionMode
+            checked: _selectionbar.contains(model.path)
+            onToggled: addToSelection(model)
+        }
+
+        Connections
+        {
+            target: _selectionbar
+            function onUriRemoved(uri)
             {
-                id: _gridTemplate
-                isCurrentItem: _gridDelegate.isCurrentItem || checked
-                hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
-                anchors.fill: parent
-                label1.text: model.label
-                iconSource: model.icon
-                iconSizeHint: height * 0.6
-                checkable: selectionMode
-                checked: _selectionbar.contains(model.path)
-                onToggled: addToSelection(model)
-            }
-
-            Connections
-            {
-                target: _selectionbar
-                function onUriRemoved(uri)
-                {
-                    if(uri === model.path)
-                        _gridDelegate.checked = false
-                }
-
-                function onUriAdded(uri)
-                {
-                    if(uri === model.path)
-                        _gridDelegate.checked = true
-                }
-
-                function onCleared()
-                {
+                if(uri === model.path)
                     _gridDelegate.checked = false
-                }
             }
 
-            onClicked:
+            function onUriAdded(uri)
             {
-                control.currentIndex = index
-                if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
-                {
-                    addToSelection(model)
-
-                }else if(Maui.Handy.singleClick)
-                {
-                    editorView.openTab(model.path)
-                }
+                if(uri === model.path)
+                    _gridDelegate.checked = true
             }
 
-            onDoubleClicked:
+            function onCleared()
             {
-                control.currentIndex = index
-                if(!Maui.Handy.singleClick && !selectionMode)
-                {
-                    editorView.openTab(model.path)
-                }
-            }
-
-            onRightClicked:
-            {
-                control.currentIndex = index
-                _menu.popup()
+                _gridDelegate.checked = false
             }
         }
-    }
 
-    //listView.section.labelPositioning: ViewSection.CurrentLabelAtStart
+        onClicked:
+        {
+            control.currentIndex = index
+            if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+            {
+                addToSelection(model)
+
+            }else if(Maui.Handy.singleClick)
+            {
+                editorView.openTab(model.path)
+            }
+        }
+
+        onDoubleClicked:
+        {
+            control.currentIndex = index
+            if(!Maui.Handy.singleClick && !selectionMode)
+            {
+                editorView.openTab(model.path)
+            }
+        }
+
+        onRightClicked:
+        {
+            control.currentIndex = index
+            _menu.popup()
+        }
+    }
+}
 
 
 listDelegate: Maui.ItemDelegate
 {
-        id: _listDelegate
+    id: _listDelegate
 
-        property alias checked :_listTemplate.checked
-        isCurrentItem: ListView.isCurrentItem || checked
+    property alias checked :_listTemplate.checked
+    isCurrentItem: ListView.isCurrentItem || checked
 
-        height: Maui.Style.rowHeight *1.5
-        width: parent.width
-        leftPadding: Maui.Style.space.small
-        rightPadding: Maui.Style.space.small
-        draggable: true
-        Drag.keys: ["text/uri-list"]
-        Drag.mimeData: Drag.active ?
-                           {
-                               "text/uri-list": control.filterSelectedItems(model.path)
-                           } : {}
+    height: Maui.Style.rowHeight *1.5
+    width: parent.width
+    draggable: true
+    Drag.keys: ["text/uri-list"]
+    Drag.mimeData: Drag.active ?
+                       {
+                           "text/uri-list": control.filterSelectedItems(model.path)
+                       } : {}
 
     Maui.ListItemTemplate
     {
