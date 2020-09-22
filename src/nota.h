@@ -71,7 +71,7 @@ signals:
 	void openFiles(QStringList urls);
 
 private:
-    explicit Nota(QObject *parent = nullptr) {};
+    explicit Nota(QObject *parent = nullptr) {}
 };
 
 

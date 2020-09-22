@@ -3,7 +3,13 @@
 #include <QQmlContext>
 #include <QIcon>
 
+#if defined Q_OS_MACOS || defined Q_OS_WIN
+#include <KF5/KI18n/KLocalizedContext>
+#include <KF5/KI18n/KLocalizedString>
+#else
 #include <KI18n/KLocalizedContext>
+#include <KI18n/KLocalizedString>
+#endif
 
 #ifndef STATIC_MAUIKIT
 #include "nota_version.h"
@@ -38,6 +44,9 @@
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QCoreApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager, true);
 
 #ifdef Q_OS_ANDROID
     QGuiApplication app(argc, argv);
@@ -47,30 +56,30 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QApplication app(argc, argv);
 #endif
 
-    app.setApplicationName("nota");
-    app.setApplicationVersion(NOTA_VERSION_STRING);
-    app.setApplicationDisplayName("Nota");
-    app.setOrganizationName("Maui");
-    app.setOrganizationDomain(NOTA_URI);
+    app.setOrganizationName(QStringLiteral("Maui"));
     app.setWindowIcon(QIcon(":/nota.svg"));
 
     MauiApp::instance()->setHandleAccounts(false); //for now nota can not handle cloud accounts
-    MauiApp::instance()->setCredits ({QVariantMap({{"name", "Camilo Higuita"}, {"email", "milo.h@aol.com"}, {"year", "2019-2020"}}),
-                                     QVariantMap({{"name", "Anupam Basak"}, {"email", "anupam.basak27@gmail.com"}, {"year", "2019-2020"}})});
-
     MauiApp::instance()->setIconName("qrc:/img/nota.svg");
-    MauiApp::instance()->setWebPage("https://mauikit.org");
-    MauiApp::instance()->setReportPage("https://invent.kde.org/maui/nota/-/issues");
 
-    MauiApp::instance()->setDescription("Nota allows you to browse, create, and edit simple and rich text files.");
-    MauiApp::instance()->setHandleAccounts(false);
+    KLocalizedString::setApplicationDomain("nota");
+    KAboutData about(QStringLiteral("nota"), i18n("Nota"), NOTA_VERSION_STRING, i18n("Nota allows you to browse, create, and edit simple and rich text files."),
+                     KAboutLicense::LGPL_V3, i18n("© 2019-2020 Nitrux Development Team"));
+    about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
+    about.addAuthor(i18n("Anupam Basak"), i18n("Developer"), QStringLiteral("anupam.basak27@gmail.com"));
+    about.setHomepage("https://mauikit.org");
+    about.setProductName("maui/nota");
+    about.setBugAddress("https://invent.kde.org/maui/nota/-/issues");
+    about.setOrganizationDomain("org.maui.nota");
+    about.setProgramLogo(app.windowIcon());
+
+    KAboutData::setApplicationData(about);
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(MauiApp::instance()->getDescription());
-    const QCommandLineOption versionOption = parser.addVersionOption();
-    parser.addOption(versionOption);
     parser.process(app);
 
+    about.setupCommandLine(&parser);
+    about.processCommandLine(&parser);
     const QStringList args = parser.positionalArguments();
 
 #ifdef STATIC_KIRIGAMI
