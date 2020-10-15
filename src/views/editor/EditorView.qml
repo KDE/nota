@@ -177,32 +177,33 @@ Maui.Page
         ]
 
         headBar.visible: _editorListView.count > 0
-        headBar.middleContent: Button
+        headBar.middleContent: ToolButton
         {
             //        visible: root.focusMode
-            icon.name: "quickview"
-            text: i18n("Focus")
+            icon.name: checked ? "view-readermode-active" : "view-readermode"
+//            text: i18n("Focus")
             checked: root.focusMode
             onClicked: root.focusMode = !root.focusMode
         }
 
         altHeader: Kirigami.Settings.isMobile
         headBar.rightContent:[
-            ToolButton
-            {
-                icon.name: "tool_pen"
-                onClicked: _doodleDialog.open()
-                checked: _doodleDialog.visible
-            },
+//            ToolButton
+//            {
+//                icon.name: "tool_pen"
+//                onClicked: _doodleDialog.open()
+//                checked: _doodleDialog.visible
+//            },
 
             Maui.ToolActions
             {
                 id: _splitButton
-                visible: supportSplit
+//                visible: supportSplit
                 expanded: isWide
                 autoExclusive: true
                 display: ToolButton.TextBesideIcon
                 currentIndex:  -1
+                cyclic: true
 
                 Action
                 {
