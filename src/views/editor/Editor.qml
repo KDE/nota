@@ -22,7 +22,7 @@ Maui.Editor
     opacity: _splitView.currentIndex === _index ? 1 : 0.7
 
     headBar.visible: false
-//    showLineNumbers: settings.showLineNumbers
+    showLineNumbers: settings.showLineNumbers
     body.color: settings.textColor
     body.font.family: settings.font.family
     body.font.pointSize: settings.font.pointSize
@@ -31,6 +31,7 @@ Maui.Editor
     document.theme: settings.theme
     document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
     document.autoSave: settings.autoSave
+    document.tabSpace: ((settings.tabSpace+1) * body.font.pointSize) / 2
 
     onFileUrlChanged: syncTerminal(control.fileUrl)
 

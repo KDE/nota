@@ -26,6 +26,9 @@ Maui.ApplicationWindow
     //Global editor props
     property bool focusMode : false
     property bool mtest : true
+	
+	
+	
 
     readonly property font defaultFont:
     {
@@ -47,8 +50,8 @@ Maui.ApplicationWindow
         property bool showSyntaxHighlightingLanguages: false
         property bool supportSplit :!Kirigami.Settings.isMobile
         property bool terminalVisible : false
-
-        property string theme : "Default"
+        property double tabSpace: 8
+        property string theme : ""
         property color backgroundColor : root.Kirigami.Theme.backgroundColor
         property color textColor : root.Kirigami.Theme.textColor
 
@@ -394,5 +397,4 @@ Maui.ApplicationWindow
     {
         _selectionbar.append(item.path, item)
     }
-
 }

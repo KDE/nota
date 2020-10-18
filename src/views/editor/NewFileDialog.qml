@@ -94,6 +94,7 @@ Maui.Dialog
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            lastOne: true
 
             Maui.ListItemTemplate
             {

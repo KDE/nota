@@ -137,6 +137,18 @@ Maui.SettingsDialog
                 onValueChanged: settings.font.pointSize = value
             }
         }
+
+        Maui.SettingTemplate
+        {
+            label1.text:  i18n("Tab Space")
+
+            SpinBox
+            {
+                from: 0; to : 500
+                value: settings.tabSpace
+                onValueChanged: settings.tabSpace = value
+            }
+        }
     }
 
     Maui.SettingsSection
