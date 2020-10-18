@@ -1,6 +1,8 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
+import Qt.labs.settings 1.0
+
 import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.2 as Maui
 import org.maui.nota 1.0 as Nota
@@ -14,8 +16,6 @@ Maui.ApplicationWindow
     id: root
     title: currentEditor ? currentTab.title : ""
 
-    background.opacity: translucency ? 0.5 : 1
-
     readonly property var views : ({editor: 0, recent: 1, documents: 2})
 
     property alias currentTab : editorView.currentTab
@@ -23,29 +23,36 @@ Maui.ApplicationWindow
     property alias dialog : _dialogLoader.item
 
     property bool selectionMode :  false
-    property bool translucency : Maui.Handy.isLinux
-    property bool terminalVisible : Maui.FM.loadSettings("TERMINAL", "EXTENSIONS", false)
     //Global editor props
     property bool focusMode : false
-    property bool enableSidebar : Maui.FM.loadSettings("ENABLE_SIDEBAR", "EXTENSIONS", !focusMode) == "true"
-    property bool defaultBlankFile : Maui.FM.loadSettings("DEFAULT_BLANK_FILE", "SETTINGS", false) == "true"
-
-    property bool showLineNumbers : Maui.FM.loadSettings("SHOW_LINE_NUMBERS", "EDITOR", true) == "true"
-    property bool autoSave : Maui.FM.loadSettings("AUTO_SAVE", "EDITOR", false) == "true"
-    property bool enableSyntaxHighlighting : Maui.FM.loadSettings("ENABLE_SYNTAX_HIGHLIGHTING", "EDITOR", true) == "true"
-    property bool showSyntaxHighlightingLanguages: Maui.FM.loadSettings("SHOW_SYNTAXHIGHLIGHTING_BOX", "EDITOR", true)
-    property bool supportSplit :!Kirigami.Settings.isMobile && root.width > 600
-
-    property string theme : Maui.FM.loadSettings("THEME", "EDITOR", "Default")
-    property color backgroundColor : Maui.FM.loadSettings("BACKGROUND_COLOR", "EDITOR", root.Kirigami.Theme.backgroundColor)
-    property color textColor : Maui.FM.loadSettings("TEXT_COLOR", "EDITOR", root.Kirigami.Theme.textColor)
-
-    property font font : Maui.FM.loadSettings("FONT", "EDITOR", defaultFont)
+    property bool mtest : true
 
     readonly property font defaultFont:
     {
         family: "Noto Sans Mono"
         pointSize: Maui.Style.fontSizes.default
+    }
+
+    property alias appSettings: settings
+    Settings
+    {
+        id: settings
+        category: "General"
+
+        property bool enableSidebar : false
+        property bool defaultBlankFile : true
+        property bool showLineNumbers : true
+        property bool autoSave : true
+        property bool enableSyntaxHighlighting : true
+        property bool showSyntaxHighlightingLanguages: false
+        property bool supportSplit :!Kirigami.Settings.isMobile
+        property bool terminalVisible : false
+
+        property string theme : "Default"
+        property color backgroundColor : root.Kirigami.Theme.backgroundColor
+        property color textColor : root.Kirigami.Theme.textColor
+
+        property font font : defaultFont
     }
 
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
@@ -245,7 +252,7 @@ Maui.ApplicationWindow
         }
     }
 
-    Component.onCompleted:if(root.defaultBlankFile)
+    Component.onCompleted:if(settings.defaultBlankFile)
     {
         editorView.openTab("")
     }
@@ -380,8 +387,7 @@ Maui.ApplicationWindow
 
     function toggleTerminal()
     {
-        terminalVisible = !terminalVisible
-        Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
+        settings.terminalVisible = !settings.terminalVisible
     }
 
     function addToSelection(item)

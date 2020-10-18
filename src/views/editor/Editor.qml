@@ -22,15 +22,15 @@ Maui.Editor
     opacity: _splitView.currentIndex === _index ? 1 : 0.7
 
     headBar.visible: false
-    showLineNumbers: root.showLineNumbers
-    body.color: root.textColor
-    body.font.family: root.font.family
-    body.font.pointSize: root.font.pointSize
-    document.backgroundColor: root.backgroundColor
-    showSyntaxHighlightingLanguages: root.showSyntaxHighlightingLanguages
-    document.theme: root.theme
-    document.enableSyntaxHighlighting: root.enableSyntaxHighlighting
-    document.autoSave: root.autoSave
+//    showLineNumbers: settings.showLineNumbers
+    body.color: settings.textColor
+    body.font.family: settings.font.family
+    body.font.pointSize: settings.font.pointSize
+    document.backgroundColor: settings.backgroundColor
+    showSyntaxHighlightingLanguages: settings.showSyntaxHighlightingLanguages
+    document.theme: settings.theme
+    document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
+    document.autoSave: settings.autoSave
 
     onFileUrlChanged: syncTerminal(control.fileUrl)
 
@@ -87,8 +87,7 @@ Maui.Editor
 
         if(event.key === Qt.Key_F4)
         {
-            root.terminalVisible = !root.terminalVisible
-            Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
+            settings.terminalVisible = !settings.terminalVisible
         }
 
         if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
@@ -109,7 +108,7 @@ Maui.Editor
 
         if((event.key === Qt.Key_L) && (event.modifiers & Qt.ControlModifier))
         {
-            root.showLineNumbers = !root.showLineNumbers
+            settings.showLineNumbers = !settings.showLineNumbers
         }
 
         if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
@@ -167,7 +166,7 @@ Maui.Editor
 
             MenuItem
             {
-                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && root.supportSplit
+                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && settings.supportSplit
                 text: i18n("Open in new split")
                 onTriggered:
                 {
@@ -181,6 +180,4 @@ Maui.Editor
             }
         }
     }
-
-
 }

@@ -19,12 +19,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: root.enableSidebar
-                onToggled:
-                {
-                    root.enableSidebar = !root.enableSidebar
-                    Maui.FM.saveSettings("ENABLE_SIDEBAR", enableSidebar, "EXTENSIONS")
-                }
+                checked: settings.enableSidebar
+                onToggled: settings.enableSidebar = !settings.enableSidebar
             }
         }
 
@@ -36,12 +32,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: root.defaultBlankFile
-                onToggled:
-                {
-                    root.defaultBlankFile = !root.defaultBlankFile
-                    Maui.FM.saveSettings("DEFAULT_BLANK_FILE", defaultBlankFile, "SETTINGS")
-                }
+                checked: settings.defaultBlankFile
+                onToggled: settings.defaultBlankFile = !settings.defaultBlankFile
             }
         }
 
@@ -54,12 +46,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: root.terminalVisible
-                onToggled:
-                {
-                    root.terminalVisible = !root.terminalVisible
-                    Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
-                }
+                checked: settings.terminalVisible
+                onToggled: settings.terminalVisible = !settings.terminalVisible
             }
         }
     }
@@ -76,12 +64,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: root.autoSave
-                onToggled:
-                {
-                    root.autoSave = !root.autoSave
-                    Maui.FM.saveSettings("AUTO_SAVE", autoSave, "EDITOR")
-                }
+                checked: settings.autoSave
+                onToggled: settings.autoSave = !settings.autoSave
             }
         }
 
@@ -93,12 +77,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: root.showLineNumbers
-                onToggled:
-                {
-                    root.showLineNumbers = !root.showLineNumbers
-                    Maui.FM.saveSettings("SHOW_LINE_NUMBERS", showLineNumbers, "EDITOR")
-                }
+                checked: settings.showLineNumbers
+                onToggled: settings.showLineNumbers = !settings.showLineNumbers
             }
         }
 
@@ -110,12 +90,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: root.showSyntaxHighlightingLanguages
-                onToggled:
-                {
-                    root.showSyntaxHighlightingLanguages = !root.showSyntaxHighlightingLanguages
-                    Maui.FM.saveSettings("SHOW_SYNTAXHIGHLIGHTING_BOX", showSyntaxHighlightingLanguages, "EDITOR")
-                }
+                checked: settings.showSyntaxHighlightingLanguages
+                onToggled: settings.showSyntaxHighlightingLanguages = !settings.showSyntaxHighlightingLanguages
             }
         }
 
@@ -126,12 +102,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: root.enableSyntaxHighlighting
-                onToggled:
-                {
-                    root.enableSyntaxHighlighting = !root.enableSyntaxHighlighting
-                    Maui.FM.saveSettings("ENABLE_SYNTAX_HIGHLIGHTING", enableSyntaxHighlighting, "EDITOR")
-                }
+                checked: settings.enableSyntaxHighlighting
+                onToggled: settings.enableSyntaxHighlighting = !settings.enableSyntaxHighlighting
             }
         }
     }
@@ -149,12 +121,8 @@ Maui.SettingsDialog
             {
                 Layout.fillWidth: true
                 model: Qt.fontFamilies()
-                Component.onCompleted: currentIndex = find(root.font.family, Qt.MatchExactly)
-                onActivated:
-                {
-                    root.font.family = currentText
-                    Maui.FM.saveSettings("FONT", root.font, "EDITOR")
-                }
+                Component.onCompleted: currentIndex = find(settings.font.family, Qt.MatchExactly)
+                onActivated: settings.font.family = currentText
             }
         }
 
@@ -165,12 +133,8 @@ Maui.SettingsDialog
             SpinBox
             {
                 from: 0; to : 500
-                value: root.font.pointSize
-                onValueChanged:
-                {
-                    root.font.pointSize = value
-                    Maui.FM.saveSettings("FONT", root.font, "EDITOR")
-                }
+                value: settings.font.pointSize
+                onValueChanged: settings.font.pointSize = value
             }
         }
     }
@@ -179,7 +143,7 @@ Maui.SettingsDialog
     {
         title: i18n("Style")
         description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats")
-        visible: root.enableSyntaxHighlighting
+        visible: settings.enableSyntaxHighlighting
 
         Maui.SettingTemplate
         {
@@ -189,13 +153,9 @@ Maui.SettingsDialog
             ComboBox
             {
                 model:  _dummyDocumentHandler.getThemes()
-                Component.onCompleted: currentIndex = find(root.theme, Qt.MatchExactly)
+                Component.onCompleted: currentIndex = find(settings.theme, Qt.MatchExactly)
 
-                onActivated:
-                {
-                    root.theme = currentText
-                    Maui.FM.saveSettings("THEME", root.theme, "EDITOR")
-                }
+                onActivated: settings.theme = currentText
 
                 Maui.DocumentHandler
                 {
@@ -302,19 +262,6 @@ Maui.SettingsDialog
         title: i18n("Interface")
         description: i18n("Configure the application UI")
 
-
-        Maui.SettingTemplate
-        {
-            label1.text: i18n("Translucent Sidebar")
-            Switch
-            {
-                checkable: true
-                enabled: root.enableSidebar && Maui.Handy.isLinux
-                checked:  root.translucency
-                onToggled:  root.translucency = !root.translucency
-            }
-        }
-
         Maui.SettingTemplate
         {
             enabled: false
@@ -328,10 +275,7 @@ Maui.SettingsDialog
 
     function switchBackgroundColor(backgroundColor, textColor)
     {
-        root.backgroundColor = backgroundColor
-        root.textColor = textColor
-
-        Maui.FM.saveSettings("BACKGROUND_COLOR", root.backgroundColor, "EDITOR")
-        Maui.FM.saveSettings("TEXT_COLOR", root.textColor, "EDITOR")
+        settings.backgroundColor = backgroundColor
+        settings.textColor = textColor
     }
 }
