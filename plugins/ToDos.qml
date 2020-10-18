@@ -37,7 +37,7 @@ Maui.Page
 
     footBar.middleContent : Maui.TextField
     {
-        placeholderText: qsTr("New ToDo... Argh!")
+        placeholderText: i18n("New ToDo... Argh!")
         Layout.fillWidth: true
         onAccepted:
         {
