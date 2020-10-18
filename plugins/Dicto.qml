@@ -53,7 +53,7 @@ Maui.Page
         Action
         {
             icon.name: "run-build"
-            text: qsTr("Run")
+            text: i18n("Run")
 
             onTriggered:
             {
@@ -74,7 +74,7 @@ if(_loader.source.length)
         Action
         {
             icon.name: "debug-run"
-            text: qsTr("Run & Debug")
+            text: i18n("Run & Debug")
             enabled: Nota.Nota.supportsEmbededTerminal()
             onTriggered: start("QML_IMPORT_TRACE=1 " + "QT_QUICK_CONTROLS_MOBILE=" + (plugin.mobileMode ? "1" : "0") + " QT_QUICK_CONTROLS_STYLE=" + plugin.style  +" qmlscene " + String(currentEditor.fileUrl).replace("file://", ""))
         }
@@ -83,7 +83,7 @@ if(_loader.source.length)
         {
             enabled: Nota.Nota.supportsEmbededTerminal()
             icon.name: "cm_runterm"
-            text: qsTr("Run in Terminal")
+            text: i18n("Run in Terminal")
             onTriggered: start("QT_QUICK_CONTROLS_MOBILE=" + (plugin.mobileMode ? "1" : "0") + " QT_QUICK_CONTROLS_STYLE=" + plugin.style  +" qmlscene " + String(currentEditor.fileUrl).replace("file://", "") );
 
         }
@@ -103,7 +103,7 @@ if(_loader.source.length)
 
     Switch
     {
-        text: qsTr("Mobile")
+        text: i18n("Mobile")
         checkable: true
         checked: plugin.mobileMode
         onToggled: plugin.mobileMode = checked
