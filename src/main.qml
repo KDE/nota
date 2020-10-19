@@ -32,7 +32,7 @@ Maui.ApplicationWindow
     }
 
     //Global editor props
-    property alias appSettings: settings    
+    property alias appSettings: settings
 
     Settings
     {
@@ -202,7 +202,7 @@ Maui.ApplicationWindow
 
     headBar.leftContent: ToolButton
     {
-        visible: root.enableSidebar
+        visible: settings.enableSidebar
         icon.name: "view-split-left-right"
         checked: _drawer.visible
         onClicked: _drawer.visible ? _drawer.close() : _drawer.open()
@@ -369,7 +369,7 @@ Maui.ApplicationWindow
 
     function syncSidebar(path)
     {
-        if(path && Maui.FM.fileExists(path) && root.enableSidebar)
+        if(path && Maui.FM.fileExists(path) && settings.enableSidebar)
         {
             _drawer.browser.openFolder(Maui.FM.fileDir(path))
         }

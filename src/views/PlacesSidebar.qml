@@ -13,7 +13,7 @@ Maui.AbstractSideBar
     dragMargin: Maui.Style.space.big
     overlay.visible: collapsed && position > 0 && visible
     visible: (_swipeView.currentIndex === views.editor) && settings.enableSidebar
-    enabled: root.enableSidebar
+    enabled: settings.enableSidebar
 
     property alias browser : browserView
 

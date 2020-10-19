@@ -244,7 +244,7 @@ Maui.Page
                 {
                     icon.name: "document-save-as"
                     text: i18n("Save as...")
-                    onTriggered: saveFile("", _tabBar.currentIndex, control.currentEditor)
+                    onTriggered: saveFile("", control.currentEditor)
                 }
             }
         ]
