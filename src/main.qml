@@ -22,13 +22,8 @@ Maui.ApplicationWindow
     property alias currentEditor: editorView.currentEditor
     property alias dialog : _dialogLoader.item
 
-    property bool selectionMode :  false
-    //Global editor props
+    property bool selectionMode : false
     property bool focusMode : false
-    property bool mtest : true
-	
-	
-	
 
     readonly property font defaultFont:
     {
@@ -36,7 +31,9 @@ Maui.ApplicationWindow
         pointSize: Maui.Style.fontSizes.default
     }
 
-    property alias appSettings: settings
+    //Global editor props
+    property alias appSettings: settings    
+
     Settings
     {
         id: settings
@@ -66,26 +63,27 @@ Maui.ApplicationWindow
         sourceItem: root.currentEditor ? root.currentEditor.body : null
     }
 
-    Maui.NewDialog
-    {
-        id: _pluginLoader
-        title: i18n("Plugin")
-        message: i18n("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
-        onFinished:     {
-            const url = text
-            if(Maui.FM.fileExists(url))
-            {
+    //for now hide the plugins feature until it is fully ready
+//    Maui.NewDialog
+//    {
+//        id: _pluginLoader
+//        title: i18n("Plugin")
+//        message: i18n("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
+//        onFinished:     {
+//            const url = text
+//            if(Maui.FM.fileExists(url))
+//            {
 
-                const component = Qt.createComponent(url);
+//                const component = Qt.createComponent(url);
 
-                if (component.status === Component.Ready)
-                {
-                    console.log("setting plugin <<", url)
-                    const object = component.createObject(editorView.plugin)
-                }
-            }
-        }
-    }
+//                if (component.status === Component.Ready)
+//                {
+//                    console.log("setting plugin <<", url)
+//                    const object = component.createObject(editorView.plugin)
+//                }
+//            }
+//        }
+//    }
 
     mainMenu: [
 
@@ -191,12 +189,6 @@ Maui.ApplicationWindow
 
     Component
     {
-        id: _shareDialogComponent
-        Maui.ShareDialog {}
-    }
-
-    Component
-    {
         id: _tagsDialogComponent
         Maui.TagsDialog
         {
@@ -268,6 +260,7 @@ Maui.ApplicationWindow
         spacing: 0
 
         flickable: _swipeView.currentItem.item ? _swipeView.currentItem.item.flickable : null
+        floatingFooter: true
 
         Maui.AppViews
         {
@@ -337,12 +330,7 @@ Maui.ApplicationWindow
             {
                 text: i18n("Share")
                 icon.name: "document-share"
-                onTriggered:
-                {
-                    _dialogLoader.sourceComponent = _shareDialogComponent
-                    dialog.urls = _selectionbar.uris
-                    dialog.open()
-                }
+                onTriggered: Maui.Platform.shareFiles(_selectionbar.uris)
             }
 
             Action
@@ -368,7 +356,6 @@ Maui.ApplicationWindow
             }
         }
     }
-
 
     Connections
     {

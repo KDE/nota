@@ -18,6 +18,8 @@ DocsBrowser
     holder.title : i18n("No Documents!")
     holder.body: i18n("Add a new source to browse your text files")
     holder.emojiSize: Maui.Style.iconSizes.huge
+
+    floatingFooter: true
     
     model: Maui.BaseModel
     {

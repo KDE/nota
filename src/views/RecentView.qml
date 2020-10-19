@@ -20,7 +20,7 @@ DocsBrowser
         sortCaseSensitivity: Qt.CaseInsensitive
         filterCaseSensitivity: Qt.CaseInsensitive
     }
-    
+    floatingFooter: true
     holder.visible: _historyList.count === 0
     holder.emoji: "qrc:/assets/dialog-information.svg"
     holder.title : i18n("No Recent Files!")

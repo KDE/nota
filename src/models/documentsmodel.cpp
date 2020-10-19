@@ -16,6 +16,8 @@ static FMH::MODEL docInfo(const QUrl &url)
 DocumentsModel::DocumentsModel(QObject * parent) : MauiList (parent)
   , m_fileLoader(new FMH::FileLoader())
 {
+    qRegisterMetaType<QList<QUrl>>("QList<QUrl>&");
+
     m_fileLoader->informer = &docInfo;
     connect(m_fileLoader, &FMH::FileLoader::itemReady, this, &DocumentsModel::append);
 }

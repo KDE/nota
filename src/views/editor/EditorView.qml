@@ -13,7 +13,7 @@ Maui.Page
 {
     id: control
     property alias currentTab : _editorListView.currentItem
-    property Item currentEditor: currentTab ? currentTab.currentItem : null
+    readonly property Maui.Editor currentEditor: currentTab ? currentTab.currentItem : null
     property alias listView: _editorListView
     readonly property alias count: _editorListView.count
     readonly property alias model : _documentModel
@@ -27,6 +27,8 @@ Maui.Page
     header: Maui.TabBar
     {
         id: _tabBar
+        visible: _documentModel.count > 1
+
         width: parent.width
         position: TabBar.Header
         currentIndex : _editorListView.currentIndex
@@ -42,7 +44,8 @@ Maui.Page
                 id: _tabButton
                 readonly property int index_ : index
                 implicitHeight: _tabBar.implicitHeight
-                implicitWidth: 250
+                implicitWidth: Math.max(parent.width / _repeater.count, 120)
+
                 checked: index === _tabBar.currentIndex
 
                 text: _documentModel.get(index).title

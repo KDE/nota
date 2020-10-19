@@ -3,8 +3,9 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
 import org.kde.mauikit 1.2 as Maui
-import QtQml.Models 2.3
 import org.maui.nota 1.0 as Nota
+
+import QtQml.Models 2.3
 
 Item
 {
@@ -15,13 +16,14 @@ Item
     property url path
 
     property alias currentIndex : _splitView.currentIndex
-    property alias count : _splitView.count
+    property alias orientation : _splitView.orientation
+
+    readonly property alias count : _splitView.count
     readonly property alias currentItem : _splitView.currentItem
     readonly property alias model : splitObjectModel
     readonly property string title : count === 2 ?  model.get(0).title + "  -  " + model.get(1).title : currentItem.title
-    property alias orientation : _splitView.orientation
     readonly property alias editor : _splitView.currentItem
-    property alias terminal : terminalLoader.item
+    readonly property alias terminal : terminalLoader.item
 
     ObjectModel { id: splitObjectModel }
 
@@ -206,7 +208,7 @@ Item
 
         _splitView.orientation = orientation
 
-        if(_splitView.count === 1 && !root.supportSplit)
+        if(_splitView.count === 1 && !settings.supportSplit)
         {
             return
         }

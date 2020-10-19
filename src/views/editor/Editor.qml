@@ -5,6 +5,8 @@ import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.7 as Kirigami
 import org.maui.nota 1.0 as Nota
 
+import QtQml.Models 2.3
+
 Maui.Editor
 {
     id: control
@@ -180,5 +182,16 @@ Maui.Editor
                 text: i18n("Cancel")
             }
         }
+    }
+
+
+    Rectangle
+    {
+        visible: _splitView.currentIndex === control._index
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        color: Kirigami.Theme.highlightColor
+        height: 8
     }
 }
