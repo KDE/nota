@@ -189,7 +189,7 @@ Maui.Page
             onClicked: root.focusMode = !root.focusMode
         }
 
-        altHeader: Kirigami.Settings.isMobile
+        altHeader: false
         headBar.rightContent:[
 //            ToolButton
 //            {
@@ -201,7 +201,7 @@ Maui.Page
             Maui.ToolActions
             {
                 id: _splitButton
-//                visible: supportSplit
+                visible: settings.supportSplit
                 expanded: isWide
                 autoExclusive: true
                 display: ToolButton.TextBesideIcon

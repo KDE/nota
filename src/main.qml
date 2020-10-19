@@ -16,6 +16,8 @@ Maui.ApplicationWindow
     id: root
     title: currentEditor ? currentTab.title : ""
 
+    altHeader: Kirigami.Settings.isMobile
+
     readonly property var views : ({editor: 0, recent: 1, documents: 2})
 
     property alias currentTab : editorView.currentTab
@@ -103,14 +105,14 @@ Maui.ApplicationWindow
                 _dialogLoader.sourceComponent = _settingsDialogComponent
                 dialog.open()
             }
-        },
+        }/*,
 
         Action
         {
             text: "Load plugin"
             icon.name: "plugin"
             onTriggered: _pluginLoader.open()
-        }
+        }*/
     ]
 
     onClosing:
