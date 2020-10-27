@@ -166,7 +166,7 @@ listDelegate: Maui.ItemDelegate
     isCurrentItem: ListView.isCurrentItem || checked
 
     height: Maui.Style.rowHeight *1.5
-    width: parent.width
+    width: ListView.view.width
     draggable: true
     Drag.keys: ["text/uri-list"]
     Drag.mimeData: Drag.active ?

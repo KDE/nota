@@ -38,7 +38,6 @@
 #include "src/models/documentsmodel.h"
 #include "src/models/historymodel.h"
 
-
 #define NOTA_URI "org.maui.nota"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])

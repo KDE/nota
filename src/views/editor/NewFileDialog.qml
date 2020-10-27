@@ -9,10 +9,12 @@ import org.maui.nota 1.0 as Nota
 Maui.Dialog
 {
     id: control
-
-    rejectButton.visible : false
+    title: i18n("New file")
     page.padding: 0
-    acceptButton.visible: true
+
+    defaultButtons: false
+    rejectButton.visible : false
+    acceptButton.visible: false
     acceptButton.text: i18n("New template")
 
    stack: ColumnLayout
