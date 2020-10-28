@@ -41,6 +41,7 @@ Maui.AltBrowser
         expanded: isWide
         currentIndex : control.viewType === Maui.AltBrowser.ViewType.List ? 0 : 1
         display: ToolButton.TextBesideIcon
+        cyclic: true
 
         Action
         {
@@ -101,7 +102,7 @@ Maui.AltBrowser
             label1.text: model.label
             iconSource: model.icon
             iconSizeHint: height * 0.6
-            checkable: selectionMode
+            checkable: root.selectionMode
             checked: _selectionbar.contains(model.path)
             onToggled: addToSelection(model)
         }
@@ -154,9 +155,14 @@ Maui.AltBrowser
             control.currentIndex = index
             _menu.popup()
         }
+
+        onPressAndHold:
+        {
+            control.currentIndex = index
+            _menu.popup()
+        }
     }
 }
-
 
 listDelegate: Maui.ItemDelegate
 {
@@ -184,7 +190,7 @@ listDelegate: Maui.ItemDelegate
         label4.text: model.mime
         iconSource: model.icon
         iconSizeHint: Maui.Style.iconSizes.big
-        checkable: selectionMode
+        checkable: root.selectionMode
         checked: _selectionbar.contains(model.path)
         onToggled: addToSelection(model)
         isCurrentItem: _listDelegate.isCurrentItem
@@ -234,6 +240,12 @@ listDelegate: Maui.ItemDelegate
     }
 
     onRightClicked:
+    {
+        control.currentIndex = index
+        _menu.popup()
+    }
+
+    onPressAndHold:
     {
         control.currentIndex = index
         _menu.popup()

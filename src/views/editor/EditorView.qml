@@ -231,6 +231,7 @@ Maui.Page
                 checkable: false
                 expanded: isWide
                 display: ToolButton.TextBesideIcon
+                defaultIconName: "document-save"
 
                 Action
                 {

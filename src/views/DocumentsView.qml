@@ -82,7 +82,7 @@ DocsBrowser
         label4.text: model.mime
         iconSource: model.icon
         iconSizeHint: Maui.Style.iconSizes.small
-        checkable: selectionMode
+        checkable: root.selectionMode
         checked: _selectionbar.contains(model.path)
         onToggled: addToSelection(control.model.get(index))
         isCurrentItem: _listDelegate.isCurrentItem
@@ -133,6 +133,12 @@ DocsBrowser
     }
 
     onRightClicked:
+    {
+        control.currentIndex = index
+        menu.popup()
+    }
+
+    onPressAndHold:
     {
         control.currentIndex = index
         menu.popup()

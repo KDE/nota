@@ -37,7 +37,9 @@ void HistoryModel::append(const QUrl &url)
 
 QList<QUrl> HistoryModel::getHistory()
 {
-    auto res =  QUrl::fromStringList(UTIL::loadSettings("URLS", "HISTORY", QStringList()).toStringList());
+    auto urls = UTIL::loadSettings("URLS", "HISTORY", QStringList()).toStringList();
+    urls.removeDuplicates();
+    auto res =  QUrl::fromStringList(urls);
     res.removeAll(QString(""));
     return res;
 }
@@ -46,7 +48,7 @@ void HistoryModel::setList()
 {
     for(const auto &url : this->getHistory())
     {
-        if(!url.isLocalFile() && !FMH::fileExists(url) && !isTextDocument(url))
+        if(!url.isLocalFile() || !FMH::fileExists(url) || !isTextDocument(url))
             continue;
 
         emit this->preItemAppended();

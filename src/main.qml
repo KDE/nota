@@ -217,7 +217,7 @@ Maui.ApplicationWindow
             icon.name: "item-select"
             onClicked:
             {
-                selectionMode = !selectionMode
+                root.selectionMode = !root.selectionMode
                 if(_swipeView.currentIndex === views.editor)
                 {
                     _swipeView.currentIndex = views.documents

@@ -64,7 +64,7 @@ Maui.Dialog
             onClicked:
             {
                 openTab("")
-                _editorListView.currentItem.body.textFormat = TextEdit.PlainText
+//                _editorListView.currentItem.body.textFormat = TextEdit.PlainText
                 control.close()
             }
         }
@@ -87,7 +87,7 @@ Maui.Dialog
             onClicked:
             {
                 openTab("")
-                _editorListView.currentItem.body.textFormat = TextEdit.RichText
+//                _editorListView.currentItem.body.textFormat = TextEdit.RichText
                 control.close()
             }
         }
