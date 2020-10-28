@@ -32,20 +32,10 @@ Maui.AbstractSideBar
         }
     }
 
-    background: Rectangle
-    {
-        color: Kirigami.Theme.backgroundColor
-        opacity: translucency ? 0.5 : 1
-    }
-
     Maui.Page
     {
         anchors.fill: parent
-        background: Rectangle
-        {
-            color: Kirigami.Theme.backgroundColor
-            opacity: translucency ? 0.7 : 1
-        }
+
         headBar.visible: true
         headBar.middleContent: ComboBox
         {
