@@ -4,10 +4,8 @@
 #include <QIcon>
 
 #if defined Q_OS_MACOS || defined Q_OS_WIN
-#include <KF5/KI18n/KLocalizedContext>
 #include <KF5/KI18n/KLocalizedString>
 #else
-#include <KI18n/KLocalizedContext>
 #include <KI18n/KLocalizedString>
 #endif
 
@@ -101,8 +99,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
             Nota::instance()->requestFiles(args);
 
     }, Qt::QueuedConnection);
-
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
     qmlRegisterType<DocumentsModel> (NOTA_URI, 1, 0, "Documents");
