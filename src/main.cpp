@@ -79,14 +79,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.processCommandLine(&parser);
     const QStringList args = parser.positionalArguments();
 
-#ifdef STATIC_KIRIGAMI
-    KirigamiPlugin::getInstance().registerTypes();
-#endif
-
-#ifdef STATIC_MAUIKIT
-    MauiKit::getInstance().registerTypes();
-#endif
-
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
@@ -99,6 +91,14 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
             Nota::instance()->requestFiles(args);
 
     }, Qt::QueuedConnection);
+
+#ifdef STATIC_KIRIGAMI
+    KirigamiPlugin::getInstance().registerTypes();
+#endif
+
+#ifdef STATIC_MAUIKIT
+    MauiKit::getInstance().registerTypes(&engine);
+#endif
 
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
     qmlRegisterType<DocumentsModel> (NOTA_URI, 1, 0, "Documents");
