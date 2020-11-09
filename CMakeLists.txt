@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(NOTA_VERSION 1.1.1)
+set(NOTA_VERSION 1.2.0)
 project(nota VERSION ${NOTA_VERSION})
 
 find_package(ECM 1.7.0 REQUIRED NO_MODULE)
@@ -24,12 +24,12 @@ set(CMAKE_AUTORCC ON)
 set(nota_SRCS
     src/main.cpp
     src/models/documentsmodel.cpp
-    src/models/editormodel.cpp
+    src/models/historymodel.cpp
     )
 
 set(nota_HDRS
     src/models/documentsmodel.h
-    src/models/editormodel.h
+    src/models/historymodel.h
     src/nota.h
     )
 
@@ -69,7 +69,9 @@ install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 #install(FILES org.kde.nota.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 #TODO: port to ecm_install_icons()
-ecm_install_icons(ICONS src/assets/nota.svg
-                  DESTINATION share/icons)
+#ecm_install_icons(ICONS src/assets/nota.svg
+#                  DESTINATION share/icons)
+install(FILES src/assets/nota.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
+
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)

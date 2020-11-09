@@ -2,288 +2,293 @@ import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
+import org.kde.mauikit 1.2 as Maui
 import org.maui.nota 1.0 as Nota
 
-MauiLab.SettingsDialog
+Maui.SettingsDialog
 {
-    MauiLab.SettingsSection
+    Maui.SettingsSection
     {
         title: i18n("General")
         description: i18n("Configure the app UI, behaviour and plugins.")
-
-        Switch
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            checkable: true
-            checked: root.enableSidebar
-            Kirigami.FormData.label: i18n("Enable places sidebar")
-            onToggled:
+            label1.text: i18n("Places Sidebar")
+            label2.text: i18n("Browse your file system from the sidebar")
+
+            Switch
             {
-                root.enableSidebar = !root.enableSidebar
-                Maui.FM.saveSettings("ENABLE_SIDEBAR", enableSidebar, "EXTENSIONS")
+                checkable: true
+                checked: settings.enableSidebar
+                onToggled: settings.enableSidebar = !settings.enableSidebar
             }
         }
 
-        Switch
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            checkable: true
-            checked: root.defaultBlankFile
-            Kirigami.FormData.label: i18n("Open blank file by default")
-            onToggled:
+            label1.text: i18n("Open with Blank File")
+            label2.text: i18n("Creates a blank file by default")
+
+            Switch
             {
-                root.defaultBlankFile = !root.defaultBlankFile
-                Maui.FM.saveSettings("DEFAULT_BLANK_FILE", defaultBlankFile, "SETTINGS")
+                checkable: true
+                checked: settings.defaultBlankFile
+                onToggled: settings.defaultBlankFile = !settings.defaultBlankFile
             }
         }
 
-        Switch
+        Maui.SettingTemplate
         {
             enabled: Nota.Nota.supportsEmbededTerminal()
-            Layout.fillWidth: true
-            checkable: true
-            checked: root.terminalVisible
-            Kirigami.FormData.label: i18n("Enable embedded terminal")
-            onToggled:
+            label1.text: i18n("Embedded Terminal")
+            label2.text: i18n("Enabled an embedded terminal")
+
+            Switch
             {
-                root.terminalVisible = !root.terminalVisible
-                Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
+                checkable: true
+                checked: settings.terminalVisible
+                onToggled: settings.terminalVisible = !settings.terminalVisible
             }
         }
     }
 
-    MauiLab.SettingsSection
+    Maui.SettingsSection
     {
         title: i18n("Editor")
         description: i18n("Configure the look and feel of the editor. The settings are applied globally")
 
-        Switch
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            checkable: true
-            checked: root.showLineNumbers
-            Kirigami.FormData.label: i18n("Show line numbers")
-            onToggled:
+            label1.text:  i18n("Auto Save")
+            label2.text: i18n("Auto saves your file every few seconds")
+            Switch
             {
-                root.showLineNumbers = !root.showLineNumbers
-                Maui.FM.saveSettings("SHOW_LINE_NUMBERS", showLineNumbers, "EDITOR")
+                checkable: true
+                checked: settings.autoSave
+                onToggled: settings.autoSave = !settings.autoSave
             }
         }
 
-        Switch
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            checkable: true
-            checked: root.showSyntaxHighlightingLanguages
-            Kirigami.FormData.label: i18n("Show syntax highlighting languages")
-            onToggled:
+            label1.text: i18n("Line Numbers")
+            label2.text: i18n("Display the line numbers on the left side")
+
+            Switch
             {
-                root.showSyntaxHighlightingLanguages = !root.showSyntaxHighlightingLanguages
-                Maui.FM.saveSettings("SHOW_SYNTAXHIGHLIGHTING_BOX", showSyntaxHighlightingLanguages, "EDITOR")
+                checkable: true
+                checked: settings.showLineNumbers
+                onToggled: settings.showLineNumbers = !settings.showLineNumbers
             }
         }
 
-        Switch
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            Kirigami.FormData.label: i18n("Enable syntax highlighting")
-            checkable: true
-            checked: root.enableSyntaxHighlighting
-            onToggled:
+            label1.text: i18n("Syntax Highlighting Languages")
+            label2.text: i18n("Display avaliable languages")
+
+            Switch
             {
-                root.enableSyntaxHighlighting = !root.enableSyntaxHighlighting
-                Maui.FM.saveSettings("ENABLE_SYNTAX_HIGHLIGHTING", enableSyntaxHighlighting, "EDITOR")
+                checkable: true
+                checked: settings.showSyntaxHighlightingLanguages
+                onToggled: settings.showSyntaxHighlightingLanguages = !settings.showSyntaxHighlightingLanguages
+            }
+        }
+
+        Maui.SettingTemplate
+        {
+            label1.text: i18n("Syntax Highlighting")
+            label2.text: i18n("Enable syntax highlighting for supported languages")
+            Switch
+            {
+                checkable: true
+                checked: settings.enableSyntaxHighlighting
+                onToggled: settings.enableSyntaxHighlighting = !settings.enableSyntaxHighlighting
             }
         }
     }
 
-    MauiLab.SettingsSection
+    Maui.SettingsSection
     {
         title: i18n("Fonts")
         description: i18n("Configure the global editor font family and size")
 
-        ComboBox
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            Kirigami.FormData.label: i18n("Family")
-            model: Qt.fontFamilies()
-            Component.onCompleted: currentIndex = find(root.font.family, Qt.MatchExactly)
-            onActivated:
+            label1.text:  i18n("Family")
+
+            ComboBox
             {
-                root.font.family = currentText
-                Maui.FM.saveSettings("FONT", root.font, "EDITOR")
+                Layout.fillWidth: true
+                model: Qt.fontFamilies()
+                Component.onCompleted: currentIndex = find(settings.font.family, Qt.MatchExactly)
+                onActivated: settings.font.family = currentText
             }
         }
 
-        SpinBox
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            Kirigami.FormData.label: i18n("Size")
-            from: 0; to : 500
-            value: root.font.pointSize
-            onValueChanged:
+            label1.text:  i18n("Size")
+
+            SpinBox
             {
-                root.font.pointSize = value
-                Maui.FM.saveSettings("FONT", root.font, "EDITOR")
+                from: 0; to : 500
+                value: settings.font.pointSize
+                onValueChanged: settings.font.pointSize = value
+            }
+        }
+
+        Maui.SettingTemplate
+        {
+            label1.text:  i18n("Tab Space")
+
+            SpinBox
+            {
+                from: 0; to : 500
+                value: settings.tabSpace
+                onValueChanged: settings.tabSpace = value
             }
         }
     }
 
-    MauiLab.SettingsSection
+    Maui.SettingsSection
     {
         title: i18n("Style")
-        description: i18n("Configure the style of the syntax highlighting. This configuration in not applied for rich text formats.")
-        visible: root.enableSyntaxHighlighting
+        description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats")
+        visible: settings.enableSyntaxHighlighting
 
-        ComboBox
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            Kirigami.FormData.label: i18n("Theme")
-            model:  _dummyDocumentHandler.getThemes()
-            Component.onCompleted: currentIndex = find(root.theme, Qt.MatchExactly)
+            label1.text:  i18n("Theme")
+            label2.text: i18n("Editor color scheme style")
 
-            onActivated:
+            ComboBox
             {
-                root.theme = currentText
-                Maui.FM.saveSettings("THEME", root.theme, "EDITOR")
-            }
+                model:  _dummyDocumentHandler.getThemes()
+                Component.onCompleted: currentIndex = find(settings.theme, Qt.MatchExactly)
 
-            Maui.DocumentHandler
-            {
-                id: _dummyDocumentHandler
+                onActivated: settings.theme = currentText
+
+                Maui.DocumentHandler
+                {
+                    id: _dummyDocumentHandler
+                }
             }
         }
 
-        Row
+        Maui.SettingTemplate
         {
-            Layout.fillWidth: true
-            Kirigami.FormData.label: i18n("Color")
-            spacing: Maui.Style.space.medium
+            label1.text:  i18n("Color")
+            label2.text: i18n("Editor background color")
 
-            Rectangle
+            Row
             {
-                height: 22
-                width: 22
-                radius: Maui.Style.radiusV
-                color: "#333"
-                border.color: Qt.darker(color)
+                spacing: Maui.Style.space.medium
 
-                MouseArea
+                Rectangle
                 {
-                    anchors.fill: parent
-                    onClicked: switchBackgroundColor(parent.color, "#fafafa")
-                }
-            }
+                    height: 22
+                    width: 22
+                    radius: Maui.Style.radiusV
+                    color: "#333"
+                    border.color: Qt.darker(color)
 
-            Rectangle
-            {
-                height: 22
-                width: 22
-                radius: Maui.Style.radiusV
-                color: "#fafafa"
-                border.color: Qt.darker(color)
-
-                MouseArea
-                {
-                    anchors.fill: parent
-                    onClicked: switchBackgroundColor(parent.color, "#333")
-                }
-            }
-
-            Rectangle
-            {
-                height: 22
-                width: 22
-                radius: Maui.Style.radiusV
-                color: "#fff3e6"
-                border.color: Qt.darker(color)
-                MouseArea
-                {
-                    anchors.fill: parent
-                    onClicked: switchBackgroundColor(parent.color, Qt.darker(parent.color, 2))
-
-                }
-            }
-
-            Rectangle
-            {
-                height: 22
-                width: 22
-                radius: Maui.Style.radiusV
-                color: "#4c425b"
-                border.color: Qt.darker(color)
-                MouseArea
-                {
-                    anchors.fill: parent
-                    onClicked: switchBackgroundColor(parent.color, Qt.lighter(parent.color, 2.5))
-                }
-            }
-
-            Rectangle
-            {
-                height: 22
-                width: 22
-                radius: Maui.Style.radiusV
-                color: "transparent"
-                border.color: Kirigami.Theme.textColor
-                Maui.X
-                {
-                    height: 16
-                    width: 16
-                    anchors.centerIn: parent
-                    color: Kirigami.Theme.textColor
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: switchBackgroundColor(parent.color, "#fafafa")
+                    }
                 }
 
-                MouseArea
+                Rectangle
                 {
-                    anchors.fill: parent
-                    onClicked: switchBackgroundColor(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor)
+                    height: 22
+                    width: 22
+                    radius: Maui.Style.radiusV
+                    color: "#fafafa"
+                    border.color: Qt.darker(color)
+
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: switchBackgroundColor(parent.color, "#333")
+                    }
+                }
+
+                Rectangle
+                {
+                    height: 22
+                    width: 22
+                    radius: Maui.Style.radiusV
+                    color: "#fff3e6"
+                    border.color: Qt.darker(color)
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: switchBackgroundColor(parent.color, Qt.darker(parent.color, 2))
+
+                    }
+                }
+
+                Rectangle
+                {
+                    height: 22
+                    width: 22
+                    radius: Maui.Style.radiusV
+                    color: "#4c425b"
+                    border.color: Qt.darker(color)
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: switchBackgroundColor(parent.color, Qt.lighter(parent.color, 2.5))
+                    }
+                }
+
+                Rectangle
+                {
+                    height: 22
+                    width: 22
+                    radius: Maui.Style.radiusV
+                    color: "transparent"
+                    border.color: Kirigami.Theme.textColor
+                    Maui.X
+                    {
+                        height: 16
+                        width: 16
+                        anchors.centerIn: parent
+                        color: Kirigami.Theme.textColor
+                    }
+
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: switchBackgroundColor(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor)
+                    }
                 }
             }
         }
     }
 
-    MauiLab.SettingsSection
+    Maui.SettingsSection
     {
         title: i18n("Interface")
-        description: i18n("Configure the app UI.")
+        description: i18n("Configure the application UI")
+        lastOne: true
 
-        Switch
+        Maui.SettingTemplate
         {
-            Kirigami.FormData.label: i18n("Focus Mode")
-            checkable: true
-            checked:  root.focusMode
-            onToggled:
-            {
-                root.focusMode = !root.focusMode
-            }
-        }
-
-        Switch
-        {
-            Kirigami.FormData.label: i18n("Translucent Sidebar")
-            checkable: true
-            enabled: root.enableSidebar && Maui.Handy.isLinux
-            checked:  root.translucency
-            onToggled:  root.translucency = !root.translucency
-        }
-
-        Switch
-        {
-            Kirigami.FormData.label: i18n("Dark Mode")
-            checkable: true
             enabled: false
+            label1.text: i18n("Dark Mode")
+            Switch
+            {
+                checkable: true
+            }
         }
     }
 
     function switchBackgroundColor(backgroundColor, textColor)
     {
-        root.backgroundColor = backgroundColor
-        root.textColor = textColor
-
-        Maui.FM.saveSettings("BACKGROUND_COLOR", root.backgroundColor, "EDITOR")
-        Maui.FM.saveSettings("TEXT_COLOR", root.textColor, "EDITOR")
+        settings.backgroundColor = backgroundColor
+        settings.textColor = textColor
     }
 }

@@ -1,30 +1,36 @@
-import QtQuick 2.10
-import QtQuick.Controls 2.10
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
+import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.8 as Kirigami
 
-MauiLab.AltBrowser
+Maui.AltBrowser
 {
     id: control
     enableLassoSelection: true
+    focus: true
+    gridView.itemSize: 120
+    gridView.itemHeight: gridView.itemSize * 1.3
 
-    gridView.itemSize: 100
-    gridView.topMargin: Maui.Style.contentMargins
-    listView.topMargin: Maui.Style.contentMargins
-    listView.spacing: Maui.Style.space.medium
+    property alias menu : _menu
+
+    ItemMenu
+    {
+        id: _menu
+        index: control.currentIndex
+        model: control.model
+    }
 
     Connections
     {
         target: control.currentView
-        onItemsSelected:
+        function onItemsSelected(indexes)
         {
             for(var i in indexes)
             {
                 const item =  control.model.get(indexes[i])
-                _selectionbar.append(item.path, item)
+                addToSelection(item)
             }
         }
     }
@@ -33,21 +39,22 @@ MauiLab.AltBrowser
     {
         autoExclusive: true
         expanded: isWide
-        currentIndex : control.viewType === MauiLab.AltBrowser.ViewType.List ? 0 : 1
+        currentIndex : control.viewType === Maui.AltBrowser.ViewType.List ? 0 : 1
         display: ToolButton.TextBesideIcon
+        cyclic: true
 
         Action
         {
             text: i18n("List")
             icon.name: "view-list-details"
-            onTriggered: control.viewType = MauiLab.AltBrowser.ViewType.List
+            onTriggered: control.viewType = Maui.AltBrowser.ViewType.List
         }
 
         Action
         {
             text: i18n("Grid")
             icon.name: "view-list-icons"
-            onTriggered: control.viewType= MauiLab.AltBrowser.ViewType.Grid
+            onTriggered: control.viewType= Maui.AltBrowser.ViewType.Grid
         }
     }
 
@@ -75,8 +82,8 @@ MauiLab.AltBrowser
             padding: Maui.Style.space.tiny
             isCurrentItem : GridView.isCurrentItem
             anchors.centerIn: parent
-            height: parent.height- 10
-            width: control.gridView.itemSize - 10
+            height: parent.height- 15
+            width: control.gridView.itemSize - 20
             draggable: true
             Drag.keys: ["text/uri-list"]
 
@@ -95,27 +102,30 @@ MauiLab.AltBrowser
             label1.text: model.label
             iconSource: model.icon
             iconSizeHint: height * 0.6
-            checkable: selectionMode
+            checkable: root.selectionMode
             checked: _selectionbar.contains(model.path)
-            onToggled: _selectionbar.append(model.path, control.model.get(index))
+            onToggled: addToSelection(model)
         }
 
         Connections
         {
             target: _selectionbar
-            onUriRemoved:
+            function onUriRemoved(uri)
             {
                 if(uri === model.path)
                     _gridDelegate.checked = false
             }
 
-            onUriAdded:
+            function onUriAdded(uri)
             {
                 if(uri === model.path)
                     _gridDelegate.checked = true
             }
 
-            onCleared: _gridDelegate.checked = false
+            function onCleared()
+            {
+                _gridDelegate.checked = false
+            }
         }
 
         onClicked:
@@ -123,12 +133,11 @@ MauiLab.AltBrowser
             control.currentIndex = index
             if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
             {
-                const item = control.model.get(control.currentIndex)
-                _selectionbar.append(item.path, item)
+                addToSelection(model)
 
             }else if(Maui.Handy.singleClick)
             {
-                editorView.openTab(control.model.get(index).path)
+                editorView.openTab(model.path)
             }
         }
 
@@ -137,23 +146,22 @@ MauiLab.AltBrowser
             control.currentIndex = index
             if(!Maui.Handy.singleClick && !selectionMode)
             {
-                editorView.openTab(control.model.get(index).path)
+                editorView.openTab(model.path)
             }
         }
-    }
-}
 
-//listView.section.labelPositioning: ViewSection.CurrentLabelAtStart
-listView.section.criteria: model.sort === "title" ?  ViewSection.FirstCharacter : ViewSection.FullString
-listView.section.property: model.sort
-listView.section.delegate: Maui.LabelDelegate
-{
-    id: delegate
-    width: parent.width
-    height: Maui.Style.toolBarHeightAlt
-    label: model.sort === "modified" ? Maui.FM.formatDate(Date(section), "MM/dd/yyyy") : (model.sort === "size" ? Maui.FM.formatSize(section)  : String(section).replace("file://", "").toUpperCase())
-    labelTxt.font.pointSize: Maui.Style.fontSizes.big
-    isSection: true
+        onRightClicked:
+        {
+            control.currentIndex = index
+            _menu.popup()
+        }
+
+        onPressAndHold:
+        {
+            control.currentIndex = index
+            _menu.popup()
+        }
+    }
 }
 
 listDelegate: Maui.ItemDelegate
@@ -164,9 +172,7 @@ listDelegate: Maui.ItemDelegate
     isCurrentItem: ListView.isCurrentItem || checked
 
     height: Maui.Style.rowHeight *1.5
-    width: parent.width
-    leftPadding: Maui.Style.space.small
-    rightPadding: Maui.Style.space.small
+    width: ListView.view.width
     draggable: true
     Drag.keys: ["text/uri-list"]
     Drag.mimeData: Drag.active ?
@@ -184,28 +190,31 @@ listDelegate: Maui.ItemDelegate
         label4.text: model.mime
         iconSource: model.icon
         iconSizeHint: Maui.Style.iconSizes.big
-        checkable: selectionMode
+        checkable: root.selectionMode
         checked: _selectionbar.contains(model.path)
-        onToggled: _selectionbar.append(model.path, control.model.get(index))
+        onToggled: addToSelection(model)
         isCurrentItem: _listDelegate.isCurrentItem
     }
 
     Connections
     {
         target: _selectionbar
-        onUriRemoved:
+        function onUriRemoved(uri)
         {
             if(uri === model.path)
+                _listDelegate.checked = false
+        }
+
+        function onUriAdded(uri)
+        {
+            if(uri === model.path)
+                _listDelegate.checked = true
+        }
+
+        function onCleared()
+        {
             _listDelegate.checked = false
         }
-
-        onUriAdded:
-        {
-            if(uri === model.path)
-            _listDelegate.checked = true
-        }
-
-        onCleared: _listDelegate.checked = false
     }
 
     onClicked:
@@ -213,12 +222,11 @@ listDelegate: Maui.ItemDelegate
         control.currentIndex = index
         if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
         {
-            const item = control.model.get(control.currentIndex)
-            _selectionbar.append(item.path, item)
+            addToSelection(model)
 
         }else if(Maui.Handy.singleClick)
         {
-            editorView.openTab(control.model.get(index).path)
+            editorView.openTab(model.path)
         }
     }
 
@@ -227,11 +235,22 @@ listDelegate: Maui.ItemDelegate
         control.currentIndex = index
         if(!Maui.Handy.singleClick && !selectionMode)
         {
-            editorView.openTab(control.model.get(index).path)
+            editorView.openTab(model.path)
         }
     }
-}
 
+    onRightClicked:
+    {
+        control.currentIndex = index
+        _menu.popup()
+    }
+
+    onPressAndHold:
+    {
+        control.currentIndex = index
+        _menu.popup()
+    }
+}
 
 function filterSelectedItems(path)
 {

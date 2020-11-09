@@ -1,10 +1,11 @@
-import QtQuick 2.9
-import QtQuick.Controls 2.13
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.0 as Maui
-import QtQml.Models 2.3
+import org.kde.mauikit 1.2 as Maui
 import org.maui.nota 1.0 as Nota
+
+import QtQml.Models 2.3
 
 Item
 {
@@ -15,13 +16,14 @@ Item
     property url path
 
     property alias currentIndex : _splitView.currentIndex
-    property alias count : _splitView.count
+    property alias orientation : _splitView.orientation
+
+    readonly property alias count : _splitView.count
     readonly property alias currentItem : _splitView.currentItem
     readonly property alias model : splitObjectModel
     readonly property string title : count === 2 ?  model.get(0).title + "  -  " + model.get(1).title : currentItem.title
-    property alias orientation : _splitView.orientation
     readonly property alias editor : _splitView.currentItem
-    property alias terminal : terminalLoader.item
+    readonly property alias terminal : terminalLoader.item
 
     ObjectModel { id: splitObjectModel }
 
@@ -30,7 +32,7 @@ Item
     {
         if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))
         {
-             split("", Qt.Vertical)
+            split("", Qt.Vertical)
         }
     }
 
@@ -40,6 +42,7 @@ Item
     {
         anchors.fill: parent
         orientation: Qt.Vertical
+
         SplitView
         {
             id: _splitView
@@ -51,8 +54,9 @@ Item
 
             handle: Rectangle
             {
-                implicitWidth: 6
-                implicitHeight: 6
+                implicitWidth: Maui.Handy.isTouch ? 10 : 6
+                implicitHeight: Maui.Handy.isTouch ? 10 : 6
+
                 color: SplitHandle.pressed ? Kirigami.Theme.highlightColor
                                            : (SplitHandle.hovered ? Qt.lighter(Kirigami.Theme.backgroundColor, 1.1) : Kirigami.Theme.backgroundColor)
 
@@ -66,50 +70,50 @@ Item
 
 
                 states: [  State
-                {
-                    when: _splitView.orientation === Qt.Horizontal
-
-                    AnchorChanges
                     {
-                        target: _splitSeparator1
-                        anchors.top: parent.top
-                        anchors.bottom: parent.bottom
-                        anchors.left: parent.left
-                        anchors.right: undefined
-                    }
+                        when: _splitView.orientation === Qt.Horizontal
 
-                    AnchorChanges
+                        AnchorChanges
+                        {
+                            target: _splitSeparator1
+                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.left: parent.left
+                            anchors.right: undefined
+                        }
+
+                        AnchorChanges
+                        {
+                            target: _splitSeparator2
+                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            anchors.right: parent.right
+                            anchors.left: undefined
+                        }
+                    },
+
+                    State
                     {
-                        target: _splitSeparator2
-                        anchors.top: parent.top
-                        anchors.bottom: parent.bottom
-                        anchors.right: parent.right
-                        anchors.left: undefined
-                    }
-                },
+                        when: _splitView.orientation === Qt.Vertical
 
-                State
-                {
-                    when: _splitView.orientation === Qt.Vertical
+                        AnchorChanges
+                        {
+                            target: _splitSeparator1
+                            anchors.top: parent.top
+                            anchors.bottom: undefined
+                            anchors.left: parent.left
+                            anchors.right: parent.right
+                        }
 
-                    AnchorChanges
-                    {
-                        target: _splitSeparator1
-                        anchors.top: parent.top
-                        anchors.bottom: undefined
-                        anchors.left: parent.left
-                        anchors.right: parent.right
+                        AnchorChanges
+                        {
+                            target: _splitSeparator2
+                            anchors.top: undefined
+                            anchors.bottom: parent.bottom
+                            anchors.right: parent.right
+                            anchors.left: parent.left
+                        }
                     }
-
-                    AnchorChanges
-                    {
-                        target: _splitSeparator2
-                        anchors.top: undefined
-                        anchors.bottom: parent.bottom
-                        anchors.right: parent.right
-                        anchors.left: parent.left
-                    }
-                }
 
                 ]
 
@@ -137,12 +141,12 @@ Item
         {
             id: terminalLoader
             active: Nota.Nota.supportsEmbededTerminal()
-            visible: active && terminalVisible && terminal
+            visible: active && settings.terminalVisible && terminal
             SplitView.fillWidth: true
             SplitView.preferredHeight: 200
             SplitView.maximumHeight: parent.height * 0.5
             SplitView.minimumHeight : 100
-            source: "Terminal.qml"
+            source: "../Terminal.qml"
             onLoaded: syncTerminal(control.currentEditor.fileUrl)
 
             Behavior on SplitView.preferredHeight
@@ -187,7 +191,6 @@ Item
         }
     }
 
-
     function syncTerminal(path)
     {
         if(control.terminal && control.terminal.visible && Maui.FM.fileExists(path))
@@ -197,9 +200,15 @@ Item
 
     function split(path, orientation)
     {
+        if(orientation === _splitView.orientation && path.length === 0 && _splitView.count === 2)
+        {
+            pop()
+            return
+        }//close the innactive split
+
         _splitView.orientation = orientation
 
-        if(_splitView.count === 1 && !root.supportSplit)
+        if(_splitView.count === 1 && !settings.supportSplit)
         {
             return
         }
@@ -209,7 +218,7 @@ Item
             return
         }
 
-        const component = Qt.createComponent("qrc:/views/Editor.qml");
+        const component = Qt.createComponent("qrc:/views/editor/Editor.qml");
 
         if (component.status === Component.Ready)
         {
@@ -227,9 +236,32 @@ Item
         {
             return //can not pop all the browsers, leave at leats 1
         }
-const index = _splitView.currentIndex === 1 ? 0 : 1
+
+        closeSplit(_splitView.currentIndex === 1 ? 0 : 1)
+    }
+
+    function closeSplit(index) //closes a split but triggering a warning before
+    {
+        if(index >= _splitView.count)
+        {
+            return
+        }
+
+        const item = _splitView.itemAt(index)
+        if( item.document.modified)
+        {
+            _dialogLoader.sourceComponent = _unsavedDialogComponent
+            dialog.callback = function () { destroyItem(index) }
+            dialog.open()
+            return
+        } else destroyItem(index)
+    }
+
+    function destroyItem(index) //deestroys a split view withouth warning
+    {
+        var item = _splitView.itemAt(index)
+        item.destroy()
         splitObjectModel.remove(index)
-        _splitView.takeItem(index)
         _splitView.currentIndex = 0
     }
 }

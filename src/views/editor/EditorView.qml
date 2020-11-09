@@ -13,9 +13,9 @@ Maui.Page
 {
     id: control
     property alias currentTab : _editorListView.currentItem
-    property Item currentEditor: currentTab ? currentTab.currentItem : null
+    readonly property Maui.Editor currentEditor: currentTab ? currentTab.currentItem : null
     property alias listView: _editorListView
-    property alias count: _editorListView.count
+    readonly property alias count: _editorListView.count
     readonly property alias model : _documentModel
     property alias plugin: _pluginLayout
 
@@ -27,16 +27,17 @@ Maui.Page
     header: Maui.TabBar
     {
         id: _tabBar
-        visible: _editorListView.count > 1
+        visible: _documentModel.count > 1
+
         width: parent.width
         position: TabBar.Header
         currentIndex : _editorListView.currentIndex
-        onNewTabClicked: root.openTab("")
+        onNewTabClicked: editorView.openTab("")
 
         Repeater
         {
             id: _repeater
-            model: _editorModel
+            model: _documentModel.count
 
             Maui.TabButton
             {
@@ -44,45 +45,27 @@ Maui.Page
                 readonly property int index_ : index
                 implicitHeight: _tabBar.implicitHeight
                 implicitWidth: Math.max(parent.width / _repeater.count, 120)
+
                 checked: index === _tabBar.currentIndex
 
-                text: model.label
+                text: _documentModel.get(index).title
 
                 onClicked: _editorListView.currentIndex = index
                 onCloseClicked:
                 {
-                    if( _documentModel.get(model.index).editor.document.modified)
+                    if( tabHasUnsavedFiles(model.index) )
                     {
-                        _saveDialog.fileIndex = model.index
-                        _saveDialog.open()
+                        _dialogLoader.sourceComponent = _unsavedDialogComponent
+                        dialog.callback = function () { closeTab(model.index) }
+
+                        if(tabHasUnsavedFiles(model.index))
+                        {
+                            dialog.open()
+                            return
+                        }
                     }
                     else
                         closeTab(model.index)
-                }
-
-                Maui.Dialog
-                {
-                    id: _saveDialog
-                    property int fileIndex
-                    page.padding: Maui.Style.space.huge
-                    title: i18n("Save file")
-                    message: i18n(String("This file has been modified, you can save your changes now or discard them.\n")) + _editorModel.get(_tabButton.index).path
-
-                    acceptButton.text: i18n("Save")
-                    rejectButton.text: i18n("Discard")
-
-                    onAccepted:
-                    {
-                        _documentModel.get(fileIndex).saveFile(_editorModel.get(fileIndex).path, fileIndex)
-                        closeTab(fileIndex)
-                        _saveDialog.close()
-                    }
-
-                    onRejected:
-                    {
-                        _saveDialog.close()
-                        closeTab(fileIndex)
-                    }
                 }
             }
         }
@@ -123,124 +106,12 @@ Maui.Page
             }
         }
 
-        Maui.Dialog
+        NewFileDialog
         {
             id: _newDocumentMenu
             maxHeight: 300
             maxWidth: 400
-            rejectButton.visible : false
-            page.padding: 0
-            acceptButton.visible: true
-            acceptButton.text: i18n("New template")
-
-            ColumnLayout
-            {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                spacing: 0
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    alt: true
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "folder-open"
-                            label1.text: i18n("Open file")
-                            label2.text: i18n("Open one or multiple files from the file system")
-                        }
-
-                        onClicked:
-                        {
-                            openFile()
-                            _newDocumentMenu.close()
-                        }
-                    }
-                }
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "text-x-generic"
-                            label1.text: i18n("Text file")
-                            label2.text: i18n("Simple text file with syntax highlighting")
-                        }
-
-                        onClicked:
-                        {
-                            openTab("")
-                            _editorListView.currentItem.body.textFormat = TextEdit.PlainText
-                            _newDocumentMenu.close()
-                        }
-                    }
-                }
-
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-alt: true
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "text-enriched"
-                            label1.text: i18n("Rich text file")
-                            label2.text: i18n("With support for basic text format editing")
-                        }
-
-                        onClicked:
-                        {
-                            openTab("")
-                            _editorListView.currentItem.body.textFormat = TextEdit.RichText
-                            _newDocumentMenu.close()
-                        }
-                    }
-                }
-
-                Maui.AlternateListItem
-                {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-
-                    Maui.ItemDelegate
-                    {
-                        anchors.fill: parent
-
-                        Maui.ListItemTemplate
-                        {
-                            anchors.fill:parent
-                            iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                            iconSource: "text-html"
-                            label1.text: i18n("HTML text file")
-                            label2.text: i18n("Text file with HTML markup support")
-                        }
-                    }
-                }
-            }
-        }
+         }
     }
 
     Maui.Page
@@ -309,32 +180,33 @@ alt: true
         ]
 
         headBar.visible: _editorListView.count > 0
-        headBar.middleContent: Button
+        headBar.middleContent: ToolButton
         {
             //        visible: root.focusMode
-            icon.name: "quickview"
-            text: i18n("Focus")
+            icon.name: checked ? "view-readermode-active" : "view-readermode"
+//            text: i18n("Focus")
             checked: root.focusMode
             onClicked: root.focusMode = !root.focusMode
         }
 
-        altHeader: Kirigami.Settings.isMobile
+        altHeader: false
         headBar.rightContent:[
-            ToolButton
-            {
-                icon.name: "tool_pen"
-                onClicked: _doodleDialog.open()
-                checked: _doodleDialog.visible
-            },
+//            ToolButton
+//            {
+//                icon.name: "tool_pen"
+//                onClicked: _doodleDialog.open()
+//                checked: _doodleDialog.visible
+//            },
 
             Maui.ToolActions
             {
                 id: _splitButton
-                visible: supportSplit
+                visible: settings.supportSplit
                 expanded: isWide
                 autoExclusive: true
                 display: ToolButton.TextBesideIcon
                 currentIndex:  -1
+                cyclic: true
 
                 Action
                 {
@@ -357,20 +229,23 @@ alt: true
             {
                 autoExclusive: false
                 checkable: false
-                expanded: true
+                expanded: isWide
+                display: ToolButton.TextBesideIcon
+                defaultIconName: "document-save"
 
                 Action
                 {
                     text: i18n("Save")
                     icon.name: "document-save"
-                    onTriggered: saveFile( control.currentEditor.fileUrl, _tabBar.currentIndex)
+                    enabled: currentEditor ? currentEditor.document.modified : false
+                    onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
                 }
 
                 Action
                 {
                     icon.name: "document-save-as"
                     text: i18n("Save as...")
-                    onTriggered: saveFile("", _tabBar.currentIndex)
+                    onTriggered: saveFile("", control.currentEditor)
                 }
             }
         ]
@@ -414,6 +289,46 @@ alt: true
         Alternative you can open existing files from the left places sidebar or by clicking the Open button")
     }
 
+    function unsavedTabSplits(index) //which split indexes are unsaved
+    {
+        var indexes = []
+        const tab =  control.model.get(index)
+        for(var i = 0; i < tab.count; i++)
+        {
+            if(tab.model.get(i).document.modified)
+            {
+                indexes.push(i)
+            }
+        }
+        return indexes
+    }
+
+    function tabHasUnsavedFiles(index) //if a tab has at least one unsaved file in a split
+    {
+        return unsavedTabSplits(index).length
+    }
+
+    function fileIndex(path) //find the [tab, split] index for a path
+    {
+        if(path.length === 0)
+        {
+            return [-1, -1]
+        }
+
+        for(var i = 0; i < control.count; i++)
+        {
+            const tab =  control.model.get(i)
+            for(var j = 0; j < tab.count; j++)
+            {
+                const doc = tab.model.get(j)
+                if(doc.fileUrl.toString() === path)
+                {
+                    return [i, j]
+                }
+            }
+        }
+        return [-1,-1]
+    }
 
     function openFile()
     {
@@ -432,36 +347,39 @@ alt: true
     function openTab(path)
     {
         _swipeView.currentIndex = views.editor
+        const index = fileIndex(path)
 
-        const index = _editorList.urlIndex(path)
-        if(index >= 0)
-            _editorListView.currentIndex = index;
+        if(index[0] >= 0)
+        {
+            _editorListView.currentIndex = index[0]
+            currentTab.currentIndex = index[1]
+            return
+        }
 
-        if(!_editorList.append(path))
-            return ;
-
-        var component = Qt.createComponent("qrc:/views/EditorLayout.qml");
+        var component = Qt.createComponent("qrc:/views/editor/EditorLayout.qml");
         if (component.status === Component.Ready)
         {
-            _documentModel.append(component.createObject(_documentModel, {"path": path}));
-
+            _documentModel.append(component.createObject(_documentModel, {"path": path}))
+            _historyList.append(path)
             _editorListView.currentIndex = _documentModel.count - 1
         }
     }
 
-    function closeTab(index)
+    function closeTab(index) //no questions asked
     {
-        console.log("CLOSING FILE", index, _editorList.count, _documentModel.count)
-        _editorList.remove(index)
+        var item = _documentModel.get(index)
+        item.destroy()
         _documentModel.remove(index)
-        console.log("CLOSING FILE", index, _editorList.count, _documentModel.count)
     }
 
-    function saveFile(path, index)
+    function saveFile(path, item)
     {
+        if(!item)
+            return
+
         if (path && Maui.FM.fileExists(path))
         {
-            control.currentEditor.document.saveAs(path);
+            item.document.saveAs(path)
         } else
         {
             _dialogLoader.sourceComponent = _fileDialogComponent
@@ -469,8 +387,8 @@ alt: true
             //            fileDialog.settings.singleSelection = true
             dialog.show(function (paths)
             {
-                control.currentEditor.document.saveAs(paths[0]);
-                _editorList.update(index, paths[0]);
+                item.document.saveAs(paths[0])
+                _historyList.append(paths[0])
             });
         }
     }

@@ -5,9 +5,12 @@
         <file>views/RecentView.qml</file>
         <file>views/widgets/DocsBrowser.qml</file>
         <file>views/widgets/SettingsDialog.qml</file>
-        <file>views/EditorLayout.qml</file>
-        <file>views/Editor.qml</file>
         <file>views/Terminal.qml</file>
-        <file>views/EditorView.qml</file>
+        <file>views/PlacesSidebar.qml</file>
+        <file>views/editor/NewFileDialog.qml</file>
+        <file>views/editor/EditorView.qml</file>
+        <file>views/editor/Editor.qml</file>
+        <file>views/editor/EditorLayout.qml</file>
+        <file>views/widgets/ItemMenu.qml</file>
     </qresource>
 </RCC>

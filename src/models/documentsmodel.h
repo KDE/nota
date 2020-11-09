@@ -2,7 +2,6 @@
 #define DOCUMENTSMODEL_H
 
 #include <QObject>
-#include <QThread>
 
 #ifdef STATIC_MAUIKIT
 #include "fmh.h"
@@ -12,38 +11,28 @@
 #include <MauiKit/mauilist.h>
 #endif
 
-class FilesFetcher : public QObject
+namespace FMH
 {
-		Q_OBJECT
-	public slots:
-		void fetch(const QList<QUrl> &urls);
-
-	signals:
-		void resultReady(FMH::MODEL_LIST items);
-		void itemReady(FMH::MODEL item);
-};
+class FileLoader;
+}
 
 class DocumentsModel : public MauiList
 {
-		Q_OBJECT
-		QThread m_worker;
+    Q_OBJECT
+public:
+    DocumentsModel(QObject *parent = nullptr);
+    ~DocumentsModel() override;
 
-	public:
-		DocumentsModel(QObject *parent = nullptr);
-		~DocumentsModel() override;
+    FMH::MODEL_LIST items() const override final;
 
-		FMH::MODEL_LIST items() const override final;
+    void componentComplete() override final;
 
-		void componentComplete() override final;
+private:
+    void setList(const FMH::MODEL_LIST &list);
+    void append(const FMH::MODEL &item);
 
-	private:
-		void setList(const FMH::MODEL_LIST &list);
-		void append(const FMH::MODEL &item);
-
-		FMH::MODEL_LIST m_list;
-
-	signals:
-		void start(QList<QUrl> urls);
+    FMH::MODEL_LIST m_list;
+    FMH::FileLoader *m_fileLoader;
 };
 
 

@@ -6,7 +6,7 @@ import org.kde.mauikit 1.0 as Maui
 import org.kde.mauikit 1.1 as MauiLab
 import org.maui.nota 1.0 as Nota
 
-Maui.ToolBar
+Maui.Page
 {
     id: plugin
 
@@ -25,9 +25,25 @@ Maui.ToolBar
     }
 
     Layout.fillWidth: true
-    position: ToolBar.Footer
+    Layout.minimumHeight: 500
 
-    Maui.ToolActions
+
+    Loader
+    {
+        anchors.centerIn: parent
+        anchors.fill: parent
+        id: _loader
+
+        function reload()
+        {
+            const  sourceFile = _loader.source
+            _loader.source = ""
+            _loader.source = sourceFile
+        }
+    }
+
+    footBar.leftContent:[
+     Maui.ToolActions
     {
         checkable: false
         autoExclusive: false
@@ -42,7 +58,15 @@ Maui.ToolBar
             onTriggered:
             {
                 console.log("trying to run a script", currentEditor.fileUrl)
-                Nota.Nota.run("qmlscene", [currentEditor.fileUrl])
+//                Nota.Nota.run("qmlscene", [currentEditor.fileUrl])
+if(_loader.source.length)
+                    {
+                        _loader.source = " "
+                    }else
+                    {
+                        _loader.source = currentEditor.fileUrl
+
+                    }
 
             }
         }
@@ -63,7 +87,7 @@ Maui.ToolBar
             onTriggered: start("QT_QUICK_CONTROLS_MOBILE=" + (plugin.mobileMode ? "1" : "0") + " QT_QUICK_CONTROLS_STYLE=" + plugin.style  +" qmlscene " + String(currentEditor.fileUrl).replace("file://", "") );
 
         }
-    }
+    },
 
     ComboBox
     {
@@ -75,7 +99,7 @@ Maui.ToolBar
         {
             plugin.style = styles.get(currentIndex).value
         }
-    }
+    },
 
     Switch
     {
@@ -83,7 +107,7 @@ Maui.ToolBar
         checkable: true
         checked: plugin.mobileMode
         onToggled: plugin.mobileMode = checked
-    }
+    },
 
     ToolButton
     {
@@ -92,6 +116,7 @@ Maui.ToolBar
         onClicked: stop()
 
     }
+]
 
     function start(command)
     {

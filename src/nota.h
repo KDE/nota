@@ -14,6 +14,20 @@
 class Nota :  public QObject
 {
 	Q_OBJECT
+
+public:
+	static Nota * instance()
+	{
+		static Nota nota;
+		return &nota;
+	}
+
+	Nota(const Nota &) = delete;
+	Nota &operator=(const Nota &) = delete;
+	Nota(Nota &&) = delete;
+	Nota &operator=(Nota &&) = delete;
+
+
 public slots:
 	void requestFiles(const QStringList &urls)
 	{
@@ -42,19 +56,22 @@ public slots:
 #endif
 	}
 
-    bool run(const QString &process, const QStringList &params = {})
-    {
-            auto m_process = new QProcess;
+	bool run(const QString &process, const QStringList &params = {})
+	{
+			auto m_process = new QProcess;
 //            connect(myProcess,SIGNAL(readyReadStandardError()),this,SLOT(vEdProcess()));
 //            connect(myProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(processStandardOutput()));
-            connect(m_process,SIGNAL(finished(int)),m_process,SLOT(deleteLater()));
-            connect(this,&QObject::destroyed,m_process,&QProcess::kill);
-            m_process->start(process, params);
-            return true;
-    }
+			connect(m_process,SIGNAL(finished(int)),m_process,SLOT(deleteLater()));
+			connect(this,&QObject::destroyed,m_process,&QProcess::kill);
+			m_process->start(process, params);
+			return true;
+	}
 
 signals:
 	void openFiles(QStringList urls);
+
+private:
+	explicit Nota(QObject *parent = nullptr) : QObject(parent) {}
 };
 
 

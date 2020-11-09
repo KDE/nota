@@ -1,22 +1,22 @@
-import QtQuick 2.13
-import QtQuick.Controls 2.13
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
+import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.7 as Kirigami
-import QtQml.Models 2.3
 import org.maui.nota 1.0 as Nota
+
+import QtQml.Models 2.3
 
 Maui.Editor
 {
     id: control
     readonly property int _index : ObjectModel.index
+    property bool showFindAndReplace: false
 
     SplitView.fillHeight: true
     SplitView.fillWidth: true
     SplitView.preferredHeight: _splitView.orientation === Qt.Vertical ? _splitView.height / (_splitView.count) :  _splitView.height
     SplitView.minimumHeight: _splitView.orientation === Qt.Vertical ?  200 : 0
-
 
     SplitView.preferredWidth: _splitView.orientation === Qt.Horizontal ? _splitView.width / (_splitView.count) : _splitView.width
     SplitView.minimumWidth: _splitView.orientation === Qt.Horizontal ? 300 :  0
@@ -24,14 +24,17 @@ Maui.Editor
     opacity: _splitView.currentIndex === _index ? 1 : 0.7
 
     headBar.visible: false
-    showLineNumbers: root.showLineNumbers
-    body.color: root.textColor
-    body.font.family: root.font.family
-    body.font.pointSize: root.font.pointSize
-    document.backgroundColor: root.backgroundColor
-    showSyntaxHighlightingLanguages: root.showSyntaxHighlightingLanguages
-    document.theme: root.theme
-    document.enableSyntaxHighlighting: root.enableSyntaxHighlighting
+    showLineNumbers: settings.showLineNumbers
+    body.color: settings.textColor
+    body.font.family: settings.font.family
+    body.font.pointSize: settings.font.pointSize
+    document.backgroundColor: settings.backgroundColor
+    showSyntaxHighlightingLanguages: settings.showSyntaxHighlightingLanguages
+    document.theme: settings.theme
+    document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
+    document.autoSave: settings.autoSave
+    document.tabSpace: ((settings.tabSpace+1) * body.font.pointSize) / 2
+
     onFileUrlChanged: syncTerminal(control.fileUrl)
 
     MouseArea
@@ -47,7 +50,7 @@ Maui.Editor
         }
     }
 
-    footBar.visible: false
+    footBar.visible: showSyntaxHighlightingLanguages || showFindAndReplace
     footBar.leftContent: [
 
         Maui.TextField
@@ -70,16 +73,14 @@ Maui.Editor
         {
             text: i18n("Replace")
         }
-
     ]
-
 
     Keys.enabled: true
     Keys.onPressed:
     {
         if((event.key === Qt.Key_S) && (event.modifiers & Qt.ControlModifier))
         {
-            saveFile(document.fileUrl, _tabBar.currentIndex)
+            saveFile(document.fileUrl, control)
         }
 
         if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))
@@ -89,8 +90,7 @@ Maui.Editor
 
         if(event.key === Qt.Key_F4)
         {
-            root.terminalVisible = !root.terminalVisible
-            Maui.FM.saveSettings("TERMINAL", terminalVisible, "EXTENSIONS")
+            settings.terminalVisible = !settings.terminalVisible
         }
 
         if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
@@ -111,13 +111,14 @@ Maui.Editor
 
         if((event.key === Qt.Key_L) && (event.modifiers & Qt.ControlModifier))
         {
-            root.showLineNumbers = !root.showLineNumbers
+            settings.showLineNumbers = !settings.showLineNumbers
         }
 
         if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
         {
-            footBar.visible = !footBar.visible
-            if(footBar.visible)
+            control.showFindAndReplace = !control.showFindAndReplace
+
+            if(control.showFindAndReplace)
             {
                 _findField.forceActiveFocus()
             }else
@@ -168,7 +169,7 @@ Maui.Editor
 
             MenuItem
             {
-                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && root.supportSplit
+                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && settings.supportSplit
                 text: i18n("Open in new split")
                 onTriggered:
                 {
@@ -183,4 +184,14 @@ Maui.Editor
         }
     }
 
+
+    Rectangle
+    {
+        visible: _splitView.currentIndex === control._index
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        color: Kirigami.Theme.highlightColor
+        height: 8
+    }
 }
