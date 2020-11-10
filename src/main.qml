@@ -150,8 +150,8 @@ Maui.ApplicationWindow
         {
             property bool discard : false
             property var callback : ({})
-            title: i18n("Un saved files")
-            message: i18n("You have un saved files. You can go back and save them or choose to dicard all changes and exit.")
+            title: i18n("Unsaved files")
+            message: i18n("You have unsaved files. You can go back and save them or choose to discard all changes and exit.")
             page.margins: Maui.Style.space.big
             template.iconSource: "emblem-warning"
             acceptButton.text: i18n("Go back")

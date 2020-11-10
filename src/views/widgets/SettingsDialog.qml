@@ -85,7 +85,7 @@ Maui.SettingsDialog
         Maui.SettingTemplate
         {
             label1.text: i18n("Syntax Highlighting Languages")
-            label2.text: i18n("Display avaliable languages")
+            label2.text: i18n("Display available languages")
 
             Switch
             {
