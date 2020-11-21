@@ -28,7 +28,6 @@ public:
     void componentComplete() override final;
 
 private:
-    void setList(const FMH::MODEL_LIST &list);
     void append(const FMH::MODEL &item);
 
     FMH::MODEL_LIST m_list;

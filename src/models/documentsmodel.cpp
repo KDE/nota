@@ -27,13 +27,6 @@ DocumentsModel::~DocumentsModel()
     delete m_fileLoader;
 }
 
-void DocumentsModel::setList(const FMH::MODEL_LIST &list)
-{
-	emit this->preListChanged ();
-	this->m_list = list;
-	emit this->postListChanged ();
-}
-
 void DocumentsModel::append(const FMH::MODEL &item)
 {
 	emit this->preItemAppended ();

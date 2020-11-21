@@ -12,7 +12,6 @@ static bool isTextDocument(const QUrl &url)
 
 HistoryModel::HistoryModel(QObject *parent) : MauiList(parent)
 {
-    this->setList();
 }
 
 FMH::MODEL_LIST HistoryModel::items() const
@@ -55,4 +54,10 @@ void HistoryModel::setList()
         this->m_list << FMH::getFileInfoModel(url);
         emit this->postItemAppended();
     }
+}
+
+
+void HistoryModel::componentComplete()
+{
+    this->setList();
 }
