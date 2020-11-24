@@ -17,7 +17,7 @@ class HistoryModel : public MauiList
 
 public:
     explicit HistoryModel(QObject *parent = nullptr);
-    FMH::MODEL_LIST items() const override final;
+    const FMH::MODEL_LIST &items() const override final;
 
     QList<QUrl> getHistory();
 
