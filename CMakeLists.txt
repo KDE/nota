@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(NOTA_VERSION 1.2.0)
+set(NOTA_VERSION 1.2.1)
 project(nota VERSION ${NOTA_VERSION})
 
 find_package(ECM 1.7.0 REQUIRED NO_MODULE)

@@ -28,7 +28,7 @@ public:
     void componentComplete() override final;
 
 private:
-    void append(const FMH::MODEL &item);
+    void append(const FMH::MODEL_LIST &items);
 
     FMH::MODEL_LIST m_list;
     FMH::FileLoader *m_fileLoader;

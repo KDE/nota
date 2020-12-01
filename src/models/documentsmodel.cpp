@@ -19,7 +19,7 @@ DocumentsModel::DocumentsModel(QObject * parent) : MauiList (parent)
     qRegisterMetaType<QList<QUrl>>("QList<QUrl>&");
 
     m_fileLoader->informer = &docInfo;
-    connect(m_fileLoader, &FMH::FileLoader::itemReady, this, &DocumentsModel::append);
+    connect(m_fileLoader, &FMH::FileLoader::itemsReady, this, &DocumentsModel::append);
 }
 
 DocumentsModel::~DocumentsModel()
@@ -27,10 +27,10 @@ DocumentsModel::~DocumentsModel()
     delete m_fileLoader;
 }
 
-void DocumentsModel::append(const FMH::MODEL &item)
+void DocumentsModel::append(const FMH::MODEL_LIST &items)
 {
-	emit this->preItemAppended ();
-	this->m_list << item;
+    emit this->preItemsAppended (items.size());
+    this->m_list << items;
 	emit this->postItemAppended ();
 }
 
