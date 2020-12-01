@@ -12,10 +12,6 @@ static bool isTextDocument(const QUrl &url)
 
 HistoryModel::HistoryModel(QObject *parent) : MauiList(parent)
 {
-<<<<<<< HEAD
-=======
-	this->setList();
->>>>>>> 6231eebd706b7e2734589b728b67e38ccc5a4054
 }
 
 const FMH::MODEL_LIST & HistoryModel::items() const

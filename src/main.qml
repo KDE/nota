@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.2 as Maui
+import org.kde.mauikit 1.3 as Maui
 import org.maui.nota 1.0 as Nota
 
 import "views"
@@ -59,11 +59,6 @@ Maui.ApplicationWindow
 
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
-    Maui.Doodle
-    {
-        id: _doodleDialog
-        sourceItem: root.currentEditor ? root.currentEditor.body : null
-    }
 
     //for now hide the plugins feature until it is fully ready
 //    Maui.NewDialog
