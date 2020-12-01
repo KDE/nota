@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
     <Name>Nota</Name>
-    <Version>1.1.0</Version>
-    <Title>Nota Text Editorr</Title>
+    <Version>1.2.0</Version>
+    <Title>Nota Simple Text Editor</Title>
     <Publisher>Maui</Publisher>
     <StartMenuDir>Nota</StartMenuDir>
-    <TargetDir>@ApplicationsDir@/nota</TargetDir>
+    <TargetDir>@ApplicationsDir@/Nota</TargetDir>
 </Installer>

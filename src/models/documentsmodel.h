@@ -23,13 +23,12 @@ public:
     DocumentsModel(QObject *parent = nullptr);
     ~DocumentsModel() override;
 
-    FMH::MODEL_LIST items() const override final;
+    const FMH::MODEL_LIST &items() const override final;
 
     void componentComplete() override final;
 
 private:
-    void setList(const FMH::MODEL_LIST &list);
-    void append(const FMH::MODEL &item);
+    void append(const FMH::MODEL_LIST &items);
 
     FMH::MODEL_LIST m_list;
     FMH::FileLoader *m_fileLoader;
