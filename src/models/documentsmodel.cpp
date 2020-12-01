@@ -8,23 +8,28 @@
 
 static FMH::MODEL docInfo(const QUrl &url)
 {
-    auto item = FMH::getFileInfoModel (url);
-    item[FMH::MODEL_KEY::PLACE] = FMH::fileDir(url);
-    return item;
+	auto item = FMH::getFileInfoModel (url);
+	item[FMH::MODEL_KEY::PLACE] = FMH::fileDir(url);
+	return item;
 }
 
 DocumentsModel::DocumentsModel(QObject * parent) : MauiList (parent)
   , m_fileLoader(new FMH::FileLoader())
 {
-    qRegisterMetaType<QList<QUrl>>("QList<QUrl>&");
+	qRegisterMetaType<QList<QUrl>>("QList<QUrl>&");
 
+<<<<<<< HEAD
     m_fileLoader->informer = &docInfo;
     connect(m_fileLoader, &FMH::FileLoader::itemsReady, this, &DocumentsModel::append);
+=======
+	m_fileLoader->informer = &docInfo;
+	connect(m_fileLoader, &FMH::FileLoader::itemReady, this, &DocumentsModel::append);
+>>>>>>> 6231eebd706b7e2734589b728b67e38ccc5a4054
 }
 
 DocumentsModel::~DocumentsModel()
 {
-    delete m_fileLoader;
+	delete m_fileLoader;
 }
 
 void DocumentsModel::append(const FMH::MODEL_LIST &items)
@@ -34,12 +39,12 @@ void DocumentsModel::append(const FMH::MODEL_LIST &items)
 	emit this->postItemAppended ();
 }
 
-FMH::MODEL_LIST DocumentsModel::items() const
+const FMH::MODEL_LIST & DocumentsModel::items() const
 {
 	return this->m_list;
 }
 
 void DocumentsModel::componentComplete()
 {
-     m_fileLoader->requestPath({FMH::DocumentsPath, FMH::DownloadsPath}, true, FMH::FILTER_LIST[FMH::FILTER_TYPE::TEXT]);
+	 m_fileLoader->requestPath({FMH::DocumentsPath, FMH::DownloadsPath}, true, FMH::FILTER_LIST[FMH::FILTER_TYPE::TEXT]);
 }

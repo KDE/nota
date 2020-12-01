@@ -7,53 +7,57 @@
 
 static bool isTextDocument(const QUrl &url)
 {
-    return FMH::checkFileType(FMH::FILTER_TYPE::TEXT, FMH::getMime(url));
+	return FMH::checkFileType(FMH::FILTER_TYPE::TEXT, FMH::getMime(url));
 }
 
 HistoryModel::HistoryModel(QObject *parent) : MauiList(parent)
 {
+<<<<<<< HEAD
+=======
+	this->setList();
+>>>>>>> 6231eebd706b7e2734589b728b67e38ccc5a4054
 }
 
-FMH::MODEL_LIST HistoryModel::items() const
+const FMH::MODEL_LIST & HistoryModel::items() const
 {
-    return this->m_list;
+	return this->m_list;
 }
 
 void HistoryModel::append(const QUrl &url)
 {
-    auto urls = this->getHistory();
-    if(urls.contains(url.toString()) || !isTextDocument(url))
-        return;
+	auto urls = this->getHistory();
+	if(urls.contains(url.toString()) || !isTextDocument(url))
+		return;
 
-    emit this->preItemAppended();
-    this->m_list << FMH::getFileInfoModel(url);
-    emit this->postItemAppended();
+	emit this->preItemAppended();
+	this->m_list << FMH::getFileInfoModel(url);
+	emit this->postItemAppended();
 
-    urls << url;
+	urls << url;
 
-    UTIL::saveSettings("URLS", QUrl::toStringList(urls), "HISTORY");
+	UTIL::saveSettings("URLS", QUrl::toStringList(urls), "HISTORY");
 }
 
 QList<QUrl> HistoryModel::getHistory()
 {
-    auto urls = UTIL::loadSettings("URLS", "HISTORY", QStringList()).toStringList();
-    urls.removeDuplicates();
-    auto res =  QUrl::fromStringList(urls);
-    res.removeAll(QString(""));
-    return res;
+	auto urls = UTIL::loadSettings("URLS", "HISTORY", QStringList()).toStringList();
+	urls.removeDuplicates();
+	auto res =  QUrl::fromStringList(urls);
+	res.removeAll(QString(""));
+	return res;
 }
 
 void HistoryModel::setList()
 {
-    for(const auto &url : this->getHistory())
-    {
-        if(!url.isLocalFile() || !FMH::fileExists(url) || !isTextDocument(url))
-            continue;
+	for(const auto &url : this->getHistory())
+	{
+		if(!url.isLocalFile() || !FMH::fileExists(url) || !isTextDocument(url))
+			continue;
 
-        emit this->preItemAppended();
-        this->m_list << FMH::getFileInfoModel(url);
-        emit this->postItemAppended();
-    }
+		emit this->preItemAppended();
+		this->m_list << FMH::getFileInfoModel(url);
+		emit this->postItemAppended();
+	}
 }
 
 

@@ -13,6 +13,8 @@ Maui.AltBrowser
     gridView.itemSize: 120
     gridView.itemHeight: gridView.itemSize * 1.3
 
+    headerBackground.color: "transparent"
+
     property alias menu : _menu
 
     ItemMenu
