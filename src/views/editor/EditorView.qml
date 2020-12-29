@@ -330,20 +330,6 @@ Maui.Page
         return [-1,-1]
     }
 
-    function openFile()
-    {
-        _dialogLoader.sourceComponent = _fileDialogComponent
-        dialog.mode = dialog.modes.OPEN
-        dialog.settings.onlyDirs = false
-        dialog.show(function (paths)
-        {
-            for(var i in paths)
-            {
-                openTab(paths[i])
-            }
-        });
-    }
-
     function openTab(path)
     {
         _swipeView.currentIndex = views.editor

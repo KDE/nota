@@ -88,7 +88,11 @@ Maui.ApplicationWindow
         {
             icon.name: "document-open"
             text: i18n("Open")
-            onTriggered: editorView.openFile()
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _fileDialogComponent
+                dialog.open()
+            }
         },
 
         Action
@@ -181,6 +185,13 @@ Maui.ApplicationWindow
             settings.filterType: Maui.FMList.TEXT
             settings.sortBy: Maui.FMList.MODIFIED
             mode: modes.OPEN
+            onUrlsSelected:
+            {
+                for(var url of urls)
+                {
+                    editorView.openTab(url)
+                }
+            }
         }
     }
 
@@ -204,24 +215,6 @@ Maui.ApplicationWindow
         checked: _drawer.visible
         onClicked: _drawer.visible ? _drawer.close() : _drawer.open()
     }
-
-    headBar.rightContent: [
-        ToolButton
-        {
-            visible: Maui.Handy.isTouch
-            icon.name: "item-select"
-            onClicked:
-            {
-                root.selectionMode = !root.selectionMode
-                if(_swipeView.currentIndex === views.editor)
-                {
-                    _swipeView.currentIndex = views.documents
-                }
-            }
-
-            checked: selectionMode
-        }
-    ]
 
     sideBar: PlacesSidebar
     {

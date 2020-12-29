@@ -56,7 +56,7 @@ Maui.AbstractSideBar
             onActivated:
             {
                 currentIndex = index
-                browserView.openFolder(model.list.get(index).path)
+                browserView.openFolder(model.get(index).path)
             }
         }
 
@@ -75,7 +75,7 @@ Maui.AbstractSideBar
 
             onItemClicked:
             {
-                var item = currentFMList.get(index)
+                var item = currentFMModel.get(index)
                 if(Maui.Handy.singleClick)
                 {
                     if(item.isdir == "true")
@@ -90,7 +90,7 @@ Maui.AbstractSideBar
 
             onItemDoubleClicked:
             {
-                var item = currentFMList.get(index)
+                var item = currentFMModel.get(index)
                 if(!Maui.Handy.singleClick)
                 {
                     if(item.isdir == "true")
