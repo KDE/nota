@@ -34,5 +34,4 @@ private:
     FMH::FileLoader *m_fileLoader;
 };
 
-
 #endif // DOCUMENTSMODEL_H

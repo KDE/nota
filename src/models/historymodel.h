@@ -28,7 +28,6 @@ public slots:
 private:
     FMH::MODEL_LIST m_list;
     void setList();
-
 };
 
 #endif // HISTORYMODEL_H

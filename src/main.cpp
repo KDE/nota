@@ -1,7 +1,7 @@
-#include <QQmlApplicationEngine>
 #include <QCommandLineParser>
-#include <QQmlContext>
 #include <QIcon>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
 
 #if defined Q_OS_MACOS || defined Q_OS_WIN
 #include <KF5/KI18n/KLocalizedString>
@@ -32,7 +32,7 @@
 
 #include "nota.h"
 
-//Models
+// Models
 #include "src/models/documentsmodel.h"
 #include "src/models/historymodel.h"
 
@@ -56,12 +56,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     app.setOrganizationName(QStringLiteral("Maui"));
     app.setWindowIcon(QIcon(":/nota.svg"));
 
-    MauiApp::instance()->setHandleAccounts(false); //for now nota can not handle cloud accounts
+    MauiApp::instance()->setHandleAccounts(false); // for now nota can not handle cloud accounts
     MauiApp::instance()->setIconName("qrc:/img/nota.svg");
 
     KLocalizedString::setApplicationDomain("nota");
-    KAboutData about(QStringLiteral("nota"), i18n("Nota"), NOTA_VERSION_STRING, i18n("Nota allows you to browse, create, and edit simple and rich text files."),
-                     KAboutLicense::LGPL_V3, i18n("© 2019-2020 Nitrux Development Team"));
+    KAboutData about(QStringLiteral("nota"), i18n("Nota"), NOTA_VERSION_STRING, i18n("Nota allows you to browse, create, and edit simple and rich text files."), KAboutLicense::LGPL_V3, i18n("© 2019-2020 Nitrux Development Team"));
     about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
     about.addAuthor(i18n("Anupam Basak"), i18n("Developer"), QStringLiteral("anupam.basak27@gmail.com"));
     about.setHomepage("https://mauikit.org");
@@ -81,16 +80,18 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url, args](QObject *obj, const QUrl &objUrl)
-    {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
+    QObject::connect(
+        &engine,
+        &QQmlApplicationEngine::objectCreated,
+        &app,
+        [url, args](QObject *obj, const QUrl &objUrl) {
+            if (!obj && url == objUrl)
+                QCoreApplication::exit(-1);
 
-        if(!args.isEmpty())
-            Nota::instance()->requestFiles(args);
-
-    }, Qt::QueuedConnection);
+            if (!args.isEmpty())
+                Nota::instance()->requestFiles(args);
+        },
+        Qt::QueuedConnection);
 
 #ifdef STATIC_KIRIGAMI
     KirigamiPlugin::getInstance().registerTypes();
@@ -101,8 +102,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 #endif
 
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
-    qmlRegisterType<DocumentsModel> (NOTA_URI, 1, 0, "Documents");
-    qmlRegisterType<HistoryModel> (NOTA_URI, 1, 0, "History");
+    qmlRegisterType<DocumentsModel>(NOTA_URI, 1, 0, "Documents");
+    qmlRegisterType<HistoryModel>(NOTA_URI, 1, 0, "History");
 
     engine.load(url);
 
