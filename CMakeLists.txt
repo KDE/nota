@@ -13,6 +13,7 @@ find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config KI
 include(KDEInstallDirs)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
+include(KDEClangFormat)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
 include(ECMSetupVersion)
@@ -75,3 +76,6 @@ install(FILES src/assets/nota.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/sca
 
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
