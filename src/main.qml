@@ -251,6 +251,7 @@ Maui.ApplicationWindow
 
         flickable: _swipeView.currentItem.item ? _swipeView.currentItem.item.flickable : null
         floatingFooter: true
+        headBar.visible: false
 
         Maui.AppViews
         {
