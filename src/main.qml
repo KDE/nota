@@ -108,7 +108,7 @@ Maui.ApplicationWindow
 
         Action
         {
-            text: "Load plugin"
+            text: i18n("Load plugin")
             icon.name: "plugin"
             onTriggered: _pluginLoader.open()
         }*/
