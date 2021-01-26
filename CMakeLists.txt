@@ -1,26 +1,55 @@
-cmake_minimum_required(VERSION 3.0)
+# Copyright 2018-2020 Camilo Higuita <milo.h@aol.com>
+# Copyright 2018-2020 Nitrux Latinoamericana S.C.
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+cmake_minimum_required(VERSION 3.14)
+
 set(NOTA_VERSION 1.2.1)
 project(nota VERSION ${NOTA_VERSION})
 
-find_package(ECM 1.7.0 REQUIRED NO_MODULE)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(REQUIRED_QT_VERSION 5.14.0)
+set(REQUIRED_KF5_VERSION 5.60)
+
+find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
 option(EMBEDDED_TERMINAL "If set to true then tries to load the QmlTermWidget. v 0.1 is needed later version might not work" OFF)
 
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick Sql Svg QuickControls2 Concurrent)
+find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons SyntaxHighlighting)
+
+if(ANDROID)
+    find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS AndroidExtras QuickControls2)
+    message("CURRENT DIR" ${CMAKE_CURRENT_SOURCE_DIR})
+    set(ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android_files)
+    set(ANDROID_ABIS "armeabi-v7a")
+elseif(UNIX)
+    find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS Config KIO)
+endif()
+
 find_package(MauiKit REQUIRED)
-find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Qml Sql Svg)
-find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config KIO Attica SyntaxHighlighting)
-include(KDEInstallDirs)
+
+if(UNIX AND NOT APPLE AND NOT ANDROID)
+    include(KDEInstallDirs)
+    include(KDECMakeSettings)
+    include(ECMInstallIcons)
+    include(ECMAddAppIcon)
+endif()
+
 include(KDECompilerSettings NO_POLICY_SCOPE)
-include(KDECMakeSettings)
 include(KDEClangFormat)
-include(ECMInstallIcons)
-include(ECMAddAppIcon)
 include(ECMSetupVersion)
 include(FeatureSummary)
-
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTORCC ON)
 
 set(nota_SRCS
     src/main.cpp
@@ -39,41 +68,48 @@ set(nota_ASSETS
     src/assets/img_assets.qrc
     )
 
-add_executable(nota
-    ${nota_SRCS}
-    ${nota_HDRS}
-    ${nota_ASSETS}
-    )
+if(ANDROID)
+    add_library(${PROJECT_NAME} SHARED
+        ${nota_SRCS}
+        ${nota_HDRS}
+        ${nota_ASSETS})
+else()
+    add_executable(${PROJECT_NAME}
+        ${nota_SRCS}
+        ${nota_HDRS}
+        ${nota_ASSETS})
+endif()
 
 ecm_setup_version(${NOTA_VERSION}
     VARIABLE_PREFIX NOTA
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/nota_version.h"
     )
 
-if (ANDROID)
-    find_package(Qt5 REQUIRED COMPONENTS AndroidExtras WebView)
-
-    target_link_libraries(nota MauiKit Qt5::AndroidExtras)
-else()
-    find_package(Qt5 REQUIRED COMPONENTS WebEngine)
-
-endif()
-
 if(EMBEDDED_TERMINAL)
-    target_compile_definitions(nota PUBLIC EMBEDDED_TERMINAL)
+    target_compile_definitions(${PROJECT_NAME} PUBLIC EMBEDDED_TERMINAL)
 endif()
 
-target_link_libraries(nota MauiKit Qt5::Sql Qt5::Qml Qt5::Svg  KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n KF5::Attica)
+if (ANDROID)
+    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
+elseif(UNIX)
+    target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets KF5::KIONTLM KF5::KIOWidgets)
+endif()
 
-install(TARGETS nota ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-#install(FILES org.kde.nota.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+target_compile_definitions(${PROJECT_NAME}
+    PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
-#TODO: port to ecm_install_icons()
-#ecm_install_icons(ICONS src/assets/nota.svg
-#                  DESTINATION share/icons)
-install(FILES src/assets/nota.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
+target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Qml Qt5::Svg KF5::CoreAddons KF5::I18n KF5::SyntaxHighlighting)
 
+if(UNIX AND NOT APPLE AND NOT ANDROID)
+    install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+    install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+    #install(FILES org.kde.nota.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+
+    #TODO: port to ecm_install_icons()
+    #ecm_install_icons(ICONS src/assets/nota.svg
+    #                  DESTINATION share/icons)
+    install(FILES src/assets/nota.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
+endif()
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

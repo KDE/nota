@@ -3,15 +3,9 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#if defined Q_OS_MACOS || defined Q_OS_WIN
-#include <KF5/KI18n/KLocalizedString>
-#else
 #include <KI18n/KLocalizedString>
-#endif
 
-#ifndef STATIC_MAUIKIT
 #include "nota_version.h"
-#endif
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
@@ -19,16 +13,7 @@
 #include <QApplication>
 #endif
 
-#ifdef STATIC_KIRIGAMI
-#include "3rdparty/kirigami/src/kirigamiplugin.h"
-#endif
-
-#ifdef STATIC_MAUIKIT
-#include "3rdparty/mauikit/src/mauikit.h"
-#include "mauiapp.h"
-#else
 #include <MauiKit/mauiapp.h>
-#endif
 
 #include "nota.h"
 
@@ -83,25 +68,17 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreated,
-        &app,
-        [url, args](QObject *obj, const QUrl &objUrl) {
-            if (!obj && url == objUrl)
-                QCoreApplication::exit(-1);
+                &engine,
+                &QQmlApplicationEngine::objectCreated,
+                &app,
+                [url, args](QObject *obj, const QUrl &objUrl) {
+        if (!obj && url == objUrl)
+            QCoreApplication::exit(-1);
 
-            if (!args.isEmpty())
-                Nota::instance()->requestFiles(args);
-        },
-        Qt::QueuedConnection);
-
-#ifdef STATIC_KIRIGAMI
-    KirigamiPlugin::getInstance().registerTypes();
-#endif
-
-#ifdef STATIC_MAUIKIT
-    MauiKit::getInstance().registerTypes(&engine);
-#endif
+        if (!args.isEmpty())
+            Nota::instance()->requestFiles(args);
+    },
+    Qt::QueuedConnection);
 
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
     qmlRegisterType<DocumentsModel>(NOTA_URI, 1, 0, "Documents");
