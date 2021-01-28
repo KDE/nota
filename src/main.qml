@@ -91,6 +91,14 @@ Maui.ApplicationWindow
             onTriggered:
             {
                 _dialogLoader.sourceComponent = _fileDialogComponent
+                dialog.mode = dialog.modes.OPEN
+                dialog.callback =  function (urls)
+                {
+                    for(var url of urls)
+                    {
+                        editorView.openTab(url)
+                    }
+                }
                 dialog.open()
             }
         },
@@ -183,15 +191,7 @@ Maui.ApplicationWindow
         {
             settings.onlyDirs: false
             settings.filterType: Maui.FMList.TEXT
-            settings.sortBy: Maui.FMList.MODIFIED
-            mode: modes.OPEN
-            onUrlsSelected:
-            {
-                for(var url of urls)
-                {
-                    editorView.openTab(url)
-                }
-            }
+            settings.sortBy: Maui.FMList.MODIFIED       
         }
     }
 
@@ -333,7 +333,7 @@ Maui.ApplicationWindow
                     _dialogLoader.sourceComponent= _fileDialogComponent
                     dialog.mode = dialog.modes.OPEN
                     dialog.settings.onlyDirs = true
-                    dialog.show(function(paths)
+                    dialog.callback = function(paths)
                     {
                         for(var url of _selectionbar.uris)
                         {
@@ -342,7 +342,9 @@ Maui.ApplicationWindow
                                 Maui.FM.copy(url, paths[i])
                             }
                         }
-                    });
+                    };
+
+                    dialog.open()
                 }
             }
         }

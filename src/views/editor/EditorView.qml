@@ -371,11 +371,13 @@ Maui.Page
             _dialogLoader.sourceComponent = _fileDialogComponent
             dialog.mode = dialog.modes.SAVE;
             //            fileDialog.settings.singleSelection = true
-            dialog.show(function (paths)
+            dialog.callback = function (paths)
             {
                 item.document.saveAs(paths[0])
                 _historyList.append(paths[0])
-            });
+            };
+
+            dialog.open()
         }
     }
 
