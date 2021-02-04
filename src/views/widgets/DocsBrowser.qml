@@ -63,6 +63,7 @@ Maui.AltBrowser
     headBar.middleContent: Maui.TextField
     {
         Layout.fillWidth: true
+        Layout.maximumWidth: 500
         placeholderText: i18n("Filter...")
         onAccepted: control.model.filter = text
         onCleared:  control.model.filter = text
