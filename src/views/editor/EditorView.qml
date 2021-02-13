@@ -285,8 +285,7 @@ Maui.Page
         isMask: true
         onActionTriggered: openTab("")
         title: i18n("Create a new document")
-        body: i18n("You can create a new document by clicking the New File button, or here.<br>
-        Alternative you can open existing files from the left places sidebar or by clicking the Open button")
+        body: i18n("You can create a new document by clicking the New File button, or here.<br>Alternative you can open existing files from the left places sidebar or by clicking the Open button")
     }
 
     function unsavedTabSplits(index) //which split indexes are unsaved
