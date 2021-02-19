@@ -21,7 +21,7 @@ Menu
         onTriggered:
         {
             if(Kirigami.Settings.isMobile)
-                selectionMode = true
+                root.selectionMode = true
 
             addToSelection(control.model.get(index))
         }
