@@ -2,8 +2,8 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.2 as Maui
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.mauikit 1.3 as Maui
+import org.kde.kirigami 2.14 as Kirigami
 
 Maui.AltBrowser
 {
@@ -96,6 +96,7 @@ Maui.AltBrowser
                                } : {}
 
         background: Item {}
+
         Maui.GridItemTemplate
         {
             id: _gridTemplate
@@ -134,7 +135,7 @@ Maui.AltBrowser
         onClicked:
         {
             control.currentIndex = index
-            if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+            if(root.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
             {
                 addToSelection(model)
 
@@ -147,7 +148,7 @@ Maui.AltBrowser
         onDoubleClicked:
         {
             control.currentIndex = index
-            if(!Maui.Handy.singleClick && !selectionMode)
+            if(!Maui.Handy.singleClick && !root.selectionMode)
             {
                 editorView.openTab(model.path)
             }
@@ -223,7 +224,7 @@ listDelegate: Maui.ItemDelegate
     onClicked:
     {
         control.currentIndex = index
-        if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+        if(root.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
         {
             addToSelection(model)
 
@@ -236,7 +237,7 @@ listDelegate: Maui.ItemDelegate
     onDoubleClicked:
     {
         control.currentIndex = index
-        if(!Maui.Handy.singleClick && !selectionMode)
+        if(!Maui.Handy.singleClick && !root.selectionMode)
         {
             editorView.openTab(model.path)
         }

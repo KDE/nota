@@ -7,12 +7,12 @@ import org.maui.nota 1.0 as Nota
 
 Maui.AbstractSideBar
 {
-    width: visible ? Math.min(Kirigami.Units.gridUnit * 14, root.width) : 0
+    preferredWidth: Kirigami.Units.gridUnit * 14
     collapsed: !isWide
     collapsible: true
     dragMargin: Maui.Style.space.big
-    overlay.visible: collapsed && position > 0 && visible
-    visible: (_swipeView.currentIndex === views.editor) && settings.enableSidebar
+
+//    visible: (_swipeView.currentIndex === views.editor) && settings.enableSidebar
     enabled: settings.enableSidebar
 
     property alias browser : browserView
@@ -21,15 +21,6 @@ Maui.AbstractSideBar
     {
         if(currentEditor)
             syncSidebar(currentEditor.fileUrl)
-    }
-
-    Connections
-    {
-        target: _drawer.overlay
-        function onClicked()
-        {
-            _drawer.close()
-        }
     }
 
     Maui.Page

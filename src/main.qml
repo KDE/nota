@@ -61,26 +61,26 @@ Maui.ApplicationWindow
 
 
     //for now hide the plugins feature until it is fully ready
-//    Maui.NewDialog
-//    {
-//        id: _pluginLoader
-//        title: i18n("Plugin")
-//        message: i18n("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
-//        onFinished:     {
-//            const url = text
-//            if(Maui.FM.fileExists(url))
-//            {
+    //    Maui.NewDialog
+    //    {
+    //        id: _pluginLoader
+    //        title: i18n("Plugin")
+    //        message: i18n("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
+    //        onFinished:     {
+    //            const url = text
+    //            if(Maui.FM.fileExists(url))
+    //            {
 
-//                const component = Qt.createComponent(url);
+    //                const component = Qt.createComponent(url);
 
-//                if (component.status === Component.Ready)
-//                {
-//                    console.log("setting plugin <<", url)
-//                    const object = component.createObject(editorView.plugin)
-//                }
-//            }
-//        }
-//    }
+    //                if (component.status === Component.Ready)
+    //                {
+    //                    console.log("setting plugin <<", url)
+    //                    const object = component.createObject(editorView.plugin)
+    //                }
+    //            }
+    //        }
+    //    }
 
     mainMenu: [
 
@@ -211,9 +211,13 @@ Maui.ApplicationWindow
     headBar.leftContent: ToolButton
     {
         visible: settings.enableSidebar
-        icon.name: "view-split-left-right"
-        checked: _drawer.visible
-        onClicked: _drawer.visible ? _drawer.close() : _drawer.open()
+        icon.name: _drawer.visible ? "sidebar-collapse" : "sidebar-expand"
+        onClicked: _drawer.toggle()
+
+        ToolTip.delay: 1000
+        ToolTip.timeout: 5000
+        ToolTip.visible: hovered
+        ToolTip.text: i18n("Toogle SideBar")
     }
 
     sideBar: PlacesSidebar
@@ -238,9 +242,9 @@ Maui.ApplicationWindow
     }
 
     Component.onCompleted:if(settings.defaultBlankFile)
-    {
-        editorView.openTab("")
-    }
+                          {
+                              editorView.openTab("")
+                          }
 
     Nota.History { id: _historyList }
 
@@ -301,7 +305,25 @@ Maui.ApplicationWindow
 
             onItemClicked : console.log(index)
 
-            onExitClicked: clear()
+            onExitClicked:
+            {
+                root.selectionMode = false
+                clear()
+            }
+
+            listDelegate: Maui.ListBrowserDelegate
+            {
+                width: ListView.view.width
+                iconSource: model.icon
+                label1.text: model.label
+                label2.text: model.url
+
+                checkable: true
+                checked: true
+                onToggled: _selectionbar.removeAtIndex(index)
+
+                background: null
+            }
 
             Action
             {
