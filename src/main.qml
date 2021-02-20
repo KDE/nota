@@ -47,7 +47,7 @@ Maui.ApplicationWindow
         property bool autoSave : true
         property bool enableSyntaxHighlighting : true
         property bool showSyntaxHighlightingLanguages: false
-        property bool supportSplit :!Kirigami.Settings.isMobile
+        property bool supportSplit :true
         property bool terminalVisible : false
         property double tabSpace: 8
         property string theme : ""
@@ -191,7 +191,7 @@ Maui.ApplicationWindow
         {
             settings.onlyDirs: false
             settings.filterType: Maui.FMList.TEXT
-            settings.sortBy: Maui.FMList.MODIFIED       
+            settings.sortBy: Maui.FMList.MODIFIED
         }
     }
 

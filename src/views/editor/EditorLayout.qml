@@ -1,8 +1,11 @@
 import QtQuick 2.14
+import QtQml 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
+
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.2 as Maui
+import org.kde.mauikit 1.3 as Maui
+
 import org.maui.nota 1.0 as Nota
 
 import QtQml.Models 2.3
@@ -48,7 +51,13 @@ Item
             id: _splitView
             SplitView.fillHeight: true
             SplitView.fillWidth: true
-            orientation: Qt.Horizontal
+
+            Binding on orientation
+            {
+                value: width >= 600 ? Qt.Horizontal : Qt.Vertical
+                restoreMode: Binding.RestoreValue
+            }
+
             clip: true
             focus: true
 
