@@ -83,5 +83,5 @@ GenericName[uk]=Простий текстовий редактор
 GenericName[x-test]=xxSimple Text Editorxx
 GenericName[zh_TW]=簡易文字編輯器
 StartupNotify=true
-Icon=maui-nota
+Icon=nota
 MimeType=text/plain;
