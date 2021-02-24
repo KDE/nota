@@ -5,7 +5,7 @@
 
 cmake_minimum_required(VERSION 3.14)
 
-set(NOTA_VERSION 1.2.1)
+set(NOTA_VERSION 1.2.2)
 project(nota VERSION ${NOTA_VERSION})
 
 set(CMAKE_CXX_STANDARD 17)
@@ -104,10 +104,6 @@ if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
     install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
     #install(FILES org.kde.nota.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-
-    #TODO: port to ecm_install_icons()
-    #ecm_install_icons(ICONS src/assets/nota.svg
-    #                  DESTINATION share/icons)
     install(FILES src/assets/nota.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
 endif()
 

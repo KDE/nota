@@ -35,7 +35,7 @@ Item
     {
         if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))
         {
-            split("", Qt.Vertical)
+            split("")
         }
     }
 
@@ -143,7 +143,7 @@ Item
                 currentItem.forceActiveFocus()
             }
 
-            Component.onCompleted: split(control.path, Qt.Vertical)
+            Component.onCompleted: split(control.path)
         }
 
         Loader
@@ -207,15 +207,10 @@ Item
     }
 
 
-    function split(path, orientation)
+    function split(path)
     {
-        if(orientation === _splitView.orientation && path.length === 0 && _splitView.count === 2)
-        {
-            pop()
-            return
-        }//close the innactive split
 
-        _splitView.orientation = orientation
+//        _splitView.orientation = orientation
 
         if(_splitView.count === 1 && !settings.supportSplit)
         {

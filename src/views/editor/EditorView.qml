@@ -199,39 +199,23 @@ Maui.Page
 //                checked: _doodleDialog.visible
 //            },
 
-            Maui.ToolActions
+            ToolButton
             {
                 id: _splitButton
                 visible: settings.supportSplit
-                expanded: isWide
-                autoExclusive: true
-                display: ToolButton.TextBesideIcon
-                currentIndex: -1
-                cyclic: true
+               icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+               checked: root.currentTab && root.currentTab.count === 2
 
-                Binding on currentIndex
-                {
-                    when :root.currentTab && root.currentTab.count === 2
-                    value: root.currentTab.orientation === Qt.Horizontal ? 0 : 1
-                    restoreMode: RestoreBindingOrValue
-                }
+               onClicked:
+               {
+                   if(root.currentTab.count === 2)
+                   {
+                       root.currentTab.pop()
+                       return
+                   }//close the innactive split
 
-                Action
-                {
-                    enabled: isWide
-                    icon.name: "view-split-left-right"
-                    text: i18n("Split horizontal")
-                    onTriggered: root.currentTab.split("", Qt.Horizontal)
-                    checked:  root.currentTab && root.currentTab.orientation === Qt.Horizontal && root.currentTab.count > 1
-                }
-
-                Action
-                {
-                    icon.name: "view-split-top-bottom"
-                    text: i18n("Split vertical")
-                    onTriggered: root.currentTab.split("", Qt.Vertical)
-                    checked:  root.currentTab && root.currentTab.orientation === Qt.Vertical && root.currentTab.count > 1
-                }
+                   root.currentTab.split("")
+               }
             },
 
             Maui.ToolActions

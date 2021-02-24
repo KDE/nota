@@ -85,7 +85,7 @@ Maui.Editor
 
         if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))
         {
-            root.currentTab.split("", Qt.Vertical)
+            root.currentTab.split("")
         }
 
         if(event.key === Qt.Key_F4)
@@ -173,7 +173,7 @@ Maui.Editor
                 text: i18n("Open in new split")
                 onTriggered:
                 {
-                    currentTab.split(_dropArea.urls[0], Qt.Horizontal)
+                    currentTab.split(_dropArea.urls[0])
                 }
             }
 
