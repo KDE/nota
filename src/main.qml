@@ -206,7 +206,7 @@ Maui.ApplicationWindow
         }
     }
 
-    headBar.visible: /*root.currentEditor && _swipeView.currentIndex === views.editor && Kirigami.Settings.isMobile ?  ! Qt.inputMethod.visible : */!focusMode
+    headBar.visible: !focusMode
 
     headBar.leftContent: ToolButton
     {
