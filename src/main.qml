@@ -144,6 +144,24 @@ Maui.ApplicationWindow
         close.accepted = true
     }
 
+    NewFileDialog
+    {
+        id: _newDocumentMenu
+        maxHeight: 300
+        maxWidth: 400
+     }
+
+    headBar.rightContent: ToolButton
+    {
+        icon.name: "list-add"
+        onClicked:
+        {
+            _swipeView.currentIndex = views.editor
+            _newDocumentMenu.open()
+
+        }
+    }
+
     Loader
     {
         id: _dialogLoader
@@ -241,10 +259,13 @@ Maui.ApplicationWindow
         }
     }
 
-    Component.onCompleted:if(settings.defaultBlankFile)
-                          {
-                              editorView.openTab("")
-                          }
+    Component.onCompleted:
+    {
+        if(settings.defaultBlankFile)
+            {
+                editorView.openTab("")
+            }
+    }
 
     Nota.History { id: _historyList }
 
@@ -278,18 +299,6 @@ Maui.ApplicationWindow
 
                 RecentView
                 {
-                }
-            }
-
-            Maui.AppViewLoader
-            {
-                Maui.AppView.iconName: "view-pim-journal"
-                Maui.AppView.title: i18n("Documents")
-                visible: !focusMode
-
-                DocumentsView
-                {
-                    id: _documentsView
                 }
             }
         }

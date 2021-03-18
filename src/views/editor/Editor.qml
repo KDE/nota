@@ -50,29 +50,102 @@ Maui.Editor
         }
     }
 
-    footBar.visible: showSyntaxHighlightingLanguages || showFindAndReplace
-    footBar.leftContent: [
+    footBar.visible: showSyntaxHighlightingLanguages
 
-        Maui.TextField
+    footerColumn: [
+
+        Maui.ToolBar
         {
-            id: _findField
-            placeholderText: i18n("Find")
-            onAccepted:
+            id: _findToolBar
+            visible: showFindAndReplace
+            width: parent.width
+position: ToolBar.Footer
+
+//            farLeftContent: ToolButton
+//            {
+//                icon.name: "go-previous"
+//                onClicked: showFindAndReplace = false
+//            }
+
+            rightContent: Maui.ToolButtonMenu
             {
-                console.log("FIND THE QUERY", text)
-                document.find(text)
+                icon.name: "games-config-options"
+
+                MenuItem
+                {
+                    checkable: true
+                    text: i18n("Case Sensitive")
+                }
+
+                MenuItem
+                {
+                    checkable: true
+                    text: i18n("Whole Words Only")
+                }
+            }
+
+            middleContent:  Maui.TextField
+            {
+                id: _findField
+                Layout.fillWidth: true
+                Layout.maximumWidth: 500
+                placeholderText: i18n("Find")
+                onAccepted:
+                {
+                    console.log("FIND THE QUERY", text)
+                    document.find(text)
+                }
+
+                actions:[
+
+                Action
+                    {
+                        icon.name: "arrow-up"
+                        onTriggered: document.find(_findField.text, false)
+                    },
+
+                    Action
+                        {
+                            icon.name: "arrow-down"
+                            onTriggered: document.find(_findField.text, true)
+                        }
+                ]
             }
         },
 
-        Maui.TextField
+        Maui.ToolBar
         {
-            placeholderText: i18n("Replace")
-        },
+            id: _replaceToolBar
+            visible: showFindAndReplace
+            width: parent.width
 
-        Button
-        {
-            text: i18n("Replace")
+            middleContent: Maui.TextField
+            {
+                id: _replaceField
+                placeholderText: i18n("Replace")
+                Layout.fillWidth: true
+                Layout.maximumWidth: 500
+
+                actions: Action
+                {
+                    text: i18n("Replace")
+                    icon.name: "checkmark"
+                    onTriggered: document.replace(_findField.text, _replaceField.text)
+                }
+            }
+
+            rightContent: [
+
+
+            Button
+            {
+                text: i18n("Replace All")
+                onClicked: document.replaceAll(_findField.text, _replaceField.text)
+            }
+            ]
         }
+
+
     ]
 
     Keys.enabled: true
@@ -187,7 +260,7 @@ Maui.Editor
 
     Rectangle
     {
-        visible: _splitView.currentIndex === control._index
+        visible: _splitView.currentIndex === control._index && _splitView.count === 2
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right

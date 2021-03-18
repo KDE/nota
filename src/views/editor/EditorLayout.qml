@@ -224,6 +224,8 @@ Item
 
         const component = Qt.createComponent("qrc:/views/editor/Editor.qml");
 
+        console.log("Error:", component.errorString())
+
         if (component.status === Component.Ready)
         {
             console.log("setting split <<", path)

@@ -24,6 +24,7 @@ public:
 
 public slots:
     void append(const QUrl &url);
+    int indexOfName(const QString &query);
 
 private:
     FMH::MODEL_LIST m_list;

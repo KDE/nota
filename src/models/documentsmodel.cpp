@@ -42,5 +42,17 @@ const FMH::MODEL_LIST &DocumentsModel::items() const
 
 void DocumentsModel::componentComplete()
 {
-    m_fileLoader->requestPath({FMH::DocumentsPath, FMH::DownloadsPath}, true, FMH::FILTER_LIST[FMH::FILTER_TYPE::TEXT]);
+  m_fileLoader->requestPath({FMH::DocumentsPath, FMH::DownloadsPath}, true, FMH::FILTER_LIST[FMH::FILTER_TYPE::TEXT]);
+}
+
+int DocumentsModel::indexOfName(const QString &query)
+{
+  const auto it = std::find_if(this->items().constBegin(), this->items().constEnd(), [&](const FMH::MODEL &item) -> bool {
+          return item[FMH::MODEL_KEY::LABEL].startsWith(query, Qt::CaseInsensitive);
+      });
+
+      if (it != this->items().constEnd())
+          return this->mappedIndexFromSource(std::distance(this->items().constBegin(), it));
+      else
+          return -1;
 }

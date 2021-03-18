@@ -27,6 +27,9 @@ public:
 
     void componentComplete() override final;
 
+public slots:
+    int indexOfName(const QString &query);
+
 private:
     void append(const FMH::MODEL_LIST &items);
 

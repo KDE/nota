@@ -35,6 +35,18 @@ void HistoryModel::append(const QUrl &url)
     UTIL::saveSettings("URLS", QUrl::toStringList(urls), "HISTORY");
 }
 
+int HistoryModel::indexOfName(const QString &query)
+{
+  const auto it = std::find_if(this->items().constBegin(), this->items().constEnd(), [&](const FMH::MODEL &item) -> bool {
+          return item[FMH::MODEL_KEY::LABEL].startsWith(query, Qt::CaseInsensitive);
+      });
+
+      if (it != this->items().constEnd())
+          return this->mappedIndexFromSource(std::distance(this->items().constBegin(), it));
+      else
+          return -1;
+}
+
 QList<QUrl> HistoryModel::getHistory()
 {
     auto urls = UTIL::loadSettings("URLS", "HISTORY", QStringList()).toStringList();

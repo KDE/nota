@@ -35,6 +35,22 @@ Maui.AltBrowser
                 addToSelection(item)
             }
         }
+
+        function onKeyPress(event)
+        {
+            const index = control.currentIndex
+            const item = control.model.get(index)
+
+            if((event.key == Qt.Key_Left || event.key == Qt.Key_Right || event.key == Qt.Key_Down || event.key == Qt.Key_Up) && (event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier))
+            {
+                control.currentView.itemsSelected([index])
+            }
+
+            if(event.key === Qt.Key_Return)
+            {
+                 editorView.openTab(item.path)
+            }
+        }
     }
 
     headBar.leftContent: Maui.ToolActions

@@ -72,49 +72,6 @@ Maui.Page
         }
     }
 
-    Maui.FloatingButton
-    {
-        id: _overlayButton
-        z: 999
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        anchors.margins: Maui.Style.toolBarHeightAlt
-        anchors.bottomMargin: Maui.Style.toolBarHeight + (root.currentEditor && root.currentEditor.footBar.visible ? root.currentEditor.footBar.height : 0) + (currentTab.terminal ? currentTab.terminal.height : 0)
-        height: Maui.Style.toolBarHeight
-        width: height
-
-        icon.name: "document-new"
-        icon.color: Kirigami.Theme.highlightedTextColor
-
-        onClicked: openTab("")
-
-        Maui.Badge
-        {
-            anchors
-            {
-                horizontalCenter: parent.right
-                verticalCenter: parent.top
-            }
-
-            onClicked: _newDocumentMenu.open()
-
-            Maui.PlusSign
-            {
-                color: parent.Kirigami.Theme.textColor
-                height: 10
-                width: height
-                anchors.centerIn: parent
-            }
-        }
-
-        NewFileDialog
-        {
-            id: _newDocumentMenu
-            maxHeight: 300
-            maxWidth: 400
-         }
-    }
-
     Maui.Page
     {
         anchors.fill: parent
@@ -192,12 +149,12 @@ Maui.Page
 
         altHeader: false
         headBar.rightContent:[
-//            ToolButton
-//            {
-//                icon.name: "tool_pen"
-//                onClicked: _doodleDialog.open()
-//                checked: _doodleDialog.visible
-//            },
+            ToolButton
+            {
+                icon.name: "edit-find"
+                onClicked:currentEditor.showFindAndReplace = !currentEditor.showFindAndReplace
+                checked: currentEditor.showFindAndReplace
+            },
 
             ToolButton
             {
@@ -222,7 +179,7 @@ Maui.Page
             {
                 autoExclusive: false
                 checkable: false
-                expanded: isWide
+                expanded: false
                 display: ToolButton.TextBesideIcon
                 defaultIconName: "document-save"
 
