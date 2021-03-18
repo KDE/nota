@@ -59,13 +59,13 @@ Maui.Editor
             id: _findToolBar
             visible: showFindAndReplace
             width: parent.width
-position: ToolBar.Footer
+            position: ToolBar.Footer
 
-//            farLeftContent: ToolButton
-//            {
-//                icon.name: "go-previous"
-//                onClicked: showFindAndReplace = false
-//            }
+            //            farLeftContent: ToolButton
+            //            {
+            //                icon.name: "go-previous"
+            //                onClicked: showFindAndReplace = false
+            //            }
 
             rightContent: Maui.ToolButtonMenu
             {
@@ -98,17 +98,17 @@ position: ToolBar.Footer
 
                 actions:[
 
-                Action
+                    Action
                     {
                         icon.name: "arrow-up"
                         onTriggered: document.find(_findField.text, false)
                     },
 
                     Action
-                        {
-                            icon.name: "arrow-down"
-                            onTriggered: document.find(_findField.text, true)
-                        }
+                    {
+                        icon.name: "arrow-down"
+                        onTriggered: document.find(_findField.text, true)
+                    }
                 ]
             }
         },
@@ -137,11 +137,11 @@ position: ToolBar.Footer
             rightContent: [
 
 
-            Button
-            {
-                text: i18n("Replace All")
-                onClicked: document.replaceAll(_findField.text, _replaceField.text)
-            }
+                Button
+                {
+                    text: i18n("Replace All")
+                    onClicked: document.replaceAll(_findField.text, _replaceField.text)
+                }
             ]
         }
 
@@ -214,7 +214,7 @@ position: ToolBar.Footer
                 _dropArea.urls = m_urls.split(",")
                 _dropAreaMenu.popup()
 
-//                Nota.Nota.requestFiles( _dropArea.urls )
+                //                Nota.Nota.requestFiles( _dropArea.urls )
             }
         }
 
@@ -236,7 +236,7 @@ position: ToolBar.Footer
                 text: i18n("Open in new tab")
                 onTriggered:
                 {
-                     Nota.Nota.requestFiles( _dropArea.urls )
+                    Nota.Nota.requestFiles( _dropArea.urls )
                 }
             }
 

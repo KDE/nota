@@ -5,7 +5,7 @@
 
 #include <KI18n/KLocalizedString>
 
-#include "nota_version.h"
+#include "../nota_version.h"
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
@@ -18,8 +18,7 @@
 #include "nota.h"
 
 // Models
-#include "src/models/documentsmodel.h"
-#include "src/models/historymodel.h"
+#include "models/historymodel.h"
 
 #define NOTA_URI "org.maui.nota"
 
@@ -81,7 +80,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     Qt::QueuedConnection);
 
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
-    qmlRegisterType<DocumentsModel>(NOTA_URI, 1, 0, "Documents");
     qmlRegisterType<HistoryModel>(NOTA_URI, 1, 0, "History");
 
     engine.load(url);

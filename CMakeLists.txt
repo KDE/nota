@@ -76,60 +76,15 @@ else()
     add_definitions(-DGIT_BRANCH="Stable")
 endif()
 
-set(nota_SRCS
-    src/main.cpp
-    src/models/documentsmodel.cpp
-    src/models/historymodel.cpp
-    )
-
-set(nota_HDRS
-    src/models/documentsmodel.h
-    src/models/historymodel.h
-    src/nota.h
-    )
-
-set(nota_ASSETS
-    src/qml.qrc
-    src/assets/img_assets.qrc
-    )
-
-if(ANDROID)
-    add_library(${PROJECT_NAME} SHARED
-        ${nota_SRCS}
-        ${nota_HDRS}
-        ${nota_ASSETS})
-else()
-    add_executable(${PROJECT_NAME}
-        ${nota_SRCS}
-        ${nota_HDRS}
-        ${nota_ASSETS})
-endif()
-
 ecm_setup_version(${NOTA_VERSION}
     VARIABLE_PREFIX NOTA
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/nota_version.h"
     )
 
-if(EMBEDDED_TERMINAL)
-    target_compile_definitions(${PROJECT_NAME} PUBLIC EMBEDDED_TERMINAL)
-endif()
-
-if (ANDROID)
-    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
-elseif(UNIX)
-    target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets KF5::KIONTLM KF5::KIOWidgets)
-endif()
-
-target_compile_definitions(${PROJECT_NAME}
-    PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
-
-target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Qml Qt5::Svg KF5::CoreAddons KF5::I18n KF5::SyntaxHighlighting)
+add_subdirectory(src)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
-    install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
     install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-    #install(FILES org.kde.nota.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-    install(FILES src/assets/nota.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
 endif()
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
