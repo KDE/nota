@@ -67,7 +67,17 @@ Maui.Editor
             //                onClicked: showFindAndReplace = false
             //            }
 
-            rightContent: Maui.ToolButtonMenu
+
+
+            rightContent: [ToolButton
+            {
+                id: _replaceButton
+                icon.name: "edit-find-replace"
+                checkable: true
+                checked: false
+            },
+
+            Maui.ToolButtonMenu
             {
                 icon.name: "games-config-options"
 
@@ -82,14 +92,15 @@ Maui.Editor
                     checkable: true
                     text: i18n("Whole Words Only")
                 }
-            }
+            }]
 
-            middleContent:  Maui.TextField
+            middleContent: Maui.TextField
             {
                 id: _findField
                 Layout.fillWidth: true
                 Layout.maximumWidth: 500
                 placeholderText: i18n("Find")
+
                 onAccepted:
                 {
                     console.log("FIND THE QUERY", text)
@@ -98,14 +109,16 @@ Maui.Editor
 
                 actions:[
 
-                    Action
-                    {
-                        icon.name: "arrow-up"
-                        onTriggered: document.find(_findField.text, false)
-                    },
+//                    Action
+//                    {
+//                        enabled: _findField.text.length
+//                        icon.name: "arrow-up"
+//                        onTriggered: document.find(_findField.text, false)
+//                    },
 
                     Action
                     {
+                        enabled: _findField.text.length
                         icon.name: "arrow-down"
                         onTriggered: document.find(_findField.text, true)
                     }
@@ -116,7 +129,7 @@ Maui.Editor
         Maui.ToolBar
         {
             id: _replaceToolBar
-            visible: showFindAndReplace
+            visible: _replaceButton.checked
             width: parent.width
 
             middleContent: Maui.TextField
@@ -129,6 +142,7 @@ Maui.Editor
                 actions: Action
                 {
                     text: i18n("Replace")
+                    enabled: _replaceField.text.length
                     icon.name: "checkmark"
                     onTriggered: document.replace(_findField.text, _replaceField.text)
                 }
@@ -136,9 +150,9 @@ Maui.Editor
 
             rightContent: [
 
-
                 Button
                 {
+                    enabled: _replaceField.text.length
                     text: i18n("Replace All")
                     onClicked: document.replaceAll(_findField.text, _replaceField.text)
                 }

@@ -46,7 +46,7 @@ Maui.AltBrowser
 
             if(event.key === Qt.Key_Return)
             {
-                 editorView.openTab(item.path)
+                editorView.openTab(item.path)
             }
         }
     }
@@ -88,16 +88,14 @@ Maui.AltBrowser
         id: _gridDelegate
 
         property bool isCurrentItem : GridView.isCurrentItem
-        property alias checked :_gridTemplate.checked
+        property alias checked :_gridItemDelegate.checked
 
         height: control.gridView.cellHeight
         width: control.gridView.cellWidth
 
-        Maui.ItemDelegate
+        Maui.GridBrowserDelegate
         {
             id: _gridItemDelegate
-            padding: Maui.Style.space.tiny
-            isCurrentItem : GridView.isCurrentItem
             anchors.centerIn: parent
             height: parent.height- 15
             width: control.gridView.itemSize - 20
@@ -109,21 +107,14 @@ Maui.AltBrowser
                                    "text/uri-list": control.filterSelectedItems(model.path)
                                } : {}
 
-        background: Item {}
 
-        Maui.GridItemTemplate
-        {
-            id: _gridTemplate
-            isCurrentItem: _gridDelegate.isCurrentItem || checked
-            hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
-            anchors.fill: parent
-            label1.text: model.label
-            iconSource: model.icon
-            iconSizeHint: height * 0.6
-            checkable: root.selectionMode
-            checked: _selectionbar.contains(model.path)
-            onToggled: addToSelection(model)
-        }
+        isCurrentItem: _gridDelegate.isCurrentItem || checked
+        label1.text: model.label
+        iconSource: model.icon
+        iconSizeHint: height * 0.6
+        checkable: root.selectionMode
+        checked: _selectionbar.contains(model.path)
+        onToggled: addToSelection(model)
 
         Connections
         {

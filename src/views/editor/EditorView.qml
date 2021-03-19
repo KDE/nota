@@ -217,10 +217,20 @@ Maui.Page
                 snapMode: ListView.SnapOneItem
                 spacing: 0
                 interactive: false
+                boundsBehavior: Flickable.StopAtBounds
+                boundsMovement :Flickable.StopAtBounds
+
                 highlightFollowsCurrentItem: true
+                preferredHighlightBegin: 0
+                preferredHighlightEnd: width
+
+                highlightRangeMode: ListView.StrictlyEnforceRange
                 highlightMoveDuration: 0
-                highlightResizeDuration : 0
-                onMovementEnded: currentIndex = indexAt(contentX, contentY)
+                highlightResizeDuration: 0
+                highlightMoveVelocity: -1
+                highlightResizeVelocity: -1
+
+                //                onMovementEnded: currentIndex = indexAt(contentX, contentY)
                 cacheBuffer: count
                 clip: true
             }
