@@ -11,7 +11,6 @@ Maui.Editor
 {
     id: control
     readonly property int _index : ObjectModel.index
-    property bool showFindAndReplace: false
 
     SplitView.fillHeight: true
     SplitView.fillWidth: true
@@ -34,7 +33,8 @@ Maui.Editor
     document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
     document.autoSave: settings.autoSave
     document.tabSpace: ((settings.tabSpace+1) * body.font.pointSize) / 2
-
+    document.findCaseSensitively: _findCaseSensitively.checked
+    document.findWholeWords: _findWholeWords.checked
     onFileUrlChanged: syncTerminal(control.fileUrl)
 
     MouseArea
@@ -51,116 +51,6 @@ Maui.Editor
     }
 
     footBar.visible: showSyntaxHighlightingLanguages
-
-    footerColumn: [
-
-        Maui.ToolBar
-        {
-            id: _findToolBar
-            visible: showFindAndReplace
-            width: parent.width
-            position: ToolBar.Footer
-
-            //            farLeftContent: ToolButton
-            //            {
-            //                icon.name: "go-previous"
-            //                onClicked: showFindAndReplace = false
-            //            }
-
-
-
-            rightContent: [ToolButton
-            {
-                id: _replaceButton
-                icon.name: "edit-find-replace"
-                checkable: true
-                checked: false
-            },
-
-            Maui.ToolButtonMenu
-            {
-                icon.name: "games-config-options"
-
-                MenuItem
-                {
-                    checkable: true
-                    text: i18n("Case Sensitive")
-                }
-
-                MenuItem
-                {
-                    checkable: true
-                    text: i18n("Whole Words Only")
-                }
-            }]
-
-            middleContent: Maui.TextField
-            {
-                id: _findField
-                Layout.fillWidth: true
-                Layout.maximumWidth: 500
-                placeholderText: i18n("Find")
-
-                onAccepted:
-                {
-                    console.log("FIND THE QUERY", text)
-                    document.find(text)
-                }
-
-                actions:[
-
-//                    Action
-//                    {
-//                        enabled: _findField.text.length
-//                        icon.name: "arrow-up"
-//                        onTriggered: document.find(_findField.text, false)
-//                    },
-
-                    Action
-                    {
-                        enabled: _findField.text.length
-                        icon.name: "arrow-down"
-                        onTriggered: document.find(_findField.text, true)
-                    }
-                ]
-            }
-        },
-
-        Maui.ToolBar
-        {
-            id: _replaceToolBar
-            visible: _replaceButton.checked
-            width: parent.width
-
-            middleContent: Maui.TextField
-            {
-                id: _replaceField
-                placeholderText: i18n("Replace")
-                Layout.fillWidth: true
-                Layout.maximumWidth: 500
-
-                actions: Action
-                {
-                    text: i18n("Replace")
-                    enabled: _replaceField.text.length
-                    icon.name: "checkmark"
-                    onTriggered: document.replace(_findField.text, _replaceField.text)
-                }
-            }
-
-            rightContent: [
-
-                Button
-                {
-                    enabled: _replaceField.text.length
-                    text: i18n("Replace All")
-                    onClicked: document.replaceAll(_findField.text, _replaceField.text)
-                }
-            ]
-        }
-
-
-    ]
 
     Keys.enabled: true
     Keys.onPressed:
@@ -199,19 +89,6 @@ Maui.Editor
         if((event.key === Qt.Key_L) && (event.modifiers & Qt.ControlModifier))
         {
             settings.showLineNumbers = !settings.showLineNumbers
-        }
-
-        if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
-        {
-            control.showFindAndReplace = !control.showFindAndReplace
-
-            if(control.showFindAndReplace)
-            {
-                _findField.forceActiveFocus()
-            }else
-            {
-                editor.forceActiveFocus()
-            }
         }
     }
 

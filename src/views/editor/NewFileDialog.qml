@@ -11,13 +11,13 @@ Maui.Dialog
     id: control
     title: i18n("New file")
     page.padding: 0
-
+    persistent: false
     defaultButtons: false
     rejectButton.visible : false
     acceptButton.visible: false
     acceptButton.text: i18n("New template")
 
-   stack: ColumnLayout
+    stack: ColumnLayout
     {
         Layout.fillWidth: true
         Layout.fillHeight: true
@@ -64,7 +64,7 @@ Maui.Dialog
             onClicked:
             {
                 editorView.openTab("")
-//                _editorListView.currentItem.body.textFormat = TextEdit.PlainText
+                //                _editorListView.currentItem.body.textFormat = TextEdit.PlainText
                 control.close()
             }
         }
@@ -87,7 +87,7 @@ Maui.Dialog
             onClicked:
             {
                 openTab("")
-//                _editorListView.currentItem.body.textFormat = TextEdit.RichText
+                //                _editorListView.currentItem.body.textFormat = TextEdit.RichText
                 control.close()
             }
         }

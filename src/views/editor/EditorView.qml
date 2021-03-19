@@ -172,8 +172,11 @@ Maui.Page
             ToolButton
             {
                 icon.name: "edit-find"
-                onClicked:currentEditor.showFindAndReplace = !currentEditor.showFindAndReplace
-                checked: currentEditor.showFindAndReplace
+                onClicked:
+                {
+                    currentEditor.showFindBar = !currentEditor.showFindBar
+                }
+                checked: currentEditor.showFindBar
             },
 
             Maui.ToolActions
