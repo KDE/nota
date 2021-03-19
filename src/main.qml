@@ -88,19 +88,7 @@ Maui.ApplicationWindow
         {
             icon.name: "document-open"
             text: i18n("Open")
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = _fileDialogComponent
-                dialog.mode = dialog.modes.OPEN
-                dialog.callback =  function (urls)
-                {
-                    for(var url of urls)
-                    {
-                        editorView.openTab(url)
-                    }
-                }
-                dialog.open()
-            }
+            onTriggered: openFileDialog()
         },
 
         Action
@@ -407,5 +395,19 @@ Maui.ApplicationWindow
     function addToSelection(item)
     {
         _selectionbar.append(item.path, item)
+    }
+
+    function openFileDialog()
+    {
+        _dialogLoader.sourceComponent = _fileDialogComponent
+        dialog.mode = dialog.modes.OPEN
+        dialog.callback =  function (urls)
+        {
+            for(var url of urls)
+            {
+                editorView.openTab(url)
+            }
+        }
+        dialog.open()
     }
 }

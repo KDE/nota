@@ -149,12 +149,6 @@ Maui.Page
 
         altHeader: false
         headBar.rightContent:[
-            ToolButton
-            {
-                icon.name: "edit-find"
-                onClicked:currentEditor.showFindAndReplace = !currentEditor.showFindAndReplace
-                checked: currentEditor.showFindAndReplace
-            },
 
             ToolButton
             {
@@ -173,6 +167,13 @@ Maui.Page
 
                    root.currentTab.split("")
                }
+            },
+
+            ToolButton
+            {
+                icon.name: "edit-find"
+                onClicked:currentEditor.showFindAndReplace = !currentEditor.showFindAndReplace
+                checked: currentEditor.showFindAndReplace
             },
 
             Maui.ToolActions
@@ -215,7 +216,7 @@ Maui.Page
                 model: _documentModel
                 snapMode: ListView.SnapOneItem
                 spacing: 0
-                interactive: Maui.Handy.isTouch && count > 1
+                interactive: false
                 highlightFollowsCurrentItem: true
                 highlightMoveDuration: 0
                 highlightResizeDuration : 0

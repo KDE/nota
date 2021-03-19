@@ -42,7 +42,7 @@ Maui.Dialog
 
             onClicked:
             {
-                openFile()
+                openFileDialog()
                 control.close()
             }
         }
@@ -63,7 +63,7 @@ Maui.Dialog
 
             onClicked:
             {
-                openTab("")
+                editorView.openTab("")
 //                _editorListView.currentItem.body.textFormat = TextEdit.PlainText
                 control.close()
             }
