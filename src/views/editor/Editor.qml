@@ -33,8 +33,7 @@ Maui.Editor
     document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
     document.autoSave: settings.autoSave
     document.tabSpace: ((settings.tabSpace+1) * body.font.pointSize) / 2
-    document.findCaseSensitively: _findCaseSensitively.checked
-    document.findWholeWords: _findWholeWords.checked
+
     onFileUrlChanged: syncTerminal(control.fileUrl)
 
     MouseArea
