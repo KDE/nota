@@ -137,13 +137,13 @@ DocsBrowser
     onRightClicked:
     {
         control.currentIndex = index
-        menu.popup()
+        menu.open()
     }
 
     onPressAndHold:
     {
         control.currentIndex = index
-        menu.popup()
+        menu.open()
     }
 }
 

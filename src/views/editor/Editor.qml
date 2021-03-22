@@ -102,7 +102,7 @@ Maui.Editor
             {
                 var m_urls = drop.urls.join(",")
                 _dropArea.urls = m_urls.split(",")
-                _dropAreaMenu.popup()
+                _dropAreaMenu.open()
 
                 //                Nota.Nota.requestFiles( _dropArea.urls )
             }

@@ -162,13 +162,13 @@ Maui.AltBrowser
         onRightClicked:
         {
             control.currentIndex = index
-            _menu.popup()
+            _menu.open()
         }
 
         onPressAndHold:
         {
             control.currentIndex = index
-            _menu.popup()
+            _menu.open()
         }
     }
 }
@@ -251,13 +251,13 @@ listDelegate: Maui.ItemDelegate
     onRightClicked:
     {
         control.currentIndex = index
-        _menu.popup()
+        _menu.open()
     }
 
     onPressAndHold:
     {
         control.currentIndex = index
-        _menu.popup()
+        _menu.open()
     }
 }
 
