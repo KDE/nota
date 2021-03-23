@@ -48,7 +48,7 @@ Maui.ApplicationWindow
         property bool enableSyntaxHighlighting : true
         property bool showSyntaxHighlightingLanguages: false
         property bool supportSplit :true
-        property bool terminalVisible : false
+        property bool supportTerminal : false
         property double tabSpace: 8
         property string theme : ""
         property color backgroundColor : root.Kirigami.Theme.backgroundColor
@@ -385,11 +385,6 @@ Maui.ApplicationWindow
         {
             _drawer.browser.openFolder(Maui.FM.fileDir(path))
         }
-    }
-
-    function toggleTerminal()
-    {
-        settings.terminalVisible = !settings.terminalVisible
     }
 
     function addToSelection(item)

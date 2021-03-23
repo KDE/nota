@@ -28,8 +28,7 @@ Maui.Dialog
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
-
-            alt: true
+            hoverEnabled: true
 
             Maui.ListItemTemplate
             {
@@ -51,6 +50,7 @@ Maui.Dialog
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            hoverEnabled: true
 
             Maui.ListItemTemplate
             {
@@ -74,7 +74,8 @@ Maui.Dialog
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            alt: true
+            hoverEnabled: true
+
             Maui.ListItemTemplate
             {
                 anchors.fill:parent
@@ -97,6 +98,7 @@ Maui.Dialog
             Layout.fillWidth: true
             Layout.fillHeight: true
             lastOne: true
+            hoverEnabled: true
 
             Maui.ListItemTemplate
             {

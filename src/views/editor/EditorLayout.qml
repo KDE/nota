@@ -27,6 +27,7 @@ Item
     readonly property string title : count === 2 ?  model.get(0).title + "  -  " + model.get(1).title : currentItem.title
     readonly property alias editor : _splitView.currentItem
     readonly property alias terminal : terminalLoader.item
+    property bool terminalVisible : false
 
     ObjectModel { id: splitObjectModel }
 
@@ -149,8 +150,8 @@ Item
         Loader
         {
             id: terminalLoader
-            active: Nota.Nota.supportsEmbededTerminal()
-            visible: active && settings.terminalVisible && terminal
+            active: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
+            visible: active && control.terminalVisible
             SplitView.fillWidth: true
             SplitView.preferredHeight: 200
             SplitView.maximumHeight: parent.height * 0.5
@@ -206,6 +207,10 @@ Item
             control.terminal.session.sendText("cd '" + String(Maui.FM.fileDir(path)).replace("file://", "") + "'\n")
     }
 
+    function toggleTerminal()
+    {
+        control.terminalVisible = !control.terminalVisible
+    }
 
     function split(path)
     {

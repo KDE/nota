@@ -152,6 +152,14 @@ Maui.Page
 
             ToolButton
             {
+              icon.name: "terminal"
+              visible: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
+              onClicked: currentTab.toggleTerminal()
+              checked: currentTab ? currentTab.terminalVisible : false
+            },
+
+            ToolButton
+            {
                 id: _splitButton
                 visible: settings.supportSplit
                icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"

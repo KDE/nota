@@ -46,8 +46,8 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: settings.terminalVisible
-                onToggled: settings.terminalVisible = !settings.terminalVisible
+                checked: settings.supportTerminal
+                onToggled: settings.supportTerminal = !settings.supportTerminal
             }
         }
     }
