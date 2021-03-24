@@ -180,8 +180,6 @@ Maui.Page
         }
     }
 
-
-
     function unsavedTabSplits(index) //which split indexes are unsaved
     {
         var indexes = []
@@ -240,7 +238,7 @@ Maui.Page
         {
             _editorListView.addTab(component, {"path": path})
             _historyList.append(path)
-            _editorListView.incrementCurrentIndex();
+            _editorListView.currentIndex = _editorListView.count -1
         }
     }
 
