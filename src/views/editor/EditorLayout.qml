@@ -13,8 +13,8 @@ import QtQml.Models 2.3
 Item
 {
     id: control
-    height: _editorListView.height
-    width: _editorListView.width
+    height: ListView.view.height
+    width:  ListView.view.width
 
     property url path
 

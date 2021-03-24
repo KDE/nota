@@ -4,77 +4,24 @@ import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.2 as Maui
+import org.kde.mauikit 1.3 as Maui
+
 import org.maui.nota 1.0 as Nota
 
 import QtQuick.Window 2.0
-import QtQml.Models 2.3
 
 Maui.Page
 {
     id: control
+
+    readonly property alias count: _editorListView.count
+
     property alias currentTab : _editorListView.currentItem
     readonly property Maui.Editor currentEditor: currentTab ? currentTab.currentItem : null
-    property alias listView: _editorListView
-    readonly property alias count: _editorListView.count
-    readonly property alias model : _documentModel
+    property alias listView: _editorListView    
     property alias plugin: _pluginLayout
+    property alias model : _editorListView.contentModel
 
-    ObjectModel
-    {
-        id: _documentModel
-    }
-
-    header: Maui.TabBar
-    {
-        id: _tabBar
-        visible: _documentModel.count > 1
-
-        width: parent.width
-        position: TabBar.Header
-        currentIndex : _editorListView.currentIndex
-        onNewTabClicked: editorView.openTab("")
-
-        Repeater
-        {
-            id: _repeater
-            model: _documentModel.count
-
-            Maui.TabButton
-            {
-                id: _tabButton
-                readonly property int index_ : index
-                implicitHeight: _tabBar.implicitHeight
-                implicitWidth: Math.max(parent.width / _repeater.count, 120)
-
-                checked: index === _tabBar.currentIndex
-
-                text: _documentModel.get(index).title
-
-                onClicked: _editorListView.currentIndex = index
-                onCloseClicked:
-                {
-                    if( tabHasUnsavedFiles(model.index) )
-                    {
-                        _dialogLoader.sourceComponent = _unsavedDialogComponent
-                        dialog.callback = function () { closeTab(model.index) }
-
-                        if(tabHasUnsavedFiles(model.index))
-                        {
-                            dialog.open()
-                            return
-                        }
-                    }
-                    else
-                        closeTab(model.index)
-                }
-            }
-        }
-    }
-
-    Maui.Page
-    {
-        anchors.fill: parent
         autoHideHeader: root.focusMode
 
         headBar.leftContent: [
@@ -218,35 +165,13 @@ Maui.Page
             anchors.fill: parent
             spacing: 0
 
-            ListView
+            Maui.TabView
             {
                 id: _editorListView
                 Layout.fillWidth: true
-                Layout.fillHeight: true
-                orientation: ListView.Horizontal
-                model: _documentModel
-                snapMode: ListView.SnapOneItem
-                spacing: 0
-                interactive: false
-                boundsBehavior: Flickable.StopAtBounds
-                boundsMovement :Flickable.StopAtBounds
-
-                highlightFollowsCurrentItem: true
-                preferredHighlightBegin: 0
-                preferredHighlightEnd: width
-
-                highlightRangeMode: ListView.StrictlyEnforceRange
-                highlightMoveDuration: 0
-                highlightResizeDuration: 0
-                highlightMoveVelocity: -1
-                highlightResizeVelocity: -1
-
-                //                onMovementEnded: currentIndex = indexAt(contentX, contentY)
-                cacheBuffer: count
-                clip: true
+                Layout.fillHeight: true                
             }
-        }
-    }
+        }    
 
     Maui.Holder
     {
@@ -316,17 +241,15 @@ Maui.Page
         var component = Qt.createComponent("qrc:/views/editor/EditorLayout.qml");
         if (component.status === Component.Ready)
         {
-            _documentModel.append(component.createObject(_documentModel, {"path": path}))
+            _editorListView.addTab(component, {"path": path})
             _historyList.append(path)
-            _editorListView.currentIndex = _documentModel.count - 1
+            _editorListView.incrementCurrentIndex();
         }
     }
 
     function closeTab(index) //no questions asked
     {
-        var item = _documentModel.get(index)
-        item.destroy()
-        _documentModel.remove(index)
+        _editorListView.closeTab(index)
     }
 
     function saveFile(path, item)
