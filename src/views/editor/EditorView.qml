@@ -18,172 +18,169 @@ Maui.Page
 
     property alias currentTab : _editorListView.currentItem
     readonly property Maui.Editor currentEditor: currentTab ? currentTab.currentItem : null
-    property alias listView: _editorListView    
+    property alias listView: _editorListView
     property alias plugin: _pluginLayout
     property alias model : _editorListView.contentModel
 
-        autoHideHeader: root.focusMode
+    autoHideHeader: root.focusMode
 
-        headBar.leftContent: [
+    headBar.leftContent: [
 
-            Maui.ToolActions
-            {
-                expanded: true
-                autoExclusive: false
-                checkable: false
-
-                Action
-                {
-                    icon.name: "edit-undo"
-                    enabled: currentEditor.body.canUndo
-                    onTriggered: currentEditor.body.undo()
-                }
-
-                Action
-                {
-                    icon.name: "edit-redo"
-                    enabled: currentEditor.body.canRedo
-                    onTriggered: currentEditor.body.redo()
-                }
-            },
-
-            Maui.ToolActions
-            {
-                visible: (currentEditor.document.isRich || currentEditor.body.textFormat === Text.RichText) && !currentEditor.body.readOnly
-                expanded: true
-                autoExclusive: false
-                checkable: false
-
-                Action
-                {
-                    icon.name: "format-text-bold"
-                    checked: currentEditor.document.bold
-                    onTriggered: currentEditor.document.bold = !currentEditor.document.bold
-                }
-
-                Action
-                {
-                    icon.name: "format-text-italic"
-                    checked: currentEditor.document.italic
-                    onTriggered: currentEditor.document.italic = !currentEditor.document.italic
-                }
-
-                Action
-                {
-                    icon.name: "format-text-underline"
-                    checked: currentEditor.document.underline
-                    onTriggered: currentEditor.document.underline = !currentEditor.document.underline
-                }
-
-                Action
-                {
-                    icon.name: "format-text-uppercase"
-                    checked: currentEditor.document.uppercase
-                    onTriggered: currentEditor.document.uppercase = !currentEditor.document.uppercase
-                }
-            }
-        ]
-
-        headBar.visible: _editorListView.count > 0
-        headBar.middleContent: ToolButton
+        Maui.ToolActions
         {
-            //        visible: root.focusMode
-            icon.name: checked ? "view-readermode-active" : "view-readermode"
-//            text: i18n("Focus")
-            checked: root.focusMode
-            onClicked: root.focusMode = !root.focusMode
+            expanded: true
+            autoExclusive: false
+            checkable: false
+
+            Action
+            {
+                icon.name: "edit-undo"
+                enabled: currentEditor.body.canUndo
+                onTriggered: currentEditor.body.undo()
+            }
+
+            Action
+            {
+                icon.name: "edit-redo"
+                enabled: currentEditor.body.canRedo
+                onTriggered: currentEditor.body.redo()
+            }
+        },
+
+        Maui.ToolActions
+        {
+            visible: (currentEditor.document.isRich || currentEditor.body.textFormat === Text.RichText) && !currentEditor.body.readOnly
+            expanded: true
+            autoExclusive: false
+            checkable: false
+
+            Action
+            {
+                icon.name: "format-text-bold"
+                checked: currentEditor.document.bold
+                onTriggered: currentEditor.document.bold = !currentEditor.document.bold
+            }
+
+            Action
+            {
+                icon.name: "format-text-italic"
+                checked: currentEditor.document.italic
+                onTriggered: currentEditor.document.italic = !currentEditor.document.italic
+            }
+
+            Action
+            {
+                icon.name: "format-text-underline"
+                checked: currentEditor.document.underline
+                onTriggered: currentEditor.document.underline = !currentEditor.document.underline
+            }
+
+            Action
+            {
+                icon.name: "format-text-uppercase"
+                checked: currentEditor.document.uppercase
+                onTriggered: currentEditor.document.uppercase = !currentEditor.document.uppercase
+            }
         }
+    ]
 
-        altHeader: false
-        headBar.rightContent:[
-
-            ToolButton
-            {
-              icon.name: "terminal"
-              visible: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
-              onClicked: currentTab.toggleTerminal()
-              checked: currentTab ? currentTab.terminalVisible : false
-            },
-
-            ToolButton
-            {
-                id: _splitButton
-                visible: settings.supportSplit
-               icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
-               checked: root.currentTab && root.currentTab.count === 2
-
-               onClicked:
-               {
-                   if(root.currentTab.count === 2)
-                   {
-                       root.currentTab.pop()
-                       return
-                   }//close the innactive split
-
-                   root.currentTab.split("")
-               }
-            },
-
-            ToolButton
-            {
-                icon.name: "edit-find"
-                onClicked:
-                {
-                    currentEditor.showFindBar = !currentEditor.showFindBar
-                }
-                checked: currentEditor.showFindBar
-            },
-
-            Maui.ToolActions
-            {
-                autoExclusive: false
-                checkable: false
-                expanded: false
-                display: ToolButton.TextBesideIcon
-                defaultIconName: "document-save"
-
-                Action
-                {
-                    text: i18n("Save")
-                    icon.name: "document-save"
-                    enabled: currentEditor ? currentEditor.document.modified : false
-                    onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
-                }
-
-                Action
-                {
-                    icon.name: "document-save-as"
-                    text: i18n("Save as...")
-                    onTriggered: saveFile("", control.currentEditor)
-                }
-            }
-        ]
-
-        ColumnLayout
-        {
-            id: _pluginLayout
-            anchors.fill: parent
-            spacing: 0
-
-            Maui.TabView
-            {
-                id: _editorListView
-                Layout.fillWidth: true
-                Layout.fillHeight: true                
-            }
-        }    
-
-    Maui.Holder
+    headBar.visible: _editorListView.count > 0
+    headBar.middleContent: ToolButton
     {
-        id: _holder
-        visible: !_editorListView.count
-        emoji: "qrc:/img/document-edit.svg"
-        emojiSize: Maui.Style.iconSizes.huge
-        isMask: true
-        onActionTriggered: openTab("")
-        title: i18n("Create a new document")
-        body: i18n("You can create a new document by clicking the New File button, or here.<br>Alternative you can open existing files from the left places sidebar or by clicking the Open button")
+        //        visible: root.focusMode
+        icon.name: checked ? "view-readermode-active" : "view-readermode"
+        //            text: i18n("Focus")
+        checked: root.focusMode
+        onClicked: root.focusMode = !root.focusMode
     }
+
+    altHeader: false
+    headBar.rightContent:[
+
+        ToolButton
+        {
+            icon.name: "terminal"
+            visible: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
+            onClicked: currentTab.toggleTerminal()
+            checked: currentTab ? currentTab.terminalVisible : false
+        },
+
+        ToolButton
+        {
+            id: _splitButton
+            visible: settings.supportSplit
+            icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+            checked: root.currentTab && root.currentTab.count === 2
+
+            onClicked:
+            {
+                if(root.currentTab.count === 2)
+                {
+                    root.currentTab.pop()
+                    return
+                }//close the innactive split
+
+                root.currentTab.split("")
+            }
+        },
+
+        ToolButton
+        {
+            icon.name: "edit-find"
+            onClicked:
+            {
+                currentEditor.showFindBar = !currentEditor.showFindBar
+            }
+            checked: currentEditor.showFindBar
+        },
+
+        Maui.ToolActions
+        {
+            autoExclusive: false
+            checkable: false
+            expanded: false
+            display: ToolButton.TextBesideIcon
+            defaultIconName: "document-save"
+
+            Action
+            {
+                text: i18n("Save")
+                icon.name: "document-save"
+                enabled: currentEditor ? currentEditor.document.modified : false
+                onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
+            }
+
+            Action
+            {
+                icon.name: "document-save-as"
+                text: i18n("Save as...")
+                onTriggered: saveFile("", control.currentEditor)
+            }
+        }
+    ]
+
+    ColumnLayout
+    {
+        id: _pluginLayout
+        anchors.fill: parent
+        spacing: 0
+
+        Maui.TabView
+        {
+            id: _editorListView
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            holder.emoji: "qrc:/img/document-edit.svg"
+
+            holder.title: i18n("Create a new document")
+            holder.body: i18n("You can create or open a new document.")
+
+            onNewTabClicked: control.openTab("")
+        }
+    }
+
+
 
     function unsavedTabSplits(index) //which split indexes are unsaved
     {

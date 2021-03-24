@@ -137,7 +137,7 @@ Maui.ApplicationWindow
         id: _newDocumentMenu
         maxHeight: 300
         maxWidth: 400
-     }
+    }
 
     headBar.rightContent: ToolButton
     {
@@ -250,9 +250,9 @@ Maui.ApplicationWindow
     Component.onCompleted:
     {
         if(settings.defaultBlankFile)
-            {
-                editorView.openTab("")
-            }
+        {
+            editorView.openTab("")
+        }
     }
 
     Nota.History { id: _historyList }
