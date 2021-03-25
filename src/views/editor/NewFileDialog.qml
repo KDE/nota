@@ -36,7 +36,7 @@ Maui.Dialog
                 iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
                 iconSource: "folder-open"
                 label1.text: i18n("Open file")
-                label2.text: i18n("Open one or multiple files from the file system")
+                label2.text: i18n("Open one or multiple files.")
             }
 
             onClicked:
