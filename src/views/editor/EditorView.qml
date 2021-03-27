@@ -90,21 +90,12 @@ Maui.Page
 
         ToolButton
         {
-            id: _splitButton
-            visible: settings.supportSplit
-            icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
-            checked: root.currentTab && root.currentTab.count === 2
-
+            icon.name: "edit-find"
             onClicked:
             {
-                if(root.currentTab.count === 2)
-                {
-                    root.currentTab.pop()
-                    return
-                }//close the innactive split
-
-                root.currentTab.split("")
+                currentEditor.showFindBar = !currentEditor.showFindBar
             }
+            checked: currentEditor.showFindBar
         },
 
         Maui.ToolButtonMenu
@@ -125,16 +116,6 @@ Maui.Page
                 text: i18n("Save as...")
                 onTriggered: saveFile("", control.currentEditor)
             }
-        },
-
-        ToolButton
-        {
-            icon.name: "edit-find"
-            onClicked:
-            {
-                currentEditor.showFindBar = !currentEditor.showFindBar
-            }
-            checked: currentEditor.showFindBar
         },
 
         Maui.ToolButtonMenu
@@ -159,8 +140,27 @@ Maui.Page
                 checkable: true
                 checked: currentTab ? currentTab.terminalVisible : false
             }
-        }
 
+            MenuItem
+            {
+                id: _splitButton
+                visible: settings.supportSplit
+                text: i18n("Split %1", root.currentTab.orientation === Qt.Horizontal ? "Horizontally" : "Vertically")
+                icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+                checked: root.currentTab && root.currentTab.count === 2
+                checkable: true
+                onTriggered:
+                {
+                    if(root.currentTab.count === 2)
+                    {
+                        root.currentTab.pop()
+                        return
+                    }//close the innactive split
+
+                    root.currentTab.split("")
+                }
+            }
+        }
     ]
 
     ColumnLayout
