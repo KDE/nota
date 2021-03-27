@@ -17,6 +17,7 @@ Maui.ApplicationWindow
     title: currentEditor ? currentTab.title : ""
 
     altHeader: Kirigami.Settings.isMobile
+    headBar.visible: !focusMode
 
     readonly property var views : ({editor: 0, recent: 1, documents: 2})
 
@@ -139,6 +140,18 @@ Maui.ApplicationWindow
         maxWidth: 400
     }
 
+    headBar.leftContent: ToolButton
+    {
+        visible: settings.enableSidebar
+        icon.name: _drawer.visible ? "sidebar-collapse" : "sidebar-expand"
+        onClicked: _drawer.toggle()
+
+        ToolTip.delay: 1000
+        ToolTip.timeout: 5000
+        ToolTip.visible: hovered
+        ToolTip.text: i18n("Toogle SideBar")
+    }
+
     headBar.rightContent: ToolButton
     {
         icon.name: "list-add"
@@ -212,19 +225,6 @@ Maui.ApplicationWindow
         }
     }
 
-    headBar.visible: !focusMode
-
-    headBar.leftContent: ToolButton
-    {
-        visible: settings.enableSidebar
-        icon.name: _drawer.visible ? "sidebar-collapse" : "sidebar-expand"
-        onClicked: _drawer.toggle()
-
-        ToolTip.delay: 1000
-        ToolTip.timeout: 5000
-        ToolTip.visible: hovered
-        ToolTip.text: i18n("Toogle SideBar")
-    }
 
     sideBar: PlacesSidebar
     {
@@ -285,9 +285,7 @@ Maui.ApplicationWindow
                 Maui.AppView.title: i18n("Recent")
                 visible: !focusMode
 
-                RecentView
-                {
-                }
+                RecentView {}
             }
         }
 

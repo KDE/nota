@@ -52,7 +52,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setHomepage("https://mauikit.org");
     about.setProductName("maui/nota");
     about.setBugAddress("https://invent.kde.org/maui/nota/-/issues");
-    about.setOrganizationDomain("org.maui.nota");
+    about.setOrganizationDomain(NOTA_URI);
     about.setProgramLogo(app.windowIcon());
 
     KAboutData::setApplicationData(about);

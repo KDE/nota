@@ -22,7 +22,9 @@ Maui.Page
     property alias plugin: _pluginLayout
     property alias model : _editorListView.contentModel
 
+    altHeader: false
     autoHideHeader: root.focusMode
+    headBar.visible: _editorListView.count > 0
 
     headBar.leftContent: [
 
@@ -84,26 +86,7 @@ Maui.Page
         }
     ]
 
-    headBar.visible: _editorListView.count > 0
-    headBar.middleContent: ToolButton
-    {
-        //        visible: root.focusMode
-        icon.name: checked ? "view-readermode-active" : "view-readermode"
-        //            text: i18n("Focus")
-        checked: root.focusMode
-        onClicked: root.focusMode = !root.focusMode
-    }
-
-    altHeader: false
     headBar.rightContent:[
-
-        ToolButton
-        {
-            icon.name: "terminal"
-            visible: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
-            onClicked: currentTab.toggleTerminal()
-            checked: currentTab ? currentTab.terminalVisible : false
-        },
 
         ToolButton
         {
@@ -124,6 +107,26 @@ Maui.Page
             }
         },
 
+        Maui.ToolButtonMenu
+        {
+            icon.name: "document-save"
+
+            MenuItem
+            {
+                text: i18n("Save")
+                icon.name: "document-save"
+                enabled: currentEditor ? currentEditor.document.modified : false
+                onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
+            }
+
+            MenuItem
+            {
+                icon.name: "document-save-as"
+                text: i18n("Save as...")
+                onTriggered: saveFile("", control.currentEditor)
+            }
+        },
+
         ToolButton
         {
             icon.name: "edit-find"
@@ -134,29 +137,30 @@ Maui.Page
             checked: currentEditor.showFindBar
         },
 
-        Maui.ToolActions
+        Maui.ToolButtonMenu
         {
-            autoExclusive: false
-            checkable: false
-            expanded: false
-            display: ToolButton.TextBesideIcon
-            defaultIconName: "document-save"
+            icon.name: "overflow-menu"
 
-            Action
+            MenuItem
             {
-                text: i18n("Save")
-                icon.name: "document-save"
-                enabled: currentEditor ? currentEditor.document.modified : false
-                onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
+                icon.name: checked ? "view-readermode-active" : "view-readermode"
+                text: i18n("Focus Mode")
+                checked: root.focusMode
+                checkable: true
+                onTriggered: root.focusMode = !root.focusMode
             }
 
-            Action
+            MenuItem
             {
-                icon.name: "document-save-as"
-                text: i18n("Save as...")
-                onTriggered: saveFile("", control.currentEditor)
+                text: i18n("Terminal")
+                icon.name: "dialog-scripts"
+                visible: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
+                onTriggered: currentTab.toggleTerminal()
+                checkable: true
+                checked: currentTab ? currentTab.terminalVisible : false
             }
         }
+
     ]
 
     ColumnLayout
@@ -177,6 +181,22 @@ Maui.Page
             holder.body: i18n("You can create or open a new document.")
 
             onNewTabClicked: control.openTab("")
+            onCloseTabClicked:
+            {
+                if( tabHasUnsavedFiles(index) )
+                {
+                    _dialogLoader.sourceComponent = _unsavedDialogComponent
+                    dialog.callback = function () { closeTab(index) }
+
+                    if(tabHasUnsavedFiles(index))
+                    {
+                        dialog.open()
+                        return
+                    }
+                }
+                else
+                    closeTab(index)
+            }
         }
     }
 
