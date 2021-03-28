@@ -145,7 +145,7 @@ Maui.Page
             {
                 id: _splitButton
                 visible: settings.supportSplit
-                text: i18n("Split %1", root.currentTab.orientation === Qt.Horizontal ? "Horizontally" : "Vertically")
+                text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
                 icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
                 checked: root.currentTab && root.currentTab.count === 2
                 checkable: true
@@ -155,7 +155,7 @@ Maui.Page
                     {
                         root.currentTab.pop()
                         return
-                    }//close the innactive split
+                    }//close the inactive split
 
                     root.currentTab.split("")
                 }
