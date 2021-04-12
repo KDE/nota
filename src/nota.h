@@ -4,12 +4,9 @@
 #include <QFileInfo>
 #include <QObject>
 #include <QProcess>
+#include <QDebug>
 
-#ifdef STATIC_MAUIKIT
-#include "fmstatic.h"
-#else
-#include <MauiKit/fmstatic.h>
-#endif
+#include <MauiKit/FileBrowsing/fmstatic.h>
 
 class Nota : public QObject
 {
@@ -34,9 +31,9 @@ public slots:
         QStringList res;
         for (const auto &url : urls) {
             const auto url_ = QUrl::fromUserInput(url);
-            qDebug() << "REQUEST FILES" << url_.toString() << FMH::getMime(url_);
+            qDebug() << "REQUEST FILES" << url_.toString() << FMStatic::getMime(url_);
 
-            if (FMStatic::checkFileType(FMH::FILTER_TYPE::TEXT, FMH::getMime(url_)))
+            if (FMStatic::checkFileType(FMStatic::FILTER_TYPE::TEXT, FMStatic::getMime(url_)))
                 res << url_.toString();
         }
 

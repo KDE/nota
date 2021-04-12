@@ -4,7 +4,9 @@ import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.3 as Maui
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
+
 import org.maui.nota 1.0 as Nota
 
 import "views"
@@ -69,7 +71,7 @@ Maui.ApplicationWindow
     //        message: i18n("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
     //        onFinished:     {
     //            const url = text
-    //            if(Maui.FM.fileExists(url))
+    //            if(FB.FM.fileExists(url))
     //            {
 
     //                const component = Qt.createComponent(url);
@@ -206,18 +208,18 @@ Maui.ApplicationWindow
     Component
     {
         id: _fileDialogComponent
-        Maui.FileDialog
+        FB.FileDialog
         {
             settings.onlyDirs: false
-            settings.filterType: Maui.FMList.TEXT
-            settings.sortBy: Maui.FMList.MODIFIED
+            settings.filterType: FB.FMList.TEXT
+            settings.sortBy: FB.FMList.MODIFIED
         }
     }
 
     Component
     {
         id: _tagsDialogComponent
-        Maui.TagsDialog
+        FB.TagsDialog
         {
             onTagsReady: composerList.updateToUrls(tags)
             composerList.strict: false
@@ -356,7 +358,7 @@ Maui.ApplicationWindow
                         {
                             for(var i in paths)
                             {
-                                Maui.FM.copy(url, paths[i])
+                                FB.FM.copy(url, paths[i])
                             }
                         }
                     };
@@ -379,9 +381,9 @@ Maui.ApplicationWindow
 
     function syncSidebar(path)
     {
-        if(path && Maui.FM.fileExists(path) && settings.enableSidebar)
+        if(path && FB.FM.fileExists(path) && settings.enableSidebar)
         {
-            _drawer.browser.openFolder(Maui.FM.fileDir(path))
+            _drawer.browser.openFolder(FB.FM.fileDir(path))
         }
     }
 

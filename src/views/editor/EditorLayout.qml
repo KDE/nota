@@ -4,7 +4,8 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.3 as Maui
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
 
 import org.maui.nota 1.0 as Nota
 
@@ -203,8 +204,8 @@ Item
 
     function syncTerminal(path)
     {
-        if(control.terminal && control.terminal.visible && Maui.FM.fileExists(path))
-            control.terminal.session.sendText("cd '" + String(Maui.FM.fileDir(path)).replace("file://", "") + "'\n")
+        if(control.terminal && control.terminal.visible && FB.FM.fileExists(path))
+            control.terminal.session.sendText("cd '" + String(FB.FM.fileDir(path)).replace("file://", "") + "'\n")
     }
 
     function toggleTerminal()

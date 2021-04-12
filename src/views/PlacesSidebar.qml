@@ -1,8 +1,12 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
+
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.2 as Maui
+
+import org.mauikit.controls 1.2 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
+
 import org.maui.nota 1.0 as Nota
 
 Maui.AbstractSideBar
@@ -34,11 +38,11 @@ Maui.AbstractSideBar
             z : _drawer.z + 9999
             model: Maui.BaseModel
             {
-                list: Maui.PlacesList
+                list: FB.PlacesList
                 {
                     groups: [
-                        Maui.FMList.PLACES_PATH,
-                        Maui.FMList.DRIVES_PATH]
+                        FB.FMList.PLACES_PATH,
+                        FB.FMList.DRIVES_PATH]
                 }
             }
 
@@ -101,18 +105,18 @@ Maui.AbstractSideBar
                 MenuItem
                 {
                     text: i18n("Type")
-                    checked: browserView.settings.sortBy === Maui.FMList.MIME
+                    checked: browserView.settings.sortBy === FB.FMList.MIME
                     checkable: true
-                    onTriggered: browserView.settings.sortBy = Maui.FMList.MIME
+                    onTriggered: browserView.settings.sortBy = FB.FMList.MIME
                     autoExclusive: true
                 }
 
                 MenuItem
                 {
                     text: i18n("Date")
-                    checked:browserView.settings.sortBy === Maui.FMList.DATE
+                    checked:browserView.settings.sortBy === FB.FMList.DATE
                     checkable: true
-                    onTriggered: browserView.settings.sortBy = Maui.FMList.DATE
+                    onTriggered: browserView.settings.sortBy = FB.FMList.DATE
                     autoExclusive: true
                 }
 
@@ -120,8 +124,8 @@ Maui.AbstractSideBar
                 {
                     text: i18n("Modified")
                     checkable: true
-                    checked: browserView.settings.sortBy === Maui.FMList.MODIFIED
-                    onTriggered: browserView.settings.sortBy = Maui.FMList.MODIFIED
+                    checked: browserView.settings.sortBy === FB.FMList.MODIFIED
+                    onTriggered: browserView.settings.sortBy = FB.FMList.MODIFIED
                     autoExclusive: true
                 }
 
@@ -129,8 +133,8 @@ Maui.AbstractSideBar
                 {
                     text: i18n("Size")
                     checkable: true
-                    checked: browserView.settings.sortBy === Maui.FMList.SIZE
-                    onTriggered: browserView.settings.sortBy = Maui.FMList.SIZE
+                    checked: browserView.settings.sortBy === FB.FMList.SIZE
+                    onTriggered: browserView.settings.sortBy = FB.FMList.SIZE
                     autoExclusive: true
                 }
 
@@ -138,8 +142,8 @@ Maui.AbstractSideBar
                 {
                     text: i18n("Name")
                     checkable: true
-                    checked: browserView.settings.sortBy === Maui.FMList.LABEL
-                    onTriggered: browserView.settings.sortBy = Maui.FMList.LABEL
+                    checked: browserView.settings.sortBy === FB.FMList.LABEL
+                    onTriggered: browserView.settings.sortBy = FB.FMList.LABEL
                     autoExclusive: true
                 }
 
@@ -162,13 +166,13 @@ Maui.AbstractSideBar
         ]
 
 
-        Maui.FileBrowser
+        FB.FileBrowser
         {
             id: browserView
             anchors.fill: parent
-            currentPath: Maui.FM.homePath()
-            settings.viewType : Maui.FMList.LIST_VIEW
-            settings.filterType: Maui.FMList.TEXT
+            currentPath: FB.FM.homePath()
+            settings.viewType : FB.FMList.LIST_VIEW
+            settings.filterType: FB.FMList.TEXT
             headBar.rightLayout.visible: false
             headBar.rightLayout.width: 0
             selectionMode: root.selectionMode

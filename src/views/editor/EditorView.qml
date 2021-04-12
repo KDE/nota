@@ -4,7 +4,10 @@ import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.3 as Maui
+
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
+import org.mauikit.texteditor 1.0 as TE
 
 import org.maui.nota 1.0 as Nota
 
@@ -17,7 +20,7 @@ Maui.Page
     readonly property alias count: _editorListView.count
 
     property alias currentTab : _editorListView.currentItem
-    readonly property Maui.Editor currentEditor: currentTab ? currentTab.currentItem : null
+    readonly property TE.TextEditor currentEditor: currentTab ? currentTab.currentItem : null
     property alias listView: _editorListView
     property alias plugin: _pluginLayout
     property alias model : _editorListView.contentModel
@@ -272,7 +275,7 @@ Maui.Page
         if(!item)
             return
 
-        if (path && Maui.FM.fileExists(path))
+        if (path && FB.FM.fileExists(path))
         {
             item.document.saveAs(path)
         } else

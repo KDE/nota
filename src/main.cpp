@@ -13,7 +13,7 @@
 #include <QApplication>
 #endif
 
-#include <MauiKit/mauiapp.h>
+#include <MauiKit/Core/mauiapp.h>
 
 #include "nota.h"
 
