@@ -2,6 +2,7 @@
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QDate>
 
 #include <KI18n/KLocalizedString>
 
@@ -13,7 +14,7 @@
 #include <QApplication>
 #endif
 
-#include <MauiKit/mauiapp.h>
+#include <MauiKit/Core/mauiapp.h>
 
 #include "nota.h"
 

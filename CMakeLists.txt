@@ -37,6 +37,7 @@ elseif(UNIX)
     find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS Config KIO)
 endif()
 
+find_package(MauiKit REQUIRED COMPONENTS FileBrowsing)
 find_package(MauiKit REQUIRED)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)

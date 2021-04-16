@@ -2,7 +2,9 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.3 as Maui
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
+
 import org.kde.kirigami 2.14 as Kirigami
 
 Maui.AltBrowser
@@ -183,7 +185,7 @@ listDelegate: Maui.ItemDelegate
         anchors.fill: parent
         label1.text: model.label
         label2.text: model.path
-        label3.text: Maui.FM.formatDate(model.modified, "MM/dd/yyyy")
+        label3.text: Maui.Handy.formatDate(model.modified, "MM/dd/yyyy")
         label4.text: model.mime
         iconSource: model.icon
         iconSizeHint: Maui.Style.iconSizes.big

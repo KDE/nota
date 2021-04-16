@@ -1,13 +1,11 @@
 #include "historymodel.h"
-#ifdef STATIC_MAUIKIT
-#include "utils.h"
-#else
-#include <MauiKit/utils.h>
-#endif
+
+#include <MauiKit/Core/utils.h>
+#include <MauiKit/FileBrowsing/fmstatic.h>
 
 static bool isTextDocument(const QUrl &url)
 {
-    return FMH::checkFileType(FMH::FILTER_TYPE::TEXT, FMH::getMime(url));
+    return FMStatic::checkFileType(FMStatic::FILTER_TYPE::TEXT, FMStatic::getMime(url));
 }
 
 HistoryModel::HistoryModel(QObject *parent)
@@ -27,7 +25,7 @@ void HistoryModel::append(const QUrl &url)
         return;
 
     emit this->preItemAppended();
-    this->m_list << FMH::getFileInfoModel(url);
+    this->m_list << FMStatic::getFileInfoModel(url);
     emit this->postItemAppended();
 
     urls << url;
@@ -63,7 +61,7 @@ void HistoryModel::setList()
             continue;
 
         emit this->preItemAppended();
-        this->m_list << FMH::getFileInfoModel(url);
+        this->m_list << FMStatic::getFileInfoModel(url);
         emit this->postItemAppended();
     }
 }

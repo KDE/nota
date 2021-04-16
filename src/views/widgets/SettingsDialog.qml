@@ -1,8 +1,12 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
+
 import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.2 as Maui
+
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.texteditor 1.0 as TE
+
 import org.maui.nota 1.0 as Nota
 
 Maui.SettingsDialog
@@ -169,7 +173,7 @@ Maui.SettingsDialog
 
                 onActivated: settings.theme = currentText
 
-                Maui.DocumentHandler
+                TE.DocumentHandler
                 {
                     id: _dummyDocumentHandler
                 }
@@ -181,90 +185,30 @@ Maui.SettingsDialog
             label1.text:  i18n("Color")
             label2.text: i18n("Editor background color")
 
-            Row
+            Maui.ColorsRow
             {
                 spacing: Maui.Style.space.medium
 
-                Rectangle
-                {
-                    height: 22
-                    width: 22
-                    radius: Maui.Style.radiusV
-                    color: "#333"
-                    border.color: Qt.darker(color)
+                colors: ["#333", "#fafafa", "#fff3e6", "#4c425b"]
 
-                    MouseArea
+                onColorPicked:
+                {
+                    currentColor = color
+
+                    var textColor
+
+                    switch(color)
                     {
-                        anchors.fill: parent
-                        onClicked: switchBackgroundColor(parent.color, "#fafafa")
+                    case "#333": textColor = "#fafafa"; break;
+                    case "#fafafa": textColor = "#333"; break;
+                    case "#fff3e6": textColor = Qt.darker(color, 2); break;
+                    case "#4c425b": textColor = Qt.lighter(color, 2.5); break;
+                    default: textColor = Kirigami.Theme.textColor;
                     }
+
+                    switchBackgroundColor(color, textColor)
                 }
 
-                Rectangle
-                {
-                    height: 22
-                    width: 22
-                    radius: Maui.Style.radiusV
-                    color: "#fafafa"
-                    border.color: Qt.darker(color)
-
-                    MouseArea
-                    {
-                        anchors.fill: parent
-                        onClicked: switchBackgroundColor(parent.color, "#333")
-                    }
-                }
-
-                Rectangle
-                {
-                    height: 22
-                    width: 22
-                    radius: Maui.Style.radiusV
-                    color: "#fff3e6"
-                    border.color: Qt.darker(color)
-                    MouseArea
-                    {
-                        anchors.fill: parent
-                        onClicked: switchBackgroundColor(parent.color, Qt.darker(parent.color, 2))
-
-                    }
-                }
-
-                Rectangle
-                {
-                    height: 22
-                    width: 22
-                    radius: Maui.Style.radiusV
-                    color: "#4c425b"
-                    border.color: Qt.darker(color)
-                    MouseArea
-                    {
-                        anchors.fill: parent
-                        onClicked: switchBackgroundColor(parent.color, Qt.lighter(parent.color, 2.5))
-                    }
-                }
-
-                Rectangle
-                {
-                    height: 22
-                    width: 22
-                    radius: Maui.Style.radiusV
-                    color: "transparent"
-                    border.color: Kirigami.Theme.textColor
-                    Maui.X
-                    {
-                        height: 16
-                        width: 16
-                        anchors.centerIn: parent
-                        color: Kirigami.Theme.textColor
-                    }
-
-                    MouseArea
-                    {
-                        anchors.fill: parent
-                        onClicked: switchBackgroundColor(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor)
-                    }
-                }
             }
         }
     }

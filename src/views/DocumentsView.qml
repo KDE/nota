@@ -3,7 +3,8 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.6 as Kirigami
-import org.kde.mauikit 1.3 as Maui
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
 
 import org.maui.nota 1.0 as Nota
 import "widgets"
@@ -41,7 +42,7 @@ DocsBrowser
     listView.section.property: "place"
     listView.section.delegate: Maui.ListItemTemplate
     {
-        property var item : Maui.FM.getFileInfo(section)
+        property var item : FB.FM.getFileInfo(section)
         spacing: Maui.Style.space.medium
         width: parent.width
         height: Maui.Style.rowHeight*2
@@ -50,8 +51,8 @@ DocsBrowser
         iconSizeHint: Maui.Style.iconSizes.big
         label1.text: item.label
         label2.text: item.path
-        label3.text:  Maui.FM.formatDate(Date(item.modified), "MM/dd/yyyy")
-        label4.text: Maui.FM.formatSize(model.size)
+        label3.text:  Maui.Handy.formatDate(Date(item.modified), "MM/dd/yyyy")
+        label4.text: Maui.Handy.formatSize(model.size)
         label1.font.pointSize: Maui.Style.fontSizes.big
         label1.font.weight: Font.Bold
     }
@@ -80,7 +81,7 @@ DocsBrowser
         leftMargin: Maui.Style.space.medium
         anchors.fill: parent
         label1.text: model.label
-        label3.text: Maui.FM.formatDate(model.modified, "MM/dd/yyyy")
+        label3.text: Maui.Handy.formatDate(model.modified, "MM/dd/yyyy")
         label4.text: model.mime
         iconSource: model.icon
         iconSizeHint: Maui.Style.iconSizes.small
