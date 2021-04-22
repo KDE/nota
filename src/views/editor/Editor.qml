@@ -31,6 +31,7 @@ TE.TextEditor
     body.font.family: settings.font.family
     body.font.pointSize: settings.font.pointSize
     document.backgroundColor: settings.backgroundColor
+    Kirigami.Theme.backgroundColor: settings.backgroundColor
     showSyntaxHighlightingLanguages: settings.showSyntaxHighlightingLanguages
     document.theme: settings.theme
     document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
@@ -69,7 +70,7 @@ TE.TextEditor
 
         if(event.key === Qt.Key_F4)
         {
-            settings.terminalVisible = !settings.terminalVisible
+            currentTab.terminalVisible = !currentTab.terminalVisible
         }
 
         if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
