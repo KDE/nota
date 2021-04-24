@@ -12,6 +12,5 @@
         <file>views/editor/Editor.qml</file>
         <file>views/editor/EditorLayout.qml</file>
         <file>views/widgets/ItemMenu.qml</file>
-        <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>

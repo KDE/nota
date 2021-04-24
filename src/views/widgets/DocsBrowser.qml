@@ -55,8 +55,8 @@ Maui.AltBrowser
 
     headBar.leftContent: ToolButton
     {
-        enabled: list.count > 0
-       icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-icons" : "view-list-details"
+        enabled: control.count > 0
+        icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-icons" : "view-list-details"
 
         onClicked:
         {
