@@ -213,23 +213,6 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
-    {
-        title: i18n("Interface")
-        description: i18n("Configure the application UI")
-        lastOne: true
-
-        Maui.SettingTemplate
-        {
-            enabled: false
-            label1.text: i18n("Dark Mode")
-            Switch
-            {
-                checkable: true
-            }
-        }
-    }
-
     function switchBackgroundColor(backgroundColor, textColor)
     {
         settings.backgroundColor = backgroundColor
