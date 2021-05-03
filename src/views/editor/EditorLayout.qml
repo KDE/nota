@@ -26,6 +26,10 @@ Item
     readonly property alias currentItem : _splitView.currentItem
     readonly property alias model : splitObjectModel
     readonly property string title : count === 2 ?  model.get(0).title + "  -  " + model.get(1).title : currentItem.title
+
+    Maui.TabViewInfo.tabTitle: title
+    Maui.TabViewInfo.tabToolTipText:  currentItem.fileUrl
+
     readonly property alias editor : _splitView.currentItem
     readonly property alias terminal : terminalLoader.item
     property bool terminalVisible : false
