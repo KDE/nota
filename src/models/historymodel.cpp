@@ -63,6 +63,7 @@ void HistoryModel::setList()
         emit this->preItemAppended();
         this->m_list << FMStatic::getFileInfoModel(url);
         emit this->postItemAppended();
+        emit this->countChanged();
     }
 }
 
