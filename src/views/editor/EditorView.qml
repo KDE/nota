@@ -24,6 +24,7 @@ Maui.Page
     property alias listView: _editorListView
     property alias plugin: _pluginLayout
     property alias model : _editorListView.contentModel
+    property alias tabView : _editorListView
 
     altHeader: false
     autoHideHeader: root.focusMode
@@ -89,7 +90,28 @@ Maui.Page
         }
     ]
 
+
     headBar.rightContent:[
+
+//        ToolButton
+//        {
+//            id: _splitButton
+//            visible: settings.supportSplit
+//            text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
+//            icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+//            checked: root.currentTab && root.currentTab.count === 2
+//            checkable: true
+//            onClicked:
+//            {
+//                if(root.currentTab.count === 2)
+//                {
+//                    root.currentTab.pop()
+//                    return
+//                }//close the inactive split
+
+//                root.currentTab.split("")
+//            }
+//        },
 
         ToolButton
         {
@@ -146,7 +168,6 @@ Maui.Page
 
             MenuItem
             {
-                id: _splitButton
                 visible: settings.supportSplit
                 text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
                 icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
@@ -199,7 +220,7 @@ Maui.Page
                 }
                 else
                     closeTab(index)
-            }
+            }            
         }
     }
 
@@ -261,7 +282,6 @@ Maui.Page
         {
             _editorListView.addTab(component, {"path": path})
             _historyList.append(path)
-            _editorListView.currentIndex = _editorListView.count -1
         }
     }
 

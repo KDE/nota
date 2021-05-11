@@ -63,16 +63,6 @@ TE.TextEditor
             saveFile(document.fileUrl, control)
         }
 
-        if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))
-        {
-            root.currentTab.split("")
-        }
-
-        if(event.key === Qt.Key_F4)
-        {
-            currentTab.terminalVisible = !currentTab.terminalVisible
-        }
-
         if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
         {
             syncTerminal(control.fileUrl)

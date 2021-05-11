@@ -39,9 +39,28 @@ Item
     Keys.enabled: true
     Keys.onPressed:
     {
-        if((event.key === Qt.Key_F3) && (event.modifiers & Qt.ControlModifier))
+        if(event.key === Qt.Key_F3)
         {
+            if(control.count === 2)
+            {
+                pop()
+                return
+            }//close the inactive split
+
             split("")
+        }
+
+        if((event.key === Qt.Key_Space) && (event.modifiers & Qt.ControlModifier))
+        {
+            console.log("KEYS PRESSED ON TABS LAYOUT OPEN TABS SEARCGH")
+
+            tabView.findTab()
+        }
+
+
+        if(event.key === Qt.Key_F4)
+        {
+            control.terminalVisible = !control.terminalVisible
         }
     }
 
