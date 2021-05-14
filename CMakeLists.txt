@@ -84,6 +84,7 @@ add_subdirectory(src)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+    install(FILES org.kde.nota.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 endif()
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
