@@ -35,14 +35,14 @@ void HistoryModel::append(const QUrl &url)
 
 int HistoryModel::indexOfName(const QString &query)
 {
-  const auto it = std::find_if(this->items().constBegin(), this->items().constEnd(), [&](const FMH::MODEL &item) -> bool {
-          return item[FMH::MODEL_KEY::LABEL].startsWith(query, Qt::CaseInsensitive);
-      });
+    const auto it = std::find_if(this->items().constBegin(), this->items().constEnd(), [&](const FMH::MODEL &item) -> bool {
+        return item[FMH::MODEL_KEY::LABEL].startsWith(query, Qt::CaseInsensitive);
+    });
 
-      if (it != this->items().constEnd())
-          return this->mappedIndexFromSource(std::distance(this->items().constBegin(), it));
-      else
-          return -1;
+    if (it != this->items().constEnd())
+        return this->mappedIndexFromSource(std::distance(this->items().constBegin(), it));
+    else
+        return -1;
 }
 
 QList<QUrl> HistoryModel::getHistory()
@@ -56,9 +56,12 @@ QList<QUrl> HistoryModel::getHistory()
 
 void HistoryModel::setList()
 {
-    for (const auto &url : this->getHistory()) {
+    const auto urls = this->getHistory();
+    for (const auto &url : urls) {
         if (!url.isLocalFile() || !FMH::fileExists(url) || !isTextDocument(url))
+        {
             continue;
+        }
 
         emit this->preItemAppended();
         this->m_list << FMStatic::getFileInfoModel(url);
