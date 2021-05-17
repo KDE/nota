@@ -163,11 +163,10 @@ Maui.AltBrowser
     }
 }
 
-listDelegate: Maui.ItemDelegate
+listDelegate: Maui.ListBrowserDelegate
 {
     id: _listDelegate
 
-    property alias checked :_listTemplate.checked
     isCurrentItem: ListView.isCurrentItem || checked
 
     height: Maui.Style.rowHeight *1.5
@@ -179,21 +178,15 @@ listDelegate: Maui.ItemDelegate
                            "text/uri-list": control.filterSelectedItems(model.path)
                        } : {}
 
-    Maui.ListItemTemplate
-    {
-        id: _listTemplate
-        anchors.fill: parent
-        label1.text: model.label
-        label2.text: model.path
-        label3.text: Maui.Handy.formatDate(model.modified, "MM/dd/yyyy")
-        label4.text: model.mime
-        iconSource: model.icon
-        iconSizeHint: Maui.Style.iconSizes.big
-        checkable: root.selectionMode
-        checked: _selectionbar.contains(model.path)
-        onToggled: addToSelection(model)
-        isCurrentItem: _listDelegate.isCurrentItem
-    }
+    label1.text: model.label
+    label2.text: model.path
+    label3.text: Maui.Handy.formatDate(model.modified, "MM/dd/yyyy")
+    label4.text: model.mime
+    iconSource: model.icon
+    iconSizeHint: Maui.Style.iconSizes.big
+    checkable: root.selectionMode
+    checked: _selectionbar.contains(model.path)
+    onToggled: addToSelection(model)
 
     Connections
     {
