@@ -21,18 +21,6 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="uk">Nota</name>
   <name xml:lang="x-test">xxNotaxx</name>
   <summary>Browse, create and edit text files</summary>
-  <summary xml:lang="ca">Navegueu, creeu, i editeu fitxers de text</summary>
-  <summary xml:lang="ca-valencia">Navegueu, creeu, i editeu fitxers de text</summary>
-  <summary xml:lang="de">Textdaten durchsehen, erstellen und bearbeiten</summary>
-  <summary xml:lang="es">Navegue, cree y edite archivos de texto</summary>
-  <summary xml:lang="nl">Tekstbestanden, er in bladeren, aanmaken en bewerken</summary>
-  <summary xml:lang="pl">Przeglądaj, twórz i zmieniaj swoje pliki tekstowe</summary>
-  <summary xml:lang="pt">Navegue, crie e edite ficheiros de texto</summary>
-  <summary xml:lang="pt-BR">Navegar, criar e editar arquivos de texto</summary>
-  <summary xml:lang="sk">Prehliadanie, vytváranie a editovanie textových súborov</summary>
-  <summary xml:lang="sv">Bläddra bland, skapa och redigera textfiler</summary>
-  <summary xml:lang="uk">Перегляд, створення та редагування текстових файлів</summary>
-  <summary xml:lang="x-test">xxBrowse, create and edit text filesxx</summary>
   <description>
     <p>Nota is a simple text editor for desktop and mobile computers.</p>
     <p xml:lang="ca">El Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
