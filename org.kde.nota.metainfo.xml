@@ -17,10 +17,18 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="pt">Nota</name>
   <name xml:lang="pt-BR">Nota</name>
   <name xml:lang="sk">Nota</name>
+  <name xml:lang="sl">Nota</name>
   <name xml:lang="sv">Nota</name>
-  <name xml:lang="uk">Nota</name>
+  <name xml:lang="uk">Нота</name>
   <name xml:lang="x-test">xxNotaxx</name>
   <summary>Browse, create and edit text files</summary>
+  <summary xml:lang="ca">Navegueu, creeu, i editeu fitxers de text</summary>
+  <summary xml:lang="de">Textdaten durchsehen, erstellen und bearbeiten</summary>
+  <summary xml:lang="nl">Tekstbestanden, er in bladeren, aanmaken en bewerken</summary>
+  <summary xml:lang="sl">Brskajte, ustvarjajte in urejajte besedilne datoteke</summary>
+  <summary xml:lang="sv">Bläddra bland, skapa och redigera textfiler</summary>
+  <summary xml:lang="uk">Перегляд, створення та редагування текстових файлів</summary>
+  <summary xml:lang="x-test">xxBrowse, create and edit text filesxx</summary>
   <description>
     <p>Nota is a simple text editor for desktop and mobile computers.</p>
     <p xml:lang="ca">El Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
@@ -32,8 +40,9 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pt">O Nota é um editor de texto simples para computadores e dispositivos móveis.</p>
     <p xml:lang="pt-BR">O Nota é um editor de texto simples para a área de trabalho e celulares.</p>
     <p xml:lang="sk">Nota je jednoduchý editor pre desktopové a mobilné počítače.</p>
+    <p xml:lang="sl">Nota je enostaven urejevalnik besedil za namizne in prenosne računalnike.</p>
     <p xml:lang="sv">Nota är en enkel texteditor för skrivbords- och bärbara datorer.</p>
-    <p xml:lang="uk">Nota — простий текстовий редактор для робочих станцій та мобільних комп'ютерів.</p>
+    <p xml:lang="uk">Нота — простий текстовий редактор для робочих станцій та мобільних комп'ютерів.</p>
     <p xml:lang="x-test">xxNota is a simple text editor for desktop and mobile computers.xx</p>
   </description>
   <url type="homepage">https://mauikit.org/</url>
@@ -51,8 +60,9 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="pt">Nota</caption>
       <caption xml:lang="pt-BR">Nota</caption>
       <caption xml:lang="sk">Nota</caption>
+      <caption xml:lang="sl">Nota</caption>
       <caption xml:lang="sv">Nota</caption>
-      <caption xml:lang="uk">Nota</caption>
+      <caption xml:lang="uk">Нота</caption>
       <caption xml:lang="x-test">xxNotaxx</caption>
       <image type="source" width="2464" height="1929">
         https://cdn.kde.org/screenshots/nota/nota.png
@@ -60,6 +70,13 @@ SPDX-License-Identifier: CC0-1.0
     </screenshot>
     <screenshot type="default">
       <caption>Nota, find dialog</caption>
+      <caption xml:lang="ca">Nota, diàleg de cerca</caption>
+      <caption xml:lang="de">Notas Suchdialog</caption>
+      <caption xml:lang="nl">Nota, dialoog voor zoeken</caption>
+      <caption xml:lang="sl">Nota, najdi dialog</caption>
+      <caption xml:lang="sv">Nota, sökdialogruta</caption>
+      <caption xml:lang="uk">Нота, діалогове вікно пошуку</caption>
+      <caption xml:lang="x-test">xxNota, find dialogxx</caption>
       <image type="source" width="3285" height="2052">
         https://cdn.kde.org/screenshots/nota/nota-tabs-find-dialog.png
       </image>
