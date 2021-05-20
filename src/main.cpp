@@ -42,7 +42,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     app.setOrganizationName(QStringLiteral("Maui"));
     app.setWindowIcon(QIcon(":/img/nota.svg"));
 
-    MauiApp::instance()->setHandleAccounts(false); // for now nota can not handle cloud accounts
     MauiApp::instance()->setIconName("qrc:/img/nota.svg");
 
     KLocalizedString::setApplicationDomain("nota");

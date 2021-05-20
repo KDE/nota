@@ -161,10 +161,7 @@ Maui.AbstractSideBar
                     }
                 }
             }
-
-
         ]
-
 
         FB.FileBrowser
         {
@@ -175,8 +172,6 @@ Maui.AbstractSideBar
             settings.filterType: FB.FMList.TEXT
             headBar.rightLayout.visible: false
             headBar.rightLayout.width: 0
-            selectionMode: root.selectionMode
-            selectionBar: _selectionbar
             floatingFooter: false
 
             onItemClicked:

@@ -27,7 +27,6 @@ Maui.ApplicationWindow
     property alias currentEditor: editorView.currentEditor
     property alias dialog : _dialogLoader.item
 
-    property bool selectionMode : false
     property bool focusMode : false
 
     readonly property font defaultFont:
@@ -86,13 +85,6 @@ Maui.ApplicationWindow
     //    }
 
     mainMenu: [
-
-        Action
-        {
-            icon.name: "document-open"
-            text: i18n("Open")
-            onTriggered: openFileDialog()
-        },
 
         Action
         {
@@ -232,7 +224,6 @@ Maui.ApplicationWindow
         }
     }
 
-
     sideBar: PlacesSidebar
     {
         id : _drawer
@@ -301,83 +292,6 @@ Maui.ApplicationWindow
                 RecentView {}
             }
         }
-
-        footer: Maui.SelectionBar
-        {
-            id: _selectionbar
-
-            padding: Maui.Style.space.big
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
-            maxListHeight: root.height - (Maui.Style.contentMargins*2)
-
-            onItemClicked : console.log(index)
-
-            onExitClicked:
-            {
-                root.selectionMode = false
-                clear()
-            }
-
-            listDelegate: Maui.ListBrowserDelegate
-            {
-                width: ListView.view.width
-                iconSource: model.icon
-                label1.text: model.label
-                label2.text: model.url
-
-                checkable: true
-                checked: true
-                onToggled: _selectionbar.removeAtIndex(index)
-
-                background: null
-            }
-
-            Action
-            {
-                text: i18n("Open")
-                icon.name: "document-open"
-                onTriggered:
-                {
-                    const paths =  _selectionbar.uris
-                    for(var i in paths)
-                        editorView.openTab(paths[i])
-
-                    _selectionbar.clear()
-                }
-            }
-
-            Action
-            {
-                text: i18n("Share")
-                icon.name: "document-share"
-                onTriggered: Maui.Platform.shareFiles(_selectionbar.uris)
-            }
-
-            Action
-            {
-                text: i18n("Export")
-                icon.name: "document-export"
-                onTriggered:
-                {
-                    _dialogLoader.sourceComponent= _fileDialogComponent
-                    dialog.mode = dialog.modes.OPEN
-                    dialog.settings.onlyDirs = true
-                    dialog.callback = function(paths)
-                    {
-                        for(var url of _selectionbar.uris)
-                        {
-                            for(var i in paths)
-                            {
-                                FB.FM.copy(url, paths[i])
-                            }
-                        }
-                    };
-
-                    dialog.open()
-                }
-            }
-        }
     }
 
     Connections
@@ -396,11 +310,6 @@ Maui.ApplicationWindow
         {
             _drawer.browser.openFolder(FB.FM.fileDir(path))
         }
-    }
-
-    function addToSelection(item)
-    {
-        _selectionbar.append(item.path, item)
     }
 
     function openFileDialog()
