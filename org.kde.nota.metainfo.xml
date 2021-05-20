@@ -25,6 +25,8 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ca">Navegueu, creeu, i editeu fitxers de text</summary>
   <summary xml:lang="de">Textdaten durchsehen, erstellen und bearbeiten</summary>
   <summary xml:lang="nl">Tekstbestanden, er in bladeren, aanmaken en bewerken</summary>
+  <summary xml:lang="pt">Navegue, crie e edite ficheiros de texto</summary>
+  <summary xml:lang="pt-BR">Navegar, criar e editar arquivos de texto</summary>
   <summary xml:lang="sl">Brskajte, ustvarjajte in urejajte besedilne datoteke</summary>
   <summary xml:lang="sv">Bläddra bland, skapa och redigera textfiler</summary>
   <summary xml:lang="uk">Перегляд, створення та редагування текстових файлів</summary>
@@ -73,6 +75,8 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ca">Nota, diàleg de cerca</caption>
       <caption xml:lang="de">Notas Suchdialog</caption>
       <caption xml:lang="nl">Nota, dialoog voor zoeken</caption>
+      <caption xml:lang="pt">Nota - janela de pesquisa</caption>
+      <caption xml:lang="pt-BR">Nota, janela Encontrar</caption>
       <caption xml:lang="sl">Nota, najdi dialog</caption>
       <caption xml:lang="sv">Nota, sökdialogruta</caption>
       <caption xml:lang="uk">Нота, діалогове вікно пошуку</caption>
