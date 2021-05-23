@@ -1,16 +1,17 @@
 set(nota_SRCS
-   main.cpp
-   models/historymodel.cpp
+    main.cpp
+    models/historymodel.cpp
     )
 
 set(nota_HDRS
-   models/historymodel.h
-   nota.h
+    models/historymodel.h
+    nota.h
     )
 
 set(nota_ASSETS
-   qml.qrc
-   assets/img_assets.qrc
+    qml.qrc
+    plugins/plugins.qrc
+    assets/img_assets.qrc
     )
 
 if(ANDROID)

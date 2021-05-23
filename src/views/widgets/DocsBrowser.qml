@@ -102,7 +102,7 @@ Maui.AltBrowser
         label1.text: model.label
         iconSource: model.icon
         iconSizeHint: height * 0.6
-        checkable: root.selectionMode
+        checkable: control.selectionMode
         checked: _selectionbar.contains(model.path)
         onToggled: addToSelection(model)
 
@@ -183,8 +183,8 @@ listDelegate: Maui.ListBrowserDelegate
     label3.text: Maui.Handy.formatDate(model.modified, "MM/dd/yyyy")
     label4.text: model.mime
     iconSource: model.icon
-    iconSizeHint: Maui.Style.iconSizes.big
-    checkable: root.selectionMode
+    iconSizeHint: Maui.Style.iconSizes.medium
+    checkable: control.selectionMode
     checked: _selectionbar.contains(model.path)
     onToggled: addToSelection(model)
 

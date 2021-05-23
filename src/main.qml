@@ -61,29 +61,6 @@ Maui.ApplicationWindow
 
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
-
-    //for now hide the plugins feature until it is fully ready
-    //    Maui.NewDialog
-    //    {
-    //        id: _pluginLoader
-    //        title: i18n("Plugin")
-    //        message: i18n("Load a plugin. The file must be a QML file, this file can access Nota properties and functionality to extend its features or add even more.")
-    //        onFinished:     {
-    //            const url = text
-    //            if(FB.FM.fileExists(url))
-    //            {
-
-    //                const component = Qt.createComponent(url);
-
-    //                if (component.status === Component.Ready)
-    //                {
-    //                    console.log("setting plugin <<", url)
-    //                    const object = component.createObject(editorView.plugin)
-    //                }
-    //            }
-    //        }
-    //    }
-
     mainMenu: [
 
         Action
@@ -95,14 +72,15 @@ Maui.ApplicationWindow
                 _dialogLoader.sourceComponent = _settingsDialogComponent
                 dialog.open()
             }
-        }/*,
+        }
+       ,
 
         Action
         {
-            text: i18n("Load plugin")
+            text: i18n("Plugins")
             icon.name: "plugin"
-            onTriggered: _pluginLoader.open()
-        }*/
+            onTriggered: _plugingsDialog.open()
+        }
     ]
 
     onClosing:
@@ -125,6 +103,11 @@ Maui.ApplicationWindow
         }
 
         close.accepted = true
+    }
+
+    Widgets.PluginsDialog
+    {
+        id: _plugingsDialog
     }
 
     NewFileDialog
