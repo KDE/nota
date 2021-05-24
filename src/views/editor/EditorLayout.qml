@@ -174,6 +174,7 @@ Item
         Loader
         {
             id: terminalLoader
+            asynchronous: true
             active: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
             visible: active && control.terminalVisible
             SplitView.fillWidth: true
