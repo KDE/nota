@@ -11,104 +11,89 @@ Maui.Dialog
 {
     id: control
     title: i18n("New file")
+    maxWidth: 350
+
     page.padding: 0
+    spacing: 0
     persistent: false
     defaultButtons: false
     rejectButton.visible : false
     acceptButton.visible: false
     acceptButton.text: i18n("New template")
 
-    stack: ColumnLayout
+    Maui.AlternateListItem
     {
         Layout.fillWidth: true
-        Layout.fillHeight: true
+        hoverEnabled: true
+        implicitHeight: 80
 
-        spacing: 0
-
-        Maui.AlternateListItem
+        Maui.ListItemTemplate
         {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            hoverEnabled: true
-
-            Maui.ListItemTemplate
-            {
-                anchors.fill:parent
-                iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                iconSource: "folder-open"
-                label1.text: i18n("Open file")
-                label2.text: i18n("Open one or multiple files.")
-            }
-
-            onClicked:
-            {
-                openFileDialog()
-                control.close()
-            }
+            anchors.fill: parent
+            headerSizeHint: iconSizeHint + Maui.Style.space.big
+            iconSizeHint: Maui.Style.iconSizes.big
+            iconSource: "folder-open"
+            label1.text: i18n("Open file")
+            label2.text: i18n("Open one or multiple files")
         }
 
-        Maui.AlternateListItem
+        onClicked:
         {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            hoverEnabled: true
-
-            Maui.ListItemTemplate
-            {
-                anchors.fill:parent
-                iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                iconSource: "text-x-generic"
-                label1.text: i18n("Text file")
-                label2.text: i18n("Simple text file with syntax highlighting")
-            }
-
-            onClicked:
-            {
-                editorView.openTab("")
-                //                _editorListView.currentItem.body.textFormat = TextEdit.PlainText
-                control.close()
-            }
-        }
-
-
-        Maui.AlternateListItem
-        {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            hoverEnabled: true
-
-            Maui.ListItemTemplate
-            {
-                anchors.fill:parent
-                iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                iconSource: "text-enriched"
-                label1.text: i18n("Rich text file")
-                label2.text: i18n("With support for basic text format editing")
-            }
-
-            onClicked:
-            {
-                openTab("")
-                //                _editorListView.currentItem.body.textFormat = TextEdit.RichText
-                control.close()
-            }
-        }
-
-        Maui.AlternateListItem
-        {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            lastOne: true
-            hoverEnabled: true
-
-            Maui.ListItemTemplate
-            {
-                anchors.fill:parent
-                iconSizeHint: Math.min(height, Maui.Style.iconSizes.big)
-                iconSource: "text-html"
-                label1.text: i18n("HTML text file")
-                label2.text: i18n("Text file with HTML markup support")
-            }
+            openFileDialog()
+            control.close()
         }
     }
+
+    Maui.AlternateListItem
+    {
+        Layout.fillWidth: true
+        hoverEnabled: true
+        implicitHeight: 80
+
+        Maui.ListItemTemplate
+        {
+            id: _textOption
+            anchors.fill: parent
+            headerSizeHint: iconSizeHint + Maui.Style.space.big
+            iconSizeHint: Maui.Style.iconSizes.big
+            iconSource: "text-x-generic"
+            label1.text: i18n("Text file")
+            label2.text: i18n("Simple text file with syntax highlighting")
+        }
+
+        onClicked:
+        {
+            editorView.openTab("")
+            //                _editorListView.currentItem.body.textFormat = TextEdit.PlainText
+            control.close()
+        }
+    }
+
+
+    Maui.AlternateListItem
+    {
+        Layout.fillWidth: true
+        implicitHeight: 80
+        hoverEnabled: true
+        lastOne: true
+
+        Maui.ListItemTemplate
+        {
+            id: _richOption
+            anchors.fill: parent
+            headerSizeHint: iconSizeHint + Maui.Style.space.big
+            iconSizeHint: Maui.Style.iconSizes.big
+            iconSource: "text-enriched"
+            label1.text: i18n("Rich text file")
+            label2.text: i18n("With support for basic text format editing")
+        }
+
+        onClicked:
+        {
+            openTab("")
+            //                _editorListView.currentItem.body.textFormat = TextEdit.RichText
+            control.close()
+        }
+    }
+
 }

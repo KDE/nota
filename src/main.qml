@@ -78,7 +78,7 @@ Maui.ApplicationWindow
         Action
         {
             text: i18n("Plugins")
-            icon.name: "plugin"
+            icon.name: "system-run"
             onTriggered: _plugingsDialog.open()
         }
     ]
@@ -113,8 +113,6 @@ Maui.ApplicationWindow
     NewFileDialog
     {
         id: _newDocumentMenu
-        maxHeight: 300
-        maxWidth: 400
     }
 
     headBar.leftContent: ToolButton
