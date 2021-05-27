@@ -12,7 +12,7 @@ Maui.AltBrowser
     id: control
     enableLassoSelection: true
     focus: true
-    gridView.itemSize: 120
+    gridView.itemSize: 160
     gridView.itemHeight: gridView.itemSize * 1.3
 
     property alias menu : _menu
@@ -100,7 +100,9 @@ Maui.AltBrowser
 
         isCurrentItem: _gridDelegate.isCurrentItem || checked
         label1.text: model.label
+        imageSource: model.thumbnail
         iconSource: model.icon
+        template.fillMode: Image.PreserveAspectFit
         iconSizeHint: height * 0.6
         checkable: control.selectionMode
         checked: _selectionbar.contains(model.path)
