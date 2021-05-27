@@ -30,6 +30,9 @@ Maui.Page
     autoHideHeader: root.focusMode
     headBar.visible: _editorListView.count > 0
 
+    title: currentTab.title
+    showTitle: root.isWide
+
     headBar.leftContent: [
 
         Maui.ToolActions
