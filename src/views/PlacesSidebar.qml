@@ -11,7 +11,7 @@ import org.maui.nota 1.0 as Nota
 
 Maui.AbstractSideBar
 {
-    preferredWidth: Kirigami.Units.gridUnit * 14
+    preferredWidth: Kirigami.Units.gridUnit * 16
     collapsed: !isWide
     collapsible: true
     dragMargin: Maui.Style.space.big
@@ -67,6 +67,14 @@ Maui.AbstractSideBar
                 icon.name: "go-previous"
                 onTriggered : browserView.goBack()
             }
+
+            Action
+            {
+                text: i18n("Up")
+                icon.name: "go-up"
+                onTriggered : browserView.goUp()
+            }
+
 
             Action
             {
