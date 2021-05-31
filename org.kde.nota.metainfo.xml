@@ -28,6 +28,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ca">Navegueu, creeu, i editeu fitxers de text</summary>
   <summary xml:lang="ca-valencia">Navegueu, creeu, i editeu fitxers de text</summary>
   <summary xml:lang="de">Textdaten durchsehen, erstellen und bearbeiten</summary>
+  <summary xml:lang="es">Navegue, cree y edite archivos de texto</summary>
   <summary xml:lang="fi">Selaa, luo ja muokkaa tekstitiedostoja</summary>
   <summary xml:lang="ia">Naviga, crea e modifica files de texto</summary>
   <summary xml:lang="ko">텍스트 파일 탐색, 생성, 편집</summary>
@@ -88,6 +89,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ca">Nota, diàleg de cerca</caption>
       <caption xml:lang="ca-valencia">Nota, diàleg de cerca</caption>
       <caption xml:lang="de">Notas Suchdialog</caption>
+      <caption xml:lang="es">Nota, encontrar diálogo</caption>
       <caption xml:lang="fi">Nota, etsi-ikkuna</caption>
       <caption xml:lang="ia">Nota, dialogo de trovar</caption>
       <caption xml:lang="ko">Nota 찾기 대화 상자</caption>
