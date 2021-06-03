@@ -20,7 +20,7 @@ Maui.Page
     readonly property alias count: _editorListView.count
 
     property alias currentTab : _editorListView.currentItem
-    readonly property TE.TextEditor currentEditor: currentTab ? currentTab.currentItem : null
+    readonly property TE.TextEditor currentEditor: currentTab ? currentTab.currentItem.editor : null
     property alias listView: _editorListView
     property alias plugin: _pluginLayout
     property alias model : _editorListView.contentModel
@@ -95,26 +95,6 @@ Maui.Page
 
 
     headBar.rightContent:[
-
-//        ToolButton
-//        {
-//            id: _splitButton
-//            visible: settings.supportSplit
-//            text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
-//            icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
-//            checked: root.currentTab && root.currentTab.count === 2
-//            checkable: true
-//            onClicked:
-//            {
-//                if(root.currentTab.count === 2)
-//                {
-//                    root.currentTab.pop()
-//                    return
-//                }//close the inactive split
-
-//                root.currentTab.split("")
-//            }
-//        },
 
         ToolButton
         {
@@ -223,8 +203,14 @@ Maui.Page
                 }
                 else
                     closeTab(index)
-            }            
+            }
         }
+    }
+
+    Component
+    {
+        id: _editorLayoutComponent
+        EditorLayout {}
     }
 
     function unsavedTabSplits(index) //which split indexes are unsaved
@@ -233,7 +219,7 @@ Maui.Page
         const tab =  control.model.get(index)
         for(var i = 0; i < tab.count; i++)
         {
-            if(tab.model.get(i).document.modified)
+            if(tab.model.get(i).editor.document.modified)
             {
                 indexes.push(i)
             }
@@ -280,12 +266,9 @@ Maui.Page
             return
         }
 
-        var component = Qt.createComponent("qrc:/views/editor/EditorLayout.qml");
-        if (component.status === Component.Ready)
-        {
-            _editorListView.addTab(component, {"path": path})
-            _historyList.append(path)
-        }
+        _editorListView.addTab(_editorLayoutComponent, {"path": path})
+        _historyList.append(path)
+
     }
 
     function closeTab(index) //no questions asked

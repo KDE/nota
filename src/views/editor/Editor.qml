@@ -1,7 +1,6 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
-import QtQml.Models 2.3
 
 import org.kde.kirigami 2.7 as Kirigami
 
@@ -10,145 +9,133 @@ import org.mauikit.texteditor 1.0 as TE
 
 import org.maui.nota 1.0 as Nota
 
-TE.TextEditor
+Maui.SplitViewItem
 {
     id: control
-    readonly property int _index : ObjectModel.index
 
-    SplitView.fillHeight: true
-    SplitView.fillWidth: true
-    SplitView.preferredHeight: _splitView.orientation === Qt.Vertical ? _splitView.height / (_splitView.count) :  _splitView.height
-    SplitView.minimumHeight: _splitView.orientzation === Qt.Vertical ?  200 : 0
+    property alias editor : _editor
+    property alias fileUrl : _editor.fileUrl
+    property alias title : _editor.title
 
-    SplitView.preferredWidth: _splitView.orientation === Qt.Horizontal ? _splitView.width / (_splitView.count) : _splitView.width
-    SplitView.minimumWidth: _splitView.orientation === Qt.Horizontal ? 300 :  0
-
-    opacity: _splitView.currentIndex === _index ? 1 : 0.7
-
-    headBar.visible: false
-    showLineNumbers: settings.showLineNumbers
-    body.color: settings.textColor
-    body.font.family: settings.font.family
-    body.font.pointSize: settings.font.pointSize
-    document.backgroundColor: settings.backgroundColor
-    Kirigami.Theme.backgroundColor: settings.backgroundColor
-    showSyntaxHighlightingLanguages: settings.showSyntaxHighlightingLanguages
-    document.theme: settings.theme
-    document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
-    document.autoSave: settings.autoSave
-    document.tabSpace: ((settings.tabSpace+1) * body.font.pointSize) / 2
-
-    onFileUrlChanged: syncTerminal(control.fileUrl)
-
-    MouseArea
+    TE.TextEditor
     {
+        id: _editor
         anchors.fill: parent
-        propagateComposedEvents: true
-        //        hoverEnabled: true
-        //        onEntered: _splitView.currentIndex = control.index
-        onPressed:
-        {
-            _splitView.currentIndex = control._index
-            mouse.accepted = false
-        }
-    }
 
-    footBar.visible: showSyntaxHighlightingLanguages
+        headBar.visible: false
+        showLineNumbers: settings.showLineNumbers
+        body.color: settings.textColor
+        body.font.family: settings.font.family
+        body.font.pointSize: settings.font.pointSize
+        document.backgroundColor: settings.backgroundColor
+        Kirigami.Theme.backgroundColor: settings.backgroundColor
+        showSyntaxHighlightingLanguages: settings.showSyntaxHighlightingLanguages
+        document.theme: settings.theme
+        document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
+        document.autoSave: settings.autoSave
+        document.tabSpace: ((settings.tabSpace+1) * body.font.pointSize) / 2
 
-    Keys.enabled: true
-    Keys.onPressed:
-    {
-        if((event.key === Qt.Key_S) && (event.modifiers & Qt.ControlModifier))
-        {
-            saveFile(document.fileUrl, control)
-        }
+        onFileUrlChanged: syncTerminal(_editor.fileUrl)
 
-        if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
-        {
-            syncTerminal(control.fileUrl)
-            control.terminal.forceActiveFocus()
-        }
+        footBar.visible: showSyntaxHighlightingLanguages
 
-        if((event.key === Qt.Key_O) && (event.modifiers & Qt.ControlModifier))
+        Keys.enabled: true
+        Keys.onPressed:
         {
-            openFile()
-        }
-
-        if((event.key === Qt.Key_N) && (event.modifiers & Qt.ControlModifier))
-        {
-            openTab("")
-        }
-
-        if((event.key === Qt.Key_L) && (event.modifiers & Qt.ControlModifier))
-        {
-            settings.showLineNumbers = !settings.showLineNumbers
-        }
-    }
-
-    DropArea
-    {
-        id: _dropArea
-        property var urls : []
-        anchors.fill: parent
-        onDropped:
-        {
-            if(drop.urls)
+            if((event.key === Qt.Key_S) && (event.modifiers & Qt.ControlModifier))
             {
-                var m_urls = drop.urls.join(",")
-                _dropArea.urls = m_urls.split(",")
-                _dropAreaMenu.open()
+                saveFile(document.fileUrl, _editor)
+            }
 
-                //                Nota.Nota.requestFiles( _dropArea.urls )
+            if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
+            {
+                syncTerminal(_editor.fileUrl)
+                _editor.terminal.forceActiveFocus()
+            }
+
+            if((event.key === Qt.Key_O) && (event.modifiers & Qt.ControlModifier))
+            {
+                openFile()
+            }
+
+            if((event.key === Qt.Key_N) && (event.modifiers & Qt.ControlModifier))
+            {
+                openTab("")
+            }
+
+            if((event.key === Qt.Key_L) && (event.modifiers & Qt.ControlModifier))
+            {
+                settings.showLineNumbers = !settings.showLineNumbers
             }
         }
 
-        Maui.ContextualMenu
+        DropArea
         {
-            id: _dropAreaMenu
-
-            MenuItem
+            id: _dropArea
+            property var urls : []
+            anchors.fill: parent
+            onDropped:
             {
-                text: i18n("Open here")
-                onTriggered:
+                if(drop.urls)
                 {
-                    control.fileUrl = _dropArea.urls[0]
+                    var m_urls = drop.urls.join(",")
+                    _dropArea.urls = m_urls.split(",")
+                    _dropAreaMenu.open()
+
+                    //                Nota.Nota.requestFiles( _dropArea.urls )
                 }
             }
 
-            MenuItem
+            Maui.ContextualMenu
             {
-                text: i18n("Open in new tab")
-                onTriggered:
-                {
-                    Nota.Nota.requestFiles( _dropArea.urls )
-                }
-            }
+                id: _dropAreaMenu
 
-            MenuItem
-            {
-                enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && settings.supportSplit
-                text: i18n("Open in new split")
-                onTriggered:
+                MenuItem
                 {
-                    currentTab.split(_dropArea.urls[0])
+                    text: i18n("Open here")
+                    icon.name : "open-for-editing"
+                    onTriggered:
+                    {
+                        _editor.fileUrl = _dropArea.urls[0]
+                    }
                 }
-            }
 
-            MenuItem
-            {
-                text: i18n("Cancel")
+                MenuItem
+                {
+                    text: i18n("Open in new tab")
+                    icon.name: "tab-new"
+                    onTriggered:
+                    {
+                        Nota.Nota.requestFiles( _dropArea.urls )
+                    }
+                }
+
+                MenuItem
+                {
+                    enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && settings.supportSplit
+                    text: i18n("Open in new split")
+                    icon.name: "view-split-left-right"
+                    onTriggered:
+                    {
+                        currentTab.split(_dropArea.urls[0])
+                    }
+                }
+
+                MenuSeparator{}
+
+                MenuItem
+                {
+                    text: i18n("Cancel")
+                    icon.name: "dialog-cancel"
+                    onTriggered:
+                    {
+                        _dropAreaMenu.close()
+                    }
+                }
+
+                onClosed: _editor.forceActiveFocus()
             }
         }
-    }
 
-
-    Rectangle
-    {
-        visible: _splitView.currentIndex === control._index && _splitView.count === 2
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        color: Kirigami.Theme.highlightColor
-        height: 8
     }
 }
