@@ -73,7 +73,7 @@ Maui.ApplicationWindow
                 dialog.open()
             }
         }
-       ,
+        ,
 
         Action
         {
@@ -240,38 +240,25 @@ Maui.ApplicationWindow
         }
     }
 
-    Nota.History { id: _historyList }
-
-    Maui.Page
+    Maui.AppViews
     {
+        id: _swipeView
         anchors.fill: parent
-        spacing: 0
+        currentIndex: !root.currentEditor ? views.recent : views.editor
 
-        flickable: _swipeView.currentItem.item ? _swipeView.currentItem.item.flickable : null
-        floatingFooter: true
-        headBar.visible: false
-
-        Maui.AppViews
+        EditorView
         {
-            id: _swipeView
-            anchors.fill: parent
-            currentIndex: !root.currentEditor ? views.recent : views.editor
+            id: editorView
+            Maui.AppView.iconName: "document-edit"
+            Maui.AppView.title: i18n("Editor")
+        }
 
-            EditorView
-            {
-                id: editorView
-                Maui.AppView.iconName: "document-edit"
-                Maui.AppView.title: i18n("Editor")
-            }
-
-            Maui.AppViewLoader
-            {
-                Maui.AppView.iconName: "view-media-recent"
-                Maui.AppView.title: i18n("Recent")
-                visible: !focusMode
-
-                RecentView {}
-            }
+        RecentView
+        {
+            id: historyView
+            Maui.AppView.iconName: "view-media-recent"
+            Maui.AppView.title: i18n("Recent")
+            visible: !focusMode
         }
     }
 
