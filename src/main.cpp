@@ -6,8 +6,6 @@
 
 #include <KI18n/KLocalizedString>
 
-#include "../nota_version.h"
-
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
 #include <MauiKit/Core/mauiandroid.h>
@@ -18,6 +16,7 @@
 #include <MauiKit/Core/mauiapp.h>
 
 #include "nota.h"
+#include "../nota_version.h"
 
 // Models
 #include "models/historymodel.h"
