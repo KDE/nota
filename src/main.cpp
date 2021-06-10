@@ -80,8 +80,11 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     Qt::QueuedConnection);
 
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
-    qmlRegisterType<HistoryModel>(NOTA_URI, 1, 0, "History");
-
+    qmlRegisterSingletonType<HistoryModel>(NOTA_URI, 1, 0, "History", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(scriptEngine)
+        Q_UNUSED(engine)
+           return new HistoryModel;
+       });
     engine.load(url);
 
     return app.exec();

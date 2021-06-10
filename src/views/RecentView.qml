@@ -12,13 +12,12 @@ DocsBrowser
 {
     id: control
     property bool selectionMode : false
-    property alias historyList : _historyList
 
     viewType: Maui.AltBrowser.ViewType.Grid
 
     model: Maui.BaseModel
     {
-        list: Nota.History { id: _historyList }
+        list: Nota.History
 
         sort: "modified"
         sortOrder: Qt.DescendingOrder
@@ -28,7 +27,7 @@ DocsBrowser
     }
 
     floatingFooter: true
-    holder.visible: _historyList.count === 0
+    holder.visible: Nota.History.count === 0
     holder.emoji: "qrc:/assets/dialog-information.svg"
     holder.title : i18n("No Recent Files!")
     holder.body: i18n("Here you will see your recently opened files")
@@ -54,7 +53,7 @@ DocsBrowser
         interval: 250
         onTriggered:
         {
-            const index = _historyList.indexOfName(typingQuery)
+            const index = Nota.History.indexOfName(typingQuery)
             if(index > -1)
             {
                 control.currentIndex = index

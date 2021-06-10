@@ -267,7 +267,7 @@ Maui.Page
         }
 
         _editorListView.addTab(_editorLayoutComponent, {"path": path})
-        historyView.historyList.append(path)
+        Nota.History.append(path)
 
     }
 
@@ -292,7 +292,7 @@ Maui.Page
             dialog.callback = function (paths)
             {
                 item.document.saveAs(paths[0])
-                historyView.historyList.append(paths[0])
+                Nota.History.append(paths[0])
             };
 
             dialog.open()
