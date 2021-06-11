@@ -40,16 +40,7 @@ public slots:
         qDebug() << "REQUEST FILES" << res;
 
         emit this->openFiles(res);
-    }
-
-    bool supportsEmbededTerminal()
-    {
-#ifdef EMBEDDED_TERMINAL
-        return true;
-#else
-        return false;
-#endif
-    }
+    }   
 
     bool run(const QString &process, const QStringList &params = {})
     {

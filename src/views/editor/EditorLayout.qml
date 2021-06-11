@@ -85,7 +85,7 @@ Item
         {
             id: terminalLoader
             asynchronous: true
-            active: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
+            active: settings.supportTerminal
             visible: active && control.terminalVisible
             SplitView.fillWidth: true
             SplitView.preferredHeight: 200

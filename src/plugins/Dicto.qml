@@ -75,13 +75,11 @@ if(_loader.source.length)
         {
             icon.name: "debug-run"
             text: i18n("Run & Debug")
-            enabled: Nota.Nota.supportsEmbededTerminal()
             onTriggered: start("QML_IMPORT_TRACE=1 " + "QT_QUICK_CONTROLS_MOBILE=" + (plugin.mobileMode ? "1" : "0") + " QT_QUICK_CONTROLS_STYLE=" + plugin.style  +" qmlscene " + String(currentEditor.fileUrl).replace("file://", ""))
         }
 
         Action
         {
-            enabled: Nota.Nota.supportsEmbededTerminal()
             icon.name: "cm_runterm"
             text: i18n("Run in Terminal")
             onTriggered: start("QT_QUICK_CONTROLS_MOBILE=" + (plugin.mobileMode ? "1" : "0") + " QT_QUICK_CONTROLS_STYLE=" + plugin.style  +" qmlscene " + String(currentEditor.fileUrl).replace("file://", "") );

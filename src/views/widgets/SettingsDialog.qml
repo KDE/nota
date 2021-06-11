@@ -43,7 +43,6 @@ Maui.SettingsDialog
 
         Maui.SettingTemplate
         {
-            enabled: Nota.Nota.supportsEmbededTerminal()
             label1.text: i18n("Embedded Terminal")
             label2.text: i18n("Enabled an embedded terminal")
 

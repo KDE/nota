@@ -143,7 +143,7 @@ Maui.Page
             {
                 text: i18n("Terminal")
                 icon.name: "dialog-scripts"
-                visible: settings.supportTerminal && Nota.Nota.supportsEmbededTerminal()
+                visible: settings.supportTerminal
                 onTriggered: currentTab.toggleTerminal()
                 checkable: true
                 checked: currentTab ? currentTab.terminalVisible : false
