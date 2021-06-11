@@ -72,8 +72,7 @@ Maui.ApplicationWindow
                 _dialogLoader.sourceComponent = _settingsDialogComponent
                 dialog.open()
             }
-        }
-        ,
+        },
 
         Action
         {
