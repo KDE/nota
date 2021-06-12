@@ -10,10 +10,11 @@ import org.kde.kirigami 2.14 as Kirigami
 Maui.AltBrowser
 {
     id: control
+
     enableLassoSelection: true
-    focus: true
-    gridView.itemSize: 160
-    gridView.itemHeight: gridView.itemSize * 1.3
+
+    gridView.itemSize: Math.min(200, Math.max(100, Math.floor(width* 0.3)))
+    gridView.itemHeight: gridView.itemSize + Maui.Style.rowHeight
 
     property alias menu : _menu
 
@@ -55,7 +56,7 @@ Maui.AltBrowser
 
     headBar.leftContent: ToolButton
     {
-//        enabled: control.count > 0
+        //        enabled: control.count > 0
         icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-icons" : "view-list-details"
 
         onClicked:
@@ -75,20 +76,18 @@ Maui.AltBrowser
 
     gridDelegate: Item
     {
-        id: _gridDelegate
-
-        property bool isCurrentItem : GridView.isCurrentItem
-        property alias checked :_gridItemDelegate.checked
-
-        height: control.gridView.cellHeight
-        width: control.gridView.cellWidth
+        height: GridView.view.cellHeight
+        width: GridView.view.cellWidth
 
         Maui.GridBrowserDelegate
         {
             id: _gridItemDelegate
+
+            width: control.gridView.itemSize - Maui.Style.space.medium
+            height: control.gridView.itemHeight  - Maui.Style.space.medium
+
             anchors.centerIn: parent
-            height: parent.height- 15
-            width: control.gridView.itemSize - 20
+
             draggable: true
             Drag.keys: ["text/uri-list"]
 
@@ -98,87 +97,87 @@ Maui.AltBrowser
                                } : {}
 
 
-        isCurrentItem: _gridDelegate.isCurrentItem || checked
-        label1.text: model.label
-        imageSource: model.thumbnail
-        iconSource: model.icon
-        template.fillMode: Image.PreserveAspectFit
-        iconSizeHint: height * 0.6
-        checkable: control.selectionMode
-        checked: _selectionbar.contains(model.path)
-        onToggled: addToSelection(model)
+            isCurrentItem: parent.GridView.isCurrentItem || checked
+            label1.text: model.label
+            imageSource: model.thumbnail
+            iconSource: model.icon
+            template.fillMode: Image.PreserveAspectFit
+            iconSizeHint: height * 0.6
+            checkable: control.selectionMode
+            checked: _selectionbar.contains(model.path)
+            onToggled: addToSelection(model)
 
-        Connections
-        {
-            target: _selectionbar
-            function onUriRemoved(uri)
+            Connections
             {
-                if(uri === model.path)
-                    _gridDelegate.checked = false
+                target: _selectionbar
+                function onUriRemoved(uri)
+                {
+                    if(uri === model.path)
+                        _gridItemDelegate.checked = false
+                }
+
+                function onUriAdded(uri)
+                {
+                    if(uri === model.path)
+                        _gridItemDelegate.checked = true
+                }
+
+                function onCleared()
+                {
+                    _gridItemDelegate.checked = false
+                }
             }
 
-            function onUriAdded(uri)
+            onClicked:
             {
-                if(uri === model.path)
-                    _gridDelegate.checked = true
+                control.currentIndex = index
+                if(root.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+                {
+                    addToSelection(model)
+
+                }else if(Maui.Handy.singleClick)
+                {
+                    editorView.openTab(model.path)
+                }
             }
 
-            function onCleared()
+            onDoubleClicked:
             {
-                _gridDelegate.checked = false
+                control.currentIndex = index
+                if(!Maui.Handy.singleClick && !root.selectionMode)
+                {
+                    editorView.openTab(model.path)
+                }
             }
-        }
 
-        onClicked:
-        {
-            control.currentIndex = index
-            if(root.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+            onRightClicked:
             {
-                addToSelection(model)
-
-            }else if(Maui.Handy.singleClick)
-            {
-                editorView.openTab(model.path)
+                control.currentIndex = index
+                _menu.open()
             }
-        }
 
-        onDoubleClicked:
-        {
-            control.currentIndex = index
-            if(!Maui.Handy.singleClick && !root.selectionMode)
+            onPressAndHold:
             {
-                editorView.openTab(model.path)
+                control.currentIndex = index
+                _menu.open()
             }
-        }
-
-        onRightClicked:
-        {
-            control.currentIndex = index
-            _menu.open()
-        }
-
-        onPressAndHold:
-        {
-            control.currentIndex = index
-            _menu.open()
         }
     }
-}
 
-listDelegate: Maui.ListBrowserDelegate
-{
-    id: _listDelegate
+    listDelegate: Maui.ListBrowserDelegate
+    {
+        id: _listDelegate
 
-    isCurrentItem: ListView.isCurrentItem || checked
+        isCurrentItem: ListView.isCurrentItem || checked
 
-    height: Maui.Style.rowHeight *1.5
-    width: ListView.view.width
-    draggable: true
-    Drag.keys: ["text/uri-list"]
-    Drag.mimeData: Drag.active ?
-                       {
-                           "text/uri-list": control.filterSelectedItems(model.path)
-                       } : {}
+        height: Maui.Style.rowHeight *1.5
+        width: ListView.view.width
+        draggable: true
+        Drag.keys: ["text/uri-list"]
+        Drag.mimeData: Drag.active ?
+                           {
+                               "text/uri-list": control.filterSelectedItems(model.path)
+                           } : {}
 
     label1.text: model.label
     label2.text: model.path
