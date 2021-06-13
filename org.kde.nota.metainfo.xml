@@ -12,6 +12,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="ca-valencia">Nota</name>
   <name xml:lang="cs">Nota</name>
   <name xml:lang="de">Nota</name>
+  <name xml:lang="en-GB">Nota</name>
   <name xml:lang="es">Nota</name>
   <name xml:lang="fi">Nota</name>
   <name xml:lang="fr">Nota</name>
@@ -32,6 +33,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ca-valencia">Navegueu, creeu, i editeu fitxers de text</summary>
   <summary xml:lang="cs">Prohlížejte, vytvářejte a upravujte textové soubory</summary>
   <summary xml:lang="de">Textdaten durchsehen, erstellen und bearbeiten</summary>
+  <summary xml:lang="en-GB">Browse, create and edit text files</summary>
   <summary xml:lang="es">Navegue, cree y edite archivos de texto</summary>
   <summary xml:lang="fi">Selaa, luo ja muokkaa tekstitiedostoja</summary>
   <summary xml:lang="fr">Naviguer, créer et modifier des fichiers de texte.</summary>
@@ -51,6 +53,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ca-valencia">El Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
     <p xml:lang="cs">Nota je jednoduchý editor textu pro pracovní a mobilní počítače.</p>
     <p xml:lang="de">Nota ist ein einfacher Texteditor für die Arbeitsfläche und Mobilgeräte.</p>
+    <p xml:lang="en-GB">Nota is a simple text editor for desktop and mobile computers.</p>
     <p xml:lang="es">Nota es un editor simple de texto para móviles y el escritorio.</p>
     <p xml:lang="fi">Nota on yksinkertainen tekstimuokkain työpöytä- ja mobiilitietokoneille.</p>
     <p xml:lang="fr">Nota est un éditeur simple de texte pour les ordinateurs de bureau ou portables.</p>
@@ -77,6 +80,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ca-valencia">Nota</caption>
       <caption xml:lang="cs">Nota</caption>
       <caption xml:lang="de">Nota</caption>
+      <caption xml:lang="en-GB">Nota</caption>
       <caption xml:lang="es">Nota</caption>
       <caption xml:lang="fi">Nota</caption>
       <caption xml:lang="fr">Nota</caption>
@@ -101,6 +105,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ca">Nota, diàleg de cerca</caption>
       <caption xml:lang="ca-valencia">Nota, diàleg de cerca</caption>
       <caption xml:lang="de">Notas Suchdialog</caption>
+      <caption xml:lang="en-GB">Nota, find dialog</caption>
       <caption xml:lang="es">Nota, encontrar diálogo</caption>
       <caption xml:lang="fi">Nota, etsi-ikkuna</caption>
       <caption xml:lang="fr">Nota, trouver la boîte de dialogue</caption>
