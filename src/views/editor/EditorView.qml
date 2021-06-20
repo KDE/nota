@@ -56,6 +56,17 @@ Maui.Page
             }
         },
 
+        ToolButton
+        {
+            icon.name: "code-context"
+            checked: currentEditor.body.textFormat === Text.RichText
+            checkable: true
+            onClicked:
+            {
+                currentEditor.body.textFormat = checked ? Text.RichText : Text.AutoText
+            }
+        },
+
         Maui.ToolActions
         {
             visible: (currentEditor.document.isRich || currentEditor.body.textFormat === Text.RichText) && !currentEditor.body.readOnly

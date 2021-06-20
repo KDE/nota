@@ -62,6 +62,16 @@ Maui.ApplicationWindow
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
     mainMenu: [
+        Action
+        {
+            text: i18n("Shortcuts")
+            icon.name: "configure-shortcuts"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _shortcutsDialogComponent
+                dialog.open()
+            }
+        },
 
         Action
         {
@@ -180,6 +190,12 @@ Maui.ApplicationWindow
         id: _settingsDialogComponent
         Widgets.SettingsDialog
         {}
+    }
+
+    Component
+    {
+        id: _shortcutsDialogComponent
+        Widgets.ShortcutsDialog {}
     }
 
     Component
