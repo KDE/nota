@@ -80,7 +80,7 @@ Maui.SplitViewItem
                 {
                     var m_urls = drop.urls.join(",")
                     _dropArea.urls = m_urls.split(",")
-                    _dropAreaMenu.open()
+                    _dropAreaMenu.show()
 
                     //                Nota.Nota.requestFiles( _dropArea.urls )
                 }
