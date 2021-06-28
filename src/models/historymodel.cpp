@@ -41,7 +41,7 @@ int HistoryModel::indexOfName(const QString &query)
     });
 
     if (it != this->items().constEnd())
-        return this->mappedIndexFromSource(std::distance(this->items().constBegin(), it));
+        return (std::distance(this->items().constBegin(), it));
     else
         return -1;
 }

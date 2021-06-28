@@ -171,7 +171,7 @@ property string typingQuery
          const index = _documentsList.indexOfName(typingQuery)
          if(index > -1)
          {
-             control.currentIndex = index
+             control.currentIndex = _documentsModel.mappedFromSource(index)
          }
 
          typingQuery = ""

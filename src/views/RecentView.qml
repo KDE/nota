@@ -17,6 +17,8 @@ DocsBrowser
 
     model: Maui.BaseModel
     {
+        id: _historyModel
+
         list: Nota.History
 
         sort: "modified"
@@ -56,7 +58,7 @@ DocsBrowser
             const index = Nota.History.indexOfName(typingQuery)
             if(index > -1)
             {
-                control.currentIndex = index
+                control.currentIndex = _historyModel.mappedFromSource(index)
             }
 
             typingQuery = ""
