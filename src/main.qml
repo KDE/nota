@@ -1,6 +1,6 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
+
 import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.7 as Kirigami
@@ -62,7 +62,7 @@ Maui.ApplicationWindow
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
     mainMenu: [
-        Action
+        MenuItem
         {
             text: i18n("Shortcuts")
             icon.name: "configure-shortcuts"
@@ -73,7 +73,7 @@ Maui.ApplicationWindow
             }
         },
 
-        Action
+        MenuItem
         {
             text: i18n("Settings")
             icon.name: "settings-configure"
@@ -84,11 +84,18 @@ Maui.ApplicationWindow
             }
         },
 
-        Action
+        MenuItem
         {
             text: i18n("Plugins")
             icon.name: "system-run"
             onTriggered: _plugingsDialog.open()
+        },
+
+        MenuItem
+        {
+            text: i18n("About")
+            icon.name: "documentinfo"
+            onTriggered: root.about()
         }
     ]
 
