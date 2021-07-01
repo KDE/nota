@@ -15,19 +15,7 @@ DocsBrowser
 
     viewType: Maui.AltBrowser.ViewType.Grid
 
-    model: Maui.BaseModel
-    {
-        id: _historyModel
-
-        list: Nota.History
-
-        sort: "modified"
-        sortOrder: Qt.DescendingOrder
-        recursiveFilteringEnabled: true
-        sortCaseSensitivity: Qt.CaseInsensitive
-        filterCaseSensitivity: Qt.CaseInsensitive
-    }
-
+    headBar.forceCenterMiddleContent: false
     floatingFooter: true
     holder.visible: Nota.History.count === 0
     holder.emoji: "qrc:/assets/dialog-information.svg"
@@ -39,6 +27,19 @@ DocsBrowser
     {
         icon.name: "go-previous"
         onClicked: _stackView.pop()
+    }
+
+    model: Maui.BaseModel
+    {
+        id: _historyModel
+
+        list: Nota.History
+
+        sort: "modified"
+        sortOrder: Qt.DescendingOrder
+        recursiveFilteringEnabled: true
+        sortCaseSensitivity: Qt.CaseInsensitive
+        filterCaseSensitivity: Qt.CaseInsensitive
     }
 
     property string typingQuery

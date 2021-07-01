@@ -16,6 +16,9 @@ Item
     height: ListView.view.height
     width: ListView.view.width
 
+    Maui.TabViewInfo.tabTitle: title
+    Maui.TabViewInfo.tabToolTipText:  currentItem.fileUrl
+
     property url path
 
     property alias currentIndex : _splitView.currentIndex
@@ -25,9 +28,6 @@ Item
     readonly property alias currentItem : _splitView.currentItem
     readonly property alias model : _splitView.contentModel
     readonly property string title : count === 2 ?  model.get(0).title + "  -  " + model.get(1).title : currentItem.title
-
-    Maui.TabViewInfo.tabTitle: title
-    Maui.TabViewInfo.tabToolTipText:  currentItem.fileUrl
 
     readonly property alias editor : _splitView.currentItem
     readonly property alias terminal : terminalLoader.item
@@ -45,22 +45,22 @@ Item
             }//close the inactive split
 
             split("")
+            event.accepted = true
         }
 
         if((event.key === Qt.Key_Space) && (event.modifiers & Qt.ControlModifier))
         {
-            console.log("KEYS PRESSED ON TABS LAYOUT OPEN TABS SEARCGH")
-
             tabView.findTab()
+            event.accepted = true
         }
 
 
         if(event.key === Qt.Key_F4)
         {
             control.terminalVisible = !control.terminalVisible
+            event.accepted = true
         }
     }
-
 
     Maui.SplitView
     {
@@ -108,7 +108,6 @@ Item
     Component
     {
         id: _editorComponent
-
         Editor {}
     }
 

@@ -28,7 +28,6 @@ Maui.Page
     property alias tabView : _editorListView
 
     altHeader: Kirigami.Settings.isMobile
-    autoHideHeader: root.focusMode
     headBar.visible: _editorListView.count > 0
     headBar.forceCenterMiddleContent: false
 
@@ -84,7 +83,6 @@ Maui.Page
         onClicked:
         {
             _newDocumentMenu.open()
-
         }
     }
 
@@ -97,15 +95,15 @@ Maui.Page
         RowLayout
         {
             spacing: 2
-
             anchors.fill: parent
 
             AbstractButton
             {
                 enabled: currentEditor.body.canUndo
+                focusPolicy: Qt.NoFocus
 
                 Layout.fillHeight: true
-                implicitWidth: height
+                implicitWidth: height * 1.2
 
                 background: Kirigami.ShadowedRectangle
                 {
@@ -130,24 +128,15 @@ Maui.Page
                 }
             }
 
-
             AbstractButton
             {
                 id: _docBar
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
-                background: Kirigami.ShadowedRectangle
+                background: Rectangle
                 {
-                    color: Qt.lighter(Kirigami.Theme.backgroundColor)
-                    corners
-                    {
-                        topLeftRadius: 0
-                        topRightRadius: Maui.Style.radiusV
-                        bottomLeftRadius: 0
-                        bottomRightRadius: Maui.Style.radiusV
-                    }
-
+                    color: Qt.lighter(Kirigami.Theme.backgroundColor)                    
                     border.width: 1
                     border.color: _docMenu.visible ? Kirigami.Theme.highlightColor : color
                 }
@@ -169,7 +158,6 @@ Maui.Page
                         implicitWidth: implicitHeight
                     }
                 }
-
 
                 onClicked: _docMenu.show(0, height + Maui.Style.space.medium)
 
@@ -217,7 +205,104 @@ Maui.Page
                         checked: currentEditor.showFindBar
                     }
 
+                    MenuItem
+                    {
+                        icon.name: "document-edit"
+                        text: i18n("Line/Word Counter")
+                        checkable: true
+
+                        onTriggered:
+                        {
+                            currentEditor.showLineCount = checked
+                        }
+
+                        checked: currentEditor.showLineCount
+                    }
+
                     MenuSeparator {}
+
+                    MenuItem
+                    {
+                        text: i18n("Share")
+                        icon.name: "document-share"
+                        onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
+
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Open with")
+                        icon.name: "document-open"
+                    }
+
+                    MenuItem
+                    {
+                        visible: !Maui.Handy.isAndroid
+                        text: i18n("Show in folder")
+                        icon.name: "folder-open"
+                        onTriggered:
+                        {
+                            FB.FM.openLocation([currentEditor.fileUrl])
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Info")
+                        icon.name: "documentinfo"
+                        onTriggered:
+                        {
+                //            getFileInfo(control.model.get(index).url)
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
+                        text: i18n(isFav ? "UnFav it": "Fav it")
+                        icon.name: "love"
+                        onTriggered:
+                        {
+                            FB.Tagging.toggleFav(currentEditor.fileUrl)
+                            isFav = FB.Tagging.isFav(currentEditor.fileUrl)
+                        }
+                    }
+                }
+            }
+
+            AbstractButton
+            {
+                focusPolicy: Qt.NoFocus
+
+                Layout.fillHeight: true
+                implicitWidth: height
+
+                background: Kirigami.ShadowedRectangle
+                {
+                    color: Qt.lighter(Kirigami.Theme.backgroundColor)
+
+                    corners
+                    {
+                        topLeftRadius: 0
+                        topRightRadius: Maui.Style.radiusV
+                        bottomLeftRadius: 0
+                        bottomRightRadius: Maui.Style.radiusV
+                    }
+                }
+
+                onClicked: _overflowMenu.show()
+
+                Kirigami.Icon
+                {
+                    anchors.centerIn: parent
+                    source: "overflow-menu"
+                    implicitHeight: Maui.Style.iconSizes.small
+                    implicitWidth: implicitHeight
+                }
+
+                Maui.ContextualMenu
+                {
+                    id: _overflowMenu
 
                     MenuItem
                     {
@@ -259,53 +344,6 @@ Maui.Page
 
                     MenuSeparator {}
 
-                    MenuItem
-                    {
-                        text: i18n("Share")
-                        icon.name: "document-share"
-                        onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
-
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("Open with")
-                        icon.name: "document-open"
-                    }
-
-
-                    MenuItem
-                    {
-                        visible: !Maui.Handy.isAndroid
-                        text: i18n("Show in folder")
-                        icon.name: "folder-open"
-                        onTriggered:
-                        {
-                            FB.FM.openLocation([currentEditor.fileUrl])
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("Info")
-                        icon.name: "documentinfo"
-                        onTriggered:
-                        {
-                //            getFileInfo(control.model.get(index).url)
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
-                        text: i18n(isFav ? "UnFav it": "Fav it")
-                        icon.name: "love"
-                        onTriggered:
-                        {
-                            FB.Tagging.toggleFav(currentEditor.fileUrl)
-                            isFav = FB.Tagging.isFav(currentEditor.fileUrl)
-                        }
-                    }
                 }
             }
         }
@@ -482,5 +520,4 @@ Maui.Page
             dialog.open()
         }
     }
-
 }

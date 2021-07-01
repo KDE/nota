@@ -29,7 +29,6 @@ Maui.SplitViewItem
         body.font.pointSize: settings.font.pointSize
         document.backgroundColor: settings.backgroundColor
         Kirigami.Theme.backgroundColor: settings.backgroundColor
-        showSyntaxHighlightingLanguages: settings.showSyntaxHighlightingLanguages
         document.theme: settings.theme
         document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
         document.autoSave: settings.autoSave
@@ -37,7 +36,13 @@ Maui.SplitViewItem
 
         onFileUrlChanged: syncTerminal(_editor.fileUrl)
 
-        footBar.visible: showSyntaxHighlightingLanguages
+        footBar.visible: settings.showSyntaxHighlightingLanguages
+        footBar.rightContent: ComboBox
+        {
+            model: editor.document.getLanguageNameList()
+            currentIndex: -1
+            onCurrentIndexChanged: editor.document.formatName = model[currentIndex]
+        }
 
         Keys.enabled: true
         Keys.onPressed:
@@ -45,27 +50,32 @@ Maui.SplitViewItem
             if((event.key === Qt.Key_S) && (event.modifiers & Qt.ControlModifier))
             {
                 saveFile(document.fileUrl, _editor)
+                event.accepted = true
             }
 
             if((event.key === Qt.Key_T) && (event.modifiers & Qt.ControlModifier))
             {
                 syncTerminal(_editor.fileUrl)
                 _editor.terminal.forceActiveFocus()
+                event.accepted = true
             }
 
             if((event.key === Qt.Key_O) && (event.modifiers & Qt.ControlModifier))
             {
                 openFile()
+                event.accepted = true
             }
 
             if((event.key === Qt.Key_N) && (event.modifiers & Qt.ControlModifier))
             {
                 openTab("")
+                event.accepted = true
             }
 
             if((event.key === Qt.Key_L) && (event.modifiers & Qt.ControlModifier))
             {
                 settings.showLineNumbers = !settings.showLineNumbers
+                event.accepted = true
             }
         }
 
@@ -136,6 +146,5 @@ Maui.SplitViewItem
                 onClosed: _editor.forceActiveFocus()
             }
         }
-
     }
 }
