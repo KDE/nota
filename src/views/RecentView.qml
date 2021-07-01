@@ -35,6 +35,12 @@ DocsBrowser
     holder.body: i18n("Here you will see your recently opened files")
     holder.emojiSize: Maui.Style.iconSizes.huge
 
+    headBar.farLeftContent: ToolButton
+    {
+        icon.name: "go-previous"
+        onClicked: _stackView.pop()
+    }
+
     property string typingQuery
 
     Maui.Chip

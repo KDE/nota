@@ -85,7 +85,7 @@ Item
         {
             id: terminalLoader
             asynchronous: true
-            active: settings.supportTerminal && Maui.Handy.isLinux
+            active: Maui.Handy.isLinux
             visible: active && control.terminalVisible
             SplitView.fillWidth: true
             SplitView.preferredHeight: 200

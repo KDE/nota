@@ -19,7 +19,7 @@ Maui.ApplicationWindow
     title: currentEditor ? currentTab.title : ""
 
     altHeader: Kirigami.Settings.isMobile
-    headBar.visible: !focusMode
+    headBar.visible: false
 
     readonly property var views : ({editor: 0, recent: 1, documents: 2})
 
@@ -44,13 +44,11 @@ Maui.ApplicationWindow
         category: "General"
 
         property bool enableSidebar : false
-        property bool defaultBlankFile : true
         property bool showLineNumbers : true
         property bool autoSave : true
         property bool enableSyntaxHighlighting : true
         property bool showSyntaxHighlightingLanguages: false
         property bool supportSplit :true
-        property bool supportTerminal : false
         property double tabSpace: 8
         property string theme : ""
         property color backgroundColor : root.Kirigami.Theme.backgroundColor
@@ -60,44 +58,6 @@ Maui.ApplicationWindow
     }
 
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
-
-    mainMenu: [
-        MenuItem
-        {
-            text: i18n("Shortcuts")
-            icon.name: "configure-shortcuts"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = _shortcutsDialogComponent
-                dialog.open()
-            }
-        },
-
-        MenuItem
-        {
-            text: i18n("Settings")
-            icon.name: "settings-configure"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = _settingsDialogComponent
-                dialog.open()
-            }
-        },
-
-        MenuItem
-        {
-            text: i18n("Plugins")
-            icon.name: "system-run"
-            onTriggered: _plugingsDialog.open()
-        },
-
-        MenuItem
-        {
-            text: i18n("About")
-            icon.name: "documentinfo"
-            onTriggered: root.about()
-        }
-    ]
 
     onClosing:
     {
@@ -146,17 +106,6 @@ Maui.ApplicationWindow
         ToolTip.timeout: 5000
         ToolTip.visible: hovered
         ToolTip.text: i18n("Toogle SideBar")
-    }
-
-    headBar.rightContent: ToolButton
-    {
-        icon.name: "list-add"
-        onClicked:
-        {
-            _swipeView.currentIndex = views.editor
-            _newDocumentMenu.open()
-
-        }
     }
 
     Loader
@@ -256,31 +205,23 @@ Maui.ApplicationWindow
             Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, false)
         }
 
-        if(settings.defaultBlankFile)
-        {
-            editorView.openTab("")
-        }
+        editorView.openTab("")
+
     }
 
-    Maui.AppViews
+    StackView
     {
-        id: _swipeView
+        id: _stackView
         anchors.fill: parent
-        currentIndex: !root.currentEditor ? views.recent : views.editor
-
-        EditorView
+        initialItem: EditorView
         {
             id: editorView
-            Maui.AppView.iconName: "document-edit"
-            Maui.AppView.title: i18n("Editor")
         }
 
         RecentView
         {
             id: historyView
-            Maui.AppView.iconName: "view-media-recent"
-            Maui.AppView.title: i18n("Recent")
-            visible: !focusMode
+            visible: StackView.status === StackView.Active
         }
     }
 
@@ -306,6 +247,7 @@ Maui.ApplicationWindow
     {
         _dialogLoader.sourceComponent = _fileDialogComponent
         dialog.mode = dialog.modes.OPEN
+        dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)
         dialog.callback =  function (urls)
         {
             for(var url of urls)

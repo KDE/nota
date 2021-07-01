@@ -52,6 +52,29 @@ Maui.Dialog
             anchors.fill: parent
             headerSizeHint: iconSizeHint + Maui.Style.space.big
             iconSizeHint: Maui.Style.iconSizes.big
+            iconSource: "folder-recent"
+            label1.text: i18n("Recent File")
+            label2.text: i18n("Open recently used files")
+        }
+
+        onClicked:
+        {
+            _stackView.push(historyView)
+            control.close()
+        }
+    }
+
+    Maui.AlternateListItem
+    {
+        Layout.fillWidth: true
+        hoverEnabled: true
+        implicitHeight: 80
+
+        Maui.ListItemTemplate
+        {
+            anchors.fill: parent
+            headerSizeHint: iconSizeHint + Maui.Style.space.big
+            iconSizeHint: Maui.Style.iconSizes.big
             iconSource: "text-x-generic"
             label1.text: i18n("Text File")
             label2.text: i18n("Simple text file with syntax highlighting")

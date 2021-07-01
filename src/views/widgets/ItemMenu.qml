@@ -84,8 +84,7 @@ Maui.ContextualMenu
         icon.name: "folder-open"
         onTriggered:
         {
-            FB.FM.openLocation([control.model.get(index).path])
-            close()
+            FB.FM.openLocation([control.model.get(index).path])           
         }
     }
 
@@ -96,7 +95,6 @@ Maui.ContextualMenu
         onTriggered:
         {
 //            getFileInfo(control.model.get(index).url)
-            close()
         }
     }
 
@@ -120,7 +118,6 @@ Maui.ContextualMenu
         onTriggered:
         {
             removeDialog.open()
-            close()
         }
 
         Maui.Dialog
@@ -138,7 +135,6 @@ Maui.ContextualMenu
             onAccepted:
             {
                 control.model.list.deleteAt(control.index)
-                close()
             }
         }
     }

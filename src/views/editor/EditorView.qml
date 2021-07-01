@@ -1,9 +1,10 @@
 import QtQuick 2.14
 import QtQml 2.14
+
 import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
 
-import org.kde.kirigami 2.7 as Kirigami
+import org.kde.kirigami 2.14 as Kirigami
 
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
@@ -29,43 +30,295 @@ Maui.Page
     altHeader: false
     autoHideHeader: root.focusMode
     headBar.visible: _editorListView.count > 0
+    headBar.forceCenterMiddleContent: false
 
     title: currentTab.title
-    showTitle: root.isWide
+    showTitle: false
+
+    headBar.farLeftContent: Maui.ToolButtonMenu
+    {
+        id: menuBtn
+        icon.name: "application-menu"
+
+        MenuItem
+        {
+            text: i18n("Shortcuts")
+            icon.name: "configure-shortcuts"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _shortcutsDialogComponent
+                dialog.open()
+            }
+        }
+
+        MenuItem
+        {
+            text: i18n("Settings")
+            icon.name: "settings-configure"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _settingsDialogComponent
+                dialog.open()
+            }
+        }
+
+        MenuItem
+        {
+            text: i18n("Plugins")
+            icon.name: "system-run"
+            onTriggered: _plugingsDialog.open()
+        }
+
+        MenuItem
+        {
+            text: i18n("About")
+            icon.name: "documentinfo"
+            onTriggered: root.about()
+        }
+    }
+
+    headBar.farRightContent: ToolButton
+    {
+        icon.name: "list-add"
+        onClicked:
+        {
+            _newDocumentMenu.open()
+
+        }
+    }
+
+    headBar.middleContent:  Item
+    {
+        Layout.fillWidth: true
+        Layout.maximumWidth: 500
+        implicitHeight: Maui.Style.rowHeight
+
+        RowLayout
+        {
+            spacing: 2
+
+            anchors.fill: parent
+
+            AbstractButton
+            {
+                enabled: currentEditor.body.canUndo
+
+                Layout.fillHeight: true
+                implicitWidth: height
+
+                background: Kirigami.ShadowedRectangle
+                {
+                    color: Qt.lighter(Kirigami.Theme.backgroundColor)
+
+                    corners
+                    {
+                        topLeftRadius: Maui.Style.radiusV
+                        topRightRadius: 0
+                        bottomLeftRadius: Maui.Style.radiusV
+                        bottomRightRadius: 0
+                    }
+                }
+                onClicked: currentEditor.body.undo()
+
+                Kirigami.Icon
+                {
+                    anchors.centerIn: parent
+                    source: "edit-undo"
+                    implicitHeight: Maui.Style.iconSizes.small
+                    implicitWidth: implicitHeight
+                }
+            }
+
+
+            AbstractButton
+            {
+                id: _docBar
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                background: Kirigami.ShadowedRectangle
+                {
+                    color: Qt.lighter(Kirigami.Theme.backgroundColor)
+                    corners
+                    {
+                        topLeftRadius: 0
+                        topRightRadius: Maui.Style.radiusV
+                        bottomLeftRadius: 0
+                        bottomRightRadius: Maui.Style.radiusV
+                    }
+
+                    border.width: 1
+                    border.color: _docMenu.visible ? Kirigami.Theme.highlightColor : color
+                }
+
+                contentItem: Maui.ListItemTemplate
+                {
+                    anchors.fill: parent
+                    spacing: 0
+                    label1.horizontalAlignment: Qt.AlignHCenter
+                    label2.horizontalAlignment: Qt.AlignHCenter
+                    label1.text: currentEditor.title
+                    label2.text: currentEditor.fileUrl
+                    label2.font.pointSize: Maui.Style.fontSizes.small
+
+                    Kirigami.Icon
+                    {
+                        source: "go-down"
+                        implicitHeight: Maui.Style.iconSizes.small
+                        implicitWidth: implicitHeight
+                    }
+                }
+
+
+                onClicked: _docMenu.show(0, height + Maui.Style.space.medium)
+
+                Maui.ContextualMenu
+                {
+                    id: _docMenu
+
+                    MenuItem
+                    {
+                        icon.name: "edit-undo"
+                        text: i18n("Undo")
+                        enabled: currentEditor.body.canRedo
+                        onTriggered: currentEditor.body.redo()
+                    }
+
+                    MenuItem
+                    {
+                        icon.name: "edit-redo"
+                        text: i18n("Redo")
+                        enabled: currentEditor.body.canRedo
+                        onTriggered: currentEditor.body.redo()
+                    }
+
+                    MenuSeparator {}
+
+                    MenuItem
+                    {
+                        text: i18n("Save")
+                        icon.name: "document-save"
+                        enabled: currentEditor ? currentEditor.document.modified : false
+                        onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
+                    }
+
+                    MenuItem
+                    {
+                        icon.name: "document-save-as"
+                        text: i18n("Save as...")
+                        onTriggered: saveFile("", control.currentEditor)
+                    }
+
+                    MenuSeparator {}
+
+                    MenuItem
+                    {
+                        icon.name: "edit-find"
+                        text: i18n("Find and Replace")
+                        checkable: true
+
+                        onTriggered:
+                        {
+                            currentEditor.showFindBar = !currentEditor.showFindBar
+                        }
+                        checked: currentEditor.showFindBar
+                    }
+
+                    MenuSeparator {}
+
+                    MenuItem
+                    {
+                        icon.name: checked ? "view-readermode-active" : "view-readermode"
+                        text: i18n("Focus Mode")
+                        checked: root.focusMode
+                        checkable: true
+                        onTriggered: root.focusMode = !root.focusMode
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Terminal")
+                        icon.name: "dialog-scripts"
+
+                        onTriggered: currentTab.toggleTerminal()
+                        checkable: true
+                        checked: currentTab ? currentTab.terminalVisible : false
+                    }
+
+                    MenuItem
+                    {
+                        visible: settings.supportSplit
+                        text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
+                        icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+                        checked: root.currentTab && root.currentTab.count === 2
+                        checkable: true
+                        onTriggered:
+                        {
+                            if(root.currentTab.count === 2)
+                            {
+                                root.currentTab.pop()
+                                return
+                            }//close the inactive split
+
+                            root.currentTab.split("")
+                        }
+                    }
+
+                    MenuSeparator {}
+
+                    MenuItem
+                    {
+                        text: i18n("Share")
+                        icon.name: "document-share"
+                        onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
+
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Open with")
+                        icon.name: "document-open"
+                    }
+
+
+                    MenuItem
+                    {
+                        visible: !Maui.Handy.isAndroid
+                        text: i18n("Show in folder")
+                        icon.name: "folder-open"
+                        onTriggered:
+                        {
+                            FB.FM.openLocation([currentEditor.fileUrl])
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Info")
+                        icon.name: "documentinfo"
+                        onTriggered:
+                        {
+                //            getFileInfo(control.model.get(index).url)
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
+                        text: i18n(isFav ? "UnFav it": "Fav it")
+                        icon.name: "love"
+                        onTriggered:
+                        {
+                            FB.Tagging.toggleFav(currentEditor.fileUrl)
+                            isFav = FB.Tagging.isFav(currentEditor.fileUrl)
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     headBar.leftContent: [
-
-        Maui.ToolActions
-        {
-            expanded: true
-            autoExclusive: false
-            checkable: false
-
-            Action
-            {
-                icon.name: "edit-undo"
-                enabled: currentEditor.body.canUndo
-                onTriggered: currentEditor.body.undo()
-            }
-
-            Action
-            {
-                icon.name: "edit-redo"
-                enabled: currentEditor.body.canRedo
-                onTriggered: currentEditor.body.redo()
-            }
-        },
-
-        ToolButton
-        {
-            icon.name: "code-context"
-            checked: currentEditor.body.textFormat === Text.RichText
-            checkable: true
-            onClicked:
-            {
-                currentEditor.body.textFormat = checked ? Text.RichText : Text.AutoText
-            }
-        },
 
         Maui.ToolActions
         {
@@ -100,83 +353,6 @@ Maui.Page
                 icon.name: "format-text-uppercase"
                 checked: currentEditor.document.uppercase
                 onTriggered: currentEditor.document.uppercase = !currentEditor.document.uppercase
-            }
-        }
-    ]
-
-
-    headBar.rightContent:[
-
-        ToolButton
-        {
-            icon.name: "edit-find"
-            onClicked:
-            {
-                currentEditor.showFindBar = !currentEditor.showFindBar
-            }
-            checked: currentEditor.showFindBar
-        },
-
-        Maui.ToolButtonMenu
-        {
-            icon.name: "document-save"
-
-            MenuItem
-            {
-                text: i18n("Save")
-                icon.name: "document-save"
-                enabled: currentEditor ? currentEditor.document.modified : false
-                onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
-            }
-
-            MenuItem
-            {
-                icon.name: "document-save-as"
-                text: i18n("Save as...")
-                onTriggered: saveFile("", control.currentEditor)
-            }
-        },
-
-        Maui.ToolButtonMenu
-        {
-            icon.name: "overflow-menu"
-
-            MenuItem
-            {
-                icon.name: checked ? "view-readermode-active" : "view-readermode"
-                text: i18n("Focus Mode")
-                checked: root.focusMode
-                checkable: true
-                onTriggered: root.focusMode = !root.focusMode
-            }
-
-            MenuItem
-            {
-                text: i18n("Terminal")
-                icon.name: "dialog-scripts"
-                visible: settings.supportTerminal
-                onTriggered: currentTab.toggleTerminal()
-                checkable: true
-                checked: currentTab ? currentTab.terminalVisible : false
-            }
-
-            MenuItem
-            {
-                visible: settings.supportSplit
-                text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
-                icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
-                checked: root.currentTab && root.currentTab.count === 2
-                checkable: true
-                onTriggered:
-                {
-                    if(root.currentTab.count === 2)
-                    {
-                        root.currentTab.pop()
-                        return
-                    }//close the inactive split
-
-                    root.currentTab.split("")
-                }
             }
         }
     ]
@@ -267,7 +443,11 @@ Maui.Page
 
     function openTab(path)
     {
-        _swipeView.currentIndex = views.editor
+        if(_stackView.depth === 2)
+        {
+            _stackView.pop()
+        }
+
         const index = fileIndex(path)
 
         if(index[0] >= 0)
