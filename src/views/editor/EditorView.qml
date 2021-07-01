@@ -27,7 +27,7 @@ Maui.Page
     property alias model : _editorListView.contentModel
     property alias tabView : _editorListView
 
-    altHeader: false
+    altHeader: Kirigami.Settings.isMobile
     autoHideHeader: root.focusMode
     headBar.visible: _editorListView.count > 0
     headBar.forceCenterMiddleContent: false
@@ -35,6 +35,7 @@ Maui.Page
     title: currentTab.title
     showTitle: false
 
+    headerColorSet: altHeader ? Kirigami.Theme.Window : Kirigami.Theme.Header
     headBar.farLeftContent: Maui.ToolButtonMenu
     {
         id: menuBtn
@@ -175,14 +176,6 @@ Maui.Page
                 Maui.ContextualMenu
                 {
                     id: _docMenu
-
-                    MenuItem
-                    {
-                        icon.name: "edit-undo"
-                        text: i18n("Undo")
-                        enabled: currentEditor.body.canRedo
-                        onTriggered: currentEditor.body.redo()
-                    }
 
                     MenuItem
                     {
