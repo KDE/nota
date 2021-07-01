@@ -88,7 +88,7 @@ Maui.SettingsDialog
     Maui.SettingsSection
     {
         title: i18n("Fonts")
-        description: i18n("Configure the global editor font family and size")
+        description: i18n("Configure the global font family and size")
 
         Maui.SettingTemplate
         {
