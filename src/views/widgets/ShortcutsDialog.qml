@@ -13,6 +13,8 @@ Maui.SettingsDialog
     persistent: false
     page.showTitle: false
     headBar.visible: false
+    maxHeight: 500
+    maxWidth: 350
 
     Maui.SettingsSection
     {

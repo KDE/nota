@@ -16,6 +16,8 @@ Maui.AltBrowser
     gridView.itemSize: Math.min(200, Math.max(100, Math.floor(width* 0.3)))
     gridView.itemHeight: gridView.itemSize + Maui.Style.rowHeight
 
+    viewType: root.isWide ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
+
     property alias menu : _menu
 
     ItemMenu
@@ -51,17 +53,6 @@ Maui.AltBrowser
             {
                 editorView.openTab(item.path)
             }
-        }
-    }
-
-    headBar.leftContent: ToolButton
-    {
-        //        enabled: control.count > 0
-        icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-icons" : "view-list-details"
-
-        onClicked:
-        {
-            control.viewType =  control.viewType === Maui.AltBrowser.ViewType.List ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
         }
     }
 

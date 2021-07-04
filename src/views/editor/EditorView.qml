@@ -29,6 +29,7 @@ Maui.Page
 
     altHeader: Kirigami.Settings.isMobile
     headBar.visible: _editorListView.count > 0
+    autoHideHeader: focusMode
     headBar.forceCenterMiddleContent: false
 
     title: currentTab.title
@@ -103,7 +104,7 @@ Maui.Page
                 focusPolicy: Qt.NoFocus
 
                 Layout.fillHeight: true
-                implicitWidth: height * 1.2
+                implicitWidth: height * 1.4
 
                 background: Kirigami.ShadowedRectangle
                 {
@@ -136,7 +137,7 @@ Maui.Page
 
                 background: Rectangle
                 {
-                    color: Qt.lighter(Kirigami.Theme.backgroundColor)                    
+                    color: Qt.lighter(Kirigami.Theme.backgroundColor)
                     border.width: 1
                     border.color: _docMenu.visible ? Kirigami.Theme.highlightColor : color
                 }
@@ -159,7 +160,7 @@ Maui.Page
                     }
                 }
 
-                onClicked: _docMenu.show(0, height + Maui.Style.space.medium)
+                onClicked: _docMenu.show((width*0.5)-(_docMenu.width*0.5), height + Maui.Style.space.medium)
 
                 Maui.ContextualMenu
                 {
@@ -275,7 +276,7 @@ Maui.Page
                 focusPolicy: Qt.NoFocus
 
                 Layout.fillHeight: true
-                implicitWidth: height
+                implicitWidth: height * 1.4
 
                 background: Kirigami.ShadowedRectangle
                 {
@@ -290,7 +291,7 @@ Maui.Page
                     }
                 }
 
-                onClicked: _overflowMenu.show()
+                onClicked: _overflowMenu.show(0,  height + Maui.Style.space.medium)
 
                 Kirigami.Icon
                 {
@@ -341,9 +342,6 @@ Maui.Page
                             root.currentTab.split("")
                         }
                     }
-
-                    MenuSeparator {}
-
                 }
             }
         }
