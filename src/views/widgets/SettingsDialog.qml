@@ -109,7 +109,7 @@ Maui.SettingsDialog
 
             SpinBox
             {
-                from: 0; to : 500
+                from: 8; to : 500
                 value: settings.font.pointSize
                 onValueChanged: settings.font.pointSize = value
             }
@@ -121,7 +121,7 @@ Maui.SettingsDialog
 
             SpinBox
             {
-                from: 0; to : 500
+                from: 2; to : 500
                 value: settings.tabSpace
                 onValueChanged: settings.tabSpace = value
             }

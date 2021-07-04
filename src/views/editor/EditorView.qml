@@ -21,6 +21,7 @@ Maui.Page
     readonly property alias count: _editorListView.count
 
     property alias currentTab : _editorListView.currentItem
+    readonly property bool currentFileExistsLocally : FB.FM.fileExists(control.currentEditor.fileUrl)
     readonly property TE.TextEditor currentEditor: currentTab ? currentTab.currentItem.editor : null
     property alias listView: _editorListView
     property alias plugin: _pluginLayout
@@ -154,7 +155,7 @@ Maui.Page
 
                     Kirigami.Icon
                     {
-                        source: "go-down"
+                        source: _docMenu.visible ? "go-up" : "go-down"
                         implicitHeight: Maui.Style.iconSizes.small
                         implicitWidth: implicitHeight
                     }
@@ -181,7 +182,7 @@ Maui.Page
                         text: i18n("Save")
                         icon.name: "document-save"
                         enabled: currentEditor ? currentEditor.document.modified : false
-                        onTriggered: saveFile( control.currentEditor.fileUrl, control.currentEditor)
+                        onTriggered: saveFile(control.currentEditor.fileUrl, control.currentEditor)
                     }
 
                     MenuItem
@@ -225,6 +226,7 @@ Maui.Page
                     MenuItem
                     {
                         text: i18n("Share")
+                        enabled: control.currentFileExistsLocally
                         icon.name: "document-share"
                         onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
 
@@ -232,13 +234,7 @@ Maui.Page
 
                     MenuItem
                     {
-                        text: i18n("Open with")
-                        icon.name: "document-open"
-                    }
-
-                    MenuItem
-                    {
-                        visible: !Maui.Handy.isAndroid
+                        enabled: control.currentFileExistsLocally
                         text: i18n("Show in folder")
                         icon.name: "folder-open"
                         onTriggered:
@@ -249,6 +245,7 @@ Maui.Page
 
                     MenuItem
                     {
+                        enabled: control.currentFileExistsLocally
                         text: i18n("Info")
                         icon.name: "documentinfo"
                         onTriggered:
@@ -262,10 +259,43 @@ Maui.Page
                         property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
                         text: i18n(isFav ? "UnFav it": "Fav it")
                         icon.name: "love"
+                        enabled: control.currentFileExistsLocally
                         onTriggered:
                         {
                             FB.Tagging.toggleFav(currentEditor.fileUrl)
                             isFav = FB.Tagging.isFav(currentEditor.fileUrl)
+                        }
+                    }
+
+                    MenuSeparator {}
+
+                    MenuItem
+                    {
+                        text: i18n("Remove")
+                        icon.name: "edit-delete"
+                        enabled: control.currentFileExistsLocally
+                        Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
+                        onTriggered:
+                        {
+                            _removeDialog.open()
+                        }
+
+                        Maui.Dialog
+                        {
+                            id: _removeDialog
+
+                            title: i18n("Delete file?")
+                            acceptButton.text: i18n("Accept")
+                            rejectButton.text: i18n("Cancel")
+                            message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
+                            page.margins: Maui.Style.space.big
+                            template.iconSource: "emblem-warning"
+
+                            onRejected: close()
+                            onAccepted:
+                            {
+                                FB.FM.deleteFile(currentEditor.fileUrl)
+                            }
                         }
                     }
                 }

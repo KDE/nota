@@ -84,7 +84,7 @@ Maui.ContextualMenu
         icon.name: "folder-open"
         onTriggered:
         {
-            FB.FM.openLocation([control.model.get(index).path])           
+            FB.FM.openLocation([control.model.get(index).path])
         }
     }
 
@@ -103,7 +103,7 @@ Maui.ContextualMenu
     MenuItem
     {
         text: i18n("Copy")
-        icon.name: "document-copy"
+        icon.name: "edit-copy"
         onTriggered:
         {
             Maui.Handy.copyToClipboard({"urls": [control.model.get(index).path]}, false)
