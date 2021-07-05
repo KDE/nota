@@ -271,7 +271,7 @@ Maui.Page
 
                     MenuItem
                     {
-                        text: i18n("Remove")
+                        text: i18n("Delete file")
                         icon.name: "edit-delete"
                         enabled: control.currentFileExistsLocally
                         Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
