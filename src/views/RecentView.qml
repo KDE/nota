@@ -13,8 +13,6 @@ DocsBrowser
     id: control
     property bool selectionMode : false
 
-    viewType: Maui.AltBrowser.ViewType.Grid
-
     headBar.forceCenterMiddleContent: false
     floatingFooter: true
     holder.visible: Nota.History.count === 0
