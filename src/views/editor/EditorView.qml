@@ -518,7 +518,6 @@ Maui.Page
 
         _editorListView.addTab(_editorLayoutComponent, {"path": path})
         Nota.History.append(path)
-
     }
 
     function closeTab(index) //no questions asked

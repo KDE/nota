@@ -74,10 +74,11 @@ Maui.AltBrowser
         {
             id: _gridItemDelegate
 
-            width: control.gridView.itemSize - Maui.Style.space.medium
-            height: control.gridView.itemHeight  - Maui.Style.space.medium
+            template.imageWidth: control.gridView.itemSize
+            template.imageHeight: control.gridView.itemSize
 
-            anchors.centerIn: parent
+            anchors.margins: Kirigami.Settings.isMobile ? Maui.Style.space.small : Maui.Style.space.medium
+            anchors.fill: parent
 
             draggable: true
             Drag.keys: ["text/uri-list"]

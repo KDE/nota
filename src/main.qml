@@ -213,6 +213,8 @@ Maui.ApplicationWindow
     {
         id: _stackView
         anchors.fill: parent
+        focus: true
+
         initialItem: EditorView
         {
             id: editorView

@@ -147,4 +147,9 @@ Maui.SplitViewItem
             }
         }
     }
+
+    Component.onCompleted:
+    {
+        _editor.forceActiveFocus()
+    }
 }
