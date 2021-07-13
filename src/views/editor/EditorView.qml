@@ -35,6 +35,7 @@ Maui.Page
 
     title: currentTab.title
     showTitle: false
+    showCSDControls: true
 
     headerColorSet: altHeader ? Kirigami.Theme.Window : Kirigami.Theme.Header
     headBar.farLeftContent: Maui.ToolButtonMenu
