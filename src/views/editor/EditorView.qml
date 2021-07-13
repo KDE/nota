@@ -209,6 +209,26 @@ Maui.Page
 
                     MenuItem
                     {
+                        icon.name: "go-jump"
+                        text: i18n("Go to Line")
+
+                        onTriggered:
+                        {
+                            _goToLineDialog.open()
+                        }
+
+                        Maui.NewDialog
+                        {
+                            id: _goToLineDialog
+                            title: i18n("Go to Line")
+                            textEntry.text: currentEditor.document.currentLineIndex+1
+                            textEntry.placeholderText: i18n("Line number")
+                            onFinished: currentEditor.goToLine(text)
+                        }
+                    }
+
+                    MenuItem
+                    {
                         icon.name: "document-edit"
                         text: i18n("Line/Word Counter")
                         checkable: true
