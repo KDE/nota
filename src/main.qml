@@ -91,23 +91,6 @@ Maui.ApplicationWindow
         id: _newDocumentMenu
     }
 
-    headBar.leftContent: ToolButton
-    {
-        visible: settings.enableSidebar
-        icon.name: _drawer.visible ? "sidebar-collapse" : "sidebar-expand"
-        onClicked: _drawer.toggle()
-
-        text: i18n("Places")
-        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-
-        checked: _drawer.visible
-
-        ToolTip.delay: 1000
-        ToolTip.timeout: 5000
-        ToolTip.visible: hovered
-        ToolTip.text: i18n("Toogle SideBar")
-    }
-
     Loader
     {
         id: _dialogLoader

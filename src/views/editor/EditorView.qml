@@ -38,46 +38,22 @@ Maui.Page
     showCSDControls: true
 
     headerColorSet: altHeader ? Kirigami.Theme.Window : Kirigami.Theme.Header
-    headBar.farLeftContent: Maui.ToolButtonMenu
+
+    headBar.leftContent: ToolButton
     {
-        id: menuBtn
-        icon.name: "application-menu"
+        visible: settings.enableSidebar
+        icon.name: _drawer.visible ? "sidebar-collapse" : "sidebar-expand"
+        onClicked: _drawer.toggle()
 
-        MenuItem
-        {
-            text: i18n("Shortcuts")
-            icon.name: "configure-shortcuts"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = _shortcutsDialogComponent
-                dialog.open()
-            }
-        }
+        text: i18n("Places")
+        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
 
-        MenuItem
-        {
-            text: i18n("Settings")
-            icon.name: "settings-configure"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = _settingsDialogComponent
-                dialog.open()
-            }
-        }
+        checked: _drawer.visible
 
-        MenuItem
-        {
-            text: i18n("Plugins")
-            icon.name: "system-run"
-            onTriggered: _plugingsDialog.open()
-        }
-
-        MenuItem
-        {
-            text: i18n("About")
-            icon.name: "documentinfo"
-            onTriggered: root.about()
-        }
+        ToolTip.delay: 1000
+        ToolTip.timeout: 5000
+        ToolTip.visible: hovered
+        ToolTip.text: i18n("Toogle SideBar")
     }
 
     headBar.farRightContent: ToolButton
@@ -393,49 +369,48 @@ Maui.Page
                             root.currentTab.split("")
                         }
                     }
+
+                    MenuSeparator {}
+
+                    MenuItem
+                    {
+                        text: i18n("Shortcuts")
+                        icon.name: "configure-shortcuts"
+                        onTriggered:
+                        {
+                            _dialogLoader.sourceComponent = _shortcutsDialogComponent
+                            dialog.open()
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Settings")
+                        icon.name: "settings-configure"
+                        onTriggered:
+                        {
+                            _dialogLoader.sourceComponent = _settingsDialogComponent
+                            dialog.open()
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Plugins")
+                        icon.name: "system-run"
+                        onTriggered: _plugingsDialog.open()
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("About")
+                        icon.name: "documentinfo"
+                        onTriggered: root.about()
+                    }
                 }
             }
         }
     }
-
-    headBar.leftContent: [
-
-        Maui.ToolActions
-        {
-            visible: (currentEditor.document.isRich || currentEditor.body.textFormat === Text.RichText) && !currentEditor.body.readOnly
-            expanded: true
-            autoExclusive: false
-            checkable: false
-
-            Action
-            {
-                icon.name: "format-text-bold"
-                checked: currentEditor.document.bold
-                onTriggered: currentEditor.document.bold = !currentEditor.document.bold
-            }
-
-            Action
-            {
-                icon.name: "format-text-italic"
-                checked: currentEditor.document.italic
-                onTriggered: currentEditor.document.italic = !currentEditor.document.italic
-            }
-
-            Action
-            {
-                icon.name: "format-text-underline"
-                checked: currentEditor.document.underline
-                onTriggered: currentEditor.document.underline = !currentEditor.document.underline
-            }
-
-            Action
-            {
-                icon.name: "format-text-uppercase"
-                checked: currentEditor.document.uppercase
-                onTriggered: currentEditor.document.uppercase = !currentEditor.document.uppercase
-            }
-        }
-    ]
 
     ColumnLayout
     {
