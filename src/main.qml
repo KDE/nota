@@ -29,11 +29,7 @@ Maui.ApplicationWindow
 
     property bool focusMode : false
 
-    readonly property font defaultFont:
-    {
-        family: "Noto Sans Mono"
-        pointSize: Maui.Style.fontSizes.default
-    }
+    property font defaultFont : Qt.font({family: "Noto Sans Mono", pointSize: Maui.Style.fontSizes.default})
 
     //Global editor props
     property alias appSettings: settings

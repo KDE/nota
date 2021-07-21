@@ -345,7 +345,7 @@ Maui.Page
                     {
                         text: i18n("Terminal")
                         icon.name: "dialog-scripts"
-
+                        enabled: Maui.Handy.isLinux
                         onTriggered: currentTab.toggleTerminal()
                         checkable: true
                         checked: currentTab ? currentTab.terminalVisible : false

@@ -69,6 +69,7 @@ Maui.Dialog
         Layout.fillWidth: true
         hoverEnabled: true
         implicitHeight: 80
+        lastOne: true
 
         Maui.ListItemTemplate
         {
@@ -87,31 +88,4 @@ Maui.Dialog
             control.close()
         }
     }
-
-
-    Maui.AlternateListItem
-    {
-        Layout.fillWidth: true
-        implicitHeight: 80
-        hoverEnabled: true
-        lastOne: true
-
-        Maui.ListItemTemplate
-        {
-            anchors.fill: parent
-            headerSizeHint: iconSizeHint + Maui.Style.space.big
-            iconSizeHint: Maui.Style.iconSizes.big
-            iconSource: "text-enriched"
-            label1.text: i18n("Rich Text File")
-            label2.text: i18n("With support for basic text format editing")
-        }
-
-        onClicked:
-        {
-            openTab("")
-            //                _editorListView.currentItem.body.textFormat = TextEdit.RichText
-            control.close()
-        }
-    }
-
 }

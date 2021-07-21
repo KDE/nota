@@ -28,6 +28,7 @@ void HistoryModel::append(const QUrl &url)
     emit this->preItemAppended();
     this->m_list << FMStatic::getFileInfoModel(url);
     emit this->postItemAppended();
+    emit this->countChanged();
 
     urls << url;
 
@@ -58,15 +59,17 @@ QList<QUrl> HistoryModel::getHistory()
 void HistoryModel::setList()
 {
     const auto urls = this->getHistory();
-    for (const auto &url : urls) {
+    emit this->preListChanged();
+
+    for (const auto &url : urls)
+    {
         if (!url.isLocalFile() || !FMH::fileExists(url) || !isTextDocument(url))
         {
             continue;
         }
 
-        emit this->preItemAppended();
-        this->m_list << FMStatic::getFileInfoModel(url);
-        emit this->postItemAppended();
-        emit this->countChanged();
+        this->m_list << FMStatic::getFileInfoModel(url);        
     }
+    emit this->postListChanged();
+    emit this->countChanged();
 }
