@@ -41,6 +41,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="it">Sfoglia, crea e modifica file di testo</summary>
   <summary xml:lang="ko">텍스트 파일 탐색, 생성, 편집</summary>
   <summary xml:lang="nl">Tekstbestanden, er in bladeren, aanmaken en bewerken</summary>
+  <summary xml:lang="pl">Przeglądaj, twórz i zmieniaj pliki tekstowe</summary>
   <summary xml:lang="pt">Navegue, crie e edite ficheiros de texto</summary>
   <summary xml:lang="pt-BR">Navegar, criar e editar arquivos de texto</summary>
   <summary xml:lang="sl">Brskajte, ustvarjajte in urejajte besedilne datoteke</summary>
@@ -61,7 +62,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="it">Nota è un semplice editor di testo per computer desktop e portatili.</p>
     <p xml:lang="ko">Nota는 데스크톱과 모바일용 간단한 텍스트 편집기입니다.</p>
     <p xml:lang="nl">Nota is een eenvoudige tekstverwerker voor bureaublad en mobiele computers.</p>
-    <p xml:lang="pl">Nota jest prostym edytorem tekstu dla urządzeń na biurko i przenośnych.</p>
+    <p xml:lang="pl">Nota jest prostym edytorem tekstu dla stacjonarnych i przenośnych urządzeń.</p>
     <p xml:lang="pt">O Nota é um editor de texto simples para computadores e dispositivos móveis.</p>
     <p xml:lang="pt-BR">O Nota é um editor de texto simples para a área de trabalho e celulares.</p>
     <p xml:lang="sk">Nota je jednoduchý editor pre desktopové a mobilné počítače.</p>
@@ -113,6 +114,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="it">Nota, finestra Trova</caption>
       <caption xml:lang="ko">Nota 찾기 대화 상자</caption>
       <caption xml:lang="nl">Nota, dialoog voor zoeken</caption>
+      <caption xml:lang="pl">Nota, okno wyszukiwania</caption>
       <caption xml:lang="pt">Nota - janela de pesquisa</caption>
       <caption xml:lang="pt-BR">Nota, janela Encontrar</caption>
       <caption xml:lang="sl">Nota, najdi dialog</caption>
