@@ -31,7 +31,7 @@ Maui.Page
     altHeader: Kirigami.Settings.isMobile
     headBar.visible: _editorListView.count > 0
     autoHideHeader: focusMode
-    headBar.forceCenterMiddleContent: false
+    headBar.forceCenterMiddleContent: root.isWide
 
     title: currentTab.title
     showTitle: false
