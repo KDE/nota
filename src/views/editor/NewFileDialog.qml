@@ -30,7 +30,7 @@ Maui.Dialog
             headerSizeHint: iconSizeHint + Maui.Style.space.big
             iconSizeHint: Maui.Style.iconSizes.big
             iconSource: "folder-open"
-            label1.text: i18n("Open File")
+            label1.text: i18n("Open Files")
             label2.text: i18n("Open one or multiple files")
         }
 
@@ -53,7 +53,7 @@ Maui.Dialog
             headerSizeHint: iconSizeHint + Maui.Style.space.big
             iconSizeHint: Maui.Style.iconSizes.big
             iconSource: "folder-recent"
-            label1.text: i18n("Recent File")
+            label1.text: i18n("Open Recent Files")
             label2.text: i18n("Open recently used files")
         }
 
@@ -77,7 +77,7 @@ Maui.Dialog
             headerSizeHint: iconSizeHint + Maui.Style.space.big
             iconSizeHint: Maui.Style.iconSizes.big
             iconSource: "text-x-generic"
-            label1.text: i18n("Text File")
+            label1.text: i18n("New Text File")
             label2.text: i18n("Simple text file with syntax highlighting")
         }
 
