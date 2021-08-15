@@ -17,6 +17,39 @@ Maui.ContextualMenu
 
     onOpened: isFav = FB.Tagging.isFav(control.model.get(index).path)
 
+    Maui.MenuItemActionRow
+    {
+        Action
+        {
+//            text: i18n(isFav ? "UnFav it": "Fav it")
+            checked: isFav
+            checkable: true
+            icon.name: "love"
+            onTriggered: FB.Tagging.toggleFav(control.model.get(index).path)
+        }
+
+        Action
+        {
+//            text: i18n("Tags")
+            icon.name: "tag"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _tagsDialogComponent
+                dialog.composerList.urls = [control.model.get(index).path]
+                dialog.open()
+            }
+        }
+
+        Action
+        {
+//            text: i18n("Share")
+            icon.name: "document-share"
+            onTriggered: Maui.Platform.shareFiles([control.model.get(index).path])
+        }
+    }
+
+    MenuSeparator{}
+
     MenuItem
     {
         text: i18n("Select")
@@ -31,32 +64,6 @@ Maui.ContextualMenu
     }
 
     MenuSeparator{}
-
-    MenuItem
-    {
-        text: i18n(isFav ? "UnFav it": "Fav it")
-        icon.name: "love"
-        onTriggered: FB.Tagging.toggleFav(control.model.get(index).path)
-    }
-
-    MenuItem
-    {
-        text: i18n("Tags")
-        icon.name: "tag"
-        onTriggered:
-        {
-            _dialogLoader.sourceComponent = _tagsDialogComponent
-            dialog.composerList.urls = [control.model.get(index).path]
-            dialog.open()
-        }
-    }
-
-    MenuItem
-    {
-        text: i18n("Share")
-        icon.name: "document-share"
-        onTriggered: Maui.Platform.shareFiles([control.model.get(index).path])
-    }
 
     MenuItem
     {

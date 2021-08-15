@@ -144,30 +144,33 @@ Maui.Page
                 {
                     id: _docMenu
 
-                    MenuItem
+                    Maui.MenuItemActionRow
                     {
-                        icon.name: "edit-redo"
-                        text: i18n("Redo")
-                        enabled: currentEditor.body.canRedo
-                        onTriggered: currentEditor.body.redo()
+                        Action
+                        {
+                            icon.name: "edit-redo"
+//                            text: i18n("Redo")
+                            enabled: currentEditor.body.canRedo
+                            onTriggered: currentEditor.body.redo()
+                        }
+
+
+                        Action
+                        {
+//                            text: i18n("Save")
+                            icon.name: "document-save"
+                            enabled: currentEditor ? currentEditor.document.modified : false
+                            onTriggered: saveFile(control.currentEditor.fileUrl, control.currentEditor)
+                        }
+
+                        Action
+                        {
+                            icon.name: "document-save-as"
+//                            text: i18n("Save as...")
+                            onTriggered: saveFile("", control.currentEditor)
+                        }
                     }
 
-                    MenuSeparator {}
-
-                    MenuItem
-                    {
-                        text: i18n("Save")
-                        icon.name: "document-save"
-                        enabled: currentEditor ? currentEditor.document.modified : false
-                        onTriggered: saveFile(control.currentEditor.fileUrl, control.currentEditor)
-                    }
-
-                    MenuItem
-                    {
-                        icon.name: "document-save-as"
-                        text: i18n("Save as...")
-                        onTriggered: saveFile("", control.currentEditor)
-                    }
 
                     MenuSeparator {}
 
@@ -183,6 +186,63 @@ Maui.Page
                         }
                         checked: currentEditor.showFindBar
                     }
+
+                    MenuItem
+                    {
+                        icon.name: "document-edit"
+                        text: i18n("Line/Word Counter")
+                        checkable: true
+
+                        onTriggered:
+                        {
+                            currentEditor.showLineCount = checked
+                        }
+
+                        checked: currentEditor.showLineCount
+                    }
+
+                    MenuSeparator {}
+
+                    Maui.MenuItemActionRow
+                    {
+
+                        Action
+                        {
+                            property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
+//                            text: i18n(isFav ? "UnFav it": "Fav it")
+                            checked: isFav
+                            checkable: true
+                            icon.name: "love"
+                            enabled: control.currentFileExistsLocally
+                            onTriggered:
+                            {
+                                FB.Tagging.toggleFav(currentEditor.fileUrl)
+                                isFav = FB.Tagging.isFav(currentEditor.fileUrl)
+                            }
+                        }
+
+                        Action
+                        {
+//                            text: i18n("Share")
+                            enabled: control.currentFileExistsLocally
+                            icon.name: "document-share"
+                            onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
+
+                        }
+
+                        Action
+                        {
+                            enabled: control.currentFileExistsLocally
+//                            text: i18n("Info")
+                            icon.name: "documentinfo"
+                            onTriggered:
+                            {
+                    //            getFileInfo(control.model.get(index).url)
+                            }
+                        }
+                    }
+
+                    MenuSeparator {}                    
 
                     MenuItem
                     {
@@ -206,31 +266,6 @@ Maui.Page
 
                     MenuItem
                     {
-                        icon.name: "document-edit"
-                        text: i18n("Line/Word Counter")
-                        checkable: true
-
-                        onTriggered:
-                        {
-                            currentEditor.showLineCount = checked
-                        }
-
-                        checked: currentEditor.showLineCount
-                    }
-
-                    MenuSeparator {}
-
-                    MenuItem
-                    {
-                        text: i18n("Share")
-                        enabled: control.currentFileExistsLocally
-                        icon.name: "document-share"
-                        onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
-
-                    }
-
-                    MenuItem
-                    {
                         enabled: control.currentFileExistsLocally
                         text: i18n("Show in folder")
                         icon.name: "folder-open"
@@ -239,32 +274,6 @@ Maui.Page
                             FB.FM.openLocation([currentEditor.fileUrl])
                         }
                     }
-
-                    MenuItem
-                    {
-                        enabled: control.currentFileExistsLocally
-                        text: i18n("Info")
-                        icon.name: "documentinfo"
-                        onTriggered:
-                        {
-                //            getFileInfo(control.model.get(index).url)
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
-                        text: i18n(isFav ? "UnFav it": "Fav it")
-                        icon.name: "love"
-                        enabled: control.currentFileExistsLocally
-                        onTriggered:
-                        {
-                            FB.Tagging.toggleFav(currentEditor.fileUrl)
-                            isFav = FB.Tagging.isFav(currentEditor.fileUrl)
-                        }
-                    }
-
-                    MenuSeparator {}
 
                     MenuItem
                     {
@@ -332,41 +341,44 @@ Maui.Page
                 {
                     id: _overflowMenu
 
-                    MenuItem
+                    Maui.MenuItemActionRow
                     {
-                        icon.name: checked ? "view-readermode-active" : "view-readermode"
-                        text: i18n("Focus Mode")
-                        checked: root.focusMode
-                        checkable: true
-                        onTriggered: root.focusMode = !root.focusMode
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("Terminal")
-                        icon.name: "dialog-scripts"
-                        enabled: Maui.Handy.isLinux
-                        onTriggered: currentTab.toggleTerminal()
-                        checkable: true
-                        checked: currentTab ? currentTab.terminalVisible : false
-                    }
-
-                    MenuItem
-                    {
-                        visible: settings.supportSplit
-                        text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
-                        icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
-                        checked: root.currentTab && root.currentTab.count === 2
-                        checkable: true
-                        onTriggered:
+                        Action
                         {
-                            if(root.currentTab.count === 2)
-                            {
-                                root.currentTab.pop()
-                                return
-                            }//close the inactive split
+                            icon.name: checked ? "view-readermode-active" : "view-readermode"
+//                            text: i18n("Focus Mode")
+                            checked: root.focusMode
+                            checkable: true
+                            onTriggered: root.focusMode = !root.focusMode
+                        }
 
-                            root.currentTab.split("")
+                        Action
+                        {
+//                            text: i18n("Terminal")
+                            icon.name: "dialog-scripts"
+                            enabled: Maui.Handy.isLinux
+                            onTriggered: currentTab.toggleTerminal()
+                            checkable: true
+                            checked: currentTab ? currentTab.terminalVisible : false
+                        }
+
+                        Action
+                        {
+                            enabled: settings.supportSplit
+//                            text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
+                            icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+                            checked: root.currentTab && root.currentTab.count === 2
+                            checkable: true
+                            onTriggered:
+                            {
+                                if(root.currentTab.count === 2)
+                                {
+                                    root.currentTab.pop()
+                                    return
+                                }//close the inactive split
+
+                                root.currentTab.split("")
+                            }
                         }
                     }
 
