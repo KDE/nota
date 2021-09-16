@@ -29,6 +29,9 @@ Maui.AbstractSideBar
         anchors.fill: parent
 
         headBar.visible: true
+        headBar.background: null
+        background: null
+
         footBar.middleContent: Maui.ComboBox
         {
             Layout.fillWidth: true
@@ -50,7 +53,6 @@ Maui.AbstractSideBar
                 browserView.openFolder(model.get(index).path)
             }
         }
-
 
         headBar.leftContent: Maui.ToolActions
         {
@@ -178,7 +180,12 @@ Maui.AbstractSideBar
             headBar.rightLayout.visible: false
             headBar.rightLayout.width: 0
             floatingFooter: false
-
+            background: Rectangle
+            {
+                color: Kirigami.Theme.backgroundColor
+                opacity: 0.2
+            }
+            browser.background:null
             onItemClicked:
             {
                 var item = currentFMModel.get(index)

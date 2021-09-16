@@ -34,6 +34,14 @@ Maui.ApplicationWindow
     //Global editor props
     property alias appSettings: settings
 
+    Maui.WindowBlur
+    {
+        view: root
+        geometry: Qt.rect(root.x, root.y, root.width, root.height)
+        windowRadius: root.background.radius
+        enabled: !Kirigami.Settings.isMobile
+    }
+
     Settings
     {
         id: settings
