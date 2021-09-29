@@ -149,7 +149,7 @@ Maui.Page
                         Action
                         {
                             icon.name: "edit-redo"
-//                            text: i18n("Redo")
+                            text: i18n("Redo")
                             enabled: currentEditor.body.canRedo
                             onTriggered: currentEditor.body.redo()
                         }
@@ -157,7 +157,7 @@ Maui.Page
 
                         Action
                         {
-//                            text: i18n("Save")
+                            text: i18n("Save")
                             icon.name: "document-save"
                             enabled: currentEditor ? currentEditor.document.modified : false
                             onTriggered: saveFile(control.currentEditor.fileUrl, control.currentEditor)
@@ -166,7 +166,7 @@ Maui.Page
                         Action
                         {
                             icon.name: "document-save-as"
-//                            text: i18n("Save as...")
+                            text: i18n("Save as")
                             onTriggered: saveFile("", control.currentEditor)
                         }
                     }
@@ -209,7 +209,7 @@ Maui.Page
                         Action
                         {
                             property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
-//                            text: i18n(isFav ? "UnFav it": "Fav it")
+                            text: i18n(isFav ? "UnFav it": "Fav it")
                             checked: isFav
                             checkable: true
                             icon.name: "love"
@@ -223,23 +223,23 @@ Maui.Page
 
                         Action
                         {
-//                            text: i18n("Share")
                             enabled: control.currentFileExistsLocally
-                            icon.name: "document-share"
-                            onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
-
-                        }
-
-                        Action
-                        {
-                            enabled: control.currentFileExistsLocally
-//                            text: i18n("Info")
+                            text: i18n("Info")
                             icon.name: "documentinfo"
                             onTriggered:
                             {
                     //            getFileInfo(control.model.get(index).url)
                             }
                         }
+
+                        Action
+                        {
+                            text: i18n("Share")
+                            enabled: control.currentFileExistsLocally
+                            icon.name: "document-share"
+                            onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
+
+                        }                        
                     }
 
                     MenuSeparator {}                    
@@ -346,7 +346,7 @@ Maui.Page
                         Action
                         {
                             icon.name: checked ? "view-readermode-active" : "view-readermode"
-//                            text: i18n("Focus Mode")
+                            text: i18n("Focus")
                             checked: root.focusMode
                             checkable: true
                             onTriggered: root.focusMode = !root.focusMode
@@ -354,7 +354,7 @@ Maui.Page
 
                         Action
                         {
-//                            text: i18n("Terminal")
+                            text: i18n("Terminal")
                             icon.name: "dialog-scripts"
                             enabled: Maui.Handy.isLinux
                             onTriggered: currentTab.toggleTerminal()
@@ -365,7 +365,7 @@ Maui.Page
                         Action
                         {
                             enabled: settings.supportSplit
-//                            text: root.currentTab.orientation === Qt.Horizontal ? i18n("Split Horizontally") : i18n("Split Vertically")
+                            text: i18n("Split")
                             icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
                             checked: root.currentTab && root.currentTab.count === 2
                             checkable: true
