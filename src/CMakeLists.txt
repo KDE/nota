@@ -13,22 +13,31 @@ set(nota_HDRS
     nota.h
     )
 
-set(nota_ASSETS
-    qml.qrc
-    plugins/plugins.qrc
+set(nota_ASSETS   
     assets/img_assets.qrc
     )
+
+
+if(QUICK_COMPILER)
+        qtquick_compiler_add_resources(nota_QML_QRC qml.qrc plugins/plugins.qrc)
+else()
+        qt5_add_resources(nota_QML_QRC qml.qrc plugins/plugins.qrc)
+endif()
 
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED
         ${nota_SRCS}
         ${nota_HDRS}
-        ${nota_ASSETS})
+        ${nota_ASSETS}
+        ${nota_QML_QRC}
+        )
 else()
     add_executable(${PROJECT_NAME}
         ${nota_SRCS}
         ${nota_HDRS}
-        ${nota_ASSETS})
+        ${nota_ASSETS}
+        ${nota_QML_QRC}
+        )
 endif()
 
 if (ANDROID)
