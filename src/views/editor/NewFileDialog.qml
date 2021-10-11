@@ -11,28 +11,24 @@ Maui.Dialog
     title: i18n("New file")
     maxWidth: 350
 
-    page.padding: 0
-    spacing: 0
+    page.padding: Maui.Style.space.medium
+    spacing: Maui.Style.space.medium
     persistent: false
     defaultButtons: false
     rejectButton.visible : false
     acceptButton.visible: false
 
-    Maui.AlternateListItem
+    Maui.ListBrowserDelegate
     {
         Layout.fillWidth: true
-        hoverEnabled: true
         implicitHeight: 80
 
-        Maui.ListItemTemplate
-        {
-            anchors.fill: parent
-            headerSizeHint: iconSizeHint + Maui.Style.space.big
-            iconSizeHint: Maui.Style.iconSizes.big
-            iconSource: "folder-open"
-            label1.text: i18n("Open Files")
-            label2.text: i18n("Open one or multiple files")
-        }
+        template.headerSizeHint: iconSizeHint + Maui.Style.space.big
+        iconSizeHint: Maui.Style.iconSizes.big
+        iconSource: "folder-open"
+        label1.text: i18n("Open Files")
+        label2.text: i18n("Open one or multiple files")
+
 
         onClicked:
         {
@@ -41,21 +37,17 @@ Maui.Dialog
         }
     }
 
-    Maui.AlternateListItem
+    Maui.ListBrowserDelegate
     {
         Layout.fillWidth: true
-        hoverEnabled: true
         implicitHeight: 80
 
-        Maui.ListItemTemplate
-        {
-            anchors.fill: parent
-            headerSizeHint: iconSizeHint + Maui.Style.space.big
-            iconSizeHint: Maui.Style.iconSizes.big
-            iconSource: "folder-recent"
-            label1.text: i18n("Open Recent Files")
-            label2.text: i18n("Open recently used files")
-        }
+        template.headerSizeHint: iconSizeHint + Maui.Style.space.big
+        iconSizeHint: Maui.Style.iconSizes.big
+        iconSource: "folder-recent"
+        label1.text: i18n("Open Recent Files")
+        label2.text: i18n("Open recently used files")
+
 
         onClicked:
         {
@@ -64,22 +56,17 @@ Maui.Dialog
         }
     }
 
-    Maui.AlternateListItem
+    Maui.ListBrowserDelegate
     {
         Layout.fillWidth: true
-        hoverEnabled: true
         implicitHeight: 80
-        lastOne: true
 
-        Maui.ListItemTemplate
-        {
-            anchors.fill: parent
-            headerSizeHint: iconSizeHint + Maui.Style.space.big
-            iconSizeHint: Maui.Style.iconSizes.big
-            iconSource: "text-x-generic"
-            label1.text: i18n("New Text File")
-            label2.text: i18n("Simple text file with syntax highlighting")
-        }
+        template.headerSizeHint: iconSizeHint + Maui.Style.space.big
+        iconSizeHint: Maui.Style.iconSizes.big
+        iconSource: "text-x-generic"
+        label1.text: i18n("New Text File")
+        label2.text: i18n("Simple text file with syntax highlighting")
+
 
         onClicked:
         {
