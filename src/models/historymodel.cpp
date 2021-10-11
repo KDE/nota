@@ -11,7 +11,6 @@ static bool isTextDocument(const QUrl &url)
 HistoryModel::HistoryModel(QObject *parent)
     : MauiList(parent)
 {
-    this->setList();
 }
 
 const FMH::MODEL_LIST &HistoryModel::items() const
@@ -72,4 +71,10 @@ void HistoryModel::setList()
     }
     emit this->postListChanged();
     emit this->countChanged();
+}
+
+
+void HistoryModel::componentComplete()
+{
+    this->setList();
 }

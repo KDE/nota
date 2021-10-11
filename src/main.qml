@@ -85,16 +85,24 @@ Maui.ApplicationWindow
         close.accepted = true
     }
 
-    Widgets.PluginsDialog
+    Nota.History
     {
-        id: _plugingsDialog
+        id: historyList
     }
 
-    NewFileDialog
+    Component
     {
-        id: _newDocumentMenu
+        id: _plugingsDialogComponent
+
+        Widgets.PluginsDialog {}
     }
 
+    Component
+    {
+        id: _newDocumentDialogComponent
+
+        NewFileDialog {}
+    }
     Loader
     {
         id: _dialogLoader
@@ -168,18 +176,22 @@ Maui.ApplicationWindow
         id : _drawer
     }
 
-    DropArea
+    Loader
     {
-        id: _dropArea
-        property var urls : []
         anchors.fill: parent
-        onDropped:
+        asynchronous: true
+        sourceComponent: DropArea
         {
-            if(drop.urls)
+            id: _dropArea
+            property var urls : []
+            onDropped:
             {
-                var m_urls = drop.urls.join(",")
-                _dropArea.urls = m_urls.split(",")
-                Nota.Nota.requestFiles( _dropArea.urls )
+                if(drop.urls)
+                {
+                    var m_urls = drop.urls.join(",")
+                    _dropArea.urls = m_urls.split(",")
+                    Nota.Nota.requestFiles( _dropArea.urls )
+                }
             }
         }
     }
@@ -193,7 +205,6 @@ Maui.ApplicationWindow
         }
 
         editorView.openTab("")
-
     }
 
     StackView
@@ -207,10 +218,11 @@ Maui.ApplicationWindow
             id: editorView
         }
 
-        RecentView
+        Component
         {
-            id: historyView
-            visible: StackView.status === StackView.Active
+            id: historyViewComponent
+
+            RecentView {}
         }
     }
 
@@ -228,7 +240,7 @@ Maui.ApplicationWindow
     {
         if(path && FB.FM.fileExists(path) && settings.enableSidebar)
         {
-            _drawer.browser.openFolder(FB.FM.fileDir(path))
+            _drawer.page.browser.openFolder(FB.FM.fileDir(path))
         }
     }
 

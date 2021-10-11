@@ -15,7 +15,7 @@ DocsBrowser
 
     headBar.forceCenterMiddleContent: false
     floatingFooter: true
-    holder.visible: Nota.History.count === 0
+    holder.visible: historyList.count === 0
     holder.emoji: "qrc:/assets/dialog-information.svg"
     holder.title : i18n("No Recent Files!")
     holder.body: i18n("Here you will see your recently opened files")
@@ -31,7 +31,7 @@ DocsBrowser
     {
         id: _historyModel
 
-        list: Nota.History
+        list: historyList
 
         sort: "modified"
         sortOrder: Qt.DescendingOrder
@@ -60,7 +60,7 @@ DocsBrowser
         interval: 250
         onTriggered:
         {
-            const index = Nota.History.indexOfName(typingQuery)
+            const index = historyList.indexOfName(typingQuery)
             if(index > -1)
             {
                 control.currentIndex = _historyModel.mappedFromSource(index)

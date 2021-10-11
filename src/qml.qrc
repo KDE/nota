@@ -13,5 +13,6 @@
         <file>views/widgets/ItemMenu.qml</file>
         <file>views/widgets/PluginsDialog.qml</file>
         <file>views/widgets/ShortcutsDialog.qml</file>
+        <file>views/editor/EditorBar.qml</file>
     </qresource>
 </RCC>

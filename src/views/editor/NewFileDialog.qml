@@ -51,7 +51,7 @@ Maui.Dialog
 
         onClicked:
         {
-            _stackView.push(historyView)
+            _stackView.push(historyViewComponent)
             control.close()
         }
     }

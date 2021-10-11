@@ -1,6 +1,5 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.7 as Kirigami
 
@@ -79,71 +78,74 @@ Maui.SplitViewItem
             }
         }
 
-        DropArea
+        Loader
         {
-            id: _dropArea
-            property var urls : []
+            asynchronous: true
             anchors.fill: parent
-            onDropped:
+
+            sourceComponent:  DropArea
             {
-                if(drop.urls)
+                id: _dropArea
+                property var urls : []
+                onDropped:
                 {
-                    var m_urls = drop.urls.join(",")
-                    _dropArea.urls = m_urls.split(",")
-                    _dropAreaMenu.show()
-
-                    //                Nota.Nota.requestFiles( _dropArea.urls )
-                }
-            }
-
-            Maui.ContextualMenu
-            {
-                id: _dropAreaMenu
-
-                MenuItem
-                {
-                    text: i18n("Open here")
-                    icon.name : "open-for-editing"
-                    onTriggered:
+                    if(drop.urls)
                     {
-                        _editor.fileUrl = _dropArea.urls[0]
+                        var m_urls = drop.urls.join(",")
+                        _dropArea.urls = m_urls.split(",")
+                        _dropAreaMenu.show()
                     }
                 }
 
-                MenuItem
+                Maui.ContextualMenu
                 {
-                    text: i18n("Open in new tab")
-                    icon.name: "tab-new"
-                    onTriggered:
+                    id: _dropAreaMenu
+
+                    MenuItem
                     {
-                        Nota.Nota.requestFiles( _dropArea.urls )
+                        text: i18n("Open here")
+                        icon.name : "open-for-editing"
+                        onTriggered:
+                        {
+                            _editor.fileUrl = _dropArea.urls[0]
+                        }
                     }
-                }
 
-                MenuItem
-                {
-                    enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && settings.supportSplit
-                    text: i18n("Open in new split")
-                    icon.name: "view-split-left-right"
-                    onTriggered:
+                    MenuItem
                     {
-                        currentTab.split(_dropArea.urls[0])
+                        text: i18n("Open in new tab")
+                        icon.name: "tab-new"
+                        onTriggered:
+                        {
+                            Nota.Nota.requestFiles( _dropArea.urls )
+                        }
                     }
-                }
 
-                MenuSeparator{}
-
-                MenuItem
-                {
-                    text: i18n("Cancel")
-                    icon.name: "dialog-cancel"
-                    onTriggered:
+                    MenuItem
                     {
-                        _dropAreaMenu.close()
+                        enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && settings.supportSplit
+                        text: i18n("Open in new split")
+                        icon.name: "view-split-left-right"
+                        onTriggered:
+                        {
+                            currentTab.split(_dropArea.urls[0])
+                        }
                     }
-                }
 
-                onClosed: _editor.forceActiveFocus()
+                    MenuSeparator{}
+
+                    MenuItem
+                    {
+                        text: i18n("Cancel")
+                        icon.name: "dialog-cancel"
+                        onTriggered:
+                        {
+                            _dropAreaMenu.close()
+                        }
+                    }
+
+                    onClosed: _editor.forceActiveFocus()
+                }
             }
         }
     }

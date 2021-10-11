@@ -1,8 +1,5 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
-
-import org.kde.kirigami 2.7 as Kirigami
 
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
@@ -93,15 +90,6 @@ Item
             SplitView.minimumHeight : 100
             source: "../Terminal.qml"
             onLoaded: syncTerminal(control.currentEditor.fileUrl)
-
-            Behavior on SplitView.preferredHeight
-            {
-                NumberAnimation
-                {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InQuad
-                }
-            }
         }
     }
 
