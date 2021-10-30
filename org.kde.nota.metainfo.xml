@@ -16,6 +16,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="es">Nota</name>
   <name xml:lang="fi">Nota</name>
   <name xml:lang="fr">Nota</name>
+  <name xml:lang="hu">Nota</name>
   <name xml:lang="ia">Nota</name>
   <name xml:lang="it">Nota</name>
   <name xml:lang="ko">Nota</name>
@@ -38,6 +39,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="es">Navegue, cree y edite archivos de texto</summary>
   <summary xml:lang="fi">Selaa, luo ja muokkaa tekstitiedostoja</summary>
   <summary xml:lang="fr">Naviguer, créer et modifier des fichiers de texte.</summary>
+  <summary xml:lang="hu">Szövegfájlok böngészése, létrehozása és szerkesztése</summary>
   <summary xml:lang="ia">Naviga, crea e modifica files de texto</summary>
   <summary xml:lang="it">Sfoglia, crea e modifica file di testo</summary>
   <summary xml:lang="ko">텍스트 파일 탐색, 생성, 편집</summary>
@@ -60,6 +62,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="es">Nota es un editor simple de texto para móviles y el escritorio.</p>
     <p xml:lang="fi">Nota on yksinkertainen tekstimuokkain työpöytä- ja mobiilitietokoneille.</p>
     <p xml:lang="fr">Nota est un éditeur simple de texte pour les ordinateurs de bureau ou portables.</p>
+    <p xml:lang="hu">A Nota egy egyszerű szövegszerkesztő asztali és hordozható számítógépekre.</p>
     <p xml:lang="ia">Nota es un simple editor de texto per computatores mobile e de scriptorio</p>
     <p xml:lang="it">Nota è un semplice editor di testo per computer desktop e portatili.</p>
     <p xml:lang="ko">Nota는 데스크톱과 모바일용 간단한 텍스트 편집기입니다.</p>
@@ -88,6 +91,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="es">Nota</caption>
       <caption xml:lang="fi">Nota</caption>
       <caption xml:lang="fr">Nota</caption>
+      <caption xml:lang="hu">Nota</caption>
       <caption xml:lang="ia">Nota</caption>
       <caption xml:lang="it">Nota</caption>
       <caption xml:lang="ko">Nota</caption>
@@ -114,6 +118,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="es">Nota, encontrar diálogo</caption>
       <caption xml:lang="fi">Nota, etsi-ikkuna</caption>
       <caption xml:lang="fr">Nota, trouver la boîte de dialogue</caption>
+      <caption xml:lang="hu">Note, keresőablak</caption>
       <caption xml:lang="ia">Nota, dialogo de trovar</caption>
       <caption xml:lang="it">Nota, finestra Trova</caption>
       <caption xml:lang="ko">Nota 찾기 대화 상자</caption>
