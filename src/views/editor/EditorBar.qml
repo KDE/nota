@@ -101,14 +101,14 @@ Item
                         text: i18n("Save")
                         icon.name: "document-save"
                         enabled: currentEditor ? currentEditor.document.modified : false
-                        onTriggered: saveFile(control.currentEditor.fileUrl, control.currentEditor)
+                        onTriggered: saveFile(currentEditor.fileUrl, currentEditor)
                     }
 
                     Action
                     {
                         icon.name: "document-save-as"
                         text: i18n("Save as")
-                        onTriggered: saveFile("", control.currentEditor)
+                        onTriggered: saveFile("", currentEditor)
                     }
                 }
 
@@ -154,7 +154,7 @@ Item
                         checked: isFav
                         checkable: true
                         icon.name: "love"
-                        enabled: control.currentFileExistsLocally
+                        enabled: currentFileExistsLocally
                         onTriggered:
                         {
                             FB.Tagging.toggleFav(currentEditor.fileUrl)
@@ -164,7 +164,7 @@ Item
 
                     Action
                     {
-                        enabled: control.currentFileExistsLocally
+                        enabled: currentFileExistsLocally
                         text: i18n("Info")
                         icon.name: "documentinfo"
                         onTriggered:
@@ -176,7 +176,7 @@ Item
                     Action
                     {
                         text: i18n("Share")
-                        enabled: control.currentFileExistsLocally
+                        enabled: currentFileExistsLocally
                         icon.name: "document-share"
                         onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
 
@@ -207,7 +207,7 @@ Item
 
                 MenuItem
                 {
-                    enabled: control.currentFileExistsLocally
+                    enabled: currentFileExistsLocally
                     text: i18n("Show in folder")
                     icon.name: "folder-open"
                     onTriggered:
@@ -220,7 +220,7 @@ Item
                 {
                     text: i18n("Delete file")
                     icon.name: "edit-delete"
-                    enabled: control.currentFileExistsLocally
+                    enabled: currentFileExistsLocally
                     Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
                     onTriggered:
                     {
