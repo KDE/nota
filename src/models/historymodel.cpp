@@ -21,7 +21,7 @@ const FMH::MODEL_LIST &HistoryModel::items() const
 void HistoryModel::append(const QUrl &url)
 {
     auto urls = this->getHistory();
-    if (urls.contains(url.toString()) || !isTextDocument(url))
+    if (urls.contains(url) || !isTextDocument(url))
         return;
 
     emit this->preItemAppended();
