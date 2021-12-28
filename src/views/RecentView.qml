@@ -92,7 +92,6 @@ DocsBrowser
     {
         id: _selectionbar
 
-        padding: Maui.Style.space.big
         anchors.horizontalCenter: parent.horizontalCenter
         width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
         maxListHeight: root.height - (Maui.Style.contentMargins*2)
