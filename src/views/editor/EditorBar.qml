@@ -53,6 +53,11 @@ Item
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            padding: Maui.Style.space.tiny
+            leftPadding: padding
+            rightPadding: padding
+            topPadding: padding
+            bottomPadding: padding
 
             background: Rectangle
             {
@@ -63,12 +68,11 @@ Item
 
             contentItem: Maui.ListItemTemplate
             {
-                anchors.fill: parent
                 spacing: 0
                 label1.horizontalAlignment: Qt.AlignHCenter
                 label2.horizontalAlignment: Qt.AlignHCenter
                 label1.text: currentEditor.title
-                label2.text: currentEditor.fileUrl
+//                label2.text: currentEditor.fileUrl
                 label2.font.pointSize: Maui.Style.fontSizes.small
 
                 Kirigami.Icon

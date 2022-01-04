@@ -17,6 +17,7 @@ Maui.ApplicationWindow
 {
     id: root
     title: currentEditor ? currentTab.title : ""
+    Maui.App.darkMode: settings.darkMode
 
     altHeader: Kirigami.Settings.isMobile
     headBar.visible: false
@@ -57,6 +58,7 @@ Maui.ApplicationWindow
         property string theme : ""
         property color backgroundColor : root.Kirigami.Theme.backgroundColor
         property color textColor : root.Kirigami.Theme.textColor
+        property bool darkMode : true
 
         property font font : defaultFont
     }
@@ -198,12 +200,7 @@ Maui.ApplicationWindow
 
     Component.onCompleted:
     {
-        if(Maui.Handy.isAndroid)
-        {
-            Maui.Android.statusbarColor(headBar.Kirigami.Theme.backgroundColor, false)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, false)
-        }
-
+        setAndroidStatusBarColor()
         editorView.openTab("")
     }
 
@@ -233,6 +230,16 @@ Maui.ApplicationWindow
         {
             for(var i in urls)
                 editorView.openTab(urls[i])
+        }
+    }
+
+
+    function setAndroidStatusBarColor()
+    {
+        if(Maui.Handy.isAndroid)
+        {
+            Maui.Android.statusbarColor( Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
         }
     }
 
