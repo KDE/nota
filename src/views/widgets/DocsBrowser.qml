@@ -56,10 +56,11 @@ Maui.AltBrowser
         }
     }
 
-    headBar.middleContent: Maui.TextField
+    headBar.middleContent: Maui.SearchField
     {
         Layout.fillWidth: true
         Layout.maximumWidth: 500
+        Layout.alignment: Qt.AlignCenter
         placeholderText: i18n("Filter...")
         onAccepted: control.model.filter = text
         onCleared:  control.model.filter = text
