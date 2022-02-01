@@ -19,7 +19,6 @@ DocsBrowser
     holder.emoji: "qrc:/assets/dialog-information.svg"
     holder.title : i18n("No Recent Files!")
     holder.body: i18n("Here you will see your recently opened files")
-    holder.emojiSize: Maui.Style.iconSizes.huge
 
     headBar.farLeftContent: ToolButton
     {
