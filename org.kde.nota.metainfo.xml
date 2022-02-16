@@ -85,7 +85,7 @@ SPDX-License-Identifier: CC0-1.0
   <url type="donation">https://kde.org/community/donations</url>
   <screenshots>
     <screenshot type="default">
-      <caption>Nota</caption>
+      <caption>Nota, a text editor</caption>
       <caption xml:lang="ar">المحرر</caption>
       <caption xml:lang="ca">Nota</caption>
       <caption xml:lang="ca-valencia">Nota</caption>
@@ -109,7 +109,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="uk">Нота</caption>
       <caption xml:lang="x-test">xxNotaxx</caption>
       <caption xml:lang="zh-CN">Nota</caption>
-      <image type="source" width="2464" height="1929">
+      <image type="source">
         https://cdn.kde.org/screenshots/nota/nota.png
       </image>
     </screenshot>
@@ -136,7 +136,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="uk">Нота, діалогове вікно пошуку</caption>
       <caption xml:lang="x-test">xxNota, find dialogxx</caption>
       <caption xml:lang="zh-CN">Nota 的查找对话框</caption>
-      <image type="source" width="3285" height="2052">
+      <image type="source">
         https://cdn.kde.org/screenshots/nota/nota-tabs-find-dialog.png
       </image>
     </screenshot>
