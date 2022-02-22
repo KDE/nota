@@ -86,29 +86,6 @@ SPDX-License-Identifier: CC0-1.0
   <screenshots>
     <screenshot type="default">
       <caption>Nota, a text editor</caption>
-      <caption xml:lang="ar">المحرر</caption>
-      <caption xml:lang="ca">Nota</caption>
-      <caption xml:lang="ca-valencia">Nota</caption>
-      <caption xml:lang="cs">Nota</caption>
-      <caption xml:lang="de">Nota</caption>
-      <caption xml:lang="en-GB">Nota</caption>
-      <caption xml:lang="es">Nota</caption>
-      <caption xml:lang="fi">Nota</caption>
-      <caption xml:lang="fr">Nota</caption>
-      <caption xml:lang="hu">Nota</caption>
-      <caption xml:lang="ia">Nota</caption>
-      <caption xml:lang="it">Nota</caption>
-      <caption xml:lang="ko">Nota</caption>
-      <caption xml:lang="nl">Nota</caption>
-      <caption xml:lang="pl">Nota</caption>
-      <caption xml:lang="pt">Nota</caption>
-      <caption xml:lang="pt-BR">Nota</caption>
-      <caption xml:lang="sk">Nota</caption>
-      <caption xml:lang="sl">Nota</caption>
-      <caption xml:lang="sv">Nota</caption>
-      <caption xml:lang="uk">Нота</caption>
-      <caption xml:lang="x-test">xxNotaxx</caption>
-      <caption xml:lang="zh-CN">Nota</caption>
       <image type="source">
         https://cdn.kde.org/screenshots/nota/nota.png
       </image>
