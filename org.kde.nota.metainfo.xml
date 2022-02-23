@@ -86,6 +86,10 @@ SPDX-License-Identifier: CC0-1.0
   <screenshots>
     <screenshot type="default">
       <caption>Nota, a text editor</caption>
+      <caption xml:lang="ca">Nota, un editor de text</caption>
+      <caption xml:lang="nl">Nota, een tekstverwerker</caption>
+      <caption xml:lang="uk">Nota, текстовий редактор</caption>
+      <caption xml:lang="x-test">xxNota, a text editorxx</caption>
       <image type="source">
         https://cdn.kde.org/screenshots/nota/nota.png
       </image>
