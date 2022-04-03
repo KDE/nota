@@ -58,7 +58,7 @@ SPDX-License-Identifier: CC0-1.0
     <p>Nota is a simple text editor for desktop and mobile computers.</p>
     <p xml:lang="ar">المحرر هو محرر نصوص بسيط لأجهزة الحاسوب المكتبية والمحمولة.</p>
     <p xml:lang="ca">El Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
-    <p xml:lang="ca-valencia">El Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
+    <p xml:lang="ca-valencia">Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
     <p xml:lang="cs">Nota je jednoduchý editor textu pro pracovní a mobilní počítače.</p>
     <p xml:lang="de">Nota ist ein einfacher Texteditor für die Arbeitsfläche und Mobilgeräte.</p>
     <p xml:lang="en-GB">Nota is a simple text editor for desktop and mobile computers.</p>
@@ -89,6 +89,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ca">Nota, un editor de text</caption>
       <caption xml:lang="ca-valencia">Nota, un editor de text</caption>
       <caption xml:lang="cs">Nota, textový editor</caption>
+      <caption xml:lang="en-GB">Nota, a text editor</caption>
       <caption xml:lang="es">Nota, un editor de texto</caption>
       <caption xml:lang="fi">Nota, tekstimuokkain</caption>
       <caption xml:lang="fr">Nota, un éditeur de texte</caption>
