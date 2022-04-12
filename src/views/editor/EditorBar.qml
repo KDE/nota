@@ -53,17 +53,26 @@ Item
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            padding: Maui.Style.space.tiny
+            padding: Maui.Style.space.small
             leftPadding: padding
             rightPadding: padding
             topPadding: padding
             bottomPadding: padding
 
-            background: Rectangle
+            background: Kirigami.ShadowedRectangle
             {
                 color: Qt.lighter(Kirigami.Theme.backgroundColor)
                 border.width: 1
                 border.color: _docMenu.visible ? Kirigami.Theme.highlightColor : color
+
+                corners
+                {
+                    topLeftRadius: 0
+                    topRightRadius: Maui.Style.radiusV
+                    bottomLeftRadius: 0
+                    bottomRightRadius: Maui.Style.radiusV
+                }
+
             }
 
             contentItem: Maui.ListItemTemplate
@@ -248,125 +257,6 @@ Item
                             FB.FM.deleteFile(currentEditor.fileUrl)
                         }
                     }
-                }
-            }
-        }
-
-        AbstractButton
-        {
-            focusPolicy: Qt.NoFocus
-
-            Layout.fillHeight: true
-            implicitWidth: height * 1.4
-
-            background: Kirigami.ShadowedRectangle
-            {
-                color: Qt.lighter(Kirigami.Theme.backgroundColor)
-
-                corners
-                {
-                    topLeftRadius: 0
-                    topRightRadius: Maui.Style.radiusV
-                    bottomLeftRadius: 0
-                    bottomRightRadius: Maui.Style.radiusV
-                }
-            }
-
-            onClicked: _overflowMenu.show(0,  height + Maui.Style.space.medium)
-
-            Kirigami.Icon
-            {
-                anchors.centerIn: parent
-                source: "overflow-menu"
-                implicitHeight: Maui.Style.iconSizes.small
-                implicitWidth: implicitHeight
-            }
-
-            Maui.ContextualMenu
-            {
-                id: _overflowMenu
-
-                Maui.MenuItemActionRow
-                {
-                    Action
-                    {
-                        icon.name: checked ? "view-readermode-active" : "view-readermode"
-                        text: i18n("Focus")
-                        checked: root.focusMode
-                        checkable: true
-                        onTriggered: root.focusMode = !root.focusMode
-                    }
-
-                    Action
-                    {
-                        text: i18n("Terminal")
-                        icon.name: "dialog-scripts"
-                        enabled: Maui.Handy.isLinux
-                        onTriggered: currentTab.toggleTerminal()
-                        checkable: true
-                        checked: currentTab ? currentTab.terminalVisible : false
-                    }
-
-                    Action
-                    {
-                        enabled: settings.supportSplit
-                        text: i18n("Split")
-                        icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
-                        checked: root.currentTab && root.currentTab.count === 2
-                        checkable: true
-                        onTriggered:
-                        {
-                            if(root.currentTab.count === 2)
-                            {
-                                root.currentTab.pop()
-                                return
-                            }//close the inactive split
-
-                            root.currentTab.split("")
-                        }
-                    }
-                }
-
-                MenuSeparator {}
-
-                MenuItem
-                {
-                    text: i18n("Shortcuts")
-                    icon.name: "configure-shortcuts"
-                    onTriggered:
-                    {
-                        _dialogLoader.sourceComponent = _shortcutsDialogComponent
-                        dialog.open()
-                    }
-                }
-
-                MenuItem
-                {
-                    text: i18n("Settings")
-                    icon.name: "settings-configure"
-                    onTriggered:
-                    {
-                        _dialogLoader.sourceComponent = _settingsDialogComponent
-                        dialog.open()
-                    }
-                }
-
-                MenuItem
-                {
-                    text: i18n("Plugins")
-                    icon.name: "system-run"
-                    onTriggered:
-                    {
-                        _dialogLoader.sourceComponent = _plugingsDialogComponent
-                        dialog.open()
-                    }
-                }
-
-                MenuItem
-                {
-                    text: i18n("About")
-                    icon.name: "documentinfo"
-                    onTriggered: root.about()
                 }
             }
         }

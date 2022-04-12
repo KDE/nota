@@ -58,13 +58,104 @@ Maui.Page
         }
     }
 
-    headBar.farRightContent: ToolButton
+    headBar.farRightContent: Maui.ToolButtonMenu
     {
         icon.name: "list-add"
-        onClicked:
+
+        MenuItem
         {
-            _dialogLoader.sourceComponent = _newDocumentDialogComponent
-            dialog.open()
+            icon.name: "list-add"
+            text: i18n("New")
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _newDocumentDialogComponent
+                dialog.open()
+            }
+        }
+
+        MenuSeparator {}
+
+        Maui.MenuItemActionRow
+        {
+            Action
+            {
+                icon.name: checked ? "view-readermode-active" : "view-readermode"
+                text: i18n("Focus")
+                checked: root.focusMode
+                checkable: true
+                onTriggered: root.focusMode = !root.focusMode
+            }
+
+            Action
+            {
+                text: i18n("Terminal")
+                icon.name: "dialog-scripts"
+                enabled: Maui.Handy.isLinux
+                onTriggered: currentTab.toggleTerminal()
+                checkable: true
+                checked: currentTab ? currentTab.terminalVisible : false
+            }
+
+            Action
+            {
+                enabled: settings.supportSplit
+                text: i18n("Split")
+                icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+                checked: root.currentTab && root.currentTab.count === 2
+                checkable: true
+                onTriggered:
+                {
+                    if(root.currentTab.count === 2)
+                    {
+                        root.currentTab.pop()
+                        return
+                    }//close the inactive split
+
+                    root.currentTab.split("")
+                }
+            }
+        }
+
+        MenuSeparator {}
+
+        MenuItem
+        {
+            text: i18n("Shortcuts")
+            icon.name: "configure-shortcuts"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _shortcutsDialogComponent
+                dialog.open()
+            }
+        }
+
+        MenuItem
+        {
+            text: i18n("Settings")
+            icon.name: "settings-configure"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _settingsDialogComponent
+                dialog.open()
+            }
+        }
+
+        MenuItem
+        {
+            text: i18n("Plugins")
+            icon.name: "system-run"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _plugingsDialogComponent
+                dialog.open()
+            }
+        }
+
+        MenuItem
+        {
+            text: i18n("About")
+            icon.name: "documentinfo"
+            onTriggered: root.about()
         }
     }
 
