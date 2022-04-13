@@ -64,12 +64,31 @@ Maui.Page
 
         MenuItem
         {
+            icon.name: "folder-open"
+            text: i18n("Open Files")
+            onTriggered:
+            {
+                 openFileDialog()
+            }
+        }
+
+        MenuItem
+        {
+            icon.name: "folder-recent"
+            text: i18n("Open Recent Files")
+            onTriggered:
+            {
+               _stackView.push(historyViewComponent)
+            }
+        }
+
+        MenuItem
+        {
             icon.name: "list-add"
             text: i18n("New")
             onTriggered:
             {
-                _dialogLoader.sourceComponent = _newDocumentDialogComponent
-                dialog.open()
+                editorView.openTab("")
             }
         }
 

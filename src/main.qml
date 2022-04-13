@@ -98,13 +98,6 @@ Maui.ApplicationWindow
 
         Widgets.PluginsDialog {}
     }
-
-    Component
-    {
-        id: _newDocumentDialogComponent
-
-        NewFileDialog {}
-    }
     Loader
     {
         id: _dialogLoader
