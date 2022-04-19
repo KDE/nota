@@ -49,6 +49,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="pl">Przeglądaj, twórz i zmieniaj pliki tekstowe</summary>
   <summary xml:lang="pt">Navegue, crie e edite ficheiros de texto</summary>
   <summary xml:lang="pt-BR">Navegar, criar e editar arquivos de texto</summary>
+  <summary xml:lang="sk">Prehliadanie, vytváranie a editovanie textových súborov</summary>
   <summary xml:lang="sl">Brskajte, ustvarjajte in urejajte besedilne datoteke</summary>
   <summary xml:lang="sv">Bläddra bland, skapa och redigera textfiler</summary>
   <summary xml:lang="uk">Перегляд, створення та редагування текстових файлів</summary>
@@ -99,6 +100,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="pl">Nota, edytor tekstu</caption>
       <caption xml:lang="pt">Nota, um editor de texto</caption>
       <caption xml:lang="pt-BR">Nota, um editor de texto</caption>
+      <caption xml:lang="sk">Nota, textový editor</caption>
       <caption xml:lang="sl">Nota, urejevalnik besedil</caption>
       <caption xml:lang="sv">Nota, en texteditor</caption>
       <caption xml:lang="uk">Nota, текстовий редактор</caption>
@@ -125,6 +127,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="pl">Nota, okno wyszukiwania</caption>
       <caption xml:lang="pt">Nota - janela de pesquisa</caption>
       <caption xml:lang="pt-BR">Nota, janela Encontrar</caption>
+      <caption xml:lang="sk">Nota, dialóg vyhľadávania</caption>
       <caption xml:lang="sl">Nota, najdi dialog</caption>
       <caption xml:lang="sv">Nota, sökdialogruta</caption>
       <caption xml:lang="uk">Нота, діалогове вікно пошуку</caption>
