@@ -111,7 +111,7 @@ Maui.SettingsDialog
         {
             label1.text:  i18n("Family")
 
-            Maui.ComboBox
+            Maui.FontsComboBox
             {
                 Layout.fillWidth: true
                 model: Qt.fontFamilies()
