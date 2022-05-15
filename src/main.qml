@@ -197,11 +197,10 @@ Maui.ApplicationWindow
         editorView.openTab("")
     }
 
-    StackView
+    Maui.StackView
     {
         id: _stackView
         anchors.fill: parent
-        focus: true
 
         initialItem: EditorView
         {
