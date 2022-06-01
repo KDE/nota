@@ -190,7 +190,7 @@ Maui.AbstractSideBar
                 floatingFooter: false
                 background: Rectangle
                 {
-                    color: Kirigami.Theme.backgroundColor
+                    color: Maui.Theme.backgroundColor
                     opacity: 0.2
                 }
                 browser.background:null

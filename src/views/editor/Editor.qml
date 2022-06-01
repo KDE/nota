@@ -27,7 +27,7 @@ Maui.SplitViewItem
         body.font.family: settings.font.family
         body.font.pointSize: settings.font.pointSize
         document.backgroundColor: settings.backgroundColor
-        Kirigami.Theme.backgroundColor: settings.backgroundColor
+        Maui.Theme.backgroundColor: settings.backgroundColor
         document.theme: settings.theme
         document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
         document.autoSave: settings.autoSave

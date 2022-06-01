@@ -44,7 +44,7 @@ DocsBrowser
     Maui.Chip
     {
         z: control.z + 99999
-        Kirigami.Theme.colorSet:Kirigami.Theme.Complementary
+        Maui.Theme.colorSet:Maui.Theme.Complementary
         visible: _typingTimer.running
         label.text: typingQuery
         anchors.left: parent.left

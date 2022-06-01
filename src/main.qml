@@ -17,9 +17,8 @@ Maui.ApplicationWindow
 {
     id: root
     title: currentEditor ? currentTab.title : ""
-    Maui.App.darkMode: settings.darkMode
-
-    altHeader: Kirigami.Settings.isMobile
+//    Maui.Style.styleType: settings.darkMode
+    altHeader: Maui.Handy.isMobile
     headBar.visible: false
 
     readonly property var views : ({editor: 0, recent: 1, documents: 2})
@@ -40,7 +39,7 @@ Maui.ApplicationWindow
         view: root
         geometry: Qt.rect(root.x, root.y, root.width, root.height)
         windowRadius: root.background.radius
-        enabled: !Kirigami.Settings.isMobile
+        enabled: !Maui.Handy.isMobile
     }
 
     Settings
@@ -56,8 +55,8 @@ Maui.ApplicationWindow
         property bool supportSplit :true
         property double tabSpace: 8
         property string theme : ""
-        property color backgroundColor : root.Kirigami.Theme.backgroundColor
-        property color textColor : root.Kirigami.Theme.textColor
+        property color backgroundColor : root.Maui.Theme.backgroundColor
+        property color textColor : root.Maui.Theme.textColor
         property bool darkMode : true
 
         property font font : defaultFont
@@ -230,8 +229,8 @@ Maui.ApplicationWindow
     {
         if(Maui.Handy.isAndroid)
         {
-            Maui.Android.statusbarColor( Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.navBarColor(headBar.visible ? headBar.Maui.Theme.backgroundColor : Maui.Theme.backgroundColor, !Maui.App.darkMode)
         }
     }
 

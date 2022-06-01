@@ -56,7 +56,7 @@ Maui.ContextualMenu
         icon.name: "item-select"
         onTriggered:
         {
-            if(Kirigami.Settings.isMobile)
+            if(Maui.Handy.isMobile)
                 root.selectionMode = true
 
             addToSelection(control.model.get(index))
@@ -121,7 +121,7 @@ Maui.ContextualMenu
     {
         text: i18n("Remove")
         icon.name: "edit-delete"
-        Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
+        Maui.Theme.textColor: Maui.Theme.negativeTextColor
         onTriggered:
         {
             removeDialog.open()

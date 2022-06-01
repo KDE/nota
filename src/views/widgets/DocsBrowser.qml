@@ -78,7 +78,7 @@ Maui.AltBrowser
             template.imageWidth: control.gridView.itemSize
             template.imageHeight: control.gridView.itemSize
 
-            anchors.margins: Kirigami.Settings.isMobile ? Maui.Style.space.small : Maui.Style.space.medium
+            anchors.margins: Maui.Handy.isMobile ? Maui.Style.space.small : Maui.Style.space.medium
             anchors.fill: parent
 
             draggable: true

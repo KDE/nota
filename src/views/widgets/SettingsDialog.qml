@@ -193,7 +193,7 @@ Maui.SettingsDialog
                     case "#fafafa": textColor = "#333"; break;
                     case "#fff3e6": textColor = Qt.darker(color, 2); break;
                     case "#4c425b": textColor = Qt.lighter(color, 2.5); break;
-                    default: textColor = Kirigami.Theme.textColor;
+                    default: textColor = Maui.Theme.textColor;
                     }
 
                     switchBackgroundColor(color, textColor)

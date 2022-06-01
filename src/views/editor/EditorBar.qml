@@ -28,7 +28,7 @@ Item
 
             background: Kirigami.ShadowedRectangle
             {
-                color: Qt.lighter(Kirigami.Theme.backgroundColor)
+                color: Qt.lighter(Maui.Theme.backgroundColor)
 
                 corners
                 {
@@ -61,9 +61,9 @@ Item
 
             background: Kirigami.ShadowedRectangle
             {
-                color: Qt.lighter(Kirigami.Theme.backgroundColor)
+                color: Qt.lighter(Maui.Theme.backgroundColor)
                 border.width: 1
-                border.color: _docMenu.visible ? Kirigami.Theme.highlightColor : color
+                border.color: _docMenu.visible ? Maui.Theme.highlightColor : color
 
                 corners
                 {
@@ -234,7 +234,7 @@ Item
                     text: i18n("Delete file")
                     icon.name: "edit-delete"
                     enabled: currentFileExistsLocally
-                    Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
+                    Maui.Theme.textColor: Maui.Theme.negativeTextColor
                     onTriggered:
                     {
                         _removeDialog.open()

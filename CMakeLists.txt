@@ -5,7 +5,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(NOTA_VERSION 2.1.2)
+set(NOTA_VERSION 2.2.0)
 project(nota VERSION ${NOTA_VERSION})
 
 set(CMAKE_CXX_STANDARD 17)

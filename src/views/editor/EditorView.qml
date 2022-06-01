@@ -24,7 +24,7 @@ Maui.Page
     property alias model : _editorListView.contentModel
     property alias tabView : _editorListView
 
-    altHeader: Kirigami.Settings.isMobile
+    altHeader: Maui.Handy.isMobile
     headBar.visible: _editorListView.count > 0
     autoHideHeader: focusMode
     headBar.forceCenterMiddleContent: root.isWide
@@ -33,7 +33,7 @@ Maui.Page
     showTitle: false
     showCSDControls: true
 
-    headerColorSet: altHeader ? Kirigami.Theme.Window : Kirigami.Theme.Header
+    headerColorSet: altHeader ? Maui.Theme.Window : Maui.Theme.Header
 
     headBar.leftContent: Loader
     {
