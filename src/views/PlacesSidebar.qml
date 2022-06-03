@@ -2,15 +2,13 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.kirigami 2.7 as Kirigami
-
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
 Maui.AbstractSideBar
 {
     id: control
-    preferredWidth: Kirigami.Units.gridUnit * 16
+    preferredWidth: Maui.Style.units.gridUnit * 16
     collapsed: !isWide
     collapsible: true
     dragMargin: Maui.Style.space.big

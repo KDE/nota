@@ -12,6 +12,8 @@ Item
 {
     id: control
     implicitHeight: Maui.Style.rowHeight
+    Maui.Theme.colorSet: Maui.Theme.Button
+        Maui.Theme.inherit: false
 
     RowLayout
     {
@@ -28,7 +30,7 @@ Item
 
             background: Kirigami.ShadowedRectangle
             {
-                color: Qt.lighter(Maui.Theme.backgroundColor)
+                color: Maui.Theme.backgroundColor
 
                 corners
                 {
@@ -61,10 +63,9 @@ Item
 
             background: Kirigami.ShadowedRectangle
             {
-                color: Qt.lighter(Maui.Theme.backgroundColor)
+                color: Maui.Theme.backgroundColor
                 border.width: 1
                 border.color: _docMenu.visible ? Maui.Theme.highlightColor : color
-
                 corners
                 {
                     topLeftRadius: 0
