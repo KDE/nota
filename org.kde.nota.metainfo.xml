@@ -35,7 +35,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary>Browse, create and edit text files</summary>
   <summary xml:lang="ar">تصفح وأنشئ وحرر الملفات النصية</summary>
   <summary xml:lang="ca">Navegueu, creeu, i editeu fitxers de text</summary>
-  <summary xml:lang="ca-valencia">Navegueu, creeu, i editeu fitxers de text</summary>
+  <summary xml:lang="ca-valencia">Navegueu, creeu, i editeu fichers de text</summary>
   <summary xml:lang="cs">Prohlížejte, vytvářejte a upravujte textové soubory</summary>
   <summary xml:lang="de">Textdaten durchsehen, erstellen und bearbeiten</summary>
   <summary xml:lang="en-GB">Browse, create and edit text files</summary>
@@ -117,7 +117,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption>Nota, find dialog</caption>
       <caption xml:lang="ar">حواري البحث، المحرر</caption>
       <caption xml:lang="ca">Nota, diàleg de cerca</caption>
-      <caption xml:lang="ca-valencia">Nota, diàleg de busca</caption>
+      <caption xml:lang="ca-valencia">Nota, diàlec de busca</caption>
       <caption xml:lang="de">Notas Suchdialog</caption>
       <caption xml:lang="en-GB">Nota, find dialog</caption>
       <caption xml:lang="es">Nota, encontrar diálogo</caption>
