@@ -42,8 +42,9 @@ Item
             }
             onClicked: currentEditor.body.undo()
 
-            Kirigami.Icon
+            Maui.Icon
             {
+                color: Maui.Theme.textColor
                 anchors.centerIn: parent
                 source: "edit-undo"
                 implicitHeight: Maui.Style.iconSizes.small
@@ -85,8 +86,9 @@ Item
 //                label2.text: currentEditor.fileUrl
                 label2.font.pointSize: Maui.Style.fontSizes.small
 
-                Kirigami.Icon
+                Maui.Icon
                 {
+                    color: Maui.Theme.textColor
                     source: _docMenu.visible ? "go-up" : "go-down"
                     implicitHeight: Maui.Style.iconSizes.small
                     implicitWidth: implicitHeight
