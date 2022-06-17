@@ -3,7 +3,6 @@ import QtQuick.Controls 2.14
 
 import Qt.labs.settings 1.0
 
-import org.kde.kirigami 2.7 as Kirigami
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 

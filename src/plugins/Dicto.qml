@@ -1,9 +1,8 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.7 as Kirigami
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
+
+import org.kde.mauikit 1.3 as Maui
 import org.maui.nota 1.0 as Nota
 
 Maui.Page
