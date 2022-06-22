@@ -5,15 +5,10 @@ import QtQuick.Layouts 1.3
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
-Maui.AbstractSideBar
+Item
 {
     id: control
-    preferredWidth: Maui.Style.units.gridUnit * 16
-    collapsed: !isWide
-    collapsible: true
-    dragMargin: Maui.Style.space.big
 
-    enabled: settings.enableSidebar
 
     property alias page : _loader.item
 

@@ -16,9 +16,7 @@ Maui.ApplicationWindow
 {
     id: root
     title: currentEditor ? currentTab.title : ""
-//    Maui.Style.styleType: settings.darkMode
-    altHeader: Maui.Handy.isMobile
-    headBar.visible: false
+    //    Maui.Style.styleType: settings.darkMode
 
     readonly property var views : ({editor: 0, recent: 1, documents: 2})
 
@@ -164,9 +162,34 @@ Maui.ApplicationWindow
         }
     }
 
-    sideBar: PlacesSidebar
+    Maui.SideBarView
     {
-        id : _drawer
+        id: _sideBarView
+        sideBar.enabled: settings.enableSidebar
+
+        sideBarContent: PlacesSidebar
+        {
+            id : _drawer
+            anchors.fill: parent
+        }
+
+        Maui.StackView
+        {
+            id: _stackView
+            anchors.fill: parent
+
+            initialItem: EditorView
+            {
+                id: editorView
+            }
+
+            Component
+            {
+                id: historyViewComponent
+
+                RecentView {}
+            }
+        }
     }
 
     Loader
@@ -193,24 +216,6 @@ Maui.ApplicationWindow
     {
         setAndroidStatusBarColor()
         editorView.openTab("")
-    }
-
-    Maui.StackView
-    {
-        id: _stackView
-        anchors.fill: parent
-
-        initialItem: EditorView
-        {
-            id: editorView
-        }
-
-        Component
-        {
-            id: historyViewComponent
-
-            RecentView {}
-        }
     }
 
     Connections
