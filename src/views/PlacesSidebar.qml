@@ -36,7 +36,6 @@ Item
             footBar.middleContent: Maui.ComboBox
             {
                 Layout.fillWidth: true
-                z : _drawer.z + 9999
                 model: Maui.BaseModel
                 {
                     list: FB.PlacesList

@@ -31,13 +31,13 @@ Maui.ApplicationWindow
     //Global editor props
     property alias appSettings: settings
 
-    Maui.WindowBlur
-    {
-        view: root
-        geometry: Qt.rect(root.x, root.y, root.width, root.height)
-        windowRadius: root.background.radius
-        enabled: !Maui.Handy.isMobile
-    }
+//    Maui.WindowBlur
+//    {
+//        view: root
+//        geometry: Qt.rect(root.x, root.y, root.width, root.height)
+//        windowRadius: Maui.Style.radiusV
+//        enabled: !Maui.Handy.isMobile
+//    }
 
     Settings
     {
@@ -55,7 +55,7 @@ Maui.ApplicationWindow
         property color backgroundColor : root.Maui.Theme.backgroundColor
         property color textColor : root.Maui.Theme.textColor
         property bool darkMode : true
-
+        property alias sideBarWidth : _sideBarView.sideBar.preferredWidth
         property font font : defaultFont
     }
 
@@ -162,35 +162,38 @@ Maui.ApplicationWindow
         }
     }
 
-    Maui.SideBarView
+
+
+    Maui.StackView
     {
-        id: _sideBarView
-        sideBar.enabled: settings.enableSidebar
+        id: _stackView
+        anchors.fill: parent
 
-        sideBarContent: PlacesSidebar
+        initialItem:  Maui.SideBarView
         {
-            id : _drawer
-            anchors.fill: parent
-        }
+            id: _sideBarView
+            sideBar.enabled: settings.enableSidebar
 
-        Maui.StackView
-        {
-            id: _stackView
-            anchors.fill: parent
-
-            initialItem: EditorView
+            sideBarContent: PlacesSidebar
+            {
+                id : _drawer
+                anchors.fill: parent
+            }
+            EditorView
             {
                 id: editorView
-            }
-
-            Component
-            {
-                id: historyViewComponent
-
-                RecentView {}
+                anchors.fill: parent
             }
         }
+
+        Component
+        {
+            id: historyViewComponent
+
+            RecentView {}
+        }
     }
+
 
     Loader
     {
