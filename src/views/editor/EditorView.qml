@@ -31,8 +31,6 @@ Maui.Page
     showTitle: false
     showCSDControls: true
 
-    headerColorSet: altHeader ? Maui.Theme.Window : Maui.Theme.Header
-
     headBar.leftContent: Loader
     {
         active: settings.enableSidebar

@@ -11,6 +11,7 @@ DocsBrowser
 {
     id: control
     property bool selectionMode : false
+    altHeader: Maui.Handy.isMobile
 
     headBar.forceCenterMiddleContent: false
     floatingFooter: true

@@ -88,7 +88,7 @@ Item
                 {
                     color: Maui.Theme.textColor
                     source: _docMenu.visible ? "go-up" : "go-down"
-                    implicitHeight: Maui.Style.iconSizes.small
+                    implicitHeight: Maui.Style.iconSize
                     implicitWidth: implicitHeight
                 }
             }

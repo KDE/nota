@@ -19,7 +19,6 @@ Maui.SplitViewItem
         id: _editor
         anchors.fill: parent
 
-        headBar.visible: false
         showLineNumbers: settings.showLineNumbers
         body.color: settings.textColor
         body.font.family: settings.font.family
@@ -33,13 +32,13 @@ Maui.SplitViewItem
 
         onFileUrlChanged: syncTerminal(_editor.fileUrl)
 
-        footBar.visible: settings.showSyntaxHighlightingLanguages
-        footBar.rightContent: ComboBox
-        {
-            model: editor.document.getLanguageNameList()
-            currentIndex: -1
-            onCurrentIndexChanged: editor.document.formatName = model[currentIndex]
-        }
+//        footBar.visible: settings.showSyntaxHighlightingLanguages
+//        footBar.rightContent: ComboBox
+//        {
+//            model: editor.document.getLanguageNameList()
+//            currentIndex: -1
+//            onCurrentIndexChanged: editor.document.formatName = model[currentIndex]
+//        }
 
         Keys.enabled: true
         Keys.onPressed:
@@ -59,7 +58,7 @@ Maui.SplitViewItem
 
             if((event.key === Qt.Key_O) && (event.modifiers & Qt.ControlModifier))
             {
-                openFile()
+                openFileDialog()
                 event.accepted = true
             }
 

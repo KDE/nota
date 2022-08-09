@@ -16,7 +16,7 @@ Maui.ApplicationWindow
 {
     id: root
     title: currentEditor ? currentTab.title : ""
-    //    Maui.Style.styleType: settings.darkMode
+    Maui.Style.styleType: Maui.Handy.isAndroid ? (appSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
     readonly property var views : ({editor: 0, recent: 1, documents: 2})
 
@@ -42,7 +42,6 @@ Maui.ApplicationWindow
     Settings
     {
         id: settings
-        category: "General"
 
         property bool enableSidebar : false
         property bool showLineNumbers : true
@@ -52,9 +51,9 @@ Maui.ApplicationWindow
         property bool supportSplit :true
         property double tabSpace: 8
         property string theme : ""
-        property color backgroundColor : root.Maui.Theme.backgroundColor
-        property color textColor : root.Maui.Theme.textColor
-        property bool darkMode : true
+        property string backgroundColor : "white"
+        property string textColor : "black"
+        property bool darkMode : Maui.Style.styleType === Maui.Style.Dark
         property alias sideBarWidth : _sideBarView.sideBar.preferredWidth
         property font font : defaultFont
     }
@@ -169,7 +168,7 @@ Maui.ApplicationWindow
         id: _stackView
         anchors.fill: parent
 
-        initialItem:  Maui.SideBarView
+        initialItem: Maui.SideBarView
         {
             id: _sideBarView
             sideBar.enabled: settings.enableSidebar
@@ -179,6 +178,7 @@ Maui.ApplicationWindow
                 id : _drawer
                 anchors.fill: parent
             }
+
             EditorView
             {
                 id: editorView
@@ -193,7 +193,6 @@ Maui.ApplicationWindow
             RecentView {}
         }
     }
-
 
     Loader
     {
@@ -236,8 +235,8 @@ Maui.ApplicationWindow
     {
         if(Maui.Handy.isAndroid)
         {
-            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !Maui.App.darkMode)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Maui.Theme.backgroundColor : Maui.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !appSettings.darkMode)
+            Maui.Android.navBarColor( Maui.Theme.backgroundColor, !appSettings.darkMode)
         }
     }
 

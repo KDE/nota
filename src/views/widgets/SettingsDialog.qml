@@ -203,7 +203,7 @@ Maui.SettingsDialog
 
     function switchBackgroundColor(backgroundColor, textColor)
     {
-        settings.backgroundColor = backgroundColor
-        settings.textColor = textColor
+        root.appSettings.backgroundColor = backgroundColor
+        root.appSettings.textColor = textColor
     }
 }

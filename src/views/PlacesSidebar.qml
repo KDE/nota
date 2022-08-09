@@ -180,6 +180,7 @@ Item
                 headBar.rightLayout.visible: false
                 headBar.rightLayout.width: 0
                 floatingFooter: false
+                listItemSize: 22
                 background: Rectangle
                 {
                     color: Maui.Theme.backgroundColor
