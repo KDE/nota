@@ -161,8 +161,6 @@ Maui.ApplicationWindow
         }
     }
 
-
-
     Maui.StackView
     {
         id: _stackView
@@ -235,8 +233,8 @@ Maui.ApplicationWindow
     {
         if(Maui.Handy.isAndroid)
         {
-            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !appSettings.darkMode)
-            Maui.Android.navBarColor( Maui.Theme.backgroundColor, !appSettings.darkMode)
+            Maui.Android.statusbarColor(Maui.Theme.backgroundColor, !appSettings.darkMode)
+            Maui.Android.navBarColor(Maui.Theme.backgroundColor, !appSettings.darkMode)
         }
     }
 

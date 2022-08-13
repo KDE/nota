@@ -176,7 +176,7 @@ Maui.SettingsDialog
             Maui.ColorsRow
             {
                 spacing: Maui.Style.space.medium
-
+                currentColor: appSettings.backgroundColor
                 colors: ["#333", "#fafafa", "#fff3e6", "#4c425b"]
 
                 onColorPicked:
