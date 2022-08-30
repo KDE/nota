@@ -184,6 +184,26 @@ Maui.Page
         sourceComponent: EditorBar {}
     }
 
+//    Loader
+//    {
+//        anchors.fill: parent
+//        asynchronous: true
+//        sourceComponent: DropArea
+//        {
+//            id: _dropArea
+//            property var urls : []
+//            onDropped:
+//            {
+//                if(drop.urls)
+//                {
+//                    var m_urls = drop.urls.join(",")
+//                    _dropArea.urls = m_urls.split(",")
+//                    Nota.Nota.requestFiles( _dropArea.urls )
+//                }
+//            }
+//        }
+//    }
+
     ColumnLayout
     {
         id: _pluginLayout
