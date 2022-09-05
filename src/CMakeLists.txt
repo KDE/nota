@@ -6,6 +6,7 @@
 set(nota_SRCS
     main.cpp
     models/historymodel.cpp
+    controllers/server.cpp
     )
 
 set(nota_HDRS
@@ -24,6 +25,12 @@ else()
         qt5_add_resources(nota_QML_QRC qml.qrc plugins/plugins.qrc)
 endif()
 
+if(UNIX AND NOT ANDROID)
+    qt_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/controllers/server.h org.kde.Nota.xml)
+    qt_add_dbus_adaptor(nota_dbus_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.Nota.xml controllers/server.h Server)
+    qt_add_dbus_interface(nota_dbus_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.Nota.xml notainterface)
+endif()
+
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED
         ${nota_SRCS}
@@ -34,6 +41,7 @@ if(ANDROID)
 else()
     add_executable(${PROJECT_NAME}
         ${nota_SRCS}
+        ${nota_dbus_SRCS}
         ${nota_HDRS}
         ${nota_ASSETS}
         ${nota_QML_QRC}
@@ -43,7 +51,7 @@ endif()
 if (ANDROID)
     target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
 elseif(UNIX)
-    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
+    target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::DBus)
 endif()
 
 target_compile_definitions(${PROJECT_NAME}

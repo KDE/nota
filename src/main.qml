@@ -31,13 +31,13 @@ Maui.ApplicationWindow
     //Global editor props
     property alias appSettings: settings
 
-//    Maui.WindowBlur
-//    {
-//        view: root
-//        geometry: Qt.rect(root.x, root.y, root.width, root.height)
-//        windowRadius: Maui.Style.radiusV
-//        enabled: !Maui.Handy.isMobile
-//    }
+    //    Maui.WindowBlur
+    //    {
+    //        view: root
+    //        geometry: Qt.rect(root.x, root.y, root.width, root.height)
+    //        windowRadius: Maui.Style.radiusV
+    //        enabled: !Maui.Handy.isMobile
+    //    }
 
     Settings
     {
@@ -195,19 +195,7 @@ Maui.ApplicationWindow
     Component.onCompleted:
     {
         setAndroidStatusBarColor()
-        editorView.openTab("")
     }
-
-    Connections
-    {
-        target: Nota.Nota
-        function onOpenFiles(urls)
-        {
-            for(var i in urls)
-                editorView.openTab(urls[i])
-        }
-    }
-
 
     function setAndroidStatusBarColor()
     {
@@ -233,11 +221,43 @@ Maui.ApplicationWindow
         dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)
         dialog.callback =  function (urls)
         {
-            for(var url of urls)
-            {
-                editorView.openTab(url)
-            }
+            root.openFiles(urls)
         }
         dialog.open()
+    }
+
+    function activateWindow()
+    {
+        console.log("RAISE WINDOW FORM QML")
+        root.raise()
+        //        root.requ
+    }
+
+    function openFile(url : string)
+    {
+        editorView.openTab(url)
+    }
+
+    function openFiles(urls : variant)
+    {
+        for(var url of urls)
+        {
+            root.openFile(url)
+        }
+    }
+
+    function openTab()
+    {
+        editorView.openTab("")
+    }
+
+    function isUrlOpen(url : string) : bool
+    {
+        return editorView.isUrlOpen(url)
+    }
+
+        function focusFile(url : string)
+        {
+        editorView.openTab(url)
     }
 }

@@ -24,24 +24,7 @@ public:
     Nota(Nota &&) = delete;
     Nota &operator=(Nota &&) = delete;
 
-public slots:
-    void requestFiles(const QStringList &urls)
-    {
-        qDebug() << "REQUEST FILES" << urls;
-        QStringList res;
-        for (const auto &url : urls) {
-            const auto url_ = QUrl::fromUserInput(url);
-            qDebug() << "REQUEST FILES" << url_.toString() << FMStatic::getMime(url_);
-
-            if (FMStatic::checkFileType(FMStatic::FILTER_TYPE::TEXT, FMStatic::getMime(url_)))
-                res << url_.toString();
-        }
-
-        qDebug() << "REQUEST FILES" << res;
-
-        emit this->openFiles(res);
-    }   
-
+public slots:    
     bool run(const QString &process, const QStringList &params = {})
     {
         auto m_process = new QProcess;
@@ -52,9 +35,6 @@ public slots:
         m_process->start(process, params);
         return true;
     }
-
-signals:
-    void openFiles(QStringList urls);
 
 private:
     explicit Nota(QObject *parent = nullptr)

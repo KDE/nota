@@ -21,6 +21,8 @@
 // Models
 #include "models/historymodel.h"
 
+#include "controllers/server.h"
+
 #define NOTA_URI "org.maui.nota"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
@@ -62,6 +64,33 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     about.processCommandLine(&parser);
     const QStringList args = parser.positionalArguments();
+    QStringList paths;
+
+    if (!args.isEmpty())
+    {
+        for(const auto &path : args)
+            paths << QUrl::fromUserInput(path).toString();
+    }
+
+#if (defined Q_OS_LINUX || defined Q_OS_FREEBSD) && !defined Q_OS_ANDROID
+    if (AppInstance::attachToExistingInstance(QUrl::fromStringList(paths), false))
+    {
+        // Successfully attached to existing instance of Nota
+        return 0;
+    }else
+    {
+        //        const QString serviceName = QStringLiteral("org.kde.index-%1").arg(QCoreApplication::applicationPid());
+        //        auto instances = IndexInstance::appInstances(serviceName);
+        //        if(instances.size() > 0)
+        //        {
+        //            instances.first().first->activateWindow();
+        //        }
+    }
+
+    AppInstance::registerService();
+#endif
+
+    Server *server = new Server();
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
@@ -69,17 +98,20 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
                 &engine,
                 &QQmlApplicationEngine::objectCreated,
                 &app,
-                [url, args](QObject *obj, const QUrl &objUrl) {
+                [url, args, server](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
 
-        if (!args.isEmpty())
-            Nota::instance()->requestFiles(args);
+        server->setQmlObject(obj);
+        server->openFiles(args, false);
+
     },
     Qt::QueuedConnection);
 
+    qmlRegisterSingletonInstance<Server>(NOTA_URI, 1, 0, "Server", server);
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
     qmlRegisterType<HistoryModel>(NOTA_URI, 1, 0, "History");
+
     engine.load(url);
 
     return app.exec();
