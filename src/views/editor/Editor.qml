@@ -114,7 +114,7 @@ Maui.SplitViewItem
                         icon.name: "tab-new"
                         onTriggered:
                         {
-                            Nota.Server.requestFiles( _dropArea.urls )
+                           openFiles( _dropArea.urls )
                         }
                     }
 

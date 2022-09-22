@@ -9,7 +9,6 @@ Item
 {
     id: control
 
-
     property alias page : _loader.item
 
     onVisibleChanged:
@@ -29,8 +28,6 @@ Item
         {
             property alias browser : browserView
 
-            headBar.visible: true
-            headBar.background: null
             background: null
 
             footBar.middleContent: Maui.ComboBox

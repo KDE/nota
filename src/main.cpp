@@ -90,7 +90,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     AppInstance::registerService();
 #endif
 
-    Server *server = new Server();
+    auto server = std::make_unique<Server>();
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
@@ -98,7 +98,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
                 &engine,
                 &QQmlApplicationEngine::objectCreated,
                 &app,
-                [url, args, server](QObject *obj, const QUrl &objUrl) {
+                [url, args, &server](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
 
@@ -108,7 +108,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     },
     Qt::QueuedConnection);
 
-    qmlRegisterSingletonInstance<Server>(NOTA_URI, 1, 0, "Server", server);
+    qmlRegisterSingletonInstance<Server>(NOTA_URI, 1, 0, "Server", server.get());
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
     qmlRegisterType<HistoryModel>(NOTA_URI, 1, 0, "History");
 
