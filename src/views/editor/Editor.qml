@@ -145,6 +145,22 @@ Maui.SplitViewItem
                 }
             }
         }
+
+
+        Maui.Chip
+        {
+            text: _editor.body.length + " / " + _editor.body.lineCount
+            color: _editor.body.color
+
+            anchors
+            {
+                right: parent.right
+                bottom: parent.bottom
+                margins: Maui.Style.space.big
+            }
+
+            opacity: 0.5
+        }
     }
 
     Component.onCompleted:
