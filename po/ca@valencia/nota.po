@@ -1,0 +1,617 @@
+# Translation of nota.po to Catalan (Valencian)
+# Copyright (C) 2020-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: nota\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:44+0000\n"
+"PO-Revision-Date: 2022-09-06 13:06+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Josep M. Ferrer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "txemaq@gmail.com"
+
+#: main.cpp:48
+#, kde-format
+msgid "Nota"
+msgstr "Nota"
+
+#: main.cpp:48
+#, kde-format
+msgid "Browse, create and edit text files."
+msgstr "Navegueu, creeu, i editeu fitxers de text."
+
+#: main.cpp:48
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 L'equip de desenvolupament de Maui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: main.cpp:50 main.cpp:51
+#, kde-format
+msgid "Developer"
+msgstr "Desenvolupador"
+
+#: main.cpp:51
+#, kde-format
+msgid "Anupam Basak"
+msgstr "Anupam Basak"
+
+#: main.qml:109
+#, kde-format
+msgid "Unsaved files"
+msgstr "Fitxers sense guardar"
+
+#: main.qml:110
+#, kde-format
+msgid ""
+"You have unsaved files. You can go back and save them or choose to discard "
+"all changes and exit."
+msgstr ""
+"Hi ha fitxers sense guardar. Podeu retrocedir i guardar-los o triar "
+"descartar els canvis i eixir."
+
+#: main.qml:113
+#, kde-format
+msgid "Go back"
+msgstr "Retrocedix"
+
+#: main.qml:114
+#, kde-format
+msgid "Discard"
+msgstr "Descarta"
+
+#: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
+#, kde-format
+msgid "Run"
+msgstr "Executa"
+
+#: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
+#, kde-format
+msgid "Run & Debug"
+msgstr "Executa i depura"
+
+#: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
+#, kde-format
+msgid "Run in Terminal"
+msgstr "Executa en un terminal"
+
+#: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
+#, kde-format
+msgid "Mobile"
+msgstr "Mòbil"
+
+#: plugins/ToDos.qml:39
+#, kde-format
+msgid "New ToDo... Argh!"
+msgstr "Tasca pendent nova... Vaja!"
+
+#: views/editor/Editor.qml:103
+#, kde-format
+msgid "Open here"
+msgstr "Obri ací"
+
+#: views/editor/Editor.qml:113
+#, kde-format
+msgid "Open in new tab"
+msgstr "Obri en una pestanya nova"
+
+#: views/editor/Editor.qml:124
+#, kde-format
+msgid "Open in new split"
+msgstr "Obri a una divisió nova"
+
+#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/widgets/ItemMenu.qml:134
+#, kde-format
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: views/editor/EditorView.qml:50
+#, kde-format
+msgid "Open Files"
+msgstr "Obri fitxers"
+
+#: views/editor/EditorView.qml:61
+#, kde-format
+msgid "Open Recent Files"
+msgstr "Obri fitxers recents"
+
+#: views/editor/EditorView.qml:72
+#, kde-format
+msgid "New"
+msgstr "Nou"
+
+#: views/editor/EditorView.qml:94
+#, kde-format
+msgid "Create a new document"
+msgstr "Crea un document nou"
+
+#: views/editor/EditorView.qml:95
+#, kde-format
+msgid "You can create or open a new document."
+msgstr "Podeu crear o obrir un document nou."
+
+#: views/editor/EditorView.qml:111
+#, kde-format
+msgid "Places"
+msgstr "Llocs"
+
+#: views/editor/EditorView.qml:119
+#, kde-format
+msgid "Toogle SideBar"
+msgstr "Alterna la barra lateral"
+
+#: views/editor/EditorView.qml:165
+#, kde-format
+msgid "Focus"
+msgstr "Focus"
+
+#: views/editor/EditorView.qml:173 views/widgets/ShortcutsDialog.qml:84
+#, kde-format
+msgid "Terminal"
+msgstr "Terminal"
+
+#: views/editor/EditorView.qml:184 views/widgets/ShortcutsDialog.qml:99
+#, kde-format
+msgid "Split"
+msgstr "Dividix"
+
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#, kde-format
+msgid "Shortcuts"
+msgstr "Dreceres"
+
+#: views/editor/EditorView.qml:216
+#, kde-format
+msgid "Settings"
+msgstr "Configuració"
+
+#: views/editor/EditorView.qml:227
+#, kde-format
+msgid "Plugins"
+msgstr "Connectors"
+
+#: views/editor/EditorView.qml:238
+#, kde-format
+msgid "About"
+msgstr "Quant a"
+
+#: views/editor/EditorView.qml:291
+#, kde-format
+msgid "Undo"
+msgstr "Desfés"
+
+#: views/editor/EditorView.qml:299
+#, kde-format
+msgid "Redo"
+msgstr "Refés"
+
+#: views/editor/EditorView.qml:307
+#, kde-format
+msgid "Save"
+msgstr "Guarda"
+
+#: views/editor/EditorView.qml:316
+#, kde-format
+msgid "Save as"
+msgstr "Anomena i guarda"
+
+#: views/editor/EditorView.qml:327
+#, kde-format
+msgid "Find and Replace"
+msgstr "Busca i substituïx"
+
+#: views/editor/EditorView.qml:340
+#, kde-format
+msgid "Line/Word Counter"
+msgstr "Comptador de línies/paraules"
+
+#: views/editor/EditorView.qml:359
+#, kde-format
+msgid "UnFav it"
+msgstr "Desmarca com a preferit"
+
+#: views/editor/EditorView.qml:374 views/widgets/ItemMenu.qml:98
+#, kde-format
+msgid "Info"
+msgstr "Informació"
+
+#: views/editor/EditorView.qml:384 views/RecentView.qml:136
+#, kde-format
+msgid "Share"
+msgstr "Compartix"
+
+#: views/editor/EditorView.qml:397 views/editor/EditorView.qml:407
+#, kde-format
+msgid "Go to Line"
+msgstr "Ves a la línia"
+
+#: views/editor/EditorView.qml:409
+#, kde-format
+msgid "Line number"
+msgstr "Número de línia"
+
+#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
+#, kde-format
+msgid "Show in folder"
+msgstr "Mostra en la carpeta"
+
+#: views/editor/EditorView.qml:427
+#, kde-format
+msgid "Delete file"
+msgstr "Suprimix el fitxer"
+
+#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
+#, kde-format
+msgid "Delete file?"
+msgstr "Voleu suprimir el fitxer?"
+
+#: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
+#, kde-format
+msgid "Accept"
+msgstr "Accepta"
+
+#: views/editor/EditorView.qml:443 views/widgets/ItemMenu.qml:135
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"Segur que voleu suprimir \n"
+"%1?"
+
+#: views/PlacesSidebar.qml:62
+#, kde-format
+msgid "Previous"
+msgstr "Anterior"
+
+#: views/PlacesSidebar.qml:69
+#, kde-format
+msgid "Up"
+msgstr "Amunt"
+
+#: views/PlacesSidebar.qml:77
+#, kde-format
+msgid "Next"
+msgstr "Següent"
+
+#: views/PlacesSidebar.qml:101
+#, kde-format
+msgid "Show Folders First"
+msgstr "Mostra primer les carpetes"
+
+#: views/PlacesSidebar.qml:111
+#, kde-format
+msgid "Type"
+msgstr "Tipus"
+
+#: views/PlacesSidebar.qml:120
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: views/PlacesSidebar.qml:129
+#, kde-format
+msgid "Modified"
+msgstr "Modificat"
+
+#: views/PlacesSidebar.qml:138 views/widgets/SettingsDialog.qml:123
+#, kde-format
+msgid "Size"
+msgstr "Mida"
+
+#: views/PlacesSidebar.qml:147
+#, kde-format
+msgid "Name"
+msgstr "Nom"
+
+#: views/PlacesSidebar.qml:159
+#, kde-format
+msgid "Group"
+msgstr "Grup"
+
+#: views/RecentView.qml:20
+#, kde-format
+msgid "No Recent Files!"
+msgstr "Ni hi ha cap fitxer recent!"
+
+#: views/RecentView.qml:21
+#, kde-format
+msgid "Here you will see your recently opened files"
+msgstr "Ací veureu els fitxers oberts recentment"
+
+#: views/RecentView.qml:122
+#, kde-format
+msgid "Open"
+msgstr "Obri"
+
+#: views/RecentView.qml:143 views/widgets/ItemMenu.qml:68
+#, kde-format
+msgid "Export"
+msgstr "Exporta"
+
+#: views/widgets/DocsBrowser.qml:62
+#, kde-format
+msgid "Filter..."
+msgstr "Filtre..."
+
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#, kde-format
+msgid "Select"
+msgstr "Selecciona"
+
+#: views/widgets/ItemMenu.qml:110
+#, kde-format
+msgid "Copy"
+msgstr "Copia"
+
+#: views/widgets/ItemMenu.qml:120
+#, kde-format
+msgid "Remove"
+msgstr "Elimina"
+
+#: views/widgets/PluginsDialog.qml:13
+#, kde-format
+msgid "Default Plugins"
+msgstr "Connectors predeterminats"
+
+#: views/widgets/PluginsDialog.qml:14
+#, kde-format
+msgid "Activate or remove the default plugins"
+msgstr "Activa o elimina els connectors predeterminats"
+
+#: views/widgets/PluginsDialog.qml:22
+#, kde-format
+msgid "QML Scene"
+msgstr "Escena QML"
+
+#: views/widgets/PluginsDialog.qml:23
+#, kde-format
+msgid "Load the current file in a QML scene."
+msgstr "Carrega el fitxer actual en una escena QML."
+
+#: views/widgets/PluginsDialog.qml:52
+#, kde-format
+msgid "ToDo"
+msgstr "Tasca pendent"
+
+#: views/widgets/PluginsDialog.qml:53
+#, kde-format
+msgid "List of to-do tasks."
+msgstr "Llista de tasques pendents."
+
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#, kde-format
+msgid "Builder"
+msgstr "Constructor"
+
+#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#, kde-format
+msgid "Configure a project to build and run."
+msgstr "Configura un projecte per a construir i executar."
+
+#: views/widgets/PluginsDialog.qml:89
+#, kde-format
+msgid "HTML Previewer"
+msgstr "Previsualitzador HTML"
+
+#: views/widgets/PluginsDialog.qml:90
+#, kde-format
+msgid "Preview HTML code live."
+msgstr "Previsualitza codi HTML en temps real."
+
+#: views/widgets/PluginsDialog.qml:98
+#, kde-format
+msgid "Load Plugins"
+msgstr "Carrega connectors"
+
+#: views/widgets/PluginsDialog.qml:99
+#, kde-format
+msgid "Activate or remove the third party plugins"
+msgstr "Activa o elimina els connectors de tercers"
+
+#: views/widgets/SettingsDialog.qml:14
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: views/widgets/SettingsDialog.qml:15
+#, kde-format
+msgid "Configure the app UI, behaviour and plugins."
+msgstr "Configura la IU de l'aplicació, el comportament i els connectors."
+
+#: views/widgets/SettingsDialog.qml:18
+#, kde-format
+msgid "Places Sidebar"
+msgstr "Barra lateral de llocs"
+
+#: views/widgets/SettingsDialog.qml:19
+#, kde-format
+msgid "Browse your file system from the sidebar"
+msgstr "Navegueu pel sistema de fitxers des de la barra lateral"
+
+#: views/widgets/SettingsDialog.qml:31
+#, kde-format
+msgid "Dark Mode"
+msgstr "Mode fosc"
+
+#: views/widgets/SettingsDialog.qml:32
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr "Alterna entre els esquemes de color clar i fosc"
+
+#: views/widgets/SettingsDialog.qml:49
+#, kde-format
+msgid "Editor"
+msgstr "Editor"
+
+#: views/widgets/SettingsDialog.qml:50
+#, kde-format
+msgid ""
+"Configure the look and feel of the editor. The settings are applied globally"
+msgstr ""
+"Configura l'aspecte i el comportament de l'editor. La configuració s'aplica "
+"globalment"
+
+#: views/widgets/SettingsDialog.qml:54
+#, kde-format
+msgid "Auto Save"
+msgstr "Guardada automàtica"
+
+#: views/widgets/SettingsDialog.qml:55
+#, kde-format
+msgid "Auto saves your file every few seconds"
+msgstr "Guarda automàticament el fitxer cada pocs segons"
+
+#: views/widgets/SettingsDialog.qml:66
+#, kde-format
+msgid "Line Numbers"
+msgstr "Números de línia"
+
+#: views/widgets/SettingsDialog.qml:67
+#, kde-format
+msgid "Display the line numbers on the left side"
+msgstr "Mostra els números de les línies a la banda esquerra"
+
+#: views/widgets/SettingsDialog.qml:79
+#, kde-format
+msgid "Syntax Highlighting Languages"
+msgstr "Llenguatges de ressaltat de la sintaxi"
+
+#: views/widgets/SettingsDialog.qml:80
+#, kde-format
+msgid "Display available languages"
+msgstr "Mostra els llenguatges disponibles"
+
+#: views/widgets/SettingsDialog.qml:92
+#, kde-format
+msgid "Syntax Highlighting"
+msgstr "Ressaltat de la sintaxi"
+
+#: views/widgets/SettingsDialog.qml:93
+#, kde-format
+msgid "Enable syntax highlighting for supported languages"
+msgstr "Llenguatges de ressaltat de la sintaxi per als llenguatges admesos"
+
+#: views/widgets/SettingsDialog.qml:105
+#, kde-format
+msgid "Fonts"
+msgstr "Tipus de lletra"
+
+#: views/widgets/SettingsDialog.qml:106
+#, kde-format
+msgid "Configure the global font family and size"
+msgstr "Configura la família i la mida dels tipus de lletra globals"
+
+#: views/widgets/SettingsDialog.qml:110
+#, kde-format
+msgid "Family"
+msgstr "Família"
+
+#: views/widgets/SettingsDialog.qml:135
+#, kde-format
+msgid "Tab Space"
+msgstr "Espai de la pestanya"
+
+#: views/widgets/SettingsDialog.qml:148
+#, kde-format
+msgid "Style"
+msgstr "Estil"
+
+#: views/widgets/SettingsDialog.qml:149
+#, kde-format
+msgid ""
+"Configure the style of the syntax highliting. This configuration in not "
+"applied for rich text formats"
+msgstr ""
+"Configura l'estil del ressaltat de la sintaxi. Esta configuració no s'aplica "
+"als formats de text enriquit"
+
+#: views/widgets/SettingsDialog.qml:154
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+#: views/widgets/SettingsDialog.qml:155
+#, kde-format
+msgid "Editor color scheme style"
+msgstr "Editor de l'estil de l'esquema de color"
+
+#: views/widgets/SettingsDialog.qml:173
+#, kde-format
+msgid "Color"
+msgstr "Color"
+
+#: views/widgets/SettingsDialog.qml:174
+#, kde-format
+msgid "Editor background color"
+msgstr "Editor del color de fons"
+
+#: views/widgets/ShortcutsDialog.qml:19
+#, kde-format
+msgid "Navigation"
+msgstr "Navegació"
+
+#: views/widgets/ShortcutsDialog.qml:20
+#, kde-format
+msgid "Browser navigation."
+msgstr "Navegació del navegador."
+
+#: views/widgets/ShortcutsDialog.qml:24
+#, kde-format
+msgid "New Tab"
+msgstr "Pestanya nova"
+
+#: views/widgets/ShortcutsDialog.qml:44
+#, kde-format
+msgid "Close Tab"
+msgstr "Tanca la pestanya"
+
+#: views/widgets/ShortcutsDialog.qml:64
+#, kde-format
+msgid "Path Edit"
+msgstr "Edita el camí"
+
+#: views/widgets/ShortcutsDialog.qml:114
+#, kde-format
+msgid "New File"
+msgstr "Fitxer nou"
+
+#: views/widgets/ShortcutsDialog.qml:134
+#, kde-format
+msgid "Preview"
+msgstr "Vista prèvia"
+
+#: views/widgets/ShortcutsDialog.qml:149
+#, kde-format
+msgid "Find Tab"
+msgstr "Busca la pestanya"
+
+#: views/widgets/ShortcutsDialog.qml:169
+#, kde-format
+msgid "Select All"
+msgstr "Selecciona-ho tot"

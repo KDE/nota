@@ -1,0 +1,618 @@
+# Spanish translations for nota.po package.
+# Copyright (C) 2020 This file is copyright:
+# This file is distributed under the same license as the nota package.
+#
+# Automatically generated, 2020.
+# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2020, 2021, 2022, %Y.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: nota\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:44+0000\n"
+"PO-Revision-Date: 2022-09-10 18:00+0200\n"
+"Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Víctor Rodrigo Córdoba"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "vrcordoba@gmail.com"
+
+#: main.cpp:48
+#, kde-format
+msgid "Nota"
+msgstr "Nota"
+
+#: main.cpp:48
+#, kde-format
+msgid "Browse, create and edit text files."
+msgstr "Navegue, cree y edite archivos de texto."
+
+#: main.cpp:48
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 El equipo de desarrollo Maui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: main.cpp:50 main.cpp:51
+#, kde-format
+msgid "Developer"
+msgstr "Desarrollador"
+
+#: main.cpp:51
+#, kde-format
+msgid "Anupam Basak"
+msgstr "Anupam Basak"
+
+#: main.qml:109
+#, kde-format
+msgid "Unsaved files"
+msgstr "Archivos no guardados"
+
+#: main.qml:110
+#, kde-format
+msgid ""
+"You have unsaved files. You can go back and save them or choose to discard "
+"all changes and exit."
+msgstr ""
+"Tiene archivos sin guardar. Puede volver atrás y guardarlos o elegir "
+"descartar todos los cambios y salir."
+
+#: main.qml:113
+#, kde-format
+msgid "Go back"
+msgstr "Volver atrás"
+
+#: main.qml:114
+#, kde-format
+msgid "Discard"
+msgstr "Descartar"
+
+#: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
+#, kde-format
+msgid "Run"
+msgstr "Ejecutar"
+
+#: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
+#, kde-format
+msgid "Run & Debug"
+msgstr "Ejecutar y depurar"
+
+#: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
+#, kde-format
+msgid "Run in Terminal"
+msgstr "Ejecutar en terminal"
+
+#: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
+#, kde-format
+msgid "Mobile"
+msgstr "Móvil"
+
+#: plugins/ToDos.qml:39
+#, kde-format
+msgid "New ToDo... Argh!"
+msgstr "Nueva tarea pendiente... Buff!"
+
+#: views/editor/Editor.qml:103
+#, kde-format
+msgid "Open here"
+msgstr "Abrir aquí"
+
+#: views/editor/Editor.qml:113
+#, kde-format
+msgid "Open in new tab"
+msgstr "Abrir en una nueva pestaña"
+
+#: views/editor/Editor.qml:124
+#, kde-format
+msgid "Open in new split"
+msgstr "Abrir en una nueva división"
+
+#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/widgets/ItemMenu.qml:134
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: views/editor/EditorView.qml:50
+#, kde-format
+msgid "Open Files"
+msgstr "Abrir archivos"
+
+#: views/editor/EditorView.qml:61
+#, kde-format
+msgid "Open Recent Files"
+msgstr "Abrir archivos recientes"
+
+#: views/editor/EditorView.qml:72
+#, kde-format
+msgid "New"
+msgstr "Nueva"
+
+#: views/editor/EditorView.qml:94
+#, kde-format
+msgid "Create a new document"
+msgstr "Crear un nuevo documento"
+
+#: views/editor/EditorView.qml:95
+#, kde-format
+msgid "You can create or open a new document."
+msgstr "Puede crear o abrir un nuevo documento."
+
+#: views/editor/EditorView.qml:111
+#, kde-format
+msgid "Places"
+msgstr "Lugares"
+
+#: views/editor/EditorView.qml:119
+#, kde-format
+msgid "Toogle SideBar"
+msgstr "Alternar la barra lateral"
+
+#: views/editor/EditorView.qml:165
+#, kde-format
+msgid "Focus"
+msgstr "Enfocar"
+
+#: views/editor/EditorView.qml:173 views/widgets/ShortcutsDialog.qml:84
+#, kde-format
+msgid "Terminal"
+msgstr "Terminal"
+
+#: views/editor/EditorView.qml:184 views/widgets/ShortcutsDialog.qml:99
+#, kde-format
+msgid "Split"
+msgstr "Separar"
+
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#, kde-format
+msgid "Shortcuts"
+msgstr "Atajos"
+
+#: views/editor/EditorView.qml:216
+#, kde-format
+msgid "Settings"
+msgstr "Preferencias"
+
+#: views/editor/EditorView.qml:227
+#, kde-format
+msgid "Plugins"
+msgstr "Complementos"
+
+#: views/editor/EditorView.qml:238
+#, kde-format
+msgid "About"
+msgstr "Acerca de"
+
+#: views/editor/EditorView.qml:291
+#, kde-format
+msgid "Undo"
+msgstr "Deshacer"
+
+#: views/editor/EditorView.qml:299
+#, kde-format
+msgid "Redo"
+msgstr "Rehacer"
+
+#: views/editor/EditorView.qml:307
+#, kde-format
+msgid "Save"
+msgstr "Guardar"
+
+#: views/editor/EditorView.qml:316
+#, kde-format
+msgid "Save as"
+msgstr "Guardar como"
+
+#: views/editor/EditorView.qml:327
+#, kde-format
+msgid "Find and Replace"
+msgstr "Encontrar y remplazar"
+
+#: views/editor/EditorView.qml:340
+#, kde-format
+msgid "Line/Word Counter"
+msgstr "Contador de líneas/palabras"
+
+#: views/editor/EditorView.qml:359
+#, kde-format
+msgid "UnFav it"
+msgstr "Desmarcar como favorito"
+
+#: views/editor/EditorView.qml:374 views/widgets/ItemMenu.qml:98
+#, kde-format
+msgid "Info"
+msgstr "Información"
+
+#: views/editor/EditorView.qml:384 views/RecentView.qml:136
+#, kde-format
+msgid "Share"
+msgstr "Compartir"
+
+#: views/editor/EditorView.qml:397 views/editor/EditorView.qml:407
+#, kde-format
+msgid "Go to Line"
+msgstr "Ir a la línea"
+
+#: views/editor/EditorView.qml:409
+#, kde-format
+msgid "Line number"
+msgstr "Número de línea"
+
+#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
+#, kde-format
+msgid "Show in folder"
+msgstr "Mostrar en carpeta"
+
+#: views/editor/EditorView.qml:427
+#, kde-format
+msgid "Delete file"
+msgstr "Borrar archivo"
+
+#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
+#, kde-format
+msgid "Delete file?"
+msgstr "¿Borrar archivo?"
+
+#: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
+#, kde-format
+msgid "Accept"
+msgstr "Aceptar"
+
+#: views/editor/EditorView.qml:443 views/widgets/ItemMenu.qml:135
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"¿Está seguro de que quiere borrar?\n"
+"%1"
+
+#: views/PlacesSidebar.qml:62
+#, kde-format
+msgid "Previous"
+msgstr "Previa"
+
+#: views/PlacesSidebar.qml:69
+#, kde-format
+msgid "Up"
+msgstr "Arriba"
+
+#: views/PlacesSidebar.qml:77
+#, kde-format
+msgid "Next"
+msgstr "Siguiente"
+
+#: views/PlacesSidebar.qml:101
+#, kde-format
+msgid "Show Folders First"
+msgstr "Mostrar carpetas primero"
+
+#: views/PlacesSidebar.qml:111
+#, kde-format
+msgid "Type"
+msgstr "Tipo"
+
+#: views/PlacesSidebar.qml:120
+#, kde-format
+msgid "Date"
+msgstr "Fecha"
+
+#: views/PlacesSidebar.qml:129
+#, kde-format
+msgid "Modified"
+msgstr "Modificada"
+
+#: views/PlacesSidebar.qml:138 views/widgets/SettingsDialog.qml:123
+#, kde-format
+msgid "Size"
+msgstr "Tamaño"
+
+#: views/PlacesSidebar.qml:147
+#, kde-format
+msgid "Name"
+msgstr "Nombre"
+
+#: views/PlacesSidebar.qml:159
+#, kde-format
+msgid "Group"
+msgstr "Grupo"
+
+#: views/RecentView.qml:20
+#, kde-format
+msgid "No Recent Files!"
+msgstr "¡No hay archivos recientes!"
+
+#: views/RecentView.qml:21
+#, kde-format
+msgid "Here you will see your recently opened files"
+msgstr "Aquí verá los archivos recientemente abiertos"
+
+#: views/RecentView.qml:122
+#, kde-format
+msgid "Open"
+msgstr "Abrir"
+
+#: views/RecentView.qml:143 views/widgets/ItemMenu.qml:68
+#, kde-format
+msgid "Export"
+msgstr "Exportar"
+
+#: views/widgets/DocsBrowser.qml:62
+#, kde-format
+msgid "Filter..."
+msgstr "Filtro..."
+
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#, kde-format
+msgid "Select"
+msgstr "Seleccionar"
+
+#: views/widgets/ItemMenu.qml:110
+#, kde-format
+msgid "Copy"
+msgstr "Copiar"
+
+#: views/widgets/ItemMenu.qml:120
+#, kde-format
+msgid "Remove"
+msgstr "Eliminar"
+
+#: views/widgets/PluginsDialog.qml:13
+#, kde-format
+msgid "Default Plugins"
+msgstr "Complementos por omisión"
+
+#: views/widgets/PluginsDialog.qml:14
+#, kde-format
+msgid "Activate or remove the default plugins"
+msgstr "Activar o eliminar los complementos por omisión"
+
+#: views/widgets/PluginsDialog.qml:22
+#, kde-format
+msgid "QML Scene"
+msgstr "Escena QML"
+
+#: views/widgets/PluginsDialog.qml:23
+#, kde-format
+msgid "Load the current file in a QML scene."
+msgstr "Cargar el archivo actual en una escena QML."
+
+#: views/widgets/PluginsDialog.qml:52
+#, kde-format
+msgid "ToDo"
+msgstr "Pendiente"
+
+#: views/widgets/PluginsDialog.qml:53
+#, kde-format
+msgid "List of to-do tasks."
+msgstr "Lista de tareas pendientes."
+
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#, kde-format
+msgid "Builder"
+msgstr "Constructor"
+
+#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#, kde-format
+msgid "Configure a project to build and run."
+msgstr "Configurar un proyecto para construir y ejecutar."
+
+#: views/widgets/PluginsDialog.qml:89
+#, kde-format
+msgid "HTML Previewer"
+msgstr "Previsualizador HTML"
+
+#: views/widgets/PluginsDialog.qml:90
+#, kde-format
+msgid "Preview HTML code live."
+msgstr "Previsualizar código HTML en vivo."
+
+#: views/widgets/PluginsDialog.qml:98
+#, kde-format
+msgid "Load Plugins"
+msgstr "Cargar complementos"
+
+#: views/widgets/PluginsDialog.qml:99
+#, kde-format
+msgid "Activate or remove the third party plugins"
+msgstr "Activar o eliminar los complementos de terceros"
+
+#: views/widgets/SettingsDialog.qml:14
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: views/widgets/SettingsDialog.qml:15
+#, kde-format
+msgid "Configure the app UI, behaviour and plugins."
+msgstr ""
+"Configurar la interfaz de usuario de la aplicación, el comportamiento y los "
+"complementos."
+
+#: views/widgets/SettingsDialog.qml:18
+#, kde-format
+msgid "Places Sidebar"
+msgstr "Activa la barra lateral"
+
+#: views/widgets/SettingsDialog.qml:19
+#, kde-format
+msgid "Browse your file system from the sidebar"
+msgstr "Navegar por su sistema de archivos desde la barra lateral"
+
+#: views/widgets/SettingsDialog.qml:31
+#, kde-format
+msgid "Dark Mode"
+msgstr "Modo oscuro"
+
+#: views/widgets/SettingsDialog.qml:32
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr "Cambiar entre esquema de color claro y oscuro"
+
+#: views/widgets/SettingsDialog.qml:49
+#, kde-format
+msgid "Editor"
+msgstr "Editor"
+
+#: views/widgets/SettingsDialog.qml:50
+#, kde-format
+msgid ""
+"Configure the look and feel of the editor. The settings are applied globally"
+msgstr ""
+"Configurar el aspecto del editor. Estas preferencias aplican globalmente"
+
+#: views/widgets/SettingsDialog.qml:54
+#, kde-format
+msgid "Auto Save"
+msgstr "Auto Guardar"
+
+#: views/widgets/SettingsDialog.qml:55
+#, kde-format
+msgid "Auto saves your file every few seconds"
+msgstr "Guarda su archivo automáticamente cada pocos segundos"
+
+#: views/widgets/SettingsDialog.qml:66
+#, kde-format
+msgid "Line Numbers"
+msgstr "Números de línea"
+
+#: views/widgets/SettingsDialog.qml:67
+#, kde-format
+msgid "Display the line numbers on the left side"
+msgstr "Mostrar los números de línea en el lado izquierdo"
+
+#: views/widgets/SettingsDialog.qml:79
+#, kde-format
+msgid "Syntax Highlighting Languages"
+msgstr "Lenguajes con resaltado de sintaxis"
+
+#: views/widgets/SettingsDialog.qml:80
+#, kde-format
+msgid "Display available languages"
+msgstr "Mostrar los idiomas disponibles"
+
+#: views/widgets/SettingsDialog.qml:92
+#, kde-format
+msgid "Syntax Highlighting"
+msgstr "Resaltado de sintaxis"
+
+#: views/widgets/SettingsDialog.qml:93
+#, kde-format
+msgid "Enable syntax highlighting for supported languages"
+msgstr "Activar el resaltado de sintaxis para los lenguajes soportados"
+
+#: views/widgets/SettingsDialog.qml:105
+#, kde-format
+msgid "Fonts"
+msgstr "Fuentes"
+
+#: views/widgets/SettingsDialog.qml:106
+#, kde-format
+msgid "Configure the global font family and size"
+msgstr "Configurar el tamaño y la familia de fuentes global"
+
+#: views/widgets/SettingsDialog.qml:110
+#, kde-format
+msgid "Family"
+msgstr "Familia"
+
+#: views/widgets/SettingsDialog.qml:135
+#, kde-format
+msgid "Tab Space"
+msgstr "Espacio de tabulación"
+
+#: views/widgets/SettingsDialog.qml:148
+#, kde-format
+msgid "Style"
+msgstr "Estilo"
+
+#: views/widgets/SettingsDialog.qml:149
+#, kde-format
+msgid ""
+"Configure the style of the syntax highliting. This configuration in not "
+"applied for rich text formats"
+msgstr ""
+"Configurar el estilo del resaltado de sintaxis. Esta configuración no aplica "
+"a los formatos enriquecidos de texto."
+
+#: views/widgets/SettingsDialog.qml:154
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+#: views/widgets/SettingsDialog.qml:155
+#, kde-format
+msgid "Editor color scheme style"
+msgstr "Editor del estilo del esquema de color"
+
+#: views/widgets/SettingsDialog.qml:173
+#, kde-format
+msgid "Color"
+msgstr "Color"
+
+#: views/widgets/SettingsDialog.qml:174
+#, kde-format
+msgid "Editor background color"
+msgstr "Editor del color de fondo"
+
+#: views/widgets/ShortcutsDialog.qml:19
+#, kde-format
+msgid "Navigation"
+msgstr "Navegación"
+
+#: views/widgets/ShortcutsDialog.qml:20
+#, kde-format
+msgid "Browser navigation."
+msgstr "Navegación con navegador."
+
+#: views/widgets/ShortcutsDialog.qml:24
+#, kde-format
+msgid "New Tab"
+msgstr "Nueva pestaña"
+
+#: views/widgets/ShortcutsDialog.qml:44
+#, kde-format
+msgid "Close Tab"
+msgstr "Cerrar pestaña"
+
+#: views/widgets/ShortcutsDialog.qml:64
+#, kde-format
+msgid "Path Edit"
+msgstr "Editar ruta"
+
+#: views/widgets/ShortcutsDialog.qml:114
+#, kde-format
+msgid "New File"
+msgstr "Nuevo archivo"
+
+#: views/widgets/ShortcutsDialog.qml:134
+#, kde-format
+msgid "Preview"
+msgstr "Previsualizar"
+
+#: views/widgets/ShortcutsDialog.qml:149
+#, kde-format
+msgid "Find Tab"
+msgstr "Encontrar pestaña"
+
+#: views/widgets/ShortcutsDialog.qml:169
+#, kde-format
+msgid "Select All"
+msgstr "Seleccionar todo"

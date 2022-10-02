@@ -1,0 +1,664 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the nota package.
+#
+# A S Alam <aalam@satluj.org>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: nota\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:44+0000\n"
+"PO-Revision-Date: 2021-05-01 23:27-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alam.yellow@gmail.com"
+
+#: main.cpp:48
+#, kde-format
+msgid "Nota"
+msgstr "ਨੋਟਾ"
+
+#: main.cpp:48
+#, fuzzy, kde-format
+#| msgid ""
+#| "Nota allows you to browse, create, and edit simple and rich text files."
+msgid "Browse, create and edit text files."
+msgstr "ਨੋਟਾ ਤੁਹਾਨੂੰ ਸਰਲ ਤੇ ਗੁੰਝਲਦਾਰ ਲਿਖਤ ਫਾਇਲਾਂ ਦੀ ਝਲਕ ਵੇਖਣ, ਬਣਾਉਣ ਅਤੇ ਸੋਧਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
+
+#: main.cpp:48
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Nitrux Development Team"
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 Nitrux Development ਟੀਮ"
+
+#: main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: main.cpp:50 main.cpp:51
+#, kde-format
+msgid "Developer"
+msgstr "ਡਿਵੈਲਪਰ"
+
+#: main.cpp:51
+#, kde-format
+msgid "Anupam Basak"
+msgstr ""
+
+#: main.qml:109
+#, kde-format
+msgid "Unsaved files"
+msgstr "ਨਾ-ਸੰਭਾਲੀਆਂ ਫਾਇਲਾਂ"
+
+#: main.qml:110
+#, kde-format
+msgid ""
+"You have unsaved files. You can go back and save them or choose to discard "
+"all changes and exit."
+msgstr ""
+
+#: main.qml:113
+#, kde-format
+msgid "Go back"
+msgstr "ਪਿੱਛੇ ਜਾਓ"
+
+#: main.qml:114
+#, kde-format
+msgid "Discard"
+msgstr "ਖ਼ਾਰਜ ਕਰੋ"
+
+#: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
+#, kde-format
+msgid "Run"
+msgstr ""
+
+#: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
+#, kde-format
+msgid "Run & Debug"
+msgstr ""
+
+#: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
+#, fuzzy, kde-format
+#| msgid "Terminal"
+msgid "Run in Terminal"
+msgstr "ਟਰਮੀਨਲ"
+
+#: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
+#, kde-format
+msgid "Mobile"
+msgstr ""
+
+#: plugins/ToDos.qml:39
+#, kde-format
+msgid "New ToDo... Argh!"
+msgstr ""
+
+#: views/editor/Editor.qml:103
+#, kde-format
+msgid "Open here"
+msgstr "ਇੱਥੇ ਖੋਲ੍ਹੋ"
+
+#: views/editor/Editor.qml:113
+#, kde-format
+msgid "Open in new tab"
+msgstr "ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ"
+
+#: views/editor/Editor.qml:124
+#, kde-format
+msgid "Open in new split"
+msgstr "ਨਵੀਂ ਵੰਡ ਵਿੱਚ ਖੋਲ੍ਹੋ"
+
+#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/widgets/ItemMenu.qml:134
+#, kde-format
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+#: views/editor/EditorView.qml:50
+#, fuzzy, kde-format
+#| msgid "Open file"
+msgid "Open Files"
+msgstr "ਫਾਇਲ ਖੋਲ੍ਹੋ"
+
+#: views/editor/EditorView.qml:61
+#, fuzzy, kde-format
+#| msgid "Text file"
+msgid "Open Recent Files"
+msgstr "ਲਿਖਤ ਫਾਇਲ"
+
+#: views/editor/EditorView.qml:72
+#, kde-format
+msgid "New"
+msgstr ""
+
+#: views/editor/EditorView.qml:94
+#, kde-format
+msgid "Create a new document"
+msgstr "ਨਵਾਂ ਦਸਤਾਵੇਜ਼ ਬਣਾਓ"
+
+#: views/editor/EditorView.qml:95
+#, kde-format
+msgid "You can create or open a new document."
+msgstr ""
+
+#: views/editor/EditorView.qml:111
+#, kde-format
+msgid "Places"
+msgstr ""
+
+#: views/editor/EditorView.qml:119
+#, kde-format
+msgid "Toogle SideBar"
+msgstr "ਬਾਹੀ ਨੂੰ ਬਦਲੋ"
+
+#: views/editor/EditorView.qml:165
+#, fuzzy, kde-format
+#| msgid "Focus Mode"
+msgid "Focus"
+msgstr "ਫੋਕਸ ਢੰਗ"
+
+#: views/editor/EditorView.qml:173 views/widgets/ShortcutsDialog.qml:84
+#, kde-format
+msgid "Terminal"
+msgstr "ਟਰਮੀਨਲ"
+
+#: views/editor/EditorView.qml:184 views/widgets/ShortcutsDialog.qml:99
+#, kde-format
+msgid "Split"
+msgstr ""
+
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#, kde-format
+msgid "Shortcuts"
+msgstr ""
+
+#: views/editor/EditorView.qml:216
+#, kde-format
+msgid "Settings"
+msgstr "ਸੈਟਿੰਗਾਂ"
+
+#: views/editor/EditorView.qml:227
+#, kde-format
+msgid "Plugins"
+msgstr ""
+
+#: views/editor/EditorView.qml:238
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: views/editor/EditorView.qml:291
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: views/editor/EditorView.qml:299
+#, kde-format
+msgid "Redo"
+msgstr ""
+
+#: views/editor/EditorView.qml:307
+#, kde-format
+msgid "Save"
+msgstr "ਸੰਭਾਲੋ"
+
+#: views/editor/EditorView.qml:316
+#, fuzzy, kde-format
+#| msgid "Save as..."
+msgid "Save as"
+msgstr "...ਵਜੋਂ ਸੰਭਾਲੋ"
+
+#: views/editor/EditorView.qml:327
+#, kde-format
+msgid "Find and Replace"
+msgstr ""
+
+#: views/editor/EditorView.qml:340
+#, kde-format
+msgid "Line/Word Counter"
+msgstr ""
+
+#: views/editor/EditorView.qml:359
+#, kde-format
+msgid "UnFav it"
+msgstr "ਇਹ ਨਾ-ਪਸੰਦ"
+
+#: views/editor/EditorView.qml:374 views/widgets/ItemMenu.qml:98
+#, kde-format
+msgid "Info"
+msgstr "ਜਾਣਕਾਰੀ"
+
+#: views/editor/EditorView.qml:384 views/RecentView.qml:136
+#, kde-format
+msgid "Share"
+msgstr "ਸਾਂਝਾ ਕਰੋ"
+
+#: views/editor/EditorView.qml:397 views/editor/EditorView.qml:407
+#, kde-format
+msgid "Go to Line"
+msgstr ""
+
+#: views/editor/EditorView.qml:409
+#, fuzzy, kde-format
+#| msgid "Line Numbers"
+msgid "Line number"
+msgstr "ਲਾਈਨ ਦਾ ਨੰਬਰ"
+
+#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
+#, kde-format
+msgid "Show in folder"
+msgstr "ਫੋਲਡਰ ਵਿੱਚ ਵੇਖੋ"
+
+#: views/editor/EditorView.qml:427
+#, fuzzy, kde-format
+#| msgid "Delete file?"
+msgid "Delete file"
+msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
+
+#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
+#, kde-format
+msgid "Delete file?"
+msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
+
+#: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
+#, kde-format
+msgid "Accept"
+msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"
+
+#: views/editor/EditorView.qml:443 views/widgets/ItemMenu.qml:135
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+
+#: views/PlacesSidebar.qml:62
+#, kde-format
+msgid "Previous"
+msgstr "ਪਿੱਛੇ"
+
+#: views/PlacesSidebar.qml:69
+#, kde-format
+msgid "Up"
+msgstr ""
+
+#: views/PlacesSidebar.qml:77
+#, kde-format
+msgid "Next"
+msgstr "ਅੱਗੇ"
+
+#: views/PlacesSidebar.qml:101
+#, kde-format
+msgid "Show Folders First"
+msgstr "ਫੋਲਡਰ ਪਹਿਲਾਂ ਵੇਖੋ"
+
+#: views/PlacesSidebar.qml:111
+#, kde-format
+msgid "Type"
+msgstr "ਕਿਸਮ"
+
+#: views/PlacesSidebar.qml:120
+#, kde-format
+msgid "Date"
+msgstr "ਤਾਰੀਖ"
+
+#: views/PlacesSidebar.qml:129
+#, kde-format
+msgid "Modified"
+msgstr "ਸੋਧਾਂ ਕੀਤੀਆਂ"
+
+#: views/PlacesSidebar.qml:138 views/widgets/SettingsDialog.qml:123
+#, kde-format
+msgid "Size"
+msgstr "ਆਕਾਰ"
+
+#: views/PlacesSidebar.qml:147
+#, kde-format
+msgid "Name"
+msgstr "ਨਾਂ"
+
+#: views/PlacesSidebar.qml:159
+#, kde-format
+msgid "Group"
+msgstr "ਗਰੁੱਪ"
+
+#: views/RecentView.qml:20
+#, kde-format
+msgid "No Recent Files!"
+msgstr ""
+
+#: views/RecentView.qml:21
+#, kde-format
+msgid "Here you will see your recently opened files"
+msgstr ""
+
+#: views/RecentView.qml:122
+#, kde-format
+msgid "Open"
+msgstr "ਖੋਲ੍ਹੋ"
+
+#: views/RecentView.qml:143 views/widgets/ItemMenu.qml:68
+#, kde-format
+msgid "Export"
+msgstr "ਐਕਸਪੋਰਟ"
+
+#: views/widgets/DocsBrowser.qml:62
+#, kde-format
+msgid "Filter..."
+msgstr "...ਫਿਲਟਰ"
+
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#, kde-format
+msgid "Select"
+msgstr "ਚੁਣੋ"
+
+#: views/widgets/ItemMenu.qml:110
+#, kde-format
+msgid "Copy"
+msgstr "ਕਾਪੀ ਕਰੋ"
+
+#: views/widgets/ItemMenu.qml:120
+#, kde-format
+msgid "Remove"
+msgstr "ਹਟਾਓ"
+
+#: views/widgets/PluginsDialog.qml:13
+#, kde-format
+msgid "Default Plugins"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:14
+#, kde-format
+msgid "Activate or remove the default plugins"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:22
+#, kde-format
+msgid "QML Scene"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:23
+#, kde-format
+msgid "Load the current file in a QML scene."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:52
+#, kde-format
+msgid "ToDo"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:53
+#, kde-format
+msgid "List of to-do tasks."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#, kde-format
+msgid "Builder"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#, kde-format
+msgid "Configure a project to build and run."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:89
+#, kde-format
+msgid "HTML Previewer"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:90
+#, kde-format
+msgid "Preview HTML code live."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:98
+#, kde-format
+msgid "Load Plugins"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:99
+#, kde-format
+msgid "Activate or remove the third party plugins"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:14
+#, kde-format
+msgid "General"
+msgstr "ਆਮ"
+
+#: views/widgets/SettingsDialog.qml:15
+#, kde-format
+msgid "Configure the app UI, behaviour and plugins."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:18
+#, kde-format
+msgid "Places Sidebar"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:19
+#, kde-format
+msgid "Browse your file system from the sidebar"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:31
+#, kde-format
+msgid "Dark Mode"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:32
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:49
+#, kde-format
+msgid "Editor"
+msgstr "ਐਡੀਟਰ"
+
+#: views/widgets/SettingsDialog.qml:50
+#, kde-format
+msgid ""
+"Configure the look and feel of the editor. The settings are applied globally"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:54
+#, kde-format
+msgid "Auto Save"
+msgstr "ਆਪੇ ਸੰਭਾਲੋ"
+
+#: views/widgets/SettingsDialog.qml:55
+#, kde-format
+msgid "Auto saves your file every few seconds"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:66
+#, kde-format
+msgid "Line Numbers"
+msgstr "ਲਾਈਨ ਦਾ ਨੰਬਰ"
+
+#: views/widgets/SettingsDialog.qml:67
+#, kde-format
+msgid "Display the line numbers on the left side"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:79
+#, kde-format
+msgid "Syntax Highlighting Languages"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:80
+#, kde-format
+msgid "Display available languages"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:92
+#, kde-format
+msgid "Syntax Highlighting"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:93
+#, kde-format
+msgid "Enable syntax highlighting for supported languages"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:105
+#, kde-format
+msgid "Fonts"
+msgstr "ਫ਼ੋਂਟ"
+
+#: views/widgets/SettingsDialog.qml:106
+#, kde-format
+msgid "Configure the global font family and size"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:110
+#, kde-format
+msgid "Family"
+msgstr "ਸਮੂਹ"
+
+#: views/widgets/SettingsDialog.qml:135
+#, kde-format
+msgid "Tab Space"
+msgstr "ਟੈਬ ਥਾਂ"
+
+#: views/widgets/SettingsDialog.qml:148
+#, kde-format
+msgid "Style"
+msgstr "ਸ਼ੈਲੀ"
+
+#: views/widgets/SettingsDialog.qml:149
+#, kde-format
+msgid ""
+"Configure the style of the syntax highliting. This configuration in not "
+"applied for rich text formats"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:154
+#, kde-format
+msgid "Theme"
+msgstr "ਥੀਮ"
+
+#: views/widgets/SettingsDialog.qml:155
+#, kde-format
+msgid "Editor color scheme style"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:173
+#, kde-format
+msgid "Color"
+msgstr "ਰੰਗ"
+
+#: views/widgets/SettingsDialog.qml:174
+#, kde-format
+msgid "Editor background color"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:19
+#, kde-format
+msgid "Navigation"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:20
+#, kde-format
+msgid "Browser navigation."
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:24
+#, kde-format
+msgid "New Tab"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:44
+#, kde-format
+msgid "Close Tab"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:64
+#, kde-format
+msgid "Path Edit"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:114
+#, fuzzy, kde-format
+#| msgid "New file"
+msgid "New File"
+msgstr "ਨਵੀਂ ਫਾਇਲ"
+
+#: views/widgets/ShortcutsDialog.qml:134
+#, fuzzy, kde-format
+#| msgid "Previous"
+msgid "Preview"
+msgstr "ਪਿੱਛੇ"
+
+#: views/widgets/ShortcutsDialog.qml:149
+#, kde-format
+msgid "Find Tab"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:169
+#, fuzzy, kde-format
+#| msgid "Select"
+msgid "Select All"
+msgstr "ਚੁਣੋ"
+
+#~ msgid "New file"
+#~ msgstr "ਨਵੀਂ ਫਾਇਲ"
+
+#, fuzzy
+#~| msgid "Text file"
+#~ msgid "New Text File"
+#~ msgstr "ਲਿਖਤ ਫਾਇਲ"
+
+#~ msgid "Split Horizontally"
+#~ msgstr "ਖੜ੍ਹਵੇ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
+
+#~ msgid "Split Vertically"
+#~ msgstr "ਲੇਟਵੇ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
+
+#~ msgid "Tags"
+#~ msgstr "ਟੈਗ"
+
+#, fuzzy
+#~| msgid "Text file"
+#~ msgid "Rich Text File"
+#~ msgstr "ਲਿਖਤ ਫਾਇਲ"
+
+#, fuzzy
+#~| msgid "Open here"
+#~ msgid "Open with"
+#~ msgstr "ਇੱਥੇ ਖੋਲ੍ਹੋ"
+
+#~ msgid "Recent"
+#~ msgstr "ਤਾਜ਼ਾ"
+
+#~ msgid "Open with Blank File"
+#~ msgstr "ਖਾਲੀ ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ"
+
+#~ msgid "Embedded Terminal"
+#~ msgstr "ਵਿੱਚੇ ਮੌਜੂਦਾ ਟਰਮੀਨਲ"
+
+#~ msgid "No Documents!"
+#~ msgstr "ਕੋਈ ਦਸਤਾਵੇਜ਼ ਨਹੀਂ ਹਨ!"
+
+#~ msgid "New template"
+#~ msgstr "ਨਵਾਂ ਨਮੂਨਾ"
+
+#~ msgid "HTML text file"
+#~ msgstr "HTML ਲਿਖਤ ਫਾਇਲ"

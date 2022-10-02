@@ -1,0 +1,665 @@
+# translation of nota.po to Slovak
+# Roman Paholík <wizzardsk@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: nota\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-23 00:44+0000\n"
+"PO-Revision-Date: 2022-04-18 17:59+0200\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com"
+
+#: main.cpp:48
+#, kde-format
+msgid "Nota"
+msgstr "Nota"
+
+#: main.cpp:48
+#, kde-format
+msgid "Browse, create and edit text files."
+msgstr "Prehliadanie, vytváranie a editovanie textových súborov."
+
+#: main.cpp:48
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 Vývojársky tím Maui"
+
+#: main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: main.cpp:50 main.cpp:51
+#, kde-format
+msgid "Developer"
+msgstr "Vývojár"
+
+#: main.cpp:51
+#, kde-format
+msgid "Anupam Basak"
+msgstr "Anupam Basak"
+
+#: main.qml:109
+#, fuzzy, kde-format
+#| msgid "Save file"
+msgid "Unsaved files"
+msgstr "Uložiť súbor"
+
+#: main.qml:110
+#, kde-format
+msgid ""
+"You have unsaved files. You can go back and save them or choose to discard "
+"all changes and exit."
+msgstr ""
+
+#: main.qml:113
+#, kde-format
+msgid "Go back"
+msgstr "Prejsť späť"
+
+#: main.qml:114
+#, kde-format
+msgid "Discard"
+msgstr "Zahodiť"
+
+#: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
+#, kde-format
+msgid "Run"
+msgstr "Spustiť"
+
+#: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
+#, kde-format
+msgid "Run & Debug"
+msgstr ""
+
+#: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
+#, kde-format
+msgid "Run in Terminal"
+msgstr "Spustiť v termináli"
+
+#: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
+#, kde-format
+msgid "Mobile"
+msgstr "Mobil"
+
+#: plugins/ToDos.qml:39
+#, kde-format
+msgid "New ToDo... Argh!"
+msgstr ""
+
+#: views/editor/Editor.qml:103
+#, kde-format
+msgid "Open here"
+msgstr "Otvoriť tu"
+
+#: views/editor/Editor.qml:113
+#, kde-format
+msgid "Open in new tab"
+msgstr "Otvoriť na novej karte"
+
+#: views/editor/Editor.qml:124
+#, kde-format
+msgid "Open in new split"
+msgstr ""
+
+#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/widgets/ItemMenu.qml:134
+#, kde-format
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: views/editor/EditorView.qml:50
+#, kde-format
+msgid "Open Files"
+msgstr "Otvoriť súbory"
+
+#: views/editor/EditorView.qml:61
+#, fuzzy, kde-format
+#| msgid "Text file"
+msgid "Open Recent Files"
+msgstr "Textový súbor"
+
+#: views/editor/EditorView.qml:72
+#, kde-format
+msgid "New"
+msgstr "Nové"
+
+#: views/editor/EditorView.qml:94
+#, kde-format
+msgid "Create a new document"
+msgstr "Vytvoriť nový dokument"
+
+#: views/editor/EditorView.qml:95
+#, fuzzy, kde-format
+#| msgid "Create a new document"
+msgid "You can create or open a new document."
+msgstr "Vytvoriť nový dokument"
+
+#: views/editor/EditorView.qml:111
+#, kde-format
+msgid "Places"
+msgstr "Miesta"
+
+#: views/editor/EditorView.qml:119
+#, kde-format
+msgid "Toogle SideBar"
+msgstr "Prepnúť bočný panel"
+
+#: views/editor/EditorView.qml:165
+#, kde-format
+msgid "Focus"
+msgstr "Zameranie"
+
+#: views/editor/EditorView.qml:173 views/widgets/ShortcutsDialog.qml:84
+#, kde-format
+msgid "Terminal"
+msgstr "Terminál"
+
+#: views/editor/EditorView.qml:184 views/widgets/ShortcutsDialog.qml:99
+#, kde-format
+msgid "Split"
+msgstr "Rozdeliť"
+
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#, kde-format
+msgid "Shortcuts"
+msgstr "Skratky"
+
+#: views/editor/EditorView.qml:216
+#, kde-format
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: views/editor/EditorView.qml:227
+#, kde-format
+msgid "Plugins"
+msgstr "Moduly"
+
+#: views/editor/EditorView.qml:238
+#, kde-format
+msgid "About"
+msgstr "O aplikácii"
+
+#: views/editor/EditorView.qml:291
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: views/editor/EditorView.qml:299
+#, kde-format
+msgid "Redo"
+msgstr "Znovu"
+
+#: views/editor/EditorView.qml:307
+#, kde-format
+msgid "Save"
+msgstr "Uložiť"
+
+#: views/editor/EditorView.qml:316
+#, kde-format
+msgid "Save as"
+msgstr "Uložiť ako"
+
+#: views/editor/EditorView.qml:327
+#, kde-format
+msgid "Find and Replace"
+msgstr "Nájsť a Nahradiť"
+
+#: views/editor/EditorView.qml:340
+#, kde-format
+msgid "Line/Word Counter"
+msgstr ""
+
+#: views/editor/EditorView.qml:359
+#, kde-format
+msgid "UnFav it"
+msgstr ""
+
+#: views/editor/EditorView.qml:374 views/widgets/ItemMenu.qml:98
+#, kde-format
+msgid "Info"
+msgstr "Info"
+
+#: views/editor/EditorView.qml:384 views/RecentView.qml:136
+#, kde-format
+msgid "Share"
+msgstr "Zdieľať"
+
+#: views/editor/EditorView.qml:397 views/editor/EditorView.qml:407
+#, kde-format
+msgid "Go to Line"
+msgstr "Prejsť na riadok"
+
+#: views/editor/EditorView.qml:409
+#, kde-format
+msgid "Line number"
+msgstr "Číslo riadku"
+
+#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
+#, kde-format
+msgid "Show in folder"
+msgstr "Zobraziť v priečinku"
+
+#: views/editor/EditorView.qml:427
+#, kde-format
+msgid "Delete file"
+msgstr "Odstrániť súbor"
+
+#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
+#, kde-format
+msgid "Delete file?"
+msgstr "Vymazať súbor?"
+
+#: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
+#, kde-format
+msgid "Accept"
+msgstr "Prijať"
+
+#: views/editor/EditorView.qml:443 views/widgets/ItemMenu.qml:135
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+
+#: views/PlacesSidebar.qml:62
+#, kde-format
+msgid "Previous"
+msgstr "Predchádzajúci"
+
+#: views/PlacesSidebar.qml:69
+#, kde-format
+msgid "Up"
+msgstr "Hore"
+
+#: views/PlacesSidebar.qml:77
+#, kde-format
+msgid "Next"
+msgstr "Nasledujúci"
+
+#: views/PlacesSidebar.qml:101
+#, kde-format
+msgid "Show Folders First"
+msgstr "Zobrazovať najskôr priečinky"
+
+#: views/PlacesSidebar.qml:111
+#, kde-format
+msgid "Type"
+msgstr "Typ"
+
+#: views/PlacesSidebar.qml:120
+#, kde-format
+msgid "Date"
+msgstr "Dátum"
+
+#: views/PlacesSidebar.qml:129
+#, kde-format
+msgid "Modified"
+msgstr "Zmenené"
+
+#: views/PlacesSidebar.qml:138 views/widgets/SettingsDialog.qml:123
+#, kde-format
+msgid "Size"
+msgstr "Veľkosť"
+
+#: views/PlacesSidebar.qml:147
+#, kde-format
+msgid "Name"
+msgstr "Názov"
+
+#: views/PlacesSidebar.qml:159
+#, kde-format
+msgid "Group"
+msgstr "Skupina"
+
+#: views/RecentView.qml:20
+#, kde-format
+msgid "No Recent Files!"
+msgstr ""
+
+#: views/RecentView.qml:21
+#, kde-format
+msgid "Here you will see your recently opened files"
+msgstr ""
+
+#: views/RecentView.qml:122
+#, kde-format
+msgid "Open"
+msgstr "Otvoriť"
+
+#: views/RecentView.qml:143 views/widgets/ItemMenu.qml:68
+#, kde-format
+msgid "Export"
+msgstr "Exportovať"
+
+#: views/widgets/DocsBrowser.qml:62
+#, kde-format
+msgid "Filter..."
+msgstr "Filter..."
+
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#, kde-format
+msgid "Select"
+msgstr "Vybrať"
+
+#: views/widgets/ItemMenu.qml:110
+#, kde-format
+msgid "Copy"
+msgstr "Kopírovať"
+
+#: views/widgets/ItemMenu.qml:120
+#, kde-format
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: views/widgets/PluginsDialog.qml:13
+#, kde-format
+msgid "Default Plugins"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:14
+#, kde-format
+msgid "Activate or remove the default plugins"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:22
+#, kde-format
+msgid "QML Scene"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:23
+#, kde-format
+msgid "Load the current file in a QML scene."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:52
+#, kde-format
+msgid "ToDo"
+msgstr "Úloha"
+
+#: views/widgets/PluginsDialog.qml:53
+#, kde-format
+msgid "List of to-do tasks."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#, kde-format
+msgid "Builder"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#, kde-format
+msgid "Configure a project to build and run."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:89
+#, kde-format
+msgid "HTML Previewer"
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:90
+#, kde-format
+msgid "Preview HTML code live."
+msgstr ""
+
+#: views/widgets/PluginsDialog.qml:98
+#, kde-format
+msgid "Load Plugins"
+msgstr "Načítať pluginy"
+
+#: views/widgets/PluginsDialog.qml:99
+#, kde-format
+msgid "Activate or remove the third party plugins"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:14
+#, kde-format
+msgid "General"
+msgstr "Všeobecné"
+
+#: views/widgets/SettingsDialog.qml:15
+#, kde-format
+msgid "Configure the app UI, behaviour and plugins."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:18
+#, kde-format
+msgid "Places Sidebar"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:19
+#, kde-format
+msgid "Browse your file system from the sidebar"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:31
+#, kde-format
+msgid "Dark Mode"
+msgstr "Tmavý režim"
+
+#: views/widgets/SettingsDialog.qml:32
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:49
+#, kde-format
+msgid "Editor"
+msgstr "Editor"
+
+#: views/widgets/SettingsDialog.qml:50
+#, kde-format
+msgid ""
+"Configure the look and feel of the editor. The settings are applied globally"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:54
+#, kde-format
+msgid "Auto Save"
+msgstr "Automatické ukladanie"
+
+#: views/widgets/SettingsDialog.qml:55
+#, kde-format
+msgid "Auto saves your file every few seconds"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:66
+#, kde-format
+msgid "Line Numbers"
+msgstr "Čísla riadkov"
+
+#: views/widgets/SettingsDialog.qml:67
+#, kde-format
+msgid "Display the line numbers on the left side"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:79
+#, fuzzy, kde-format
+#| msgid "Enable syntax highlighting"
+msgid "Syntax Highlighting Languages"
+msgstr "Povoliť zvýrazňovanie syntaxe"
+
+#: views/widgets/SettingsDialog.qml:80
+#, kde-format
+msgid "Display available languages"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:92
+#, kde-format
+msgid "Syntax Highlighting"
+msgstr "Zvýrazňovanie syntaxe"
+
+#: views/widgets/SettingsDialog.qml:93
+#, fuzzy, kde-format
+#| msgid "Enable syntax highlighting"
+msgid "Enable syntax highlighting for supported languages"
+msgstr "Povoliť zvýrazňovanie syntaxe"
+
+#: views/widgets/SettingsDialog.qml:105
+#, kde-format
+msgid "Fonts"
+msgstr "Písma"
+
+#: views/widgets/SettingsDialog.qml:106
+#, kde-format
+msgid "Configure the global font family and size"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:110
+#, kde-format
+msgid "Family"
+msgstr "Rodina"
+
+#: views/widgets/SettingsDialog.qml:135
+#, kde-format
+msgid "Tab Space"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:148
+#, kde-format
+msgid "Style"
+msgstr "Štýl"
+
+#: views/widgets/SettingsDialog.qml:149
+#, kde-format
+msgid ""
+"Configure the style of the syntax highliting. This configuration in not "
+"applied for rich text formats"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:154
+#, kde-format
+msgid "Theme"
+msgstr "Téma"
+
+#: views/widgets/SettingsDialog.qml:155
+#, kde-format
+msgid "Editor color scheme style"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:173
+#, kde-format
+msgid "Color"
+msgstr "Farba"
+
+#: views/widgets/SettingsDialog.qml:174
+#, kde-format
+msgid "Editor background color"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:19
+#, kde-format
+msgid "Navigation"
+msgstr "Navigácia"
+
+#: views/widgets/ShortcutsDialog.qml:20
+#, kde-format
+msgid "Browser navigation."
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:24
+#, kde-format
+msgid "New Tab"
+msgstr "Nová karta"
+
+#: views/widgets/ShortcutsDialog.qml:44
+#, kde-format
+msgid "Close Tab"
+msgstr "Zavrieť kartu"
+
+#: views/widgets/ShortcutsDialog.qml:64
+#, kde-format
+msgid "Path Edit"
+msgstr ""
+
+#: views/widgets/ShortcutsDialog.qml:114
+#, kde-format
+msgid "New File"
+msgstr "Nový súbor"
+
+#: views/widgets/ShortcutsDialog.qml:134
+#, kde-format
+msgid "Preview"
+msgstr "Náhľad"
+
+#: views/widgets/ShortcutsDialog.qml:149
+#, fuzzy, kde-format
+#| msgid "Find"
+msgid "Find Tab"
+msgstr "Nájsť"
+
+#: views/widgets/ShortcutsDialog.qml:169
+#, kde-format
+msgid "Select All"
+msgstr "Vybrať všetko"
+
+#~ msgid "New file"
+#~ msgstr "Nový súbor"
+
+#, fuzzy
+#~| msgid "Text file"
+#~ msgid "New Text File"
+#~ msgstr "Textový súbor"
+
+#, fuzzy
+#~| msgid "Split horizontal"
+#~ msgid "Split Horizontally"
+#~ msgstr "Rozdeliť &horizontálne"
+
+#~ msgid "Split Vertically"
+#~ msgstr "Rozdeliť vertikálne"
+
+#~ msgid "Tags"
+#~ msgstr "Značky"
+
+#, fuzzy
+#~| msgid "Text file"
+#~ msgid "Rich Text File"
+#~ msgstr "Textový súbor"
+
+#, fuzzy
+#~| msgid "Open here"
+#~ msgid "Open with"
+#~ msgstr "Otvoriť tu"
+
+#~ msgid "Recent"
+#~ msgstr "Nedávne"
+
+#~ msgid "No Documents!"
+#~ msgstr "Žiadne dokumenty!"
+
+#~ msgid "New template"
+#~ msgstr "Nová šablóna"
+
+#~ msgid "Interface"
+#~ msgstr "Rozhranie"
+
+#~ msgid "List"
+#~ msgstr "Zoznam"
+
+#~ msgid "Grid"
+#~ msgstr "Mriežka"
+
+#, fuzzy
+#~| msgid "Replace"
+#~ msgid "Replace All"
+#~ msgstr "Nahradiť"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenty"
