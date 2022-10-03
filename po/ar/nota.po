@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-23 00:44+0000\n"
-"PO-Revision-Date: 2022-01-04 19:20+0400\n"
+"PO-Revision-Date: 2022-10-02 19:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "zayed.alsaidi@gmail.com"
 #: main.cpp:48
 #, kde-format
 msgid "Nota"
-msgstr "المحرر"
+msgstr "نوتا"
 
 #: main.cpp:48
 #, kde-format
@@ -41,12 +41,12 @@ msgstr "تصفح وأنشئ وحرر الملفات النصية."
 #: main.cpp:48
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
-msgstr ""
+msgstr "© ٢٠١٩-%1 فريق تطوير ماوي"
 
 #: main.cpp:50
 #, kde-format
 msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
+msgstr "كاميلو هيجويتا"
 
 #: main.cpp:50 main.cpp:51
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "مطوّر"
 #: main.cpp:51
 #, kde-format
 msgid "Anupam Basak"
-msgstr "Anupam Basak"
+msgstr "أنوبام باساك"
 
 #: main.qml:109
 #, kde-format
@@ -69,6 +69,8 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
+"لديك ملفات غير محفوظة. يمكنك العودة وحفظها أو اختيار تجاهل جميع التغييرات "
+"والخروج."
 
 #: main.qml:113
 #, kde-format
@@ -103,7 +105,7 @@ msgstr "المحمول"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr ""
+msgstr "مهمة جديدة…"
 
 #: views/editor/Editor.qml:103
 #, kde-format
@@ -134,13 +136,12 @@ msgstr "افتح ملفّات"
 #: views/editor/EditorView.qml:61
 #, kde-format
 msgid "Open Recent Files"
-msgstr ""
+msgstr "افتح الملفات الحديثة"
 
 #: views/editor/EditorView.qml:72
-#, fuzzy, kde-format
-#| msgid "New Tab"
+#, kde-format
 msgid "New"
-msgstr "لسان جديد"
+msgstr "جديد"
 
 #: views/editor/EditorView.qml:94
 #, kde-format
@@ -150,7 +151,7 @@ msgstr "أنشئ مستندًا جديدًا"
 #: views/editor/EditorView.qml:95
 #, kde-format
 msgid "You can create or open a new document."
-msgstr ""
+msgstr "يمكنك إنشاء أو فتح مستند جديد."
 
 #: views/editor/EditorView.qml:111
 #, kde-format
@@ -160,7 +161,7 @@ msgstr "الأماكن"
 #: views/editor/EditorView.qml:119
 #, kde-format
 msgid "Toogle SideBar"
-msgstr ""
+msgstr "بدل الشريط الجانبي"
 
 #: views/editor/EditorView.qml:165
 #, kde-format
@@ -200,7 +201,7 @@ msgstr "عن"
 #: views/editor/EditorView.qml:291
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "تراجع"
 
 #: views/editor/EditorView.qml:299
 #, kde-format
@@ -225,12 +226,12 @@ msgstr "أوجد واستبدل"
 #: views/editor/EditorView.qml:340
 #, kde-format
 msgid "Line/Word Counter"
-msgstr ""
+msgstr "عداد السطور/الكلمات"
 
 #: views/editor/EditorView.qml:359
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "أزل التفضيل"
 
 #: views/editor/EditorView.qml:374 views/widgets/ItemMenu.qml:98
 #, kde-format
@@ -278,6 +279,8 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+"هل تريد فعلاً حذف\n"
+"%1"
 
 #: views/PlacesSidebar.qml:62
 #, kde-format
@@ -332,12 +335,12 @@ msgstr "المجموعة"
 #: views/RecentView.qml:20
 #, kde-format
 msgid "No Recent Files!"
-msgstr ""
+msgstr "لا يوجد ملفات حديثة!"
 
 #: views/RecentView.qml:21
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr ""
+msgstr "هنا يمكنك رؤية ملفاتك المفتوحة حديثاً"
 
 #: views/RecentView.qml:122
 #, kde-format
@@ -372,22 +375,22 @@ msgstr "أزل"
 #: views/widgets/PluginsDialog.qml:13
 #, kde-format
 msgid "Default Plugins"
-msgstr ""
+msgstr "الملحقات المبدئية"
 
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr ""
+msgstr "نشط أو أزل الملحقات المبدئية"
 
 #: views/widgets/PluginsDialog.qml:22
 #, kde-format
 msgid "QML Scene"
-msgstr ""
+msgstr "مشهد كيو ام ال"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr ""
+msgstr "حمل ملف الحالي مشهد كيو ام ال"
 
 #: views/widgets/PluginsDialog.qml:52
 #, kde-format
@@ -397,37 +400,37 @@ msgstr "مهمّة"
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "List of to-do tasks."
-msgstr ""
+msgstr "قائمة مهام."
 
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
 #, kde-format
 msgid "Builder"
-msgstr ""
+msgstr "الباني"
 
 #: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr ""
+msgstr "اضبط بناء وتشغيل المشروع."
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "HTML Previewer"
-msgstr ""
+msgstr "معاينة اتش تي ام ال"
 
 #: views/widgets/PluginsDialog.qml:90
 #, kde-format
 msgid "Preview HTML code live."
-msgstr ""
+msgstr "عاين شفرة اتش تي ام ال بشكل حي"
 
 #: views/widgets/PluginsDialog.qml:98
 #, kde-format
 msgid "Load Plugins"
-msgstr ""
+msgstr "يحمّل الملحقات"
 
 #: views/widgets/PluginsDialog.qml:99
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr ""
+msgstr "نشط أو أزل الملحقات من أطراف ثالثة"
 
 #: views/widgets/SettingsDialog.qml:14
 #, kde-format
@@ -437,27 +440,27 @@ msgstr "عامّ"
 #: views/widgets/SettingsDialog.qml:15
 #, kde-format
 msgid "Configure the app UI, behaviour and plugins."
-msgstr ""
+msgstr "اضبط واجهة التطبيق، السلوك والملحقات."
 
 #: views/widgets/SettingsDialog.qml:18
 #, kde-format
 msgid "Places Sidebar"
-msgstr ""
+msgstr "شريط الأماكن الجانبي"
 
 #: views/widgets/SettingsDialog.qml:19
 #, kde-format
 msgid "Browse your file system from the sidebar"
-msgstr ""
+msgstr "تصفح ملفات نظامك من الشريط الجانبي"
 
 #: views/widgets/SettingsDialog.qml:31
 #, kde-format
 msgid "Dark Mode"
-msgstr ""
+msgstr "الوضع الداكن"
 
 #: views/widgets/SettingsDialog.qml:32
 #, kde-format
 msgid "Switch between light and dark colorscheme"
-msgstr ""
+msgstr "بدّل بين سمة الألوان الفاتحة والداكنة"
 
 #: views/widgets/SettingsDialog.qml:49
 #, kde-format
@@ -468,7 +471,7 @@ msgstr "المحرّر"
 #, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally"
-msgstr ""
+msgstr "اضبط مظهر وشكل المحرر. ستطبق الإعدادات بشكل عام"
 
 #: views/widgets/SettingsDialog.qml:54
 #, kde-format
@@ -478,7 +481,7 @@ msgstr "حفظ تلقائي"
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto saves your file every few seconds"
-msgstr ""
+msgstr "حفظ تلقائي كلّ عدة ثواني"
 
 #: views/widgets/SettingsDialog.qml:66
 #, kde-format
@@ -488,17 +491,17 @@ msgstr "أرقام الأسطر"
 #: views/widgets/SettingsDialog.qml:67
 #, kde-format
 msgid "Display the line numbers on the left side"
-msgstr ""
+msgstr "أظهر أرقام الأسطر على الجانب اليمين."
 
 #: views/widgets/SettingsDialog.qml:79
 #, kde-format
 msgid "Syntax Highlighting Languages"
-msgstr ""
+msgstr "لغات إبراز الصياغة"
 
 #: views/widgets/SettingsDialog.qml:80
 #, kde-format
 msgid "Display available languages"
-msgstr ""
+msgstr "اعرض اللغات المتوفرة"
 
 #: views/widgets/SettingsDialog.qml:92
 #, kde-format
@@ -508,7 +511,7 @@ msgstr "إبراز الصّياغة"
 #: views/widgets/SettingsDialog.qml:93
 #, kde-format
 msgid "Enable syntax highlighting for supported languages"
-msgstr ""
+msgstr "مكن إبراز الصياغة للغات المدعومة"
 
 #: views/widgets/SettingsDialog.qml:105
 #, kde-format
@@ -518,7 +521,7 @@ msgstr "الخطوط"
 #: views/widgets/SettingsDialog.qml:106
 #, kde-format
 msgid "Configure the global font family and size"
-msgstr ""
+msgstr "اضبط عائلة الخط وحجمه"
 
 #: views/widgets/SettingsDialog.qml:110
 #, kde-format
@@ -528,7 +531,7 @@ msgstr "العائلة"
 #: views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid "Tab Space"
-msgstr ""
+msgstr "الجدولات والمسافات"
 
 #: views/widgets/SettingsDialog.qml:148
 #, kde-format
@@ -540,7 +543,7 @@ msgstr "النّمط"
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats"
-msgstr ""
+msgstr "اضبط نمط إبراز الصياغة. هذا الضبط لا يطبق للنص الغني"
 
 #: views/widgets/SettingsDialog.qml:154
 #, kde-format
@@ -550,7 +553,7 @@ msgstr "السمة"
 #: views/widgets/SettingsDialog.qml:155
 #, kde-format
 msgid "Editor color scheme style"
-msgstr ""
+msgstr "نمط مخطط ألوان المحرر"
 
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
@@ -560,7 +563,7 @@ msgstr "اللون"
 #: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid "Editor background color"
-msgstr ""
+msgstr "لون خلفية المحرر"
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -570,7 +573,7 @@ msgstr "التّنقّل"
 #: views/widgets/ShortcutsDialog.qml:20
 #, kde-format
 msgid "Browser navigation."
-msgstr ""
+msgstr "ملاحة التنقل."
 
 #: views/widgets/ShortcutsDialog.qml:24
 #, kde-format
@@ -585,7 +588,7 @@ msgstr "أغلق اللسان"
 #: views/widgets/ShortcutsDialog.qml:64
 #, kde-format
 msgid "Path Edit"
-msgstr ""
+msgstr "تحرير المسار"
 
 #: views/widgets/ShortcutsDialog.qml:114
 #, kde-format
