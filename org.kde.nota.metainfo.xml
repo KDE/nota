@@ -8,7 +8,7 @@ SPDX-License-Identifier: CC0-1.0
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-3.0</project_license>
   <name>Nota</name>
-  <name xml:lang="ar">المحرر</name>
+  <name xml:lang="ar">نوتا</name>
   <name xml:lang="ca">Nota</name>
   <name xml:lang="ca-valencia">Nota</name>
   <name xml:lang="cs">Nota</name>
@@ -59,7 +59,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="zh-CN">浏览、创建和编辑文本文件</summary>
   <description>
     <p>Nota is a simple text editor for desktop and mobile computers.</p>
-    <p xml:lang="ar">المحرر هو محرر نصوص بسيط لأجهزة الحاسوب المكتبية والمحمولة.</p>
+    <p xml:lang="ar">نوتا هو محرر نصوص بسيط لأجهزة الحاسوب المكتبية والمحمولة.</p>
     <p xml:lang="ca">El Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
     <p xml:lang="ca-valencia">Nota és un editor senzill de text per a ordinadors d'escriptori i mòbils.</p>
     <p xml:lang="cs">Nota je jednoduchý editor textu pro pracovní a mobilní počítače.</p>
@@ -90,6 +90,7 @@ SPDX-License-Identifier: CC0-1.0
   <screenshots>
     <screenshot type="default">
       <caption>Nota, a text editor</caption>
+      <caption xml:lang="ar">نوتا، محرّر نصوص</caption>
       <caption xml:lang="ca">Nota, un editor de text</caption>
       <caption xml:lang="ca-valencia">Nota, un editor de text</caption>
       <caption xml:lang="cs">Nota, textový editor</caption>
@@ -116,7 +117,7 @@ SPDX-License-Identifier: CC0-1.0
     </screenshot>
     <screenshot type="default">
       <caption>Nota, find dialog</caption>
-      <caption xml:lang="ar">حواري البحث، المحرر</caption>
+      <caption xml:lang="ar">حواري البحث، نوتا</caption>
       <caption xml:lang="ca">Nota, diàleg de cerca</caption>
       <caption xml:lang="ca-valencia">Nota, diàleg de busca</caption>
       <caption xml:lang="de">Notas Suchdialog</caption>
