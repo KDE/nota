@@ -108,6 +108,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     },
     Qt::QueuedConnection);
 
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+
     qmlRegisterSingletonInstance<Server>(NOTA_URI, 1, 0, "Server", server.get());
     qmlRegisterSingletonInstance<Nota>(NOTA_URI, 1, 0, "Nota", Nota::instance());
     qmlRegisterType<HistoryModel>(NOTA_URI, 1, 0, "History");

@@ -95,6 +95,8 @@ ecm_setup_version(${NOTA_VERSION}
 
 add_subdirectory(src)
 
+ki18n_install(po)
+
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(FILES org.kde.nota.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
     install(FILES org.kde.nota.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
