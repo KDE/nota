@@ -41,8 +41,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     app.setOrganizationName(QStringLiteral("Maui"));
     app.setWindowIcon(QIcon(":/img/nota.svg"));
 
-    MauiApp::instance()->setIconName("qrc:/img/nota.svg");
-
     KLocalizedString::setApplicationDomain("nota");
 
     KAboutData about(QStringLiteral("nota"), i18n("Nota"), NOTA_VERSION_STRING, i18n("Browse, create and edit text files."), KAboutLicense::LGPL_V3,i18n("© 2019-%1 Maui Development Team", QString::number(QDate::currentDate().year())), QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
@@ -56,6 +54,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setProgramLogo(app.windowIcon());
 
     KAboutData::setApplicationData(about);
+    MauiApp::instance()->setIconName("qrc:/img/nota.svg");
 
     QCommandLineParser parser;
 
