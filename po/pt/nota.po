@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-23 00:44+0000\n"
+"POT-Creation-Date: 2022-11-15 00:45+0000\n"
 "PO-Revision-Date: 2022-04-21 09:34+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -23,32 +23,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgid "Nota"
 msgstr "Nota"
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Navegue, crie e edite ficheiros de texto."
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© 2019-%1 da Equipa de Desenvolvimento do Maui"
 
-#: main.cpp:50
+#: main.cpp:48
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: main.cpp:50 main.cpp:51
+#: main.cpp:48 main.cpp:49
 #, kde-format
 msgid "Developer"
 msgstr "Desenvolvimento"
 
-#: main.cpp:51
+#: main.cpp:49
 #, kde-format
 msgid "Anupam Basak"
 msgstr "Anupam Basak"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-23 00:44+0000\n"
+"POT-Creation-Date: 2022-11-15 00:45+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -27,35 +27,35 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alam.yellow@gmail.com"
 
-#: main.cpp:48
+#: main.cpp:46
 #, kde-format
 msgid "Nota"
 msgstr "ਨੋਟਾ"
 
-#: main.cpp:48
+#: main.cpp:46
 #, fuzzy, kde-format
 #| msgid ""
 #| "Nota allows you to browse, create, and edit simple and rich text files."
 msgid "Browse, create and edit text files."
 msgstr "ਨੋਟਾ ਤੁਹਾਨੂੰ ਸਰਲ ਤੇ ਗੁੰਝਲਦਾਰ ਲਿਖਤ ਫਾਇਲਾਂ ਦੀ ਝਲਕ ਵੇਖਣ, ਬਣਾਉਣ ਅਤੇ ਸੋਧਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
-#: main.cpp:48
+#: main.cpp:46
 #, fuzzy, kde-format
 #| msgid "© 2019-%1 Nitrux Development Team"
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© 2019-%1 Nitrux Development ਟੀਮ"
 
-#: main.cpp:50
+#: main.cpp:48
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: main.cpp:50 main.cpp:51
+#: main.cpp:48 main.cpp:49
 #, kde-format
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"
 
-#: main.cpp:51
+#: main.cpp:49
 #, kde-format
 msgid "Anupam Basak"
 msgstr ""
