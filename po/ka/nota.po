@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:45+0000\n"
-"PO-Revision-Date: 2022-10-08 07:52+0200\n"
+"PO-Revision-Date: 2022-11-27 22:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -69,6 +69,8 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
+"გაქვთ შეუნახავი ფაილები. შეგიძლიათ დაბრუნდეთ და შეინახოთ ისინი, ან გააუქმოთ "
+"ყველა ცვლილება და გახვიდეთ."
 
 #: main.qml:113
 #, kde-format
@@ -103,7 +105,7 @@ msgstr "მობაილი"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr ""
+msgstr "ახალი განრიგი...!"
 
 #: views/editor/Editor.qml:103
 #, kde-format
@@ -338,7 +340,7 @@ msgstr "უკანასკნელი ფაილების გარე�
 #: views/RecentView.qml:21
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr ""
+msgstr "აქ ნახავთ უახლეს გახსნილ ფაილებს"
 
 #: views/RecentView.qml:122
 #, kde-format
@@ -378,7 +380,7 @@ msgstr "&ნაგულისხმები დამატებები"
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr ""
+msgstr "ნაგულისხმები დამატებების აქტივაცია ან წაშლა"
 
 #: views/widgets/PluginsDialog.qml:22
 #, kde-format
@@ -388,7 +390,7 @@ msgstr "QML სცენა"
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr ""
+msgstr "მიმდინარე ფაილის QML სცენაში ჩატვირთვა."
 
 #: views/widgets/PluginsDialog.qml:52
 #, kde-format
@@ -408,7 +410,7 @@ msgstr "Builder"
 #: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr ""
+msgstr "პროექტის აგების და გაშვების მორგება."
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
@@ -418,7 +420,7 @@ msgstr "HTML -ის გადახედვა"
 #: views/widgets/PluginsDialog.qml:90
 #, kde-format
 msgid "Preview HTML code live."
-msgstr ""
+msgstr "აქ HTML კოდს ცოცხლად დაინახავთ."
 
 #: views/widgets/PluginsDialog.qml:98
 #, kde-format
@@ -428,7 +430,7 @@ msgstr "დამატებების ჩატვირთვა"
 #: views/widgets/PluginsDialog.qml:99
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr ""
+msgstr "მესამე პირების მიერ მოწოდებული დამატებების აქტივაცია ან წაშლა"
 
 #: views/widgets/SettingsDialog.qml:14
 #, kde-format
@@ -438,17 +440,17 @@ msgstr "საერთო"
 #: views/widgets/SettingsDialog.qml:15
 #, kde-format
 msgid "Configure the app UI, behaviour and plugins."
-msgstr ""
+msgstr "მოირგეთ აპის ინტერფეისი, ქცევა და დამატებები."
 
 #: views/widgets/SettingsDialog.qml:18
 #, kde-format
 msgid "Places Sidebar"
-msgstr ""
+msgstr "გვერდითი ზოლის მდებარეობა"
 
 #: views/widgets/SettingsDialog.qml:19
 #, kde-format
 msgid "Browse your file system from the sidebar"
-msgstr ""
+msgstr "გახსენით თქვენი ფაილური სისტემა გვერდითი პანელიდან"
 
 #: views/widgets/SettingsDialog.qml:31
 #, kde-format
@@ -469,7 +471,7 @@ msgstr "რედაქტორი"
 #, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally"
-msgstr ""
+msgstr "მოირგეთ რედაქტორის გარეგნობა. პარამეტრები გლობალურია"
 
 #: views/widgets/SettingsDialog.qml:54
 #, kde-format
@@ -509,7 +511,7 @@ msgstr "სინტაქსის ხაზგასმა"
 #: views/widgets/SettingsDialog.qml:93
 #, kde-format
 msgid "Enable syntax highlighting for supported languages"
-msgstr ""
+msgstr "მხარდაჭერილი ენებისთვის სინტაქსის გამოკვეთის ჩართვა"
 
 #: views/widgets/SettingsDialog.qml:105
 #, kde-format
@@ -519,7 +521,7 @@ msgstr "ფონტები"
 #: views/widgets/SettingsDialog.qml:106
 #, kde-format
 msgid "Configure the global font family and size"
-msgstr ""
+msgstr "გლობალური ფონტის ოჯახისა და ზომის მორგება"
 
 #: views/widgets/SettingsDialog.qml:110
 #, kde-format
@@ -542,6 +544,8 @@ msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats"
 msgstr ""
+"მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
+"ფორმატებს"
 
 #: views/widgets/SettingsDialog.qml:154
 #, kde-format
