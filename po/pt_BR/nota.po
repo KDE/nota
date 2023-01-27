@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:45+0000\n"
+"POT-Creation-Date: 2023-01-27 00:56+0000\n"
 "PO-Revision-Date: 2022-10-19 15:37-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -281,52 +281,52 @@ msgstr ""
 "Deseja realmente excluir \n"
 "%1"
 
-#: views/PlacesSidebar.qml:62
+#: views/PlacesSidebar.qml:63
 #, kde-format
 msgid "Previous"
 msgstr "Anterior"
 
-#: views/PlacesSidebar.qml:69
+#: views/PlacesSidebar.qml:70
 #, kde-format
 msgid "Up"
 msgstr "Para cima"
 
-#: views/PlacesSidebar.qml:77
+#: views/PlacesSidebar.qml:78
 #, kde-format
 msgid "Next"
 msgstr "Próximo"
 
-#: views/PlacesSidebar.qml:101
+#: views/PlacesSidebar.qml:102
 #, kde-format
 msgid "Show Folders First"
 msgstr "Mostrar primeiro as pastas"
 
-#: views/PlacesSidebar.qml:111
+#: views/PlacesSidebar.qml:112
 #, kde-format
 msgid "Type"
 msgstr "Tipo"
 
-#: views/PlacesSidebar.qml:120
+#: views/PlacesSidebar.qml:121
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: views/PlacesSidebar.qml:129
+#: views/PlacesSidebar.qml:130
 #, kde-format
 msgid "Modified"
 msgstr "Modificado"
 
-#: views/PlacesSidebar.qml:138 views/widgets/SettingsDialog.qml:123
+#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:123
 #, kde-format
 msgid "Size"
 msgstr "Tamanho"
 
-#: views/PlacesSidebar.qml:147
+#: views/PlacesSidebar.qml:148
 #, kde-format
 msgid "Name"
 msgstr "Nome"
 
-#: views/PlacesSidebar.qml:159
+#: views/PlacesSidebar.qml:160
 #, kde-format
 msgid "Group"
 msgstr "Grupo"
