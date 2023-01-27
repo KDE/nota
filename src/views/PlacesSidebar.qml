@@ -30,7 +30,7 @@ Item
 
             background: null
 
-            footBar.middleContent: Maui.ComboBox
+            footBar.middleContent: ComboBox
             {
                 Layout.fillWidth: true
                 model: Maui.BaseModel
@@ -56,6 +56,7 @@ Item
                 expanded: true
                 autoExclusive: false
                 checkable: false
+                display: ToolButton.IconOnly
 
                 Action
                 {

@@ -154,7 +154,7 @@ Maui.SettingsDialog
             label1.text:  i18n("Theme")
             label2.text: i18n("Editor color scheme style")
 
-            Maui.ComboBox
+            ComboBox
             {
                 model:  _dummyDocumentHandler.getThemes()
                 Component.onCompleted: currentIndex = find(settings.theme, Qt.MatchExactly)
