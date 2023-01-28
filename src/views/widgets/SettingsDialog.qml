@@ -9,11 +9,11 @@ import org.maui.nota 1.0 as Nota
 
 Maui.SettingsDialog
 {
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("General")
         description: i18n("Configure the app UI, behaviour and plugins.")
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Places Sidebar")
             label2.text: i18n("Browse your file system from the sidebar")
@@ -26,7 +26,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Dark Mode")
             label2.text: i18n("Switch between light and dark colorscheme")
@@ -44,12 +44,12 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Editor")
         description: i18n("Configure the look and feel of the editor. The settings are applied globally")
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text:  i18n("Auto Save")
             label2.text: i18n("Auto saves your file every few seconds")
@@ -61,7 +61,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Line Numbers")
             label2.text: i18n("Display the line numbers on the left side")
@@ -74,7 +74,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Syntax Highlighting Languages")
             label2.text: i18n("Display available languages")
@@ -87,7 +87,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Syntax Highlighting")
             label2.text: i18n("Enable syntax highlighting for supported languages")
@@ -100,12 +100,12 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Fonts")
         description: i18n("Configure the global font family and size")
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text:  i18n("Family")
 
@@ -118,7 +118,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text:  i18n("Size")
 
@@ -130,7 +130,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text:  i18n("Tab Space")
 
@@ -143,13 +143,13 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Style")
         description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats")
         visible: settings.enableSyntaxHighlighting
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text:  i18n("Theme")
             label2.text: i18n("Editor color scheme style")
@@ -168,7 +168,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text:  i18n("Color")
             label2.text: i18n("Editor background color")

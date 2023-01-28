@@ -14,12 +14,12 @@ Maui.SettingsDialog
     maxHeight: 500
     maxWidth: 350
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Navigation")
         description: i18n("Browser navigation.")
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("New Tab")
 
@@ -39,7 +39,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Close Tab")
 
@@ -59,7 +59,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Path Edit")
 
@@ -79,7 +79,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Terminal")
 
@@ -94,7 +94,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Split")
 
@@ -109,7 +109,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("New File")
 
@@ -129,7 +129,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Preview")
 
@@ -144,7 +144,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Find Tab")
 
@@ -164,7 +164,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Select All")
 
@@ -184,7 +184,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Select")
 

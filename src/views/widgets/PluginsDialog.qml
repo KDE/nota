@@ -8,7 +8,7 @@ Maui.SettingsDialog
 {
     id: control
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Default Plugins")
         description: i18n("Activate or remove the default plugins")
@@ -16,7 +16,7 @@ Maui.SettingsDialog
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             id: _qmlScene
             label1.text: i18n("QML Scene")
@@ -46,7 +46,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             id: _todos
             label1.text: i18n("ToDo")
@@ -78,13 +78,13 @@ Maui.SettingsDialog
 
 
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Builder")
             label2.text: i18n("Configure a project to build and run.")
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("HTML Previewer")
             label2.text: i18n("Preview HTML code live.")
@@ -93,7 +93,7 @@ Maui.SettingsDialog
     }
 
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Load Plugins")
         description: i18n("Activate or remove the third party plugins")
@@ -102,7 +102,7 @@ Maui.SettingsDialog
         Layout.fillHeight: true
 
         spacing: 0
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Builder")
             label2.text: i18n("Configure a project to build and run.")
