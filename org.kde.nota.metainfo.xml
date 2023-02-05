@@ -15,6 +15,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="de">Nota</name>
   <name xml:lang="en-GB">Nota</name>
   <name xml:lang="es">Nota</name>
+  <name xml:lang="eu">Nota</name>
   <name xml:lang="fi">Nota</name>
   <name xml:lang="fr">Nota</name>
   <name xml:lang="hu">Nota</name>
@@ -41,6 +42,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="de">Textdaten durchsehen, erstellen und bearbeiten</summary>
   <summary xml:lang="en-GB">Browse, create and edit text files</summary>
   <summary xml:lang="es">Navegue, cree y edite archivos de texto</summary>
+  <summary xml:lang="eu">Testu fitxategiak arakatu, sortu eta editatu</summary>
   <summary xml:lang="fi">Selaa, luo ja muokkaa tekstitiedostoja</summary>
   <summary xml:lang="fr">Naviguer, créer et modifier des fichiers de texte.</summary>
   <summary xml:lang="hu">Szövegfájlok böngészése, létrehozása és szerkesztése</summary>
@@ -68,6 +70,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="de">Nota ist ein einfacher Texteditor für die Arbeitsfläche und Mobilgeräte.</p>
     <p xml:lang="en-GB">Nota is a simple text editor for desktop and mobile computers.</p>
     <p xml:lang="es">Nota es un editor simple de texto para móviles y el escritorio.</p>
+    <p xml:lang="eu">Nota, mahaigaineko ordenagailuetarako eta ordenagailu mugikorretarako testu editore erraz bat da.</p>
     <p xml:lang="fi">Nota on yksinkertainen tekstimuokkain työpöytä- ja mobiilitietokoneille.</p>
     <p xml:lang="fr">Nota est un éditeur simple de texte pour les ordinateurs de bureau ou portables.</p>
     <p xml:lang="hu">A Nota egy egyszerű szövegszerkesztő asztali és hordozható számítógépekre.</p>
@@ -100,6 +103,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="de">Nota, ein Texteditor</caption>
       <caption xml:lang="en-GB">Nota, a text editor</caption>
       <caption xml:lang="es">Nota, un editor de texto</caption>
+      <caption xml:lang="eu">Nota, testu editore bat</caption>
       <caption xml:lang="fi">Nota, tekstimuokkain</caption>
       <caption xml:lang="fr">Nota, un éditeur de texte</caption>
       <caption xml:lang="it">Nota, un editor di testo</caption>
@@ -127,6 +131,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="de">Notas Suchdialog</caption>
       <caption xml:lang="en-GB">Nota, find dialog</caption>
       <caption xml:lang="es">Nota, encontrar diálogo</caption>
+      <caption xml:lang="eu">Nota, bilaketarako elkarrizketa-koadroa</caption>
       <caption xml:lang="fi">Nota, etsi-ikkuna</caption>
       <caption xml:lang="fr">Nota, trouver la boîte de dialogue</caption>
       <caption xml:lang="hu">Note, keresőablak</caption>
