@@ -154,16 +154,87 @@ Maui.SettingsDialog
             label1.text:  i18n("Theme")
             label2.text: i18n("Editor color scheme style")
 
-            ComboBox
+
+            GridLayout
             {
-                model:  _dummyDocumentHandler.getThemes()
-                Component.onCompleted: currentIndex = find(settings.theme, Qt.MatchExactly)
-
-                onActivated: settings.theme = currentText
-
-                TE.DocumentHandler
+                columns: 3
+                width: parent.parent.width
+                opacity: enabled ? 1 : 0.5
+                Repeater
                 {
-                    id: _dummyDocumentHandler
+                    model: TE.ColorSchemesModel
+                    {
+                    }
+
+                    delegate: Maui.GridBrowserDelegate
+                    {
+                        Layout.fillWidth: true
+                        checked: model.name === settings.theme
+                        onClicked: settings.theme = model.name
+
+                        template.iconComponent: Pane
+                        {
+                            implicitHeight: Math.max(contentHeight + topPadding + bottomPadding, 64)
+                            padding: Maui.Style.space.small
+
+                            background: Rectangle
+                            {
+//                                color: model.background
+                                color: appSettings.backgroundColor
+                                radius: Maui.Style.radiusV
+                            }
+
+                            contentItem: Column
+                            {
+                                spacing: 2
+
+                                Text
+                                {
+                                    wrapMode: Text.NoWrap
+                                    elide: Text.ElideLeft
+                                    width: parent.width
+                                    //                                    font.pointSize: Maui.Style.fontSizes.small
+                                    text: "Hello world!"
+                                    color: model.foreground
+                                    font.family: settings.font.family
+                                }
+
+                                Rectangle
+                                {
+                                    radius: 2
+                                    height: 8
+                                    width: parent.width
+                                    color: model.highlight
+                                }
+
+                                Rectangle
+                                {
+                                    radius: 2
+                                    height: 8
+                                    width: parent.width
+                                    color: model.color3
+                                }
+
+                                Rectangle
+                                {
+                                    radius: 2
+                                    height: 8
+                                    width: parent.width
+                                    color: model.color4
+                                }
+
+                                Rectangle
+                                {
+                                    radius: 2
+                                    height: 8
+                                    width: parent.width
+                                    color: model.color5
+                                }
+                            }
+                        }
+
+                        label1.text: model.name
+                    }
                 }
             }
         }
