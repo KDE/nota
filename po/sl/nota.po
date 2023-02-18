@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 00:56+0000\n"
+"POT-Creation-Date: 2023-02-18 00:57+0000\n"
 "PO-Revision-Date: 2022-09-07 07:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -352,6 +352,11 @@ msgstr "Odpri"
 msgid "Export"
 msgstr "Izvozi"
 
+#: views/Terminal.qml:21
+#, kde-format
+msgid "Follows the system color scheme."
+msgstr ""
+
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
 msgid "Filter..."
@@ -557,12 +562,12 @@ msgstr "Tema"
 msgid "Editor color scheme style"
 msgstr "Slog barvne sheme urejevalnika"
 
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:244
 #, kde-format
 msgid "Color"
 msgstr "Barva"
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:245
 #, kde-format
 msgid "Editor background color"
 msgstr "Barva ozadja urejevalnika"

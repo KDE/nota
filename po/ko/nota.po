@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 00:56+0000\n"
+"POT-Creation-Date: 2023-02-18 00:57+0000\n"
 "PO-Revision-Date: 2022-10-03 16:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -351,6 +351,11 @@ msgstr "열기"
 msgid "Export"
 msgstr "내보내기"
 
+#: views/Terminal.qml:21
+#, kde-format
+msgid "Follows the system color scheme."
+msgstr ""
+
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
 msgid "Filter..."
@@ -554,12 +559,12 @@ msgstr "테마"
 msgid "Editor color scheme style"
 msgstr "편집기 색 배열 스타일"
 
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:244
 #, kde-format
 msgid "Color"
 msgstr "색상"
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:245
 #, kde-format
 msgid "Editor background color"
 msgstr "편집기 배경색"

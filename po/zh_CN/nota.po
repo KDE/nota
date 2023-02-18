@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 00:56+0000\n"
+"POT-Creation-Date: 2023-02-18 00:57+0000\n"
 "PO-Revision-Date: 2023-02-15 11:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -349,6 +349,11 @@ msgstr "打开"
 msgid "Export"
 msgstr "导出"
 
+#: views/Terminal.qml:21
+#, kde-format
+msgid "Follows the system color scheme."
+msgstr ""
+
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
 msgid "Filter..."
@@ -552,12 +557,12 @@ msgstr "主题"
 msgid "Editor color scheme style"
 msgstr "编辑器配色方案风格"
 
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:244
 #, kde-format
 msgid "Color"
 msgstr "颜色"
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:245
 #, kde-format
 msgid "Editor background color"
 msgstr "编辑器背景颜色"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 00:56+0000\n"
+"POT-Creation-Date: 2023-02-18 00:57+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -357,6 +357,11 @@ msgstr "ਖੋਲ੍ਹੋ"
 msgid "Export"
 msgstr "ਐਕਸਪੋਰਟ"
 
+#: views/Terminal.qml:21
+#, kde-format
+msgid "Follows the system color scheme."
+msgstr ""
+
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
 msgid "Filter..."
@@ -560,12 +565,12 @@ msgstr "ਥੀਮ"
 msgid "Editor color scheme style"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:244
 #, kde-format
 msgid "Color"
 msgstr "ਰੰਗ"
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:245
 #, kde-format
 msgid "Editor background color"
 msgstr ""
