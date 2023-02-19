@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-27 00:56+0000\n"
+"POT-Creation-Date: 2023-02-18 00:57+0000\n"
 "PO-Revision-Date: 2021-02-26 18:20+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -353,6 +353,11 @@ msgstr "Opna"
 msgid "Export"
 msgstr "Eksporter"
 
+#: views/Terminal.qml:21
+#, kde-format
+msgid "Follows the system color scheme."
+msgstr ""
+
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
 msgid "Filter..."
@@ -560,12 +565,12 @@ msgstr "Tema"
 msgid "Editor color scheme style"
 msgstr "Fargeoppsett for skriveprogrammet"
 
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:244
 #, kde-format
 msgid "Color"
 msgstr "Farge"
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:245
 #, kde-format
 msgid "Editor background color"
 msgstr "Bakgrunnsfarge for skriveprogrammet"
