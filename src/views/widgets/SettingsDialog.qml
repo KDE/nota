@@ -9,6 +9,7 @@ import org.maui.nota 1.0 as Nota
 
 Maui.SettingsDialog
 {
+    id: control
     Maui.SectionGroup
     {
         title: i18n("General")
@@ -143,11 +144,61 @@ Maui.SettingsDialog
         }
     }
 
+    Maui.SectionItem
+    {
+        label1.text: i18n("Style")
+        label2.text: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats")
+        enabled: settings.enableSyntaxHighlighting
+        ToolButton
+        {
+            checkable: true
+            onToggled: control.addPage(_stylePageComponent)
+            icon.name: "go-next"
+        }
+
+    }
+
+    Component
+    {
+        id:_stylePageComponent
+    Maui.ScrollColumn
+    {
     Maui.SectionGroup
     {
         title: i18n("Style")
         description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats")
         visible: settings.enableSyntaxHighlighting
+        Maui.SectionItem
+        {
+            label1.text:  i18n("Color")
+            label2.text: i18n("Editor background color")
+
+            Maui.ColorsRow
+            {
+                spacing: Maui.Style.space.medium
+                currentColor: appSettings.backgroundColor
+                colors: ["#333", "#fafafa", "#fff3e6", "#4c425b"]
+
+                onColorPicked:
+                {
+                    currentColor = color
+
+                    var textColor
+
+                    switch(color)
+                    {
+                    case "#333": textColor = "#fafafa"; break;
+                    case "#fafafa": textColor = "#333"; break;
+                    case "#fff3e6": textColor = Qt.darker(color, 2); break;
+                    case "#4c425b": textColor = Qt.lighter(color, 2.5); break;
+                    default: textColor = Maui.Theme.textColor;
+                    }
+
+                    switchBackgroundColor(color, textColor)
+                }
+
+            }
+        }
 
         Maui.SectionItem
         {
@@ -239,38 +290,9 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
-        {
-            label1.text:  i18n("Color")
-            label2.text: i18n("Editor background color")
-
-            Maui.ColorsRow
-            {
-                spacing: Maui.Style.space.medium
-                currentColor: appSettings.backgroundColor
-                colors: ["#333", "#fafafa", "#fff3e6", "#4c425b"]
-
-                onColorPicked:
-                {
-                    currentColor = color
-
-                    var textColor
-
-                    switch(color)
-                    {
-                    case "#333": textColor = "#fafafa"; break;
-                    case "#fafafa": textColor = "#333"; break;
-                    case "#fff3e6": textColor = Qt.darker(color, 2); break;
-                    case "#4c425b": textColor = Qt.lighter(color, 2.5); break;
-                    default: textColor = Maui.Theme.textColor;
-                    }
-
-                    switchBackgroundColor(color, textColor)
-                }
-
-            }
-        }
+   }
     }
+}
 
     function switchBackgroundColor(backgroundColor, textColor)
     {
