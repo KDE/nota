@@ -143,7 +143,7 @@ Item
         }
 
         const item = _splitView.itemAt(index)
-        if( item.document.modified)
+        if( item.editor.document.modified)
         {
             _dialogLoader.sourceComponent = _unsavedDialogComponent
             dialog.callback = function () { destroyItem(index) }
