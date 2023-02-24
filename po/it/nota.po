@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 00:57+0000\n"
+"POT-Creation-Date: 2023-02-24 00:57+0000\n"
 "PO-Revision-Date: 2022-09-07 15:26+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -316,7 +316,7 @@ msgstr "Data"
 msgid "Modified"
 msgstr "Modificato"
 
-#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:123
+#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:124
 #, kde-format
 msgid "Size"
 msgstr "Dimensione"
@@ -436,44 +436,44 @@ msgstr "Carica le estensioni"
 msgid "Activate or remove the third party plugins"
 msgstr "Attiva o rimuovi le estensioni di terze parti"
 
-#: views/widgets/SettingsDialog.qml:14
+#: views/widgets/SettingsDialog.qml:15
 #, kde-format
 msgid "General"
 msgstr "Generale"
 
-#: views/widgets/SettingsDialog.qml:15
+#: views/widgets/SettingsDialog.qml:16
 #, kde-format
 msgid "Configure the app UI, behaviour and plugins."
 msgstr ""
 "Configura l'interfaccia utente, il comportamento e le estensioni "
 "dell'applicazione."
 
-#: views/widgets/SettingsDialog.qml:18
+#: views/widgets/SettingsDialog.qml:19
 #, kde-format
 msgid "Places Sidebar"
 msgstr "Barra laterale delle risorse"
 
-#: views/widgets/SettingsDialog.qml:19
+#: views/widgets/SettingsDialog.qml:20
 #, kde-format
 msgid "Browse your file system from the sidebar"
 msgstr "Sfoglia il tuo file system dalla barra laterale"
 
-#: views/widgets/SettingsDialog.qml:31
+#: views/widgets/SettingsDialog.qml:32
 #, kde-format
 msgid "Dark Mode"
 msgstr "Modalità scura"
 
-#: views/widgets/SettingsDialog.qml:32
+#: views/widgets/SettingsDialog.qml:33
 #, kde-format
 msgid "Switch between light and dark colorscheme"
 msgstr "Passa tra lo schema di colore chiaro e quello scuro"
 
-#: views/widgets/SettingsDialog.qml:49
+#: views/widgets/SettingsDialog.qml:50
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: views/widgets/SettingsDialog.qml:50
+#: views/widgets/SettingsDialog.qml:51
 #, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally"
@@ -481,72 +481,72 @@ msgstr ""
 "Configura l'aspetto dell'editor. Le impostazioni sono applicate a livello "
 "globale"
 
-#: views/widgets/SettingsDialog.qml:54
+#: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
 msgstr "Salvataggio automatico"
 
-#: views/widgets/SettingsDialog.qml:55
+#: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds"
 msgstr "Salva automaticamente il tuo file dopo pochi secondi"
 
-#: views/widgets/SettingsDialog.qml:66
+#: views/widgets/SettingsDialog.qml:67
 #, kde-format
 msgid "Line Numbers"
 msgstr "Numeri di riga"
 
-#: views/widgets/SettingsDialog.qml:67
+#: views/widgets/SettingsDialog.qml:68
 #, kde-format
 msgid "Display the line numbers on the left side"
 msgstr "Visualizza i numeri di riga sul lato sinistro"
 
-#: views/widgets/SettingsDialog.qml:79
+#: views/widgets/SettingsDialog.qml:80
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Linguaggi di evidenziazione della sintassi"
 
-#: views/widgets/SettingsDialog.qml:80
+#: views/widgets/SettingsDialog.qml:81
 #, kde-format
 msgid "Display available languages"
 msgstr "Visualizza i linguaggi disponibili"
 
-#: views/widgets/SettingsDialog.qml:92
+#: views/widgets/SettingsDialog.qml:93
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Evidenziazione della sintassi"
 
-#: views/widgets/SettingsDialog.qml:93
+#: views/widgets/SettingsDialog.qml:94
 #, kde-format
 msgid "Enable syntax highlighting for supported languages"
 msgstr "Abilita l'evidenziazione della sintassi per i linguaggi supportati"
 
-#: views/widgets/SettingsDialog.qml:105
+#: views/widgets/SettingsDialog.qml:106
 #, kde-format
 msgid "Fonts"
 msgstr "Caratteri"
 
-#: views/widgets/SettingsDialog.qml:106
+#: views/widgets/SettingsDialog.qml:107
 #, kde-format
 msgid "Configure the global font family and size"
 msgstr "Configurare la famiglia e le dimensioni del carattere globali"
 
-#: views/widgets/SettingsDialog.qml:110
+#: views/widgets/SettingsDialog.qml:111
 #, kde-format
 msgid "Family"
 msgstr "Famiglia"
 
-#: views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:136
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulazione"
 
-#: views/widgets/SettingsDialog.qml:148
+#: views/widgets/SettingsDialog.qml:149 views/widgets/SettingsDialog.qml:168
 #, kde-format
 msgid "Style"
 msgstr "Stile"
 
-#: views/widgets/SettingsDialog.qml:149
+#: views/widgets/SettingsDialog.qml:150 views/widgets/SettingsDialog.qml:169
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -555,25 +555,25 @@ msgstr ""
 "Configura lo stile di evidenziazione della sintassi. Questa configurazione "
 "non è applicata al testo formattato."
 
-#: views/widgets/SettingsDialog.qml:154
-#, kde-format
-msgid "Theme"
-msgstr "Tema"
-
-#: views/widgets/SettingsDialog.qml:155
-#, kde-format
-msgid "Editor color scheme style"
-msgstr "Stile dello schema di colori dell'editor"
-
-#: views/widgets/SettingsDialog.qml:244
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Color"
 msgstr "Colore"
 
-#: views/widgets/SettingsDialog.qml:245
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid "Editor background color"
 msgstr "Colore di sfondo dell'editor"
+
+#: views/widgets/SettingsDialog.qml:205
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+#: views/widgets/SettingsDialog.qml:206
+#, kde-format
+msgid "Editor color scheme style"
+msgstr "Stile dello schema di colori dell'editor"
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format

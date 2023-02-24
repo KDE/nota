@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 00:57+0000\n"
+"POT-Creation-Date: 2023-02-24 00:57+0000\n"
 "PO-Revision-Date: 2022-09-24 16:01+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -316,7 +316,7 @@ msgstr "Datum"
 msgid "Modified"
 msgstr "Ändrad"
 
-#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:123
+#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:124
 #, kde-format
 msgid "Size"
 msgstr "Storlek"
@@ -436,113 +436,113 @@ msgstr "Ladda insticksprogram"
 msgid "Activate or remove the third party plugins"
 msgstr "Aktivera eller ta bort insticksprogram från tredjepart"
 
-#: views/widgets/SettingsDialog.qml:14
+#: views/widgets/SettingsDialog.qml:15
 #, kde-format
 msgid "General"
 msgstr "Allmänt"
 
-#: views/widgets/SettingsDialog.qml:15
+#: views/widgets/SettingsDialog.qml:16
 #, kde-format
 msgid "Configure the app UI, behaviour and plugins."
 msgstr "Anpassa programmets användargränssnitt, beteende och insticksprogram."
 
-#: views/widgets/SettingsDialog.qml:18
+#: views/widgets/SettingsDialog.qml:19
 #, kde-format
 msgid "Places Sidebar"
 msgstr "Platssidorad"
 
-#: views/widgets/SettingsDialog.qml:19
+#: views/widgets/SettingsDialog.qml:20
 #, kde-format
 msgid "Browse your file system from the sidebar"
 msgstr "Bläddra i filsystemet från sidoraden"
 
-#: views/widgets/SettingsDialog.qml:31
+#: views/widgets/SettingsDialog.qml:32
 #, kde-format
 msgid "Dark Mode"
 msgstr "Mörkt läge"
 
-#: views/widgets/SettingsDialog.qml:32
+#: views/widgets/SettingsDialog.qml:33
 #, kde-format
 msgid "Switch between light and dark colorscheme"
 msgstr "Byt mellan ljust och mörkt färgschema"
 
-#: views/widgets/SettingsDialog.qml:49
+#: views/widgets/SettingsDialog.qml:50
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: views/widgets/SettingsDialog.qml:50
+#: views/widgets/SettingsDialog.qml:51
 #, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally"
 msgstr "Anpassa editorns utseende och känsla. Inställningarna gäller globalt."
 
-#: views/widgets/SettingsDialog.qml:54
+#: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
 msgstr "Spara automatiskt"
 
-#: views/widgets/SettingsDialog.qml:55
+#: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds"
 msgstr "Sparar filen automatiskt med några sekunders mellanrum"
 
-#: views/widgets/SettingsDialog.qml:66
+#: views/widgets/SettingsDialog.qml:67
 #, kde-format
 msgid "Line Numbers"
 msgstr "Radnummer"
 
-#: views/widgets/SettingsDialog.qml:67
+#: views/widgets/SettingsDialog.qml:68
 #, kde-format
 msgid "Display the line numbers on the left side"
 msgstr "Visa radnummer på vänster sida"
 
-#: views/widgets/SettingsDialog.qml:79
+#: views/widgets/SettingsDialog.qml:80
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Syntaxfärgläggningsspråk"
 
-#: views/widgets/SettingsDialog.qml:80
+#: views/widgets/SettingsDialog.qml:81
 #, kde-format
 msgid "Display available languages"
 msgstr "Visa tillgängliga språk"
 
-#: views/widgets/SettingsDialog.qml:92
+#: views/widgets/SettingsDialog.qml:93
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Syntaxfärgläggning"
 
-#: views/widgets/SettingsDialog.qml:93
+#: views/widgets/SettingsDialog.qml:94
 #, kde-format
 msgid "Enable syntax highlighting for supported languages"
 msgstr "Aktivera syntaxfärgläggning för språk som stöds"
 
-#: views/widgets/SettingsDialog.qml:105
+#: views/widgets/SettingsDialog.qml:106
 #, kde-format
 msgid "Fonts"
 msgstr "Teckensnitt"
 
-#: views/widgets/SettingsDialog.qml:106
+#: views/widgets/SettingsDialog.qml:107
 #, kde-format
 msgid "Configure the global font family and size"
 msgstr "Anpassa global teckensnittsfamilj och storlek"
 
-#: views/widgets/SettingsDialog.qml:110
+#: views/widgets/SettingsDialog.qml:111
 #, kde-format
 msgid "Family"
 msgstr "Familj"
 
-#: views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:136
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulatormellanslag"
 
-#: views/widgets/SettingsDialog.qml:148
+#: views/widgets/SettingsDialog.qml:149 views/widgets/SettingsDialog.qml:168
 #, kde-format
 msgid "Style"
 msgstr "Stil"
 
-#: views/widgets/SettingsDialog.qml:149
+#: views/widgets/SettingsDialog.qml:150 views/widgets/SettingsDialog.qml:169
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -551,25 +551,25 @@ msgstr ""
 "Anpassa syntaxfärgläggningens stil. Inställningen gäller inte rich text-"
 "format."
 
-#: views/widgets/SettingsDialog.qml:154
-#, kde-format
-msgid "Theme"
-msgstr "Tema"
-
-#: views/widgets/SettingsDialog.qml:155
-#, kde-format
-msgid "Editor color scheme style"
-msgstr "Editorns färgschemastil"
-
-#: views/widgets/SettingsDialog.qml:244
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Color"
 msgstr "Färg"
 
-#: views/widgets/SettingsDialog.qml:245
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid "Editor background color"
 msgstr "Editorns bakgrundsfärg"
+
+#: views/widgets/SettingsDialog.qml:205
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+#: views/widgets/SettingsDialog.qml:206
+#, kde-format
+msgid "Editor color scheme style"
+msgstr "Editorns färgschemastil"
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
