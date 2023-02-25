@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 00:57+0000\n"
-"PO-Revision-Date: 2022-10-19 15:37-0300\n"
+"PO-Revision-Date: 2023-02-24 16:40-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -354,7 +354,7 @@ msgstr "Exportar"
 #: views/Terminal.qml:21
 #, kde-format
 msgid "Follows the system color scheme."
-msgstr ""
+msgstr "Seguir o esquema de cor do sistema."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
