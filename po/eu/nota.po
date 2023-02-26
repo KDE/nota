@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-24 00:57+0000\n"
-"PO-Revision-Date: 2023-02-04 20:52+0100\n"
+"PO-Revision-Date: 2023-02-25 23:49+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -357,7 +357,7 @@ msgstr "Esportatu"
 #: views/Terminal.qml:21
 #, kde-format
 msgid "Follows the system color scheme."
-msgstr ""
+msgstr "Sistemaren kolore-antolaerari jarraitzen dio."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
