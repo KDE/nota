@@ -85,7 +85,7 @@ Maui.ContextualMenu
     MenuItem
     {
         visible: !Maui.Handy.isAndroid
-        text: i18n("Show in folder")
+        text: i18n("Show in Folder")
         icon.name: "folder-open"
         onTriggered:
         {
@@ -129,7 +129,7 @@ Maui.ContextualMenu
         {
             id: removeDialog
 
-            title: i18n("Delete file?")
+            title: i18n("Delete File?")
             acceptButton.text: i18n("Accept")
             rejectButton.text: i18n("Cancel")
             message: i18n("Are sure you want to delete \n%1", control.model.get(index).path)

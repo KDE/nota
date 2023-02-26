@@ -17,7 +17,7 @@ Maui.SettingsDialog
         Maui.SectionItem
         {
             label1.text: i18n("Places Sidebar")
-            label2.text: i18n("Browse your file system from the sidebar")
+            label2.text: i18n("Browse your file system from the sidebar.")
 
             Switch
             {
@@ -29,8 +29,10 @@ Maui.SettingsDialog
 
         Maui.SectionItem
         {
+            visible: Maui.Handy.isAndroid
+
             label1.text: i18n("Dark Mode")
-            label2.text: i18n("Switch between light and dark colorscheme")
+            label2.text: i18n("Switch between light and dark colorscheme.")
 
             Switch
             {
@@ -48,7 +50,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Editor")
-        description: i18n("Configure the look and feel of the editor. The settings are applied globally")
+        description: i18n("Configure the look and feel of the editor. The settings are applied globally.")
 
         Maui.SectionItem
         {
@@ -65,7 +67,7 @@ Maui.SettingsDialog
         Maui.SectionItem
         {
             label1.text: i18n("Line Numbers")
-            label2.text: i18n("Display the line numbers on the left side")
+            label2.text: i18n("Display the line numbers on the left side.")
 
             Switch
             {
@@ -78,7 +80,7 @@ Maui.SettingsDialog
         Maui.SectionItem
         {
             label1.text: i18n("Syntax Highlighting Languages")
-            label2.text: i18n("Display available languages")
+            label2.text: i18n("Display available languages.")
 
             Switch
             {
@@ -91,7 +93,7 @@ Maui.SettingsDialog
         Maui.SectionItem
         {
             label1.text: i18n("Syntax Highlighting")
-            label2.text: i18n("Enable syntax highlighting for supported languages")
+            label2.text: i18n("Enable syntax highlighting for supported languages.")
             Switch
             {
                 checkable: true
@@ -104,7 +106,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Fonts")
-        description: i18n("Configure the global font family and size")
+        description: i18n("Configure the global font family and size.")
 
         Maui.SectionItem
         {
@@ -146,8 +148,8 @@ Maui.SettingsDialog
 
     Maui.SectionItem
     {
-        label1.text: i18n("Style")
-        label2.text: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats")
+        label1.text: i18n("Colors")
+        label2.text: i18n("Configure the color scheme of the syntax highlighting. This configuration in not applied for rich text formats.")
         enabled: settings.enableSyntaxHighlighting
         ToolButton
         {
@@ -166,7 +168,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Style")
-        description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats")
+        description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
         visible: settings.enableSyntaxHighlighting
         Maui.SectionItem
         {

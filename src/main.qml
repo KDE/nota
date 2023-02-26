@@ -170,7 +170,8 @@ Maui.ApplicationWindow
         {
             id: _sideBarView
             sideBar.enabled: settings.enableSidebar
-
+            sideBar.autoHide: true
+            sideBar.autoShow: false
             sideBarContent: PlacesSidebar
             {
                 id : _drawer

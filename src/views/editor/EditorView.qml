@@ -21,7 +21,7 @@ Pane
     property alias plugin: _pluginLayout
     property alias model : _tabView.contentModel
     property alias tabView : _tabView
-padding: 0
+    padding: 0
     //    altHeader: Maui.Handy.isMobile
     //    headBar.visible: _tabView.count > 0
     //    autoHideHeader: focusMode
@@ -43,38 +43,38 @@ padding: 0
     //    }
 
 
-Action
-{
-    id: _openFileAction
-    icon.name: "folder-open"
-    text: i18n("Open Files")
-    onTriggered:
+    Action
     {
-        openFileDialog()
+        id: _openFileAction
+        icon.name: "folder-open"
+        text: i18n("Open Files")
+        onTriggered:
+        {
+            openFileDialog()
+        }
     }
-}
 
-Action
-{
-    id: _openRecentFileAction
-    icon.name: "folder-recent"
-    text: i18n("Open Recent Files")
-    onTriggered:
+    Action
     {
-        _stackView.push(historyViewComponent)
+        id: _openRecentFileAction
+        icon.name: "folder-recent"
+        text: i18n("Open Recent Files")
+        onTriggered:
+        {
+            _stackView.push(historyViewComponent)
+        }
     }
-}
 
-Action
-{
-    id: _newFileAction
-    icon.name: "list-add"
-    text: i18n("New")
-    onTriggered:
+    Action
     {
-        editorView.openTab("")
+        id: _newFileAction
+        icon.name: "list-add"
+        text: i18n("New")
+        onTriggered:
+        {
+            editorView.openTab("")
+        }
     }
-}
 
     contentItem: ColumnLayout
     {
@@ -91,7 +91,7 @@ Action
 
             holder.emoji: "qrc:/img/document-edit.svg"
 
-            holder.title: i18n("Create a new document")
+            holder.title: i18n("Create a New Document")
             holder.body: i18n("You can create or open a new document.")
             holder.actions: [_newFileAction, _openFileAction, _openRecentFileAction]
 
@@ -124,16 +124,16 @@ Action
 
                 ToolButton
                 {
-                  text: _tabView.count
-                  visible: _tabView.count > 1
-                  font.bold: true
-                  font.pointSize: Maui.Style.fontSizes.small
-                  onClicked: _tabView.openOverview()
-                  background: Rectangle
-                  {
-                      color: Maui.Theme.alternateBackgroundColor
-                      radius: Maui.Style.radiusV
-                  }
+                    text: _tabView.count
+                    visible: _tabView.count > 1
+                    font.bold: true
+                    font.pointSize: Maui.Style.fontSizes.small
+                    onClicked: _tabView.openOverview()
+                    background: Rectangle
+                    {
+                        color: Maui.Theme.alternateBackgroundColor
+                        radius: Maui.Style.radiusV
+                    }
                 },
 
                 Maui.ToolButtonMenu
@@ -181,7 +181,7 @@ Action
                         Action
                         {
                             enabled: settings.supportSplit
-                            text: i18n("Split")
+                            text: i18n("Split View")
                             icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
                             checked: root.currentTab && root.currentTab.count === 2
                             checkable: true
@@ -269,10 +269,10 @@ Action
                     width: height
                 }
 
-//                onRightClicked:
-//                {
-//                    _docMenu.open()
-//                }
+                //                onRightClicked:
+                //                {
+                //                    _docMenu.open()
+                //                }
 
                 onCloseClicked:
                 {
@@ -414,7 +414,7 @@ Action
                     MenuItem
                     {
                         enabled: currentFileExistsLocally
-                        text: i18n("Show in folder")
+                        text: i18n("Show in Folder")
                         icon.name: "folder-open"
                         onTriggered:
                         {
@@ -424,7 +424,7 @@ Action
 
                     MenuItem
                     {
-                        text: i18n("Delete file")
+                        text: i18n("Delete File")
                         icon.name: "edit-delete"
                         enabled: currentFileExistsLocally
                         Maui.Theme.textColor: Maui.Theme.negativeTextColor
@@ -437,7 +437,7 @@ Action
                         {
                             id: _removeDialog
 
-                            title: i18n("Delete file?")
+                            title: i18n("Delete File?")
                             acceptButton.text: i18n("Accept")
                             rejectButton.text: i18n("Cancel")
                             message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
