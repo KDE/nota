@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-24 00:57+0000\n"
+"POT-Creation-Date: 2023-02-27 00:59+0000\n"
 "PO-Revision-Date: 2023-02-25 23:49+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -146,8 +146,9 @@ msgid "New"
 msgstr "Berria"
 
 #: views/editor/EditorView.qml:94
-#, kde-format
-msgid "Create a new document"
+#, fuzzy, kde-format
+#| msgid "Create a new document"
+msgid "Create a New Document"
 msgstr "Sortu dokumentu berri bat"
 
 #: views/editor/EditorView.qml:95
@@ -175,9 +176,10 @@ msgstr "Fokua"
 msgid "Terminal"
 msgstr "Terminala"
 
-#: views/editor/EditorView.qml:184 views/widgets/ShortcutsDialog.qml:99
-#, kde-format
-msgid "Split"
+#: views/editor/EditorView.qml:184
+#, fuzzy, kde-format
+#| msgid "Split"
+msgid "Split View"
 msgstr "Zatitu"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
@@ -256,18 +258,21 @@ msgid "Line number"
 msgstr "Lerro-zenbakia"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, kde-format
-msgid "Show in folder"
+#, fuzzy, kde-format
+#| msgid "Show in folder"
+msgid "Show in Folder"
 msgstr "Erakutsi karpetan"
 
 #: views/editor/EditorView.qml:427
-#, kde-format
-msgid "Delete file"
+#, fuzzy, kde-format
+#| msgid "Delete file"
+msgid "Delete File"
 msgstr "Ezabatu fitxategia"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, kde-format
-msgid "Delete file?"
+#, fuzzy, kde-format
+#| msgid "Delete file?"
+msgid "Delete File?"
 msgstr "Fitxategia ezabatu?"
 
 #: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
@@ -319,7 +324,7 @@ msgstr "Data"
 msgid "Modified"
 msgstr "Aldatua"
 
-#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:124
+#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Size"
 msgstr "Neurria"
@@ -457,123 +462,153 @@ msgid "Places Sidebar"
 msgstr "Lekuak Alboko-barra"
 
 #: views/widgets/SettingsDialog.qml:20
-#, kde-format
-msgid "Browse your file system from the sidebar"
+#, fuzzy, kde-format
+#| msgid "Browse your file system from the sidebar"
+msgid "Browse your file system from the sidebar."
 msgstr "Arakatu zure fitxategi-sistema alboko-barratik"
 
-#: views/widgets/SettingsDialog.qml:32
+#: views/widgets/SettingsDialog.qml:34
 #, kde-format
 msgid "Dark Mode"
 msgstr "Modu iluna"
 
-#: views/widgets/SettingsDialog.qml:33
-#, kde-format
-msgid "Switch between light and dark colorscheme"
+#: views/widgets/SettingsDialog.qml:35
+#, fuzzy, kde-format
+#| msgid "Switch between light and dark colorscheme"
+msgid "Switch between light and dark colorscheme."
 msgstr "Aldatu kolore-antolaera argi eta ilunaren artean"
 
-#: views/widgets/SettingsDialog.qml:50
+#: views/widgets/SettingsDialog.qml:52
 #, kde-format
 msgid "Editor"
 msgstr "Editorea"
 
-#: views/widgets/SettingsDialog.qml:51
-#, kde-format
+#: views/widgets/SettingsDialog.qml:53
+#, fuzzy, kde-format
+#| msgid ""
+#| "Configure the look and feel of the editor. The settings are applied "
+#| "globally"
 msgid ""
-"Configure the look and feel of the editor. The settings are applied globally"
+"Configure the look and feel of the editor. The settings are applied globally."
 msgstr ""
 "Konfiguratu editorearen itxura eta izaera. Ezarpenak osotasunari ezarriko "
 "zaizkio"
 
-#: views/widgets/SettingsDialog.qml:55
+#: views/widgets/SettingsDialog.qml:57
 #, kde-format
 msgid "Auto Save"
 msgstr "Gorde automatikoki"
 
-#: views/widgets/SettingsDialog.qml:56
+#: views/widgets/SettingsDialog.qml:58
 #, kde-format
 msgid "Auto saves your file every few seconds"
 msgstr "Zure fitxategia segundo gutxiero automatikoki gordetzen du"
 
-#: views/widgets/SettingsDialog.qml:67
+#: views/widgets/SettingsDialog.qml:69
 #, kde-format
 msgid "Line Numbers"
 msgstr "Lerro zenbakiak"
 
-#: views/widgets/SettingsDialog.qml:68
-#, kde-format
-msgid "Display the line numbers on the left side"
+#: views/widgets/SettingsDialog.qml:70
+#, fuzzy, kde-format
+#| msgid "Display the line numbers on the left side"
+msgid "Display the line numbers on the left side."
 msgstr "Azaldu lerro-zenbakiak ezker aldean"
 
-#: views/widgets/SettingsDialog.qml:80
+#: views/widgets/SettingsDialog.qml:82
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Erakutsi sintaxi-nabarmentzea duten lengoaiak"
 
-#: views/widgets/SettingsDialog.qml:81
-#, kde-format
-msgid "Display available languages"
+#: views/widgets/SettingsDialog.qml:83
+#, fuzzy, kde-format
+#| msgid "Display available languages"
+msgid "Display available languages."
 msgstr "Azaldu lengoaia erabilgarriak"
 
-#: views/widgets/SettingsDialog.qml:93
+#: views/widgets/SettingsDialog.qml:95
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Sintaxia nabarmentzea"
 
-#: views/widgets/SettingsDialog.qml:94
-#, kde-format
-msgid "Enable syntax highlighting for supported languages"
+#: views/widgets/SettingsDialog.qml:96
+#, fuzzy, kde-format
+#| msgid "Enable syntax highlighting for supported languages"
+msgid "Enable syntax highlighting for supported languages."
 msgstr "Gaitu sintaxia nabarmentzea onartzen duten lengoaietan"
 
-#: views/widgets/SettingsDialog.qml:106
+#: views/widgets/SettingsDialog.qml:108
 #, kde-format
 msgid "Fonts"
 msgstr "Letra-tipoak"
 
-#: views/widgets/SettingsDialog.qml:107
-#, kde-format
-msgid "Configure the global font family and size"
+#: views/widgets/SettingsDialog.qml:109
+#, fuzzy, kde-format
+#| msgid "Configure the global font family and size"
+msgid "Configure the global font family and size."
 msgstr "Konfiguratu letra-tipo familia eta neurri orokorrak"
 
-#: views/widgets/SettingsDialog.qml:111
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Family"
 msgstr "Familia"
 
-#: views/widgets/SettingsDialog.qml:136
+#: views/widgets/SettingsDialog.qml:138
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulazio espazioa"
 
-#: views/widgets/SettingsDialog.qml:149 views/widgets/SettingsDialog.qml:168
-#, kde-format
-msgid "Style"
-msgstr "Estiloa"
+#: views/widgets/SettingsDialog.qml:151
+#, fuzzy, kde-format
+#| msgid "Color"
+msgid "Colors"
+msgstr "Kolorea"
 
-#: views/widgets/SettingsDialog.qml:150 views/widgets/SettingsDialog.qml:169
-#, kde-format
+#: views/widgets/SettingsDialog.qml:152
+#, fuzzy, kde-format
+#| msgid ""
+#| "Configure the style of the syntax highliting. This configuration in not "
+#| "applied for rich text formats"
 msgid ""
-"Configure the style of the syntax highliting. This configuration in not "
-"applied for rich text formats"
+"Configure the color scheme of the syntax highlighting. This configuration in "
+"not applied for rich text formats."
 msgstr ""
 "Konfiguratu sintaxia nabarmentzeko estiloa. Konfigurazio hau ez da erabiliko "
 "testu aberastuko formatuekin"
 
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:170
+#, kde-format
+msgid "Style"
+msgstr "Estiloa"
+
+#: views/widgets/SettingsDialog.qml:171
+#, fuzzy, kde-format
+#| msgid ""
+#| "Configure the style of the syntax highliting. This configuration in not "
+#| "applied for rich text formats"
+msgid ""
+"Configure the style of the syntax highliting. This configuration in not "
+"applied for rich text formats."
+msgstr ""
+"Konfiguratu sintaxia nabarmentzeko estiloa. Konfigurazio hau ez da erabiliko "
+"testu aberastuko formatuekin"
+
+#: views/widgets/SettingsDialog.qml:175
 #, kde-format
 msgid "Color"
 msgstr "Kolorea"
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:176
 #, kde-format
 msgid "Editor background color"
 msgstr "Editorearen hondoko kolorea"
 
-#: views/widgets/SettingsDialog.qml:205
+#: views/widgets/SettingsDialog.qml:207
 #, kde-format
 msgid "Theme"
 msgstr "Gaia"
 
-#: views/widgets/SettingsDialog.qml:206
+#: views/widgets/SettingsDialog.qml:208
 #, kde-format
 msgid "Editor color scheme style"
 msgstr "Editorearen kolore-antolaera estiloa"
@@ -602,6 +637,11 @@ msgstr "Itxi fitxa"
 #, kde-format
 msgid "Path Edit"
 msgstr "Bide-izena editatzea"
+
+#: views/widgets/ShortcutsDialog.qml:99
+#, kde-format
+msgid "Split"
+msgstr "Zatitu"
 
 #: views/widgets/ShortcutsDialog.qml:114
 #, kde-format
