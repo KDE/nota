@@ -84,7 +84,7 @@ Maui.ContextualMenu
 
     MenuItem
     {
-        visible: !Maui.Handy.isAndroid
+        enabled: !Maui.Handy.isAndroid
         text: i18n("Show in Folder")
         icon.name: "folder-open"
         onTriggered:

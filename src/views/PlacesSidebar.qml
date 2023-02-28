@@ -37,9 +37,7 @@ Item
                 {
                     list: FB.PlacesList
                     {
-                        groups: [
-                            FB.FMList.PLACES_PATH,
-                            FB.FMList.DRIVES_PATH]
+                        groups: [FB.FMList.PLACES_PATH]
                     }
                 }
 
@@ -196,6 +194,8 @@ Item
                         }else
                         {
                             editorView.openTab(item.path)
+                            if(_sideBarView.sideBar.collapsed)
+                                _sideBarView.sideBar.close()
                         }
                     }
                 }

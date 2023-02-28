@@ -20,6 +20,7 @@ Maui.SplitViewItem
         anchors.fill: parent
 
         showLineNumbers: settings.showLineNumbers
+        property alias showLineCount : _linesCount.visible
         body.color: settings.textColor
         body.font.family: settings.font.family
         body.font.pointSize: settings.font.pointSize
@@ -149,6 +150,7 @@ Maui.SplitViewItem
 
         Maui.Chip
         {
+            id: _linesCount
             text: _editor.body.length + " / " + _editor.body.lineCount
             color: _editor.body.color
 
