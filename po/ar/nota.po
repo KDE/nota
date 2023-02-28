@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2022-10-02 19:54+0400\n"
+"PO-Revision-Date: 2023-02-27 21:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -144,8 +144,7 @@ msgid "New"
 msgstr "جديد"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
 msgstr "أنشئ مستندًا جديدًا"
 
@@ -175,10 +174,9 @@ msgid "Terminal"
 msgstr "الطّرفيّة"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "اقسم"
+msgstr "اقسم العرض"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -256,20 +254,17 @@ msgid "Line number"
 msgstr "رقم السطر"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
-msgstr "أعرض في مجلد"
+msgstr "أظهر في مجلد"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
 msgstr "احذف ملف"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
 msgstr "أأحذف الملفّ؟"
 
@@ -360,7 +355,7 @@ msgstr "صدّر"
 #: views/Terminal.qml:21
 #, kde-format
 msgid "Follows the system color scheme."
-msgstr ""
+msgstr "اتبع تشكيلة الألوان النظام."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -458,10 +453,9 @@ msgid "Places Sidebar"
 msgstr "شريط الأماكن الجانبي"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "تصفح ملفات نظامك من الشريط الجانبي"
+msgstr "تصفح ملفات نظامك من الشريط الجانبي."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -469,10 +463,9 @@ msgid "Dark Mode"
 msgstr "الوضع الداكن"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "بدّل بين سمة الألوان الفاتحة والداكنة"
+msgstr "بدّل بين سمة الألوان الفاتحة والداكنة."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -480,13 +473,10 @@ msgid "Editor"
 msgstr "المحرّر"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
-msgstr "اضبط مظهر وشكل المحرر. ستطبق الإعدادات بشكل عام"
+msgstr "اضبط مظهر وشكل المحرر. ستطبق الإعدادات بشكل عام."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -504,8 +494,7 @@ msgid "Line Numbers"
 msgstr "أرقام الأسطر"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
 msgstr "أظهر أرقام الأسطر على الجانب اليمين."
 
@@ -515,10 +504,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "لغات إبراز الصياغة"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "اعرض اللغات المتوفرة"
+msgstr "اعرض اللغات المتوفرة."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -526,10 +514,9 @@ msgid "Syntax Highlighting"
 msgstr "إبراز الصّياغة"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "مكن إبراز الصياغة للغات المدعومة"
+msgstr "مكن إبراز الصياغة للغات المدعومة."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -537,10 +524,9 @@ msgid "Fonts"
 msgstr "الخطوط"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "اضبط عائلة الخط وحجمه"
+msgstr "اضبط عائلة الخط وحجمه."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -553,20 +539,16 @@ msgid "Tab Space"
 msgstr "الجدولات والمسافات"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "اللون"
+msgstr "الألوان"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
-msgstr "اضبط نمط إبراز الصياغة. هذا الضبط لا يطبق للنص الغني"
+msgstr "اضبط تشكيلة ألوان إبراز الصياغة. هذا الضبط لا يطبق على النص الغني."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -574,14 +556,11 @@ msgid "Style"
 msgstr "النّمط"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
-msgstr "اضبط نمط إبراز الصياغة. هذا الضبط لا يطبق للنص الغني"
+msgstr "اضبط نمط إبراز الصياغة. هذا الضبط لا يطبق للنص الغني."
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format

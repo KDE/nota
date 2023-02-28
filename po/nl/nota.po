@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2023-02-18 11:01+0100\n"
+"PO-Revision-Date: 2023-02-27 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -143,10 +143,9 @@ msgid "New"
 msgstr "Nieuw"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
-msgstr "Maak een nieuw document aan"
+msgstr "Een nieuw document aanmaken"
 
 #: views/editor/EditorView.qml:95
 #, kde-format
@@ -174,10 +173,9 @@ msgid "Terminal"
 msgstr "Terminal"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Splitsen"
+msgstr "Beeld splitsen"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -255,20 +253,17 @@ msgid "Line number"
 msgstr "Regelnummer"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
 msgstr "In map tonen"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
 msgstr "Bestand verwijderen"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
 msgstr "Bestand verwijderen?"
 
@@ -457,10 +452,9 @@ msgid "Places Sidebar"
 msgstr "Zijbalk met plaatsen"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Blader door uw bestandssysteem vanuit de zijbalk"
+msgstr "Blader door uw bestandssysteem vanuit de zijbalk."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -468,10 +462,9 @@ msgid "Dark Mode"
 msgstr "Donkere modus"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Tussen licht en donker kleurenschema wisselen"
+msgstr "Tussen licht en donker kleurenschema wisselen."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -479,15 +472,12 @@ msgid "Editor"
 msgstr "Editor"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
 msgstr ""
 "Het uiterlijk en gedrag van de tekstbewerker configureren. De instellingen "
-"worden globaal toegepast"
+"worden globaal toegepast."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -505,10 +495,9 @@ msgid "Line Numbers"
 msgstr "Regelnummers"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "De regelnummering aan de linkerzijde tonen"
+msgstr "De regelnummering aan de linkerzijde tonen."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -516,10 +505,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "Talen met syntaxisaccentuering"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Beschikbare talen tonen"
+msgstr "Beschikbare talen tonen."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -527,10 +515,9 @@ msgid "Syntax Highlighting"
 msgstr "Syntaxisaccentuering"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Syntaxisaccentuering inschakelen voor ondersteunde talen"
+msgstr "Syntaxisaccentuering inschakelen voor ondersteunde talen."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -538,10 +525,9 @@ msgid "Fonts"
 msgstr "Lettertypen"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "De globale lettertypefamilie en -grootte configureren"
+msgstr "De globale lettertypefamilie en -grootte configureren."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -554,22 +540,18 @@ msgid "Tab Space"
 msgstr "Tabbladruimte"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Kleur"
+msgstr "Kleuren"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
-"De stijl van de syntaxisaccentuering configureren. Deze configuratie wordt "
-"niet toegepast voor indelingen met opgemaakte tekst."
+"Het kleurenschema van de syntaxisaccentuering configureren. Deze "
+"configuratie wordt niet toegepast voor indelingen met opgemaakte tekst."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -577,10 +559,7 @@ msgid "Style"
 msgstr "Stijl"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."

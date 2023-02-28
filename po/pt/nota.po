@@ -170,10 +170,9 @@ msgid "Terminal"
 msgstr "Terminal"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Dividir"
+msgstr "Dividir a Área"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -257,10 +256,9 @@ msgid "Show in Folder"
 msgstr "Mostrar na pasta"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
-msgstr "Apagar o ficheiro"
+msgstr "Apagar o Ficheiro"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
 #, fuzzy, kde-format
@@ -464,10 +462,9 @@ msgid "Dark Mode"
 msgstr "Modo Escuro"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Alternar entre o esquema de cores claro e escuro"
+msgstr "Alternar entre o esquema de cores claro e escuro."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -501,10 +498,9 @@ msgid "Line Numbers"
 msgstr "Números de Linha"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "Mostrar os números de linha do lado esquerdo"
+msgstr "Mostrar os números de linha do lado esquerdo."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -550,10 +546,9 @@ msgid "Tab Space"
 msgstr "Espaço da Tabulação"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Cor"
+msgstr "Cores"
 
 #: views/widgets/SettingsDialog.qml:152
 #, fuzzy, kde-format

@@ -4,21 +4,21 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2023-02-18 11:18+0100\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"PO-Revision-Date: 2023-02-27 20:23+0100\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -146,8 +146,7 @@ msgid "New"
 msgstr "Nou"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
 msgstr "Crea un document nou"
 
@@ -177,10 +176,9 @@ msgid "Terminal"
 msgstr "Terminal"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Dividix"
+msgstr "Dividix la vista"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -258,20 +256,17 @@ msgid "Line number"
 msgstr "Número de línia"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
 msgstr "Mostra en la carpeta"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
 msgstr "Suprimix el fitxer"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
 msgstr "Voleu suprimir el fitxer?"
 
@@ -460,10 +455,9 @@ msgid "Places Sidebar"
 msgstr "Barra lateral de llocs"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Navegueu pel sistema de fitxers des de la barra lateral"
+msgstr "Navegueu pel sistema de fitxers des de la barra lateral."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -471,10 +465,9 @@ msgid "Dark Mode"
 msgstr "Mode fosc"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Alterna entre els esquemes de color clar i fosc"
+msgstr "Alterna entre els esquemes de color clar i fosc."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -482,15 +475,12 @@ msgid "Editor"
 msgstr "Editor"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
 msgstr ""
 "Configura l'aspecte i el comportament de l'editor. La configuració s'aplica "
-"globalment"
+"globalment."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -508,10 +498,9 @@ msgid "Line Numbers"
 msgstr "Números de línia"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "Mostra els números de les línies en la banda esquerra"
+msgstr "Mostra els números de línia en la part esquerra."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -519,10 +508,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "Llenguatges de ressaltat de la sintaxi"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Mostra els llenguatges disponibles"
+msgstr "Mostra els llenguatges disponibles."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -530,10 +518,9 @@ msgid "Syntax Highlighting"
 msgstr "Ressaltat de la sintaxi"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Llenguatges de ressaltat de la sintaxi per als llenguatges admesos"
+msgstr "Activa el ressaltat de la sintaxi per als llenguatges admesos."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -541,10 +528,9 @@ msgid "Fonts"
 msgstr "Tipus de lletra"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "Configura la família i la mida dels tipus de lletra globals"
+msgstr "Configura la família i la mida dels tipus de lletra globals."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -557,22 +543,18 @@ msgid "Tab Space"
 msgstr "Espai de la pestanya"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Color"
+msgstr "Colors"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
-"Configura l'estil del ressaltat de la sintaxi. Esta configuració no s'aplica "
-"als formats de text enriquit"
+"Configura l'esquema de color del ressaltat de la sintaxi. Esta configuració "
+"no s'aplica als formats de text enriquit."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -580,16 +562,13 @@ msgid "Style"
 msgstr "Estil"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 "Configura l'estil del ressaltat de la sintaxi. Esta configuració no s'aplica "
-"als formats de text enriquit"
+"als formats de text enriquit."
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format

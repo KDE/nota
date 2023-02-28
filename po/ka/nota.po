@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2023-02-18 07:07+0100\n"
+"PO-Revision-Date: 2023-02-27 06:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -144,8 +144,7 @@ msgid "New"
 msgstr "ახალი"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
 msgstr "ახალი დოკუმენტის შექმნა"
 
@@ -175,10 +174,9 @@ msgid "Terminal"
 msgstr "ტერმინალი"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "გაყოფა"
+msgstr "ხედის გაყოფა"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -256,20 +254,17 @@ msgid "Line number"
 msgstr "ხაზის ნომერი"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
 msgstr "საქაღალდეში ჩვენება"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
-msgstr "Ფაილის წაშლა"
+msgstr "ფაილის წაშლა"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
 msgstr "წავშალო ფაილი?"
 
@@ -458,10 +453,9 @@ msgid "Places Sidebar"
 msgstr "გვერდითი ზოლის მდებარეობა"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "გახსენით თქვენი ფაილური სისტემა გვერდითი პანელიდან"
+msgstr "გახსენით თქვენი ფაილური სისტემა გვერდითი პანელიდან."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -469,10 +463,9 @@ msgid "Dark Mode"
 msgstr "მუქი რეჟიმი"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "ღია და მუქ ფერებს შორის გადართვა"
+msgstr "ღია და მუქ ფერებს შორის გადართვა."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -480,13 +473,10 @@ msgid "Editor"
 msgstr "რედაქტორი"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
-msgstr "მოირგეთ რედაქტორის გარეგნობა. პარამეტრები გლობალურია"
+msgstr "მოირგეთ რედაქტორის გარეგნობა. პარამეტრები გლობალურია."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -504,10 +494,9 @@ msgid "Line Numbers"
 msgstr "ხაზის ნომრები"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "მარცხენა მხარეს ხაზის ნომრების ჩვენება"
+msgstr "მარცხენა მხარეს ხაზის ნომრების ჩვენება."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -515,10 +504,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "სინტაქსის გამოკვეთის ენები"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "ხელმისაწვდომი ენების ჩვენება"
+msgstr "ხელმისაწვდომი ენების ჩვენება."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -526,10 +514,9 @@ msgid "Syntax Highlighting"
 msgstr "სინტაქსის ხაზგასმა"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "მხარდაჭერილი ენებისთვის სინტაქსის გამოკვეთის ჩართვა"
+msgstr "მხარდაჭერილი ენებისთვის სინტაქსის გამოკვეთის ჩართვა."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -537,10 +524,9 @@ msgid "Fonts"
 msgstr "ფონტები"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "გლობალური ფონტის ოჯახისა და ზომის მორგება"
+msgstr "გლობალური ფონტის ოჯახისა და ზომის მორგება."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -553,22 +539,18 @@ msgid "Tab Space"
 msgstr "ტაბულაციის სივრცე"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "ფერი"
+msgstr "ფერები"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 "მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
-"ფორმატებს"
+"ფორმატებს."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -576,16 +558,13 @@ msgid "Style"
 msgstr "სტილი"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 "მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
-"ფორმატებს"
+"ფორმატებს."
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2023-02-18 11:23+0300\n"
+"PO-Revision-Date: 2023-02-27 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -143,10 +143,9 @@ msgid "New"
 msgstr "Yeni"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
-msgstr "Yeni bir belge oluştur"
+msgstr "Yeni Belge Oluştur"
 
 #: views/editor/EditorView.qml:95
 #, kde-format
@@ -174,10 +173,9 @@ msgid "Terminal"
 msgstr "Uçbirim"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Bölüntü"
+msgstr "Bölünmüş Görünüm"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -255,22 +253,19 @@ msgid "Line number"
 msgstr "Satır numarası"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
-msgstr "Klasörde göster"
+msgstr "Klasörde Göster"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
-msgstr "Dosyayı sil"
+msgstr "Dosyayı Sil"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
-msgstr "Dosya silinsin mi?"
+msgstr "Dosyayı Sil?"
 
 #: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
 #, kde-format
@@ -457,10 +452,9 @@ msgid "Places Sidebar"
 msgstr "Yerler Kenar Çubuğu"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Kenar çubuğundan dosya sisteminize göz atın"
+msgstr "Kenar çubuğundan dosya sisteminize göz atın."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -468,10 +462,9 @@ msgid "Dark Mode"
 msgstr "Koyu Kip"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Açık ve koyu renk şeması arasında geçiş yapın"
+msgstr "Açık ve koyu renk şeması arasında geçiş yapın."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -479,15 +472,12 @@ msgid "Editor"
 msgstr "Düzenleyici"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
 msgstr ""
-"Düzenleyicinin görünüm ve hisini yapılandırın. Ayarlar global olarak "
-"uygulanır"
+"Düzenleyicinin görünüm ve hissini yapılandırın. Ayarlar global olarak "
+"uygulanır."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -505,10 +495,9 @@ msgid "Line Numbers"
 msgstr "Satır Numaraları"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "Sol tarafta satır numaralarını görüntüle"
+msgstr "Sol tarafta satır numaralarını görüntüleyin."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -516,10 +505,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "Sözdizim Vurgulama Dilleri"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Kullanılabilir dilleri görüntüleyin"
+msgstr "Kullanılabilir dilleri görüntüleyin."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -527,10 +515,9 @@ msgid "Syntax Highlighting"
 msgstr "Sözdizim Vurgulama"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Desteklenen diller için sözdizimi vurgulamasını etkinleştir"
+msgstr "Desteklenen diller için sözdizimi vurgulamasını etkinleştirin."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -538,10 +525,9 @@ msgid "Fonts"
 msgstr "Yazıtipleri"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "Global yazıtipi ailesi ve boyutunu yapılandırın"
+msgstr "Global yazıtipi ailesini ve boyutunu yapılandırın."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -554,22 +540,18 @@ msgid "Tab Space"
 msgstr "Sekme Boşluğu"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Renk"
+msgstr "Renkler"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 "Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
-"biçimleri için uygulanmaz"
+"biçimleri için uygulanmaz."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -577,16 +559,13 @@ msgid "Style"
 msgstr "Biçem"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 "Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
-"biçimleri için uygulanmaz"
+"biçimleri için uygulanmaz."
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format

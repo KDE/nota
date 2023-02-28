@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2023-02-26 19:48+0000\n"
+"PO-Revision-Date: 2023-02-27 20:20+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English\n"
+"Language-Team: English <kde-l10n-en_gb@kde.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,10 +143,9 @@ msgid "New"
 msgstr "New"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
-msgstr "Create a new document"
+msgstr "Create a New Document"
 
 #: views/editor/EditorView.qml:95
 #, kde-format
@@ -174,10 +173,9 @@ msgid "Terminal"
 msgstr "Terminal"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Split"
+msgstr "Split View"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -255,22 +253,19 @@ msgid "Line number"
 msgstr "Line number"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
-msgstr "Show in folder"
+msgstr "Show in Folder"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
-msgstr "Delete file"
+msgstr "Delete File"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
-msgstr "Delete file?"
+msgstr "Delete File?"
 
 #: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
 #, kde-format
@@ -457,10 +452,9 @@ msgid "Places Sidebar"
 msgstr "Places Sidebar"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Browse your file system from the sidebar"
+msgstr "Browse your file system from the sidebar."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -468,10 +462,9 @@ msgid "Dark Mode"
 msgstr "Dark Mode"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Switch between light and dark colour schemes"
+msgstr "Switch between light and dark colour scheme."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -479,14 +472,11 @@ msgid "Editor"
 msgstr "Editor"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
 msgstr ""
-"Configure the look and feel of the editor. The settings are applied globally"
+"Configure the look and feel of the editor. The settings are applied globally."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -504,10 +494,9 @@ msgid "Line Numbers"
 msgstr "Line Numbers"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "Display the line numbers on the left side"
+msgstr "Display the line numbers on the left side."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -515,10 +504,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "Syntax Highlighting Languages"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Display available languages"
+msgstr "Display available languages."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -526,10 +514,9 @@ msgid "Syntax Highlighting"
 msgstr "Syntax Highlighting"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Enable syntax highlighting for supported languages"
+msgstr "Enable syntax highlighting for supported languages."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -537,10 +524,9 @@ msgid "Fonts"
 msgstr "Fonts"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "Configure the global font family and size"
+msgstr "Configure the global font family and size."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -553,22 +539,18 @@ msgid "Tab Space"
 msgstr "Tab Space"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Colour"
+msgstr "Colours"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
-"Configure the style of the syntax highlighting. This configuration in not "
-"applied for rich text formats"
+"Configure the colour scheme of the syntax highlighting. This configuration "
+"in not applied for rich text formats."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -576,16 +558,13 @@ msgid "Style"
 msgstr "Style"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 "Configure the style of the syntax highlighting. This configuration in not "
-"applied for rich text formats"
+"applied for rich text formats."
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format

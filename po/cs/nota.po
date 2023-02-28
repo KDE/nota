@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2023-02-21 09:35+0100\n"
+"PO-Revision-Date: 2023-02-27 14:56+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -141,8 +141,7 @@ msgid "New"
 msgstr "Nový"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
 msgstr "Vytvořit nový dokument"
 
@@ -172,10 +171,9 @@ msgid "Terminal"
 msgstr "Terminál"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Rozdělit"
+msgstr "Rozdělit pohled"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -253,20 +251,17 @@ msgid "Line number"
 msgstr "Číslo řádku"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
 msgstr "Zobrazit ve složce"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
 msgstr "Smazat soubor"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
 msgstr "Smazat soubor?"
 
@@ -458,7 +453,7 @@ msgstr "Postranní panel míst"
 #: views/widgets/SettingsDialog.qml:20
 #, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr ""
+msgstr "Procházet souborový systém z postranní lišty."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -466,10 +461,9 @@ msgid "Dark Mode"
 msgstr "Tmavý režim"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Přepínač mezi světlým a tmavým barevným schématem"
+msgstr "Přepínač mezi světlým a tmavým barevným schématem."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -480,7 +474,7 @@ msgstr "Editor"
 #, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
-msgstr ""
+msgstr "Nastavit vzhled a chování editoru. Nastavení jsou aplikována globálně."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -500,7 +494,7 @@ msgstr "Čísla řádek"
 #: views/widgets/SettingsDialog.qml:70
 #, kde-format
 msgid "Display the line numbers on the left side."
-msgstr ""
+msgstr "Zobrazit čísla řádků na levé straně."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -510,7 +504,7 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:83
 #, kde-format
 msgid "Display available languages."
-msgstr ""
+msgstr "Zobrazit dostupné jazyky."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -520,7 +514,7 @@ msgstr "Zvýrazňování syntaxe"
 #: views/widgets/SettingsDialog.qml:96
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr ""
+msgstr "Povolit zvýrazňování syntaxe pro podporované jazyky."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -528,10 +522,9 @@ msgid "Fonts"
 msgstr "Písma"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "Nastavit globální rodinu a velikost písem"
+msgstr "Nastavit globální rodinu a velikost písem."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -544,10 +537,9 @@ msgid "Tab Space"
 msgstr ""
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Barva"
+msgstr "Barvy"
 
 #: views/widgets/SettingsDialog.qml:152
 #, kde-format

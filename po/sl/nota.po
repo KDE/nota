@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2023-02-19 06:49+0100\n"
+"PO-Revision-Date: 2023-02-27 08:58+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -144,8 +144,7 @@ msgid "New"
 msgstr "Nov"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
 msgstr "Ustvari nov dokument"
 
@@ -175,10 +174,9 @@ msgid "Terminal"
 msgstr "Terminal"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Razcepi"
+msgstr "Razcepi pogled"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -256,22 +254,19 @@ msgid "Line number"
 msgstr "Številka vrstice"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
 msgstr "Pokaži v mapi"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
 msgstr "Izbriši datoteko"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
-msgstr "Ali želite izbrisati datoteko?"
+msgstr "Naj zbrišem datoteko?"
 
 #: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
 #, kde-format
@@ -458,10 +453,9 @@ msgid "Places Sidebar"
 msgstr "Stranska vrstico mest"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Brskajte po datotečnem sistemu v stranski vrstici"
+msgstr "Brskajte po datotečnem sistemu v stranski vrstici."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -469,10 +463,9 @@ msgid "Dark Mode"
 msgstr "Temni način"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Preklop med svetlo in temno barvno shemo"
+msgstr "Preklop med svetlo in temno barvno shemo."
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -480,13 +473,10 @@ msgid "Editor"
 msgstr "Urejevalnik"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
-msgstr "Nastavite videz in občutek urejevalnika. Nastavitve veljajo globalno"
+msgstr "Nastavite videz in občutek urejevalnika. Nastavitve veljajo globalno."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -504,10 +494,9 @@ msgid "Line Numbers"
 msgstr "Številke vrstic"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "Prikaži številke vrstic na levi strani"
+msgstr "Prikaži številke vrstic na levi strani."
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -515,10 +504,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "Jeziki za poudarjanje sintakse"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Prikaži razpoložljive jezike"
+msgstr "Prikaži razpoložljive jezike."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -526,10 +514,9 @@ msgid "Syntax Highlighting"
 msgstr "Poudarjanje skladnje"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Omogoči poudarjanje sintakse za podprte jezike"
+msgstr "Omogoči poudarjanje sintakse za podprte jezike."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -537,10 +524,9 @@ msgid "Fonts"
 msgstr "Pisave"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "Globalno nastavite družino in velikost pisav"
+msgstr "Globalno nastavite družino in velikost pisav."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -553,22 +539,18 @@ msgid "Tab Space"
 msgstr "Prostor tabulatorja"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Barva"
+msgstr "Barve"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 "Nastavite slog poudarjanja skladnje. Ta nastavitev ne deluje za oblike "
-"obogatenega besedila"
+"obogatenega besedila."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -576,16 +558,13 @@ msgid "Style"
 msgstr "Slog"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 "Nastavite slog poudarjanja skladnje. Ta nastavitev ne deluje za oblike "
-"obogatenega besedila"
+"obogatenega besedila."
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format
