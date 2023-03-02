@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the nota package.
-# Shinjo Park <kde@peremen.name>, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2022-10-03 16:03+0200\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"PO-Revision-Date: 2023-02-28 23:02+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,22 +106,22 @@ msgstr "모바일"
 msgid "New ToDo... Argh!"
 msgstr "새 할 일... 으악!"
 
-#: views/editor/Editor.qml:103
+#: views/editor/Editor.qml:104
 #, kde-format
 msgid "Open here"
 msgstr "여기에 열기"
 
-#: views/editor/Editor.qml:113
+#: views/editor/Editor.qml:114
 #, kde-format
 msgid "Open in new tab"
 msgstr "새 탭으로 열기"
 
-#: views/editor/Editor.qml:124
+#: views/editor/Editor.qml:125
 #, kde-format
 msgid "Open in new split"
 msgstr "새 분할 보기에서 열기"
 
-#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:442
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
@@ -286,52 +286,52 @@ msgstr ""
 "다음 항목을 삭제하시겠습니까?\n"
 "%1"
 
-#: views/PlacesSidebar.qml:63
+#: views/PlacesSidebar.qml:61
 #, kde-format
 msgid "Previous"
 msgstr "이전"
 
-#: views/PlacesSidebar.qml:70
+#: views/PlacesSidebar.qml:68
 #, kde-format
 msgid "Up"
 msgstr "위로"
 
-#: views/PlacesSidebar.qml:78
+#: views/PlacesSidebar.qml:76
 #, kde-format
 msgid "Next"
 msgstr "다음"
 
-#: views/PlacesSidebar.qml:102
+#: views/PlacesSidebar.qml:100
 #, kde-format
 msgid "Show Folders First"
 msgstr "폴더 먼저 표시"
 
-#: views/PlacesSidebar.qml:112
+#: views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "형식"
 
-#: views/PlacesSidebar.qml:121
+#: views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "날짜"
 
-#: views/PlacesSidebar.qml:130
+#: views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "수정됨"
 
-#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Size"
 msgstr "크기"
 
-#: views/PlacesSidebar.qml:148
+#: views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "이름"
 
-#: views/PlacesSidebar.qml:160
+#: views/PlacesSidebar.qml:158
 #, kde-format
 msgid "Group"
 msgstr "그룹"
@@ -359,7 +359,7 @@ msgstr "내보내기"
 #: views/Terminal.qml:21
 #, kde-format
 msgid "Follows the system color scheme."
-msgstr ""
+msgstr "시스템 색 구성표를 따라 갑니다."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -600,7 +600,7 @@ msgstr "테마"
 #: views/widgets/SettingsDialog.qml:208
 #, kde-format
 msgid "Editor color scheme style"
-msgstr "편집기 색 배열 스타일"
+msgstr "편집기 색 구성표 스타일"
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format

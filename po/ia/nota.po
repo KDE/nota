@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2021, 2022.
+# Giovanni Sora <g.sora@tiscali.it>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-27 00:59+0000\n"
-"PO-Revision-Date: 2022-04-28 14:38+0200\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"PO-Revision-Date: 2023-02-28 16:15+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -104,22 +104,22 @@ msgstr "Mobile"
 msgid "New ToDo... Argh!"
 msgstr "Nove De Facer (Agenda) ... Argh!"
 
-#: views/editor/Editor.qml:103
+#: views/editor/Editor.qml:104
 #, kde-format
 msgid "Open here"
 msgstr "Aperi hic"
 
-#: views/editor/Editor.qml:113
+#: views/editor/Editor.qml:114
 #, kde-format
 msgid "Open in new tab"
 msgstr "Aperi in nove scheda"
 
-#: views/editor/Editor.qml:124
+#: views/editor/Editor.qml:125
 #, kde-format
 msgid "Open in new split"
 msgstr "Aperi in nove fissura"
 
-#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:442
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
@@ -141,8 +141,7 @@ msgid "New"
 msgstr "Nove "
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
 msgstr "Crea un nove documento"
 
@@ -172,10 +171,9 @@ msgid "Terminal"
 msgstr "Terminal"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Scinde"
+msgstr "Scinde Vista"
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -200,7 +198,7 @@ msgstr "A proposito"
 #: views/editor/EditorView.qml:291
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Annulla"
 
 #: views/editor/EditorView.qml:299
 #, kde-format
@@ -253,20 +251,17 @@ msgid "Line number"
 msgstr "Numeros de linea"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
 msgstr "Monstra in dossier"
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
 msgstr "Dele file"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
 msgstr "Dele file?"
 
@@ -284,52 +279,52 @@ msgstr ""
 "Tu es secur que tu vole deler \n"
 "%1"
 
-#: views/PlacesSidebar.qml:63
+#: views/PlacesSidebar.qml:61
 #, kde-format
 msgid "Previous"
 msgstr "Previe"
 
-#: views/PlacesSidebar.qml:70
+#: views/PlacesSidebar.qml:68
 #, kde-format
 msgid "Up"
 msgstr "In alto"
 
-#: views/PlacesSidebar.qml:78
+#: views/PlacesSidebar.qml:76
 #, kde-format
 msgid "Next"
 msgstr "Proxime"
 
-#: views/PlacesSidebar.qml:102
+#: views/PlacesSidebar.qml:100
 #, kde-format
 msgid "Show Folders First"
 msgstr "Monstra dossieres per prime"
 
-#: views/PlacesSidebar.qml:112
+#: views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Typo"
 
-#: views/PlacesSidebar.qml:121
+#: views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: views/PlacesSidebar.qml:130
+#: views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modificate"
 
-#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Size"
 msgstr "Dimension"
 
-#: views/PlacesSidebar.qml:148
+#: views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nomine"
 
-#: views/PlacesSidebar.qml:160
+#: views/PlacesSidebar.qml:158
 #, kde-format
 msgid "Group"
 msgstr "Gruppo"
@@ -541,10 +536,9 @@ msgid "Tab Space"
 msgstr "Spatio de Tab"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Color"
+msgstr "Colores"
 
 #: views/widgets/SettingsDialog.qml:152
 #, kde-format

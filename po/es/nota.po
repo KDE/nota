@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-27 00:59+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2023-02-27 18:59+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -109,22 +109,22 @@ msgstr "Móvil"
 msgid "New ToDo... Argh!"
 msgstr "Nueva tarea pendiente... Buff!"
 
-#: views/editor/Editor.qml:103
+#: views/editor/Editor.qml:104
 #, kde-format
 msgid "Open here"
 msgstr "Abrir aquí"
 
-#: views/editor/Editor.qml:113
+#: views/editor/Editor.qml:114
 #, kde-format
 msgid "Open in new tab"
 msgstr "Abrir en una nueva pestaña"
 
-#: views/editor/Editor.qml:124
+#: views/editor/Editor.qml:125
 #, kde-format
 msgid "Open in new split"
 msgstr "Abrir en una nueva división"
 
-#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:442
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
@@ -285,52 +285,52 @@ msgstr ""
 "¿Está seguro de que quiere borrar?\n"
 "%1"
 
-#: views/PlacesSidebar.qml:63
+#: views/PlacesSidebar.qml:61
 #, kde-format
 msgid "Previous"
 msgstr "Previa"
 
-#: views/PlacesSidebar.qml:70
+#: views/PlacesSidebar.qml:68
 #, kde-format
 msgid "Up"
 msgstr "Arriba"
 
-#: views/PlacesSidebar.qml:78
+#: views/PlacesSidebar.qml:76
 #, kde-format
 msgid "Next"
 msgstr "Siguiente"
 
-#: views/PlacesSidebar.qml:102
+#: views/PlacesSidebar.qml:100
 #, kde-format
 msgid "Show Folders First"
 msgstr "Mostrar carpetas primero"
 
-#: views/PlacesSidebar.qml:112
+#: views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Tipo"
 
-#: views/PlacesSidebar.qml:121
+#: views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Fecha"
 
-#: views/PlacesSidebar.qml:130
+#: views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modificada"
 
-#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Size"
 msgstr "Tamaño"
 
-#: views/PlacesSidebar.qml:148
+#: views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nombre"
 
-#: views/PlacesSidebar.qml:160
+#: views/PlacesSidebar.qml:158
 #, kde-format
 msgid "Group"
 msgstr "Grupo"
