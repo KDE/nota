@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-27 00:59+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2021-02-26 18:20+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -108,22 +108,22 @@ msgstr ""
 msgid "New ToDo... Argh!"
 msgstr ""
 
-#: views/editor/Editor.qml:103
+#: views/editor/Editor.qml:104
 #, kde-format
 msgid "Open here"
 msgstr "Opna her"
 
-#: views/editor/Editor.qml:113
+#: views/editor/Editor.qml:114
 #, kde-format
 msgid "Open in new tab"
 msgstr "Opna i ny fane"
 
-#: views/editor/Editor.qml:124
+#: views/editor/Editor.qml:125
 #, kde-format
 msgid "Open in new split"
 msgstr "Opna i delt vising"
 
-#: views/editor/Editor.qml:136 views/editor/EditorView.qml:442
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:442
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
@@ -283,52 +283,52 @@ msgstr ""
 "Er du sikker på at du vil sletta \n"
 "%1"
 
-#: views/PlacesSidebar.qml:63
+#: views/PlacesSidebar.qml:61
 #, kde-format
 msgid "Previous"
 msgstr ""
 
-#: views/PlacesSidebar.qml:70
+#: views/PlacesSidebar.qml:68
 #, kde-format
 msgid "Up"
 msgstr ""
 
-#: views/PlacesSidebar.qml:78
+#: views/PlacesSidebar.qml:76
 #, kde-format
 msgid "Next"
 msgstr ""
 
-#: views/PlacesSidebar.qml:102
+#: views/PlacesSidebar.qml:100
 #, kde-format
 msgid "Show Folders First"
 msgstr ""
 
-#: views/PlacesSidebar.qml:112
+#: views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr ""
 
-#: views/PlacesSidebar.qml:121
+#: views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr ""
 
-#: views/PlacesSidebar.qml:130
+#: views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr ""
 
-#: views/PlacesSidebar.qml:139 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Size"
 msgstr "Storleik"
 
-#: views/PlacesSidebar.qml:148
+#: views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr ""
 
-#: views/PlacesSidebar.qml:160
+#: views/PlacesSidebar.qml:158
 #, kde-format
 msgid "Group"
 msgstr ""
