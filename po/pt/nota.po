@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2022-04-21 09:34+0100\n"
+"PO-Revision-Date: 2023-03-06 16:10+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -139,10 +139,9 @@ msgid "New"
 msgstr "Novo"
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
-msgstr "Criar um novo documento"
+msgstr "Criar um Novo Documento"
 
 #: views/editor/EditorView.qml:95
 #, kde-format
@@ -250,10 +249,9 @@ msgid "Line number"
 msgstr "Número da linha"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
-msgstr "Mostrar na pasta"
+msgstr "Mostrar na Pasta"
 
 #: views/editor/EditorView.qml:427
 #, kde-format
@@ -261,10 +259,9 @@ msgid "Delete File"
 msgstr "Apagar o Ficheiro"
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
-msgstr "Apagar o ficheiro?"
+msgstr "Apagar o Ficheiro?"
 
 #: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
 #, kde-format
@@ -353,7 +350,7 @@ msgstr "Exportar"
 #: views/Terminal.qml:21
 #, kde-format
 msgid "Follows the system color scheme."
-msgstr ""
+msgstr "Segue o esquema de cores do sistema."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -451,10 +448,9 @@ msgid "Places Sidebar"
 msgstr "Barra Lateral de Locais"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Navegue pelo seu sistema de ficheiros na barra lateral"
+msgstr "Navegue pelo seu sistema de ficheiros na barra lateral."
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -472,15 +468,12 @@ msgid "Editor"
 msgstr "Editor"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
 msgstr ""
 "Configura a aparência e comportamento do editor. A configuração é aplicada a "
-"nível global"
+"nível global."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -508,10 +501,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "Linguagens com Realce de Sintaxe"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Mostrar as línguas disponíveis"
+msgstr "Mostrar as linguagens disponíveis."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -519,10 +511,9 @@ msgid "Syntax Highlighting"
 msgstr "Realce de Sintaxe"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Activar o realce de sintaxe das linguagens suportadas"
+msgstr "Activar o realce de sintaxe das linguagens suportadas."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -530,10 +521,9 @@ msgid "Fonts"
 msgstr "Tipos de Letra"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "Configura a família e tamanho do tipo de letra global"
+msgstr "Configura a família e tamanho do tipo de letra global."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -551,16 +541,13 @@ msgid "Colors"
 msgstr "Cores"
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
-"Configura o estilo do realce de sintaxe. Esta configuração não é aplicada "
-"para formatos de texto formatado"
+"Configura o esquema de cores do realce de sintaxe. Esta configuração não é "
+"aplicada para formatos de texto formatado."
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -568,16 +555,13 @@ msgid "Style"
 msgstr "Estilo"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 "Configura o estilo do realce de sintaxe. Esta configuração não é aplicada "
-"para formatos de texto formatado"
+"para formatos de texto formatado."
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format
