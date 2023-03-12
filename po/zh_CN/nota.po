@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-03-11 04:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -141,10 +141,9 @@ msgid "New"
 msgstr ""
 
 #: views/editor/EditorView.qml:94
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
-msgstr "新建文档"
+msgstr ""
 
 #: views/editor/EditorView.qml:95
 #, kde-format
@@ -172,10 +171,9 @@ msgid "Terminal"
 msgstr "终端"
 
 #: views/editor/EditorView.qml:184
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "拆分"
+msgstr ""
 
 #: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -253,22 +251,19 @@ msgid "Line number"
 msgstr "行号"
 
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
-msgstr "打开所在文件夹"
+msgstr ""
 
 #: views/editor/EditorView.qml:427
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
-msgstr "删除文件"
+msgstr ""
 
 #: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
-msgstr "删除文件？"
+msgstr ""
 
 #: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
 #, kde-format
@@ -455,10 +450,9 @@ msgid "Places Sidebar"
 msgstr "位置侧边栏"
 
 #: views/widgets/SettingsDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "在侧边栏浏览您的文件系统"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:34
 #, kde-format
@@ -466,10 +460,9 @@ msgid "Dark Mode"
 msgstr "深色模式"
 
 #: views/widgets/SettingsDialog.qml:35
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "切换浅色/深色模式"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:52
 #, kde-format
@@ -477,13 +470,10 @@ msgid "Editor"
 msgstr "编辑器"
 
 #: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
-msgstr "配置编辑器的全局界面外观。"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -501,10 +491,9 @@ msgid "Line Numbers"
 msgstr "行号"
 
 #: views/widgets/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "显示行号到编辑器左侧。"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:82
 #, kde-format
@@ -512,10 +501,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "语法高亮语言"
 
 #: views/widgets/SettingsDialog.qml:83
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "显示可用语言"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -523,10 +511,9 @@ msgid "Syntax Highlighting"
 msgstr "语法高亮"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "为支持的语言启用语法高亮"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -534,10 +521,9 @@ msgid "Fonts"
 msgstr "字体"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the global font family and size."
-msgstr "配置全局字体和大小"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -550,20 +536,16 @@ msgid "Tab Space"
 msgstr "Tab 空白"
 
 #: views/widgets/SettingsDialog.qml:151
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "颜色"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:152
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
-msgstr "配置语法高亮的显示风格。此配置不会被应用于富文本格式"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:170
 #, kde-format
@@ -571,14 +553,11 @@ msgid "Style"
 msgstr "风格"
 
 #: views/widgets/SettingsDialog.qml:171
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
-msgstr "配置语法高亮的显示风格。此配置不会被应用于富文本格式"
+msgstr ""
 
 #: views/widgets/SettingsDialog.qml:175
 #, kde-format
