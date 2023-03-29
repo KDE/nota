@@ -40,7 +40,7 @@ Maui.SettingsDialog
                 checked: settings.darkMode
                 onToggled:
                 {
-                     settings.darkMode = !settings.darkMode
+                    settings.darkMode = !settings.darkMode
                     setAndroidStatusBarColor()
                 }
             }
@@ -112,6 +112,7 @@ Maui.SettingsDialog
         {
             label1.text:  i18n("Family")
 
+            columns: 1
             Maui.FontsComboBox
             {
                 Layout.fillWidth: true
@@ -163,138 +164,141 @@ Maui.SettingsDialog
     Component
     {
         id:_stylePageComponent
-    Maui.ScrollColumn
-    {
-    Maui.SectionGroup
-    {
-        title: i18n("Style")
-        description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
-        visible: settings.enableSyntaxHighlighting
-        Maui.SectionItem
+        Maui.SettingsPage
         {
-            label1.text:  i18n("Color")
-            label2.text: i18n("Editor background color")
+            title: i18n("Colors")
 
-            Maui.ColorsRow
+            Maui.SectionGroup
             {
-                spacing: Maui.Style.space.medium
-                currentColor: appSettings.backgroundColor
-                colors: ["#333", "#fafafa", "#fff3e6", "#4c425b"]
-
-                onColorPicked:
+                title: i18n("Colors")
+                description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
+                visible: settings.enableSyntaxHighlighting
+                Maui.SectionItem
                 {
-                    currentColor = color
+                    label1.text:  i18n("Color")
+                    label2.text: i18n("Editor background color.")
 
-                    var textColor
-
-                    switch(color)
+                    Maui.ColorsRow
                     {
-                    case "#333": textColor = "#fafafa"; break;
-                    case "#fafafa": textColor = "#333"; break;
-                    case "#fff3e6": textColor = Qt.darker(color, 2); break;
-                    case "#4c425b": textColor = Qt.lighter(color, 2.5); break;
-                    default: textColor = Maui.Theme.textColor;
-                    }
+                        spacing: Maui.Style.space.medium
+                        currentColor: appSettings.backgroundColor
+                        colors: ["#333", "#fafafa", "#fff3e6", "#4c425b"]
 
-                    switchBackgroundColor(color, textColor)
-                }
-
-            }
-        }
-
-        Maui.SectionItem
-        {
-            label1.text:  i18n("Theme")
-            label2.text: i18n("Editor color scheme style")
-
-
-            GridLayout
-            {
-                columns: 3
-                width: parent.parent.width
-                opacity: enabled ? 1 : 0.5
-                Repeater
-                {
-                    model: TE.ColorSchemesModel
-                    {
-                    }
-
-                    delegate: Maui.GridBrowserDelegate
-                    {
-                        Layout.fillWidth: true
-                        checked: model.name === settings.theme
-                        onClicked: settings.theme = model.name
-
-                        template.iconComponent: Pane
+                        onColorPicked:
                         {
-                            implicitHeight: Math.max(contentHeight + topPadding + bottomPadding, 64)
-                            padding: Maui.Style.space.small
+                            currentColor = color
 
-                            background: Rectangle
+                            var textColor
+
+                            switch(color)
                             {
-//                                color: model.background
-                                color: appSettings.backgroundColor
-                                radius: Maui.Style.radiusV
+                            case "#333": textColor = "#fafafa"; break;
+                            case "#fafafa": textColor = "#333"; break;
+                            case "#fff3e6": textColor = Qt.darker(color, 2); break;
+                            case "#4c425b": textColor = Qt.lighter(color, 2.5); break;
+                            default: textColor = Maui.Theme.textColor;
                             }
 
-                            contentItem: Column
-                            {
-                                spacing: 2
-
-                                Text
-                                {
-                                    wrapMode: Text.NoWrap
-                                    elide: Text.ElideLeft
-                                    width: parent.width
-                                    //                                    font.pointSize: Maui.Style.fontSizes.small
-                                    text: "Hello world!"
-                                    color: model.foreground
-                                    font.family: settings.font.family
-                                }
-
-                                Rectangle
-                                {
-                                    radius: 2
-                                    height: 8
-                                    width: parent.width
-                                    color: model.highlight
-                                }
-
-                                Rectangle
-                                {
-                                    radius: 2
-                                    height: 8
-                                    width: parent.width
-                                    color: model.color3
-                                }
-
-                                Rectangle
-                                {
-                                    radius: 2
-                                    height: 8
-                                    width: parent.width
-                                    color: model.color4
-                                }
-
-                                Rectangle
-                                {
-                                    radius: 2
-                                    height: 8
-                                    width: parent.width
-                                    color: model.color5
-                                }
-                            }
+                            switchBackgroundColor(color, textColor)
                         }
 
-                        label1.text: model.name
                     }
                 }
+
+                Maui.SectionItem
+                {
+                    label1.text:  i18n("Theme")
+                    label2.text: i18n("Editor color scheme style.")
+                    columns: 1
+
+                    GridLayout
+                    {
+                        columns: 3
+                        Layout.fillWidth: true
+                        opacity: enabled ? 1 : 0.5
+                        Repeater
+                        {
+                            model: TE.ColorSchemesModel
+                            {
+                            }
+
+                            delegate: Maui.GridBrowserDelegate
+                            {
+                                Layout.fillWidth: true
+                                checked: model.name === settings.theme
+                                onClicked: settings.theme = model.name
+
+                                template.iconComponent: Control
+                                {
+                                    implicitHeight: Math.max(_layout.implicitHeight + topPadding + bottomPadding, 64)
+                                    padding: Maui.Style.space.small
+
+                                    background: Rectangle
+                                    {
+                                        //                                color: model.background
+                                        color: appSettings.backgroundColor
+                                        radius: Maui.Style.radiusV
+                                    }
+
+                                    contentItem: Column
+                                    {
+                                        id: _layout
+                                        spacing: 2
+
+                                        Text
+                                        {
+                                            wrapMode: Text.NoWrap
+                                            elide: Text.ElideLeft
+                                            width: parent.width
+                                            //                                    font.pointSize: Maui.Style.fontSizes.small
+                                            text: "Nota { @ }"
+                                            color: model.foreground
+                                            font.family: settings.font.family
+                                        }
+
+                                        Rectangle
+                                        {
+                                            radius: 2
+                                            height: 8
+                                            width: parent.width
+                                            color: model.highlight
+                                        }
+
+                                        Rectangle
+                                        {
+                                            radius: 2
+                                            height: 8
+                                            width: parent.width
+                                            color: model.color3
+                                        }
+
+                                        Rectangle
+                                        {
+                                            radius: 2
+                                            height: 8
+                                            width: parent.width
+                                            color: model.color4
+                                        }
+
+                                        Rectangle
+                                        {
+                                            radius: 2
+                                            height: 8
+                                            width: parent.width
+                                            color: model.color5
+                                        }
+                                    }
+                                }
+
+                                label1.text: model.name
+                            }
+                        }
+                    }
+                }
+
             }
         }
-
-   }
     }
-}
 
     function switchBackgroundColor(backgroundColor, textColor)
     {
