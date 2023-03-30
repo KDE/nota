@@ -129,8 +129,7 @@ Maui.ApplicationWindow
     Component
     {
         id: _settingsDialogComponent
-        Widgets.SettingsDialog
-        {}
+        Widgets.SettingsDialog {}
     }
 
     Component
@@ -165,6 +164,9 @@ Maui.ApplicationWindow
     {
         id: _stackView
         anchors.fill: parent
+
+        Keys.enabled: true
+        Keys.onEscapePressed: _stackView.pop()
 
         initialItem: Maui.SideBarView
         {
@@ -219,7 +221,10 @@ Maui.ApplicationWindow
     {
         _dialogLoader.sourceComponent = _fileDialogComponent
         dialog.mode = dialog.modes.OPEN
+
+        if(root.currentEditor && editorView.currentFileExistsLocally)
         dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)
+
         dialog.callback =  function (urls)
         {
             root.openFiles(urls)

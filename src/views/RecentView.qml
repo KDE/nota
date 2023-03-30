@@ -24,7 +24,7 @@ DocsBrowser
     {
         icon.name: "go-previous"
         onClicked: _stackView.pop()
-    }
+    }  
 
     model: Maui.BaseModel
     {
