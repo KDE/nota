@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-03-27 11:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -314,7 +314,7 @@ msgstr "日期"
 msgid "Modified"
 msgstr "修改日期"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "大小"
@@ -348,11 +348,6 @@ msgstr "打开"
 #, kde-format
 msgid "Export"
 msgstr "导出"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr ""
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -530,53 +525,51 @@ msgstr ""
 msgid "Family"
 msgstr "字体"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Tab 空白"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "风格"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "颜色"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "编辑器背景颜色"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "主题"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "编辑器配色方案风格"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -628,3 +621,6 @@ msgstr "查找标签页"
 #, kde-format
 msgid "Select All"
 msgstr "全部选择"
+
+#~ msgid "Style"
+#~ msgstr "风格"

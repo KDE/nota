@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-03-06 20:18+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -316,7 +316,7 @@ msgstr "Päiväys"
 msgid "Modified"
 msgstr "Muutettu"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Koko"
@@ -350,11 +350,6 @@ msgstr "Avaa"
 #, kde-format
 msgid "Export"
 msgstr "Vie"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "Seuraa järjestelmän väriteemaa."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -533,17 +528,18 @@ msgid "Family"
 msgstr "Perhe"
 
 # *** TARKISTA: Voi merkitä jotain muutakin!
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Välilehtien väli"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "Värit"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -551,12 +547,7 @@ msgid ""
 msgstr ""
 "Aseta syntaksikorostuksen tyyli. Asetusta ei käytetä muotoiltuun tekstiin."
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Tyyli"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -564,24 +555,26 @@ msgid ""
 msgstr ""
 "Aseta syntaksikorostuksen tyyli. Asetusta ei käytetä muotoiltuun tekstiin."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Väri"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Muokkaimen taustaväri"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Teema"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Muokkaimen värimalli"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -634,6 +627,12 @@ msgstr "Etsi välilehti"
 #, kde-format
 msgid "Select All"
 msgstr "Valitse kaikki"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "Seuraa järjestelmän väriteemaa."
+
+#~ msgid "Style"
+#~ msgstr "Tyyli"
 
 #~ msgid "New file"
 #~ msgstr "Uusi tiedosto"

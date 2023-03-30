@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2022-09-23 10:12+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -322,7 +322,7 @@ msgstr "Data"
 msgid "Modified"
 msgstr "Zmieniony"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Rozmiar"
@@ -356,11 +356,6 @@ msgstr "Otwórz"
 #, kde-format
 msgid "Export"
 msgstr "Wyeksportuj"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr ""
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -547,18 +542,19 @@ msgstr "Globalne ustawienia rodzaju czcionki i jej rozmiaru"
 msgid "Family"
 msgstr "Rodzina"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Odstęp tabulatora"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "Barwa"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -570,12 +566,7 @@ msgstr ""
 "Ustawienia wyglądu podświetlania składni. Ustawienia te nie są stosowane dla "
 "tekstu formatowanego"
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Wygląd"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -587,24 +578,26 @@ msgstr ""
 "Ustawienia wyglądu podświetlania składni. Ustawienia te nie są stosowane dla "
 "tekstu formatowanego"
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Barwa"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Barwa tła edytora"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Wygląd"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Edytor zestawu barw"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -656,6 +649,9 @@ msgstr "Karta wyszukiwania"
 #, kde-format
 msgid "Select All"
 msgstr "Zaznacz wszystko"
+
+#~ msgid "Style"
+#~ msgstr "Wygląd"
 
 #~ msgid "New file"
 #~ msgstr "Nowy plik"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-27 21:54+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -319,7 +319,7 @@ msgstr "Data"
 msgid "Modified"
 msgstr "Aldatua"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Neurria"
@@ -353,11 +353,6 @@ msgstr "Ireki"
 #, kde-format
 msgid "Export"
 msgstr "Esportatu"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "Sistemaren kolore-antolaerari jarraitzen dio."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -539,17 +534,18 @@ msgstr "Konfiguratu letra-tipo familia eta neurri orokorrak."
 msgid "Family"
 msgstr "Familia"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulazio espazioa"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "Koloreak"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -558,12 +554,7 @@ msgstr ""
 "Konfiguratu sintaxia nabarmentzeko kolore-antolaera. Konfigurazio hau ez da "
 "erabiliko testu aberastuko formatuekin."
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Estiloa"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -572,24 +563,26 @@ msgstr ""
 "Konfiguratu sintaxia nabarmentzeko estiloa. Konfigurazio hau ez da erabiliko "
 "testu aberastuko formatuekin."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Kolorea"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Editorearen hondoko kolorea"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Gaia"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Editorearen kolore-antolaera estiloa"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -641,6 +634,12 @@ msgstr "Bilatu fitxa"
 #, kde-format
 msgid "Select All"
 msgstr "Hautatu dena"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "Sistemaren kolore-antolaerari jarraitzen dio."
+
+#~ msgid "Style"
+#~ msgstr "Estiloa"
 
 #, fuzzy
 #~| msgid "Save file"

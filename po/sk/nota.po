@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2022-04-18 17:59+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -318,7 +318,7 @@ msgstr "Dátum"
 msgid "Modified"
 msgstr "Zmenené"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Veľkosť"
@@ -352,11 +352,6 @@ msgstr "Otvoriť"
 #, kde-format
 msgid "Export"
 msgstr "Exportovať"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr ""
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -536,54 +531,50 @@ msgstr ""
 msgid "Family"
 msgstr "Rodina"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "Farba"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Štýl"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Farba"
 
-#: views/widgets/SettingsDialog.qml:176
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
-msgid "Editor background color"
+msgid "Editor background color."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Téma"
 
-#: views/widgets/SettingsDialog.qml:208
+#: views/widgets/SettingsDialog.qml:211
 #, kde-format
-msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr ""
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -636,6 +627,9 @@ msgstr "Nájsť"
 #, kde-format
 msgid "Select All"
 msgstr "Vybrať všetko"
+
+#~ msgid "Style"
+#~ msgstr "Štýl"
 
 #~ msgid "New file"
 #~ msgstr "Nový súbor"

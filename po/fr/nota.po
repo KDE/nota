@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-28 14:14+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -317,7 +317,7 @@ msgstr "Date"
 msgid "Modified"
 msgstr "Modifié"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Taille"
@@ -351,11 +351,6 @@ msgstr "Ouvrir"
 #, kde-format
 msgid "Export"
 msgstr "Exporter"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "Suit le thème de couleurs du système"
 
 # | msgid "String"
 #: views/widgets/DocsBrowser.qml:62
@@ -538,17 +533,18 @@ msgstr "Configurer la taille et la famille de la police globale."
 msgid "Family"
 msgstr "Famille"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Espace des onglets"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "Couleurs"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -557,12 +553,7 @@ msgstr ""
 "Configurer le style pour la coloration syntaxique. Cette configuration n'est "
 "pas appliquée pour les formats de texte enrichis « RTF »."
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Style"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -571,24 +562,26 @@ msgstr ""
 "Configurer le style pour la coloration syntaxique. Cette configuration n'est "
 "pas appliquée pour les formats de texte enrichis « RTF »."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Couleur"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Éditeur de couleurs d'arrière-plan"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Thème"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Éditeur de style pour les thèmes de couleurs"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -640,6 +633,12 @@ msgstr "Trouver un onglet"
 #, kde-format
 msgid "Select All"
 msgstr "Tout sélectionner"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "Suit le thème de couleurs du système"
+
+#~ msgid "Style"
+#~ msgstr "Style"
 
 #~ msgid "New file"
 #~ msgstr "Nouveau fichier"

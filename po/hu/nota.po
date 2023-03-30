@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -322,7 +322,7 @@ msgstr "Dátum"
 msgid "Modified"
 msgstr "Módosítva"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Méret"
@@ -356,11 +356,6 @@ msgstr "Megnyitás"
 #, kde-format
 msgid "Export"
 msgstr "Exportálás"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr ""
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -546,18 +541,19 @@ msgstr "A globális betűkészletek és betűméretek beállítása"
 msgid "Family"
 msgstr "Család"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulátorméret"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "Szín"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -569,12 +565,7 @@ msgstr ""
 "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
 "RTF-formátumokra"
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Stílus"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -586,24 +577,26 @@ msgstr ""
 "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
 "RTF-formátumokra"
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Szín"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "A szerkesző háttérszíne"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Téma"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "A szerkesztő színsémája"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -655,6 +648,9 @@ msgstr "Lap keresése"
 #, kde-format
 msgid "Select All"
 msgstr "Összes kijelölése"
+
+#~ msgid "Style"
+#~ msgstr "Stílus"
 
 #~ msgid "New file"
 #~ msgstr "Új fájl"

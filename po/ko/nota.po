@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-28 23:02+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -321,7 +321,7 @@ msgstr "날짜"
 msgid "Modified"
 msgstr "수정됨"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "크기"
@@ -355,11 +355,6 @@ msgstr "열기"
 #, kde-format
 msgid "Export"
 msgstr "내보내기"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "시스템 색 구성표를 따라 갑니다."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -546,18 +541,19 @@ msgstr "전역 글꼴 종류와 크기 설정"
 msgid "Family"
 msgstr "종류"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "탭 공백 문자"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "색상"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -567,12 +563,7 @@ msgid ""
 "not applied for rich text formats."
 msgstr "구문 강조 스타일을 설정합니다. 서식 있는 텍스트에는 적용되지 않습니다"
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "스타일"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -582,24 +573,26 @@ msgid ""
 "applied for rich text formats."
 msgstr "구문 강조 스타일을 설정합니다. 서식 있는 텍스트에는 적용되지 않습니다"
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "색상"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "편집기 배경색"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "테마"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "편집기 색 구성표 스타일"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -651,6 +644,12 @@ msgstr "탭 찾기"
 #, kde-format
 msgid "Select All"
 msgstr "모두 선택"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "시스템 색 구성표를 따라 갑니다."
+
+#~ msgid "Style"
+#~ msgstr "스타일"
 
 #~ msgid "New file"
 #~ msgstr "새 파일"

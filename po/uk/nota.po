@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-27 16:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -319,7 +319,7 @@ msgstr "Дата"
 msgid "Modified"
 msgstr "Змінено"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Розмір"
@@ -353,11 +353,6 @@ msgstr "Відкрити"
 #, kde-format
 msgid "Export"
 msgstr "Експортувати"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "Використовувати загальносистемну схему кольорів."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -537,17 +532,18 @@ msgstr "Налаштувати загальну гарнітуру та розм
 msgid "Family"
 msgstr "Гарнітура"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Розмір табуляції"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "Кольори"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -556,12 +552,7 @@ msgstr ""
 "Налаштувати схему кольорів підсвічування синтаксису. Ці налаштування не буде "
 "застосовано до форматованого тексту"
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Стиль"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -570,24 +561,26 @@ msgstr ""
 "Налаштувати стиль підсвічування синтаксису Ці налаштування не буде "
 "застосовано до форматованого тексту."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Колір"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Колір тла редактора"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Тема"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Схема кольорів редактора"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -639,6 +632,12 @@ msgstr "Знайти вкладку"
 #, kde-format
 msgid "Select All"
 msgstr "Позначити все"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "Використовувати загальносистемну схему кольорів."
+
+#~ msgid "Style"
+#~ msgstr "Стиль"
 
 #~ msgid "New file"
 #~ msgstr "Створити файл"

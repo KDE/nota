@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-27 21:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -317,7 +317,7 @@ msgstr "التاريخ"
 msgid "Modified"
 msgstr "معدّل"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "الحجم"
@@ -351,11 +351,6 @@ msgstr "افتح"
 #, kde-format
 msgid "Export"
 msgstr "صدّر"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "اتبع تشكيلة الألوان النظام."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -533,53 +528,51 @@ msgstr "اضبط عائلة الخط وحجمه."
 msgid "Family"
 msgstr "العائلة"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "الجدولات والمسافات"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "الألوان"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr "اضبط تشكيلة ألوان إبراز الصياغة. هذا الضبط لا يطبق على النص الغني."
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "النّمط"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr "اضبط نمط إبراز الصياغة. هذا الضبط لا يطبق للنص الغني."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "اللون"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "لون خلفية المحرر"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "السمة"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "نمط مخطط ألوان المحرر"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -631,6 +624,12 @@ msgstr "لسان البحث"
 #, kde-format
 msgid "Select All"
 msgstr "حدّد الكلّ"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "اتبع تشكيلة الألوان النظام."
+
+#~ msgid "Style"
+#~ msgstr "النّمط"
 
 #~ msgid "New file"
 #~ msgstr "ملفّ جديد"

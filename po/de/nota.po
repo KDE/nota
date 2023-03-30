@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2022-11-10 20:45+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -321,7 +321,7 @@ msgstr "Datum"
 msgid "Modified"
 msgstr "Geändert"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Größe"
@@ -355,11 +355,6 @@ msgstr "Öffnen"
 #, kde-format
 msgid "Export"
 msgstr "Exportieren"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr ""
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -548,18 +543,19 @@ msgstr "Globale Schriftfamilie und -größe einrichten"
 msgid "Family"
 msgstr "Familie"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulator-Abstand"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "Farbe"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -571,12 +567,7 @@ msgstr ""
 "Stil der Syntaxhervorhebung einrichten Diese Einstellungen werden nicht für "
 "Rich-Textformate angewendet"
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Stil"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -588,24 +579,26 @@ msgstr ""
 "Stil der Syntaxhervorhebung einrichten Diese Einstellungen werden nicht für "
 "Rich-Textformate angewendet"
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Farbe"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Editor-Hintergrundfarbe"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Schema"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Editor-Farbschema"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -657,6 +650,9 @@ msgstr "Unterfenster suchen"
 #, kde-format
 msgid "Select All"
 msgstr "Alles auswählen"
+
+#~ msgid "Style"
+#~ msgstr "Stil"
 
 #~ msgid "New file"
 #~ msgstr "Neue Datei"

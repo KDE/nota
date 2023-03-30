@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-27 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -316,7 +316,7 @@ msgstr "Tarih"
 msgid "Modified"
 msgstr "Değiştirilme"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Boyut"
@@ -350,11 +350,6 @@ msgstr "Aç"
 #, kde-format
 msgid "Export"
 msgstr "Dışa Aktar"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "Sistem renk şemasını izler"
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -534,17 +529,18 @@ msgstr "Global yazıtipi ailesini ve boyutunu yapılandırın."
 msgid "Family"
 msgstr "Aile"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Sekme Boşluğu"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "Renkler"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -553,12 +549,7 @@ msgstr ""
 "Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
 "biçimleri için uygulanmaz."
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Biçem"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -567,24 +558,26 @@ msgstr ""
 "Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
 "biçimleri için uygulanmaz."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Renk"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Düzenleyici arka plan rengi"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Tema"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Düzenleyici renk şeması biçemi"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -636,3 +629,9 @@ msgstr "Sekme Bul"
 #, kde-format
 msgid "Select All"
 msgstr "Tümünü Seç"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "Sistem renk şemasını izler"
+
+#~ msgid "Style"
+#~ msgstr "Biçem"

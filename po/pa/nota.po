@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -326,7 +326,7 @@ msgstr "ਤਾਰੀਖ"
 msgid "Modified"
 msgstr "ਸੋਧਾਂ ਕੀਤੀਆਂ"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "ਆਕਾਰ"
@@ -360,11 +360,6 @@ msgstr "ਖੋਲ੍ਹੋ"
 #, kde-format
 msgid "Export"
 msgstr "ਐਕਸਪੋਰਟ"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr ""
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -542,54 +537,50 @@ msgstr ""
 msgid "Family"
 msgstr "ਸਮੂਹ"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "ਟੈਬ ਥਾਂ"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "ਰੰਗ"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "ਸ਼ੈਲੀ"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "ਰੰਗ"
 
-#: views/widgets/SettingsDialog.qml:176
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
-msgid "Editor background color"
+msgid "Editor background color."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "ਥੀਮ"
 
-#: views/widgets/SettingsDialog.qml:208
+#: views/widgets/SettingsDialog.qml:211
 #, kde-format
-msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr ""
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -644,6 +635,9 @@ msgstr ""
 #| msgid "Select"
 msgid "Select All"
 msgstr "ਚੁਣੋ"
+
+#~ msgid "Style"
+#~ msgstr "ਸ਼ੈਲੀ"
 
 #~ msgid "New file"
 #~ msgstr "ਨਵੀਂ ਫਾਇਲ"

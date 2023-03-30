@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-27 20:23+0100\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -319,7 +319,7 @@ msgstr "Data"
 msgid "Modified"
 msgstr "Modificat"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "Mida"
@@ -353,11 +353,6 @@ msgstr "Obri"
 #, kde-format
 msgid "Export"
 msgstr "Exporta"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "Seguix l'esquema de colors del sistema."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -537,17 +532,18 @@ msgstr "Configura la família i la mida dels tipus de lletra globals."
 msgid "Family"
 msgstr "Família"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "Espai de la pestanya"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "Colors"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -556,12 +552,7 @@ msgstr ""
 "Configura l'esquema de color del ressaltat de la sintaxi. Esta configuració "
 "no s'aplica als formats de text enriquit."
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "Estil"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -570,24 +561,26 @@ msgstr ""
 "Configura l'estil del ressaltat de la sintaxi. Esta configuració no s'aplica "
 "als formats de text enriquit."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "Color"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "Editor del color de fons"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "Tema"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "Editor de l'estil de l'esquema de color"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -639,3 +632,9 @@ msgstr "Busca la pestanya"
 #, kde-format
 msgid "Select All"
 msgstr "Selecciona-ho tot"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "Seguix l'esquema de colors del sistema."
+
+#~ msgid "Style"
+#~ msgstr "Estil"

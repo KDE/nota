@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-03-30 00:48+0000\n"
 "PO-Revision-Date: 2023-02-27 06:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -317,7 +317,7 @@ msgstr "თარიღი"
 msgid "Modified"
 msgstr "შეცვლილია"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:126
+#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid "Size"
 msgstr "ზომა"
@@ -351,11 +351,6 @@ msgstr "გახსნა"
 #, kde-format
 msgid "Export"
 msgstr "გატანა"
-
-#: views/Terminal.qml:21
-#, kde-format
-msgid "Follows the system color scheme."
-msgstr "სისტემური ფერების სქემის მიყოლა."
 
 #: views/widgets/DocsBrowser.qml:62
 #, kde-format
@@ -533,17 +528,18 @@ msgstr "გლობალური ფონტის ოჯახისა დ
 msgid "Family"
 msgstr "ოჯახი"
 
-#: views/widgets/SettingsDialog.qml:138
+#: views/widgets/SettingsDialog.qml:139
 #, kde-format
 msgid "Tab Space"
 msgstr "ტაბულაციის სივრცე"
 
-#: views/widgets/SettingsDialog.qml:151
+#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Colors"
 msgstr "ფერები"
 
-#: views/widgets/SettingsDialog.qml:152
+#: views/widgets/SettingsDialog.qml:153
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -552,12 +548,7 @@ msgstr ""
 "მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
 "ფორმატებს."
 
-#: views/widgets/SettingsDialog.qml:170
-#, kde-format
-msgid "Style"
-msgstr "სტილი"
-
-#: views/widgets/SettingsDialog.qml:171
+#: views/widgets/SettingsDialog.qml:174
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -566,24 +557,26 @@ msgstr ""
 "მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
 "ფორმატებს."
 
-#: views/widgets/SettingsDialog.qml:175
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Color"
 msgstr "ფერი"
 
-#: views/widgets/SettingsDialog.qml:176
-#, kde-format
-msgid "Editor background color"
+#: views/widgets/SettingsDialog.qml:179
+#, fuzzy, kde-format
+#| msgid "Editor background color"
+msgid "Editor background color."
 msgstr "რედაქტორის ფონის ფერი"
 
-#: views/widgets/SettingsDialog.qml:207
+#: views/widgets/SettingsDialog.qml:210
 #, kde-format
 msgid "Theme"
 msgstr "თემა"
 
-#: views/widgets/SettingsDialog.qml:208
-#, kde-format
-msgid "Editor color scheme style"
+#: views/widgets/SettingsDialog.qml:211
+#, fuzzy, kde-format
+#| msgid "Editor color scheme style"
+msgid "Editor color scheme style."
 msgstr "რედაქტორის ფერის სქემის სტილი"
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -635,3 +628,9 @@ msgstr "ჩანართის პოვნა"
 #, kde-format
 msgid "Select All"
 msgstr "ყველას მონიშვნა"
+
+#~ msgid "Follows the system color scheme."
+#~ msgstr "სისტემური ფერების სქემის მიყოლა."
+
+#~ msgid "Style"
+#~ msgstr "სტილი"
