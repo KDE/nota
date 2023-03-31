@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-30 00:48+0000\n"
-"PO-Revision-Date: 2023-02-27 14:56+0100\n"
+"PO-Revision-Date: 2023-03-30 13:34+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -557,10 +557,9 @@ msgid "Color"
 msgstr "Barva"
 
 #: views/widgets/SettingsDialog.qml:179
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Barva pozadí editoru"
+msgstr "Barva pozadí editoru."
 
 #: views/widgets/SettingsDialog.qml:210
 #, kde-format
@@ -568,10 +567,9 @@ msgid "Theme"
 msgstr "Motiv"
 
 #: views/widgets/SettingsDialog.qml:211
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Styl barevného schématu editoru"
+msgstr "Styl barevného schématu editoru."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -622,9 +620,3 @@ msgstr "Najít kartu"
 #, kde-format
 msgid "Select All"
 msgstr "Vybrat vše"
-
-#~ msgid "Follows the system color scheme."
-#~ msgstr "Následuje barevné schéma systému."
-
-#~ msgid "Style"
-#~ msgstr "Styl"

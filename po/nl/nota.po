@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-30 00:48+0000\n"
-"PO-Revision-Date: 2023-02-27 10:48+0100\n"
+"PO-Revision-Date: 2023-03-30 10:06+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -564,10 +564,9 @@ msgid "Color"
 msgstr "Kleur"
 
 #: views/widgets/SettingsDialog.qml:179
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Achtergrondkleur van bewerker"
+msgstr "Achtergrondkleur van bewerker."
 
 #: views/widgets/SettingsDialog.qml:210
 #, kde-format
@@ -575,10 +574,9 @@ msgid "Theme"
 msgstr "Thema"
 
 #: views/widgets/SettingsDialog.qml:211
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Kleurenschemastijl van bewerker"
+msgstr "Kleurenschemastijl van bewerker."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-30 00:48+0000\n"
-"PO-Revision-Date: 2023-02-27 06:32+0100\n"
+"PO-Revision-Date: 2023-03-31 02:30+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -563,10 +563,9 @@ msgid "Color"
 msgstr "ფერი"
 
 #: views/widgets/SettingsDialog.qml:179
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "რედაქტორის ფონის ფერი"
+msgstr "რედაქტორის ფონის ფერი."
 
 #: views/widgets/SettingsDialog.qml:210
 #, kde-format
@@ -574,10 +573,9 @@ msgid "Theme"
 msgstr "თემა"
 
 #: views/widgets/SettingsDialog.qml:211
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "რედაქტორის ფერის სქემის სტილი"
+msgstr "რედაქტორის ფერის სქემის სტილი."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
