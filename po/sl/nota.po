@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-30 00:48+0000\n"
-"PO-Revision-Date: 2023-02-27 08:58+0100\n"
+"PO-Revision-Date: 2023-03-31 08:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -563,10 +563,9 @@ msgid "Color"
 msgstr "Barva"
 
 #: views/widgets/SettingsDialog.qml:179
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Barva ozadja urejevalnika"
+msgstr "Barva ozadja urejevalnika."
 
 #: views/widgets/SettingsDialog.qml:210
 #, kde-format
@@ -574,10 +573,9 @@ msgid "Theme"
 msgstr "Tema"
 
 #: views/widgets/SettingsDialog.qml:211
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Slog barvne sheme urejevalnika"
+msgstr "Slog barvne sheme urejevalnika."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
