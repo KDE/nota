@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-30 00:48+0000\n"
-"PO-Revision-Date: 2023-03-06 16:10+0000\n"
+"PO-Revision-Date: 2023-04-01 12:03+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -560,10 +560,9 @@ msgid "Color"
 msgstr "Cor"
 
 #: views/widgets/SettingsDialog.qml:179
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Cor de fundo do editor"
+msgstr "Cor de fundo do editor."
 
 #: views/widgets/SettingsDialog.qml:210
 #, kde-format
@@ -571,10 +570,9 @@ msgid "Theme"
 msgstr "Tema"
 
 #: views/widgets/SettingsDialog.qml:211
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Estilo do esquema de cores do editor"
+msgstr "Estilo do esquema de cores do editor."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -625,9 +623,3 @@ msgstr "Procurar uma Página"
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar Tudo"
-
-#~ msgid "Follows the system color scheme."
-#~ msgstr "Segue o esquema de cores do sistema."
-
-#~ msgid "Style"
-#~ msgstr "Estilo"

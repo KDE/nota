@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-30 00:48+0000\n"
-"PO-Revision-Date: 2023-03-04 17:45+0100\n"
+"PO-Revision-Date: 2023-04-01 16:56+0200\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -568,10 +568,9 @@ msgid "Color"
 msgstr "Color"
 
 #: views/widgets/SettingsDialog.qml:179
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Editor del color de fondo"
+msgstr "Editor del color de fondo."
 
 #: views/widgets/SettingsDialog.qml:210
 #, kde-format
@@ -579,10 +578,9 @@ msgid "Theme"
 msgstr "Tema"
 
 #: views/widgets/SettingsDialog.qml:211
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Editor del estilo del esquema de color"
+msgstr "Editor del estilo del esquema de color."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -633,9 +631,3 @@ msgstr "Encontrar pestaña"
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar todo"
-
-#~ msgid "Follows the system color scheme."
-#~ msgstr "Seguir el esquema de color del sistema."
-
-#~ msgid "Style"
-#~ msgstr "Estilo"
