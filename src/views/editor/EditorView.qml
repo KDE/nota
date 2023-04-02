@@ -247,7 +247,6 @@ Pane
             tabViewButton: Maui.TabViewButton
             {
                 id:  _tabButton
-                tabBar: _tabView.tabBar
                 tabView: _tabView
                 onClicked:
                 {
