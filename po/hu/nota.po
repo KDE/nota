@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-30 00:48+0000\n"
+"POT-Creation-Date: 2023-04-03 00:45+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -121,7 +121,7 @@ msgstr "Megnyitás új lapon"
 msgid "Open in new split"
 msgstr "Megnyitás új osztott nézetben"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:442
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:441
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
@@ -200,85 +200,85 @@ msgstr "Bővítmények"
 msgid "About"
 msgstr "Névjegy"
 
-#: views/editor/EditorView.qml:291
+#: views/editor/EditorView.qml:290
 #, kde-format
 msgid "Undo"
 msgstr ""
 
-#: views/editor/EditorView.qml:299
+#: views/editor/EditorView.qml:298
 #, kde-format
 msgid "Redo"
 msgstr "Újra"
 
-#: views/editor/EditorView.qml:307
+#: views/editor/EditorView.qml:306
 #, kde-format
 msgid "Save"
 msgstr "Mentés"
 
-#: views/editor/EditorView.qml:316
+#: views/editor/EditorView.qml:315
 #, kde-format
 msgid "Save as"
 msgstr "Mentés másként"
 
-#: views/editor/EditorView.qml:327
+#: views/editor/EditorView.qml:326
 #, kde-format
 msgid "Find and Replace"
 msgstr "Keresés és csere"
 
-#: views/editor/EditorView.qml:340
+#: views/editor/EditorView.qml:339
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Sor/szószámláló"
 
-#: views/editor/EditorView.qml:359
+#: views/editor/EditorView.qml:358
 #, kde-format
 msgid "UnFav it"
 msgstr "Nem kedvenc"
 
-#: views/editor/EditorView.qml:374 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:373 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Információ"
 
-#: views/editor/EditorView.qml:384 views/RecentView.qml:136
+#: views/editor/EditorView.qml:383 views/RecentView.qml:136
 #, kde-format
 msgid "Share"
 msgstr "Megosztás"
 
-#: views/editor/EditorView.qml:397 views/editor/EditorView.qml:407
+#: views/editor/EditorView.qml:396 views/editor/EditorView.qml:406
 #, kde-format
 msgid "Go to Line"
 msgstr "Ugrás egy sorra"
 
-#: views/editor/EditorView.qml:409
+#: views/editor/EditorView.qml:408
 #, kde-format
 msgid "Line number"
 msgstr "Sorszám"
 
-#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:88
 #, fuzzy, kde-format
 #| msgid "Show in folder"
 msgid "Show in Folder"
 msgstr "Megjelenítés mappában"
 
-#: views/editor/EditorView.qml:427
+#: views/editor/EditorView.qml:426
 #, fuzzy, kde-format
 #| msgid "Delete file"
 msgid "Delete File"
 msgstr "Fájl törlése"
 
-#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:439 views/widgets/ItemMenu.qml:132
 #, fuzzy, kde-format
 #| msgid "Delete file?"
 msgid "Delete File?"
 msgstr "Törli ezt a fájlt?"
 
-#: views/editor/EditorView.qml:441 views/widgets/ItemMenu.qml:133
+#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:133
 #, kde-format
 msgid "Accept"
 msgstr "Elfogadás"
 
-#: views/editor/EditorView.qml:443 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:442 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
