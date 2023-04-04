@@ -108,19 +108,20 @@ Maui.ApplicationWindow
             property var callback : ({})
             title: i18n("Unsaved files")
             message: i18n("You have unsaved files. You can go back and save them or choose to discard all changes and exit.")
-            page.margins: Maui.Style.space.big
-            template.iconSource: "emblem-warning"
+            scrollView.padding: Maui.Style.space.big
+            template.iconSource: "dialog-warning"
+            template.iconVisible: true
             acceptButton.text: i18n("Go back")
             rejectButton.text: i18n("Discard")
             onRejected:
             {
                 discard = true
+                close()
 
                 if(callback instanceof Function)
                 {
                     callback()
                 }
-                close()
             }
             onAccepted: close()
         }
@@ -223,7 +224,7 @@ Maui.ApplicationWindow
         dialog.mode = dialog.modes.OPEN
 
         if(root.currentEditor && editorView.currentFileExistsLocally)
-        dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)
+            dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)
 
         dialog.callback =  function (urls)
         {
@@ -266,4 +267,4 @@ Maui.ApplicationWindow
         {
         editorView.openTab(url)
     }
-}
+    }
