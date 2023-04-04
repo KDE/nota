@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:45+0000\n"
-"PO-Revision-Date: 2023-02-27 17:18+0100\n"
+"PO-Revision-Date: 2023-03-30 21:20+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -566,10 +566,9 @@ msgid "Color"
 msgstr "Colore"
 
 #: views/widgets/SettingsDialog.qml:179
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Colore di sfondo dell'editor"
+msgstr "Colore di sfondo dell'editor."
 
 #: views/widgets/SettingsDialog.qml:210
 #, kde-format
@@ -577,10 +576,9 @@ msgid "Theme"
 msgstr "Tema"
 
 #: views/widgets/SettingsDialog.qml:211
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Stile dello schema di colori dell'editor"
+msgstr "Stile dello schema di colori dell'editor."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
