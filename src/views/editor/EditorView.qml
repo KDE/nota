@@ -21,27 +21,8 @@ Pane
     property alias plugin: _pluginLayout
     property alias model : _tabView.contentModel
     property alias tabView : _tabView
+
     padding: 0
-    //    altHeader: Maui.Handy.isMobile
-    //    headBar.visible: _tabView.count > 0
-    //    autoHideHeader: focusMode
-    //    headBar.forceCenterMiddleContent: root.isWide
-
-    //    title: currentTab.title
-    //    showTitle: false
-    //    showCSDControls: true
-
-
-    //    headBar.middleContent: Loader
-    //    {
-    //        Layout.fillWidth: true
-    //        Layout.maximumWidth: 500
-    //        Layout.alignment: Qt.AlignCenter
-
-    //        asynchronous: true
-    //        sourceComponent: EditorBar {}
-    //    }
-
 
     Action
     {
@@ -268,11 +249,6 @@ Pane
                     width: height
                 }
 
-                //                onRightClicked:
-                //                {
-                //                    _docMenu.open()
-                //                }
-
                 onCloseClicked:
                 {
                     _tabView.closeTabClicked(_tabButton.mindex)
@@ -427,6 +403,7 @@ Pane
                         icon.name: "edit-delete"
                         enabled: currentFileExistsLocally
                         Maui.Theme.textColor: Maui.Theme.negativeTextColor
+
                         onTriggered:
                         {
                             _removeDialog.open()
@@ -437,11 +414,17 @@ Pane
                             id: _removeDialog
 
                             title: i18n("Delete File?")
+                            message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
+
+                            headBar.visible: false
+
                             acceptButton.text: i18n("Accept")
                             rejectButton.text: i18n("Cancel")
-                            message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
-                            page.margins: Maui.Style.space.big
-                            template.iconSource: "emblem-warning"
+
+
+                            scrollView.padding: Maui.Style.space.big
+                            template.iconSource: "dialog-question"
+                            template.iconVisible: true
 
                             onRejected: close()
                             onAccepted:
@@ -468,7 +451,9 @@ Pane
                     }
                 }
                 else
+                {
                     closeTab(index)
+                }
             }
         }
     }

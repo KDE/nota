@@ -10,10 +10,35 @@ import org.maui.nota 1.0 as Nota
 Maui.SettingsDialog
 {
     id: control
+
+    Component
+    {
+        id:_fontPageComponent
+
+        Maui.SettingsPage
+        {
+            title: i18n("Font")
+
+            Maui.FontPicker
+            {
+                Layout.fillWidth: true
+
+                mfont: settings.font
+                model.onlyMonospaced: true
+
+                onFontModified:
+                {
+                    settings.font = font
+                }
+            }
+        }
+    }
+
     Maui.SectionGroup
     {
         title: i18n("General")
         description: i18n("Configure the app UI, behaviour and plugins.")
+
         Maui.SectionItem
         {
             label1.text: i18n("Places Sidebar")
@@ -24,6 +49,19 @@ Maui.SettingsDialog
                 checkable: true
                 checked: settings.enableSidebar
                 onToggled: settings.enableSidebar = !settings.enableSidebar
+            }
+        }        
+
+        Maui.SectionItem
+        {
+            label1.text:  i18n("Auto Save")
+            label2.text: i18n("Auto saves your file every few seconds")
+
+            Switch
+            {
+                checkable: true
+                checked: settings.autoSave
+                onToggled: settings.autoSave = !settings.autoSave
             }
         }
 
@@ -51,18 +89,6 @@ Maui.SettingsDialog
     {
         title: i18n("Editor")
         description: i18n("Configure the look and feel of the editor. The settings are applied globally.")
-
-        Maui.SectionItem
-        {
-            label1.text:  i18n("Auto Save")
-            label2.text: i18n("Auto saves your file every few seconds")
-            Switch
-            {
-                checkable: true
-                checked: settings.autoSave
-                onToggled: settings.autoSave = !settings.autoSave
-            }
-        }
 
         Maui.SectionItem
         {
@@ -94,6 +120,7 @@ Maui.SettingsDialog
         {
             label1.text: i18n("Syntax Highlighting")
             label2.text: i18n("Enable syntax highlighting for supported languages.")
+
             Switch
             {
                 checkable: true
@@ -101,36 +128,37 @@ Maui.SettingsDialog
                 onToggled: settings.enableSyntaxHighlighting = !settings.enableSyntaxHighlighting
             }
         }
+
+        Maui.SectionItem
+        {
+            label1.text: i18n("Colors")
+            label2.text: i18n("Configure the color scheme of the syntax highlighting. This configuration in not applied for rich text formats.")
+            enabled: settings.enableSyntaxHighlighting
+
+            ToolButton
+            {
+                checkable: true
+                onToggled: control.addPage(_stylePageComponent)
+                icon.name: "go-next"
+            }
+        }
     }
 
     Maui.SectionGroup
     {
-        title: i18n("Fonts")
-        description: i18n("Configure the global font family and size.")
+        title: i18n("Display")
+        description: i18n("Configure the font and diplay options.")
 
         Maui.SectionItem
         {
-            label1.text:  i18n("Family")
+            label1.text: i18n("Font")
+            label2.text: i18n("Font family and size.")
 
-            columns: 1
-            Maui.FontsComboBox
+            ToolButton
             {
-                Layout.fillWidth: true
-                model: Qt.fontFamilies()
-                Component.onCompleted: currentIndex = find(settings.font.family, Qt.MatchExactly)
-                onActivated: settings.font.family = currentText
-            }
-        }
-
-        Maui.SectionItem
-        {
-            label1.text:  i18n("Size")
-
-            SpinBox
-            {
-                from: 8; to : 500
-                value: settings.font.pointSize
-                onValueChanged: settings.font.pointSize = value
+                checkable: true
+                icon.name: "go-next"
+                onToggled: control.addPage(_fontPageComponent)
             }
         }
 
@@ -147,23 +175,10 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SectionItem
-    {
-        label1.text: i18n("Colors")
-        label2.text: i18n("Configure the color scheme of the syntax highlighting. This configuration in not applied for rich text formats.")
-        enabled: settings.enableSyntaxHighlighting
-        ToolButton
-        {
-            checkable: true
-            onToggled: control.addPage(_stylePageComponent)
-            icon.name: "go-next"
-        }
-
-    }
-
     Component
     {
         id:_stylePageComponent
+
         Maui.SettingsPage
         {
             title: i18n("Colors")
@@ -173,6 +188,7 @@ Maui.SettingsDialog
                 title: i18n("Colors")
                 description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
                 visible: settings.enableSyntaxHighlighting
+
                 Maui.SectionItem
                 {
                     label1.text:  i18n("Color")
@@ -216,17 +232,17 @@ Maui.SettingsDialog
                         columns: 3
                         Layout.fillWidth: true
                         opacity: enabled ? 1 : 0.5
+
                         Repeater
                         {
-                            model: TE.ColorSchemesModel
-                            {
-                            }
+                            model: TE.ColorSchemesModel {}
 
                             delegate: Maui.GridBrowserDelegate
                             {
                                 Layout.fillWidth: true
                                 checked: model.name === settings.theme
                                 onClicked: settings.theme = model.name
+                                label1.text: model.name
 
                                 template.iconComponent: Control
                                 {
@@ -235,7 +251,6 @@ Maui.SettingsDialog
 
                                     background: Rectangle
                                     {
-                                        //                                color: model.background
                                         color: appSettings.backgroundColor
                                         radius: Maui.Style.radiusV
                                     }
@@ -250,7 +265,6 @@ Maui.SettingsDialog
                                             wrapMode: Text.NoWrap
                                             elide: Text.ElideLeft
                                             width: parent.width
-                                            //                                    font.pointSize: Maui.Style.fontSizes.small
                                             text: "Nota { @ }"
                                             color: model.foreground
                                             font.family: settings.font.family
@@ -289,13 +303,10 @@ Maui.SettingsDialog
                                         }
                                     }
                                 }
-
-                                label1.text: model.name
                             }
                         }
                     }
                 }
-
             }
         }
     }

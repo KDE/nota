@@ -15,6 +15,7 @@ import "views/widgets" as Widgets
 Maui.ApplicationWindow
 {
     id: root
+
     title: currentEditor ? currentTab.title : ""
     Maui.Style.styleType: Maui.Handy.isAndroid ? (appSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
@@ -26,7 +27,7 @@ Maui.ApplicationWindow
 
     property bool focusMode : false
 
-    property font defaultFont : Qt.font({family: "Noto Sans Mono", pointSize: Maui.Style.fontSizes.default})
+    property font defaultFont : Maui.Style.monospacedFont
 
     //Global editor props
     property alias appSettings: settings

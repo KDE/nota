@@ -86,7 +86,14 @@ Item
             SplitView.maximumHeight: parent.height * 0.5
             SplitView.minimumHeight : 100
             source: "../Terminal.qml"
-            onLoaded: syncTerminal(control.currentEditor.fileUrl)
+            onLoaded: syncTerminal(control.editor.fileUrl)
+            onVisibleChanged:
+            {
+                if(visible)
+                {
+                     syncTerminal(control.editor.fileUrl)
+                }
+            }
         }
     }
 
