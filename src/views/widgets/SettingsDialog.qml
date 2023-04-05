@@ -147,7 +147,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Display")
-        description: i18n("Configure the font and diplay options.")
+        description: i18n("Configure the font and display options.")
 
         Maui.SectionItem
         {
