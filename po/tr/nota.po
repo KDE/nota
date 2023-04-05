@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:45+0000\n"
+"POT-Creation-Date: 2023-04-05 00:47+0000\n"
 "PO-Revision-Date: 2023-03-30 10:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Geliştirici"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "Kaydedilmemiş dosyalar"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,12 +71,12 @@ msgstr ""
 "Kaydedilmemiş dosyalarınız var. Geri gidip onları kaydedebilir veya "
 "değişiklikleri atıp çıkabilirsiniz."
 
-#: main.qml:113
+#: main.qml:115
 #, kde-format
 msgid "Go back"
 msgstr "Geri git"
 
-#: main.qml:114
+#: main.qml:116
 #, kde-format
 msgid "Discard"
 msgstr "At"
@@ -121,158 +121,153 @@ msgstr "Yeni sekmede aç"
 msgid "Open in new split"
 msgstr "Yeni bölüntüde aç"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:441
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
 msgstr "İptal"
 
-#: views/editor/EditorView.qml:50
+#: views/editor/EditorView.qml:31
 #, kde-format
 msgid "Open Files"
 msgstr "Dosyalar Aç"
 
-#: views/editor/EditorView.qml:61
+#: views/editor/EditorView.qml:42
 #, kde-format
 msgid "Open Recent Files"
 msgstr "Son Dosyaları Aç"
 
-#: views/editor/EditorView.qml:72
+#: views/editor/EditorView.qml:53
 #, kde-format
 msgid "New"
 msgstr "Yeni"
 
-#: views/editor/EditorView.qml:94
+#: views/editor/EditorView.qml:75
 #, kde-format
 msgid "Create a New Document"
 msgstr "Yeni Belge Oluştur"
 
-#: views/editor/EditorView.qml:95
+#: views/editor/EditorView.qml:76
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Yeni bir belge oluşturabilir veya açabilirsiniz."
 
-#: views/editor/EditorView.qml:111
+#: views/editor/EditorView.qml:92
 #, kde-format
 msgid "Places"
 msgstr "Yerler"
 
-#: views/editor/EditorView.qml:119
+#: views/editor/EditorView.qml:100
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Kenar Çubuğunu Aç/Kapat"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:146
 #, kde-format
 msgid "Focus"
 msgstr "Odak"
 
-#: views/editor/EditorView.qml:173 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:154 views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Uçbirim"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:165
 #, kde-format
 msgid "Split View"
 msgstr "Bölünmüş Görünüm"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:186 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:197
 #, kde-format
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: views/editor/EditorView.qml:227
+#: views/editor/EditorView.qml:208
 #, kde-format
 msgid "Plugins"
 msgstr "Eklentiler"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:219
 #, kde-format
 msgid "About"
 msgstr "Hakkında"
 
-#: views/editor/EditorView.qml:290
+#: views/editor/EditorView.qml:266
 #, kde-format
 msgid "Undo"
 msgstr "Geri Al"
 
-#: views/editor/EditorView.qml:298
+#: views/editor/EditorView.qml:274
 #, kde-format
 msgid "Redo"
 msgstr "Yinele"
 
-#: views/editor/EditorView.qml:306
+#: views/editor/EditorView.qml:282
 #, kde-format
 msgid "Save"
 msgstr "Kaydet"
 
-#: views/editor/EditorView.qml:315
+#: views/editor/EditorView.qml:291
 #, kde-format
 msgid "Save as"
 msgstr "Farklı kaydet"
 
-#: views/editor/EditorView.qml:326
+#: views/editor/EditorView.qml:302
 #, kde-format
 msgid "Find and Replace"
 msgstr "Bul ve Değiştir"
 
-#: views/editor/EditorView.qml:339
+#: views/editor/EditorView.qml:315
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Satır/Sözcük Sayacı"
 
-#: views/editor/EditorView.qml:358
+#: views/editor/EditorView.qml:334
 #, kde-format
 msgid "UnFav it"
 msgstr "Sık Kullanılanlardan Kaldır"
 
-#: views/editor/EditorView.qml:373 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:349 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Bilgi"
 
-#: views/editor/EditorView.qml:383 views/RecentView.qml:136
+#: views/editor/EditorView.qml:359 views/RecentView.qml:136
 #, kde-format
 msgid "Share"
 msgstr "Paylaş"
 
-#: views/editor/EditorView.qml:396 views/editor/EditorView.qml:406
+#: views/editor/EditorView.qml:372 views/editor/EditorView.qml:382
 #, kde-format
 msgid "Go to Line"
 msgstr "Satıra Git"
 
-#: views/editor/EditorView.qml:408
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Line number"
 msgstr "Satır numarası"
 
-#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:392 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Klasörde Göster"
 
-#: views/editor/EditorView.qml:426
+#: views/editor/EditorView.qml:402
 #, kde-format
 msgid "Delete File"
 msgstr "Dosyayı Sil"
 
-#: views/editor/EditorView.qml:439 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Dosyayı Sil?"
 
-#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Kabul et"
-
-#: views/editor/EditorView.qml:442 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -280,6 +275,11 @@ msgid ""
 msgstr ""
 "%1 \n"
 "dosyasını silmek istediğinize emin misiniz?"
+
+#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
+#, kde-format
+msgid "Accept"
+msgstr "Kabul et"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "Tarih"
 msgid "Modified"
 msgstr "Değiştirilme"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
+#: views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Boyut"
@@ -431,48 +431,31 @@ msgstr "Eklentileri Yükle"
 msgid "Activate or remove the third party plugins"
 msgstr "Üçüncü parti eklentileri etkinleştire veya kaldır"
 
-#: views/widgets/SettingsDialog.qml:15
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
+#, fuzzy, kde-format
+#| msgid "Fonts"
+msgid "Font"
+msgstr "Yazıtipleri"
+
+#: views/widgets/SettingsDialog.qml:39
 #, kde-format
 msgid "General"
 msgstr "Genel"
 
-#: views/widgets/SettingsDialog.qml:16
+#: views/widgets/SettingsDialog.qml:40
 #, kde-format
 msgid "Configure the app UI, behaviour and plugins."
 msgstr "Uygulama arayüzünü, davranışını ve eklentileri yapılandırın."
 
-#: views/widgets/SettingsDialog.qml:19
+#: views/widgets/SettingsDialog.qml:44
 #, kde-format
 msgid "Places Sidebar"
 msgstr "Yerler Kenar Çubuğu"
 
-#: views/widgets/SettingsDialog.qml:20
+#: views/widgets/SettingsDialog.qml:45
 #, kde-format
 msgid "Browse your file system from the sidebar."
 msgstr "Kenar çubuğundan dosya sisteminize göz atın."
-
-#: views/widgets/SettingsDialog.qml:34
-#, kde-format
-msgid "Dark Mode"
-msgstr "Koyu Kip"
-
-#: views/widgets/SettingsDialog.qml:35
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "Açık ve koyu renk şeması arasında geçiş yapın."
-
-#: views/widgets/SettingsDialog.qml:52
-#, kde-format
-msgid "Editor"
-msgstr "Düzenleyici"
-
-#: views/widgets/SettingsDialog.qml:53
-#, kde-format
-msgid ""
-"Configure the look and feel of the editor. The settings are applied globally."
-msgstr ""
-"Düzenleyicinin görünüm ve hissini yapılandırın. Ayarlar global olarak "
-"uygulanır."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -484,63 +467,66 @@ msgstr "Otomatik Kaydet"
 msgid "Auto saves your file every few seconds"
 msgstr "Dosyanızı her birkaç saniyede bir kendiliğinden kaydeder"
 
-#: views/widgets/SettingsDialog.qml:69
+#: views/widgets/SettingsDialog.qml:72
+#, kde-format
+msgid "Dark Mode"
+msgstr "Koyu Kip"
+
+#: views/widgets/SettingsDialog.qml:73
+#, kde-format
+msgid "Switch between light and dark colorscheme."
+msgstr "Açık ve koyu renk şeması arasında geçiş yapın."
+
+#: views/widgets/SettingsDialog.qml:90
+#, kde-format
+msgid "Editor"
+msgstr "Düzenleyici"
+
+#: views/widgets/SettingsDialog.qml:91
+#, kde-format
+msgid ""
+"Configure the look and feel of the editor. The settings are applied globally."
+msgstr ""
+"Düzenleyicinin görünüm ve hissini yapılandırın. Ayarlar global olarak "
+"uygulanır."
+
+#: views/widgets/SettingsDialog.qml:95
 #, kde-format
 msgid "Line Numbers"
 msgstr "Satır Numaraları"
 
-#: views/widgets/SettingsDialog.qml:70
+#: views/widgets/SettingsDialog.qml:96
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr "Sol tarafta satır numaralarını görüntüleyin."
 
-#: views/widgets/SettingsDialog.qml:82
+#: views/widgets/SettingsDialog.qml:108
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Sözdizim Vurgulama Dilleri"
 
-#: views/widgets/SettingsDialog.qml:83
+#: views/widgets/SettingsDialog.qml:109
 #, kde-format
 msgid "Display available languages."
 msgstr "Kullanılabilir dilleri görüntüleyin."
 
-#: views/widgets/SettingsDialog.qml:95
+#: views/widgets/SettingsDialog.qml:121
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Sözdizim Vurgulama"
 
-#: views/widgets/SettingsDialog.qml:96
+#: views/widgets/SettingsDialog.qml:122
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Desteklenen diller için sözdizimi vurgulamasını etkinleştirin."
 
-#: views/widgets/SettingsDialog.qml:108
-#, kde-format
-msgid "Fonts"
-msgstr "Yazıtipleri"
-
-#: views/widgets/SettingsDialog.qml:109
-#, kde-format
-msgid "Configure the global font family and size."
-msgstr "Global yazıtipi ailesini ve boyutunu yapılandırın."
-
-#: views/widgets/SettingsDialog.qml:113
-#, kde-format
-msgid "Family"
-msgstr "Aile"
-
-#: views/widgets/SettingsDialog.qml:139
-#, kde-format
-msgid "Tab Space"
-msgstr "Sekme Boşluğu"
-
-#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:134 views/widgets/SettingsDialog.qml:184
+#: views/widgets/SettingsDialog.qml:188
 #, kde-format
 msgid "Colors"
 msgstr "Renkler"
 
-#: views/widgets/SettingsDialog.qml:153
+#: views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -549,7 +535,29 @@ msgstr ""
 "Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
 "biçimleri için uygulanmaz."
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:149
+#, kde-format
+msgid "Display"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:150
+#, fuzzy, kde-format
+#| msgid "Configure the global font family and size."
+msgid "Configure the font and diplay options."
+msgstr "Global yazıtipi ailesini ve boyutunu yapılandırın."
+
+#: views/widgets/SettingsDialog.qml:155
+#, fuzzy, kde-format
+#| msgid "Configure the global font family and size."
+msgid "Font family and size."
+msgstr "Global yazıtipi ailesini ve boyutunu yapılandırın."
+
+#: views/widgets/SettingsDialog.qml:167
+#, kde-format
+msgid "Tab Space"
+msgstr "Sekme Boşluğu"
+
+#: views/widgets/SettingsDialog.qml:189
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -558,22 +566,22 @@ msgstr ""
 "Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
 "biçimleri için uygulanmaz."
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:194
 #, kde-format
 msgid "Color"
 msgstr "Renk"
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:195
 #, kde-format
 msgid "Editor background color."
 msgstr "Düzenleyici arka plan rengi."
 
-#: views/widgets/SettingsDialog.qml:210
+#: views/widgets/SettingsDialog.qml:226
 #, kde-format
 msgid "Theme"
 msgstr "Tema"
 
-#: views/widgets/SettingsDialog.qml:211
+#: views/widgets/SettingsDialog.qml:227
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Düzenleyici renk şeması biçemi."
@@ -627,6 +635,9 @@ msgstr "Sekme Bul"
 #, kde-format
 msgid "Select All"
 msgstr "Tümünü Seç"
+
+#~ msgid "Family"
+#~ msgstr "Aile"
 
 #~ msgid "Follows the system color scheme."
 #~ msgstr "Sistem renk şemasını izler"

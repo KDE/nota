@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:45+0000\n"
+"POT-Creation-Date: 2023-04-05 00:47+0000\n"
 "PO-Revision-Date: 2023-03-30 21:20+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Sviluppatore"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "File non salvati"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,12 +71,12 @@ msgstr ""
 "Hai file non salvati. Puoi tornare indietro e salvarli o scegliere di "
 "annullare tutte le modifiche e uscire."
 
-#: main.qml:113
+#: main.qml:115
 #, kde-format
 msgid "Go back"
 msgstr "Indietro"
 
-#: main.qml:114
+#: main.qml:116
 #, kde-format
 msgid "Discard"
 msgstr "Scarta"
@@ -121,158 +121,153 @@ msgstr "Apri in una nuova scheda"
 msgid "Open in new split"
 msgstr "Apri in una nuova vista divisa"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:441
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
 msgstr "Annulla"
 
-#: views/editor/EditorView.qml:50
+#: views/editor/EditorView.qml:31
 #, kde-format
 msgid "Open Files"
 msgstr "Apri file"
 
-#: views/editor/EditorView.qml:61
+#: views/editor/EditorView.qml:42
 #, kde-format
 msgid "Open Recent Files"
 msgstr "Apri file recenti"
 
-#: views/editor/EditorView.qml:72
+#: views/editor/EditorView.qml:53
 #, kde-format
 msgid "New"
 msgstr "Nuovo"
 
-#: views/editor/EditorView.qml:94
+#: views/editor/EditorView.qml:75
 #, kde-format
 msgid "Create a New Document"
 msgstr "Crea un nuovo documento"
 
-#: views/editor/EditorView.qml:95
+#: views/editor/EditorView.qml:76
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Puoi creare o aprire un nuovo documento."
 
-#: views/editor/EditorView.qml:111
+#: views/editor/EditorView.qml:92
 #, kde-format
 msgid "Places"
 msgstr "Risorse"
 
-#: views/editor/EditorView.qml:119
+#: views/editor/EditorView.qml:100
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Commuta la barra laterale"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:146
 #, kde-format
 msgid "Focus"
 msgstr "Fuoco"
 
-#: views/editor/EditorView.qml:173 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:154 views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Terminale"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:165
 #, kde-format
 msgid "Split View"
 msgstr "Dividi la vista"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:186 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Scorciatoie"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:197
 #, kde-format
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: views/editor/EditorView.qml:227
+#: views/editor/EditorView.qml:208
 #, kde-format
 msgid "Plugins"
 msgstr "Estensioni"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:219
 #, kde-format
 msgid "About"
 msgstr "Informazioni"
 
-#: views/editor/EditorView.qml:290
+#: views/editor/EditorView.qml:266
 #, kde-format
 msgid "Undo"
 msgstr "Annulla"
 
-#: views/editor/EditorView.qml:298
+#: views/editor/EditorView.qml:274
 #, kde-format
 msgid "Redo"
 msgstr "Rifai"
 
-#: views/editor/EditorView.qml:306
+#: views/editor/EditorView.qml:282
 #, kde-format
 msgid "Save"
 msgstr "Salva"
 
-#: views/editor/EditorView.qml:315
+#: views/editor/EditorView.qml:291
 #, kde-format
 msgid "Save as"
 msgstr "Salva come"
 
-#: views/editor/EditorView.qml:326
+#: views/editor/EditorView.qml:302
 #, kde-format
 msgid "Find and Replace"
 msgstr "Trova e sostituisci"
 
-#: views/editor/EditorView.qml:339
+#: views/editor/EditorView.qml:315
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Contatore righe/parole"
 
-#: views/editor/EditorView.qml:358
+#: views/editor/EditorView.qml:334
 #, kde-format
 msgid "UnFav it"
 msgstr "Rimuovi dai preferiti"
 
-#: views/editor/EditorView.qml:373 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:349 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Informazioni"
 
-#: views/editor/EditorView.qml:383 views/RecentView.qml:136
+#: views/editor/EditorView.qml:359 views/RecentView.qml:136
 #, kde-format
 msgid "Share"
 msgstr "Condividi"
 
-#: views/editor/EditorView.qml:396 views/editor/EditorView.qml:406
+#: views/editor/EditorView.qml:372 views/editor/EditorView.qml:382
 #, kde-format
 msgid "Go to Line"
 msgstr "Vai alla riga"
 
-#: views/editor/EditorView.qml:408
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Line number"
 msgstr "Numero di riga"
 
-#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:392 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Mostra nella cartella"
 
-#: views/editor/EditorView.qml:426
+#: views/editor/EditorView.qml:402
 #, kde-format
 msgid "Delete File"
 msgstr "Elimina file"
 
-#: views/editor/EditorView.qml:439 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Vuoi eliminare il file?"
 
-#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Accetta"
-
-#: views/editor/EditorView.qml:442 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -280,6 +275,11 @@ msgid ""
 msgstr ""
 "Sei sicuro di volerlo eliminare\n"
 "%1"
+
+#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
+#, kde-format
+msgid "Accept"
+msgstr "Accetta"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "Data"
 msgid "Modified"
 msgstr "Modificato"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
+#: views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Dimensione"
@@ -431,50 +431,33 @@ msgstr "Carica le estensioni"
 msgid "Activate or remove the third party plugins"
 msgstr "Attiva o rimuovi le estensioni di terze parti"
 
-#: views/widgets/SettingsDialog.qml:15
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
+#, fuzzy, kde-format
+#| msgid "Fonts"
+msgid "Font"
+msgstr "Caratteri"
+
+#: views/widgets/SettingsDialog.qml:39
 #, kde-format
 msgid "General"
 msgstr "Generale"
 
-#: views/widgets/SettingsDialog.qml:16
+#: views/widgets/SettingsDialog.qml:40
 #, kde-format
 msgid "Configure the app UI, behaviour and plugins."
 msgstr ""
 "Configura l'interfaccia utente, il comportamento e le estensioni "
 "dell'applicazione."
 
-#: views/widgets/SettingsDialog.qml:19
+#: views/widgets/SettingsDialog.qml:44
 #, kde-format
 msgid "Places Sidebar"
 msgstr "Barra laterale delle risorse"
 
-#: views/widgets/SettingsDialog.qml:20
+#: views/widgets/SettingsDialog.qml:45
 #, kde-format
 msgid "Browse your file system from the sidebar."
 msgstr "Sfoglia il tuo file system dalla barra laterale."
-
-#: views/widgets/SettingsDialog.qml:34
-#, kde-format
-msgid "Dark Mode"
-msgstr "Modalità scura"
-
-#: views/widgets/SettingsDialog.qml:35
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "Passa dallo schema di colori chiaro allo scuro e viceversa."
-
-#: views/widgets/SettingsDialog.qml:52
-#, kde-format
-msgid "Editor"
-msgstr "Editor"
-
-#: views/widgets/SettingsDialog.qml:53
-#, kde-format
-msgid ""
-"Configure the look and feel of the editor. The settings are applied globally."
-msgstr ""
-"Configura l'aspetto dell'editor. Le impostazioni sono applicate a livello "
-"globale."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -486,63 +469,66 @@ msgstr "Salvataggio automatico"
 msgid "Auto saves your file every few seconds"
 msgstr "Salva automaticamente il tuo file dopo pochi secondi"
 
-#: views/widgets/SettingsDialog.qml:69
+#: views/widgets/SettingsDialog.qml:72
+#, kde-format
+msgid "Dark Mode"
+msgstr "Modalità scura"
+
+#: views/widgets/SettingsDialog.qml:73
+#, kde-format
+msgid "Switch between light and dark colorscheme."
+msgstr "Passa dallo schema di colori chiaro allo scuro e viceversa."
+
+#: views/widgets/SettingsDialog.qml:90
+#, kde-format
+msgid "Editor"
+msgstr "Editor"
+
+#: views/widgets/SettingsDialog.qml:91
+#, kde-format
+msgid ""
+"Configure the look and feel of the editor. The settings are applied globally."
+msgstr ""
+"Configura l'aspetto dell'editor. Le impostazioni sono applicate a livello "
+"globale."
+
+#: views/widgets/SettingsDialog.qml:95
 #, kde-format
 msgid "Line Numbers"
 msgstr "Numeri di riga"
 
-#: views/widgets/SettingsDialog.qml:70
+#: views/widgets/SettingsDialog.qml:96
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr "Mostra i numeri di riga sul lato sinistro."
 
-#: views/widgets/SettingsDialog.qml:82
+#: views/widgets/SettingsDialog.qml:108
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Linguaggi di evidenziazione della sintassi"
 
-#: views/widgets/SettingsDialog.qml:83
+#: views/widgets/SettingsDialog.qml:109
 #, kde-format
 msgid "Display available languages."
 msgstr "Visualizza i linguaggi disponibili."
 
-#: views/widgets/SettingsDialog.qml:95
+#: views/widgets/SettingsDialog.qml:121
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Evidenziazione della sintassi"
 
-#: views/widgets/SettingsDialog.qml:96
+#: views/widgets/SettingsDialog.qml:122
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Abilita l'evidenziazione della sintassi per i linguaggi supportati."
 
-#: views/widgets/SettingsDialog.qml:108
-#, kde-format
-msgid "Fonts"
-msgstr "Caratteri"
-
-#: views/widgets/SettingsDialog.qml:109
-#, kde-format
-msgid "Configure the global font family and size."
-msgstr "Configurare la famiglia e le dimensioni del carattere globali."
-
-#: views/widgets/SettingsDialog.qml:113
-#, kde-format
-msgid "Family"
-msgstr "Famiglia"
-
-#: views/widgets/SettingsDialog.qml:139
-#, kde-format
-msgid "Tab Space"
-msgstr "Tabulazione"
-
-#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:134 views/widgets/SettingsDialog.qml:184
+#: views/widgets/SettingsDialog.qml:188
 #, kde-format
 msgid "Colors"
 msgstr "Colori"
 
-#: views/widgets/SettingsDialog.qml:153
+#: views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -551,7 +537,29 @@ msgstr ""
 "Configura lo stile di evidenziazione della sintassi. Questa configurazione "
 "non è applicata al testo formattato."
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:149
+#, kde-format
+msgid "Display"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:150
+#, fuzzy, kde-format
+#| msgid "Configure the global font family and size."
+msgid "Configure the font and diplay options."
+msgstr "Configurare la famiglia e le dimensioni del carattere globali."
+
+#: views/widgets/SettingsDialog.qml:155
+#, fuzzy, kde-format
+#| msgid "Configure the global font family and size."
+msgid "Font family and size."
+msgstr "Configurare la famiglia e le dimensioni del carattere globali."
+
+#: views/widgets/SettingsDialog.qml:167
+#, kde-format
+msgid "Tab Space"
+msgstr "Tabulazione"
+
+#: views/widgets/SettingsDialog.qml:189
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -560,22 +568,22 @@ msgstr ""
 "Configura lo stile di evidenziazione della sintassi. Questa configurazione "
 "non è applicata al testo formattato."
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:194
 #, kde-format
 msgid "Color"
 msgstr "Colore"
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:195
 #, kde-format
 msgid "Editor background color."
 msgstr "Colore di sfondo dell'editor."
 
-#: views/widgets/SettingsDialog.qml:210
+#: views/widgets/SettingsDialog.qml:226
 #, kde-format
 msgid "Theme"
 msgstr "Tema"
 
-#: views/widgets/SettingsDialog.qml:211
+#: views/widgets/SettingsDialog.qml:227
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Stile dello schema di colori dell'editor."
@@ -629,6 +637,9 @@ msgstr "Trova scheda"
 #, kde-format
 msgid "Select All"
 msgstr "Seleziona tutto"
+
+#~ msgid "Family"
+#~ msgstr "Famiglia"
 
 #~ msgid "Follows the system color scheme."
 #~ msgstr "Segue lo schema di colori del sistema."

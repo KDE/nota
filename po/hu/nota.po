@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:45+0000\n"
+"POT-Creation-Date: 2023-04-05 00:47+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Fejlesztő"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "Nem mentett fájlok"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,12 +71,12 @@ msgstr ""
 "Nem mentett fájljai vannak. Visszaléphet és mentheti azokt, vagy eldobhatja "
 "az összes változtatást és kiléphet."
 
-#: main.qml:113
+#: main.qml:115
 #, kde-format
 msgid "Go back"
 msgstr "Vissza"
 
-#: main.qml:114
+#: main.qml:116
 #, kde-format
 msgid "Discard"
 msgstr "Eldobás"
@@ -121,164 +121,159 @@ msgstr "Megnyitás új lapon"
 msgid "Open in new split"
 msgstr "Megnyitás új osztott nézetben"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:441
+#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: views/editor/EditorView.qml:50
+#: views/editor/EditorView.qml:31
 #, kde-format
 msgid "Open Files"
 msgstr "Fájlok megnyitása"
 
-#: views/editor/EditorView.qml:61
+#: views/editor/EditorView.qml:42
 #, kde-format
 msgid "Open Recent Files"
 msgstr "Legutóbbi fájlok megnyitása"
 
-#: views/editor/EditorView.qml:72
+#: views/editor/EditorView.qml:53
 #, fuzzy, kde-format
 #| msgid "New Tab"
 msgid "New"
 msgstr "Új lap"
 
-#: views/editor/EditorView.qml:94
+#: views/editor/EditorView.qml:75
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Create a New Document"
 msgstr "Új dokumentum létrehozása"
 
-#: views/editor/EditorView.qml:95
+#: views/editor/EditorView.qml:76
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Létrehozhat vagy megnyithat új dokumentumot."
 
-#: views/editor/EditorView.qml:111
+#: views/editor/EditorView.qml:92
 #, kde-format
 msgid "Places"
 msgstr "Helyek"
 
-#: views/editor/EditorView.qml:119
+#: views/editor/EditorView.qml:100
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Oldalsáv be/ki"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:146
 #, kde-format
 msgid "Focus"
 msgstr "Fókusz"
 
-#: views/editor/EditorView.qml:173 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:154 views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Terminál"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:165
 #, fuzzy, kde-format
 #| msgid "Split"
 msgid "Split View"
 msgstr "Felosztás"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:186 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:197
 #, kde-format
 msgid "Settings"
 msgstr "Beállítások"
 
-#: views/editor/EditorView.qml:227
+#: views/editor/EditorView.qml:208
 #, kde-format
 msgid "Plugins"
 msgstr "Bővítmények"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:219
 #, kde-format
 msgid "About"
 msgstr "Névjegy"
 
-#: views/editor/EditorView.qml:290
+#: views/editor/EditorView.qml:266
 #, kde-format
 msgid "Undo"
 msgstr ""
 
-#: views/editor/EditorView.qml:298
+#: views/editor/EditorView.qml:274
 #, kde-format
 msgid "Redo"
 msgstr "Újra"
 
-#: views/editor/EditorView.qml:306
+#: views/editor/EditorView.qml:282
 #, kde-format
 msgid "Save"
 msgstr "Mentés"
 
-#: views/editor/EditorView.qml:315
+#: views/editor/EditorView.qml:291
 #, kde-format
 msgid "Save as"
 msgstr "Mentés másként"
 
-#: views/editor/EditorView.qml:326
+#: views/editor/EditorView.qml:302
 #, kde-format
 msgid "Find and Replace"
 msgstr "Keresés és csere"
 
-#: views/editor/EditorView.qml:339
+#: views/editor/EditorView.qml:315
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Sor/szószámláló"
 
-#: views/editor/EditorView.qml:358
+#: views/editor/EditorView.qml:334
 #, kde-format
 msgid "UnFav it"
 msgstr "Nem kedvenc"
 
-#: views/editor/EditorView.qml:373 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:349 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Információ"
 
-#: views/editor/EditorView.qml:383 views/RecentView.qml:136
+#: views/editor/EditorView.qml:359 views/RecentView.qml:136
 #, kde-format
 msgid "Share"
 msgstr "Megosztás"
 
-#: views/editor/EditorView.qml:396 views/editor/EditorView.qml:406
+#: views/editor/EditorView.qml:372 views/editor/EditorView.qml:382
 #, kde-format
 msgid "Go to Line"
 msgstr "Ugrás egy sorra"
 
-#: views/editor/EditorView.qml:408
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Line number"
 msgstr "Sorszám"
 
-#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:392 views/widgets/ItemMenu.qml:88
 #, fuzzy, kde-format
 #| msgid "Show in folder"
 msgid "Show in Folder"
 msgstr "Megjelenítés mappában"
 
-#: views/editor/EditorView.qml:426
+#: views/editor/EditorView.qml:402
 #, fuzzy, kde-format
 #| msgid "Delete file"
 msgid "Delete File"
 msgstr "Fájl törlése"
 
-#: views/editor/EditorView.qml:439 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:132
 #, fuzzy, kde-format
 #| msgid "Delete file?"
 msgid "Delete File?"
 msgstr "Törli ezt a fájlt?"
 
-#: views/editor/EditorView.qml:440 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Elfogadás"
-
-#: views/editor/EditorView.qml:442 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -286,6 +281,11 @@ msgid ""
 msgstr ""
 "Biztosan törli ezt? \n"
 "%1"
+
+#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
+#, kde-format
+msgid "Accept"
+msgstr "Elfogadás"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -322,7 +322,7 @@ msgstr "Dátum"
 msgid "Modified"
 msgstr "Módosítva"
 
-#: views/PlacesSidebar.qml:137 views/widgets/SettingsDialog.qml:127
+#: views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Méret"
@@ -437,50 +437,32 @@ msgstr "Bővítmények betöltése"
 msgid "Activate or remove the third party plugins"
 msgstr "Harmadik féltől származó bővítmények aktiválása vagy eltávolítása"
 
-#: views/widgets/SettingsDialog.qml:15
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
+#, fuzzy, kde-format
+#| msgid "Fonts"
+msgid "Font"
+msgstr "Betűkészletek"
+
+#: views/widgets/SettingsDialog.qml:39
 #, kde-format
 msgid "General"
 msgstr "Általános"
 
-#: views/widgets/SettingsDialog.qml:16
+#: views/widgets/SettingsDialog.qml:40
 #, kde-format
 msgid "Configure the app UI, behaviour and plugins."
 msgstr "Az alkalmazás felületének, működésének és bővítményeinek beállítása."
 
-#: views/widgets/SettingsDialog.qml:19
+#: views/widgets/SettingsDialog.qml:44
 #, kde-format
 msgid "Places Sidebar"
 msgstr "Helyek oldalsáv"
 
-#: views/widgets/SettingsDialog.qml:20
+#: views/widgets/SettingsDialog.qml:45
 #, fuzzy, kde-format
 #| msgid "Browse your file system from the sidebar"
 msgid "Browse your file system from the sidebar."
 msgstr "A fájlrendszer böngészése az oldalsávon"
-
-#: views/widgets/SettingsDialog.qml:34
-#, kde-format
-msgid "Dark Mode"
-msgstr "Sötét mód"
-
-#: views/widgets/SettingsDialog.qml:35
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr ""
-
-#: views/widgets/SettingsDialog.qml:52
-#, kde-format
-msgid "Editor"
-msgstr "Szerkesztő"
-
-#: views/widgets/SettingsDialog.qml:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
-msgid ""
-"Configure the look and feel of the editor. The settings are applied globally."
-msgstr "A szerkesztő megjelenésének beállítása. Ezek a beállítások globálisak"
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -492,68 +474,71 @@ msgstr "Automatikus mentés"
 msgid "Auto saves your file every few seconds"
 msgstr "A fájlok automatikus mentése minden néhány másodpercben"
 
-#: views/widgets/SettingsDialog.qml:69
+#: views/widgets/SettingsDialog.qml:72
+#, kde-format
+msgid "Dark Mode"
+msgstr "Sötét mód"
+
+#: views/widgets/SettingsDialog.qml:73
+#, kde-format
+msgid "Switch between light and dark colorscheme."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:90
+#, kde-format
+msgid "Editor"
+msgstr "Szerkesztő"
+
+#: views/widgets/SettingsDialog.qml:91
+#, fuzzy, kde-format
+#| msgid ""
+#| "Configure the look and feel of the editor. The settings are applied "
+#| "globally"
+msgid ""
+"Configure the look and feel of the editor. The settings are applied globally."
+msgstr "A szerkesztő megjelenésének beállítása. Ezek a beállítások globálisak"
+
+#: views/widgets/SettingsDialog.qml:95
 #, kde-format
 msgid "Line Numbers"
 msgstr "Sorszámok"
 
-#: views/widgets/SettingsDialog.qml:70
+#: views/widgets/SettingsDialog.qml:96
 #, fuzzy, kde-format
 #| msgid "Display the line numbers on the left side"
 msgid "Display the line numbers on the left side."
 msgstr "A sorok számának megjelenítése a bal oldalon"
 
-#: views/widgets/SettingsDialog.qml:82
+#: views/widgets/SettingsDialog.qml:108
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "A kiemelhető szintaxisú nyelvek"
 
-#: views/widgets/SettingsDialog.qml:83
+#: views/widgets/SettingsDialog.qml:109
 #, fuzzy, kde-format
 #| msgid "Display available languages"
 msgid "Display available languages."
 msgstr "Elérhető nyelvek megjelenítése"
 
-#: views/widgets/SettingsDialog.qml:95
+#: views/widgets/SettingsDialog.qml:121
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Szintaxiskiemelés"
 
-#: views/widgets/SettingsDialog.qml:96
+#: views/widgets/SettingsDialog.qml:122
 #, fuzzy, kde-format
 #| msgid "Enable syntax highlighting for supported languages"
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Szintaxiskiemelés bekapcsolása a támogatott nyelvekhez"
 
-#: views/widgets/SettingsDialog.qml:108
-#, kde-format
-msgid "Fonts"
-msgstr "Betűkészletek"
-
-#: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
-msgid "Configure the global font family and size."
-msgstr "A globális betűkészletek és betűméretek beállítása"
-
-#: views/widgets/SettingsDialog.qml:113
-#, kde-format
-msgid "Family"
-msgstr "Család"
-
-#: views/widgets/SettingsDialog.qml:139
-#, kde-format
-msgid "Tab Space"
-msgstr "Tabulátorméret"
-
-#: views/widgets/SettingsDialog.qml:152 views/widgets/SettingsDialog.qml:169
-#: views/widgets/SettingsDialog.qml:173
+#: views/widgets/SettingsDialog.qml:134 views/widgets/SettingsDialog.qml:184
+#: views/widgets/SettingsDialog.qml:188
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "Szín"
 
-#: views/widgets/SettingsDialog.qml:153
+#: views/widgets/SettingsDialog.qml:135
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -565,7 +550,29 @@ msgstr ""
 "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
 "RTF-formátumokra"
 
-#: views/widgets/SettingsDialog.qml:174
+#: views/widgets/SettingsDialog.qml:149
+#, kde-format
+msgid "Display"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:150
+#, fuzzy, kde-format
+#| msgid "Configure the global font family and size"
+msgid "Configure the font and diplay options."
+msgstr "A globális betűkészletek és betűméretek beállítása"
+
+#: views/widgets/SettingsDialog.qml:155
+#, fuzzy, kde-format
+#| msgid "Configure the global font family and size"
+msgid "Font family and size."
+msgstr "A globális betűkészletek és betűméretek beállítása"
+
+#: views/widgets/SettingsDialog.qml:167
+#, kde-format
+msgid "Tab Space"
+msgstr "Tabulátorméret"
+
+#: views/widgets/SettingsDialog.qml:189
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -577,23 +584,23 @@ msgstr ""
 "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
 "RTF-formátumokra"
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:194
 #, kde-format
 msgid "Color"
 msgstr "Szín"
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:195
 #, fuzzy, kde-format
 #| msgid "Editor background color"
 msgid "Editor background color."
 msgstr "A szerkesző háttérszíne"
 
-#: views/widgets/SettingsDialog.qml:210
+#: views/widgets/SettingsDialog.qml:226
 #, kde-format
 msgid "Theme"
 msgstr "Téma"
 
-#: views/widgets/SettingsDialog.qml:211
+#: views/widgets/SettingsDialog.qml:227
 #, fuzzy, kde-format
 #| msgid "Editor color scheme style"
 msgid "Editor color scheme style."
@@ -648,6 +655,9 @@ msgstr "Lap keresése"
 #, kde-format
 msgid "Select All"
 msgstr "Összes kijelölése"
+
+#~ msgid "Family"
+#~ msgstr "Család"
 
 #~ msgid "Style"
 #~ msgstr "Stílus"
