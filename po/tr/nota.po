@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:47+0000\n"
-"PO-Revision-Date: 2023-03-30 10:25+0300\n"
+"POT-Creation-Date: 2023-04-06 00:46+0000\n"
+"PO-Revision-Date: 2023-04-05 11:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -432,10 +432,9 @@ msgid "Activate or remove the third party plugins"
 msgstr "Üçüncü parti eklentileri etkinleştire veya kaldır"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Yazıtipleri"
+msgstr "Yazıtipi"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -538,19 +537,18 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Ekran"
 
 #: views/widgets/SettingsDialog.qml:150
 #, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
-msgid "Configure the font and diplay options."
-msgstr "Global yazıtipi ailesini ve boyutunu yapılandırın."
+#| msgid "Configure the font and diplay options."
+msgid "Configure the font and display options."
+msgstr "Yazıtipi ve ekran seçeneklerini yapılandırın."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Font family and size."
-msgstr "Global yazıtipi ailesini ve boyutunu yapılandırın."
+msgstr "Yazıtipi ailesi ve boyutu,"
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format

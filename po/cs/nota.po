@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-05 00:47+0000\n"
+"POT-Creation-Date: 2023-04-06 00:46+0000\n"
 "PO-Revision-Date: 2023-03-30 13:34+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -538,7 +538,7 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:150
 #, fuzzy, kde-format
 #| msgid "Configure the global font family and size."
-msgid "Configure the font and diplay options."
+msgid "Configure the font and display options."
 msgstr "Nastavit globální rodinu a velikost písem."
 
 #: views/widgets/SettingsDialog.qml:155
