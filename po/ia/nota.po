@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-06 00:46+0000\n"
-"PO-Revision-Date: 2023-02-28 16:15+0100\n"
+"PO-Revision-Date: 2023-04-06 11:56+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -430,10 +430,9 @@ msgid "Activate or remove the third party plugins"
 msgstr ""
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Fonts"
+msgstr "Font"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -532,7 +531,7 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Monstrator"
 
 #: views/widgets/SettingsDialog.qml:150
 #, kde-format

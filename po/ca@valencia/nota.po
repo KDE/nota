@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-06 00:46+0000\n"
-"PO-Revision-Date: 2023-03-30 09:54+0200\n"
+"PO-Revision-Date: 2023-04-06 11:10+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -435,10 +435,9 @@ msgid "Activate or remove the third party plugins"
 msgstr "Activa o elimina els connectors de tercers"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Tipus de lletra"
+msgstr "Lletra"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -541,19 +540,17 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Visualització"
 
 #: views/widgets/SettingsDialog.qml:150
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Configure the font and display options."
-msgstr "Configura la família i la mida dels tipus de lletra globals."
+msgstr "Configura la lletra i les opcions de visualització."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Font family and size."
-msgstr "Configura la família i la mida dels tipus de lletra globals."
+msgstr "Família i mida de la lletra."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -638,6 +635,3 @@ msgstr "Busca la pestanya"
 #, kde-format
 msgid "Select All"
 msgstr "Selecciona-ho tot"
-
-#~ msgid "Family"
-#~ msgstr "Família"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-06 00:46+0000\n"
-"PO-Revision-Date: 2023-03-30 08:52+0400\n"
+"PO-Revision-Date: 2023-04-06 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -433,15 +433,14 @@ msgid "Activate or remove the third party plugins"
 msgstr "نشط أو أزل الملحقات من أطراف ثالثة"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "الخطوط"
+msgstr "الخط"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
 msgid "General"
-msgstr "عامّ"
+msgstr "عام"
 
 #: views/widgets/SettingsDialog.qml:40
 #, kde-format
@@ -535,19 +534,17 @@ msgstr "اضبط تشكيلة ألوان إبراز الصياغة. هذا ال�
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "العرض"
 
 #: views/widgets/SettingsDialog.qml:150
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Configure the font and display options."
-msgstr "اضبط عائلة الخط وحجمه."
+msgstr "اضبط عائلة الخط وخيارات العرض."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Font family and size."
-msgstr "اضبط عائلة الخط وحجمه."
+msgstr "عائلة الخط وحجمه."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
