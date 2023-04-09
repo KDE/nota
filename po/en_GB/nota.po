@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-06 00:46+0000\n"
-"PO-Revision-Date: 2023-04-01 17:50+0100\n"
+"PO-Revision-Date: 2023-04-08 11:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -432,10 +432,9 @@ msgid "Activate or remove the third party plugins"
 msgstr "Activate or remove the third party plugins"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Fonts"
+msgstr "Font"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -537,19 +536,17 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Display"
 
 #: views/widgets/SettingsDialog.qml:150
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Configure the font and display options."
-msgstr "Configure the global font family and size."
+msgstr "Configure the font and display options."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Font family and size."
-msgstr "Configure the global font family and size."
+msgstr "Font family and size."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
