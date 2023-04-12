@@ -51,6 +51,11 @@ Maui.AltBrowser
             {
                 editorView.openTab(item.path)
             }
+
+            if(event.key === Qt.Key_Escape)
+            {
+                control.StackView.view.pop()
+            }
         }
     }
 

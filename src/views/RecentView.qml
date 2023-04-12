@@ -20,10 +20,11 @@ DocsBrowser
     holder.title : i18n("No Recent Files!")
     holder.body: i18n("Here you will see your recently opened files")
 
+
     headBar.farLeftContent: ToolButton
     {
         icon.name: "go-previous"
-        onClicked: _stackView.pop()
+        onClicked: control.StackView.view.pop()
     }  
 
     model: Maui.BaseModel
