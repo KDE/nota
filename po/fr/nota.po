@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-06 00:46+0000\n"
+"POT-Creation-Date: 2023-04-13 00:48+0000\n"
 "PO-Revision-Date: 2023-04-08 10:26+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -238,7 +238,7 @@ msgstr "Retirer le des signets"
 msgid "Info"
 msgstr "Informations"
 
-#: views/editor/EditorView.qml:359 views/RecentView.qml:136
+#: views/editor/EditorView.qml:359 views/RecentView.qml:137
 #, kde-format
 msgid "Share"
 msgstr "Partager"
@@ -342,18 +342,18 @@ msgstr "Aucun fichier récent !"
 msgid "Here you will see your recently opened files"
 msgstr "Vous pourrez voir ici les fichiers ouverts récemment."
 
-#: views/RecentView.qml:122
+#: views/RecentView.qml:123
 #, kde-format
 msgid "Open"
 msgstr "Ouvrir"
 
-#: views/RecentView.qml:143 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:144 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
 msgstr "Exporter"
 
 # | msgid "String"
-#: views/widgets/DocsBrowser.qml:62
+#: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
 msgstr "Filtrer..."

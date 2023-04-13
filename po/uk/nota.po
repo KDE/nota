@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-06 00:46+0000\n"
+"POT-Creation-Date: 2023-04-13 00:48+0000\n"
 "PO-Revision-Date: 2023-04-06 07:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -240,7 +240,7 @@ msgstr "Прибрати з улюблених"
 msgid "Info"
 msgstr "Інформація"
 
-#: views/editor/EditorView.qml:359 views/RecentView.qml:136
+#: views/editor/EditorView.qml:359 views/RecentView.qml:137
 #, kde-format
 msgid "Share"
 msgstr "Оприлюднити"
@@ -344,17 +344,17 @@ msgstr "Немає нещодавніх файлів!"
 msgid "Here you will see your recently opened files"
 msgstr "Тут ви побачите нещодавно відкриті файли"
 
-#: views/RecentView.qml:122
+#: views/RecentView.qml:123
 #, kde-format
 msgid "Open"
 msgstr "Відкрити"
 
-#: views/RecentView.qml:143 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:144 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
 msgstr "Експортувати"
 
-#: views/widgets/DocsBrowser.qml:62
+#: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
 msgstr "Фільтрувати…"

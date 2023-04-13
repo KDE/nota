@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-06 00:46+0000\n"
+"POT-Creation-Date: 2023-04-13 00:48+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -245,7 +245,7 @@ msgstr "ਇਹ ਨਾ-ਪਸੰਦ"
 msgid "Info"
 msgstr "ਜਾਣਕਾਰੀ"
 
-#: views/editor/EditorView.qml:359 views/RecentView.qml:136
+#: views/editor/EditorView.qml:359 views/RecentView.qml:137
 #, kde-format
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
@@ -351,17 +351,17 @@ msgstr ""
 msgid "Here you will see your recently opened files"
 msgstr ""
 
-#: views/RecentView.qml:122
+#: views/RecentView.qml:123
 #, kde-format
 msgid "Open"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: views/RecentView.qml:143 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:144 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
 msgstr "ਐਕਸਪੋਰਟ"
 
-#: views/widgets/DocsBrowser.qml:62
+#: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
 msgstr "...ਫਿਲਟਰ"
