@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-13 00:48+0000\n"
-"PO-Revision-Date: 2023-03-30 21:20+0200\n"
+"PO-Revision-Date: 2023-04-06 09:47+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vincenzo Reale"
+msgstr "bVincenzo Reale"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -432,10 +432,9 @@ msgid "Activate or remove the third party plugins"
 msgstr "Attiva o rimuovi le estensioni di terze parti"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Caratteri"
+msgstr "Carattere"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -540,19 +539,17 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Schermo"
 
 #: views/widgets/SettingsDialog.qml:150
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Configure the font and display options."
-msgstr "Configurare la famiglia e le dimensioni del carattere globali."
+msgstr "Configurare il carattere e le opzioni dello schermo."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Font family and size."
-msgstr "Configurare la famiglia e le dimensioni del carattere globali."
+msgstr "Famiglia e dimensioni del carattere."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
