@@ -1,21 +1,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
 # Alois Spitzbart <spitz234@hotmail.com>, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-13 00:48+0000\n"
-"PO-Revision-Date: 2022-11-10 20:45+0100\n"
-"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
+"PO-Revision-Date: 2023-04-15 01:50+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -143,8 +143,7 @@ msgid "New"
 msgstr "Neu"
 
 #: views/editor/EditorView.qml:75
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
 msgstr "Neues Dokument erstellen"
 
@@ -174,10 +173,9 @@ msgid "Terminal"
 msgstr "Terminal"
 
 #: views/editor/EditorView.qml:165
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Teilen"
+msgstr "Ansicht teilen"
 
 #: views/editor/EditorView.qml:186 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
@@ -255,20 +253,17 @@ msgid "Line number"
 msgstr "Zeilennummer"
 
 #: views/editor/EditorView.qml:392 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
 msgstr "In Ordner anzeigen"
 
 #: views/editor/EditorView.qml:402
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
 msgstr "Datei löschen"
 
 #: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:132
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
 msgstr "Datei löschen?"
 
@@ -409,7 +404,7 @@ msgstr "Liste der Aufgaben."
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
 #, kde-format
 msgid "Builder"
-msgstr ""
+msgstr "Skriptbaukasten"
 
 #: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
 #, kde-format
@@ -437,10 +432,9 @@ msgid "Activate or remove the third party plugins"
 msgstr "Module Dritter aktivieren oder entfernen"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Schriftarten"
+msgstr "Schriftart"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -458,10 +452,9 @@ msgid "Places Sidebar"
 msgstr "Orte-Navigationsbereich"
 
 #: views/widgets/SettingsDialog.qml:45
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Durchsuchen Ihres Dateisystems von der Seitenleiste aus"
+msgstr "Durchsuchen Ihres Dateisystems von der Seitenleiste aus."
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
@@ -479,10 +472,9 @@ msgid "Dark Mode"
 msgstr "Dunkler Modus"
 
 #: views/widgets/SettingsDialog.qml:73
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Zwischen hellem und dunklem Farbschema umschalten"
+msgstr "Zwischen hellem und dunklem Farbschema umschalten."
 
 #: views/widgets/SettingsDialog.qml:90
 #, kde-format
@@ -490,15 +482,12 @@ msgid "Editor"
 msgstr "Editor"
 
 #: views/widgets/SettingsDialog.qml:91
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the look and feel of the editor. The settings are applied "
-#| "globally"
+#, kde-format
 msgid ""
 "Configure the look and feel of the editor. The settings are applied globally."
 msgstr ""
 "Einstellungen für das Erscheinungsbild des Editors, die Einstellungen werden "
-"global angewendet"
+"global angewendet."
 
 #: views/widgets/SettingsDialog.qml:95
 #, kde-format
@@ -506,10 +495,9 @@ msgid "Line Numbers"
 msgstr "Zeilennummern"
 
 #: views/widgets/SettingsDialog.qml:96
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "Zeilennummern an der linken Seite anzeigen"
+msgstr "Zeilennummern an der linken Seite anzeigen."
 
 #: views/widgets/SettingsDialog.qml:108
 #, kde-format
@@ -517,10 +505,9 @@ msgid "Syntax Highlighting Languages"
 msgstr "Syntaxhervorhebungs-Sprachen"
 
 #: views/widgets/SettingsDialog.qml:109
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Verfügbare Sprachen anzeigen"
+msgstr "Verfügbare Sprachen anzeigen."
 
 #: views/widgets/SettingsDialog.qml:121
 #, kde-format
@@ -528,46 +515,39 @@ msgid "Syntax Highlighting"
 msgstr "Syntaxhervorhebung"
 
 #: views/widgets/SettingsDialog.qml:122
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Syntaxhervorhebung für unterstützte Sprachen aktivieren"
+msgstr "Syntaxhervorhebung für unterstützte Sprachen aktivieren."
 
 #: views/widgets/SettingsDialog.qml:134 views/widgets/SettingsDialog.qml:184
 #: views/widgets/SettingsDialog.qml:188
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Farbe"
+msgstr "Farben"
 
 #: views/widgets/SettingsDialog.qml:135
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
-"Stil der Syntaxhervorhebung einrichten Diese Einstellungen werden nicht für "
-"Rich-Textformate angewendet"
+"Farbschema der Syntaxhervorhebung einrichten. Diese Einstellungen werden "
+"nicht für Rich-Textformate angewendet."
 
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Anzeige"
 
 #: views/widgets/SettingsDialog.qml:150
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Configure the font and display options."
-msgstr "Globale Schriftfamilie und -größe einrichten"
+msgstr "Schriftart und Anzeige einrichten."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Font family and size."
-msgstr "Globale Schriftfamilie und -größe einrichten"
+msgstr "Schriftfamilie und -größe"
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -575,16 +555,13 @@ msgid "Tab Space"
 msgstr "Tabulator-Abstand"
 
 #: views/widgets/SettingsDialog.qml:189
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
-"Stil der Syntaxhervorhebung einrichten Diese Einstellungen werden nicht für "
-"Rich-Textformate angewendet"
+"Stil der Syntaxhervorhebung einrichten. Diese Einstellungen werden nicht für "
+"Rich-Textformate angewendet."
 
 #: views/widgets/SettingsDialog.qml:194
 #, kde-format
@@ -592,10 +569,9 @@ msgid "Color"
 msgstr "Farbe"
 
 #: views/widgets/SettingsDialog.qml:195
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Editor-Hintergrundfarbe"
+msgstr "Editor-Hintergrundfarbe."
 
 #: views/widgets/SettingsDialog.qml:226
 #, kde-format
@@ -603,10 +579,9 @@ msgid "Theme"
 msgstr "Schema"
 
 #: views/widgets/SettingsDialog.qml:227
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Editor-Farbschema"
+msgstr "Editor-Farbschema."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
