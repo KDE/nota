@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-13 00:48+0000\n"
-"PO-Revision-Date: 2023-04-01 16:56+0200\n"
+"PO-Revision-Date: 2023-04-15 17:53+0200\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -435,10 +435,9 @@ msgid "Activate or remove the third party plugins"
 msgstr "Activar o eliminar los complementos de terceros"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Fuentes"
+msgstr "Fuente"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -542,19 +541,17 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Pantalla"
 
 #: views/widgets/SettingsDialog.qml:150
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Configure the font and display options."
-msgstr "Configurar el tamaño y la familia de fuentes global."
+msgstr "Configurar las opciones de fuente y pantalla."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Font family and size."
-msgstr "Configurar el tamaño y la familia de fuentes global."
+msgstr "Familia y tamaño de la fuente."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -639,6 +636,3 @@ msgstr "Encontrar pestaña"
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar todo"
-
-#~ msgid "Family"
-#~ msgstr "Familia"
