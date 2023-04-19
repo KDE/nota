@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-13 00:48+0000\n"
-"PO-Revision-Date: 2023-03-06 20:18+0200\n"
+"PO-Revision-Date: 2023-04-04 23:04+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -569,10 +569,9 @@ msgid "Color"
 msgstr "Väri"
 
 #: views/widgets/SettingsDialog.qml:195
-#, fuzzy, kde-format
-#| msgid "Editor background color"
+#, kde-format
 msgid "Editor background color."
-msgstr "Muokkaimen taustaväri"
+msgstr "Muokkaimen taustaväri."
 
 #: views/widgets/SettingsDialog.qml:226
 #, kde-format
@@ -580,10 +579,9 @@ msgid "Theme"
 msgstr "Teema"
 
 #: views/widgets/SettingsDialog.qml:227
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
+#, kde-format
 msgid "Editor color scheme style."
-msgstr "Muokkaimen värimalli"
+msgstr "Muokkaimen värimalli."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
