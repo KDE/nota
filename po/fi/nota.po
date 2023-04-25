@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-13 00:48+0000\n"
-"PO-Revision-Date: 2023-04-04 23:04+0300\n"
+"PO-Revision-Date: 2023-04-20 12:39+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -432,10 +432,9 @@ msgid "Activate or remove the third party plugins"
 msgstr "Aktivoi tai poista kolmannen osapuolen liitännäisiä"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Fontit"
+msgstr "Fontti"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
@@ -535,19 +534,17 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Näkymä"
 
 #: views/widgets/SettingsDialog.qml:150
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Configure the font and display options."
-msgstr "Aseta yleinen fonttiperhe ja -koko."
+msgstr "Aseta fontti ja näyttövalinnat."
 
 #: views/widgets/SettingsDialog.qml:155
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size."
+#, kde-format
 msgid "Font family and size."
-msgstr "Aseta yleinen fonttiperhe ja -koko."
+msgstr "Fonttiperhe ja -koko."
 
 # *** TARKISTA: Voi merkitä jotain muutakin!
 #: views/widgets/SettingsDialog.qml:167
