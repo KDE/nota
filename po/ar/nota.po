@@ -41,7 +41,7 @@ msgstr "تصفح وأنشئ وحرر الملفات النصية."
 #: main.cpp:46
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
-msgstr "© ٢٠١٩-%1 فريق تطوير ماوي"
+msgstr "© 2019-%1 فريق تطوير ماوي"
 
 #: main.cpp:48
 #, kde-format
