@@ -46,6 +46,7 @@ Maui.ApplicationWindow
 
         property bool enableSidebar : false
         property bool showLineNumbers : true
+        property bool showWordCount: false
         property bool autoSave : true
         property bool enableSyntaxHighlighting : true
         property bool showSyntaxHighlightingLanguages: false

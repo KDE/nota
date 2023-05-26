@@ -21,11 +21,14 @@ Maui.SplitViewItem
 
         showLineNumbers: settings.showLineNumbers
         property alias showLineCount : _linesCount.visible
+                
         body.color: settings.textColor
         body.font.family: settings.font.family
         body.font.pointSize: settings.font.pointSize
+        
         document.backgroundColor: settings.backgroundColor
         Maui.Theme.backgroundColor: settings.backgroundColor
+        
         document.theme: settings.theme
         document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
         document.autoSave: settings.autoSave
@@ -147,18 +150,18 @@ Maui.SplitViewItem
             }
         }
 
-
         Maui.Chip
         {
             id: _linesCount
+            visible: settings.showWordCount
             text: _editor.body.length + " / " + _editor.body.lineCount
             color: _editor.body.color
 
             anchors
             {
                 right: parent.right
-                bottom: parent.bottom
-                margins: Maui.Style.space.big
+                top: parent.top
+                margins: Maui.Style.space.medium
             }
 
             opacity: 0.5

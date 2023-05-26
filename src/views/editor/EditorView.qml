@@ -317,10 +317,10 @@ Pane
 
                         onTriggered:
                         {
-                            currentEditor.showLineCount = checked
+                            settings.showWordCount = !settings.showWordCount 
                         }
 
-                        checked: currentEditor.showLineCount
+                        checked: settings.showWordCount 
                     }
 
                     MenuSeparator {}
