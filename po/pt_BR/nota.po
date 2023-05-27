@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-13 00:48+0000\n"
+"POT-Creation-Date: 2023-05-27 00:46+0000\n"
 "PO-Revision-Date: 2023-02-28 10:53-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Desenvolvedor"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "Arquivos não salvos"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,12 +71,12 @@ msgstr ""
 "Você tem arquivos não salvos. Você pode voltar e salvá-los ou escolher "
 "descartar todas as alterações e sair."
 
-#: main.qml:115
+#: main.qml:116
 #, kde-format
 msgid "Go back"
 msgstr "Voltar"
 
-#: main.qml:116
+#: main.qml:117
 #, kde-format
 msgid "Discard"
 msgstr "Descartar"
@@ -106,22 +106,22 @@ msgstr "Celular"
 msgid "New ToDo... Argh!"
 msgstr "Nova tarefa... Argh!"
 
-#: views/editor/Editor.qml:104
+#: views/editor/Editor.qml:107
 #, kde-format
 msgid "Open here"
 msgstr "Abrir aqui"
 
-#: views/editor/Editor.qml:114
+#: views/editor/Editor.qml:117
 #, kde-format
 msgid "Open in new tab"
 msgstr "Abrir em uma nova aba"
 
-#: views/editor/Editor.qml:125
+#: views/editor/Editor.qml:128
 #, kde-format
 msgid "Open in new split"
 msgstr "Abrir em uma nova divisão"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
+#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"

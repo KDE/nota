@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-13 00:48+0000\n"
+"POT-Creation-Date: 2023-05-27 00:46+0000\n"
 "PO-Revision-Date: 2023-04-06 11:56+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -57,24 +57,24 @@ msgstr "Disveloppator"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "Files non salveguardate"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
 
-#: main.qml:115
+#: main.qml:116
 #, kde-format
 msgid "Go back"
 msgstr "Vade retro"
 
-#: main.qml:116
+#: main.qml:117
 #, kde-format
 msgid "Discard"
 msgstr "Abandona"
@@ -104,22 +104,22 @@ msgstr "Mobile"
 msgid "New ToDo... Argh!"
 msgstr "Nove De Facer (Agenda) ... Argh!"
 
-#: views/editor/Editor.qml:104
+#: views/editor/Editor.qml:107
 #, kde-format
 msgid "Open here"
 msgstr "Aperi hic"
 
-#: views/editor/Editor.qml:114
+#: views/editor/Editor.qml:117
 #, kde-format
 msgid "Open in new tab"
 msgstr "Aperi in nove scheda"
 
-#: views/editor/Editor.qml:125
+#: views/editor/Editor.qml:128
 #, kde-format
 msgid "Open in new split"
 msgstr "Aperi in nove fissura"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
+#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"

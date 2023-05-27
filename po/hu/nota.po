@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-13 00:48+0000\n"
+"POT-Creation-Date: 2023-05-27 00:46+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Fejlesztő"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "Nem mentett fájlok"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,12 +71,12 @@ msgstr ""
 "Nem mentett fájljai vannak. Visszaléphet és mentheti azokt, vagy eldobhatja "
 "az összes változtatást és kiléphet."
 
-#: main.qml:115
+#: main.qml:116
 #, kde-format
 msgid "Go back"
 msgstr "Vissza"
 
-#: main.qml:116
+#: main.qml:117
 #, kde-format
 msgid "Discard"
 msgstr "Eldobás"
@@ -106,22 +106,22 @@ msgstr "Mobil"
 msgid "New ToDo... Argh!"
 msgstr "Új tennivaló… Neee!"
 
-#: views/editor/Editor.qml:104
+#: views/editor/Editor.qml:107
 #, kde-format
 msgid "Open here"
 msgstr "Megnyitás itt"
 
-#: views/editor/Editor.qml:114
+#: views/editor/Editor.qml:117
 #, kde-format
 msgid "Open in new tab"
 msgstr "Megnyitás új lapon"
 
-#: views/editor/Editor.qml:125
+#: views/editor/Editor.qml:128
 #, kde-format
 msgid "Open in new split"
 msgstr "Megnyitás új osztott nézetben"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
+#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"

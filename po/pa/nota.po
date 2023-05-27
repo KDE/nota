@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-13 00:48+0000\n"
+"POT-Creation-Date: 2023-05-27 00:46+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -60,24 +60,24 @@ msgstr "ਡਿਵੈਲਪਰ"
 msgid "Anupam Basak"
 msgstr ""
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "ਨਾ-ਸੰਭਾਲੀਆਂ ਫਾਇਲਾਂ"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
 
-#: main.qml:115
+#: main.qml:116
 #, kde-format
 msgid "Go back"
 msgstr "ਪਿੱਛੇ ਜਾਓ"
 
-#: main.qml:116
+#: main.qml:117
 #, kde-format
 msgid "Discard"
 msgstr "ਖ਼ਾਰਜ ਕਰੋ"
@@ -108,22 +108,22 @@ msgstr ""
 msgid "New ToDo... Argh!"
 msgstr ""
 
-#: views/editor/Editor.qml:104
+#: views/editor/Editor.qml:107
 #, kde-format
 msgid "Open here"
 msgstr "ਇੱਥੇ ਖੋਲ੍ਹੋ"
 
-#: views/editor/Editor.qml:114
+#: views/editor/Editor.qml:117
 #, kde-format
 msgid "Open in new tab"
 msgstr "ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: views/editor/Editor.qml:125
+#: views/editor/Editor.qml:128
 #, kde-format
 msgid "Open in new split"
 msgstr "ਨਵੀਂ ਵੰਡ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
+#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"

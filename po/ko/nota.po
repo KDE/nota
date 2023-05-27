@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-13 00:48+0000\n"
+"POT-Creation-Date: 2023-05-27 00:46+0000\n"
 "PO-Revision-Date: 2023-04-22 00:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "개발자"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "저장하지 않은 파일"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,12 +71,12 @@ msgstr ""
 "저장하지 않은 파일이 있습니다. 뒤로 돌아가서 저장할 수 있거나 모든 변경 사항"
 "을 저장하지 않고 끝낼 수 있습니다."
 
-#: main.qml:115
+#: main.qml:116
 #, kde-format
 msgid "Go back"
 msgstr "뒤로 이동"
 
-#: main.qml:116
+#: main.qml:117
 #, kde-format
 msgid "Discard"
 msgstr "무시"
@@ -106,22 +106,22 @@ msgstr "모바일"
 msgid "New ToDo... Argh!"
 msgstr "새 할 일... 으악!"
 
-#: views/editor/Editor.qml:104
+#: views/editor/Editor.qml:107
 #, kde-format
 msgid "Open here"
 msgstr "여기에 열기"
 
-#: views/editor/Editor.qml:114
+#: views/editor/Editor.qml:117
 #, kde-format
 msgid "Open in new tab"
 msgstr "새 탭으로 열기"
 
-#: views/editor/Editor.qml:125
+#: views/editor/Editor.qml:128
 #, kde-format
 msgid "Open in new split"
 msgstr "새 분할 보기에서 열기"
 
-#: views/editor/Editor.qml:137 views/editor/EditorView.qml:422
+#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
 #: views/widgets/ItemMenu.qml:134
 #, kde-format
 msgid "Cancel"
