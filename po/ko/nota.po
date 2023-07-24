@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 00:46+0000\n"
-"PO-Revision-Date: 2023-04-22 00:21+0200\n"
+"PO-Revision-Date: 2023-07-23 21:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -165,7 +165,7 @@ msgstr "사이드바 전환"
 #: views/editor/EditorView.qml:146
 #, kde-format
 msgid "Focus"
-msgstr "초점"
+msgstr "포커스"
 
 #: views/editor/EditorView.qml:154 views/widgets/ShortcutsDialog.qml:84
 #, kde-format
