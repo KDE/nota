@@ -104,17 +104,18 @@ Maui.ApplicationWindow
     {
         id: _unsavedDialogComponent
 
-        Maui.Dialog
+        Maui.InfoDialog
         {
             property bool discard : false
             property var callback : ({})
+
             title: i18n("Unsaved files")
             message: i18n("You have unsaved files. You can go back and save them or choose to discard all changes and exit.")
-            scrollView.padding: Maui.Style.space.big
+
             template.iconSource: "dialog-warning"
             template.iconVisible: true
-            acceptButton.text: i18n("Go back")
-            rejectButton.text: i18n("Discard")
+//            acceptButton.text: i18n("Go back")
+//            rejectButton.text: i18n("Discard")
             onRejected:
             {
                 discard = true

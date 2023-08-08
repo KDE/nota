@@ -376,7 +376,7 @@ Pane
                             _goToLineDialog.open()
                         }
 
-                        Maui.NewDialog
+                        Maui.InputDialog
                         {
                             id: _goToLineDialog
                             title: i18n("Go to Line")
@@ -409,20 +409,16 @@ Pane
                             _removeDialog.open()
                         }
 
-                        Maui.Dialog
+                        Maui.InfoDialog
                         {
                             id: _removeDialog
 
                             title: i18n("Delete File?")
                             message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
 
-                            headBar.visible: false
+//                            acceptButton.text: i18n("Accept")
+//                            rejectButton.text: i18n("Cancel")
 
-                            acceptButton.text: i18n("Accept")
-                            rejectButton.text: i18n("Cancel")
-
-
-                            scrollView.padding: Maui.Style.space.big
                             template.iconSource: "dialog-question"
                             template.iconVisible: true
 
