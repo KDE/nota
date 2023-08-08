@@ -8,12 +8,12 @@
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
-#include <MauiKit/Core/mauiandroid.h>
+#include <MauiKit3/Core/mauiandroid.h>
 #else
 #include <QApplication>
 #endif
 
-#include <MauiKit/Core/mauiapp.h>
+#include <MauiKit3/Core/mauiapp.h>
 
 #include "nota.h"
 #include "../nota_version.h"

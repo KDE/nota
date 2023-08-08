@@ -6,17 +6,14 @@
 set(nota_SRCS
     main.cpp
     models/historymodel.cpp
-    controllers/server.cpp
-    )
+    controllers/server.cpp)
 
 set(nota_HDRS
     models/historymodel.h
-    nota.h
-    )
+    nota.h)
 
 set(nota_ASSETS   
-    assets/img_assets.qrc
-    )
+    assets/img_assets.qrc)
 
 
 if(QUICK_COMPILER)
@@ -36,16 +33,14 @@ if(ANDROID)
         ${nota_SRCS}
         ${nota_HDRS}
         ${nota_ASSETS}
-        ${nota_QML_QRC}
-        )
+        ${nota_QML_QRC})
 else()
     add_executable(${PROJECT_NAME}
         ${nota_SRCS}
         ${nota_dbus_SRCS}
         ${nota_HDRS}
         ${nota_ASSETS}
-        ${nota_QML_QRC}
-        )
+        ${nota_QML_QRC})
 endif()
 
 if (ANDROID)
@@ -57,7 +52,7 @@ endif()
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml KF5::CoreAddons KF5::I18n)
+target_link_libraries(${PROJECT_NAME} MauiKit3 MauiKit3::FileBrowsing Qt5::Quick Qt5::Qml KF5::CoreAddons KF5::I18n)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
