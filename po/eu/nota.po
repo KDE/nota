@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-07-21 11:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -60,12 +60,12 @@ msgstr "Garatzailea"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Gorde gabeko fitxategiak"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -73,16 +73,6 @@ msgid ""
 msgstr ""
 "Gorde gabeko fitxategiak dituzu. Itzuli eta gorde egin ditzakezu, edo "
 "aldaketa guztiak baztertu eta irten zaitezke."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Itzuli"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Baztertu"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -124,8 +114,7 @@ msgstr "Ireki fitxa berrian"
 msgid "Open in new split"
 msgstr "Ireki zatiketa berrian"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
@@ -270,6 +259,8 @@ msgstr "Ezabatu fitxategia"
 msgid "Delete File?"
 msgstr "Fitxategia ezabatu?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -278,11 +269,6 @@ msgid ""
 msgstr ""
 "Ziur zaude\n"
 "%1 ezabatu nahi duzula?"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Onartu"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -637,6 +623,15 @@ msgstr "Bilatu fitxa"
 #, kde-format
 msgid "Select All"
 msgstr "Hautatu dena"
+
+#~ msgid "Go back"
+#~ msgstr "Itzuli"
+
+#~ msgid "Discard"
+#~ msgstr "Baztertu"
+
+#~ msgid "Accept"
+#~ msgstr "Onartu"
 
 #~ msgid "Family"
 #~ msgstr "Familia"

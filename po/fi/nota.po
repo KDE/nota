@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-20 12:39+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Kehittäjä"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Tallentamattomat tiedostot"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -70,16 +70,6 @@ msgid ""
 msgstr ""
 "Tiedostoja on tallentamatta. Voit palata takaisin ja tallentaa ne tai hylätä "
 "muutokset ja lopettaa."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Palaa takaisin"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Hylkää"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -121,8 +111,7 @@ msgstr "Avaa uuteen välilehteen"
 msgid "Open in new split"
 msgstr "Avaa uuteen jakoon"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Peru"
@@ -267,6 +256,8 @@ msgstr "Poista tiedosto"
 msgid "Delete File?"
 msgstr "Poistetaanko tiedosto?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -275,11 +266,6 @@ msgid ""
 msgstr ""
 "Haluatko varmasti poistaa tiedoston\n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Hyväksy"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -630,6 +616,15 @@ msgstr "Etsi välilehti"
 #, kde-format
 msgid "Select All"
 msgstr "Valitse kaikki"
+
+#~ msgid "Go back"
+#~ msgstr "Palaa takaisin"
+
+#~ msgid "Discard"
+#~ msgstr "Hylkää"
+
+#~ msgid "Accept"
+#~ msgstr "Hyväksy"
 
 #~ msgid "Family"
 #~ msgstr "Perhe"

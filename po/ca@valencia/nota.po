@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 11:10+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -60,12 +60,12 @@ msgstr "Desenvolupador"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Fitxers sense guardar"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -73,16 +73,6 @@ msgid ""
 msgstr ""
 "Hi ha fitxers sense guardar. Podeu retrocedir i guardar-los o triar "
 "descartar els canvis i eixir."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Retrocedix"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Descarta"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -124,8 +114,7 @@ msgstr "Obri en una pestanya nova"
 msgid "Open in new split"
 msgstr "Obri a una divisió nova"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Cancel·la"
@@ -270,6 +259,8 @@ msgstr "Suprimix el fitxer"
 msgid "Delete File?"
 msgstr "Voleu suprimir el fitxer?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -278,11 +269,6 @@ msgid ""
 msgstr ""
 "Segur que voleu suprimir \n"
 "%1?"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Accepta"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -635,3 +621,12 @@ msgstr "Busca la pestanya"
 #, kde-format
 msgid "Select All"
 msgstr "Selecciona-ho tot"
+
+#~ msgid "Go back"
+#~ msgstr "Retrocedix"
+
+#~ msgid "Discard"
+#~ msgstr "Descarta"
+
+#~ msgid "Accept"
+#~ msgstr "Accepta"

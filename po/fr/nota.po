@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-08 10:26+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -58,12 +58,12 @@ msgstr "Développeur"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Fichiers non enregistrés"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,16 +71,6 @@ msgid ""
 msgstr ""
 "Vous avez des fichiers non enregistrés. Vous pouvez revenir en arrière et "
 "les enregistrer ou choisir d'annuler toutes les modifications et quitter."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Revenir en arrière"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Abandonner"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -122,8 +112,7 @@ msgstr "Ouvrir dans un nouvel onglet"
 msgid "Open in new split"
 msgstr "Ouvrir dans un nouvel partage"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Annuler"
@@ -268,6 +257,8 @@ msgstr "Supprimer un fichier"
 msgid "Delete File?"
 msgstr "Supprimer le fichier ?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -276,11 +267,6 @@ msgid ""
 msgstr ""
 "Voulez-vous vraiment supprimer \n"
 "%1 ?"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Accepter"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -636,6 +622,15 @@ msgstr "Trouver un onglet"
 #, kde-format
 msgid "Select All"
 msgstr "Tout sélectionner"
+
+#~ msgid "Go back"
+#~ msgstr "Revenir en arrière"
+
+#~ msgid "Discard"
+#~ msgstr "Abandonner"
+
+#~ msgid "Accept"
+#~ msgstr "Accepter"
 
 #~ msgid "Family"
 #~ msgstr "Famille"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 06:05+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -58,12 +58,12 @@ msgstr "პროგრამისტი"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "შეუნახავი ფაილები"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,16 +71,6 @@ msgid ""
 msgstr ""
 "გაქვთ შეუნახავი ფაილები. შეგიძლიათ დაბრუნდეთ და შეინახოთ ისინი, ან გააუქმოთ "
 "ყველა ცვლილება და გახვიდეთ."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "უკან დაბრუნება"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "გაუქმება"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -122,8 +112,7 @@ msgstr "ახალ ჩანართში გახსნა"
 msgid "Open in new split"
 msgstr "დაყოფილ ხედში გახსნა"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "გაუქმება"
@@ -268,6 +257,8 @@ msgstr "ფაილის წაშლა"
 msgid "Delete File?"
 msgstr "წავშალო ფაილი?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -276,11 +267,6 @@ msgid ""
 msgstr ""
 "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ\n"
 " %1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "დასტური"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -631,6 +617,15 @@ msgstr "ჩანართის პოვნა"
 #, kde-format
 msgid "Select All"
 msgstr "ყველას მონიშვნა"
+
+#~ msgid "Go back"
+#~ msgstr "უკან დაბრუნება"
+
+#~ msgid "Discard"
+#~ msgstr "გაუქმება"
+
+#~ msgid "Accept"
+#~ msgstr "დასტური"
 
 #~ msgid "Family"
 #~ msgstr "ოჯახი"

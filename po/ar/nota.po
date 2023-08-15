@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -58,12 +58,12 @@ msgstr "مطوّر"
 msgid "Anupam Basak"
 msgstr "أنوبام باساك"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "ملفات غير المحفوظة"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,16 +71,6 @@ msgid ""
 msgstr ""
 "لديك ملفات غير محفوظة. يمكنك العودة وحفظها أو اختيار تجاهل جميع التغييرات "
 "والخروج."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "عُد"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "أهمِل"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -122,8 +112,7 @@ msgstr "افتح في لسان جديد"
 msgid "Open in new split"
 msgstr "افتح في قسم جديد"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"
@@ -268,6 +257,8 @@ msgstr "احذف ملف"
 msgid "Delete File?"
 msgstr "أأحذف الملفّ؟"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -276,11 +267,6 @@ msgid ""
 msgstr ""
 "هل تريد فعلاً حذف\n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "اقبل"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -627,6 +613,15 @@ msgstr "لسان البحث"
 #, kde-format
 msgid "Select All"
 msgstr "حدّد الكلّ"
+
+#~ msgid "Go back"
+#~ msgstr "عُد"
+
+#~ msgid "Discard"
+#~ msgstr "أهمِل"
+
+#~ msgid "Accept"
+#~ msgstr "اقبل"
 
 #~ msgid "Family"
 #~ msgstr "العائلة"

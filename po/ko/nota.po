@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-07-26 00:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "개발자"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "저장하지 않은 파일"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -70,16 +70,6 @@ msgid ""
 msgstr ""
 "저장하지 않은 파일이 있습니다. 뒤로 돌아가서 저장할 수 있거나 모든 변경 사항"
 "을 저장하지 않고 끝낼 수 있습니다."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "뒤로 이동"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "무시"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -121,8 +111,7 @@ msgstr "새 탭으로 열기"
 msgid "Open in new split"
 msgstr "새 분할 보기에서 열기"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
@@ -267,6 +256,8 @@ msgstr "파일 삭제"
 msgid "Delete File?"
 msgstr "파일을 삭제하시겠습니까?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -275,11 +266,6 @@ msgid ""
 msgstr ""
 "다음 항목을 삭제하시겠습니까?\n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "수락"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -627,6 +613,15 @@ msgstr "탭 찾기"
 #, kde-format
 msgid "Select All"
 msgstr "모두 선택"
+
+#~ msgid "Go back"
+#~ msgstr "뒤로 이동"
+
+#~ msgid "Discard"
+#~ msgstr "무시"
+
+#~ msgid "Accept"
+#~ msgstr "수락"
 
 #~ msgid "Family"
 #~ msgstr "종류"

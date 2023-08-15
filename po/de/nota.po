@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-15 01:50+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Entwickler"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Ungespeicherte Dateien"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -70,16 +70,6 @@ msgid ""
 msgstr ""
 "Sie haben nicht gespeicherte Dateien. Sie können zurückgehen und sie "
 "speichern oder alle Änderungen verwerfen und die Anwendung beenden."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Zurück"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Verwerfen"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -121,8 +111,7 @@ msgstr "In neuem Unterfenster öffnen"
 msgid "Open in new split"
 msgstr "In neuer geteilter Ansicht öffnen"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -267,6 +256,8 @@ msgstr "Datei löschen"
 msgid "Delete File?"
 msgstr "Datei löschen?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -275,11 +266,6 @@ msgid ""
 msgstr ""
 "Möchten Sie diese Datei wirklich löschen?\n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Annehmen"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -632,6 +618,15 @@ msgstr "Unterfenster suchen"
 #, kde-format
 msgid "Select All"
 msgstr "Alles auswählen"
+
+#~ msgid "Go back"
+#~ msgstr "Zurück"
+
+#~ msgid "Discard"
+#~ msgstr "Verwerfen"
+
+#~ msgid "Accept"
+#~ msgstr "Annehmen"
 
 #~ msgid "Family"
 #~ msgstr "Familie"

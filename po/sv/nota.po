@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-07-31 14:19+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Utvecklare"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Osparade filer"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -70,16 +70,6 @@ msgid ""
 msgstr ""
 "Du har osparade filer. Du kan gå tillbaka och spara dem eller välja att "
 "kasta alla ändringar och avsluta."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Gå tillbaka"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Kasta"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -121,8 +111,7 @@ msgstr "Öppna under ny flik"
 msgid "Open in new split"
 msgstr "Öppna under ny delning"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
@@ -267,6 +256,8 @@ msgstr "Ta bort fil"
 msgid "Delete File?"
 msgstr "Ta bort fil?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -275,11 +266,6 @@ msgid ""
 msgstr ""
 "Är du säker på att du vill ta bort\n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Acceptera"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -630,6 +616,15 @@ msgstr "Sök flik"
 #, kde-format
 msgid "Select All"
 msgstr "Markera alla"
+
+#~ msgid "Go back"
+#~ msgstr "Gå tillbaka"
+
+#~ msgid "Discard"
+#~ msgstr "Kasta"
+
+#~ msgid "Accept"
+#~ msgstr "Acceptera"
 
 #~ msgid "Family"
 #~ msgstr "Familj"

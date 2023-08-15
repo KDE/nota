@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 09:47+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Sviluppatore"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "File non salvati"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -70,16 +70,6 @@ msgid ""
 msgstr ""
 "Hai file non salvati. Puoi tornare indietro e salvarli o scegliere di "
 "annullare tutte le modifiche e uscire."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Indietro"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Scarta"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -121,8 +111,7 @@ msgstr "Apri in una nuova scheda"
 msgid "Open in new split"
 msgstr "Apri in una nuova vista divisa"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Annulla"
@@ -267,6 +256,8 @@ msgstr "Elimina file"
 msgid "Delete File?"
 msgstr "Vuoi eliminare il file?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -275,11 +266,6 @@ msgid ""
 msgstr ""
 "Sei sicuro di volerlo eliminare\n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Accetta"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -634,6 +620,15 @@ msgstr "Trova scheda"
 #, kde-format
 msgid "Select All"
 msgstr "Seleziona tutto"
+
+#~ msgid "Go back"
+#~ msgstr "Indietro"
+
+#~ msgid "Discard"
+#~ msgstr "Scarta"
+
+#~ msgid "Accept"
+#~ msgstr "Accetta"
 
 #~ msgid "Family"
 #~ msgstr "Famiglia"

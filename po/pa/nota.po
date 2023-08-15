@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -60,27 +60,17 @@ msgstr "ਡਿਵੈਲਪਰ"
 msgid "Anupam Basak"
 msgstr ""
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "ਨਾ-ਸੰਭਾਲੀਆਂ ਫਾਇਲਾਂ"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "ਪਿੱਛੇ ਜਾਓ"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "ਖ਼ਾਰਜ ਕਰੋ"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -123,8 +113,7 @@ msgstr "ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 msgid "Open in new split"
 msgstr "ਨਵੀਂ ਵੰਡ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
@@ -279,17 +268,14 @@ msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
 msgid "Delete File?"
 msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -641,6 +627,15 @@ msgstr ""
 #| msgid "Select"
 msgid "Select All"
 msgstr "ਚੁਣੋ"
+
+#~ msgid "Go back"
+#~ msgstr "ਪਿੱਛੇ ਜਾਓ"
+
+#~ msgid "Discard"
+#~ msgstr "ਖ਼ਾਰਜ ਕਰੋ"
+
+#~ msgid "Accept"
+#~ msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"
 
 #~ msgid "Family"
 #~ msgstr "ਸਮੂਹ"

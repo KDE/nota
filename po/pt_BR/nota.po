@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-05-31 14:31-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -57,12 +57,12 @@ msgstr "Desenvolvedor"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Arquivos não salvos"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -70,16 +70,6 @@ msgid ""
 msgstr ""
 "Você tem arquivos não salvos. Você pode voltar e salvá-los ou escolher "
 "descartar todas as alterações e sair."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Voltar"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Descartar"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -121,8 +111,7 @@ msgstr "Abrir em uma nova aba"
 msgid "Open in new split"
 msgstr "Abrir em uma nova divisão"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
@@ -267,6 +256,8 @@ msgstr "Excluir arquivo"
 msgid "Delete File?"
 msgstr "Excluir arquivo?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -275,11 +266,6 @@ msgid ""
 msgstr ""
 "Deseja realmente excluir \n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Aceitar"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -631,6 +617,15 @@ msgstr "Localizar aba"
 #, kde-format
 msgid "Select All"
 msgstr "Selecionar tudo"
+
+#~ msgid "Go back"
+#~ msgstr "Voltar"
+
+#~ msgid "Discard"
+#~ msgstr "Descartar"
+
+#~ msgid "Accept"
+#~ msgstr "Aceitar"
 
 #~ msgid "Family"
 #~ msgstr "Família"

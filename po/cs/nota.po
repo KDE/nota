@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 15:05+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -57,27 +57,17 @@ msgstr "Vývojář"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Neuložené soubory"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Přejít zpět"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Zahodit"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -119,8 +109,7 @@ msgstr "Otevřít v nové kartě"
 msgid "Open in new split"
 msgstr ""
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušit"
@@ -265,6 +254,8 @@ msgstr "Smazat soubor"
 msgid "Delete File?"
 msgstr "Smazat soubor?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -273,11 +264,6 @@ msgid ""
 msgstr ""
 "Opravdu si přejete smazat \n"
 "%1?"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Přijmout"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -625,3 +611,12 @@ msgstr "Najít kartu"
 #, kde-format
 msgid "Select All"
 msgstr "Vybrat vše"
+
+#~ msgid "Go back"
+#~ msgstr "Přejít zpět"
+
+#~ msgid "Discard"
+#~ msgstr "Zahodit"
+
+#~ msgid "Accept"
+#~ msgstr "Přijmout"

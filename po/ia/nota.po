@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 11:56+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -57,27 +57,17 @@ msgstr "Disveloppator"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Files non salveguardate"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Vade retro"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Abandona"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -119,8 +109,7 @@ msgstr "Aperi in nove scheda"
 msgid "Open in new split"
 msgstr "Aperi in nove fissura"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Cancella"
@@ -265,6 +254,8 @@ msgstr "Dele file"
 msgid "Delete File?"
 msgstr "Dele file?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -273,11 +264,6 @@ msgid ""
 msgstr ""
 "Tu es secur que tu vole deler \n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Accepta"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -624,6 +610,15 @@ msgstr "Trova scheda"
 #, kde-format
 msgid "Select All"
 msgstr "Selige toto"
+
+#~ msgid "Go back"
+#~ msgstr "Vade retro"
+
+#~ msgid "Discard"
+#~ msgstr "Abandona"
+
+#~ msgid "Accept"
+#~ msgstr "Accepta"
 
 #~ msgid "Family"
 #~ msgstr "Familia"

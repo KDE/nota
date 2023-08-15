@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 09:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -58,12 +58,12 @@ msgstr "Razvijalec"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Neshranjene datoteke"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -71,16 +71,6 @@ msgid ""
 msgstr ""
 "Imate neshranjene datoteke. Lahko se vrnete in jih shranite ali pa izberete, "
 "da zavržete vse spremembe in izhod."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Pojdi nazaj"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Zavrzi"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -122,8 +112,7 @@ msgstr "Odpri v novem zavihku"
 msgid "Open in new split"
 msgstr "Odpri v novem razdelku"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"
@@ -268,6 +257,8 @@ msgstr "Izbriši datoteko"
 msgid "Delete File?"
 msgstr "Naj zbrišem datoteko?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -276,11 +267,6 @@ msgid ""
 msgstr ""
 "Ali ste prepričani, da želite izbrisati\n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Sprejmi"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -631,6 +617,15 @@ msgstr "Najdi zavihek"
 #, kde-format
 msgid "Select All"
 msgstr "Izberi vse"
+
+#~ msgid "Go back"
+#~ msgstr "Pojdi nazaj"
+
+#~ msgid "Discard"
+#~ msgstr "Zavrzi"
+
+#~ msgid "Accept"
+#~ msgstr "Sprejmi"
 
 #~ msgid "Family"
 #~ msgstr "Družina"

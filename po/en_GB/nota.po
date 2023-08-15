@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-08 11:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -57,12 +57,12 @@ msgstr "Developer"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Unsaved files"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -70,16 +70,6 @@ msgid ""
 msgstr ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Go back"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Discard"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -121,8 +111,7 @@ msgstr "Open in new tab"
 msgid "Open in new split"
 msgstr "Open in new split"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Cancel"
@@ -267,6 +256,8 @@ msgstr "Delete File"
 msgid "Delete File?"
 msgstr "Delete File?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -275,11 +266,6 @@ msgid ""
 msgstr ""
 "Are sure you want to delete \n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Accept"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -631,6 +617,15 @@ msgstr "Find Tab"
 #, kde-format
 msgid "Select All"
 msgstr "Select All"
+
+#~ msgid "Go back"
+#~ msgstr "Go back"
+
+#~ msgid "Discard"
+#~ msgstr "Discard"
+
+#~ msgid "Accept"
+#~ msgstr "Accept"
 
 #~ msgid "Family"
 #~ msgstr "Family"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-06 10:42+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -53,12 +53,12 @@ msgstr "Desenvolvimento"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Ficheiros não gravados"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -66,16 +66,6 @@ msgid ""
 msgstr ""
 "Tem ficheiros por gravar. Poderá voltar atrás e gravá-los ou optar por "
 "esquecer todas as alterações e sair."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Recuar"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Apagar"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -117,8 +107,7 @@ msgstr "Abrir numa nova página"
 msgid "Open in new split"
 msgstr "Abrir numa nova divisão"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
@@ -263,6 +252,8 @@ msgstr "Apagar o Ficheiro"
 msgid "Delete File?"
 msgstr "Apagar o Ficheiro?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -271,11 +262,6 @@ msgid ""
 msgstr ""
 "Tem a certeza que deseja\n"
 "apagar o %1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Aceitar"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -628,3 +614,12 @@ msgstr "Procurar uma Página"
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar Tudo"
+
+#~ msgid "Go back"
+#~ msgstr "Recuar"
+
+#~ msgid "Discard"
+#~ msgstr "Apagar"
+
+#~ msgid "Accept"
+#~ msgstr "Aceitar"

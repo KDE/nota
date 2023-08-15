@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-04-29 11:16+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -59,28 +59,18 @@ msgstr "Programista"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Niezapisane pliki"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
 "Masz niezapisane pliki. Możesz wrócić i je zapisać lub porzucić i zakończyć."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Wróć"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Porzuć"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -122,8 +112,7 @@ msgstr "Otwórz w nowej karcie"
 msgid "Open in new split"
 msgstr "Otwórz w nowym podzielonym widoku"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Anuluj"
@@ -268,6 +257,8 @@ msgstr "Usuń plik"
 msgid "Delete File?"
 msgstr "Usunąć plik?"
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -276,11 +267,6 @@ msgid ""
 msgstr ""
 "Czy na pewno usunąć \n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Akceptuj"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -631,6 +617,15 @@ msgstr "Karta wyszukiwania"
 #, kde-format
 msgid "Select All"
 msgstr "Zaznacz wszystko"
+
+#~ msgid "Go back"
+#~ msgstr "Wróć"
+
+#~ msgid "Discard"
+#~ msgstr "Porzuć"
+
+#~ msgid "Accept"
+#~ msgstr "Akceptuj"
 
 #~ msgid "Family"
 #~ msgstr "Rodzina"
