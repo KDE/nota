@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2021-02-26 18:20+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -59,12 +59,12 @@ msgstr "Utviklar"
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid "Unsaved files"
 msgstr "Ulagra filer"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -72,16 +72,6 @@ msgid ""
 msgstr ""
 "Du har ulagra endringar. Du kan gå tilbake og lagra dei eller forkasta dei "
 "og avslutta."
-
-#: main.qml:116
-#, kde-format
-msgid "Go back"
-msgstr "Gå tilbake"
-
-#: main.qml:117
-#, kde-format
-msgid "Discard"
-msgstr "Forkast"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -123,8 +113,7 @@ msgstr "Opna i ny fane"
 msgid "Open in new split"
 msgstr "Opna i delt vising"
 
-#: views/editor/Editor.qml:140 views/editor/EditorView.qml:422
-#: views/widgets/ItemMenu.qml:134
+#: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
@@ -269,6 +258,8 @@ msgstr ""
 msgid "Delete File?"
 msgstr ""
 
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
 #: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
@@ -277,11 +268,6 @@ msgid ""
 msgstr ""
 "Er du sikker på at du vil sletta \n"
 "%1"
-
-#: views/editor/EditorView.qml:421 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Accept"
-msgstr "Godta"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
