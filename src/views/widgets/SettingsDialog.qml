@@ -50,7 +50,7 @@ Maui.SettingsDialog
                 checked: settings.enableSidebar
                 onToggled: settings.enableSidebar = !settings.enableSidebar
             }
-        }        
+        }
 
         Maui.SectionItem
         {
@@ -244,20 +244,19 @@ Maui.SettingsDialog
                                 onClicked: settings.theme = model.name
                                 label1.text: model.name
 
-                                template.iconComponent: Control
+                                template.iconComponent: Rectangle
                                 {
                                     implicitHeight: Math.max(_layout.implicitHeight + topPadding + bottomPadding, 64)
-                                    padding: Maui.Style.space.small
 
-                                    background: Rectangle
-                                    {
-                                        color: appSettings.backgroundColor
-                                        radius: Maui.Style.radiusV
-                                    }
+                                    color: appSettings.backgroundColor
+                                    radius: Maui.Style.radiusV
 
-                                    contentItem: Column
+                                    Column
                                     {
                                         id: _layout
+                                        anchors.fill: parent
+                                        anchors.margins: Maui.Style.space.small
+
                                         spacing: 2
 
                                         Text
