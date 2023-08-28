@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-15 00:44+0000\n"
-"PO-Revision-Date: 2023-08-02 12:40\n"
+"PO-Revision-Date: 2023-08-27 03:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -610,12 +610,3 @@ msgstr "查找标签页"
 #, kde-format
 msgid "Select All"
 msgstr "全部选择"
-
-#~ msgid "Go back"
-#~ msgstr "返回"
-
-#~ msgid "Discard"
-#~ msgstr "丢弃"
-
-#~ msgid "Accept"
-#~ msgstr "接受"
