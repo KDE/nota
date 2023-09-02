@@ -611,12 +611,3 @@ msgstr "Najít kartu"
 #, kde-format
 msgid "Select All"
 msgstr "Vybrat vše"
-
-#~ msgid "Go back"
-#~ msgstr "Přejít zpět"
-
-#~ msgid "Discard"
-#~ msgstr "Zahodit"
-
-#~ msgid "Accept"
-#~ msgstr "Přijmout"
