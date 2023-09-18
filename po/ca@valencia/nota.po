@@ -621,12 +621,3 @@ msgstr "Busca la pestanya"
 #, kde-format
 msgid "Select All"
 msgstr "Selecciona-ho tot"
-
-#~ msgid "Go back"
-#~ msgstr "Retrocedix"
-
-#~ msgid "Discard"
-#~ msgstr "Descarta"
-
-#~ msgid "Accept"
-#~ msgstr "Accepta"
