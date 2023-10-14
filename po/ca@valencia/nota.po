@@ -237,7 +237,7 @@ msgstr "Compartix"
 #: views/editor/EditorView.qml:372 views/editor/EditorView.qml:382
 #, kde-format
 msgid "Go to Line"
-msgstr "Ves a la línia"
+msgstr "Ves fins a la línia"
 
 #: views/editor/EditorView.qml:384
 #, kde-format
