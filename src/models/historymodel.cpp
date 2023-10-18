@@ -1,6 +1,6 @@
 #include "historymodel.h"
 
-#include <MauiKit3/Core/utils.h>
+#include <QSettings>
 #include <MauiKit3/FileBrowsing/fmstatic.h>
 
 static bool isTextDocument(const QUrl &url)
@@ -31,7 +31,10 @@ void HistoryModel::append(const QUrl &url)
 
     urls << url;
 
-    UTIL::saveSettings("URLS", QUrl::toStringList(urls), "HISTORY");
+    QSettings settings;
+    settings.beginGroup("HISTOYR");
+    settings.setValue("URLS", QUrl::toStringList(urls));
+    settings.endGroup();
 }
 
 int HistoryModel::indexOfName(const QString &query)
@@ -48,7 +51,11 @@ int HistoryModel::indexOfName(const QString &query)
 
 QList<QUrl> HistoryModel::getHistory()
 {
-    auto urls = UTIL::loadSettings("URLS", "HISTORY", QStringList()).toStringList();
+    QSettings settings;
+    settings.beginGroup("HISTORY");
+     auto urls = settings.value("URLS", QStringList()).toStringList();
+    settings.endGroup();
+
     urls.removeDuplicates();
     auto res = QUrl::fromStringList(urls);
     res.removeAll(QString(""));
