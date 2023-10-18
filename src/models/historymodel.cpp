@@ -32,7 +32,7 @@ void HistoryModel::append(const QUrl &url)
     urls << url;
 
     QSettings settings;
-    settings.beginGroup("HISTOYR");
+    settings.beginGroup("HISTORY");
     settings.setValue("URLS", QUrl::toStringList(urls));
     settings.endGroup();
 }
