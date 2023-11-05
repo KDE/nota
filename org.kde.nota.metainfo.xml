@@ -34,7 +34,6 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="sv">Nota</name>
   <name xml:lang="tr">Nota</name>
   <name xml:lang="uk">Нота</name>
-  <name xml:lang="x-test">xxNotaxx</name>
   <name xml:lang="zh-CN">Nota</name>
   <summary>Browse, create and edit text files</summary>
   <summary xml:lang="ar">تصفح وأنشئ وحرر الملفات النصية</summary>
@@ -63,7 +62,6 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="sv">Bläddra bland, skapa och redigera textfiler</summary>
   <summary xml:lang="tr">Metin dosyaları oluşturun, onlara göz atın ve düzenleyin</summary>
   <summary xml:lang="uk">Перегляд, створення та редагування текстових файлів</summary>
-  <summary xml:lang="x-test">xxBrowse, create and edit text filesxx</summary>
   <summary xml:lang="zh-CN">浏览、创建和编辑文本文件</summary>
   <description>
     <p>Nota is a simple text editor for desktop and mobile computers.</p>
@@ -93,7 +91,6 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="sv">Nota är en enkel texteditor för skrivbords- och bärbara datorer.</p>
     <p xml:lang="tr">Nota, masaüstü ve taşınabilir bilgisayarlar için yalın bir metin düzenleyicidir.</p>
     <p xml:lang="uk">Нота — простий текстовий редактор для робочих станцій та мобільних комп'ютерів.</p>
-    <p xml:lang="x-test">xxNota is a simple text editor for desktop and mobile computers.xx</p>
     <p xml:lang="zh-CN">Nota 是一款同时面向桌面和移动计算设备设计的简易文本编辑器。</p>
   </description>
   <url type="homepage">https://mauikit.org/</url>
@@ -126,7 +123,6 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="sv">Nota, en texteditor</caption>
       <caption xml:lang="tr">Nota, bir metin düzenleyici</caption>
       <caption xml:lang="uk">Nota, текстовий редактор</caption>
-      <caption xml:lang="x-test">xxNota, a text editorxx</caption>
       <image type="source">
         https://cdn.kde.org/screenshots/nota/nota.png
       </image>
@@ -158,7 +154,6 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="sv">Nota, sökdialogruta</caption>
       <caption xml:lang="tr">Nota, bul penceresi</caption>
       <caption xml:lang="uk">Нота, діалогове вікно пошуку</caption>
-      <caption xml:lang="x-test">xxNota, find dialogxx</caption>
       <caption xml:lang="zh-CN">Nota 的查找对话框</caption>
       <image type="source">
         https://cdn.kde.org/screenshots/nota/nota-tabs-find-dialog.png
