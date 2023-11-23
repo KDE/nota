@@ -51,7 +51,7 @@ Item
 
         if(event.key === Qt.Key_F4)
         {
-            control.terminalVisible = !control.terminalVisible
+            toggleTerminal()
             event.accepted = true
         }
     }
@@ -86,14 +86,6 @@ Item
             SplitView.maximumHeight: parent.height * 0.5
             SplitView.minimumHeight : 100
             source: "../Terminal.qml"
-            onLoaded: syncTerminal(control.editor.fileUrl)
-            onVisibleChanged:
-            {
-                if(visible)
-                {
-                     syncTerminal(control.editor.fileUrl)
-                }
-            }
         }
     }
 
@@ -104,14 +96,22 @@ Item
     }
 
     function syncTerminal(path)
-    {
-        if(control.terminal && control.terminal.visible && FB.FM.fileExists(path))
-            control.terminal.session.sendText("cd '" + String(FB.FM.fileDir(path)).replace("file://", "") + "'\n")
+    {        
+        if(control.terminal && appSettings.syncTerminal)
+            control.terminal.session.changeDir(String(FB.FM.fileDir(path)).replace("file://", ""))
     }
 
     function toggleTerminal()
     {
         control.terminalVisible = !control.terminalVisible
+
+        if(terminalVisible)
+        {
+            terminalLoader.item.forceActiveFocus()
+        }else
+        {
+            control.forceActiveFocus()
+        }
     }
 
     function split(path)
@@ -162,6 +162,11 @@ Item
     function destroyItem(index) //deestroys a split view withouth warning
     {
         _splitView.closeSplit(index)
+    }
+
+    function forceActiveFocus()
+    {
+        control.currentItem.forceActiveFocus()
     }
 }
 

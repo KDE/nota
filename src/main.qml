@@ -58,6 +58,7 @@ Maui.ApplicationWindow
         property bool darkMode : Maui.Style.styleType === Maui.Style.Dark
         property alias sideBarWidth : _sideBarView.sideBar.preferredWidth
         property font font : defaultFont
+        property bool syncTerminal: true
     }
 
     onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
@@ -114,9 +115,9 @@ Maui.ApplicationWindow
 
             template.iconSource: "dialog-warning"
             template.iconVisible: true
-//            acceptButton.text: i18n("Go back")
-//            rejectButton.text: i18n("Discard")
-            onRejected:
+
+            standardButtons: Dialog.Ok | Dialog.Discard
+            onDiscarded:
             {
                 discard = true
                 close()

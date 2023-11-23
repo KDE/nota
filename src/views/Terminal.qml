@@ -6,6 +6,7 @@
 
 import org.mauikit.controls 1.0 as Maui
 import org.mauikit.terminal 1.0 as Term
+import org.mauikit.filebrowsing 1.3 as FB
 
 Term.Terminal
 {
@@ -13,6 +14,7 @@ Term.Terminal
     Maui.Theme.colorSet: Maui.Theme.Window
     Maui.Theme.inherit: false
     kterminal.colorScheme: "Adaptive"
+    session.initialWorkingDirectory: String(FB.FM.fileDir(editor.fileUrl)).replace("file://", "")
     onUrlsDropped:
     {
         var str = ""
@@ -26,7 +28,7 @@ Term.Terminal
     {
         if(event.key == Qt.Key_F4)
         {
-            toogleTerminal()
+            toggleTerminal()
         }
     }
 }

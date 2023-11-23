@@ -254,6 +254,48 @@ Pane
                     _tabView.closeTabClicked(_tabButton.mindex)
                 }
 
+                Component
+                {
+                    id: _infoDialogComponent
+
+                    Maui.PopupPage
+                    {
+                        id: _infoDialog
+                        property var info: FB.FM.getFileInfo(currentEditor.fileUrl)
+
+                        onClosed: destroy()
+                        Maui.SectionItem
+                        {
+                            label1.text: i18n("Name")
+                            label2.text: _infoDialog.info.name
+                        }
+
+                        Maui.SectionItem
+                        {
+                            label1.text: i18n("Date")
+                            label2.text: _infoDialog.info.date
+                        }
+
+                        Maui.SectionItem
+                        {
+                            label1.text: i18n("Modified")
+                            label2.text: _infoDialog.info.modified
+                        }
+
+                        Maui.SectionItem
+                        {
+                            label1.text: i18n("Size")
+                            label2.text: Maui.Handy.formatSize(_infoDialog.info.size)
+                        }
+
+                        Maui.SectionItem
+                        {
+                            label1.text: i18n("Type")
+                            label2.text:_infoDialog.info.mime
+                        }
+                    }
+                }
+
                 Maui.ContextualMenu
                 {
                     id: _docMenu
@@ -293,7 +335,6 @@ Pane
                         }
                     }
 
-
                     MenuSeparator {}
 
                     MenuItem
@@ -327,7 +368,6 @@ Pane
 
                     Maui.MenuItemActionRow
                     {
-
                         Action
                         {
                             property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
@@ -350,7 +390,10 @@ Pane
                             icon.name: "documentinfo"
                             onTriggered:
                             {
-                                //            getFileInfo(control.model.get(index).url)
+
+                                    var dialog = _infoDialogComponent.createObject(control)
+                                    dialog.open()
+
                             }
                         }
 
@@ -416,8 +459,7 @@ Pane
                             title: i18n("Delete File?")
                             message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
 
-//                            acceptButton.text: i18n("Accept")
-//                            rejectButton.text: i18n("Cancel")
+                            standardButtons: Dialog.Yes | Dialog.Cancel
 
                             template.iconSource: "dialog-question"
                             template.iconVisible: true

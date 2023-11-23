@@ -37,7 +37,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("General")
-        description: i18n("Configure the app UI, behaviour and plugins.")
+//        description: i18n("Configure the app UI, behaviour and plugins.")
 
         Maui.SectionItem
         {
@@ -55,7 +55,7 @@ Maui.SettingsDialog
         Maui.SectionItem
         {
             label1.text:  i18n("Auto Save")
-            label2.text: i18n("Auto saves your file every few seconds")
+            label2.text: i18n("Auto saves your file every few seconds.")
 
             Switch
             {
@@ -83,12 +83,26 @@ Maui.SettingsDialog
                 }
             }
         }
+
+        Maui.SectionItem
+        {
+            enabled: Maui.Handy.isLinux
+            label1.text:  i18n("Sync Terminal")
+            label2.text: i18n("Sync the terminal to the browser current working directory.")
+
+            Switch
+            {
+                checkable: true
+                checked:  settings.syncTerminal
+                onToggled: settings.restoreSession = !settings.syncTerminal
+            }
+        }
     }
 
     Maui.SectionGroup
     {
         title: i18n("Editor")
-        description: i18n("Configure the look and feel of the editor. The settings are applied globally.")
+//        description: i18n("Configure the look and feel of the editor. The settings are applied globally.")
 
         Maui.SectionItem
         {
@@ -147,7 +161,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Display")
-        description: i18n("Configure the font and display options.")
+//        description: i18n("Configure the font and display options.")
 
         Maui.SectionItem
         {
