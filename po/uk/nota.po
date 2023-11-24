@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:29+0000\n"
+"POT-Creation-Date: 2023-11-24 00:41+0000\n"
 "PO-Revision-Date: 2023-04-06 07:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -35,37 +35,38 @@ msgstr "yurchor@ukr.net"
 msgid "Nota"
 msgstr "Нота"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Перегляд, створення та редагування текстових файлів."
 
-#: main.cpp:46
-#, kde-format
-msgid "© 2019-%1 Maui Development Team"
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr "© Команда розробників Maui, 2019–%1"
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: main.cpp:48 main.cpp:49
+#: main.cpp:52 main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "Розробник"
 
-#: main.cpp:49
+#: main.cpp:53
 #, kde-format
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid "Unsaved files"
 msgstr "Незбережені файли"
 
-#: main.qml:113
+#: main.qml:114
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -189,79 +190,104 @@ msgstr "Додатки"
 msgid "About"
 msgstr "Про програму"
 
-#: views/editor/EditorView.qml:266
+#: views/editor/EditorView.qml:269 views/PlacesSidebar.qml:146
+#, kde-format
+msgid "Name"
+msgstr "Назва"
+
+#: views/editor/EditorView.qml:275 views/PlacesSidebar.qml:119
+#, kde-format
+msgid "Date"
+msgstr "Дата"
+
+#: views/editor/EditorView.qml:281 views/PlacesSidebar.qml:128
+#, kde-format
+msgid "Modified"
+msgstr "Змінено"
+
+#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:137
+#, kde-format
+msgid "Size"
+msgstr "Розмір"
+
+#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:110
+#, kde-format
+msgid "Type"
+msgstr "Тип"
+
+#: views/editor/EditorView.qml:308
 #, kde-format
 msgid "Undo"
 msgstr "Скасувати"
 
-#: views/editor/EditorView.qml:274
+#: views/editor/EditorView.qml:316
 #, kde-format
 msgid "Redo"
 msgstr "Повторити"
 
-#: views/editor/EditorView.qml:282
+#: views/editor/EditorView.qml:324
 #, kde-format
 msgid "Save"
 msgstr "Зберегти"
 
-#: views/editor/EditorView.qml:291
+#: views/editor/EditorView.qml:333
 #, kde-format
 msgid "Save as"
 msgstr "Зберегти як"
 
-#: views/editor/EditorView.qml:302
+#: views/editor/EditorView.qml:343
 #, kde-format
 msgid "Find and Replace"
 msgstr "Знайти і замінити"
 
-#: views/editor/EditorView.qml:315
+#: views/editor/EditorView.qml:356
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Лічильник рядків/слів"
 
-#: views/editor/EditorView.qml:334
+#: views/editor/EditorView.qml:374
 #, kde-format
 msgid "UnFav it"
 msgstr "Прибрати з улюблених"
 
-#: views/editor/EditorView.qml:349 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:389 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Інформація"
 
-#: views/editor/EditorView.qml:359 views/RecentView.qml:137
+#: views/editor/EditorView.qml:402 views/RecentView.qml:137
 #, kde-format
 msgid "Share"
 msgstr "Оприлюднити"
 
-#: views/editor/EditorView.qml:372 views/editor/EditorView.qml:382
+#: views/editor/EditorView.qml:415 views/editor/EditorView.qml:425
 #, kde-format
 msgid "Go to Line"
 msgstr "Перейти до рядка"
 
-#: views/editor/EditorView.qml:384
+#: views/editor/EditorView.qml:427
 #, kde-format
 msgid "Line number"
 msgstr "Номер рядків"
 
-#: views/editor/EditorView.qml:392 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:435 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Показати у теці"
 
-#: views/editor/EditorView.qml:402
+#: views/editor/EditorView.qml:445
 #, kde-format
 msgid "Delete File"
 msgstr "Вилучити файл"
 
-#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:459 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Вилучити файл?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:460 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -289,31 +315,6 @@ msgstr "Далі"
 #, kde-format
 msgid "Show Folders First"
 msgstr "Показувати теки першими"
-
-#: views/PlacesSidebar.qml:110
-#, kde-format
-msgid "Type"
-msgstr "Тип"
-
-#: views/PlacesSidebar.qml:119
-#, kde-format
-msgid "Date"
-msgstr "Дата"
-
-#: views/PlacesSidebar.qml:128
-#, kde-format
-msgid "Modified"
-msgstr "Змінено"
-
-#: views/PlacesSidebar.qml:137
-#, kde-format
-msgid "Size"
-msgstr "Розмір"
-
-#: views/PlacesSidebar.qml:146
-#, kde-format
-msgid "Name"
-msgstr "Назва"
 
 #: views/PlacesSidebar.qml:158
 #, kde-format
@@ -420,7 +421,7 @@ msgstr "Завантажити додатки"
 msgid "Activate or remove the third party plugins"
 msgstr "Активація або вилучення сторонніх додатків"
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:168
 #, kde-format
 msgid "Font"
 msgstr "Шрифт"
@@ -429,11 +430,6 @@ msgstr "Шрифт"
 #, kde-format
 msgid "General"
 msgstr "Загальне"
-
-#: views/widgets/SettingsDialog.qml:40
-#, kde-format
-msgid "Configure the app UI, behaviour and plugins."
-msgstr "Налаштувати інтерфейс, поведінку та додатки програми."
 
 #: views/widgets/SettingsDialog.qml:44
 #, kde-format
@@ -451,8 +447,9 @@ msgid "Auto Save"
 msgstr "Автозбереження"
 
 #: views/widgets/SettingsDialog.qml:58
-#, kde-format
-msgid "Auto saves your file every few seconds"
+#, fuzzy, kde-format
+#| msgid "Auto saves your file every few seconds"
+msgid "Auto saves your file every few seconds."
 msgstr "Автозбереження файла кожні декілька секунд"
 
 #: views/widgets/SettingsDialog.qml:72
@@ -466,55 +463,58 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Перемкнутися між світлою і темною схемою кольорів."
 
 #: views/widgets/SettingsDialog.qml:90
+#, fuzzy, kde-format
+#| msgid "Terminal"
+msgid "Sync Terminal"
+msgstr "Термінал"
+
+#: views/widgets/SettingsDialog.qml:91
+#, kde-format
+msgid "Sync the terminal to the browser current working directory."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:104
 #, kde-format
 msgid "Editor"
 msgstr "Редактор"
 
-#: views/widgets/SettingsDialog.qml:91
-#, kde-format
-msgid ""
-"Configure the look and feel of the editor. The settings are applied globally."
-msgstr ""
-"Налаштувати вигляд і поведінку редактора. Параметри буде застосовано на "
-"загальному рівні."
-
-#: views/widgets/SettingsDialog.qml:95
+#: views/widgets/SettingsDialog.qml:109
 #, kde-format
 msgid "Line Numbers"
 msgstr "Номери рядків"
 
-#: views/widgets/SettingsDialog.qml:96
+#: views/widgets/SettingsDialog.qml:110
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr "Показувати номери рядків ліворуч."
 
-#: views/widgets/SettingsDialog.qml:108
+#: views/widgets/SettingsDialog.qml:122
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Мови підсвічування синтаксису"
 
-#: views/widgets/SettingsDialog.qml:109
+#: views/widgets/SettingsDialog.qml:123
 #, kde-format
 msgid "Display available languages."
 msgstr "Показувати доступні мови."
 
-#: views/widgets/SettingsDialog.qml:121
+#: views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Підсвічування синтаксису"
 
-#: views/widgets/SettingsDialog.qml:122
+#: views/widgets/SettingsDialog.qml:136
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Увімкнути підсвічування синтаксису для підтримуваних мов."
 
-#: views/widgets/SettingsDialog.qml:134 views/widgets/SettingsDialog.qml:184
-#: views/widgets/SettingsDialog.qml:188
+#: views/widgets/SettingsDialog.qml:148 views/widgets/SettingsDialog.qml:198
+#: views/widgets/SettingsDialog.qml:202
 #, kde-format
 msgid "Colors"
 msgstr "Кольори"
 
-#: views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -523,27 +523,22 @@ msgstr ""
 "Налаштувати схему кольорів підсвічування синтаксису. Ці налаштування не буде "
 "застосовано до форматованого тексту"
 
-#: views/widgets/SettingsDialog.qml:149
+#: views/widgets/SettingsDialog.qml:163
 #, kde-format
 msgid "Display"
 msgstr "Показ"
 
-#: views/widgets/SettingsDialog.qml:150
-#, kde-format
-msgid "Configure the font and display options."
-msgstr "Налаштувати шрифти та параметри показу."
-
-#: views/widgets/SettingsDialog.qml:155
+#: views/widgets/SettingsDialog.qml:169
 #, kde-format
 msgid "Font family and size."
 msgstr "Гарнітура та розмір шрифту."
 
-#: views/widgets/SettingsDialog.qml:167
+#: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Tab Space"
 msgstr "Розмір табуляції"
 
-#: views/widgets/SettingsDialog.qml:189
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -552,22 +547,22 @@ msgstr ""
 "Налаштувати стиль підсвічування синтаксису Ці налаштування не буде "
 "застосовано до форматованого тексту."
 
-#: views/widgets/SettingsDialog.qml:194
+#: views/widgets/SettingsDialog.qml:208
 #, kde-format
 msgid "Color"
 msgstr "Колір"
 
-#: views/widgets/SettingsDialog.qml:195
+#: views/widgets/SettingsDialog.qml:209
 #, kde-format
 msgid "Editor background color."
 msgstr "Колір тла редактора."
 
-#: views/widgets/SettingsDialog.qml:226
+#: views/widgets/SettingsDialog.qml:240
 #, kde-format
 msgid "Theme"
 msgstr "Тема"
 
-#: views/widgets/SettingsDialog.qml:227
+#: views/widgets/SettingsDialog.qml:241
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Схема кольорів редактора."
@@ -621,6 +616,19 @@ msgstr "Знайти вкладку"
 #, kde-format
 msgid "Select All"
 msgstr "Позначити все"
+
+#~ msgid "Configure the app UI, behaviour and plugins."
+#~ msgstr "Налаштувати інтерфейс, поведінку та додатки програми."
+
+#~ msgid ""
+#~ "Configure the look and feel of the editor. The settings are applied "
+#~ "globally."
+#~ msgstr ""
+#~ "Налаштувати вигляд і поведінку редактора. Параметри буде застосовано на "
+#~ "загальному рівні."
+
+#~ msgid "Configure the font and display options."
+#~ msgstr "Налаштувати шрифти та параметри показу."
 
 #~ msgid "Go back"
 #~ msgstr "Повернутися"

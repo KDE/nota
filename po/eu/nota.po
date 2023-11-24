@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:29+0000\n"
+"POT-Creation-Date: 2023-11-24 00:41+0000\n"
 "PO-Revision-Date: 2023-07-21 11:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -35,37 +35,38 @@ msgstr "xalba@ni.eus"
 msgid "Nota"
 msgstr "Nota"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Testu fitxategiak sortu, eta editatu."
 
-#: main.cpp:46
-#, kde-format
-msgid "© 2019-%1 Maui Development Team"
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Maui Garatzeko Taldea"
 
-#: main.cpp:48
+#: main.cpp:52
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: main.cpp:48 main.cpp:49
+#: main.cpp:52 main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "Garatzailea"
 
-#: main.cpp:49
+#: main.cpp:53
 #, kde-format
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:112
+#: main.qml:113
 #, kde-format
 msgid "Unsaved files"
 msgstr "Gorde gabeko fitxategiak"
 
-#: main.qml:113
+#: main.qml:114
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -189,79 +190,104 @@ msgstr "Pluginak"
 msgid "About"
 msgstr "Honi buruz"
 
-#: views/editor/EditorView.qml:266
+#: views/editor/EditorView.qml:269 views/PlacesSidebar.qml:146
+#, kde-format
+msgid "Name"
+msgstr "Izena"
+
+#: views/editor/EditorView.qml:275 views/PlacesSidebar.qml:119
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: views/editor/EditorView.qml:281 views/PlacesSidebar.qml:128
+#, kde-format
+msgid "Modified"
+msgstr "Aldatua"
+
+#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:137
+#, kde-format
+msgid "Size"
+msgstr "Neurria"
+
+#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:110
+#, kde-format
+msgid "Type"
+msgstr "Mota"
+
+#: views/editor/EditorView.qml:308
 #, kde-format
 msgid "Undo"
 msgstr "Desegin"
 
-#: views/editor/EditorView.qml:274
+#: views/editor/EditorView.qml:316
 #, kde-format
 msgid "Redo"
 msgstr "Berregin"
 
-#: views/editor/EditorView.qml:282
+#: views/editor/EditorView.qml:324
 #, kde-format
 msgid "Save"
 msgstr "Gorde"
 
-#: views/editor/EditorView.qml:291
+#: views/editor/EditorView.qml:333
 #, kde-format
 msgid "Save as"
 msgstr "Gorde honela"
 
-#: views/editor/EditorView.qml:302
+#: views/editor/EditorView.qml:343
 #, kde-format
 msgid "Find and Replace"
 msgstr "Bilatu eta Ordeztu"
 
-#: views/editor/EditorView.qml:315
+#: views/editor/EditorView.qml:356
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Lerro/Hitz zenbatzailea"
 
-#: views/editor/EditorView.qml:334
+#: views/editor/EditorView.qml:374
 #, kde-format
 msgid "UnFav it"
 msgstr "Kendu gogokoetatik"
 
-#: views/editor/EditorView.qml:349 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:389 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Informazioa"
 
-#: views/editor/EditorView.qml:359 views/RecentView.qml:137
+#: views/editor/EditorView.qml:402 views/RecentView.qml:137
 #, kde-format
 msgid "Share"
 msgstr "Partekatu"
 
-#: views/editor/EditorView.qml:372 views/editor/EditorView.qml:382
+#: views/editor/EditorView.qml:415 views/editor/EditorView.qml:425
 #, kde-format
 msgid "Go to Line"
 msgstr "Joan lerrora"
 
-#: views/editor/EditorView.qml:384
+#: views/editor/EditorView.qml:427
 #, kde-format
 msgid "Line number"
 msgstr "Lerro-zenbakia"
 
-#: views/editor/EditorView.qml:392 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:435 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Erakutsi karpetan"
 
-#: views/editor/EditorView.qml:402
+#: views/editor/EditorView.qml:445
 #, kde-format
 msgid "Delete File"
 msgstr "Ezabatu fitxategia"
 
-#: views/editor/EditorView.qml:416 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:459 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Fitxategia ezabatu?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:417 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:460 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -289,31 +315,6 @@ msgstr "Hurrengoa"
 #, kde-format
 msgid "Show Folders First"
 msgstr "Erakutsi karpetak lehenengo"
-
-#: views/PlacesSidebar.qml:110
-#, kde-format
-msgid "Type"
-msgstr "Mota"
-
-#: views/PlacesSidebar.qml:119
-#, kde-format
-msgid "Date"
-msgstr "Data"
-
-#: views/PlacesSidebar.qml:128
-#, kde-format
-msgid "Modified"
-msgstr "Aldatua"
-
-#: views/PlacesSidebar.qml:137
-#, kde-format
-msgid "Size"
-msgstr "Neurria"
-
-#: views/PlacesSidebar.qml:146
-#, kde-format
-msgid "Name"
-msgstr "Izena"
 
 #: views/PlacesSidebar.qml:158
 #, kde-format
@@ -420,7 +421,7 @@ msgstr "Zamatu pluginak"
 msgid "Activate or remove the third party plugins"
 msgstr "Aktibatu edo kendu hirugarrenen pluginak"
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:154
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:168
 #, kde-format
 msgid "Font"
 msgstr "Letra-tipoa"
@@ -429,13 +430,6 @@ msgstr "Letra-tipoa"
 #, kde-format
 msgid "General"
 msgstr "Orokorra"
-
-#: views/widgets/SettingsDialog.qml:40
-#, kde-format
-msgid "Configure the app UI, behaviour and plugins."
-msgstr ""
-"Konfiguratu aplikazioaren erabiltzailearen interfazea, jokabidea eta "
-"pluginak."
 
 #: views/widgets/SettingsDialog.qml:44
 #, kde-format
@@ -453,8 +447,9 @@ msgid "Auto Save"
 msgstr "Gorde automatikoki"
 
 #: views/widgets/SettingsDialog.qml:58
-#, kde-format
-msgid "Auto saves your file every few seconds"
+#, fuzzy, kde-format
+#| msgid "Auto saves your file every few seconds"
+msgid "Auto saves your file every few seconds."
 msgstr "Zure fitxategia segundo gutxiero automatikoki gordetzen du"
 
 #: views/widgets/SettingsDialog.qml:72
@@ -468,55 +463,58 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Aldatu kolore-antolaera argi eta ilunaren artean."
 
 #: views/widgets/SettingsDialog.qml:90
+#, fuzzy, kde-format
+#| msgid "Terminal"
+msgid "Sync Terminal"
+msgstr "Terminala"
+
+#: views/widgets/SettingsDialog.qml:91
+#, kde-format
+msgid "Sync the terminal to the browser current working directory."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:104
 #, kde-format
 msgid "Editor"
 msgstr "Editorea"
 
-#: views/widgets/SettingsDialog.qml:91
-#, kde-format
-msgid ""
-"Configure the look and feel of the editor. The settings are applied globally."
-msgstr ""
-"Konfiguratu editorearen itxura eta izaera. Ezarpenak osotasunari ezarriko "
-"zaizkio."
-
-#: views/widgets/SettingsDialog.qml:95
+#: views/widgets/SettingsDialog.qml:109
 #, kde-format
 msgid "Line Numbers"
 msgstr "Lerro zenbakiak"
 
-#: views/widgets/SettingsDialog.qml:96
+#: views/widgets/SettingsDialog.qml:110
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr "Azaldu lerro-zenbakiak ezker aldean."
 
-#: views/widgets/SettingsDialog.qml:108
+#: views/widgets/SettingsDialog.qml:122
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Erakutsi sintaxi-nabarmentzea duten lengoaiak"
 
-#: views/widgets/SettingsDialog.qml:109
+#: views/widgets/SettingsDialog.qml:123
 #, kde-format
 msgid "Display available languages."
 msgstr "Azaldu lengoaia erabilgarriak."
 
-#: views/widgets/SettingsDialog.qml:121
+#: views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Sintaxia nabarmentzea"
 
-#: views/widgets/SettingsDialog.qml:122
+#: views/widgets/SettingsDialog.qml:136
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Gaitu sintaxia nabarmentzea onartzen duten lengoaietan."
 
-#: views/widgets/SettingsDialog.qml:134 views/widgets/SettingsDialog.qml:184
-#: views/widgets/SettingsDialog.qml:188
+#: views/widgets/SettingsDialog.qml:148 views/widgets/SettingsDialog.qml:198
+#: views/widgets/SettingsDialog.qml:202
 #, kde-format
 msgid "Colors"
 msgstr "Koloreak"
 
-#: views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -525,27 +523,22 @@ msgstr ""
 "Konfiguratu sintaxia nabarmentzeko kolore-antolaera. Konfigurazio hau ez da "
 "erabiliko testu aberastuko formatuekin."
 
-#: views/widgets/SettingsDialog.qml:149
+#: views/widgets/SettingsDialog.qml:163
 #, kde-format
 msgid "Display"
 msgstr "Bistaratzea"
 
-#: views/widgets/SettingsDialog.qml:150
-#, kde-format
-msgid "Configure the font and display options."
-msgstr "Konfiguratu letra-tipo familia eta bistaratze aukerak."
-
-#: views/widgets/SettingsDialog.qml:155
+#: views/widgets/SettingsDialog.qml:169
 #, kde-format
 msgid "Font family and size."
 msgstr "Letra-tipo familia eta neurria."
 
-#: views/widgets/SettingsDialog.qml:167
+#: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulazio espazioa"
 
-#: views/widgets/SettingsDialog.qml:189
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
@@ -554,22 +547,22 @@ msgstr ""
 "Konfiguratu sintaxia nabarmentzeko estiloa. Konfigurazio hau ez da erabiliko "
 "testu aberastuko formatuekin."
 
-#: views/widgets/SettingsDialog.qml:194
+#: views/widgets/SettingsDialog.qml:208
 #, kde-format
 msgid "Color"
 msgstr "Kolorea"
 
-#: views/widgets/SettingsDialog.qml:195
+#: views/widgets/SettingsDialog.qml:209
 #, kde-format
 msgid "Editor background color."
 msgstr "Editorearen hondoko kolorea."
 
-#: views/widgets/SettingsDialog.qml:226
+#: views/widgets/SettingsDialog.qml:240
 #, kde-format
 msgid "Theme"
 msgstr "Gaia"
 
-#: views/widgets/SettingsDialog.qml:227
+#: views/widgets/SettingsDialog.qml:241
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Editorearen kolore-antolaeraren estiloa."
@@ -623,6 +616,21 @@ msgstr "Bilatu fitxa"
 #, kde-format
 msgid "Select All"
 msgstr "Hautatu dena"
+
+#~ msgid "Configure the app UI, behaviour and plugins."
+#~ msgstr ""
+#~ "Konfiguratu aplikazioaren erabiltzailearen interfazea, jokabidea eta "
+#~ "pluginak."
+
+#~ msgid ""
+#~ "Configure the look and feel of the editor. The settings are applied "
+#~ "globally."
+#~ msgstr ""
+#~ "Konfiguratu editorearen itxura eta izaera. Ezarpenak osotasunari ezarriko "
+#~ "zaizkio."
+
+#~ msgid "Configure the font and display options."
+#~ msgstr "Konfiguratu letra-tipo familia eta bistaratze aukerak."
 
 #~ msgid "Go back"
 #~ msgstr "Itzuli"
