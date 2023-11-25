@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-24 00:41+0000\n"
-"PO-Revision-Date: 2023-04-06 10:27+0200\n"
+"PO-Revision-Date: 2023-11-24 22:54+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,10 +38,9 @@ msgid "Browse, create and edit text files."
 msgstr "Tekstbestanden, er in bladeren, aanmaken en bewerken."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Ontwikkelteam van Maui"
+msgstr "© 2019-2023 Ontwikkelteam van Maui"
 
 #: main.cpp:52
 #, kde-format
@@ -444,10 +443,9 @@ msgid "Auto Save"
 msgstr "Automatisch opslaan"
 
 #: views/widgets/SettingsDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Uw bestand elke paar seconden automatisch opslaan"
+msgstr "Uw bestand elke paar seconden automatisch opslaan."
 
 #: views/widgets/SettingsDialog.qml:72
 #, kde-format
@@ -460,15 +458,14 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Tussen licht en donker kleurenschema wisselen."
 
 #: views/widgets/SettingsDialog.qml:90
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Terminal"
+msgstr "Terminal synchroniseren"
 
 #: views/widgets/SettingsDialog.qml:91
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "De terminal synchroniseren met de huidige werkmap van de browser."
 
 #: views/widgets/SettingsDialog.qml:104
 #, kde-format

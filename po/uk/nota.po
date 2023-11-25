@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-24 00:41+0000\n"
-"PO-Revision-Date: 2023-04-06 07:42+0300\n"
+"PO-Revision-Date: 2023-11-24 08:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -41,10 +41,9 @@ msgid "Browse, create and edit text files."
 msgstr "Перегляд, створення та редагування текстових файлів."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© Команда розробників Maui, 2019–%1"
+msgstr "© Команда розробників Maui, 2019–2023"
 
 #: main.cpp:52
 #, kde-format
@@ -447,10 +446,9 @@ msgid "Auto Save"
 msgstr "Автозбереження"
 
 #: views/widgets/SettingsDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Автозбереження файла кожні декілька секунд"
+msgstr "Автозбереження файла кожні декілька секунд."
 
 #: views/widgets/SettingsDialog.qml:72
 #, kde-format
@@ -463,15 +461,14 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Перемкнутися між світлою і темною схемою кольорів."
 
 #: views/widgets/SettingsDialog.qml:90
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Термінал"
+msgstr "Синхронізувати термінал"
 
 #: views/widgets/SettingsDialog.qml:91
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Синхронізувати поточний робочий каталог навігатора і термінала."
 
 #: views/widgets/SettingsDialog.qml:104
 #, kde-format

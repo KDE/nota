@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-24 00:41+0000\n"
-"PO-Revision-Date: 2023-08-22 01:04+0300\n"
+"PO-Revision-Date: 2023-11-24 13:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -38,10 +38,9 @@ msgid "Browse, create and edit text files."
 msgstr "Metin dosyaları oluşturun, onlara göz atın ve düzenleyin."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui Feliştirme Takımı"
+msgstr "© 2019-2023 Maui Geliştirme Takımı"
 
 #: main.cpp:52
 #, kde-format
@@ -291,7 +290,7 @@ msgid ""
 "%1"
 msgstr ""
 "%1 \n"
-"dosyasını silmek istediğinize emin misiniz?"
+"dosyasını silmek istediğinizden emin misiniz?"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
@@ -444,10 +443,9 @@ msgid "Auto Save"
 msgstr "Otomatik Kaydet"
 
 #: views/widgets/SettingsDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Dosyanızı her birkaç saniyede bir kendiliğinden kaydeder"
+msgstr "Dosyanızı her birkaç saniyede bir kendiliğinden kaydeder."
 
 #: views/widgets/SettingsDialog.qml:72
 #, kde-format
@@ -460,15 +458,14 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Açık ve koyu renk şeması arasında geçiş yapın."
 
 #: views/widgets/SettingsDialog.qml:90
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Uçbirim"
+msgstr "Uçbirimi Eşzamanla"
 
 #: views/widgets/SettingsDialog.qml:91
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Uçbirimi, tarayıcı geçerli çalışma dizinine eşzamanlayın."
 
 #: views/widgets/SettingsDialog.qml:104
 #, kde-format
