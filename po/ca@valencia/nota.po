@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-24 00:41+0000\n"
-"PO-Revision-Date: 2023-04-06 11:10+0100\n"
+"PO-Revision-Date: 2023-11-24 10:29+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,10 +41,9 @@ msgid "Browse, create and edit text files."
 msgstr "Navegueu, creeu, i editeu fitxers de text."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 L'equip de desenvolupament de Maui"
+msgstr "© 2019-2023 L'equip de desenvolupament de Maui"
 
 #: main.cpp:52
 #, kde-format
@@ -447,10 +446,9 @@ msgid "Auto Save"
 msgstr "Guardada automàtica"
 
 #: views/widgets/SettingsDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Guarda automàticament el fitxer cada pocs segons"
+msgstr "Guarda automàticament el fitxer cada pocs segons."
 
 #: views/widgets/SettingsDialog.qml:72
 #, kde-format
@@ -463,15 +461,15 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Alterna entre els esquemes de color clar i fosc."
 
 #: views/widgets/SettingsDialog.qml:90
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Terminal"
+msgstr "Sincronitza el terminal"
 
 #: views/widgets/SettingsDialog.qml:91
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr ""
+"Sincronitza el terminal amb el directori de treball actual del navegador."
 
 #: views/widgets/SettingsDialog.qml:104
 #, kde-format
@@ -616,16 +614,3 @@ msgstr "Busca la pestanya"
 #, kde-format
 msgid "Select All"
 msgstr "Selecciona-ho tot"
-
-#~ msgid "Configure the app UI, behaviour and plugins."
-#~ msgstr "Configura la IU de l'aplicació, el comportament i els connectors."
-
-#~ msgid ""
-#~ "Configure the look and feel of the editor. The settings are applied "
-#~ "globally."
-#~ msgstr ""
-#~ "Configura l'aspecte i el comportament de l'editor. La configuració "
-#~ "s'aplica globalment."
-
-#~ msgid "Configure the font and display options."
-#~ msgstr "Configura la lletra i les opcions de visualització."
