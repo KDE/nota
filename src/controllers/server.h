@@ -23,7 +23,7 @@ public:
     explicit Server(QObject *parent = nullptr);
     void setQmlObject(QObject  *object);
 
-public slots:
+public Q_SLOTS:
     /**
            * Tries to raise/activate the Dolphin window.
            */
@@ -76,8 +76,6 @@ public slots:
 private:
     QObject* m_qmlObject = nullptr;
     QStringList filterFiles(const QStringList &urls);
-
-signals:
 
 };
 

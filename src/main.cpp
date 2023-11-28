@@ -13,6 +13,7 @@
 #endif
 
 #include <MauiKit3/Core/mauiapp.h>
+#include <MauiKit3/TextEditor/moduleinfo.h>
 
 #include "nota.h"
 #include "../nota_version.h"
@@ -56,6 +57,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setBugAddress("https://invent.kde.org/maui/nota/-/issues");
     about.setOrganizationDomain(NOTA_URI);
     about.setProgramLogo(app.windowIcon());
+
+    const auto FBData = MauiKitTextEditor::aboutData();
+    about.addComponent(FBData.name(), MauiKitTextEditor::buildVersion(), FBData.version(), FBData.webAddress());
 
     KAboutData::setApplicationData(about);
     MauiApp::instance()->setIconName("qrc:/img/nota.svg");

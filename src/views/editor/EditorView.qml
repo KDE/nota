@@ -14,13 +14,14 @@ Pane
 
     readonly property alias count: _tabView.count
 
-    property alias currentTab : _tabView.currentItem
+    readonly property alias currentTab : _tabView.currentItem
     readonly property bool currentFileExistsLocally : FB.FM.fileExists(control.currentEditor.fileUrl)
     readonly property TE.TextEditor currentEditor: currentTab ? currentTab.currentItem.editor : null
-    property alias listView: _tabView
-    property alias plugin: _pluginLayout
-    property alias model : _tabView.contentModel
-    property alias tabView : _tabView
+
+    readonly property alias listView: _tabView
+    readonly property alias plugin: _pluginLayout
+    readonly property alias model : _tabView.contentModel
+    readonly property alias tabView : _tabView
 
     padding: 0
 
@@ -117,108 +118,112 @@ Pane
                     }
                 },
 
-                Maui.ToolButtonMenu
+                Loader
                 {
-                    icon.name: "list-add"
-
-                    MenuItem
+                    asynchronous: true
+                    sourceComponent: Maui.ToolButtonMenu
                     {
-                        action: _newFileAction
-                    }
+                        icon.name: "list-add"
 
-                    MenuItem
-                    {
-                        action: _openFileAction
-                    }
-
-                    MenuItem
-                    {
-                        action: _openRecentFileAction
-                    }
-
-                    MenuSeparator {}
-
-                    Maui.MenuItemActionRow
-                    {
-                        Action
+                        MenuItem
                         {
-                            icon.name: checked ? "view-readermode-active" : "view-readermode"
-                            text: i18n("Focus")
-                            checked: root.focusMode
-                            checkable: true
-                            onTriggered: root.focusMode = !root.focusMode
+                            action: _newFileAction
                         }
 
-                        Action
+                        MenuItem
                         {
-                            text: i18n("Terminal")
-                            icon.name: "dialog-scripts"
-                            enabled: Maui.Handy.isLinux
-                            onTriggered: currentTab.toggleTerminal()
-                            checkable: true
-                            checked: currentTab ? currentTab.terminalVisible : false
+                            action: _openFileAction
                         }
 
-                        Action
+                        MenuItem
                         {
-                            enabled: settings.supportSplit
-                            text: i18n("Split View")
-                            icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
-                            checked: root.currentTab && root.currentTab.count === 2
-                            checkable: true
-                            onTriggered:
+                            action: _openRecentFileAction
+                        }
+
+                        MenuSeparator {}
+
+                        Maui.MenuItemActionRow
+                        {
+                            Action
                             {
-                                if(root.currentTab.count === 2)
-                                {
-                                    root.currentTab.pop()
-                                    return
-                                }//close the inactive split
+                                icon.name: checked ? "view-readermode-active" : "view-readermode"
+                                text: i18n("Focus")
+                                checked: root.focusMode
+                                checkable: true
+                                onTriggered: root.focusMode = !root.focusMode
+                            }
 
-                                root.currentTab.split("")
+                            Action
+                            {
+                                text: i18n("Terminal")
+                                icon.name: "dialog-scripts"
+                                enabled: Maui.Handy.isLinux
+                                onTriggered: currentTab.toggleTerminal()
+                                checkable: true
+                                checked: currentTab ? currentTab.terminalVisible : false
+                            }
+
+                            Action
+                            {
+                                enabled: settings.supportSplit
+                                text: i18n("Split View")
+                                icon.name: root.currentTab.orientation === Qt.Horizontal ? "view-split-left-right" : "view-split-top-bottom"
+                                checked: root.currentTab && root.currentTab.count === 2
+                                checkable: true
+                                onTriggered:
+                                {
+                                    if(root.currentTab.count === 2)
+                                    {
+                                        root.currentTab.pop()
+                                        return
+                                    }//close the inactive split
+
+                                    root.currentTab.split("")
+                                }
                             }
                         }
-                    }
 
-                    MenuSeparator {}
+                        MenuSeparator {}
 
-                    MenuItem
-                    {
-                        text: i18n("Shortcuts")
-                        icon.name: "configure-shortcuts"
-                        onTriggered:
+                        MenuItem
                         {
-                            _dialogLoader.sourceComponent = _shortcutsDialogComponent
-                            dialog.open()
+                            text: i18n("Shortcuts")
+                            icon.name: "configure-shortcuts"
+                            onTriggered:
+                            {
+                                _dialogLoader.sourceComponent = _shortcutsDialogComponent
+                                dialog.open()
+                            }
                         }
-                    }
 
-                    MenuItem
-                    {
-                        text: i18n("Settings")
-                        icon.name: "settings-configure"
-                        onTriggered:
+                        MenuItem
                         {
-                            _dialogLoader.sourceComponent = _settingsDialogComponent
-                            dialog.open()
+                            text: i18n("Settings")
+                            icon.name: "settings-configure"
+                            onTriggered:
+                            {
+                                _dialogLoader.sourceComponent = _settingsDialogComponent
+                                dialog.open()
+                            }
                         }
-                    }
 
-                    MenuItem
-                    {
-                        text: i18n("Plugins")
-                        icon.name: "system-run"
-                        onTriggered:
+                        MenuItem
                         {
-                            _dialogLoader.sourceComponent = _plugingsDialogComponent
-                            dialog.open()
+                            text: i18n("Plugins")
+                            icon.name: "system-run"
+                            onTriggered:
+                            {
+                                _dialogLoader.sourceComponent = _plugingsDialogComponent
+                                dialog.open()
+                            }
                         }
-                    }
 
-                    MenuItem
-                    {
-                        text: i18n("About")
-                        icon.name: "documentinfo"
-                        onTriggered: root.about()
+                        MenuItem
+                        {
+                            text: i18n("About")
+                            icon.name: "documentinfo"
+                            onTriggered: root.about()
+                        }
                     }
                 },
 
@@ -233,7 +238,7 @@ Pane
                 {
                     if(_tabButton.mindex === _tabView.currentIndex)
                     {
-                        _docMenu.show((width*0.5)-(_docMenu.width*0.5), height + Maui.Style.space.medium)
+                        _docMenuLoader.item.show((width*0.5)-(_docMenuLoader.item.width*0.5), height + Maui.Style.space.medium)
                         return
                     }
 
@@ -296,178 +301,191 @@ Pane
                     }
                 }
 
-                Maui.ContextualMenu
+                Component
                 {
-                    id: _docMenu
+                    id: _goToLineDialogComponent
 
-                    Maui.MenuItemActionRow
+                    Maui.InputDialog
                     {
-                        Action
-                        {
-                            icon.name: "edit-undo"
-                            text: i18n("Undo")
-                            enabled: currentEditor.body.canUndo
-                            onTriggered: currentEditor.body.undo()
-                        }
+                        title: i18n("Go to Line")
+                        textEntry.text: currentEditor.document.currentLineIndex+1
+                        textEntry.placeholderText: i18n("Line number")
+                        onFinished: currentEditor.goToLine(text)
+                    }
+                }
 
-                        Action
-                        {
-                            icon.name: "edit-redo"
-                            text: i18n("Redo")
-                            enabled: currentEditor.body.canRedo
-                            onTriggered: currentEditor.body.redo()
-                        }
+                Component
+                {
+                    id: _removeDialogComponent
 
+                    Maui.InfoDialog
+                    {
 
-                        Action
-                        {
-                            text: i18n("Save")
-                            icon.name: "document-save"
-                            enabled: currentEditor ? currentEditor.document.modified : false
-                            onTriggered: saveFile(currentEditor.fileUrl, currentEditor)
-                        }
+                        title: i18n("Delete File?")
+                        message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
 
-                        Action
+                        standardButtons: Dialog.Yes | Dialog.Cancel
+
+                        template.iconSource: "dialog-question"
+                        template.iconVisible: true
+
+                        onRejected: close()
+                        onAccepted:
                         {
-                            icon.name: "document-save-as"
-                            text: i18n("Save as")
-                            onTriggered: saveFile("", currentEditor)
+                            FB.FM.deleteFile(currentEditor.fileUrl)
                         }
                     }
+                }
 
-                    MenuSeparator {}
-
-                    MenuItem
+                Loader
+                {
+                    id: _docMenuLoader
+                    asynchronous: true
+                    sourceComponent: Maui.ContextualMenu
                     {
-                        icon.name: "edit-find"
-                        text: i18n("Find and Replace")
-                        checkable: true
-
-                        onTriggered:
+                        Maui.MenuItemActionRow
                         {
-                            currentEditor.showFindBar = !currentEditor.showFindBar
-                        }
-                        checked: currentEditor.showFindBar
-                    }
-
-                    MenuItem
-                    {
-                        icon.name: "document-edit"
-                        text: i18n("Line/Word Counter")
-                        checkable: true
-
-                        onTriggered:
-                        {
-                            settings.showWordCount = !settings.showWordCount 
-                        }
-
-                        checked: settings.showWordCount 
-                    }
-
-                    MenuSeparator {}
-
-                    Maui.MenuItemActionRow
-                    {
-                        Action
-                        {
-                            property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
-                            text: i18n(isFav ? "UnFav it": "Fav it")
-                            checked: isFav
-                            checkable: true
-                            icon.name: "love"
-                            enabled: currentFileExistsLocally
-                            onTriggered:
+                            Action
                             {
-                                FB.Tagging.toggleFav(currentEditor.fileUrl)
-                                isFav = FB.Tagging.isFav(currentEditor.fileUrl)
+                                icon.name: "edit-undo"
+                                text: i18n("Undo")
+                                enabled: currentEditor.body.canUndo
+                                onTriggered: currentEditor.body.undo()
+                            }
+
+                            Action
+                            {
+                                icon.name: "edit-redo"
+                                text: i18n("Redo")
+                                enabled: currentEditor.body.canRedo
+                                onTriggered: currentEditor.body.redo()
+                            }
+
+
+                            Action
+                            {
+                                text: i18n("Save")
+                                icon.name: "document-save"
+                                enabled: currentEditor ? currentEditor.document.modified : false
+                                onTriggered: saveFile(currentEditor.fileUrl, currentEditor)
+                            }
+
+                            Action
+                            {
+                                icon.name: "document-save-as"
+                                text: i18n("Save as")
+                                onTriggered: saveFile("", currentEditor)
                             }
                         }
 
-                        Action
+                        MenuSeparator {}
+
+                        MenuItem
                         {
-                            enabled: currentFileExistsLocally
-                            text: i18n("Info")
-                            icon.name: "documentinfo"
+                            icon.name: "edit-find"
+                            text: i18n("Find and Replace")
+                            checkable: true
+
                             onTriggered:
                             {
+                                currentEditor.showFindBar = !currentEditor.showFindBar
+                            }
+                            checked: currentEditor.showFindBar
+                        }
+
+                        MenuItem
+                        {
+                            icon.name: "document-edit"
+                            text: i18n("Line/Word Counter")
+                            checkable: true
+
+                            onTriggered:
+                            {
+                                settings.showWordCount = !settings.showWordCount
+                            }
+
+                            checked: settings.showWordCount
+                        }
+
+                        MenuSeparator {}
+
+                        Maui.MenuItemActionRow
+                        {
+                            Action
+                            {
+                                property bool isFav: FB.Tagging.isFav(currentEditor.fileUrl)
+                                text: i18n(isFav ? "UnFav it": "Fav it")
+                                checked: isFav
+                                checkable: true
+                                icon.name: "love"
+                                enabled: currentFileExistsLocally
+                                onTriggered:
+                                {
+                                    FB.Tagging.toggleFav(currentEditor.fileUrl)
+                                    isFav = FB.Tagging.isFav(currentEditor.fileUrl)
+                                }
+                            }
+
+                            Action
+                            {
+                                enabled: currentFileExistsLocally
+                                text: i18n("Info")
+                                icon.name: "documentinfo"
+                                onTriggered:
+                                {
 
                                     var dialog = _infoDialogComponent.createObject(control)
                                     dialog.open()
 
+                                }
+                            }
+
+                            Action
+                            {
+                                text: i18n("Share")
+                                enabled: currentFileExistsLocally
+                                icon.name: "document-share"
+                                onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
+
                             }
                         }
 
-                        Action
+                        MenuSeparator {}
+
+                        MenuItem
                         {
-                            text: i18n("Share")
-                            enabled: currentFileExistsLocally
-                            icon.name: "document-share"
-                            onTriggered: Maui.Platform.shareFiles([currentEditor.fileUrl])
+                            icon.name: "go-jump"
+                            text: i18n("Go to Line")
 
-                        }
-                    }
-
-                    MenuSeparator {}
-
-                    MenuItem
-                    {
-                        icon.name: "go-jump"
-                        text: i18n("Go to Line")
-
-                        onTriggered:
-                        {
-                            _goToLineDialog.open()
-                        }
-
-                        Maui.InputDialog
-                        {
-                            id: _goToLineDialog
-                            title: i18n("Go to Line")
-                            textEntry.text: currentEditor.document.currentLineIndex+1
-                            textEntry.placeholderText: i18n("Line number")
-                            onFinished: currentEditor.goToLine(text)
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        enabled: currentFileExistsLocally
-                        text: i18n("Show in Folder")
-                        icon.name: "folder-open"
-                        onTriggered:
-                        {
-                            FB.FM.openLocation([currentEditor.fileUrl])
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("Delete File")
-                        icon.name: "edit-delete"
-                        enabled: currentFileExistsLocally
-                        Maui.Theme.textColor: Maui.Theme.negativeTextColor
-
-                        onTriggered:
-                        {
-                            _removeDialog.open()
-                        }
-
-                        Maui.InfoDialog
-                        {
-                            id: _removeDialog
-
-                            title: i18n("Delete File?")
-                            message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
-
-                            standardButtons: Dialog.Yes | Dialog.Cancel
-
-                            template.iconSource: "dialog-question"
-                            template.iconVisible: true
-
-                            onRejected: close()
-                            onAccepted:
+                            onTriggered:
                             {
-                                FB.FM.deleteFile(currentEditor.fileUrl)
+                                _dialogLoader.sourceComponent = _goToLineDialogComponent
+                                dialog.open()
+                            }
+                        }
+
+                        MenuItem
+                        {
+                            enabled: currentFileExistsLocally
+                            text: i18n("Show in Folder")
+                            icon.name: "folder-open"
+                            onTriggered:
+                            {
+                                FB.FM.openLocation([currentEditor.fileUrl])
+                            }
+                        }
+
+                        MenuItem
+                        {
+                            text: i18n("Delete File")
+                            icon.name: "edit-delete"
+                            enabled: currentFileExistsLocally
+                            Maui.Theme.textColor: Maui.Theme.negativeTextColor
+
+                            onTriggered:
+                            {
+                                _dialogLoader.sourceComponent = _removeDialogComponent
+                                dialog.open()
                             }
                         }
                     }
@@ -593,7 +611,6 @@ Pane
 
     function isUrlOpen(url : string) : bool
     {
-
         return fileIndex(url)[0] >= 0;
     }
     }

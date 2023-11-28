@@ -1,5 +1,4 @@
-#ifndef HISTORYMODEL_H
-#define HISTORYMODEL_H
+#pragma once
 
 #include <QObject>
 
@@ -17,7 +16,7 @@ public:
     QList<QUrl> getHistory();
     void componentComplete() override final;
 
-public slots:
+public Q_SLOTS:
     void append(const QUrl &url);
     int indexOfName(const QString &query);
 
@@ -26,5 +25,3 @@ private:
     void setList();
 
 };
-
-#endif // HISTORYMODEL_H

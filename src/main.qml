@@ -16,22 +16,17 @@ Maui.ApplicationWindow
 {
     id: root
 
-    title: currentEditor ? currentTab.title : ""
+//    title: currentEditor ? currentTab.title : ""
     Maui.Style.styleType: Maui.Handy.isAndroid ? (appSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
-    readonly property var views : ({editor: 0, recent: 1, documents: 2})
+//    readonly property alias currentTab : editorView.currentTab
+//    readonly property alias currentEditor: editorView.currentEditor
+    readonly property alias dialog : _dialogLoader.item
 
-    property alias currentTab : editorView.currentTab
-    property alias currentEditor: editorView.currentEditor
-    property alias dialog : _dialogLoader.item
+    readonly property font defaultFont : Maui.Style.monospacedFont
+    readonly property alias appSettings: settings
 
     property bool focusMode : false
-
-    property font defaultFont : Maui.Style.monospacedFont
-
-    //Global editor props
-    property alias appSettings: settings
-
     //    Maui.WindowBlur
     //    {
     //        view: root
@@ -61,7 +56,7 @@ Maui.ApplicationWindow
         property bool syncTerminal: true
     }
 
-    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
+//    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
     onClosing:
     {
@@ -230,8 +225,9 @@ Maui.ApplicationWindow
         if(root.currentEditor && editorView.currentFileExistsLocally)
             dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)
 
-        dialog.callback =  function (urls)
+        dialog.callback = (urls) =>
         {
+            console.log("ASKIGN TO OPEN URLS", urls)
             root.openFiles(urls)
         }
         dialog.open()
