@@ -493,9 +493,9 @@ Pane
             }
 
             onNewTabClicked: control.openTab("")
-            onCloseTabClicked:
+            onCloseTabClicked: (index) =>
             {
-                if( tabHasUnsavedFiles(index) )
+                if( tabHasUnsavedFiles(index))
                 {
                     _dialogLoader.sourceComponent = _unsavedDialogComponent
                     dialog.callback = function () { closeTab(index) }

@@ -96,7 +96,7 @@ DocsBrowser
         width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
         maxListHeight: root.height - (Maui.Style.contentMargins*2)
 
-        onItemClicked : console.log(index)
+        onItemClicked: (index) => console.log(index)
 
         onExitClicked:
         {

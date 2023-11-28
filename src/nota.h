@@ -1,6 +1,4 @@
-#ifndef NOTA_H
-#define NOTA_H
-
+#pragma once
 #include <QFileInfo>
 #include <QObject>
 #include <QProcess>
@@ -24,7 +22,7 @@ public:
     Nota(Nota &&) = delete;
     Nota &operator=(Nota &&) = delete;
 
-public slots:    
+public Q_SLOTS:
     bool run(const QString &process, const QStringList &params = {})
     {
         auto m_process = new QProcess;
@@ -42,5 +40,3 @@ private:
     {
     }
 };
-
-#endif // NOTA_H

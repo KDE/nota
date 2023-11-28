@@ -45,7 +45,7 @@ Maui.SplitViewItem
 //        }
 
         Keys.enabled: true
-        Keys.onPressed:
+        Keys.onPressed: (event) =>
         {
             if((event.key === Qt.Key_S) && (event.modifiers & Qt.ControlModifier))
             {
@@ -84,11 +84,11 @@ Maui.SplitViewItem
             asynchronous: true
             anchors.fill: parent
 
-            sourceComponent:  DropArea
+            sourceComponent: DropArea
             {
                 id: _dropArea
                 property var urls : []
-                onDropped:
+                onDropped: (drop) =>
                 {
                     if(drop.urls)
                     {

@@ -183,7 +183,7 @@ Item
                     opacity: 0.2
                 }
                 browser.background:null
-                onItemClicked:
+                onItemClicked: (index) =>
                 {
                     var item = currentFMModel.get(index)
                     if(Maui.Handy.singleClick)
@@ -200,7 +200,7 @@ Item
                     }
                 }
 
-                onItemDoubleClicked:
+                onItemDoubleClicked: (index) =>
                 {
                     var item = currentFMModel.get(index)
                     if(!Maui.Handy.singleClick)

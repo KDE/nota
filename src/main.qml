@@ -58,7 +58,7 @@ Maui.ApplicationWindow
 
 //    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
-    onClosing:
+    onClosing: (close) =>
     {
         _dialogLoader.sourceComponent = _unsavedDialogComponent
 

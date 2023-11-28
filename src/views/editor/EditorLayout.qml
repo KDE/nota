@@ -28,7 +28,7 @@ Item
     property bool terminalVisible : false
 
     Keys.enabled: true
-    Keys.onPressed:
+    Keys.onPressed: (event) =>
     {
         if(event.key === Qt.Key_F3)
         {
