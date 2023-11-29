@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-24 00:41+0000\n"
+"POT-Creation-Date: 2023-11-29 00:41+0000\n"
 "PO-Revision-Date: 2022-04-18 17:59+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -25,44 +25,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: main.cpp:46
+#: main.cpp:47
 #, kde-format
 msgid "Nota"
 msgstr "Nota"
 
-#: main.cpp:48
+#: main.cpp:49
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Prehliadanie, vytváranie a editovanie textových súborov."
 
-#: main.cpp:49
+#: main.cpp:50
 #, fuzzy, kde-format
 #| msgid "© 2019-%1 Maui Development Team"
 msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Vývojársky tím Maui"
 
-#: main.cpp:52
+#: main.cpp:53
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: main.cpp:52 main.cpp:53
+#: main.cpp:53 main.cpp:54
 #, kde-format
 msgid "Developer"
 msgstr "Vývojár"
 
-#: main.cpp:53
+#: main.cpp:54
 #, kde-format
 msgid "Anupam Basak"
 msgstr "Anupam Basak"
 
-#: main.qml:113
+#: main.qml:108
 #, fuzzy, kde-format
 #| msgid "Save file"
 msgid "Unsaved files"
 msgstr "Uložiť súbor"
 
-#: main.qml:114
+#: main.qml:109
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -114,173 +114,116 @@ msgstr ""
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: views/editor/EditorView.qml:31
+#: views/editor/EditorView.qml:32
 #, kde-format
 msgid "Open Files"
 msgstr "Otvoriť súbory"
 
-#: views/editor/EditorView.qml:42
+#: views/editor/EditorView.qml:43
 #, fuzzy, kde-format
 #| msgid "Text file"
 msgid "Open Recent Files"
 msgstr "Textový súbor"
 
-#: views/editor/EditorView.qml:53
+#: views/editor/EditorView.qml:54
 #, kde-format
 msgid "New"
 msgstr "Nové"
 
-#: views/editor/EditorView.qml:75
+#: views/editor/EditorView.qml:76
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Create a New Document"
 msgstr "Vytvoriť nový dokument"
 
-#: views/editor/EditorView.qml:76
+#: views/editor/EditorView.qml:77
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "You can create or open a new document."
 msgstr "Vytvoriť nový dokument"
 
-#: views/editor/EditorView.qml:92
+#: views/editor/EditorView.qml:93
 #, kde-format
 msgid "Places"
 msgstr "Miesta"
 
-#: views/editor/EditorView.qml:100
+#: views/editor/EditorView.qml:101
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Prepnúť bočný panel"
 
-#: views/editor/EditorView.qml:146
+#: views/editor/EditorView.qml:150
 #, kde-format
 msgid "Focus"
 msgstr "Zameranie"
 
-#: views/editor/EditorView.qml:154 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:158 views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Terminál"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:169
 #, fuzzy, kde-format
 #| msgid "Split"
 msgid "Split View"
 msgstr "Rozdeliť"
 
-#: views/editor/EditorView.qml:186 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:190 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Skratky"
 
-#: views/editor/EditorView.qml:197
+#: views/editor/EditorView.qml:201
 #, kde-format
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: views/editor/EditorView.qml:208
+#: views/editor/EditorView.qml:212
 #, kde-format
 msgid "Plugins"
 msgstr "Moduly"
 
-#: views/editor/EditorView.qml:219
+#: views/editor/EditorView.qml:223
 #, kde-format
 msgid "About"
 msgstr "O aplikácii"
 
-#: views/editor/EditorView.qml:269 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:274 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Názov"
 
-#: views/editor/EditorView.qml:275 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:280 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Dátum"
 
-#: views/editor/EditorView.qml:281 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Zmenené"
 
-#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Veľkosť"
 
-#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Typ"
 
-#: views/editor/EditorView.qml:308
-#, kde-format
-msgid "Undo"
-msgstr ""
-
-#: views/editor/EditorView.qml:316
-#, kde-format
-msgid "Redo"
-msgstr "Znovu"
-
-#: views/editor/EditorView.qml:324
-#, kde-format
-msgid "Save"
-msgstr "Uložiť"
-
-#: views/editor/EditorView.qml:333
-#, kde-format
-msgid "Save as"
-msgstr "Uložiť ako"
-
-#: views/editor/EditorView.qml:343
-#, kde-format
-msgid "Find and Replace"
-msgstr "Nájsť a Nahradiť"
-
-#: views/editor/EditorView.qml:356
-#, kde-format
-msgid "Line/Word Counter"
-msgstr ""
-
-#: views/editor/EditorView.qml:374
-#, kde-format
-msgid "UnFav it"
-msgstr ""
-
-#: views/editor/EditorView.qml:389 views/widgets/ItemMenu.qml:98
-#, kde-format
-msgid "Info"
-msgstr "Info"
-
-#: views/editor/EditorView.qml:402 views/RecentView.qml:137
-#, kde-format
-msgid "Share"
-msgstr "Zdieľať"
-
-#: views/editor/EditorView.qml:415 views/editor/EditorView.qml:425
+#: views/editor/EditorView.qml:310 views/editor/EditorView.qml:458
 #, kde-format
 msgid "Go to Line"
 msgstr "Prejsť na riadok"
 
-#: views/editor/EditorView.qml:427
+#: views/editor/EditorView.qml:312
 #, kde-format
 msgid "Line number"
 msgstr "Číslo riadku"
 
-#: views/editor/EditorView.qml:435 views/widgets/ItemMenu.qml:88
-#, fuzzy, kde-format
-#| msgid "Show in folder"
-msgid "Show in Folder"
-msgstr "Zobraziť v priečinku"
-
-#: views/editor/EditorView.qml:445
-#, fuzzy, kde-format
-#| msgid "Delete file"
-msgid "Delete File"
-msgstr "Odstrániť súbor"
-
-#: views/editor/EditorView.qml:459 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:324 views/widgets/ItemMenu.qml:132
 #, fuzzy, kde-format
 #| msgid "Delete file?"
 msgid "Delete File?"
@@ -288,12 +231,69 @@ msgstr "Vymazať súbor?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:460 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:325 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+
+#: views/editor/EditorView.qml:351
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: views/editor/EditorView.qml:359
+#, kde-format
+msgid "Redo"
+msgstr "Znovu"
+
+#: views/editor/EditorView.qml:367
+#, kde-format
+msgid "Save"
+msgstr "Uložiť"
+
+#: views/editor/EditorView.qml:376
+#, kde-format
+msgid "Save as"
+msgstr "Uložiť ako"
+
+#: views/editor/EditorView.qml:386
+#, kde-format
+msgid "Find and Replace"
+msgstr "Nájsť a Nahradiť"
+
+#: views/editor/EditorView.qml:399
+#, kde-format
+msgid "Line/Word Counter"
+msgstr ""
+
+#: views/editor/EditorView.qml:417
+#, kde-format
+msgid "UnFav it"
+msgstr ""
+
+#: views/editor/EditorView.qml:432 views/widgets/ItemMenu.qml:98
+#, kde-format
+msgid "Info"
+msgstr "Info"
+
+#: views/editor/EditorView.qml:445 views/RecentView.qml:137
+#, kde-format
+msgid "Share"
+msgstr "Zdieľať"
+
+#: views/editor/EditorView.qml:470 views/widgets/ItemMenu.qml:88
+#, fuzzy, kde-format
+#| msgid "Show in folder"
+msgid "Show in Folder"
+msgstr "Zobraziť v priečinku"
+
+#: views/editor/EditorView.qml:480
+#, fuzzy, kde-format
+#| msgid "Delete file"
+msgid "Delete File"
+msgstr "Odstrániť súbor"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
