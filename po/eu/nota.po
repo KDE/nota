@@ -1,7 +1,7 @@
 # Translation for nota.po to Euskara/Basque (eu).
 # Copyright (C) 2020-2023 This file is copyright:
 # This file is distributed under the same license as the nota package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 00:41+0000\n"
-"PO-Revision-Date: 2023-07-21 11:43+0200\n"
+"PO-Revision-Date: 2023-12-06 11:38+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,10 +41,9 @@ msgid "Browse, create and edit text files."
 msgstr "Testu fitxategiak sortu, eta editatu."
 
 #: main.cpp:50
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui Garatzeko Taldea"
+msgstr "© 2019-2023 Maui Garatzeko Taldea"
 
 #: main.cpp:53
 #, kde-format
@@ -447,10 +446,9 @@ msgid "Auto Save"
 msgstr "Gorde automatikoki"
 
 #: views/widgets/SettingsDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Zure fitxategia segundo gutxiero automatikoki gordetzen du"
+msgstr "Zure fitxategia hainbat segundoero automatikoki gordetzen du."
 
 #: views/widgets/SettingsDialog.qml:72
 #, kde-format
@@ -463,15 +461,14 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Aldatu kolore-antolaera argi eta ilunaren artean."
 
 #: views/widgets/SettingsDialog.qml:90
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Terminala"
+msgstr "Sinkronizatu Terminala"
 
 #: views/widgets/SettingsDialog.qml:91
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Sinkronizatu terminala arakatzaileko uneko lan-direktorioarekin."
 
 #: views/widgets/SettingsDialog.qml:104
 #, kde-format
