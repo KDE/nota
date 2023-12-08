@@ -21,14 +21,14 @@ Maui.SplitViewItem
 
         showLineNumbers: settings.showLineNumbers
         property alias showLineCount : _linesCount.visible
-                
+
         body.color: settings.textColor
         body.font.family: settings.font.family
         body.font.pointSize: settings.font.pointSize
-        
+
         document.backgroundColor: settings.backgroundColor
         Maui.Theme.backgroundColor: settings.backgroundColor
-        
+
         document.theme: settings.theme
         document.enableSyntaxHighlighting: settings.enableSyntaxHighlighting
         document.autoSave: settings.autoSave
@@ -104,7 +104,7 @@ Maui.SplitViewItem
 
                     MenuItem
                     {
-                        text: i18n("Open here")
+                        text: i18n("Open Here")
                         icon.name : "open-for-editing"
                         onTriggered:
                         {
@@ -114,7 +114,7 @@ Maui.SplitViewItem
 
                     MenuItem
                     {
-                        text: i18n("Open in new tab")
+                        text: i18n("Open in New Tab")
                         icon.name: "tab-new"
                         onTriggered:
                         {
@@ -125,7 +125,7 @@ Maui.SplitViewItem
                     MenuItem
                     {
                         enabled: _dropArea.urls.length === 1 && currentTab.count <= 1 && settings.supportSplit
-                        text: i18n("Open in new split")
+                        text: i18n("Open in New Split")
                         icon.name: "view-split-left-right"
                         onTriggered:
                         {

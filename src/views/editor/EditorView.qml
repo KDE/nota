@@ -77,6 +77,18 @@ Pane
             holder.body: i18n("You can create or open a new document.")
             holder.actions: [_newFileAction, _openFileAction, _openRecentFileAction]
 
+            Connections
+            {
+                target: _tabView.holder
+                function onContentDropped(drop)
+                {
+                    if(drop.urls)
+                    {
+                        for(var url of drop.urls)
+                            control.openTab(url)
+                    }
+                }
+            }
             tabBar.visible: true
             tabBar.showNewTabButton: false
             tabBar.leftContent: Loader
@@ -591,26 +603,26 @@ Pane
         if(!item)
             return
 
-        if (path && FB.FM.fileExists(path))
-        {
-            item.document.saveAs(path)
-        } else
-        {
-            _dialogLoader.sourceComponent = _fileDialogComponent
-            dialog.mode = dialog.modes.SAVE;
-            //            fileDialog.settings.singleSelection = true
-            dialog.callback = function (paths)
+            if (path && FB.FM.fileExists(path))
             {
-                item.document.saveAs(paths[0])
-                historyList.append(paths[0])
-            };
+                item.document.saveAs(path)
+            } else
+            {
+                _dialogLoader.sourceComponent = _fileDialogComponent
+                dialog.mode = dialog.modes.SAVE;
+                //            fileDialog.settings.singleSelection = true
+                dialog.callback = function (paths)
+                {
+                    item.document.saveAs(paths[0])
+                    historyList.append(paths[0])
+                };
 
-            dialog.open()
-        }
+                dialog.open()
+            }
     }
 
     function isUrlOpen(url : string) : bool
     {
         return fileIndex(url)[0] >= 0;
     }
-    }
+}
