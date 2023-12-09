@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 00:41+0000\n"
+"POT-Creation-Date: 2023-12-09 00:41+0000\n"
 "PO-Revision-Date: 2023-12-01 17:02-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -97,18 +97,21 @@ msgid "New ToDo... Argh!"
 msgstr "Nova tarefa... Argh!"
 
 #: views/editor/Editor.qml:107
-#, kde-format
-msgid "Open here"
+#, fuzzy, kde-format
+#| msgid "Open here"
+msgid "Open Here"
 msgstr "Abrir aqui"
 
 #: views/editor/Editor.qml:117
-#, kde-format
-msgid "Open in new tab"
+#, fuzzy, kde-format
+#| msgid "Open in new tab"
+msgid "Open in New Tab"
 msgstr "Abrir em uma nova aba"
 
 #: views/editor/Editor.qml:128
-#, kde-format
-msgid "Open in new split"
+#, fuzzy, kde-format
+#| msgid "Open in new split"
+msgid "Open in New Split"
 msgstr "Abrir em uma nova divisão"
 
 #: views/editor/Editor.qml:140
@@ -141,94 +144,94 @@ msgstr "Cria um novo documento"
 msgid "You can create or open a new document."
 msgstr "Você pode criar ou abrir um novo documento."
 
-#: views/editor/EditorView.qml:93
+#: views/editor/EditorView.qml:105
 #, kde-format
 msgid "Places"
 msgstr "Locais"
 
-#: views/editor/EditorView.qml:101
+#: views/editor/EditorView.qml:113
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Alternar barra lateral"
 
-#: views/editor/EditorView.qml:150
+#: views/editor/EditorView.qml:162
 #, kde-format
 msgid "Focus"
 msgstr "Foco"
 
-#: views/editor/EditorView.qml:158 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:170 views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Terminal"
 
-#: views/editor/EditorView.qml:169
+#: views/editor/EditorView.qml:181
 #, kde-format
 msgid "Split View"
 msgstr "Dividir a exibição"
 
-#: views/editor/EditorView.qml:190 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:202 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Atalhos"
 
-#: views/editor/EditorView.qml:201
+#: views/editor/EditorView.qml:213
 #, kde-format
 msgid "Settings"
 msgstr "Configurações"
 
-#: views/editor/EditorView.qml:212
+#: views/editor/EditorView.qml:224
 #, kde-format
 msgid "Plugins"
 msgstr "Plugins"
 
-#: views/editor/EditorView.qml:223
+#: views/editor/EditorView.qml:235
 #, kde-format
 msgid "About"
 msgstr "Sobre"
 
-#: views/editor/EditorView.qml:274 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nome"
 
-#: views/editor/EditorView.qml:280 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modificado"
 
-#: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:304 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Tamanho"
 
-#: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:310 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Tipo"
 
-#: views/editor/EditorView.qml:310 views/editor/EditorView.qml:458
+#: views/editor/EditorView.qml:322 views/editor/EditorView.qml:470
 #, kde-format
 msgid "Go to Line"
 msgstr "Ir para a linha"
 
-#: views/editor/EditorView.qml:312
+#: views/editor/EditorView.qml:324
 #, kde-format
 msgid "Line number"
 msgstr "Número da linha"
 
-#: views/editor/EditorView.qml:324 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:336 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Excluir arquivo?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:325 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -237,57 +240,57 @@ msgstr ""
 "Deseja realmente excluir \n"
 "%1"
 
-#: views/editor/EditorView.qml:351
+#: views/editor/EditorView.qml:363
 #, kde-format
 msgid "Undo"
 msgstr "Desfazer"
 
-#: views/editor/EditorView.qml:359
+#: views/editor/EditorView.qml:371
 #, kde-format
 msgid "Redo"
 msgstr "Refazer"
 
-#: views/editor/EditorView.qml:367
+#: views/editor/EditorView.qml:379
 #, kde-format
 msgid "Save"
 msgstr "Salvar"
 
-#: views/editor/EditorView.qml:376
+#: views/editor/EditorView.qml:388
 #, kde-format
 msgid "Save as"
 msgstr "Salvar como"
 
-#: views/editor/EditorView.qml:386
+#: views/editor/EditorView.qml:398
 #, kde-format
 msgid "Find and Replace"
 msgstr "Localizar e substituir"
 
-#: views/editor/EditorView.qml:399
+#: views/editor/EditorView.qml:411
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Contador de linha/palavra"
 
-#: views/editor/EditorView.qml:417
+#: views/editor/EditorView.qml:429
 #, kde-format
 msgid "UnFav it"
 msgstr "Desfavoritar"
 
-#: views/editor/EditorView.qml:432 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:444 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Informações"
 
-#: views/editor/EditorView.qml:445 views/RecentView.qml:137
+#: views/editor/EditorView.qml:457 views/RecentView.qml:137
 #, kde-format
 msgid "Share"
 msgstr "Compartilhar"
 
-#: views/editor/EditorView.qml:470 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:482 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Mostrar na pasta"
 
-#: views/editor/EditorView.qml:480
+#: views/editor/EditorView.qml:492
 #, kde-format
 msgid "Delete File"
 msgstr "Excluir arquivo"
