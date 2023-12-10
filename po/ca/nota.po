@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 00:41+0000\n"
-"PO-Revision-Date: 2023-11-24 10:29+0100\n"
+"PO-Revision-Date: 2023-12-09 12:11+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -100,20 +100,17 @@ msgid "New ToDo... Argh!"
 msgstr "Tasca pendent nova... Vaja!"
 
 #: views/editor/Editor.qml:107
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
 msgstr "Obre aquí"
 
 #: views/editor/Editor.qml:117
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
 msgstr "Obre en una pestanya nova"
 
 #: views/editor/Editor.qml:128
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
 msgstr "Obre a una divisió nova"
 

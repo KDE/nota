@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 00:41+0000\n"
-"PO-Revision-Date: 2023-11-24 09:22+0100\n"
+"PO-Revision-Date: 2023-12-09 09:21+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -98,20 +98,17 @@ msgid "New ToDo... Argh!"
 msgstr "Nova naloga ... Ah!"
 
 #: views/editor/Editor.qml:107
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
 msgstr "Odpri tukaj"
 
 #: views/editor/Editor.qml:117
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
 msgstr "Odpri v novem zavihku"
 
 #: views/editor/Editor.qml:128
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
 msgstr "Odpri v novem razdelku"
 

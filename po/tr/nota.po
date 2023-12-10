@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 00:41+0000\n"
-"PO-Revision-Date: 2023-11-24 13:16+0300\n"
+"PO-Revision-Date: 2023-12-09 21:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.80\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -97,22 +97,19 @@ msgid "New ToDo... Argh!"
 msgstr "Yeni Yapılacak... Uff!"
 
 #: views/editor/Editor.qml:107
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
-msgstr "Burada aç"
+msgstr "Burada Aç"
 
 #: views/editor/Editor.qml:117
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
-msgstr "Yeni sekmede aç"
+msgstr "Yeni Sekmede Aç"
 
 #: views/editor/Editor.qml:128
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
-msgstr "Yeni bölüntüde aç"
+msgstr "Yeni Bölüntüde Aç"
 
 #: views/editor/Editor.qml:140
 #, kde-format
