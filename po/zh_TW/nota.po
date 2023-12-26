@@ -4,226 +4,228 @@
 # This file is distributed under the same license as the nota package.
 # Automatically generated, 2022.
 #
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 00:41+0000\n"
-"PO-Revision-Date: 2022-06-12 00:44+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-12-25 18:38+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Kisaragi Hiu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "mail@kisaragi-hiu.com"
 
 #: main.cpp:47
 #, kde-format
 msgid "Nota"
-msgstr ""
+msgstr "Nota"
 
 #: main.cpp:49
 #, kde-format
 msgid "Browse, create and edit text files."
-msgstr ""
+msgstr "瀏覽、建立並編輯文字檔案。"
 
 #: main.cpp:50
 #, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr ""
+msgstr "© 2019-2023 Maui 開發團隊"
 
 #: main.cpp:53
 #, kde-format
 msgid "Camilo Higuita"
-msgstr ""
+msgstr "Camilo Higuita"
 
 #: main.cpp:53 main.cpp:54
 #, kde-format
 msgid "Developer"
-msgstr ""
+msgstr "開發者"
 
 #: main.cpp:54
 #, kde-format
 msgid "Anupam Basak"
-msgstr ""
+msgstr "Anupam Basak"
 
 #: main.qml:108
 #, kde-format
 msgid "Unsaved files"
-msgstr ""
+msgstr "未儲存的檔案"
 
 #: main.qml:109
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
-msgstr ""
+msgstr "您有未儲存的檔案。您可以返回並儲存它們，或是捨棄所有變更並離開。"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
 msgid "Run"
-msgstr ""
+msgstr "執行"
 
 #: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
 #, kde-format
 msgid "Run & Debug"
-msgstr ""
+msgstr "執行並除錯"
 
 #: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
 #, kde-format
 msgid "Run in Terminal"
-msgstr ""
+msgstr "在終端機執行"
 
 #: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
 #, kde-format
 msgid "Mobile"
-msgstr ""
+msgstr "行動版"
 
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr ""
+msgstr "新的待辦事項...Argh!"
 
 #: views/editor/Editor.qml:107
 #, kde-format
 msgid "Open Here"
-msgstr ""
+msgstr "在此開啟"
 
 #: views/editor/Editor.qml:117
 #, kde-format
 msgid "Open in New Tab"
-msgstr ""
+msgstr "在新分頁開啟"
 
 #: views/editor/Editor.qml:128
 #, kde-format
 msgid "Open in New Split"
-msgstr ""
+msgstr "在新分割檢視開啟"
 
 #: views/editor/Editor.qml:140
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: views/editor/EditorView.qml:32
 #, kde-format
 msgid "Open Files"
-msgstr ""
+msgstr "開啟檔案"
 
 #: views/editor/EditorView.qml:43
 #, kde-format
 msgid "Open Recent Files"
-msgstr ""
+msgstr "開啟最近使用的檔案"
 
 #: views/editor/EditorView.qml:54
 #, kde-format
 msgid "New"
-msgstr ""
+msgstr "新增"
 
 #: views/editor/EditorView.qml:76
 #, kde-format
 msgid "Create a New Document"
-msgstr ""
+msgstr "建立一份新文件"
 
 #: views/editor/EditorView.qml:77
 #, kde-format
 msgid "You can create or open a new document."
-msgstr ""
+msgstr "您可以建立或開啟一份新文件。"
 
 #: views/editor/EditorView.qml:105
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "快速存取"
 
 #: views/editor/EditorView.qml:113
 #, kde-format
 msgid "Toogle SideBar"
-msgstr ""
+msgstr "切換側邊欄"
 
 #: views/editor/EditorView.qml:162
 #, kde-format
 msgid "Focus"
-msgstr ""
+msgstr "焦點"
 
 #: views/editor/EditorView.qml:170 views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
-msgstr ""
+msgstr "終端機"
 
 #: views/editor/EditorView.qml:181
 #, kde-format
 msgid "Split View"
-msgstr ""
+msgstr "分割檢視"
 
 #: views/editor/EditorView.qml:202 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷鍵"
 
 #: views/editor/EditorView.qml:213
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: views/editor/EditorView.qml:224
 #, kde-format
 msgid "Plugins"
-msgstr ""
+msgstr "外掛程式"
 
 #: views/editor/EditorView.qml:235
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 #: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
-msgstr ""
+msgstr "已修改"
 
 #: views/editor/EditorView.qml:304 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "大小"
 
 #: views/editor/EditorView.qml:310 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
-msgstr ""
+msgstr "類型"
 
 #: views/editor/EditorView.qml:322 views/editor/EditorView.qml:470
 #, kde-format
 msgid "Go to Line"
-msgstr ""
+msgstr "跳至行數"
 
 #: views/editor/EditorView.qml:324
 #, kde-format
 msgid "Line number"
-msgstr ""
+msgstr "行號"
 
 #: views/editor/EditorView.qml:336 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
-msgstr ""
+msgstr "刪除檔案？"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
@@ -233,373 +235,375 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+"您確定要刪除嗎\n"
+"%1"
 
 #: views/editor/EditorView.qml:363
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "復原"
 
 #: views/editor/EditorView.qml:371
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "重做"
 
 #: views/editor/EditorView.qml:379
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #: views/editor/EditorView.qml:388
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "另存新檔"
 
 #: views/editor/EditorView.qml:398
 #, kde-format
 msgid "Find and Replace"
-msgstr ""
+msgstr "搜尋與取代"
 
 #: views/editor/EditorView.qml:411
 #, kde-format
 msgid "Line/Word Counter"
-msgstr ""
+msgstr "行數/字數"
 
 #: views/editor/EditorView.qml:429
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "從最愛中移除它"
 
 #: views/editor/EditorView.qml:444 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "資訊"
 
 #: views/editor/EditorView.qml:457 views/RecentView.qml:137
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "分享"
 
 #: views/editor/EditorView.qml:482 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
-msgstr ""
+msgstr "在資料夾顯示"
 
 #: views/editor/EditorView.qml:492
 #, kde-format
 msgid "Delete File"
-msgstr ""
+msgstr "刪除檔案"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
 msgid "Previous"
-msgstr ""
+msgstr "上一頁"
 
 #: views/PlacesSidebar.qml:68
 #, kde-format
 msgid "Up"
-msgstr ""
+msgstr "往上"
 
 #: views/PlacesSidebar.qml:76
 #, kde-format
 msgid "Next"
-msgstr ""
+msgstr "下一頁"
 
 #: views/PlacesSidebar.qml:100
 #, kde-format
 msgid "Show Folders First"
-msgstr ""
+msgstr "先顯示資料夾"
 
 #: views/PlacesSidebar.qml:158
 #, kde-format
 msgid "Group"
-msgstr ""
+msgstr "群組"
 
 #: views/RecentView.qml:20
 #, kde-format
 msgid "No Recent Files!"
-msgstr ""
+msgstr "沒有最近檔案！"
 
 #: views/RecentView.qml:21
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr ""
+msgstr "這裡您可以看到您最近開啟的檔案"
 
 #: views/RecentView.qml:123
 #, kde-format
 msgid "Open"
-msgstr ""
+msgstr "開啟"
 
 #: views/RecentView.qml:144 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "匯出"
 
 #: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
-msgstr ""
+msgstr "過濾…"
 
 #: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "選取"
 
 #: views/widgets/ItemMenu.qml:110
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "複製"
 
 #: views/widgets/ItemMenu.qml:120
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: views/widgets/PluginsDialog.qml:13
 #, kde-format
 msgid "Default Plugins"
-msgstr ""
+msgstr "預設外掛程式"
 
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr ""
+msgstr "啟用或移除預設外掛程式"
 
 #: views/widgets/PluginsDialog.qml:22
 #, kde-format
 msgid "QML Scene"
-msgstr ""
+msgstr "QML 場景"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr ""
+msgstr "在一個 QML 場景中載入目前檔案。"
 
 #: views/widgets/PluginsDialog.qml:52
 #, kde-format
 msgid "ToDo"
-msgstr ""
+msgstr "待辦事項"
 
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "List of to-do tasks."
-msgstr ""
+msgstr "待辦事項列表。"
 
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
 #, kde-format
 msgid "Builder"
-msgstr ""
+msgstr "編譯工具"
 
 #: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr ""
+msgstr "設定要編譯並執行的專案。"
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "HTML Previewer"
-msgstr ""
+msgstr "HTML 預覽器"
 
 #: views/widgets/PluginsDialog.qml:90
 #, kde-format
 msgid "Preview HTML code live."
-msgstr ""
+msgstr "實時預覽 HTML 原始碼。"
 
 #: views/widgets/PluginsDialog.qml:98
 #, kde-format
 msgid "Load Plugins"
-msgstr ""
+msgstr "載入外掛程式"
 
 #: views/widgets/PluginsDialog.qml:99
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr ""
+msgstr "啟用或移除第三方外掛程式"
 
 #: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:168
 #, kde-format
 msgid "Font"
-msgstr ""
+msgstr "字型"
 
 #: views/widgets/SettingsDialog.qml:39
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: views/widgets/SettingsDialog.qml:44
 #, kde-format
 msgid "Places Sidebar"
-msgstr ""
+msgstr "快速存取側邊欄"
 
 #: views/widgets/SettingsDialog.qml:45
 #, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr ""
+msgstr "從側邊欄裡瀏覽您的檔案系統。"
 
 #: views/widgets/SettingsDialog.qml:57
 #, kde-format
 msgid "Auto Save"
-msgstr ""
+msgstr "自動儲存"
 
 #: views/widgets/SettingsDialog.qml:58
 #, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr ""
+msgstr "每隔幾秒自動儲存您的檔案。"
 
 #: views/widgets/SettingsDialog.qml:72
 #, kde-format
 msgid "Dark Mode"
-msgstr ""
+msgstr "暗色模式"
 
 #: views/widgets/SettingsDialog.qml:73
 #, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr ""
+msgstr "在明亮和暗色配色方案間切換。"
 
 #: views/widgets/SettingsDialog.qml:90
 #, kde-format
 msgid "Sync Terminal"
-msgstr ""
+msgstr "同步終端機"
 
 #: views/widgets/SettingsDialog.qml:91
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "同步終端機目前位置與瀏覽器的目前工作目錄。"
 
 #: views/widgets/SettingsDialog.qml:104
 #, kde-format
 msgid "Editor"
-msgstr ""
+msgstr "編輯器"
 
 #: views/widgets/SettingsDialog.qml:109
 #, kde-format
 msgid "Line Numbers"
-msgstr ""
+msgstr "行號"
 
 #: views/widgets/SettingsDialog.qml:110
 #, kde-format
 msgid "Display the line numbers on the left side."
-msgstr ""
+msgstr "在左側顯示行號。"
 
 #: views/widgets/SettingsDialog.qml:122
 #, kde-format
 msgid "Syntax Highlighting Languages"
-msgstr ""
+msgstr "語法突顯語言"
 
 #: views/widgets/SettingsDialog.qml:123
 #, kde-format
 msgid "Display available languages."
-msgstr ""
+msgstr "顯示可用語言。"
 
 #: views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid "Syntax Highlighting"
-msgstr ""
+msgstr "語法突顯"
 
 #: views/widgets/SettingsDialog.qml:136
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr ""
+msgstr "為支援的語言啟用語法突顯"
 
 #: views/widgets/SettingsDialog.qml:148 views/widgets/SettingsDialog.qml:198
 #: views/widgets/SettingsDialog.qml:202
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "顏色"
 
 #: views/widgets/SettingsDialog.qml:149
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
-msgstr ""
+msgstr "設定語法突顯的配色方案。這個設定不會套用到 rich text 格式。"
 
 #: views/widgets/SettingsDialog.qml:163
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "顯示"
 
 #: views/widgets/SettingsDialog.qml:169
 #, kde-format
 msgid "Font family and size."
-msgstr ""
+msgstr "字型家族與大小。"
 
 #: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Tab Space"
-msgstr ""
+msgstr "Tab 空白"
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
-msgstr ""
+msgstr "設定語法突顯的風格。這個設定不會套用到 rich text 格式。"
 
 #: views/widgets/SettingsDialog.qml:208
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "顏色"
 
 #: views/widgets/SettingsDialog.qml:209
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "編輯器背景顏色。"
 
 #: views/widgets/SettingsDialog.qml:240
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "主題"
 
 #: views/widgets/SettingsDialog.qml:241
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "編輯器配色方案風格。"
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
 msgid "Navigation"
-msgstr ""
+msgstr "導覽"
 
 #: views/widgets/ShortcutsDialog.qml:20
 #, kde-format
 msgid "Browser navigation."
-msgstr ""
+msgstr "瀏覽器導覽。"
 
 #: views/widgets/ShortcutsDialog.qml:24
 #, kde-format
 msgid "New Tab"
-msgstr ""
+msgstr "新分頁"
 
 #: views/widgets/ShortcutsDialog.qml:44
 #, kde-format
 msgid "Close Tab"
-msgstr ""
+msgstr "關閉分頁"
 
 #: views/widgets/ShortcutsDialog.qml:64
 #, kde-format
 msgid "Path Edit"
-msgstr ""
+msgstr "路徑編輯"
 
 #: views/widgets/ShortcutsDialog.qml:99
 #, kde-format
 msgid "Split"
-msgstr ""
+msgstr "分割"
 
 #: views/widgets/ShortcutsDialog.qml:114
 #, kde-format
 msgid "New File"
-msgstr ""
+msgstr "建立檔案"
 
 #: views/widgets/ShortcutsDialog.qml:134
 #, kde-format
 msgid "Preview"
-msgstr ""
+msgstr "預覽"
 
 #: views/widgets/ShortcutsDialog.qml:149
 #, kde-format
 msgid "Find Tab"
-msgstr ""
+msgstr "尋找分頁"
 
 #: views/widgets/ShortcutsDialog.qml:169
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "全部選取"
