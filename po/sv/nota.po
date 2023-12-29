@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Stefan Asserhäll <stefan.asserhall@bredband.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 00:41+0000\n"
-"PO-Revision-Date: 2023-07-31 14:19+0200\n"
+"PO-Revision-Date: 2023-12-28 15:46+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,10 +38,9 @@ msgid "Browse, create and edit text files."
 msgstr "Bläddra bland, skapa, och redigera textfiler"
 
 #: main.cpp:50
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui utvecklingsgrupp"
+msgstr "© 2019-2023 Maui utvecklingsgrupp"
 
 #: main.cpp:53
 #, kde-format
@@ -98,20 +97,17 @@ msgid "New ToDo... Argh!"
 msgstr "Ny uppgift ... Argh!"
 
 #: views/editor/Editor.qml:107
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
 msgstr "Öppna här"
 
 #: views/editor/Editor.qml:117
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
 msgstr "Öppna under ny flik"
 
 #: views/editor/Editor.qml:128
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
 msgstr "Öppna under ny delning"
 
@@ -447,10 +443,9 @@ msgid "Auto Save"
 msgstr "Spara automatiskt"
 
 #: views/widgets/SettingsDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Sparar filen automatiskt med några sekunders mellanrum"
+msgstr "Sparar filen automatiskt med några sekunders mellanrum."
 
 #: views/widgets/SettingsDialog.qml:72
 #, kde-format
@@ -463,15 +458,14 @@ msgid "Switch between light and dark colorscheme."
 msgstr "Byt mellan ljust och mörkt färgschema."
 
 #: views/widgets/SettingsDialog.qml:90
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Terminal"
+msgstr "Synkronisera terminal"
 
 #: views/widgets/SettingsDialog.qml:91
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Synkronisera terminalen med bläddrarens nuvarande arbetskatalog."
 
 #: views/widgets/SettingsDialog.qml:104
 #, kde-format
@@ -575,7 +569,7 @@ msgstr "Navigering"
 #: views/widgets/ShortcutsDialog.qml:20
 #, kde-format
 msgid "Browser navigation."
-msgstr "Webbläsarnavigering."
+msgstr "Bläddrarnavigering."
 
 #: views/widgets/ShortcutsDialog.qml:24
 #, kde-format
