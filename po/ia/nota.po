@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2021, 2022, 2023.
+# Giovanni Sora <g.sora@tiscali.it>, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-09 00:41+0000\n"
-"PO-Revision-Date: 2023-11-30 10:28+0100\n"
+"PO-Revision-Date: 2024-01-03 14:57+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -95,20 +95,17 @@ msgid "New ToDo... Argh!"
 msgstr "Nove De Facer (Agenda) ... Argh!"
 
 #: views/editor/Editor.qml:107
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
 msgstr "Aperi hic"
 
 #: views/editor/Editor.qml:117
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
 msgstr "Aperi in nove scheda"
 
 #: views/editor/Editor.qml:128
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
 msgstr "Aperi in nove fissura"
 
