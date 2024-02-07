@@ -54,6 +54,8 @@ Maui.ApplicationWindow
         property alias sideBarWidth : _sideBarView.sideBar.preferredWidth
         property font font : defaultFont
         property bool syncTerminal: true
+         property bool terminalFollowsColorScheme: true
+        property string terminalColorScheme: "Maui-Dark"
     }
 
 //    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)

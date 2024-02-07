@@ -13,8 +13,10 @@ Term.Terminal
     id: control
     Maui.Theme.colorSet: Maui.Theme.Window
     Maui.Theme.inherit: false
-    kterminal.colorScheme: "Adaptive"
-    session.initialWorkingDirectory: String(FB.FM.fileDir(editor.fileUrl)).replace("file://", "")
+    
+    kterminal.colorScheme: settings.terminalFollowsColorScheme ? "Adaptive" : settings.terminalColorScheme
+  
+  session.initialWorkingDirectory: String(FB.FM.fileDir(editor.fileUrl)).replace("file://", "")
     onUrlsDropped:
     {
         var str = ""
@@ -24,7 +26,7 @@ Term.Terminal
         control.session.sendText(str)
     }
 
-    onKeyPressed:
+    onKeyPressed: (event) =>
     {
         if(event.key == Qt.Key_F4)
         {

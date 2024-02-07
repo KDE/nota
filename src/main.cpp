@@ -44,14 +44,15 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     KLocalizedString::setApplicationDomain("nota");
 
     KAboutData about(QStringLiteral("nota"),
-                     i18n("Nota"),
+                     QStringLiteral("Nota"),
                      NOTA_VERSION_STRING,
                      i18n("Browse, create and edit text files."),
-                     KAboutLicense::LGPL_V3,i18n("© 2019-2023 Maui Development Team"),
+                     KAboutLicense::LGPL_V3,
+                     APP_COPYRIGHT_NOTICE,
                      QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
 
-    about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
-    about.addAuthor(i18n("Anupam Basak"), i18n("Developer"), QStringLiteral("anupam.basak27@gmail.com"));
+    about.addAuthor(QStringLiteral("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
+    about.addAuthor(QStringLiteral("Anupam Basak"), i18n("Developer"), QStringLiteral("anupam.basak27@gmail.com"));
     about.setHomepage("https://mauikit.org");
     about.setProductName("maui/nota");
     about.setBugAddress("https://invent.kde.org/maui/nota/-/issues");

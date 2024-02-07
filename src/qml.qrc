@@ -5,6 +5,7 @@
         <file>views/widgets/DocsBrowser.qml</file>
         <file>views/widgets/SettingsDialog.qml</file>
         <file>views/Terminal.qml</file>
+        <file>views/widgets/TerminalColorSchemes.qml</file>
         <file>views/PlacesSidebar.qml</file>
         <file>views/editor/EditorView.qml</file>
         <file>views/editor/Editor.qml</file>

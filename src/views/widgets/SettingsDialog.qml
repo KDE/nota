@@ -64,39 +64,6 @@ Maui.SettingsDialog
                 onToggled: settings.autoSave = !settings.autoSave
             }
         }
-
-        Maui.SectionItem
-        {
-            visible: Maui.Handy.isAndroid
-
-            label1.text: i18n("Dark Mode")
-            label2.text: i18n("Switch between light and dark colorscheme.")
-
-            Switch
-            {
-                Layout.fillHeight: true
-                checked: settings.darkMode
-                onToggled:
-                {
-                    settings.darkMode = !settings.darkMode
-                    setAndroidStatusBarColor()
-                }
-            }
-        }
-
-        Maui.SectionItem
-        {
-            enabled: Maui.Handy.isLinux
-            label1.text:  i18n("Sync Terminal")
-            label2.text: i18n("Sync the terminal to the browser current working directory.")
-
-            Switch
-            {
-                checkable: true
-                checked:  settings.syncTerminal
-                onToggled: settings.restoreSession = !settings.syncTerminal
-            }
-        }
     }
 
     Maui.SectionGroup
@@ -188,145 +155,78 @@ Maui.SettingsDialog
             }
         }
     }
-
-    Component
+    
+    Maui.SectionGroup
     {
-        id:_stylePageComponent
+        title: i18n("Terminal")
+       description: i18n("Embedded terminal options.")       
+       enabled: Maui.Handy.isLinux     
 
-        Maui.SettingsPage
+        Maui.SectionItem
         {
-            title: i18n("Colors")
+            label1.text:  i18n("Sync Terminal")
+            label2.text: i18n("Sync the terminal to the browser current working directory.")
 
-            Maui.SectionGroup
+            Switch
             {
-                title: i18n("Colors")
-                description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
-                visible: settings.enableSyntaxHighlighting
+                checkable: true
+                checked:  settings.syncTerminal
+                onToggled: settings.restoreSession = !settings.syncTerminal
+            }
+        }
 
-                Maui.SectionItem
+        Maui.SectionItem
+        {
+           label1.text: i18n("Adaptive Color Scheme")
+            label2.text: i18n("Colors based on the current style.")
+
+            Switch
+            {
+                checked: settings.terminalFollowsColorScheme
+                onToggled: settings.terminalFollowsColorScheme = !settings.terminalFollowsColorScheme
+            }
+        }
+        
+        Maui.SectionItem
+        {
+            label1.text: i18n("Color Scheme")
+            label2.text: i18n("Change the color scheme of the terminal.")
+            enabled: !settings.terminalFollowsColorScheme
+
+            ToolButton
+            {
+                checkable: true
+                icon.name: "go-next"
+                onToggled: 
                 {
-                    label1.text:  i18n("Color")
-                    label2.text: i18n("Editor background color.")
-
-                    Maui.ColorsRow
-                    {
-                        spacing: Maui.Style.space.medium
-                        currentColor: appSettings.backgroundColor
-                        colors: ["#333", "#fafafa", "#fff3e6", "#4c425b"]
-
-                        onColorPicked:
-                        {
-                            currentColor = color
-
-                            var textColor
-
-                            switch(color)
-                            {
-                            case "#333": textColor = "#fafafa"; break;
-                            case "#fafafa": textColor = "#333"; break;
-                            case "#fff3e6": textColor = Qt.darker(color, 2); break;
-                            case "#4c425b": textColor = Qt.lighter(color, 2.5); break;
-                            default: textColor = Maui.Theme.textColor;
-                            }
-
-                            switchBackgroundColor(color, textColor)
-                        }
-
-                    }
-                }
-
-                Maui.SectionItem
-                {
-                    label1.text:  i18n("Theme")
-                    label2.text: i18n("Editor color scheme style.")
-                    columns: 1
-
-                    GridLayout
-                    {
-                        columns: 3
-                        Layout.fillWidth: true
-                        opacity: enabled ? 1 : 0.5
-
-                        Repeater
-                        {
-                            model: TE.ColorSchemesModel {}
-
-                            delegate: Maui.GridBrowserDelegate
-                            {
-                                Layout.fillWidth: true
-                                checked: model.name === settings.theme
-                                onClicked: settings.theme = model.name
-                                label1.text: model.name
-
-                                template.iconComponent: Rectangle
-                                {
-                                    implicitHeight: Math.max(_layout.implicitHeight + topPadding + bottomPadding, 64)
-
-                                    color: appSettings.backgroundColor
-                                    radius: Maui.Style.radiusV
-
-                                    Column
-                                    {
-                                        id: _layout
-                                        anchors.fill: parent
-                                        anchors.margins: Maui.Style.space.small
-
-                                        spacing: 2
-
-                                        Text
-                                        {
-                                            wrapMode: Text.NoWrap
-                                            elide: Text.ElideLeft
-                                            width: parent.width
-                                            text: "Nota { @ }"
-                                            color: model.foreground
-                                            font.family: settings.font.family
-                                        }
-
-                                        Rectangle
-                                        {
-                                            radius: 2
-                                            height: 8
-                                            width: parent.width
-                                            color: model.highlight
-                                        }
-
-                                        Rectangle
-                                        {
-                                            radius: 2
-                                            height: 8
-                                            width: parent.width
-                                            color: model.color3
-                                        }
-
-                                        Rectangle
-                                        {
-                                            radius: 2
-                                            height: 8
-                                            width: parent.width
-                                            color: model.color4
-                                        }
-
-                                        Rectangle
-                                        {
-                                            radius: 2
-                                            height: 8
-                                            width: parent.width
-                                            color: model.color5
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    var component = Qt.createComponent("TerminalColorSchemes.qml");
+    var page = component.createObject(control);
+                    control.addPage(page)
                 }
             }
         }
     }
 
-    function switchBackgroundColor(backgroundColor, textColor)
+    Component
     {
-        root.appSettings.backgroundColor = backgroundColor
-        root.appSettings.textColor = textColor
+        id:_stylePageComponent
+        TE.ColorSchemesPage 
+        {
+          enabled: settings.enableSyntaxHighlighting
+          
+          currentTheme: appSettings.theme
+          backgroundColor: appSettings.backgroundColor
+          
+          onColorsPicked: (background, text) =>
+          {
+              root.appSettings.backgroundColor = background
+        root.appSettings.textColor = text
+          }
+          
+          onCurrentThemeChanged: appSettings.theme = currentTheme
+          
+        }
+    
     }
+
 }
