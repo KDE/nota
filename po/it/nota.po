@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 00:41+0000\n"
+"POT-Creation-Date: 2024-02-08 01:39+0000\n"
 "PO-Revision-Date: 2023-12-12 14:24+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -27,42 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "smart2128vr@gmail.com"
 
-#: main.cpp:47
-#, kde-format
-msgid "Nota"
-msgstr "Nota"
-
 #: main.cpp:49
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Soglia, crea e modifica file di testo."
 
-#: main.cpp:50
-#, kde-format
-msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-2023 La squadra di sviluppo di Maui"
-
-#: main.cpp:53
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
-
-#: main.cpp:53 main.cpp:54
+#: main.cpp:54 main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "Sviluppatore"
 
-#: main.cpp:54
-#, kde-format
-msgid "Anupam Basak"
-msgstr "Anupam Basak"
-
-#: main.qml:108
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "File non salvati"
 
-#: main.qml:109
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -156,7 +136,8 @@ msgstr "Commuta la barra laterale"
 msgid "Focus"
 msgstr "Fuoco"
 
-#: views/editor/EditorView.qml:170 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:161
+#: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Terminale"
@@ -417,7 +398,7 @@ msgstr "Carica le estensioni"
 msgid "Activate or remove the third party plugins"
 msgstr "Attiva o rimuovi le estensioni di terze parti"
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:168
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid "Font"
 msgstr "Carattere"
@@ -447,69 +428,47 @@ msgstr "Salvataggio automatico"
 msgid "Auto saves your file every few seconds."
 msgstr "Salva automaticamente il tuo file dopo pochi secondi."
 
-#: views/widgets/SettingsDialog.qml:72
-#, kde-format
-msgid "Dark Mode"
-msgstr "Modalità scura"
-
-#: views/widgets/SettingsDialog.qml:73
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "Passa dallo schema di colori chiaro allo scuro e viceversa."
-
-#: views/widgets/SettingsDialog.qml:90
-#, kde-format
-msgid "Sync Terminal"
-msgstr "Sincronizza il terminale"
-
-#: views/widgets/SettingsDialog.qml:91
-#, kde-format
-msgid "Sync the terminal to the browser current working directory."
-msgstr ""
-"Sincronizza il terminale con la cartella di lavoro attuale del browser."
-
-#: views/widgets/SettingsDialog.qml:104
+#: views/widgets/SettingsDialog.qml:71
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: views/widgets/SettingsDialog.qml:109
+#: views/widgets/SettingsDialog.qml:76
 #, kde-format
 msgid "Line Numbers"
 msgstr "Numeri di riga"
 
-#: views/widgets/SettingsDialog.qml:110
+#: views/widgets/SettingsDialog.qml:77
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr "Mostra i numeri di riga sul lato sinistro."
 
-#: views/widgets/SettingsDialog.qml:122
+#: views/widgets/SettingsDialog.qml:89
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Linguaggi di evidenziazione della sintassi"
 
-#: views/widgets/SettingsDialog.qml:123
+#: views/widgets/SettingsDialog.qml:90
 #, kde-format
 msgid "Display available languages."
 msgstr "Visualizza i linguaggi disponibili."
 
-#: views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:102
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Evidenziazione della sintassi"
 
-#: views/widgets/SettingsDialog.qml:136
+#: views/widgets/SettingsDialog.qml:103
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Abilita l'evidenziazione della sintassi per i linguaggi supportati."
 
-#: views/widgets/SettingsDialog.qml:148 views/widgets/SettingsDialog.qml:198
-#: views/widgets/SettingsDialog.qml:202
+#: views/widgets/SettingsDialog.qml:115
 #, kde-format
 msgid "Colors"
 msgstr "Colori"
 
-#: views/widgets/SettingsDialog.qml:149
+#: views/widgets/SettingsDialog.qml:116
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -518,49 +477,57 @@ msgstr ""
 "Configura lo stile di evidenziazione della sintassi. Questa configurazione "
 "non è applicata al testo formattato."
 
-#: views/widgets/SettingsDialog.qml:163
+#: views/widgets/SettingsDialog.qml:130
 #, kde-format
 msgid "Display"
 msgstr "Schermo"
 
-#: views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:136
 #, kde-format
 msgid "Font family and size."
 msgstr "Famiglia e dimensioni del carattere."
 
-#: views/widgets/SettingsDialog.qml:181
+#: views/widgets/SettingsDialog.qml:148
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulazione"
 
-#: views/widgets/SettingsDialog.qml:203
+#: views/widgets/SettingsDialog.qml:162
+#, fuzzy, kde-format
+#| msgid "Embedded Terminal"
+msgid "Embedded terminal options."
+msgstr "Terminale integrato"
+
+#: views/widgets/SettingsDialog.qml:167
 #, kde-format
-msgid ""
-"Configure the style of the syntax highliting. This configuration in not "
-"applied for rich text formats."
+msgid "Sync Terminal"
+msgstr "Sincronizza il terminale"
+
+#: views/widgets/SettingsDialog.qml:168
+#, kde-format
+msgid "Sync the terminal to the browser current working directory."
 msgstr ""
-"Configura lo stile di evidenziazione della sintassi. Questa configurazione "
-"non è applicata al testo formattato."
+"Sincronizza il terminale con la cartella di lavoro attuale del browser."
 
-#: views/widgets/SettingsDialog.qml:208
+#: views/widgets/SettingsDialog.qml:180
 #, kde-format
-msgid "Color"
-msgstr "Colore"
+msgid "Adaptive Color Scheme"
+msgstr ""
 
-#: views/widgets/SettingsDialog.qml:209
+#: views/widgets/SettingsDialog.qml:181
 #, kde-format
-msgid "Editor background color."
-msgstr "Colore di sfondo dell'editor."
+msgid "Colors based on the current style."
+msgstr ""
 
-#: views/widgets/SettingsDialog.qml:240
+#: views/widgets/SettingsDialog.qml:192
 #, kde-format
-msgid "Theme"
-msgstr "Tema"
+msgid "Color Scheme"
+msgstr ""
 
-#: views/widgets/SettingsDialog.qml:241
+#: views/widgets/SettingsDialog.qml:193
 #, kde-format
-msgid "Editor color scheme style."
-msgstr "Stile dello schema di colori dell'editor."
+msgid "Change the color scheme of the terminal."
+msgstr ""
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -611,6 +578,43 @@ msgstr "Trova scheda"
 #, kde-format
 msgid "Select All"
 msgstr "Seleziona tutto"
+
+#~ msgid "Nota"
+#~ msgstr "Nota"
+
+#~ msgid "© 2019-2023 Maui Development Team"
+#~ msgstr "© 2019-2023 La squadra di sviluppo di Maui"
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "Camilo Higuita"
+
+#~ msgid "Anupam Basak"
+#~ msgstr "Anupam Basak"
+
+#~ msgid "Dark Mode"
+#~ msgstr "Modalità scura"
+
+#~ msgid "Switch between light and dark colorscheme."
+#~ msgstr "Passa dallo schema di colori chiaro allo scuro e viceversa."
+
+#~ msgid ""
+#~ "Configure the style of the syntax highliting. This configuration in not "
+#~ "applied for rich text formats."
+#~ msgstr ""
+#~ "Configura lo stile di evidenziazione della sintassi. Questa "
+#~ "configurazione non è applicata al testo formattato."
+
+#~ msgid "Color"
+#~ msgstr "Colore"
+
+#~ msgid "Editor background color."
+#~ msgstr "Colore di sfondo dell'editor."
+
+#~ msgid "Theme"
+#~ msgstr "Tema"
+
+#~ msgid "Editor color scheme style."
+#~ msgstr "Stile dello schema di colori dell'editor."
 
 #~ msgid "Configure the app UI, behaviour and plugins."
 #~ msgstr ""
@@ -694,9 +698,6 @@ msgstr "Seleziona tutto"
 
 #~ msgid "Creates a blank file by default"
 #~ msgstr "Crea un file vuoto in modo predefinito"
-
-#~ msgid "Embedded Terminal"
-#~ msgstr "Terminale integrato"
 
 #~ msgid "Enabled an embedded terminal"
 #~ msgstr "Abilita un terminale integrato"

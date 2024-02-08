@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 00:41+0000\n"
+"POT-Creation-Date: 2024-02-08 01:39+0000\n"
 "PO-Revision-Date: 2024-01-03 14:57+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -27,42 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
 
-#: main.cpp:47
-#, kde-format
-msgid "Nota"
-msgstr "Nota"
-
 #: main.cpp:49
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Naviga, crea e modifica files de texto."
 
-#: main.cpp:50
-#, kde-format
-msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-2023 Equipa de disveloppamento de Maui"
-
-#: main.cpp:53
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
-
-#: main.cpp:53 main.cpp:54
+#: main.cpp:54 main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "Disveloppator"
 
-#: main.cpp:54
-#, kde-format
-msgid "Anupam Basak"
-msgstr "Anupam Basak"
-
-#: main.qml:108
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "Files non salveguardate"
 
-#: main.qml:109
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -154,7 +134,8 @@ msgstr "Commuta barra de latere"
 msgid "Focus"
 msgstr "Foco"
 
-#: views/editor/EditorView.qml:170 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:161
+#: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Terminal"
@@ -415,7 +396,7 @@ msgstr "Carga Plugins"
 msgid "Activate or remove the third party plugins"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:168
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:135
 #, kde-format
 msgid "Font"
 msgstr "Font"
@@ -445,114 +426,101 @@ msgstr "Auto Salveguarda"
 msgid "Auto saves your file every few seconds."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:72
-#, kde-format
-msgid "Dark Mode"
-msgstr "Modo obscur"
-
-#: views/widgets/SettingsDialog.qml:73
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "Commuta inter schema de color clar e obscur"
-
-#: views/widgets/SettingsDialog.qml:90
-#, kde-format
-msgid "Sync Terminal"
-msgstr "Sync Terminal"
-
-#: views/widgets/SettingsDialog.qml:91
-#, kde-format
-msgid "Sync the terminal to the browser current working directory."
-msgstr ""
-
-#: views/widgets/SettingsDialog.qml:104
+#: views/widgets/SettingsDialog.qml:71
 #, kde-format
 msgid "Editor"
 msgstr "Editor"
 
-#: views/widgets/SettingsDialog.qml:109
+#: views/widgets/SettingsDialog.qml:76
 #, kde-format
 msgid "Line Numbers"
 msgstr "Numeros de linea"
 
-#: views/widgets/SettingsDialog.qml:110
+#: views/widgets/SettingsDialog.qml:77
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:122
+#: views/widgets/SettingsDialog.qml:89
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:123
+#: views/widgets/SettingsDialog.qml:90
 #, kde-format
 msgid "Display available languages."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:102
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Evidentiar syntaxe"
 
-#: views/widgets/SettingsDialog.qml:136
+#: views/widgets/SettingsDialog.qml:103
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:148 views/widgets/SettingsDialog.qml:198
-#: views/widgets/SettingsDialog.qml:202
+#: views/widgets/SettingsDialog.qml:115
 #, kde-format
 msgid "Colors"
 msgstr "Colores"
 
-#: views/widgets/SettingsDialog.qml:149
+#: views/widgets/SettingsDialog.qml:116
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:163
+#: views/widgets/SettingsDialog.qml:130
 #, kde-format
 msgid "Display"
 msgstr "Monstrator"
 
-#: views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:136
 #, kde-format
 msgid "Font family and size."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:181
+#: views/widgets/SettingsDialog.qml:148
 #, kde-format
 msgid "Tab Space"
 msgstr "Spatio de Tab"
 
-#: views/widgets/SettingsDialog.qml:203
+#: views/widgets/SettingsDialog.qml:162
 #, kde-format
-msgid ""
-"Configure the style of the syntax highliting. This configuration in not "
-"applied for rich text formats."
+msgid "Embedded terminal options."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:208
+#: views/widgets/SettingsDialog.qml:167
 #, kde-format
-msgid "Color"
-msgstr "Color"
+msgid "Sync Terminal"
+msgstr "Sync Terminal"
 
-#: views/widgets/SettingsDialog.qml:209
+#: views/widgets/SettingsDialog.qml:168
 #, kde-format
-msgid "Editor background color."
+msgid "Sync the terminal to the browser current working directory."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:240
+#: views/widgets/SettingsDialog.qml:180
 #, kde-format
-msgid "Theme"
-msgstr "Thema"
+msgid "Adaptive Color Scheme"
+msgstr ""
 
-#: views/widgets/SettingsDialog.qml:241
+#: views/widgets/SettingsDialog.qml:181
 #, kde-format
-msgid "Editor color scheme style."
+msgid "Colors based on the current style."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:192
+#, kde-format
+msgid "Color Scheme"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:193
+#, kde-format
+msgid "Change the color scheme of the terminal."
 msgstr ""
 
 #: views/widgets/ShortcutsDialog.qml:19
@@ -604,6 +572,30 @@ msgstr "Trova scheda"
 #, kde-format
 msgid "Select All"
 msgstr "Selige toto"
+
+#~ msgid "Nota"
+#~ msgstr "Nota"
+
+#~ msgid "© 2019-2023 Maui Development Team"
+#~ msgstr "© 2019-2023 Equipa de disveloppamento de Maui"
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "Camilo Higuita"
+
+#~ msgid "Anupam Basak"
+#~ msgstr "Anupam Basak"
+
+#~ msgid "Dark Mode"
+#~ msgstr "Modo obscur"
+
+#~ msgid "Switch between light and dark colorscheme."
+#~ msgstr "Commuta inter schema de color clar e obscur"
+
+#~ msgid "Color"
+#~ msgstr "Color"
+
+#~ msgid "Theme"
+#~ msgstr "Thema"
 
 #~ msgid "Go back"
 #~ msgstr "Vade retro"

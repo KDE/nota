@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-09 00:41+0000\n"
+"POT-Creation-Date: 2024-02-08 01:39+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -27,43 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kiszel.kristof@gmail.com"
 
-#: main.cpp:47
-#, kde-format
-msgid "Nota"
-msgstr "Nota"
-
 #: main.cpp:49
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Szövegfájlok böngészése, létrehozása és szerkesztése."
 
-#: main.cpp:50
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
-msgid "© 2019-2023 Maui Development Team"
-msgstr "© A Maui fejlesztői, 2019-%1."
-
-#: main.cpp:53
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
-
-#: main.cpp:53 main.cpp:54
+#: main.cpp:54 main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "Fejlesztő"
 
-#: main.cpp:54
-#, kde-format
-msgid "Anupam Basak"
-msgstr "Anupam Basak"
-
-#: main.qml:108
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "Nem mentett fájlok"
 
-#: main.qml:109
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -162,7 +141,8 @@ msgstr "Oldalsáv be/ki"
 msgid "Focus"
 msgstr "Fókusz"
 
-#: views/editor/EditorView.qml:170 views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:161
+#: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
 msgstr "Terminál"
@@ -427,7 +407,7 @@ msgstr "Bővítmények betöltése"
 msgid "Activate or remove the third party plugins"
 msgstr "Harmadik féltől származó bővítmények aktiválása vagy eltávolítása"
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:168
+#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:135
 #, fuzzy, kde-format
 #| msgid "Fonts"
 msgid "Font"
@@ -460,73 +440,51 @@ msgstr "Automatikus mentés"
 msgid "Auto saves your file every few seconds."
 msgstr "A fájlok automatikus mentése minden néhány másodpercben"
 
-#: views/widgets/SettingsDialog.qml:72
-#, kde-format
-msgid "Dark Mode"
-msgstr "Sötét mód"
-
-#: views/widgets/SettingsDialog.qml:73
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr ""
-
-#: views/widgets/SettingsDialog.qml:90
-#, fuzzy, kde-format
-#| msgid "Terminal"
-msgid "Sync Terminal"
-msgstr "Terminál"
-
-#: views/widgets/SettingsDialog.qml:91
-#, kde-format
-msgid "Sync the terminal to the browser current working directory."
-msgstr ""
-
-#: views/widgets/SettingsDialog.qml:104
+#: views/widgets/SettingsDialog.qml:71
 #, kde-format
 msgid "Editor"
 msgstr "Szerkesztő"
 
-#: views/widgets/SettingsDialog.qml:109
+#: views/widgets/SettingsDialog.qml:76
 #, kde-format
 msgid "Line Numbers"
 msgstr "Sorszámok"
 
-#: views/widgets/SettingsDialog.qml:110
+#: views/widgets/SettingsDialog.qml:77
 #, fuzzy, kde-format
 #| msgid "Display the line numbers on the left side"
 msgid "Display the line numbers on the left side."
 msgstr "A sorok számának megjelenítése a bal oldalon"
 
-#: views/widgets/SettingsDialog.qml:122
+#: views/widgets/SettingsDialog.qml:89
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "A kiemelhető szintaxisú nyelvek"
 
-#: views/widgets/SettingsDialog.qml:123
+#: views/widgets/SettingsDialog.qml:90
 #, fuzzy, kde-format
 #| msgid "Display available languages"
 msgid "Display available languages."
 msgstr "Elérhető nyelvek megjelenítése"
 
-#: views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:102
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Szintaxiskiemelés"
 
-#: views/widgets/SettingsDialog.qml:136
+#: views/widgets/SettingsDialog.qml:103
 #, fuzzy, kde-format
 #| msgid "Enable syntax highlighting for supported languages"
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Szintaxiskiemelés bekapcsolása a támogatott nyelvekhez"
 
-#: views/widgets/SettingsDialog.qml:148 views/widgets/SettingsDialog.qml:198
-#: views/widgets/SettingsDialog.qml:202
+#: views/widgets/SettingsDialog.qml:115
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "Szín"
 
-#: views/widgets/SettingsDialog.qml:149
+#: views/widgets/SettingsDialog.qml:116
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -538,55 +496,58 @@ msgstr ""
 "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
 "RTF-formátumokra"
 
-#: views/widgets/SettingsDialog.qml:163
+#: views/widgets/SettingsDialog.qml:130
 #, kde-format
 msgid "Display"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:169
+#: views/widgets/SettingsDialog.qml:136
 #, fuzzy, kde-format
 #| msgid "Configure the global font family and size"
 msgid "Font family and size."
 msgstr "A globális betűkészletek és betűméretek beállítása"
 
-#: views/widgets/SettingsDialog.qml:181
+#: views/widgets/SettingsDialog.qml:148
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulátorméret"
 
-#: views/widgets/SettingsDialog.qml:203
+#: views/widgets/SettingsDialog.qml:162
 #, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
-msgid ""
-"Configure the style of the syntax highliting. This configuration in not "
-"applied for rich text formats."
+#| msgid "Embedded Terminal"
+msgid "Embedded terminal options."
+msgstr "Beágyazott terminál"
+
+#: views/widgets/SettingsDialog.qml:167
+#, fuzzy, kde-format
+#| msgid "Terminal"
+msgid "Sync Terminal"
+msgstr "Terminál"
+
+#: views/widgets/SettingsDialog.qml:168
+#, kde-format
+msgid "Sync the terminal to the browser current working directory."
 msgstr ""
-"A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
-"RTF-formátumokra"
 
-#: views/widgets/SettingsDialog.qml:208
+#: views/widgets/SettingsDialog.qml:180
 #, kde-format
-msgid "Color"
-msgstr "Szín"
+msgid "Adaptive Color Scheme"
+msgstr ""
 
-#: views/widgets/SettingsDialog.qml:209
-#, fuzzy, kde-format
-#| msgid "Editor background color"
-msgid "Editor background color."
-msgstr "A szerkesző háttérszíne"
-
-#: views/widgets/SettingsDialog.qml:240
+#: views/widgets/SettingsDialog.qml:181
 #, kde-format
-msgid "Theme"
-msgstr "Téma"
+msgid "Colors based on the current style."
+msgstr ""
 
-#: views/widgets/SettingsDialog.qml:241
-#, fuzzy, kde-format
-#| msgid "Editor color scheme style"
-msgid "Editor color scheme style."
-msgstr "A szerkesztő színsémája"
+#: views/widgets/SettingsDialog.qml:192
+#, kde-format
+msgid "Color Scheme"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:193
+#, kde-format
+msgid "Change the color scheme of the terminal."
+msgstr ""
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -637,6 +598,50 @@ msgstr "Lap keresése"
 #, kde-format
 msgid "Select All"
 msgstr "Összes kijelölése"
+
+#~ msgid "Nota"
+#~ msgstr "Nota"
+
+#, fuzzy
+#~| msgid "© 2019-%1 Maui Development Team"
+#~ msgid "© 2019-2023 Maui Development Team"
+#~ msgstr "© A Maui fejlesztői, 2019-%1."
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "Camilo Higuita"
+
+#~ msgid "Anupam Basak"
+#~ msgstr "Anupam Basak"
+
+#~ msgid "Dark Mode"
+#~ msgstr "Sötét mód"
+
+#, fuzzy
+#~| msgid ""
+#~| "Configure the style of the syntax highliting. This configuration in not "
+#~| "applied for rich text formats"
+#~ msgid ""
+#~ "Configure the style of the syntax highliting. This configuration in not "
+#~ "applied for rich text formats."
+#~ msgstr ""
+#~ "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
+#~ "RTF-formátumokra"
+
+#~ msgid "Color"
+#~ msgstr "Szín"
+
+#, fuzzy
+#~| msgid "Editor background color"
+#~ msgid "Editor background color."
+#~ msgstr "A szerkesző háttérszíne"
+
+#~ msgid "Theme"
+#~ msgstr "Téma"
+
+#, fuzzy
+#~| msgid "Editor color scheme style"
+#~ msgid "Editor color scheme style."
+#~ msgstr "A szerkesztő színsémája"
 
 #~ msgid "Configure the app UI, behaviour and plugins."
 #~ msgstr ""
@@ -726,9 +731,6 @@ msgstr "Összes kijelölése"
 
 #~ msgid "Creates a blank file by default"
 #~ msgstr "Üres fájl létrehozása alapértelmezetten"
-
-#~ msgid "Embedded Terminal"
-#~ msgstr "Beágyazott terminál"
 
 #~ msgid "Enabled an embedded terminal"
 #~ msgstr "Bekapcsolja a beágyazott terminált"
