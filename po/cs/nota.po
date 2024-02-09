@@ -507,22 +507,22 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:180
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Adaptivní barevné schéma"
 
 #: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Barvy založené na současném stylu."
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Barevné schéma"
 
 #: views/widgets/SettingsDialog.qml:193
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Změnit barevné schéma terminálu."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -573,30 +573,3 @@ msgstr "Najít kartu"
 #, kde-format
 msgid "Select All"
 msgstr "Vybrat vše"
-
-#~ msgid "Nota"
-#~ msgstr "Nota"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
-
-#~ msgid "Anupam Basak"
-#~ msgstr "Anupam Basak"
-
-#~ msgid "Dark Mode"
-#~ msgstr "Tmavý režim"
-
-#~ msgid "Switch between light and dark colorscheme."
-#~ msgstr "Přepínač mezi světlým a tmavým barevným schématem."
-
-#~ msgid "Color"
-#~ msgstr "Barva"
-
-#~ msgid "Editor background color."
-#~ msgstr "Barva pozadí editoru."
-
-#~ msgid "Theme"
-#~ msgstr "Motiv"
-
-#~ msgid "Editor color scheme style."
-#~ msgstr "Styl barevného schématu editoru."
