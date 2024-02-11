@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-12-10 06:32+0100\n"
+"PO-Revision-Date: 2024-02-11 02:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -496,7 +496,7 @@ msgstr "ტაბულაციის სივრცე"
 #: views/widgets/SettingsDialog.qml:162
 #, kde-format
 msgid "Embedded terminal options."
-msgstr ""
+msgstr "ჩაშენებული ტერმინალის მორგება."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -513,22 +513,22 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:180
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "ადაპტიური ფერების სქემა"
 
 #: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "მიმდინარე სტილზე ბაზირებული ფერები."
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "ფერების სქემა"
 
 #: views/widgets/SettingsDialog.qml:193
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "ტერმინალის ფერის სქემის შეცვლა."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format

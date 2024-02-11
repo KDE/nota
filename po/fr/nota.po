@@ -1,19 +1,19 @@
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-12-10 09:27+0100\n"
+"PO-Revision-Date: 2024-02-09 10:04+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -495,10 +495,9 @@ msgid "Tab Space"
 msgstr "Espace des onglets"
 
 #: views/widgets/SettingsDialog.qml:162
-#, fuzzy, kde-format
-#| msgid "Embedded Terminal"
+#, kde-format
 msgid "Embedded terminal options."
-msgstr "Terminal intégré"
+msgstr "Options intégrées du terminal."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -514,22 +513,22 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:180
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Thème adaptatif de couleurs"
 
 #: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Couleurs reposant sur le style courant."
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Thème de couleurs"
 
 #: views/widgets/SettingsDialog.qml:193
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Modifier le thème de couleurs du terminal."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format

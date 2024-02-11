@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the nota package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-12-12 14:24+0100\n"
+"PO-Revision-Date: 2024-02-09 01:49+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -493,10 +493,9 @@ msgid "Tab Space"
 msgstr "Tabulazione"
 
 #: views/widgets/SettingsDialog.qml:162
-#, fuzzy, kde-format
-#| msgid "Embedded Terminal"
+#, kde-format
 msgid "Embedded terminal options."
-msgstr "Terminale integrato"
+msgstr "Opzioni del terminale integrato."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -512,22 +511,22 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:180
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Schema di colori adattivo"
 
 #: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Colori basati sullo stile attuale."
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Schema di colori"
 
 #: views/widgets/SettingsDialog.qml:193
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Cambia lo schema di colori del terminale."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
