@@ -17,7 +17,6 @@ Maui.ApplicationWindow
     id: root
 
 //    title: currentEditor ? currentTab.title : ""
-    Maui.Style.styleType: Maui.Handy.isAndroid ? (appSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
 //    readonly property alias currentTab : editorView.currentTab
 //    readonly property alias currentEditor: editorView.currentEditor
@@ -50,7 +49,6 @@ Maui.ApplicationWindow
         property string theme : ""
         property string backgroundColor : "white"
         property string textColor : "black"
-        property bool darkMode : Maui.Style.styleType === Maui.Style.Dark
         property alias sideBarWidth : _sideBarView.sideBar.preferredWidth
         property font font : defaultFont
         property bool syncTerminal: true
@@ -196,21 +194,7 @@ Maui.ApplicationWindow
             RecentView {}
         }
     }
-
-    Component.onCompleted:
-    {
-        setAndroidStatusBarColor()
-    }
-
-    function setAndroidStatusBarColor()
-    {
-        if(Maui.Handy.isAndroid)
-        {
-            Maui.Android.statusbarColor(Maui.Theme.backgroundColor, !appSettings.darkMode)
-            Maui.Android.navBarColor(Maui.Theme.backgroundColor, !appSettings.darkMode)
-        }
-    }
-
+    
     function syncSidebar(path)
     {
         if(path && FB.FM.fileExists(path) && settings.enableSidebar)
