@@ -1,16 +1,16 @@
 # Translation for nota.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2023 This file is copyright:
+# Copyright (C) 2020-2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-12-31 16:11+0100\n"
+"PO-Revision-Date: 2024-02-13 00:54+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -496,10 +496,9 @@ msgid "Tab Space"
 msgstr "Tabulazio espazioa"
 
 #: views/widgets/SettingsDialog.qml:162
-#, fuzzy, kde-format
-#| msgid "Enable embedded terminal"
+#, kde-format
 msgid "Embedded terminal options."
-msgstr "Gaitu txertatutako terminala"
+msgstr "Txertatutako terminalaren aukerak."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -514,22 +513,22 @@ msgstr "Sinkronizatu terminala arakatzaileko uneko lan-direktorioarekin."
 #: views/widgets/SettingsDialog.qml:180
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Kolore-antolaera moldakorra"
 
 #: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Uneko estiloan oinarritutako koloreak."
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Kolore-antolaera"
 
 #: views/widgets/SettingsDialog.qml:193
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Aldatu terminalaren kolore-antolaera."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
