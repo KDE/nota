@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-08 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 01:39+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Szövegfájlok böngészése, létrehozása és szerkesztése."
 msgid "Developer"
 msgstr "Fejlesztő"
 
-#: main.qml:110
+#: main.qml:108
 #, kde-format
 msgid "Unsaved files"
 msgstr "Nem mentett fájlok"
 
-#: main.qml:111
+#: main.qml:109
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "

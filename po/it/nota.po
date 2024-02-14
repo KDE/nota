@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-08 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 01:39+0000\n"
 "PO-Revision-Date: 2024-02-09 01:49+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Soglia, crea e modifica file di testo."
 msgid "Developer"
 msgstr "Sviluppatore"
 
-#: main.qml:110
+#: main.qml:108
 #, kde-format
 msgid "Unsaved files"
 msgstr "File non salvati"
 
-#: main.qml:111
+#: main.qml:109
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "

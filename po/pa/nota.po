@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-08 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 01:39+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -39,12 +39,12 @@ msgstr "ਨੋਟਾ ਤੁਹਾਨੂੰ ਸਰਲ ਤੇ ਗੁੰਝਲਦ�
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"
 
-#: main.qml:110
+#: main.qml:108
 #, kde-format
 msgid "Unsaved files"
 msgstr "ਨਾ-ਸੰਭਾਲੀਆਂ ਫਾਇਲਾਂ"
 
-#: main.qml:111
+#: main.qml:109
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "

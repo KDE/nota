@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-08 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 01:39+0000\n"
 "PO-Revision-Date: 2024-02-08 14:10+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -37,12 +37,12 @@ msgstr "Tekstbestanden, er in bladeren, aanmaken en bewerken."
 msgid "Developer"
 msgstr "Ontwikkelaar"
 
-#: main.qml:110
+#: main.qml:108
 #, kde-format
 msgid "Unsaved files"
 msgstr "Niet opgeslagen bestanden"
 
-#: main.qml:111
+#: main.qml:109
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "

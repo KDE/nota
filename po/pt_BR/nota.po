@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-08 01:39+0000\n"
+"POT-Creation-Date: 2024-02-14 01:39+0000\n"
 "PO-Revision-Date: 2024-01-11 20:59-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Navegar, criar e editar arquivos de texto."
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: main.qml:110
+#: main.qml:108
 #, kde-format
 msgid "Unsaved files"
 msgstr "Arquivos não salvos"
 
-#: main.qml:111
+#: main.qml:109
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
