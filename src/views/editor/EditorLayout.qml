@@ -97,8 +97,17 @@ Item
 
     function syncTerminal(path)
     {        
+        if(!path || !FB.FM.fileExists(path))
+            return
+
         if(control.terminal && appSettings.syncTerminal)
-            control.terminal.session.changeDir(String(FB.FM.fileDir(path)).replace("file://", ""))
+        {
+            const dir = String(FB.FM.fileDir(path)).replace("file://", "")
+            if(control.terminal.session.currentDir === dir)
+                return
+            control.terminal.session.changeDir(dir)
+
+        }
     }
 
     function toggleTerminal()

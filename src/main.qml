@@ -16,10 +16,10 @@ Maui.ApplicationWindow
 {
     id: root
 
-//    title: currentEditor ? currentTab.title : ""
+    title: currentEditor ? currentTab.title : ""
 
-//    readonly property alias currentTab : editorView.currentTab
-//    readonly property alias currentEditor: editorView.currentEditor
+    readonly property alias currentTab : editorView.currentTab
+    readonly property alias currentEditor: editorView.currentEditor
     readonly property alias dialog : _dialogLoader.item
 
     readonly property font defaultFont : Maui.Style.monospacedFont
