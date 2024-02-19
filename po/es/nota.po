@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the nota package.
 #
 # Automatically generated, 2020.
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2020, 2021, 2022, 2023, %Y.
+# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2020, 2021, 2022, 2023, 2024, %Y.
 # Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-14 01:39+0000\n"
-"PO-Revision-Date: 2023-12-30 17:51+0100\n"
+"PO-Revision-Date: 2024-02-17 20:10+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -498,7 +498,7 @@ msgstr "Espacio de tabulación"
 #: views/widgets/SettingsDialog.qml:162
 #, kde-format
 msgid "Embedded terminal options."
-msgstr ""
+msgstr "Opciones del terminal incrustado."
 
 #: views/widgets/SettingsDialog.qml:167
 #, kde-format
@@ -514,22 +514,22 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:180
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Esquema de colores adaptativo"
 
 #: views/widgets/SettingsDialog.qml:181
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Colores basados en el estilo actual."
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Esquema de colores"
 
 #: views/widgets/SettingsDialog.qml:193
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Cambiar el esquema de color del terminal."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
@@ -580,40 +580,3 @@ msgstr "Encontrar pestaña"
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar todo"
-
-#~ msgid "Nota"
-#~ msgstr "Nota"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 El equipo de desarrollo Maui"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
-
-#~ msgid "Anupam Basak"
-#~ msgstr "Anupam Basak"
-
-#~ msgid "Dark Mode"
-#~ msgstr "Modo oscuro"
-
-#~ msgid "Switch between light and dark colorscheme."
-#~ msgstr "Cambiar entre esquema de color claro y oscuro."
-
-#~ msgid ""
-#~ "Configure the style of the syntax highliting. This configuration in not "
-#~ "applied for rich text formats."
-#~ msgstr ""
-#~ "Configurar el estilo del resaltado de sintaxis. Esta configuración no se "
-#~ "aplica a los formatos enriquecidos de texto."
-
-#~ msgid "Color"
-#~ msgstr "Color"
-
-#~ msgid "Editor background color."
-#~ msgstr "Editor del color de fondo."
-
-#~ msgid "Theme"
-#~ msgstr "Tema"
-
-#~ msgid "Editor color scheme style."
-#~ msgstr "Editor del estilo del esquema de color."
