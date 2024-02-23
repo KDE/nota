@@ -5,8 +5,6 @@ import QtQuick.Layouts 1.3
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.texteditor 1.0 as TE
 
-import org.maui.nota 1.0 as Nota
-
 Maui.SettingsDialog
 {
     id: control

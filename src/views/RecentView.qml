@@ -10,7 +10,7 @@ import "widgets"
 DocsBrowser
 {
     id: control
-    property bool selectionMode : false
+
     altHeader: Maui.Handy.isMobile
 
     headBar.forceCenterMiddleContent: false
@@ -19,7 +19,6 @@ DocsBrowser
     holder.emoji: "qrc:/assets/dialog-information.svg"
     holder.title : i18n("No Recent Files!")
     holder.body: i18n("Here you will see your recently opened files")
-
 
     headBar.farLeftContent: ToolButton
     {
@@ -114,8 +113,6 @@ DocsBrowser
             checkable: true
             checked: true
             onToggled: _selectionbar.removeAtIndex(index)
-
-            background: null
         }
 
         Action
@@ -166,6 +163,13 @@ DocsBrowser
 
     function addToSelection(item)
     {
+        if(_selectionbar.contains(item.path))
+        {
+            console.log("FIle exists already in selection", item.path)
+            _selectionbar.removeAtUri(item.path)
+            return
+        }
+
         _selectionbar.append(item.path, item)
     }
 }

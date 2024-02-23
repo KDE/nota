@@ -16,7 +16,7 @@ Maui.AltBrowser
 
     viewType: root.isWide ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
 
-    property alias menu : _menu
+    readonly property alias menu : _menu
 
     ItemMenu
     {
@@ -49,7 +49,7 @@ Maui.AltBrowser
 
             if(event.key === Qt.Key_Return)
             {
-                editorView.openTab(item.path)
+                openFile(item.path)
             }
 
             if(event.key === Qt.Key_Escape)
@@ -101,7 +101,8 @@ Maui.AltBrowser
             iconSizeHint: height * 0.6
             checkable: control.selectionMode
             checked: _selectionbar.contains(model.path)
-            onToggled: addToSelection(model)
+
+            onToggled: addToSelection(control.model.get(index))
 
             Connections
             {
@@ -124,25 +125,25 @@ Maui.AltBrowser
                 }
             }
 
-            onClicked:
+            onClicked: (mouse) =>
             {
                 control.currentIndex = index
-                if(root.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+                if(control.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
                 {
-                    addToSelection(model)
+                    addToSelection(control.model.get(index))
 
                 }else if(Maui.Handy.singleClick)
                 {
-                    editorView.openTab(model.path)
+                    openFile(model.path)
                 }
             }
 
             onDoubleClicked:
             {
                 control.currentIndex = index
-                if(!Maui.Handy.singleClick && !root.selectionMode)
+                if(!Maui.Handy.singleClick && !control.selectionMode)
                 {
-                    editorView.openTab(model.path)
+                    openFile(model.path)
                 }
             }
 
@@ -183,7 +184,7 @@ Maui.AltBrowser
     iconSizeHint: Maui.Style.iconSizes.medium
     checkable: control.selectionMode
     checked: _selectionbar.contains(model.path)
-    onToggled: addToSelection(model)
+    onToggled: addToSelection(control.model.get(index))
 
     Connections
     {
@@ -206,25 +207,25 @@ Maui.AltBrowser
         }
     }
 
-    onClicked:
+    onClicked: (mouse) =>
     {
         control.currentIndex = index
-        if(root.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
+        if(control.selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
         {
-            addToSelection(model)
+            addToSelection(control.model.get(index))
 
         }else if(Maui.Handy.singleClick)
         {
-            editorView.openTab(model.path)
+            openFile(model.path)
         }
     }
 
     onDoubleClicked:
     {
         control.currentIndex = index
-        if(!Maui.Handy.singleClick && !root.selectionMode)
+        if(!Maui.Handy.singleClick && !control.selectionMode)
         {
-            editorView.openTab(model.path)
+           openFile(model.path)
         }
     }
 

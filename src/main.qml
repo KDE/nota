@@ -91,6 +91,7 @@ Maui.ApplicationWindow
 
         Widgets.PluginsDialog {}
     }
+
     Loader
     {
         id: _dialogLoader
@@ -186,13 +187,13 @@ Maui.ApplicationWindow
                 anchors.fill: parent
             }
         }
+    }
 
-        Component
-        {
-            id: historyViewComponent
+    Component
+    {
+        id: historyViewComponent
 
-            RecentView {}
-        }
+        RecentView {}
     }
     
     function syncSidebar(path)

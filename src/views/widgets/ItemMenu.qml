@@ -55,7 +55,7 @@ Maui.ContextualMenu
         onTriggered:
         {
             if(Maui.Handy.isMobile)
-                root.selectionMode = true
+                selectionMode = true
 
             addToSelection(control.model.get(index))
         }

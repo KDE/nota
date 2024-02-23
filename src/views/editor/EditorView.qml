@@ -575,11 +575,6 @@ Pane
 
     function openTab(path)
     {
-        if(_stackView.depth === 2)
-        {
-            _stackView.pop()
-        }
-
         const index = fileIndex(path)
 
         if(index[0] >= 0)
@@ -591,6 +586,11 @@ Pane
 
         _tabView.addTab(_editorLayoutComponent, {"path": path})
         historyList.append(path)
+
+        if(_stackView.depth === 2)
+        {
+            _stackView.pop()
+        }
     }
 
     function closeTab(index) //no questions asked
