@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 01:39+0000\n"
+"POT-Creation-Date: 2024-02-24 01:33+0000\n"
 "PO-Revision-Date: 2024-02-08 09:28+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,12 +40,12 @@ msgstr "Перегляд, створення та редагування тек�
 msgid "Developer"
 msgstr "Розробник"
 
-#: main.qml:108
+#: main.qml:109
 #, kde-format
 msgid "Unsaved files"
 msgstr "Незбережені файли"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -139,7 +139,7 @@ msgstr "Увімкнути чи вимкнути бічну панель"
 msgid "Focus"
 msgstr "Фокус"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:161
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:159
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -261,7 +261,7 @@ msgstr "Прибрати з улюблених"
 msgid "Info"
 msgstr "Інформація"
 
-#: views/editor/EditorView.qml:457 views/RecentView.qml:137
+#: views/editor/EditorView.qml:457 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Оприлюднити"
@@ -311,12 +311,12 @@ msgstr "Немає нещодавніх файлів!"
 msgid "Here you will see your recently opened files"
 msgstr "Тут ви побачите нещодавно відкриті файли"
 
-#: views/RecentView.qml:123
+#: views/RecentView.qml:120
 #, kde-format
 msgid "Open"
 msgstr "Відкрити"
 
-#: views/RecentView.qml:144 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
 msgstr "Експортувати"
@@ -401,77 +401,77 @@ msgstr "Завантажити додатки"
 msgid "Activate or remove the third party plugins"
 msgstr "Активація або вилучення сторонніх додатків"
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:133
 #, kde-format
 msgid "Font"
 msgstr "Шрифт"
 
-#: views/widgets/SettingsDialog.qml:39
+#: views/widgets/SettingsDialog.qml:37
 #, kde-format
 msgid "General"
 msgstr "Загальне"
 
-#: views/widgets/SettingsDialog.qml:44
+#: views/widgets/SettingsDialog.qml:42
 #, kde-format
 msgid "Places Sidebar"
 msgstr "Бічна панель «Місця»"
 
-#: views/widgets/SettingsDialog.qml:45
+#: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
 msgstr "Подорожуйте файловою системою за допомогою бічної панелі."
 
-#: views/widgets/SettingsDialog.qml:57
+#: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
 msgstr "Автозбереження"
 
-#: views/widgets/SettingsDialog.qml:58
+#: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
 msgstr "Автозбереження файла кожні декілька секунд."
 
-#: views/widgets/SettingsDialog.qml:71
+#: views/widgets/SettingsDialog.qml:69
 #, kde-format
 msgid "Editor"
 msgstr "Редактор"
 
-#: views/widgets/SettingsDialog.qml:76
+#: views/widgets/SettingsDialog.qml:74
 #, kde-format
 msgid "Line Numbers"
 msgstr "Номери рядків"
 
-#: views/widgets/SettingsDialog.qml:77
+#: views/widgets/SettingsDialog.qml:75
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr "Показувати номери рядків ліворуч."
 
-#: views/widgets/SettingsDialog.qml:89
+#: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Мови підсвічування синтаксису"
 
-#: views/widgets/SettingsDialog.qml:90
+#: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Display available languages."
 msgstr "Показувати доступні мови."
 
-#: views/widgets/SettingsDialog.qml:102
+#: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Підсвічування синтаксису"
 
-#: views/widgets/SettingsDialog.qml:103
+#: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Увімкнути підсвічування синтаксису для підтримуваних мов."
 
-#: views/widgets/SettingsDialog.qml:115
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Colors"
 msgstr "Кольори"
 
-#: views/widgets/SettingsDialog.qml:116
+#: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -480,52 +480,52 @@ msgstr ""
 "Налаштувати схему кольорів підсвічування синтаксису. Ці налаштування не буде "
 "застосовано до форматованого тексту"
 
-#: views/widgets/SettingsDialog.qml:130
+#: views/widgets/SettingsDialog.qml:128
 #, kde-format
 msgid "Display"
 msgstr "Показ"
 
-#: views/widgets/SettingsDialog.qml:136
+#: views/widgets/SettingsDialog.qml:134
 #, kde-format
 msgid "Font family and size."
 msgstr "Гарнітура та розмір шрифту."
 
-#: views/widgets/SettingsDialog.qml:148
+#: views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Tab Space"
 msgstr "Розмір табуляції"
 
-#: views/widgets/SettingsDialog.qml:162
+#: views/widgets/SettingsDialog.qml:160
 #, kde-format
 msgid "Embedded terminal options."
 msgstr "Параметри вбудованого термінала."
 
-#: views/widgets/SettingsDialog.qml:167
+#: views/widgets/SettingsDialog.qml:165
 #, kde-format
 msgid "Sync Terminal"
 msgstr "Синхронізувати термінал"
 
-#: views/widgets/SettingsDialog.qml:168
+#: views/widgets/SettingsDialog.qml:166
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr "Синхронізувати поточний робочий каталог навігатора і термінала."
 
-#: views/widgets/SettingsDialog.qml:180
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr "Адаптивна схема кольорів"
 
-#: views/widgets/SettingsDialog.qml:181
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Colors based on the current style."
 msgstr "Кольори, які засновано на поточному стилі."
 
-#: views/widgets/SettingsDialog.qml:192
+#: views/widgets/SettingsDialog.qml:190
 #, kde-format
 msgid "Color Scheme"
 msgstr "Схема кольорів"
 
-#: views/widgets/SettingsDialog.qml:193
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr "Зміна кольорової схеми термінала."

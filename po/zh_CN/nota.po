@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 01:39+0000\n"
+"POT-Creation-Date: 2024-02-24 01:33+0000\n"
 "PO-Revision-Date: 2024-02-05 11:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -37,12 +37,12 @@ msgstr "浏览、创建和编辑文本文件。"
 msgid "Developer"
 msgstr "开发人员"
 
-#: main.qml:108
+#: main.qml:109
 #, kde-format
 msgid "Unsaved files"
 msgstr "未保存文件"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -134,7 +134,7 @@ msgstr "显示/隐藏侧边栏"
 msgid "Focus"
 msgstr "聚焦"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:161
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:159
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -256,7 +256,7 @@ msgstr "取消收藏"
 msgid "Info"
 msgstr "信息"
 
-#: views/editor/EditorView.qml:457 views/RecentView.qml:137
+#: views/editor/EditorView.qml:457 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "分享"
@@ -306,12 +306,12 @@ msgstr "没有最近文件"
 msgid "Here you will see your recently opened files"
 msgstr "您最近打开过的文件将会显示在这里"
 
-#: views/RecentView.qml:123
+#: views/RecentView.qml:120
 #, kde-format
 msgid "Open"
 msgstr "打开"
 
-#: views/RecentView.qml:144 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
 msgstr "导出"
@@ -396,129 +396,129 @@ msgstr "加载插件"
 msgid "Activate or remove the third party plugins"
 msgstr "激活或移除第三方插件"
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:133
 #, kde-format
 msgid "Font"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:39
+#: views/widgets/SettingsDialog.qml:37
 #, kde-format
 msgid "General"
 msgstr "常规"
 
-#: views/widgets/SettingsDialog.qml:44
+#: views/widgets/SettingsDialog.qml:42
 #, kde-format
 msgid "Places Sidebar"
 msgstr "位置侧边栏"
 
-#: views/widgets/SettingsDialog.qml:45
+#: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:57
+#: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
 msgstr "自动保存"
 
-#: views/widgets/SettingsDialog.qml:58
+#: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:71
+#: views/widgets/SettingsDialog.qml:69
 #, kde-format
 msgid "Editor"
 msgstr "编辑器"
 
-#: views/widgets/SettingsDialog.qml:76
+#: views/widgets/SettingsDialog.qml:74
 #, kde-format
 msgid "Line Numbers"
 msgstr "行号"
 
-#: views/widgets/SettingsDialog.qml:77
+#: views/widgets/SettingsDialog.qml:75
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:89
+#: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "语法高亮语言"
 
-#: views/widgets/SettingsDialog.qml:90
+#: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Display available languages."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:102
+#: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "语法高亮"
 
-#: views/widgets/SettingsDialog.qml:103
+#: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:115
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Colors"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:116
+#: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:130
+#: views/widgets/SettingsDialog.qml:128
 #, kde-format
 msgid "Display"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:136
+#: views/widgets/SettingsDialog.qml:134
 #, kde-format
 msgid "Font family and size."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:148
+#: views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Tab Space"
 msgstr "Tab 空白"
 
-#: views/widgets/SettingsDialog.qml:162
+#: views/widgets/SettingsDialog.qml:160
 #, kde-format
 msgid "Embedded terminal options."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:167
+#: views/widgets/SettingsDialog.qml:165
 #, kde-format
 msgid "Sync Terminal"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:168
+#: views/widgets/SettingsDialog.qml:166
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:180
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:181
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Colors based on the current style."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:192
+#: views/widgets/SettingsDialog.qml:190
 #, kde-format
 msgid "Color Scheme"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:193
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr ""
