@@ -25,6 +25,7 @@ Maui.SplitViewItem
         body.color: settings.textColor
         body.font.family: settings.font.family
         body.font.pointSize: settings.font.pointSize
+        body.wrapMode: settings.wrapText ? Text.Wrap : Text.NoWrap
 
         document.backgroundColor: settings.backgroundColor
         Maui.Theme.backgroundColor: settings.backgroundColor

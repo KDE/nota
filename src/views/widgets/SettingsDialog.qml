@@ -84,6 +84,19 @@ Maui.SettingsDialog
 
         Maui.SectionItem
         {
+            label1.text: i18n("Wrap Text")
+            label2.text: i18n("Wrap the text into new lines.")
+
+            Switch
+            {
+                checkable: true
+                checked: settings.wrapText
+                onToggled: settings.wrapText = !settings.wrapText
+            }
+        }
+
+        Maui.SectionItem
+        {
             label1.text: i18n("Syntax Highlighting Languages")
             label2.text: i18n("Display available languages.")
 

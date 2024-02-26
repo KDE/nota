@@ -54,6 +54,7 @@ Maui.ApplicationWindow
         property bool syncTerminal: true
          property bool terminalFollowsColorScheme: true
         property string terminalColorScheme: "Maui-Dark"
+        property bool wrapText: true
     }
 
 //    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
