@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 01:33+0000\n"
+"POT-Creation-Date: 2024-02-27 01:36+0000\n"
 "PO-Revision-Date: 2024-02-19 07:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -40,12 +40,12 @@ msgstr "瀏覽、建立並編輯文字檔案。"
 msgid "Developer"
 msgstr "開發者"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "未儲存的檔案"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -77,22 +77,22 @@ msgstr "行動版"
 msgid "New ToDo... Argh!"
 msgstr "新的待辦事項...Argh!"
 
-#: views/editor/Editor.qml:107
+#: views/editor/Editor.qml:108
 #, kde-format
 msgid "Open Here"
 msgstr "在此開啟"
 
-#: views/editor/Editor.qml:117
+#: views/editor/Editor.qml:118
 #, kde-format
 msgid "Open in New Tab"
 msgstr "在新分頁開啟"
 
-#: views/editor/Editor.qml:128
+#: views/editor/Editor.qml:129
 #, kde-format
 msgid "Open in New Split"
 msgstr "在新分割檢視開啟"
 
-#: views/editor/Editor.qml:140
+#: views/editor/Editor.qml:141
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -137,7 +137,7 @@ msgstr "切換側邊欄"
 msgid "Focus"
 msgstr "焦點"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:159
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -399,7 +399,7 @@ msgstr "載入外掛程式"
 msgid "Activate or remove the third party plugins"
 msgstr "啟用或移除第三方外掛程式"
 
-#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:133
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Font"
 msgstr "字型"
@@ -446,82 +446,92 @@ msgstr "在左側顯示行號。"
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
+msgid "Wrap Text"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:88
+#, kde-format
+msgid "Wrap the text into new lines."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:100
+#, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "語法突顯語言"
 
-#: views/widgets/SettingsDialog.qml:88
+#: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
 msgstr "顯示可用語言。"
 
-#: views/widgets/SettingsDialog.qml:100
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "語法突顯"
 
-#: views/widgets/SettingsDialog.qml:101
+#: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "為支援的語言啟用語法突顯"
 
-#: views/widgets/SettingsDialog.qml:113
+#: views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Colors"
 msgstr "顏色"
 
-#: views/widgets/SettingsDialog.qml:114
+#: views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr "設定語法突顯的配色方案。這個設定不會套用到 rich text 格式。"
 
-#: views/widgets/SettingsDialog.qml:128
+#: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
 msgstr "顯示"
 
-#: views/widgets/SettingsDialog.qml:134
+#: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
 msgstr "字型家族與大小。"
 
-#: views/widgets/SettingsDialog.qml:146
+#: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
 msgstr "Tab 空白"
 
-#: views/widgets/SettingsDialog.qml:160
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
 msgstr "嵌入式終端機選項。"
 
-#: views/widgets/SettingsDialog.qml:165
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
 msgstr "同步終端機"
 
-#: views/widgets/SettingsDialog.qml:166
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr "同步終端機目前位置與瀏覽器的目前工作目錄。"
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr "自動調整配色方案"
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
 msgstr "基於目前風格的色彩。"
 
-#: views/widgets/SettingsDialog.qml:190
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
 msgstr "配色方案"
 
-#: views/widgets/SettingsDialog.qml:191
+#: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr "變更終端機的配色方案。"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 01:33+0000\n"
+"POT-Creation-Date: 2024-02-27 01:36+0000\n"
 "PO-Revision-Date: 2024-02-10 22:58+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "텍스트 파일을 탐색, 생성, 편집합니다."
 msgid "Developer"
 msgstr "개발자"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "저장하지 않은 파일"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -76,22 +76,22 @@ msgstr "모바일"
 msgid "New ToDo... Argh!"
 msgstr "새 할 일... 으악!"
 
-#: views/editor/Editor.qml:107
+#: views/editor/Editor.qml:108
 #, kde-format
 msgid "Open Here"
 msgstr "여기에 열기"
 
-#: views/editor/Editor.qml:117
+#: views/editor/Editor.qml:118
 #, kde-format
 msgid "Open in New Tab"
 msgstr "새 탭으로 열기"
 
-#: views/editor/Editor.qml:128
+#: views/editor/Editor.qml:129
 #, kde-format
 msgid "Open in New Split"
 msgstr "새 분할 보기에서 열기"
 
-#: views/editor/Editor.qml:140
+#: views/editor/Editor.qml:141
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
@@ -136,7 +136,7 @@ msgstr "사이드바 전환"
 msgid "Focus"
 msgstr "포커스"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:159
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -398,7 +398,7 @@ msgstr "플러그인 불러오기"
 msgid "Activate or remove the third party plugins"
 msgstr "제3사 플러그인 활성화 및 삭제"
 
-#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:133
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Font"
 msgstr "글꼴"
@@ -445,30 +445,40 @@ msgstr "왼쪽에 줄 번호를 표시합니다."
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
+msgid "Wrap Text"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:88
+#, kde-format
+msgid "Wrap the text into new lines."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:100
+#, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "구문 강조 언어"
 
-#: views/widgets/SettingsDialog.qml:88
+#: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
 msgstr "사용 가능한 언어를 표시합니다."
 
-#: views/widgets/SettingsDialog.qml:100
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "구문 강조"
 
-#: views/widgets/SettingsDialog.qml:101
+#: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "지원하는 언어의 구문 강조를 활성화합니다."
 
-#: views/widgets/SettingsDialog.qml:113
+#: views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Colors"
 msgstr "색상"
 
-#: views/widgets/SettingsDialog.qml:114
+#: views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -476,52 +486,52 @@ msgid ""
 msgstr ""
 "구문 강조 색 구성표를 설정합니다. 서식 있는 텍스트에는 적용되지 않습니다."
 
-#: views/widgets/SettingsDialog.qml:128
+#: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
 msgstr "표시"
 
-#: views/widgets/SettingsDialog.qml:134
+#: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
 msgstr "글꼴 종류와 크기입니다."
 
-#: views/widgets/SettingsDialog.qml:146
+#: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
 msgstr "탭 공백 문자"
 
-#: views/widgets/SettingsDialog.qml:160
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
 msgstr "내장 터미널 옵션입니다."
 
-#: views/widgets/SettingsDialog.qml:165
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
 msgstr "터미널 동기화"
 
-#: views/widgets/SettingsDialog.qml:166
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr "탐색기의 현재 작업 디렉터리와 터미널을 동기화합니다."
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr "적응형 색 구성표"
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
 msgstr "현재 스타일에 기반한 색상입니다."
 
-#: views/widgets/SettingsDialog.qml:190
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
 msgstr "색 구성표"
 
-#: views/widgets/SettingsDialog.qml:191
+#: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr "터미널의 색 구성표를 변경합니다."

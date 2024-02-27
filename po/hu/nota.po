@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 01:33+0000\n"
+"POT-Creation-Date: 2024-02-27 01:36+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Szövegfájlok böngészése, létrehozása és szerkesztése."
 msgid "Developer"
 msgstr "Fejlesztő"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "Nem mentett fájlok"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -76,25 +76,25 @@ msgstr "Mobil"
 msgid "New ToDo... Argh!"
 msgstr "Új tennivaló… Neee!"
 
-#: views/editor/Editor.qml:107
+#: views/editor/Editor.qml:108
 #, fuzzy, kde-format
 #| msgid "Open here"
 msgid "Open Here"
 msgstr "Megnyitás itt"
 
-#: views/editor/Editor.qml:117
+#: views/editor/Editor.qml:118
 #, fuzzy, kde-format
 #| msgid "Open in new tab"
 msgid "Open in New Tab"
 msgstr "Megnyitás új lapon"
 
-#: views/editor/Editor.qml:128
+#: views/editor/Editor.qml:129
 #, fuzzy, kde-format
 #| msgid "Open in new split"
 msgid "Open in New Split"
 msgstr "Megnyitás új osztott nézetben"
 
-#: views/editor/Editor.qml:140
+#: views/editor/Editor.qml:141
 #, kde-format
 msgid "Cancel"
 msgstr "Mégsem"
@@ -141,7 +141,7 @@ msgstr "Oldalsáv be/ki"
 msgid "Focus"
 msgstr "Fókusz"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:159
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -407,7 +407,7 @@ msgstr "Bővítmények betöltése"
 msgid "Activate or remove the third party plugins"
 msgstr "Harmadik féltől származó bővítmények aktiválása vagy eltávolítása"
 
-#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:133
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, fuzzy, kde-format
 #| msgid "Fonts"
 msgid "Font"
@@ -458,33 +458,43 @@ msgstr "A sorok számának megjelenítése a bal oldalon"
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
+msgid "Wrap Text"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:88
+#, kde-format
+msgid "Wrap the text into new lines."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:100
+#, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "A kiemelhető szintaxisú nyelvek"
 
-#: views/widgets/SettingsDialog.qml:88
+#: views/widgets/SettingsDialog.qml:101
 #, fuzzy, kde-format
 #| msgid "Display available languages"
 msgid "Display available languages."
 msgstr "Elérhető nyelvek megjelenítése"
 
-#: views/widgets/SettingsDialog.qml:100
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Szintaxiskiemelés"
 
-#: views/widgets/SettingsDialog.qml:101
+#: views/widgets/SettingsDialog.qml:114
 #, fuzzy, kde-format
 #| msgid "Enable syntax highlighting for supported languages"
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Szintaxiskiemelés bekapcsolása a támogatott nyelvekhez"
 
-#: views/widgets/SettingsDialog.qml:113
+#: views/widgets/SettingsDialog.qml:126
 #, fuzzy, kde-format
 #| msgid "Color"
 msgid "Colors"
 msgstr "Szín"
 
-#: views/widgets/SettingsDialog.qml:114
+#: views/widgets/SettingsDialog.qml:127
 #, fuzzy, kde-format
 #| msgid ""
 #| "Configure the style of the syntax highliting. This configuration in not "
@@ -496,55 +506,55 @@ msgstr ""
 "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
 "RTF-formátumokra"
 
-#: views/widgets/SettingsDialog.qml:128
+#: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:134
+#: views/widgets/SettingsDialog.qml:147
 #, fuzzy, kde-format
 #| msgid "Configure the global font family and size"
 msgid "Font family and size."
 msgstr "A globális betűkészletek és betűméretek beállítása"
 
-#: views/widgets/SettingsDialog.qml:146
+#: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulátorméret"
 
-#: views/widgets/SettingsDialog.qml:160
+#: views/widgets/SettingsDialog.qml:173
 #, fuzzy, kde-format
 #| msgid "Embedded Terminal"
 msgid "Embedded terminal options."
 msgstr "Beágyazott terminál"
 
-#: views/widgets/SettingsDialog.qml:165
+#: views/widgets/SettingsDialog.qml:178
 #, fuzzy, kde-format
 #| msgid "Terminal"
 msgid "Sync Terminal"
 msgstr "Terminál"
 
-#: views/widgets/SettingsDialog.qml:166
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:190
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:191
+#: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr ""

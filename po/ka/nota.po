@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 01:33+0000\n"
+"POT-Creation-Date: 2024-02-27 01:36+0000\n"
 "PO-Revision-Date: 2024-02-11 02:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr "იპოვეთ, შექმენით და ჩაასწო�
 msgid "Developer"
 msgstr "პროგრამისტი"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "შეუნახავი ფაილები"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -77,22 +77,22 @@ msgstr "მობაილი"
 msgid "New ToDo... Argh!"
 msgstr "ახალი განრიგი...!"
 
-#: views/editor/Editor.qml:107
+#: views/editor/Editor.qml:108
 #, kde-format
 msgid "Open Here"
 msgstr "აქ გახსნა"
 
-#: views/editor/Editor.qml:117
+#: views/editor/Editor.qml:118
 #, kde-format
 msgid "Open in New Tab"
 msgstr "ახალ ჩანართში გახსნა"
 
-#: views/editor/Editor.qml:128
+#: views/editor/Editor.qml:129
 #, kde-format
 msgid "Open in New Split"
 msgstr "ახალ დაყოფილ ხედში გახსნა"
 
-#: views/editor/Editor.qml:140
+#: views/editor/Editor.qml:141
 #, kde-format
 msgid "Cancel"
 msgstr "გაუქმება"
@@ -137,7 +137,7 @@ msgstr "გვერდითი პანელის გადართვა"
 msgid "Focus"
 msgstr "ფოკუსი"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:159
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -399,7 +399,7 @@ msgstr "დამატებების ჩატვირთვა"
 msgid "Activate or remove the third party plugins"
 msgstr "მესამე პირების მიერ მოწოდებული დამატებების აქტივაცია ან წაშლა"
 
-#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:133
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Font"
 msgstr "ფონტი"
@@ -446,30 +446,40 @@ msgstr "მარცხენა მხარეს ხაზის ნომრ
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
+msgid "Wrap Text"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:88
+#, kde-format
+msgid "Wrap the text into new lines."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:100
+#, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "სინტაქსის გამოკვეთის ენები"
 
-#: views/widgets/SettingsDialog.qml:88
+#: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
 msgstr "ხელმისაწვდომი ენების ჩვენება."
 
-#: views/widgets/SettingsDialog.qml:100
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "სინტაქსის ხაზგასმა"
 
-#: views/widgets/SettingsDialog.qml:101
+#: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "მხარდაჭერილი ენებისთვის სინტაქსის გამოკვეთის ჩართვა."
 
-#: views/widgets/SettingsDialog.qml:113
+#: views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Colors"
 msgstr "ფერები"
 
-#: views/widgets/SettingsDialog.qml:114
+#: views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -478,54 +488,54 @@ msgstr ""
 "მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
 "ფორმატებს."
 
-#: views/widgets/SettingsDialog.qml:128
+#: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
 msgstr "ჩვენება"
 
-#: views/widgets/SettingsDialog.qml:134
+#: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
 msgstr "ფონტის ოჯახი და ზომა."
 
-#: views/widgets/SettingsDialog.qml:146
+#: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
 msgstr "ტაბულაციის სივრცე"
 
-#: views/widgets/SettingsDialog.qml:160
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
 msgstr "ჩაშენებული ტერმინალის მორგება."
 
-#: views/widgets/SettingsDialog.qml:165
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
 msgstr "ტერმინალის სინქრონიზაცია"
 
-#: views/widgets/SettingsDialog.qml:166
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr ""
 "ტერმინალის მიმდინარე სამუშაო საქაღალდის სინქრონიზაცია ბრაუზერის "
 "მდებარეობასთან."
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr "ადაპტიური ფერების სქემა"
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
 msgstr "მიმდინარე სტილზე ბაზირებული ფერები."
 
-#: views/widgets/SettingsDialog.qml:190
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
 msgstr "ფერების სქემა"
 
-#: views/widgets/SettingsDialog.qml:191
+#: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr "ტერმინალის ფერის სქემის შეცვლა."

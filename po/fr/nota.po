@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 01:33+0000\n"
+"POT-Creation-Date: 2024-02-27 01:36+0000\n"
 "PO-Revision-Date: 2024-02-09 10:04+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -38,12 +38,12 @@ msgstr "Naviguer, créer et modifier des fichiers de texte."
 msgid "Developer"
 msgstr "Développeur"
 
-#: main.qml:109
+#: main.qml:110
 #, kde-format
 msgid "Unsaved files"
 msgstr "Fichiers non enregistrés"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -77,22 +77,22 @@ msgstr "Mobile"
 msgid "New ToDo... Argh!"
 msgstr "Nouvelle chose à faire... Argh !"
 
-#: views/editor/Editor.qml:107
+#: views/editor/Editor.qml:108
 #, kde-format
 msgid "Open Here"
 msgstr "Ouvrir ici"
 
-#: views/editor/Editor.qml:117
+#: views/editor/Editor.qml:118
 #, kde-format
 msgid "Open in New Tab"
 msgstr "Ouvrir dans un nouvel onglet"
 
-#: views/editor/Editor.qml:128
+#: views/editor/Editor.qml:129
 #, kde-format
 msgid "Open in New Split"
 msgstr "Ouvrir dans un nouvel partage"
 
-#: views/editor/Editor.qml:140
+#: views/editor/Editor.qml:141
 #, kde-format
 msgid "Cancel"
 msgstr "Annuler"
@@ -137,7 +137,7 @@ msgstr "Activer / Désactiver la barre latérale"
 msgid "Focus"
 msgstr "Focus"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:159
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -400,7 +400,7 @@ msgstr "Charger les modules externes"
 msgid "Activate or remove the third party plugins"
 msgstr "Activer ou supprimer les modules externes tiers."
 
-#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:133
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Font"
 msgstr "Police"
@@ -447,30 +447,40 @@ msgstr "Afficher les numéros de lignes sur le côté gauche"
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
+msgid "Wrap Text"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:88
+#, kde-format
+msgid "Wrap the text into new lines."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:100
+#, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Langages avec coloration syntaxique"
 
-#: views/widgets/SettingsDialog.qml:88
+#: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
 msgstr "Afficher toutes les langues disponibles"
 
-#: views/widgets/SettingsDialog.qml:100
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Coloration syntaxique"
 
-#: views/widgets/SettingsDialog.qml:101
+#: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr "Activer la coloration syntaxique pour les langages pris en charge."
 
-#: views/widgets/SettingsDialog.qml:113
+#: views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Colors"
 msgstr "Couleurs"
 
-#: views/widgets/SettingsDialog.qml:114
+#: views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
@@ -479,53 +489,53 @@ msgstr ""
 "Configurer le style pour la coloration syntaxique. Cette configuration n'est "
 "pas appliquée pour les formats de texte enrichis « RTF »."
 
-#: views/widgets/SettingsDialog.qml:128
+#: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
 msgstr "Affichage"
 
-#: views/widgets/SettingsDialog.qml:134
+#: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
 msgstr "Famille et taille de police."
 
-#: views/widgets/SettingsDialog.qml:146
+#: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
 msgstr "Espace des onglets"
 
-#: views/widgets/SettingsDialog.qml:160
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
 msgstr "Options intégrées du terminal."
 
-#: views/widgets/SettingsDialog.qml:165
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
 msgstr "Synchroniser un terminal"
 
-#: views/widgets/SettingsDialog.qml:166
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr ""
 "Synchroniser le terminal avec le dossier de travail courant du navigateur."
 
-#: views/widgets/SettingsDialog.qml:178
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr "Thème adaptatif de couleurs"
 
-#: views/widgets/SettingsDialog.qml:179
+#: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
 msgstr "Couleurs reposant sur le style courant."
 
-#: views/widgets/SettingsDialog.qml:190
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
 msgstr "Thème de couleurs"
 
-#: views/widgets/SettingsDialog.qml:191
+#: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr "Modifier le thème de couleurs du terminal."
