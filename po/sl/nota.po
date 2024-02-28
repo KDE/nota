@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-27 01:36+0000\n"
-"PO-Revision-Date: 2024-02-08 09:22+0100\n"
+"PO-Revision-Date: 2024-02-27 08:03+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -447,12 +447,12 @@ msgstr "Prikaži številke vrstic na levi strani."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Ovijaj besedilo"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Ovijaj besedilo v nove vrstice."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format

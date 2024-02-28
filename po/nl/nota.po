@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-27 01:36+0000\n"
-"PO-Revision-Date: 2024-02-08 14:10+0100\n"
+"PO-Revision-Date: 2024-02-27 10:31+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -446,12 +446,12 @@ msgstr "De regelnummering aan de linkerzijde tonen."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Tekst op volgende regel laten doorlopen"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "De tekst in nieuwe regels laten passen."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
