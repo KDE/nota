@@ -445,7 +445,7 @@ msgstr "Zobrazit čísla řádků na levé straně."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Zalomit text"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format

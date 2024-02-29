@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-08 01:39+0000\n"
+"POT-Creation-Date: 2024-02-27 01:36+0000\n"
 "PO-Revision-Date: 2021-02-26 18:20+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -78,22 +78,22 @@ msgstr ""
 msgid "New ToDo... Argh!"
 msgstr ""
 
-#: views/editor/Editor.qml:107
+#: views/editor/Editor.qml:108
 #, kde-format
 msgid "Open Here"
 msgstr ""
 
-#: views/editor/Editor.qml:117
+#: views/editor/Editor.qml:118
 #, kde-format
 msgid "Open in New Tab"
 msgstr ""
 
-#: views/editor/Editor.qml:128
+#: views/editor/Editor.qml:129
 #, kde-format
 msgid "Open in New Split"
 msgstr ""
 
-#: views/editor/Editor.qml:140
+#: views/editor/Editor.qml:141
 #, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
@@ -138,7 +138,7 @@ msgstr "Vis/gøym sidestolpe"
 msgid "Focus"
 msgstr ""
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:161
+#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:84
 #, kde-format
 msgid "Terminal"
@@ -260,7 +260,7 @@ msgstr "Fjern som favoritt"
 msgid "Info"
 msgstr "Info"
 
-#: views/editor/EditorView.qml:457 views/RecentView.qml:137
+#: views/editor/EditorView.qml:457 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Del"
@@ -310,12 +310,12 @@ msgstr "Ingen nyleg brukte filer"
 msgid "Here you will see your recently opened files"
 msgstr "Her vil du sjå dei siste opna filene dine"
 
-#: views/RecentView.qml:123
+#: views/RecentView.qml:120
 #, kde-format
 msgid "Open"
 msgstr "Opna"
 
-#: views/RecentView.qml:144 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
 msgstr "Eksporter"
@@ -400,129 +400,139 @@ msgstr ""
 msgid "Activate or remove the third party plugins"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:20 views/widgets/SettingsDialog.qml:135
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Font"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:39
+#: views/widgets/SettingsDialog.qml:37
 #, kde-format
 msgid "General"
 msgstr "Generelt"
 
-#: views/widgets/SettingsDialog.qml:44
+#: views/widgets/SettingsDialog.qml:42
 #, kde-format
 msgid "Places Sidebar"
 msgstr "Stadar-sidestolpe"
 
-#: views/widgets/SettingsDialog.qml:45
+#: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:57
+#: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
 msgstr "Automatisk lagring"
 
-#: views/widgets/SettingsDialog.qml:58
+#: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:71
+#: views/widgets/SettingsDialog.qml:69
 #, kde-format
 msgid "Editor"
 msgstr "Skriveprogram"
 
-#: views/widgets/SettingsDialog.qml:76
+#: views/widgets/SettingsDialog.qml:74
 #, kde-format
 msgid "Line Numbers"
 msgstr "Linjenummer"
 
-#: views/widgets/SettingsDialog.qml:77
+#: views/widgets/SettingsDialog.qml:75
 #, kde-format
 msgid "Display the line numbers on the left side."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:89
+#: views/widgets/SettingsDialog.qml:87
+#, kde-format
+msgid "Wrap Text"
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:88
+#, kde-format
+msgid "Wrap the text into new lines."
+msgstr ""
+
+#: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting Languages"
 msgstr "Språk med syntaksmerking"
 
-#: views/widgets/SettingsDialog.qml:90
+#: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:102
+#: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Syntaksmerking"
 
-#: views/widgets/SettingsDialog.qml:103
+#: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:115
+#: views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Colors"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:116
+#: views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration in "
 "not applied for rich text formats."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:130
+#: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:136
+#: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:148
+#: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
 msgstr "Tabulator-mellomrom"
 
-#: views/widgets/SettingsDialog.qml:162
+#: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:167
+#: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:168
+#: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:180
+#: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:181
+#: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:192
+#: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
 msgstr ""
 
-#: views/widgets/SettingsDialog.qml:193
+#: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
 msgstr ""
