@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-27 01:36+0000\n"
-"PO-Revision-Date: 2024-02-26 21:30+0100\n"
+"PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -31,7 +31,7 @@ msgstr ""
 #: main.cpp:49
 #, kde-format
 msgid "Browse, create and edit text files."
-msgstr ""
+msgstr "Foliumi, krei kaj redakti tekstajn dosierojn."
 
 #: main.cpp:54 main.cpp:55
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Ellaboranto"
 #: main.qml:110
 #, kde-format
 msgid "Unsaved files"
-msgstr ""
+msgstr "Nekonservitaj dosieroj"
 
 #: main.qml:111
 #, kde-format
@@ -58,12 +58,12 @@ msgstr "Ruli"
 #: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
 #, kde-format
 msgid "Run & Debug"
-msgstr ""
+msgstr "Run & Sencimigi"
 
 #: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
 #, kde-format
 msgid "Run in Terminal"
-msgstr ""
+msgstr "Ruli en Terminalo"
 
 #: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "Poŝtelefono"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr ""
+msgstr "Nova Tago... Argh!"
 
 #: views/editor/Editor.qml:108
 #, kde-format
@@ -88,7 +88,7 @@ msgstr "Malfermi en Nova Langeto"
 #: views/editor/Editor.qml:129
 #, kde-format
 msgid "Open in New Split"
-msgstr ""
+msgstr "Malfermi en Nova Split"
 
 #: views/editor/Editor.qml:141
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "Malfermi dosierojn"
 #: views/editor/EditorView.qml:43
 #, kde-format
 msgid "Open Recent Files"
-msgstr ""
+msgstr "Malfermi Lastaj Dosieroj"
 
 #: views/editor/EditorView.qml:54
 #, kde-format
@@ -113,12 +113,12 @@ msgstr "Nova"
 #: views/editor/EditorView.qml:76
 #, kde-format
 msgid "Create a New Document"
-msgstr ""
+msgstr "Krei Novan Dokumenton"
 
 #: views/editor/EditorView.qml:77
 #, kde-format
 msgid "You can create or open a new document."
-msgstr ""
+msgstr "Vi povas krei aŭ malfermi novan dokumenton."
 
 #: views/editor/EditorView.qml:105
 #, kde-format
@@ -199,12 +199,12 @@ msgstr "Iri al Linio"
 #: views/editor/EditorView.qml:324
 #, kde-format
 msgid "Line number"
-msgstr ""
+msgstr "Linia numero"
 
 #: views/editor/EditorView.qml:336 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
-msgstr ""
+msgstr "Ĉu forigi dosieron?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
@@ -238,17 +238,17 @@ msgstr "Konservi kiel"
 #: views/editor/EditorView.qml:398
 #, kde-format
 msgid "Find and Replace"
-msgstr ""
+msgstr "Trovi kaj Anstataŭigi"
 
 #: views/editor/EditorView.qml:411
 #, kde-format
 msgid "Line/Word Counter"
-msgstr ""
+msgstr "Linio/Vortkalkulilo"
 
 #: views/editor/EditorView.qml:429
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "MalFavi ĝin"
 
 #: views/editor/EditorView.qml:444 views/widgets/ItemMenu.qml:98
 #, kde-format
@@ -263,7 +263,7 @@ msgstr "Kunhavigi"
 #: views/editor/EditorView.qml:482 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
-msgstr ""
+msgstr "Montri en Dosierujo"
 
 #: views/editor/EditorView.qml:492
 #, kde-format
@@ -298,12 +298,12 @@ msgstr "Grupo"
 #: views/RecentView.qml:20
 #, kde-format
 msgid "No Recent Files!"
-msgstr ""
+msgstr "Neniuj Lastaj Dosieroj!"
 
 #: views/RecentView.qml:21
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr ""
+msgstr "Ĉi tie vi vidos viajn lastatempe malfermitajn dosierojn"
 
 #: views/RecentView.qml:120
 #, kde-format
@@ -338,62 +338,62 @@ msgstr "Forigi"
 #: views/widgets/PluginsDialog.qml:13
 #, kde-format
 msgid "Default Plugins"
-msgstr ""
+msgstr "Defaŭltaj Kromaĵoj"
 
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr ""
+msgstr "Aktivigi aŭ forigi la defaŭltajn kromaĵojn"
 
 #: views/widgets/PluginsDialog.qml:22
 #, kde-format
 msgid "QML Scene"
-msgstr ""
+msgstr "QML-Sceno"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr ""
+msgstr "Ŝargi la nunan dosieron en QML-sceno."
 
 #: views/widgets/PluginsDialog.qml:52
 #, kde-format
 msgid "ToDo"
-msgstr ""
+msgstr "Fari"
 
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "List of to-do tasks."
-msgstr ""
+msgstr "Listo de farotaskoj."
 
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
 #, kde-format
 msgid "Builder"
-msgstr ""
+msgstr "Konstruisto"
 
 #: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr ""
+msgstr "Agordi projekton por konstrui kaj funkcii."
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "HTML Previewer"
-msgstr ""
+msgstr "HTML Antaŭrigardilo"
 
 #: views/widgets/PluginsDialog.qml:90
 #, kde-format
 msgid "Preview HTML code live."
-msgstr ""
+msgstr "Antaŭrigardi HTML-kodon en vivas."
 
 #: views/widgets/PluginsDialog.qml:98
 #, kde-format
 msgid "Load Plugins"
-msgstr ""
+msgstr "Ŝargi Kromaĵojn"
 
 #: views/widgets/PluginsDialog.qml:99
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr ""
+msgstr "Aktivigi aŭ forigi la triajn kromaĵojn"
 
 #: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
@@ -408,12 +408,12 @@ msgstr "Ĝenerala"
 #: views/widgets/SettingsDialog.qml:42
 #, kde-format
 msgid "Places Sidebar"
-msgstr ""
+msgstr "Lokoj Flankbreto"
 
 #: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr ""
+msgstr "Foliumi vian dosiersistemon de la flanka kolumno."
 
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
@@ -423,7 +423,7 @@ msgstr "Aŭtokonservado"
 #: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr ""
+msgstr "Aŭtomate konservas vian dosieron ĉiujn kelkajn sekundojn."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
@@ -438,7 +438,7 @@ msgstr "Lininombroj:"
 #: views/widgets/SettingsDialog.qml:75
 #, kde-format
 msgid "Display the line numbers on the left side."
-msgstr ""
+msgstr "Montri la linionumerojn sur la maldekstra flanko."
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
@@ -453,12 +453,12 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting Languages"
-msgstr ""
+msgstr "Sintakso Elstarigante Lingvoj"
 
 #: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
-msgstr ""
+msgstr "Montri disponeblajn lingvojn."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -468,7 +468,7 @@ msgstr "Sintaksmarkigo"
 #: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr ""
+msgstr "Ebligi sintakso-markigon por subtenataj lingvoj."
 
 #: views/widgets/SettingsDialog.qml:126
 #, kde-format
@@ -490,37 +490,37 @@ msgstr "Montri"
 #: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
-msgstr ""
+msgstr "Tipara familio kaj grandeco."
 
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
-msgstr ""
+msgstr "Tab Spaco"
 
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
-msgstr ""
+msgstr "Enkonstruitaj terminalaj opcioj."
 
 #: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
-msgstr ""
+msgstr "Sinkronigi Terminalon"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Sinkronigi la terminalon al la aktuala labordosierujo de la retumilo."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Adapta Kolorskemo"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Koloroj bazitaj sur la nuna stilo."
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
@@ -540,7 +540,7 @@ msgstr "Navigado"
 #: views/widgets/ShortcutsDialog.qml:20
 #, kde-format
 msgid "Browser navigation."
-msgstr ""
+msgstr "Retumila navigado."
 
 #: views/widgets/ShortcutsDialog.qml:24
 #, kde-format
@@ -555,7 +555,7 @@ msgstr "Fermi Langeton"
 #: views/widgets/ShortcutsDialog.qml:64
 #, kde-format
 msgid "Path Edit"
-msgstr ""
+msgstr "Vojo Redakti"
 
 #: views/widgets/ShortcutsDialog.qml:99
 #, kde-format
@@ -575,7 +575,7 @@ msgstr "Antaŭrigardo"
 #: views/widgets/ShortcutsDialog.qml:149
 #, kde-format
 msgid "Find Tab"
-msgstr ""
+msgstr "Trovi Tab"
 
 #: views/widgets/ShortcutsDialog.qml:169
 #, kde-format
