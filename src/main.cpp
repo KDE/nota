@@ -3,7 +3,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
@@ -12,8 +12,8 @@
 #include <QApplication>
 #endif
 
-#include <MauiKit3/Core/mauiapp.h>
-#include <MauiKit3/TextEditor/moduleinfo.h>
+#include <MauiKit4/Core/mauiapp.h>
+#include <MauiKit4/TextEditor/moduleinfo.h>
 
 #include "nota.h"
 #include "../nota_version.h"

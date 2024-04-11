@@ -1,7 +1,7 @@
 #include "historymodel.h"
 
 #include <QSettings>
-#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
 
 static bool isTextDocument(const QUrl &url)
 {

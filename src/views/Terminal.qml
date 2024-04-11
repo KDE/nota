@@ -4,19 +4,20 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 
-import org.mauikit.controls 1.0 as Maui
-import org.mauikit.terminal 1.0 as Term
-import org.mauikit.filebrowsing 1.3 as FB
+import org.mauikit.controls as Maui
+import org.mauikit.terminal as Term
+import org.mauikit.filebrowsing as FB
 
 Term.Terminal
 {
     id: control
+
     Maui.Theme.colorSet: Maui.Theme.Window
     Maui.Theme.inherit: false
     
     kterminal.colorScheme: settings.terminalFollowsColorScheme ? "Adaptive" : settings.terminalColorScheme
   
-  session.initialWorkingDirectory: String(FB.FM.fileDir(editor.fileUrl)).replace("file://", "")
+    session.initialWorkingDirectory: String(FB.FM.fileDir(editor.fileUrl)).replace("file://", "")
     onUrlsDropped:
     {
         var str = ""

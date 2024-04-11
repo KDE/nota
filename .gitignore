@@ -54,4 +54,4 @@ CMakeLists.txt.user*
 
 # build folders and output
 build/
-vvave
+build.6/

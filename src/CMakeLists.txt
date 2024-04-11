@@ -3,6 +3,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FROM_BYTEARRAY -DQT_NO_URL_CAST_FROM_STRING)
+
 set(nota_SRCS
     main.cpp
     models/historymodel.cpp
@@ -16,11 +18,7 @@ set(nota_ASSETS
     assets/img_assets.qrc)
 
 
-if(QUICK_COMPILER)
-        qtquick_compiler_add_resources(nota_QML_QRC qml.qrc plugins/plugins.qrc)
-else()
-        qt5_add_resources(nota_QML_QRC qml.qrc plugins/plugins.qrc)
-endif()
+ qt_add_resources(nota_QML_QRC qml.qrc plugins/plugins.qrc)
 
 if(UNIX AND NOT ANDROID)
     qt_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/controllers/server.h org.kde.Nota.xml)
@@ -44,15 +42,22 @@ else()
 endif()
 
 if (ANDROID)
-    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
+    target_link_libraries(${PROJECT_NAME} Qt6::AndroidExtras Qt6::QuickControls2)
 elseif(UNIX)
-    target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::DBus)
+    target_link_libraries(${PROJECT_NAME} Qt6::Widgets Qt6::DBus)
 endif()
 
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
-target_link_libraries(${PROJECT_NAME} MauiKit3 MauiKit3::FileBrowsing MauiKit3::TextEditor Qt5::Quick Qt5::Qml KF5::CoreAddons KF5::I18n)
+target_link_libraries(${PROJECT_NAME}
+    MauiKit4
+    MauiKit4::FileBrowsing
+    MauiKit4::TextEditor
+    Qt6::Quick
+    Qt6::Qml
+    KF6::CoreAddons
+    KF6::I18n)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

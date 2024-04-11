@@ -1,8 +1,8 @@
-import QtQuick 2.13
-import QtQuick.Controls 2.13
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.mauikit.controls 1.2 as Maui
+import org.mauikit.controls as Maui
 
 Maui.SettingsDialog
 {

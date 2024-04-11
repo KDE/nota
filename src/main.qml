@@ -1,12 +1,13 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
+import QtQuick
+import QtCore
 
-import Qt.labs.settings 1.0
+import QtQuick.Controls
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.3 as FB
 
-import org.maui.nota 1.0 as Nota
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
+
+import org.maui.nota as Nota
 
 import "views"
 import "views/editor"
@@ -145,9 +146,9 @@ Maui.ApplicationWindow
         id: _fileDialogComponent
         FB.FileDialog
         {
-            settings.onlyDirs: false
-            settings.filterType: FB.FMList.TEXT
-            settings.sortBy: FB.FMList.MODIFIED
+            browser.settings.onlyDirs: false
+            browser.settings.filterType: FB.FMList.TEXT
+            browser.settings.sortBy: FB.FMList.MODIFIED
         }
     }
 
@@ -156,7 +157,7 @@ Maui.ApplicationWindow
         id: _tagsDialogComponent
         FB.TagsDialog
         {
-            onTagsReady: composerList.updateToUrls(tags)
+            onTagsReady: (tags) => composerList.updateToUrls(tags)
             composerList.strict: false
             taglist.strict: false
         }
