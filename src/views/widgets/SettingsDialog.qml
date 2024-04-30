@@ -35,9 +35,9 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("General")
-//        description: i18n("Configure the app UI, behaviour and plugins.")
+        //        description: i18n("Configure the app UI, behaviour and plugins.")
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Places Sidebar")
             label2.text: i18n("Browse your file system from the sidebar.")
@@ -50,7 +50,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text:  i18n("Auto Save")
             label2.text: i18n("Auto saves your file every few seconds.")
@@ -67,9 +67,9 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Editor")
-//        description: i18n("Configure the look and feel of the editor. The settings are applied globally.")
+        //        description: i18n("Configure the look and feel of the editor. The settings are applied globally.")
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Line Numbers")
             label2.text: i18n("Display the line numbers on the left side.")
@@ -82,7 +82,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Wrap Text")
             label2.text: i18n("Wrap the text into new lines.")
@@ -95,7 +95,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Syntax Highlighting Languages")
             label2.text: i18n("Display available languages.")
@@ -108,7 +108,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Syntax Highlighting")
             label2.text: i18n("Enable syntax highlighting for supported languages.")
@@ -121,7 +121,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Colors")
             label2.text: i18n("Configure the color scheme of the syntax highlighting. This configuration in not applied for rich text formats.")
@@ -139,9 +139,9 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Display")
-//        description: i18n("Configure the font and display options.")
+        //        description: i18n("Configure the font and display options.")
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Font")
             label2.text: i18n("Font family and size.")
@@ -154,7 +154,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text:  i18n("Tab Space")
 
@@ -170,10 +170,10 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Terminal")
-       description: i18n("Embedded terminal options.")       
-       enabled: Maui.Handy.isLinux     
+        description: i18n("Embedded terminal options.")
+        enabled: Maui.Handy.isLinux
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text:  i18n("Sync Terminal")
             label2.text: i18n("Sync the terminal to the browser current working directory.")
@@ -186,9 +186,9 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
-           label1.text: i18n("Adaptive Color Scheme")
+            label1.text: i18n("Adaptive Color Scheme")
             label2.text: i18n("Colors based on the current style.")
 
             Switch
@@ -198,7 +198,7 @@ Maui.SettingsDialog
             }
         }
         
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Color Scheme")
             label2.text: i18n("Change the color scheme of the terminal.")
@@ -208,10 +208,10 @@ Maui.SettingsDialog
             {
                 checkable: true
                 icon.name: "go-next"
-                onToggled: 
+                onToggled:
                 {
                     var component = Qt.createComponent("TerminalColorSchemes.qml");
-    var page = component.createObject(control);
+                    var page = component.createObject(control);
                     control.addPage(page)
                 }
             }
@@ -221,23 +221,20 @@ Maui.SettingsDialog
     Component
     {
         id:_stylePageComponent
-        TE.ColorSchemesPage 
+        TE.ColorSchemesPage
         {
-          enabled: settings.enableSyntaxHighlighting
-          
-          currentTheme: appSettings.theme
-          backgroundColor: appSettings.backgroundColor
-          
-          onColorsPicked: (background, text) =>
-          {
-              root.appSettings.backgroundColor = background
-        root.appSettings.textColor = text
-          }
-          
-          onCurrentThemeChanged: appSettings.theme = currentTheme
-          
-        }
-    
-    }
+            enabled: settings.enableSyntaxHighlighting
 
+            currentTheme: appSettings.theme
+            backgroundColor: appSettings.backgroundColor
+
+            onColorsPicked: (background, text) =>
+                            {
+                                root.appSettings.backgroundColor = background
+                                root.appSettings.textColor = text
+                            }
+
+            onCurrentThemeChanged: appSettings.theme = currentTheme
+        }
+    }
 }

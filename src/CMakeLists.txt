@@ -17,8 +17,9 @@ set(nota_HDRS
 set(nota_ASSETS   
     assets/img_assets.qrc)
 
-
- qt_add_resources(nota_QML_QRC qml.qrc plugins/plugins.qrc)
+qt_add_resources(nota_QML_QRC
+    qml.qrc
+    plugins/plugins.qrc)
 
 if(UNIX AND NOT ANDROID)
     qt_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/controllers/server.h org.kde.Nota.xml)

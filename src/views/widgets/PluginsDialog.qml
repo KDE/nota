@@ -7,6 +7,7 @@ import org.mauikit.controls as Maui
 Maui.SettingsDialog
 {
     id: control
+    Maui.Controls.title: i18n("Plugins")
 
     Maui.SectionGroup
     {
@@ -16,7 +17,7 @@ Maui.SettingsDialog
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             id: _qmlScene
             label1.text: i18n("QML Scene")
@@ -46,7 +47,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             id: _todos
             label1.text: i18n("ToDo")
@@ -76,8 +77,6 @@ Maui.SettingsDialog
             }
         }
 
-
-
         Maui.SectionItem
         {
             label1.text: i18n("Builder")
@@ -89,9 +88,7 @@ Maui.SettingsDialog
             label1.text: i18n("HTML Previewer")
             label2.text: i18n("Preview HTML code live.")
         }
-
     }
-
 
     Maui.SectionGroup
     {
@@ -102,7 +99,7 @@ Maui.SettingsDialog
         Layout.fillHeight: true
 
         spacing: 0
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Builder")
             label2.text: i18n("Configure a project to build and run.")

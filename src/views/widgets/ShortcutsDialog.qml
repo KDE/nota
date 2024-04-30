@@ -7,6 +7,8 @@ import org.mauikit.controls as Maui
 Maui.SettingsDialog
 {
     id: control
+    Maui.Controls.title: i18n("Shortcuts")
+
     // title: i18n("Shortcuts")
     // persistent: false
     // page.showTitle: false
@@ -19,7 +21,7 @@ Maui.SettingsDialog
         title: i18n("Navigation")
         description: i18n("Browser navigation.")
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("New Tab")
 
@@ -39,7 +41,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Close Tab")
 
@@ -59,7 +61,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Path Edit")
 
@@ -79,7 +81,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Terminal")
 
@@ -94,7 +96,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Split")
 
@@ -109,7 +111,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("New File")
 
@@ -129,7 +131,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Preview")
 
@@ -144,7 +146,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Find Tab")
 
@@ -164,7 +166,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Select All")
 
@@ -184,7 +186,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Select")
 

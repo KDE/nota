@@ -113,7 +113,7 @@ bool AppInstance::attachToExistingInstance(const QList<QUrl>& inputUrls, bool sp
         return true;
     }
 
-    for (const auto& interface: qAsConst(dolphinInterfaces))
+    for (const auto& interface: std::as_const(dolphinInterfaces))
     {
         auto reply = interface.first->openFiles(newUrls, splitView);
         reply.waitForFinished();
@@ -192,7 +192,7 @@ void Server::quit()
     QCoreApplication::quit();
 }
 
-void Server::openFiles(const QStringList &urls, bool splitView)
+void Server::openFiles(const QStringList &urls, bool)
 {
     auto files = filterFiles(urls);
 
@@ -246,7 +246,7 @@ void Server::openNewTabAndActivate(const QString &url)
     }
 }
 
-void Server::openNewWindow(const QString &url)
+void Server::openNewWindow(const QString &)
 {
 
 }

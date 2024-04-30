@@ -39,7 +39,7 @@ public Q_SLOTS:
            *
            * @note this is overloaded so that this function is callable via DBus.
            */
-    void openFiles(const QStringList &urls, bool splitView);
+    void openFiles(const QStringList &urls, bool);
 
 
     /**
@@ -61,7 +61,7 @@ public Q_SLOTS:
     /**
              * Opens a new window showing the URL \a url.
              */
-    void openNewWindow(const QString &url);
+    void openNewWindow(const QString &);
 
     /**
                 * Determines if a URL is open in any tab.
