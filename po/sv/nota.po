@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Stefan Asserhäll <stefan.asserhall@bredband.net>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-27 01:36+0000\n"
-"PO-Revision-Date: 2023-12-28 15:46+0100\n"
+"PO-Revision-Date: 2024-05-03 08:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -446,12 +446,12 @@ msgstr "Visa radnummer på vänster sida."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Radbryt text"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Radbryt texten på nya rader."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -503,10 +503,9 @@ msgid "Tab Space"
 msgstr "Tabulatormellanslag"
 
 #: views/widgets/SettingsDialog.qml:173
-#, fuzzy, kde-format
-#| msgid "Embedded Terminal"
+#, kde-format
 msgid "Embedded terminal options."
-msgstr "Inbäddad terminal"
+msgstr "Alternativ för inbäddad terminal."
 
 #: views/widgets/SettingsDialog.qml:178
 #, kde-format
@@ -521,22 +520,22 @@ msgstr "Synkronisera terminalen med bläddrarens nuvarande arbetskatalog."
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Adaptivt färgschema"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Färger baserade på nuvarande stil."
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Färgschema"
 
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Ändra terminalens färgschema."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
