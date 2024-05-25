@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-27 01:36+0000\n"
-"PO-Revision-Date: 2023-04-08 11:08+0100\n"
+"PO-Revision-Date: 2024-05-24 19:16+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -77,22 +77,19 @@ msgid "New ToDo... Argh!"
 msgstr "New ToDo... Argh!"
 
 #: views/editor/Editor.qml:108
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
-msgstr "Open here"
+msgstr "Open Here"
 
 #: views/editor/Editor.qml:118
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
-msgstr "Open in new tab"
+msgstr "Open in New Tab"
 
 #: views/editor/Editor.qml:129
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
-msgstr "Open in new split"
+msgstr "Open in New Split"
 
 #: views/editor/Editor.qml:141
 #, kde-format
@@ -427,10 +424,9 @@ msgid "Auto Save"
 msgstr "Auto Save"
 
 #: views/widgets/SettingsDialog.qml:56
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Auto saves your file every few seconds"
+msgstr "Auto saves your file every few seconds."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
@@ -450,12 +446,12 @@ msgstr "Display the line numbers on the left side."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Wrap Text"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Wrap the text into new lines."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -507,41 +503,39 @@ msgid "Tab Space"
 msgstr "Tab Space"
 
 #: views/widgets/SettingsDialog.qml:173
-#, fuzzy, kde-format
-#| msgid "Embedded Terminal"
+#, kde-format
 msgid "Embedded terminal options."
-msgstr "Embedded Terminal"
+msgstr "Embedded terminal options."
 
 #: views/widgets/SettingsDialog.qml:178
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Terminal"
+msgstr "Sync Terminal"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Sync the terminal to the browser current working directory."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Adaptive Colour Scheme"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Colours based on the current style."
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Colour Scheme"
 
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Change the colour scheme of the terminal."
 
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
