@@ -77,7 +77,7 @@ msgstr "Mòbil"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr "Tasca pendent nova... Vaja!"
+msgstr "Tasca pendent nova… Vaja!"
 
 #: views/editor/Editor.qml:108
 #, kde-format
@@ -324,7 +324,7 @@ msgstr "Exporta"
 #: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
-msgstr "Filtre..."
+msgstr "Filtre…"
 
 #: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
 #, kde-format
@@ -544,7 +544,7 @@ msgstr "Canvia l'esquema de color del terminal."
 #: views/widgets/ShortcutsDialog.qml:19
 #, kde-format
 msgid "Navigation"
-msgstr "Navegació"
+msgstr "Navegueu"
 
 #: views/widgets/ShortcutsDialog.qml:20
 #, kde-format

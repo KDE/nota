@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
-# Vit Pelcak <vit@pelcak.org>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-27 01:36+0000\n"
-"PO-Revision-Date: 2023-04-06 15:05+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-04-30 15:54+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -77,7 +77,7 @@ msgstr ""
 #: views/editor/Editor.qml:108
 #, kde-format
 msgid "Open Here"
-msgstr ""
+msgstr "Otevřít zde"
 
 #: views/editor/Editor.qml:118
 #, kde-format
@@ -435,7 +435,7 @@ msgstr "Editor"
 #: views/widgets/SettingsDialog.qml:74
 #, kde-format
 msgid "Line Numbers"
-msgstr "Čísla řádek"
+msgstr "Čísla řádků"
 
 #: views/widgets/SettingsDialog.qml:75
 #, kde-format
@@ -502,12 +502,12 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
-msgstr ""
+msgstr "Možnosti zabudovaného terminálu."
 
 #: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
-msgstr ""
+msgstr "Synchronizovat Terminál"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
