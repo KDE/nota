@@ -67,6 +67,10 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="x-test">xxBrowse, create and edit text filesxx</summary>
   <summary xml:lang="zh-CN">浏览、创建和编辑文本文件</summary>
   <summary xml:lang="zh-TW">瀏覽、建立並編輯文字檔案</summary>
+  <developer>
+    <name>maui</name>
+    <url>https://mauikit.org/</url>
+  </developer>
   <description>
     <p>Nota is a simple text editor for desktop and mobile computers.</p>
     <p xml:lang="ar">نوتا هو محرر نصوص بسيط لأجهزة الحاسوب المكتبية والمحمولة.</p>
@@ -102,6 +106,7 @@ SPDX-License-Identifier: CC0-1.0
   <url type="homepage">https://mauikit.org/</url>
   <url type="bugtracker">https://invent.kde.org/maui/nota/-/issues</url>
   <url type="donation">https://kde.org/community/donations</url>
+  <url type="vcs-browser">https://invent.kde.org/maui/nota</url>
   <screenshots>
     <screenshot type="default">
       <caption>Nota, a text editor</caption>
@@ -175,6 +180,12 @@ SPDX-License-Identifier: CC0-1.0
       </image>
     </screenshot>
   </screenshots>
+  <categories>
+    <category>Qt</category>
+    <category>KDE</category>
+    <category>Utility</category>
+    <category>TextEditor</category>
+  </categories>
   <provides>
     <binary>nota</binary>
   </provides>
