@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 01:36+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -27,22 +27,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kiszel.kristof@gmail.com"
 
-#: main.cpp:49
+#: main.cpp:46
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Szövegfájlok böngészése, létrehozása és szerkesztése."
 
-#: main.cpp:54 main.cpp:55
+#: main.cpp:51 main.cpp:52
 #, kde-format
 msgid "Developer"
 msgstr "Fejlesztő"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "Nem mentett fájlok"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -115,100 +115,100 @@ msgstr "Legutóbbi fájlok megnyitása"
 msgid "New"
 msgstr "Új lap"
 
-#: views/editor/EditorView.qml:76
+#: views/editor/EditorView.qml:77
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Create a New Document"
 msgstr "Új dokumentum létrehozása"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:78
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Létrehozhat vagy megnyithat új dokumentumot."
 
-#: views/editor/EditorView.qml:105
+#: views/editor/EditorView.qml:106
 #, kde-format
 msgid "Places"
 msgstr "Helyek"
 
-#: views/editor/EditorView.qml:113
+#: views/editor/EditorView.qml:114
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Oldalsáv be/ki"
 
-#: views/editor/EditorView.qml:162
+#: views/editor/EditorView.qml:163
 #, kde-format
 msgid "Focus"
 msgstr "Fókusz"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
-#: views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminál"
 
-#: views/editor/EditorView.qml:181
+#: views/editor/EditorView.qml:182
 #, fuzzy, kde-format
 #| msgid "Split"
 msgid "Split View"
 msgstr "Felosztás"
 
-#: views/editor/EditorView.qml:202 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: views/editor/EditorView.qml:213
+#: views/editor/EditorView.qml:214
 #, kde-format
 msgid "Settings"
 msgstr "Beállítások"
 
-#: views/editor/EditorView.qml:224
+#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Bővítmények"
 
-#: views/editor/EditorView.qml:235
+#: views/editor/EditorView.qml:236
 #, kde-format
 msgid "About"
 msgstr "Névjegy"
 
-#: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Név"
 
-#: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Dátum"
 
-#: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Módosítva"
 
-#: views/editor/EditorView.qml:304 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Méret"
 
-#: views/editor/EditorView.qml:310 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Típus"
 
-#: views/editor/EditorView.qml:322 views/editor/EditorView.qml:470
+#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
 #, kde-format
 msgid "Go to Line"
 msgstr "Ugrás egy sorra"
 
-#: views/editor/EditorView.qml:324
+#: views/editor/EditorView.qml:325
 #, kde-format
 msgid "Line number"
 msgstr "Sorszám"
 
-#: views/editor/EditorView.qml:336 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
 #, fuzzy, kde-format
 #| msgid "Delete file?"
 msgid "Delete File?"
@@ -216,7 +216,7 @@ msgstr "Törli ezt a fájlt?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -225,58 +225,58 @@ msgstr ""
 "Biztosan törli ezt? \n"
 "%1"
 
-#: views/editor/EditorView.qml:363
+#: views/editor/EditorView.qml:364
 #, kde-format
 msgid "Undo"
 msgstr ""
 
-#: views/editor/EditorView.qml:371
+#: views/editor/EditorView.qml:372
 #, kde-format
 msgid "Redo"
 msgstr "Újra"
 
-#: views/editor/EditorView.qml:379
+#: views/editor/EditorView.qml:380
 #, kde-format
 msgid "Save"
 msgstr "Mentés"
 
-#: views/editor/EditorView.qml:388
+#: views/editor/EditorView.qml:389
 #, kde-format
 msgid "Save as"
 msgstr "Mentés másként"
 
-#: views/editor/EditorView.qml:398
+#: views/editor/EditorView.qml:399
 #, kde-format
 msgid "Find and Replace"
 msgstr "Keresés és csere"
 
-#: views/editor/EditorView.qml:411
+#: views/editor/EditorView.qml:412
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Sor/szószámláló"
 
-#: views/editor/EditorView.qml:429
+#: views/editor/EditorView.qml:430
 #, kde-format
 msgid "UnFav it"
 msgstr "Nem kedvenc"
 
-#: views/editor/EditorView.qml:444 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Információ"
 
-#: views/editor/EditorView.qml:457 views/RecentView.qml:134
+#: views/editor/EditorView.qml:458 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Megosztás"
 
-#: views/editor/EditorView.qml:482 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
 #, fuzzy, kde-format
 #| msgid "Show in folder"
 msgid "Show in Folder"
 msgstr "Megjelenítés mappában"
 
-#: views/editor/EditorView.qml:492
+#: views/editor/EditorView.qml:493
 #, fuzzy, kde-format
 #| msgid "Delete file"
 msgid "Delete File"
@@ -332,7 +332,7 @@ msgstr "Exportálás"
 msgid "Filter..."
 msgstr "Szűrő…"
 
-#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
 msgstr "Kijelölés"
@@ -347,62 +347,62 @@ msgstr "Másolás"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: views/widgets/PluginsDialog.qml:13
+#: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
 msgstr "Alapértelmezett bővítmények"
 
-#: views/widgets/PluginsDialog.qml:14
+#: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
 msgstr "Alapértelmezett bővítmények aktiválása vagy eltávolítása"
 
-#: views/widgets/PluginsDialog.qml:22
+#: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
 msgstr "QML nézet"
 
-#: views/widgets/PluginsDialog.qml:23
+#: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
 msgstr "Jelenlegi fájl betöltése egy QML nézetben."
 
-#: views/widgets/PluginsDialog.qml:52
+#: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "ToDo"
 msgstr "Tennivaló"
 
-#: views/widgets/PluginsDialog.qml:53
+#: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
 msgstr "Tennivalók listája."
 
-#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
 msgid "Builder"
 msgstr "Építő"
 
-#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
 msgstr "Projekt fordításának és futtatásának beállítása."
 
-#: views/widgets/PluginsDialog.qml:89
+#: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
 msgstr "HTML előnézet"
 
-#: views/widgets/PluginsDialog.qml:90
+#: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
 msgstr "HTML-kód élő előnézete."
 
-#: views/widgets/PluginsDialog.qml:98
+#: views/widgets/PluginsDialog.qml:95
 #, kde-format
 msgid "Load Plugins"
 msgstr "Bővítmények betöltése"
 
-#: views/widgets/PluginsDialog.qml:99
+#: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
 msgstr "Harmadik féltől származó bővítmények aktiválása vagy eltávolítása"
@@ -559,52 +559,52 @@ msgstr ""
 msgid "Change the color scheme of the terminal."
 msgstr ""
 
-#: views/widgets/ShortcutsDialog.qml:19
+#: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
 msgid "Navigation"
 msgstr "Navigáció"
 
-#: views/widgets/ShortcutsDialog.qml:20
+#: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
 msgstr "Böngészőnavigáció."
 
-#: views/widgets/ShortcutsDialog.qml:24
+#: views/widgets/ShortcutsDialog.qml:26
 #, kde-format
 msgid "New Tab"
 msgstr "Új lap"
 
-#: views/widgets/ShortcutsDialog.qml:44
+#: views/widgets/ShortcutsDialog.qml:46
 #, kde-format
 msgid "Close Tab"
 msgstr "Lap bezárása"
 
-#: views/widgets/ShortcutsDialog.qml:64
+#: views/widgets/ShortcutsDialog.qml:66
 #, kde-format
 msgid "Path Edit"
 msgstr "Elérési út szerkesztése"
 
-#: views/widgets/ShortcutsDialog.qml:99
+#: views/widgets/ShortcutsDialog.qml:101
 #, kde-format
 msgid "Split"
 msgstr "Felosztás"
 
-#: views/widgets/ShortcutsDialog.qml:114
+#: views/widgets/ShortcutsDialog.qml:116
 #, kde-format
 msgid "New File"
 msgstr "Új fájl"
 
-#: views/widgets/ShortcutsDialog.qml:134
+#: views/widgets/ShortcutsDialog.qml:136
 #, kde-format
 msgid "Preview"
 msgstr "Előnézet"
 
-#: views/widgets/ShortcutsDialog.qml:149
+#: views/widgets/ShortcutsDialog.qml:151
 #, kde-format
 msgid "Find Tab"
 msgstr "Lap keresése"
 
-#: views/widgets/ShortcutsDialog.qml:169
+#: views/widgets/ShortcutsDialog.qml:171
 #, kde-format
 msgid "Select All"
 msgstr "Összes kijelölése"

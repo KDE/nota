@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 01:36+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2024-02-27 08:16+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -30,22 +30,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: main.cpp:49
+#: main.cpp:46
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Перегляд, створення та редагування текстових файлів."
 
-#: main.cpp:54 main.cpp:55
+#: main.cpp:51 main.cpp:52
 #, kde-format
 msgid "Developer"
 msgstr "Розробник"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "Незбережені файли"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -114,105 +114,105 @@ msgstr "Відкрити нещодавні файли"
 msgid "New"
 msgstr "Створити"
 
-#: views/editor/EditorView.qml:76
+#: views/editor/EditorView.qml:77
 #, kde-format
 msgid "Create a New Document"
 msgstr "Створити новий документ"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:78
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Ви можете створити або відкрити новий документ."
 
-#: views/editor/EditorView.qml:105
+#: views/editor/EditorView.qml:106
 #, kde-format
 msgid "Places"
 msgstr "Місця"
 
-#: views/editor/EditorView.qml:113
+#: views/editor/EditorView.qml:114
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Увімкнути чи вимкнути бічну панель"
 
-#: views/editor/EditorView.qml:162
+#: views/editor/EditorView.qml:163
 #, kde-format
 msgid "Focus"
 msgstr "Фокус"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
-#: views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Термінал"
 
-#: views/editor/EditorView.qml:181
+#: views/editor/EditorView.qml:182
 #, kde-format
 msgid "Split View"
 msgstr "Розділений перегляд"
 
-#: views/editor/EditorView.qml:202 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Скорочення"
 
-#: views/editor/EditorView.qml:213
+#: views/editor/EditorView.qml:214
 #, kde-format
 msgid "Settings"
 msgstr "Параметри"
 
-#: views/editor/EditorView.qml:224
+#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Додатки"
 
-#: views/editor/EditorView.qml:235
+#: views/editor/EditorView.qml:236
 #, kde-format
 msgid "About"
 msgstr "Про програму"
 
-#: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Назва"
 
-#: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Дата"
 
-#: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Змінено"
 
-#: views/editor/EditorView.qml:304 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Розмір"
 
-#: views/editor/EditorView.qml:310 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Тип"
 
-#: views/editor/EditorView.qml:322 views/editor/EditorView.qml:470
+#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
 #, kde-format
 msgid "Go to Line"
 msgstr "Перейти до рядка"
 
-#: views/editor/EditorView.qml:324
+#: views/editor/EditorView.qml:325
 #, kde-format
 msgid "Line number"
 msgstr "Номер рядків"
 
-#: views/editor/EditorView.qml:336 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Вилучити файл?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -221,57 +221,57 @@ msgstr ""
 "Ви справді хочете вилучити \n"
 "%1"
 
-#: views/editor/EditorView.qml:363
+#: views/editor/EditorView.qml:364
 #, kde-format
 msgid "Undo"
 msgstr "Скасувати"
 
-#: views/editor/EditorView.qml:371
+#: views/editor/EditorView.qml:372
 #, kde-format
 msgid "Redo"
 msgstr "Повторити"
 
-#: views/editor/EditorView.qml:379
+#: views/editor/EditorView.qml:380
 #, kde-format
 msgid "Save"
 msgstr "Зберегти"
 
-#: views/editor/EditorView.qml:388
+#: views/editor/EditorView.qml:389
 #, kde-format
 msgid "Save as"
 msgstr "Зберегти як"
 
-#: views/editor/EditorView.qml:398
+#: views/editor/EditorView.qml:399
 #, kde-format
 msgid "Find and Replace"
 msgstr "Знайти і замінити"
 
-#: views/editor/EditorView.qml:411
+#: views/editor/EditorView.qml:412
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Лічильник рядків/слів"
 
-#: views/editor/EditorView.qml:429
+#: views/editor/EditorView.qml:430
 #, kde-format
 msgid "UnFav it"
 msgstr "Прибрати з улюблених"
 
-#: views/editor/EditorView.qml:444 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Інформація"
 
-#: views/editor/EditorView.qml:457 views/RecentView.qml:134
+#: views/editor/EditorView.qml:458 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Оприлюднити"
 
-#: views/editor/EditorView.qml:482 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Показати у теці"
 
-#: views/editor/EditorView.qml:492
+#: views/editor/EditorView.qml:493
 #, kde-format
 msgid "Delete File"
 msgstr "Вилучити файл"
@@ -326,7 +326,7 @@ msgstr "Експортувати"
 msgid "Filter..."
 msgstr "Фільтрувати…"
 
-#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
 msgstr "Вибрати"
@@ -341,62 +341,62 @@ msgstr "Копіювати"
 msgid "Remove"
 msgstr "Вилучити"
 
-#: views/widgets/PluginsDialog.qml:13
+#: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
 msgstr "Типові додатки"
 
-#: views/widgets/PluginsDialog.qml:14
+#: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
 msgstr "Активація або вилучення типових додатків"
 
-#: views/widgets/PluginsDialog.qml:22
+#: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
 msgstr "Сцена QML"
 
-#: views/widgets/PluginsDialog.qml:23
+#: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
 msgstr "Завантажити поточний файл як сцену QML."
 
-#: views/widgets/PluginsDialog.qml:52
+#: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "ToDo"
 msgstr "Завдання"
 
-#: views/widgets/PluginsDialog.qml:53
+#: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
 msgstr "Список завдань."
 
-#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
 msgid "Builder"
 msgstr "Будівник"
 
-#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
 msgstr "Налаштувати збирання і запуск проєкту."
 
-#: views/widgets/PluginsDialog.qml:89
+#: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
 msgstr "Переглядач HTML"
 
-#: views/widgets/PluginsDialog.qml:90
+#: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
 msgstr "Інтерактивний перегляд коду HTML."
 
-#: views/widgets/PluginsDialog.qml:98
+#: views/widgets/PluginsDialog.qml:95
 #, kde-format
 msgid "Load Plugins"
 msgstr "Завантажити додатки"
 
-#: views/widgets/PluginsDialog.qml:99
+#: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
 msgstr "Активація або вилучення сторонніх додатків"
@@ -540,52 +540,52 @@ msgstr "Схема кольорів"
 msgid "Change the color scheme of the terminal."
 msgstr "Зміна кольорової схеми термінала."
 
-#: views/widgets/ShortcutsDialog.qml:19
+#: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
 msgid "Navigation"
 msgstr "Навігація"
 
-#: views/widgets/ShortcutsDialog.qml:20
+#: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
 msgstr "Навігація у браузері."
 
-#: views/widgets/ShortcutsDialog.qml:24
+#: views/widgets/ShortcutsDialog.qml:26
 #, kde-format
 msgid "New Tab"
 msgstr "Створити вкладку"
 
-#: views/widgets/ShortcutsDialog.qml:44
+#: views/widgets/ShortcutsDialog.qml:46
 #, kde-format
 msgid "Close Tab"
 msgstr "Закрити вкладку"
 
-#: views/widgets/ShortcutsDialog.qml:64
+#: views/widgets/ShortcutsDialog.qml:66
 #, kde-format
 msgid "Path Edit"
 msgstr "Редагування шляху"
 
-#: views/widgets/ShortcutsDialog.qml:99
+#: views/widgets/ShortcutsDialog.qml:101
 #, kde-format
 msgid "Split"
 msgstr "Розділити"
 
-#: views/widgets/ShortcutsDialog.qml:114
+#: views/widgets/ShortcutsDialog.qml:116
 #, kde-format
 msgid "New File"
 msgstr "Створити файл"
 
-#: views/widgets/ShortcutsDialog.qml:134
+#: views/widgets/ShortcutsDialog.qml:136
 #, kde-format
 msgid "Preview"
 msgstr "Перегляд"
 
-#: views/widgets/ShortcutsDialog.qml:149
+#: views/widgets/ShortcutsDialog.qml:151
 #, kde-format
 msgid "Find Tab"
 msgstr "Знайти вкладку"
 
-#: views/widgets/ShortcutsDialog.qml:169
+#: views/widgets/ShortcutsDialog.qml:171
 #, kde-format
 msgid "Select All"
 msgstr "Позначити все"

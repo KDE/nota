@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 01:36+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2023-04-06 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -28,22 +28,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: main.cpp:49
+#: main.cpp:46
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "تصفح وأنشئ وحرر الملفات النصية."
 
-#: main.cpp:54 main.cpp:55
+#: main.cpp:51 main.cpp:52
 #, kde-format
 msgid "Developer"
 msgstr "مطوّر"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "ملفات غير المحفوظة"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -115,105 +115,105 @@ msgstr "افتح الملفات الحديثة"
 msgid "New"
 msgstr "جديد"
 
-#: views/editor/EditorView.qml:76
+#: views/editor/EditorView.qml:77
 #, kde-format
 msgid "Create a New Document"
 msgstr "أنشئ مستندًا جديدًا"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:78
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "يمكنك إنشاء أو فتح مستند جديد."
 
-#: views/editor/EditorView.qml:105
+#: views/editor/EditorView.qml:106
 #, kde-format
 msgid "Places"
 msgstr "الأماكن"
 
-#: views/editor/EditorView.qml:113
+#: views/editor/EditorView.qml:114
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "بدل الشريط الجانبي"
 
-#: views/editor/EditorView.qml:162
+#: views/editor/EditorView.qml:163
 #, kde-format
 msgid "Focus"
 msgstr "التركيز"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
-#: views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "الطّرفيّة"
 
-#: views/editor/EditorView.qml:181
+#: views/editor/EditorView.qml:182
 #, kde-format
 msgid "Split View"
 msgstr "اقسم العرض"
 
-#: views/editor/EditorView.qml:202 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
-#: views/editor/EditorView.qml:213
+#: views/editor/EditorView.qml:214
 #, kde-format
 msgid "Settings"
 msgstr "إعدادات"
 
-#: views/editor/EditorView.qml:224
+#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "الملحقات"
 
-#: views/editor/EditorView.qml:235
+#: views/editor/EditorView.qml:236
 #, kde-format
 msgid "About"
 msgstr "عن"
 
-#: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "الاسم"
 
-#: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "التاريخ"
 
-#: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "معدّل"
 
-#: views/editor/EditorView.qml:304 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "الحجم"
 
-#: views/editor/EditorView.qml:310 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "النّوع"
 
-#: views/editor/EditorView.qml:322 views/editor/EditorView.qml:470
+#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
 #, kde-format
 msgid "Go to Line"
 msgstr "انتقل إلى سطر"
 
-#: views/editor/EditorView.qml:324
+#: views/editor/EditorView.qml:325
 #, kde-format
 msgid "Line number"
 msgstr "رقم السطر"
 
-#: views/editor/EditorView.qml:336 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "أأحذف الملفّ؟"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -222,57 +222,57 @@ msgstr ""
 "هل تريد فعلاً حذف\n"
 "%1"
 
-#: views/editor/EditorView.qml:363
+#: views/editor/EditorView.qml:364
 #, kde-format
 msgid "Undo"
 msgstr "تراجع"
 
-#: views/editor/EditorView.qml:371
+#: views/editor/EditorView.qml:372
 #, kde-format
 msgid "Redo"
 msgstr "كرّر"
 
-#: views/editor/EditorView.qml:379
+#: views/editor/EditorView.qml:380
 #, kde-format
 msgid "Save"
 msgstr "احفظ"
 
-#: views/editor/EditorView.qml:388
+#: views/editor/EditorView.qml:389
 #, kde-format
 msgid "Save as"
 msgstr "احفظ ك‍"
 
-#: views/editor/EditorView.qml:398
+#: views/editor/EditorView.qml:399
 #, kde-format
 msgid "Find and Replace"
 msgstr "أوجد واستبدل"
 
-#: views/editor/EditorView.qml:411
+#: views/editor/EditorView.qml:412
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "عداد السطور/الكلمات"
 
-#: views/editor/EditorView.qml:429
+#: views/editor/EditorView.qml:430
 #, kde-format
 msgid "UnFav it"
 msgstr "أزل التفضيل"
 
-#: views/editor/EditorView.qml:444 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "معلومات"
 
-#: views/editor/EditorView.qml:457 views/RecentView.qml:134
+#: views/editor/EditorView.qml:458 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "شارك"
 
-#: views/editor/EditorView.qml:482 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "أظهر في مجلد"
 
-#: views/editor/EditorView.qml:492
+#: views/editor/EditorView.qml:493
 #, kde-format
 msgid "Delete File"
 msgstr "احذف ملف"
@@ -327,7 +327,7 @@ msgstr "صدّر"
 msgid "Filter..."
 msgstr "رشّح..."
 
-#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
 msgstr "اختر"
@@ -342,62 +342,62 @@ msgstr "انسخ"
 msgid "Remove"
 msgstr "أزل"
 
-#: views/widgets/PluginsDialog.qml:13
+#: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
 msgstr "الملحقات المبدئية"
 
-#: views/widgets/PluginsDialog.qml:14
+#: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
 msgstr "نشط أو أزل الملحقات المبدئية"
 
-#: views/widgets/PluginsDialog.qml:22
+#: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
 msgstr "مشهد كيو ام ال"
 
-#: views/widgets/PluginsDialog.qml:23
+#: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
 msgstr "حمل ملف الحالي مشهد كيو ام ال"
 
-#: views/widgets/PluginsDialog.qml:52
+#: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "ToDo"
 msgstr "مهمّة"
 
-#: views/widgets/PluginsDialog.qml:53
+#: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
 msgstr "قائمة مهام."
 
-#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
 msgid "Builder"
 msgstr "الباني"
 
-#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
 msgstr "اضبط بناء وتشغيل المشروع."
 
-#: views/widgets/PluginsDialog.qml:89
+#: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
 msgstr "معاينة اتش تي ام ال"
 
-#: views/widgets/PluginsDialog.qml:90
+#: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
 msgstr "عاين شفرة اتش تي ام ال بشكل حي"
 
-#: views/widgets/PluginsDialog.qml:98
+#: views/widgets/PluginsDialog.qml:95
 #, kde-format
 msgid "Load Plugins"
 msgstr "يحمّل الملحقات"
 
-#: views/widgets/PluginsDialog.qml:99
+#: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
 msgstr "نشط أو أزل الملحقات من أطراف ثالثة"
@@ -541,52 +541,52 @@ msgstr ""
 msgid "Change the color scheme of the terminal."
 msgstr ""
 
-#: views/widgets/ShortcutsDialog.qml:19
+#: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
 msgid "Navigation"
 msgstr "التّنقّل"
 
-#: views/widgets/ShortcutsDialog.qml:20
+#: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
 msgstr "ملاحة التنقل."
 
-#: views/widgets/ShortcutsDialog.qml:24
+#: views/widgets/ShortcutsDialog.qml:26
 #, kde-format
 msgid "New Tab"
 msgstr "لسان جديد"
 
-#: views/widgets/ShortcutsDialog.qml:44
+#: views/widgets/ShortcutsDialog.qml:46
 #, kde-format
 msgid "Close Tab"
 msgstr "أغلق اللسان"
 
-#: views/widgets/ShortcutsDialog.qml:64
+#: views/widgets/ShortcutsDialog.qml:66
 #, kde-format
 msgid "Path Edit"
 msgstr "تحرير المسار"
 
-#: views/widgets/ShortcutsDialog.qml:99
+#: views/widgets/ShortcutsDialog.qml:101
 #, kde-format
 msgid "Split"
 msgstr "اقسم"
 
-#: views/widgets/ShortcutsDialog.qml:114
+#: views/widgets/ShortcutsDialog.qml:116
 #, kde-format
 msgid "New File"
 msgstr "ملفّ جديد"
 
-#: views/widgets/ShortcutsDialog.qml:134
+#: views/widgets/ShortcutsDialog.qml:136
 #, kde-format
 msgid "Preview"
 msgstr "معاينة"
 
-#: views/widgets/ShortcutsDialog.qml:149
+#: views/widgets/ShortcutsDialog.qml:151
 #, kde-format
 msgid "Find Tab"
 msgstr "لسان البحث"
 
-#: views/widgets/ShortcutsDialog.qml:169
+#: views/widgets/ShortcutsDialog.qml:171
 #, kde-format
 msgid "Select All"
 msgstr "حدّد الكلّ"

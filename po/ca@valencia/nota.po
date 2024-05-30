@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 01:36+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2024-02-27 16:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -30,22 +30,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
-#: main.cpp:49
+#: main.cpp:46
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Navegueu, creeu, i editeu fitxers de text."
 
-#: main.cpp:54 main.cpp:55
+#: main.cpp:51 main.cpp:52
 #, kde-format
 msgid "Developer"
 msgstr "Desenvolupador"
 
-#: main.qml:110
+#: main.qml:111
 #, kde-format
 msgid "Unsaved files"
 msgstr "Fitxers sense guardar"
 
-#: main.qml:111
+#: main.qml:112
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -114,105 +114,105 @@ msgstr "Obri fitxers recents"
 msgid "New"
 msgstr "Nou"
 
-#: views/editor/EditorView.qml:76
+#: views/editor/EditorView.qml:77
 #, kde-format
 msgid "Create a New Document"
 msgstr "Crea un document nou"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:78
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Podeu crear o obrir un document nou."
 
-#: views/editor/EditorView.qml:105
+#: views/editor/EditorView.qml:106
 #, kde-format
 msgid "Places"
 msgstr "Llocs"
 
-#: views/editor/EditorView.qml:113
+#: views/editor/EditorView.qml:114
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Alterna la barra lateral"
 
-#: views/editor/EditorView.qml:162
+#: views/editor/EditorView.qml:163
 #, kde-format
 msgid "Focus"
 msgstr "Focus"
 
-#: views/editor/EditorView.qml:170 views/widgets/SettingsDialog.qml:172
-#: views/widgets/ShortcutsDialog.qml:84
+#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminal"
 
-#: views/editor/EditorView.qml:181
+#: views/editor/EditorView.qml:182
 #, kde-format
 msgid "Split View"
 msgstr "Dividix la vista"
 
-#: views/editor/EditorView.qml:202 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Dreceres"
 
-#: views/editor/EditorView.qml:213
+#: views/editor/EditorView.qml:214
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
 
-#: views/editor/EditorView.qml:224
+#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Connectors"
 
-#: views/editor/EditorView.qml:235
+#: views/editor/EditorView.qml:236
 #, kde-format
 msgid "About"
 msgstr "Quant a"
 
-#: views/editor/EditorView.qml:286 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nom"
 
-#: views/editor/EditorView.qml:292 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: views/editor/EditorView.qml:298 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modificat"
 
-#: views/editor/EditorView.qml:304 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Mida"
 
-#: views/editor/EditorView.qml:310 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Tipus"
 
-#: views/editor/EditorView.qml:322 views/editor/EditorView.qml:470
+#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
 #, kde-format
 msgid "Go to Line"
 msgstr "Ves fins a la línia"
 
-#: views/editor/EditorView.qml:324
+#: views/editor/EditorView.qml:325
 #, kde-format
 msgid "Line number"
 msgstr "Número de línia"
 
-#: views/editor/EditorView.qml:336 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Voleu suprimir el fitxer?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -221,57 +221,57 @@ msgstr ""
 "Segur que voleu suprimir \n"
 "%1?"
 
-#: views/editor/EditorView.qml:363
+#: views/editor/EditorView.qml:364
 #, kde-format
 msgid "Undo"
 msgstr "Desfés"
 
-#: views/editor/EditorView.qml:371
+#: views/editor/EditorView.qml:372
 #, kde-format
 msgid "Redo"
 msgstr "Refés"
 
-#: views/editor/EditorView.qml:379
+#: views/editor/EditorView.qml:380
 #, kde-format
 msgid "Save"
 msgstr "Guarda"
 
-#: views/editor/EditorView.qml:388
+#: views/editor/EditorView.qml:389
 #, kde-format
 msgid "Save as"
 msgstr "Anomena i guarda"
 
-#: views/editor/EditorView.qml:398
+#: views/editor/EditorView.qml:399
 #, kde-format
 msgid "Find and Replace"
 msgstr "Busca i substituïx"
 
-#: views/editor/EditorView.qml:411
+#: views/editor/EditorView.qml:412
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Comptador de línies/paraules"
 
-#: views/editor/EditorView.qml:429
+#: views/editor/EditorView.qml:430
 #, kde-format
 msgid "UnFav it"
 msgstr "Desmarca com a preferit"
 
-#: views/editor/EditorView.qml:444 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Informació"
 
-#: views/editor/EditorView.qml:457 views/RecentView.qml:134
+#: views/editor/EditorView.qml:458 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Compartix"
 
-#: views/editor/EditorView.qml:482 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Mostra en la carpeta"
 
-#: views/editor/EditorView.qml:492
+#: views/editor/EditorView.qml:493
 #, kde-format
 msgid "Delete File"
 msgstr "Suprimix el fitxer"
@@ -326,7 +326,7 @@ msgstr "Exporta"
 msgid "Filter..."
 msgstr "Filtre…"
 
-#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:189
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
 msgstr "Selecciona"
@@ -341,62 +341,62 @@ msgstr "Copia"
 msgid "Remove"
 msgstr "Elimina"
 
-#: views/widgets/PluginsDialog.qml:13
+#: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
 msgstr "Connectors predeterminats"
 
-#: views/widgets/PluginsDialog.qml:14
+#: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
 msgstr "Activa o elimina els connectors predeterminats"
 
-#: views/widgets/PluginsDialog.qml:22
+#: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
 msgstr "Escena QML"
 
-#: views/widgets/PluginsDialog.qml:23
+#: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
 msgstr "Carrega el fitxer actual en una escena QML."
 
-#: views/widgets/PluginsDialog.qml:52
+#: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "ToDo"
 msgstr "Tasca pendent"
 
-#: views/widgets/PluginsDialog.qml:53
+#: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
 msgstr "Llista de tasques pendents."
 
-#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:107
+#: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
 msgid "Builder"
 msgstr "Constructor"
 
-#: views/widgets/PluginsDialog.qml:84 views/widgets/PluginsDialog.qml:108
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
 msgstr "Configura un projecte per a construir i executar."
 
-#: views/widgets/PluginsDialog.qml:89
+#: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
 msgstr "Previsualitzador HTML"
 
-#: views/widgets/PluginsDialog.qml:90
+#: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
 msgstr "Previsualitza codi HTML en temps real."
 
-#: views/widgets/PluginsDialog.qml:98
+#: views/widgets/PluginsDialog.qml:95
 #, kde-format
 msgid "Load Plugins"
 msgstr "Carrega connectors"
 
-#: views/widgets/PluginsDialog.qml:99
+#: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
 msgstr "Activa o elimina els connectors de tercers"
@@ -541,52 +541,52 @@ msgstr "Esquema de color"
 msgid "Change the color scheme of the terminal."
 msgstr "Canvia l'esquema de color del terminal."
 
-#: views/widgets/ShortcutsDialog.qml:19
+#: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
 msgid "Navigation"
 msgstr "Navegueu"
 
-#: views/widgets/ShortcutsDialog.qml:20
+#: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
 msgstr "Navegació del navegador."
 
-#: views/widgets/ShortcutsDialog.qml:24
+#: views/widgets/ShortcutsDialog.qml:26
 #, kde-format
 msgid "New Tab"
 msgstr "Pestanya nova"
 
-#: views/widgets/ShortcutsDialog.qml:44
+#: views/widgets/ShortcutsDialog.qml:46
 #, kde-format
 msgid "Close Tab"
 msgstr "Tanca la pestanya"
 
-#: views/widgets/ShortcutsDialog.qml:64
+#: views/widgets/ShortcutsDialog.qml:66
 #, kde-format
 msgid "Path Edit"
 msgstr "Edita el camí"
 
-#: views/widgets/ShortcutsDialog.qml:99
+#: views/widgets/ShortcutsDialog.qml:101
 #, kde-format
 msgid "Split"
 msgstr "Dividix"
 
-#: views/widgets/ShortcutsDialog.qml:114
+#: views/widgets/ShortcutsDialog.qml:116
 #, kde-format
 msgid "New File"
 msgstr "Fitxer nou"
 
-#: views/widgets/ShortcutsDialog.qml:134
+#: views/widgets/ShortcutsDialog.qml:136
 #, kde-format
 msgid "Preview"
 msgstr "Vista prèvia"
 
-#: views/widgets/ShortcutsDialog.qml:149
+#: views/widgets/ShortcutsDialog.qml:151
 #, kde-format
 msgid "Find Tab"
 msgstr "Busca la pestanya"
 
-#: views/widgets/ShortcutsDialog.qml:169
+#: views/widgets/ShortcutsDialog.qml:171
 #, kde-format
 msgid "Select All"
 msgstr "Selecciona-ho tot"
