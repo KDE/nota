@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-30 01:47+0000\n"
-"PO-Revision-Date: 2023-04-06 09:44+0400\n"
+"PO-Revision-Date: 2024-06-13 09:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -77,20 +78,17 @@ msgid "New ToDo... Argh!"
 msgstr "مهمة جديدة…"
 
 #: views/editor/Editor.qml:108
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
 msgstr "افتح هنا"
 
 #: views/editor/Editor.qml:118
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
 msgstr "افتح في لسان جديد"
 
 #: views/editor/Editor.qml:129
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
 msgstr "افتح في قسم جديد"
 
@@ -427,10 +425,9 @@ msgid "Auto Save"
 msgstr "حفظ تلقائي"
 
 #: views/widgets/SettingsDialog.qml:56
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "حفظ تلقائي كلّ عدة ثواني"
+msgstr "حفظ تلقائي كلّ عدة ثواني."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
@@ -450,12 +447,12 @@ msgstr "أظهر أرقام الأسطر على الجانب اليمين."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "لفّ النّصّ"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "لف النص في أسطر جديدة."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -507,38 +504,37 @@ msgstr "الجدولات والمسافات"
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
-msgstr ""
+msgstr "خيارات الطرفية المضمنة."
 
 #: views/widgets/SettingsDialog.qml:178
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "الطّرفيّة"
+msgstr "زامن الطّرفيّة"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "زامن الطرفية مع مع مجلد العمل الحالي للمتصفح."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "نظام الألوان المتكيف"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "الألوان على أساس النمط الحالي."
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "مخطّط الألوان"
 
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "غيّر نظام الألوان الطرفية."
 
 #: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
