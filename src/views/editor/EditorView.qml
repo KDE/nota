@@ -70,6 +70,8 @@ Pane
             Layout.fillWidth: true
             Layout.fillHeight: true
 
+            Maui.Controls.showCSD: true
+
             altTabBar: !root.isWide
 
             holder.emoji: "qrc:/img/document-edit.svg"
@@ -238,9 +240,7 @@ Pane
                             onTriggered: Maui.App.aboutDialog()
                         }
                     }
-                },
-
-                Maui.WindowControls {}
+                }
             ]
 
             tabViewButton: Maui.TabViewButton

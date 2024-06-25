@@ -14,6 +14,9 @@ Maui.SplitViewItem
     property alias fileUrl : _editor.fileUrl
     property alias title : _editor.title
 
+    Maui.Controls.title : title
+    Maui.Controls.badgeText: editor.document.modified ? "*" : ""
+
     TE.TextEditor
     {
         id: _editor

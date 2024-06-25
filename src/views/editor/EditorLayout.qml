@@ -10,8 +10,8 @@ Item
 {
     id: control
 
-    Maui.TabViewInfo.tabTitle: title
-    Maui.TabViewInfo.tabToolTipText:  currentItem.fileUrl
+    Maui.Controls.title: title
+    Maui.Controls.toolTipText:  currentItem.fileUrl
 
     property url path
 
@@ -96,7 +96,7 @@ Item
     }
 
     function syncTerminal(path)
-    {        
+    {
         if(!path || !FB.FM.fileExists(path))
             return
 
