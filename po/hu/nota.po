@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-26 01:46+0000\n"
 "PO-Revision-Date: 2021-10-29 14:10+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -76,25 +76,25 @@ msgstr "Mobil"
 msgid "New ToDo... Argh!"
 msgstr "Új tennivaló… Neee!"
 
-#: views/editor/Editor.qml:108
+#: views/editor/Editor.qml:111
 #, fuzzy, kde-format
 #| msgid "Open here"
 msgid "Open Here"
 msgstr "Megnyitás itt"
 
-#: views/editor/Editor.qml:118
+#: views/editor/Editor.qml:121
 #, fuzzy, kde-format
 #| msgid "Open in new tab"
 msgid "Open in New Tab"
 msgstr "Megnyitás új lapon"
 
-#: views/editor/Editor.qml:129
+#: views/editor/Editor.qml:132
 #, fuzzy, kde-format
 #| msgid "Open in new split"
 msgid "Open in New Split"
 msgstr "Megnyitás új osztott nézetben"
 
-#: views/editor/Editor.qml:141
+#: views/editor/Editor.qml:144
 #, kde-format
 msgid "Cancel"
 msgstr "Mégsem"
@@ -115,60 +115,60 @@ msgstr "Legutóbbi fájlok megnyitása"
 msgid "New"
 msgstr "Új lap"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:79
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Create a New Document"
 msgstr "Új dokumentum létrehozása"
 
-#: views/editor/EditorView.qml:78
+#: views/editor/EditorView.qml:80
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Létrehozhat vagy megnyithat új dokumentumot."
 
-#: views/editor/EditorView.qml:106
+#: views/editor/EditorView.qml:108
 #, kde-format
 msgid "Places"
 msgstr "Helyek"
 
-#: views/editor/EditorView.qml:114
+#: views/editor/EditorView.qml:116
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Oldalsáv be/ki"
 
-#: views/editor/EditorView.qml:163
+#: views/editor/EditorView.qml:165
 #, kde-format
 msgid "Focus"
 msgstr "Fókusz"
 
-#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminál"
 
-#: views/editor/EditorView.qml:182
+#: views/editor/EditorView.qml:184
 #, fuzzy, kde-format
 #| msgid "Split"
 msgid "Split View"
 msgstr "Felosztás"
 
-#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: views/editor/EditorView.qml:214
+#: views/editor/EditorView.qml:216
 #, kde-format
 msgid "Settings"
 msgstr "Beállítások"
 
-#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Bővítmények"
 
-#: views/editor/EditorView.qml:236
+#: views/editor/EditorView.qml:238
 #, kde-format
 msgid "About"
 msgstr "Névjegy"

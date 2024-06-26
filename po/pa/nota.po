@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-26 01:46+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -77,25 +77,25 @@ msgstr ""
 msgid "New ToDo... Argh!"
 msgstr ""
 
-#: views/editor/Editor.qml:108
+#: views/editor/Editor.qml:111
 #, fuzzy, kde-format
 #| msgid "Open here"
 msgid "Open Here"
 msgstr "ਇੱਥੇ ਖੋਲ੍ਹੋ"
 
-#: views/editor/Editor.qml:118
+#: views/editor/Editor.qml:121
 #, fuzzy, kde-format
 #| msgid "Open in new tab"
 msgid "Open in New Tab"
 msgstr "ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: views/editor/Editor.qml:129
+#: views/editor/Editor.qml:132
 #, fuzzy, kde-format
 #| msgid "Open in new split"
 msgid "Open in New Split"
 msgstr "ਨਵੀਂ ਵੰਡ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: views/editor/Editor.qml:141
+#: views/editor/Editor.qml:144
 #, kde-format
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
@@ -117,61 +117,61 @@ msgstr "ਲਿਖਤ ਫਾਇਲ"
 msgid "New"
 msgstr ""
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:79
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Create a New Document"
 msgstr "ਨਵਾਂ ਦਸਤਾਵੇਜ਼ ਬਣਾਓ"
 
-#: views/editor/EditorView.qml:78
+#: views/editor/EditorView.qml:80
 #, kde-format
 msgid "You can create or open a new document."
 msgstr ""
 
-#: views/editor/EditorView.qml:106
+#: views/editor/EditorView.qml:108
 #, kde-format
 msgid "Places"
 msgstr ""
 
-#: views/editor/EditorView.qml:114
+#: views/editor/EditorView.qml:116
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "ਬਾਹੀ ਨੂੰ ਬਦਲੋ"
 
-#: views/editor/EditorView.qml:163
+#: views/editor/EditorView.qml:165
 #, fuzzy, kde-format
 #| msgid "Focus Mode"
 msgid "Focus"
 msgstr "ਫੋਕਸ ਢੰਗ"
 
-#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "ਟਰਮੀਨਲ"
 
-#: views/editor/EditorView.qml:182
+#: views/editor/EditorView.qml:184
 #, fuzzy, kde-format
 #| msgid "Split Vertically"
 msgid "Split View"
 msgstr "ਲੇਟਵੇ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
 
-#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr ""
 
-#: views/editor/EditorView.qml:214
+#: views/editor/EditorView.qml:216
 #, kde-format
 msgid "Settings"
 msgstr "ਸੈਟਿੰਗਾਂ"
 
-#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr ""
 
-#: views/editor/EditorView.qml:236
+#: views/editor/EditorView.qml:238
 #, kde-format
 msgid "About"
 msgstr ""

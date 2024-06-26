@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-26 01:46+0000\n"
 "PO-Revision-Date: 2024-02-13 00:54+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -79,22 +79,22 @@ msgstr "Mugikorra"
 msgid "New ToDo... Argh!"
 msgstr "Zeregin berria... Aaaa!"
 
-#: views/editor/Editor.qml:108
+#: views/editor/Editor.qml:111
 #, kde-format
 msgid "Open Here"
 msgstr "Ireki hemen"
 
-#: views/editor/Editor.qml:118
+#: views/editor/Editor.qml:121
 #, kde-format
 msgid "Open in New Tab"
 msgstr "Ireki fitxa berrian"
 
-#: views/editor/Editor.qml:129
+#: views/editor/Editor.qml:132
 #, kde-format
 msgid "Open in New Split"
 msgstr "Ireki zatiketa berrian"
 
-#: views/editor/Editor.qml:141
+#: views/editor/Editor.qml:144
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
@@ -114,58 +114,58 @@ msgstr "Testu azken aldiko fitxategiak"
 msgid "New"
 msgstr "Berria"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:79
 #, kde-format
 msgid "Create a New Document"
 msgstr "Sortu dokumentu berri bat"
 
-#: views/editor/EditorView.qml:78
+#: views/editor/EditorView.qml:80
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Dokumentu berri bat sortu edo ireki dezakezu."
 
-#: views/editor/EditorView.qml:106
+#: views/editor/EditorView.qml:108
 #, kde-format
 msgid "Places"
 msgstr "Lekuak"
 
-#: views/editor/EditorView.qml:114
+#: views/editor/EditorView.qml:116
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Txandakatu alboko-barra"
 
-#: views/editor/EditorView.qml:163
+#: views/editor/EditorView.qml:165
 #, kde-format
 msgid "Focus"
 msgstr "Fokua"
 
-#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminala"
 
-#: views/editor/EditorView.qml:182
+#: views/editor/EditorView.qml:184
 #, kde-format
 msgid "Split View"
 msgstr "Zatitu ikuspegia"
 
-#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Lasterbideak"
 
-#: views/editor/EditorView.qml:214
+#: views/editor/EditorView.qml:216
 #, kde-format
 msgid "Settings"
 msgstr "Ezarpenak"
 
-#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Pluginak"
 
-#: views/editor/EditorView.qml:236
+#: views/editor/EditorView.qml:238
 #, kde-format
 msgid "About"
 msgstr "Honi buruz"

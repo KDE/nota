@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-26 01:46+0000\n"
 "PO-Revision-Date: 2023-04-06 10:42+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -72,25 +72,25 @@ msgstr "Telemóvel"
 msgid "New ToDo... Argh!"
 msgstr "Novo Item Por-Fazer... Bolas!"
 
-#: views/editor/Editor.qml:108
+#: views/editor/Editor.qml:111
 #, fuzzy, kde-format
 #| msgid "Open here"
 msgid "Open Here"
 msgstr "Abrir aqui"
 
-#: views/editor/Editor.qml:118
+#: views/editor/Editor.qml:121
 #, fuzzy, kde-format
 #| msgid "Open in new tab"
 msgid "Open in New Tab"
 msgstr "Abrir numa nova página"
 
-#: views/editor/Editor.qml:129
+#: views/editor/Editor.qml:132
 #, fuzzy, kde-format
 #| msgid "Open in new split"
 msgid "Open in New Split"
 msgstr "Abrir numa nova divisão"
 
-#: views/editor/Editor.qml:141
+#: views/editor/Editor.qml:144
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
@@ -110,58 +110,58 @@ msgstr "Abrir os Ficheiros Recentes"
 msgid "New"
 msgstr "Novo"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:79
 #, kde-format
 msgid "Create a New Document"
 msgstr "Criar um Novo Documento"
 
-#: views/editor/EditorView.qml:78
+#: views/editor/EditorView.qml:80
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Pode criar ou abrir um novo documento."
 
-#: views/editor/EditorView.qml:106
+#: views/editor/EditorView.qml:108
 #, kde-format
 msgid "Places"
 msgstr "Locais"
 
-#: views/editor/EditorView.qml:114
+#: views/editor/EditorView.qml:116
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "Comutar a Barra Lateral"
 
-#: views/editor/EditorView.qml:163
+#: views/editor/EditorView.qml:165
 #, kde-format
 msgid "Focus"
 msgstr "Foco"
 
-#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminal"
 
-#: views/editor/EditorView.qml:182
+#: views/editor/EditorView.qml:184
 #, kde-format
 msgid "Split View"
 msgstr "Dividir a Área"
 
-#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Atalhos"
 
-#: views/editor/EditorView.qml:214
+#: views/editor/EditorView.qml:216
 #, kde-format
 msgid "Settings"
 msgstr "Configuração"
 
-#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "'Plugins'"
 
-#: views/editor/EditorView.qml:236
+#: views/editor/EditorView.qml:238
 #, kde-format
 msgid "About"
 msgstr "Acerca"

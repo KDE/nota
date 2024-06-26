@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-26 01:46+0000\n"
 "PO-Revision-Date: 2024-02-10 22:58+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -76,22 +76,22 @@ msgstr "모바일"
 msgid "New ToDo... Argh!"
 msgstr "새 할 일... 으악!"
 
-#: views/editor/Editor.qml:108
+#: views/editor/Editor.qml:111
 #, kde-format
 msgid "Open Here"
 msgstr "여기에 열기"
 
-#: views/editor/Editor.qml:118
+#: views/editor/Editor.qml:121
 #, kde-format
 msgid "Open in New Tab"
 msgstr "새 탭으로 열기"
 
-#: views/editor/Editor.qml:129
+#: views/editor/Editor.qml:132
 #, kde-format
 msgid "Open in New Split"
 msgstr "새 분할 보기에서 열기"
 
-#: views/editor/Editor.qml:141
+#: views/editor/Editor.qml:144
 #, kde-format
 msgid "Cancel"
 msgstr "취소"
@@ -111,58 +111,58 @@ msgstr "최근 파일 열기"
 msgid "New"
 msgstr "새로운 항목"
 
-#: views/editor/EditorView.qml:77
+#: views/editor/EditorView.qml:79
 #, kde-format
 msgid "Create a New Document"
 msgstr "새 문서 만들기"
 
-#: views/editor/EditorView.qml:78
+#: views/editor/EditorView.qml:80
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "문서를 열거나 새 문서를 만들 수 있습니다."
 
-#: views/editor/EditorView.qml:106
+#: views/editor/EditorView.qml:108
 #, kde-format
 msgid "Places"
 msgstr "위치"
 
-#: views/editor/EditorView.qml:114
+#: views/editor/EditorView.qml:116
 #, kde-format
 msgid "Toogle SideBar"
 msgstr "사이드바 전환"
 
-#: views/editor/EditorView.qml:163
+#: views/editor/EditorView.qml:165
 #, kde-format
 msgid "Focus"
 msgstr "포커스"
 
-#: views/editor/EditorView.qml:171 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "터미널"
 
-#: views/editor/EditorView.qml:182
+#: views/editor/EditorView.qml:184
 #, kde-format
 msgid "Split View"
 msgstr "보기 나누기"
 
-#: views/editor/EditorView.qml:203 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: views/editor/EditorView.qml:214
+#: views/editor/EditorView.qml:216
 #, kde-format
 msgid "Settings"
 msgstr "설정"
 
-#: views/editor/EditorView.qml:225 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "플러그인"
 
-#: views/editor/EditorView.qml:236
+#: views/editor/EditorView.qml:238
 #, kde-format
 msgid "About"
 msgstr "정보"
