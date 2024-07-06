@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-26 01:46+0000\n"
-"PO-Revision-Date: 2024-02-13 00:54+0100\n"
+"PO-Revision-Date: 2024-07-05 23:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -449,12 +449,12 @@ msgstr "Azaldu lerro-zenbakiak ezker aldean."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Testu itzulbira"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Testuaren itzulbira lerro berrietan."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
