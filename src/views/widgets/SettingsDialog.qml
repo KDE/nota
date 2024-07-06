@@ -124,7 +124,7 @@ Maui.SettingsDialog
         Maui.FlexSectionItem
         {
             label1.text: i18n("Colors")
-            label2.text: i18n("Configure the color scheme of the syntax highlighting. This configuration in not applied for rich text formats.")
+            label2.text: i18n("Configure the color scheme of the syntax highlighting. This configuration is not applied for rich text formats.")
             enabled: settings.enableSyntaxHighlighting
 
             ToolButton
