@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 01:46+0000\n"
+"POT-Creation-Date: 2024-07-07 01:45+0000\n"
 "PO-Revision-Date: 2024-02-27 08:16+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -482,9 +482,12 @@ msgid "Colors"
 msgstr "Кольори"
 
 #: views/widgets/SettingsDialog.qml:127
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Configure the color scheme of the syntax highlighting. This configuration "
+#| "in not applied for rich text formats."
 msgid ""
-"Configure the color scheme of the syntax highlighting. This configuration in "
+"Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
 "Налаштувати схему кольорів підсвічування синтаксису. Ці налаштування не буде "

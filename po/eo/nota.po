@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 01:46+0000\n"
-"PO-Revision-Date: 2024-03-24 10:34+0100\n"
+"POT-Creation-Date: 2024-07-07 01:45+0000\n"
+"PO-Revision-Date: 2024-07-06 16:50+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -21,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "olivermkellogg@gmail.com"
 
 #: main.cpp:46
 #, kde-format
@@ -49,6 +49,8 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
+"Vi havas nekonservitajn dosierojn. Vi povas reiri kaj konservi ilin âu "
+"elekti forĵeti ĉiujn ŝanĝojn kaj eliri."
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -214,6 +216,8 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+"Ĉu vi certas, ke vi volas forigi \n"
+"%1"
 
 #: views/editor/EditorView.qml:364
 #, kde-format
@@ -443,12 +447,12 @@ msgstr "Montri la linionumerojn sur la maldekstra flanko."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Volvi Tekston"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Volvi la tekston al novaj linioj."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -476,11 +480,16 @@ msgid "Colors"
 msgstr "Koloroj"
 
 #: views/widgets/SettingsDialog.qml:127
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Configure the color scheme of the syntax highlighting. This configuration "
+#| "in not applied for rich text formats."
 msgid ""
-"Configure the color scheme of the syntax highlighting. This configuration in "
+"Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
+"Agordi la kolorskemon de la sintaks-emfazo. Ĉi tiu agordo ne estas aplikata "
+"al riĉ-tekstaj formatoj."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 01:46+0000\n"
+"POT-Creation-Date: 2024-07-07 01:45+0000\n"
 "PO-Revision-Date: 2024-02-10 22:58+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -479,9 +479,12 @@ msgid "Colors"
 msgstr "색상"
 
 #: views/widgets/SettingsDialog.qml:127
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Configure the color scheme of the syntax highlighting. This configuration "
+#| "in not applied for rich text formats."
 msgid ""
-"Configure the color scheme of the syntax highlighting. This configuration in "
+"Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
 "구문 강조 색 구성표를 설정합니다. 서식 있는 텍스트에는 적용되지 않습니다."
