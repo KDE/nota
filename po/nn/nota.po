@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 01:46+0000\n"
+"POT-Creation-Date: 2024-07-07 01:45+0000\n"
 "PO-Revision-Date: 2021-02-26 18:20+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -483,7 +483,7 @@ msgstr ""
 #: views/widgets/SettingsDialog.qml:127
 #, kde-format
 msgid ""
-"Configure the color scheme of the syntax highlighting. This configuration in "
+"Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
 
