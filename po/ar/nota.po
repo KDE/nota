@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-07 01:45+0000\n"
-"PO-Revision-Date: 2024-06-13 09:56+0400\n"
+"PO-Revision-Date: 2024-07-28 12:27+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -480,14 +480,13 @@ msgid "Colors"
 msgstr "الألوان"
 
 #: views/widgets/SettingsDialog.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the color scheme of the syntax highlighting. This configuration "
-#| "in not applied for rich text formats."
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
-msgstr "اضبط تشكيلة ألوان إبراز الصياغة. هذا الضبط لا يطبق على النص الغني."
+msgstr ""
+"اضبط تشكيلة ألوان إبراز الصياغة. هذا الضبط لا يطبق على النصوص الغنية "
+"بالتنسيقات."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
