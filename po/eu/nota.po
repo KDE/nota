@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-07 01:45+0000\n"
-"PO-Revision-Date: 2024-07-05 23:24+0200\n"
+"PO-Revision-Date: 2024-08-16 18:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -482,10 +482,7 @@ msgid "Colors"
 msgstr "Koloreak"
 
 #: views/widgets/SettingsDialog.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the color scheme of the syntax highlighting. This configuration "
-#| "in not applied for rich text formats."
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
