@@ -64,7 +64,11 @@ qt_add_qml_module(${PROJECT_NAME} URI app.maui.nota
     plugins/ToDos.qml)
 
 if (ANDROID)
-    target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::QuickControls2)
+    target_link_libraries(${PROJECT_NAME}
+        PRIVATE
+        Qt6::QuickControls2
+        Qt6::Sql
+        Qt6::Multimedia)
 elseif(UNIX)
     target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::DBus)
 endif()
@@ -78,8 +82,6 @@ target_link_libraries(${PROJECT_NAME}
     MauiKit4::FileBrowsing
     MauiKit4::TextEditor
     Qt6::Core
-    Qt6::Sql
-    Qt6::Multimedia
     Qt6::Qml
     KF6::CoreAddons
     KF6::I18n)
