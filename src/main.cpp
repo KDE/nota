@@ -7,7 +7,7 @@
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
-#include <MauiKit3/Core/mauiandroid.h>
+#include <MauiKit4/Core/mauiandroid.h>
 #else
 #include <QApplication>
 #endif
@@ -98,7 +98,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     auto server = std::make_unique<Server>();
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/app/maui/nota/main.qml"));
     QObject::connect(
                 &engine,
                 &QQmlApplicationEngine::objectCreated,

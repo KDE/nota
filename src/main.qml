@@ -209,7 +209,7 @@ Maui.ApplicationWindow
     function openFileDialog()
     {
         _dialogLoader.sourceComponent = _fileDialogComponent
-        dialog.mode = dialog.modes.OPEN
+        dialog.mode = FB.FileDialog.Modes.Open
 
         if(root.currentEditor && editorView.currentFileExistsLocally)
             dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)

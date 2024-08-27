@@ -177,15 +177,11 @@ Item
                 headBar.rightLayout.width: 0
                 floatingFooter: false
                 listItemSize: 22
-                background: Rectangle
-                {
-                    color: Maui.Theme.backgroundColor
-                    opacity: 0.2
-                }
-                browser.background:null
+                Maui.Theme.colorSet: Maui.Theme.Window
+
                 onItemClicked: (index) =>
                 {
-                    var item = currentFMModel.get(index)
+                    const item = currentFMModel.get(index)
                     if(Maui.Handy.singleClick)
                     {
                         if(item.isdir == "true")
@@ -202,7 +198,7 @@ Item
 
                 onItemDoubleClicked: (index) =>
                 {
-                    var item = currentFMModel.get(index)
+                    const item = currentFMModel.get(index)
                     if(!Maui.Handy.singleClick)
                     {
                         if(item.isdir == "true")

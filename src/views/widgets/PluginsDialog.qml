@@ -35,7 +35,7 @@ Maui.SettingsDialog
                     {
                         if(!_qmlScene.object)
                         {
-                            _qmlScene.object = control.load("qrc:/plugins/ActionBar.qml")
+                            _qmlScene.object = control.load("qrc:/app/maui/nota/plugins/ActionBar.qml")
                         }
 
                     }else
