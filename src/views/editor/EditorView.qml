@@ -610,7 +610,7 @@ Pane
             } else
             {
                 _dialogLoader.sourceComponent = _fileDialogComponent
-                dialog.mode = dialog.modes.SAVE;
+                dialog.mode = FB.FileDialog.Modes.Save;
                 //            fileDialog.settings.singleSelection = true
                 dialog.callback = function (paths)
                 {
