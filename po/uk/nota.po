@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 01:45+0000\n"
+"POT-Creation-Date: 2024-09-17 01:53+0000\n"
 "PO-Revision-Date: 2024-07-07 08:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -30,12 +30,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: main.cpp:46
+#: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Перегляд, створення та редагування текстових файлів."
 
-#: main.cpp:51 main.cpp:52
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
 msgstr "Розробник"

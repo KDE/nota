@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 01:45+0000\n"
+"POT-Creation-Date: 2024-09-17 01:53+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -27,14 +27,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alam.yellow@gmail.com"
 
-#: main.cpp:46
+#: main.cpp:44
 #, fuzzy, kde-format
 #| msgid ""
 #| "Nota allows you to browse, create, and edit simple and rich text files."
 msgid "Browse, create and edit text files."
 msgstr "ਨੋਟਾ ਤੁਹਾਨੂੰ ਸਰਲ ਤੇ ਗੁੰਝਲਦਾਰ ਲਿਖਤ ਫਾਇਲਾਂ ਦੀ ਝਲਕ ਵੇਖਣ, ਬਣਾਉਣ ਅਤੇ ਸੋਧਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
-#: main.cpp:51 main.cpp:52
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"

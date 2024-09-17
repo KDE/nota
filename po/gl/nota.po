@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 01:45+0000\n"
+"POT-Creation-Date: 2024-09-17 01:53+0000\n"
 "PO-Revision-Date: 2024-07-08 18:15+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "adrian@chaves.io"
 
-#: main.cpp:46
+#: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Examinar, crear e editar ficheiros de texto."
 
-#: main.cpp:51 main.cpp:52
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
 msgstr "Desenvolvemento."

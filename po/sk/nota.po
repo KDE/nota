@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 01:45+0000\n"
+"POT-Creation-Date: 2024-09-17 01:53+0000\n"
 "PO-Revision-Date: 2022-04-18 17:59+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -25,12 +25,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: main.cpp:46
+#: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Prehliadanie, vytváranie a editovanie textových súborov."
 
-#: main.cpp:51 main.cpp:52
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
 msgstr "Vývojár"
