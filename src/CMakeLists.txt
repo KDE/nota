@@ -82,6 +82,7 @@ target_link_libraries(${PROJECT_NAME}
     MauiKit4::FileBrowsing
     MauiKit4::TextEditor
     Qt6::Core
+    Qt6::Quick
     Qt6::Qml
     KF6::CoreAddons
     KF6::I18n)
