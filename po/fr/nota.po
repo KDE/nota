@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-17 01:53+0000\n"
+"POT-Creation-Date: 2024-11-14 01:51+0000\n"
 "PO-Revision-Date: 2024-07-08 11:37+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -102,115 +102,111 @@ msgstr "Annuler"
 msgid "Open Files"
 msgstr "Ouvrir des fichiers"
 
-#: views/editor/EditorView.qml:43
+#: views/editor/EditorView.qml:45
 #, kde-format
 msgid "Open Recent Files"
 msgstr "Ouvrir les fichiers récents"
 
-#: views/editor/EditorView.qml:54
+#: views/editor/EditorView.qml:56
 #, kde-format
 msgid "New"
 msgstr "Nouveau"
 
-#: views/editor/EditorView.qml:79
+#: views/editor/EditorView.qml:82
 #, kde-format
 msgid "Create a New Document"
 msgstr "Créer un nouveau document"
 
-#: views/editor/EditorView.qml:80
+#: views/editor/EditorView.qml:83
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Vous pouvez créer ou ouvrir un nouveau document."
 
-#: views/editor/EditorView.qml:108
-#, kde-format
-msgid "Places"
-msgstr "Emplacements"
-
-#: views/editor/EditorView.qml:116
-#, kde-format
-msgid "Toogle SideBar"
+#: views/editor/EditorView.qml:118
+#, fuzzy, kde-format
+#| msgid "Toogle SideBar"
+msgid "Toggle side bar"
 msgstr "Activer / Désactiver la barre latérale"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:167
 #, kde-format
 msgid "Focus"
 msgstr "Focus"
 
-#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:175 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminal"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:186
 #, kde-format
 msgid "Split View"
 msgstr "Affiche scindé"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:207 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Raccourcis"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:218
 #, kde-format
 msgid "Settings"
 msgstr "Configuration"
 
-#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:229 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Modules externes"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:240
 #, kde-format
 msgid "About"
 msgstr "À propos"
 
-#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:289 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nom"
 
-#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:295 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Date"
 
-#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:301 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modifié"
 
-#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:307 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Taille"
 
-#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:313 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Type"
 
-#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
+#: views/editor/EditorView.qml:325 views/editor/EditorView.qml:483
 #, kde-format
 msgid "Go to Line"
 msgstr "Aller à la ligne"
 
-#: views/editor/EditorView.qml:325
+#: views/editor/EditorView.qml:327
 #, kde-format
 msgid "Line number"
 msgstr "Numéro de ligne"
 
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:339 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Supprimer le fichier ?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:340 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -219,57 +215,57 @@ msgstr ""
 "Voulez-vous vraiment supprimer \n"
 "%1 ?"
 
-#: views/editor/EditorView.qml:364
+#: views/editor/EditorView.qml:366
 #, kde-format
 msgid "Undo"
 msgstr "Annuler"
 
-#: views/editor/EditorView.qml:372
+#: views/editor/EditorView.qml:374
 #, kde-format
 msgid "Redo"
 msgstr "Refaire"
 
-#: views/editor/EditorView.qml:380
+#: views/editor/EditorView.qml:382
 #, kde-format
 msgid "Save"
 msgstr "Enregistrer"
 
-#: views/editor/EditorView.qml:389
+#: views/editor/EditorView.qml:391
 #, kde-format
 msgid "Save as"
 msgstr "Enregistrer sous"
 
-#: views/editor/EditorView.qml:399
+#: views/editor/EditorView.qml:401
 #, kde-format
 msgid "Find and Replace"
 msgstr "Trouver et remplacer"
 
-#: views/editor/EditorView.qml:412
+#: views/editor/EditorView.qml:420
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Compteur de lignes / mots"
 
-#: views/editor/EditorView.qml:430
+#: views/editor/EditorView.qml:440
 #, kde-format
 msgid "UnFav it"
 msgstr "Retirer le des signets"
 
-#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:455 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Informations"
 
-#: views/editor/EditorView.qml:458 views/RecentView.qml:134
+#: views/editor/EditorView.qml:468 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Partager"
 
-#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:496 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Afficher dans un dossier"
 
-#: views/editor/EditorView.qml:493
+#: views/editor/EditorView.qml:506
 #, kde-format
 msgid "Delete File"
 msgstr "Supprimer un fichier"
@@ -589,6 +585,9 @@ msgstr "Trouver un onglet"
 #, kde-format
 msgid "Select All"
 msgstr "Tout sélectionner"
+
+#~ msgid "Places"
+#~ msgstr "Emplacements"
 
 #~ msgid "Nota"
 #~ msgstr "Remarque"

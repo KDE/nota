@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-17 01:53+0000\n"
+"POT-Creation-Date: 2024-11-14 01:51+0000\n"
 "PO-Revision-Date: 2024-08-19 23:37+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -101,115 +101,111 @@ msgstr "취소"
 msgid "Open Files"
 msgstr "파일 열기"
 
-#: views/editor/EditorView.qml:43
+#: views/editor/EditorView.qml:45
 #, kde-format
 msgid "Open Recent Files"
 msgstr "최근 파일 열기"
 
-#: views/editor/EditorView.qml:54
+#: views/editor/EditorView.qml:56
 #, kde-format
 msgid "New"
 msgstr "새로운 항목"
 
-#: views/editor/EditorView.qml:79
+#: views/editor/EditorView.qml:82
 #, kde-format
 msgid "Create a New Document"
 msgstr "새 문서 만들기"
 
-#: views/editor/EditorView.qml:80
+#: views/editor/EditorView.qml:83
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "문서를 열거나 새 문서를 만들 수 있습니다."
 
-#: views/editor/EditorView.qml:108
-#, kde-format
-msgid "Places"
-msgstr "위치"
-
-#: views/editor/EditorView.qml:116
-#, kde-format
-msgid "Toogle SideBar"
+#: views/editor/EditorView.qml:118
+#, fuzzy, kde-format
+#| msgid "Toogle SideBar"
+msgid "Toggle side bar"
 msgstr "사이드바 전환"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:167
 #, kde-format
 msgid "Focus"
 msgstr "포커스"
 
-#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:175 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "터미널"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:186
 #, kde-format
 msgid "Split View"
 msgstr "보기 나누기"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:207 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:218
 #, kde-format
 msgid "Settings"
 msgstr "설정"
 
-#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:229 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "플러그인"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:240
 #, kde-format
 msgid "About"
 msgstr "정보"
 
-#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:289 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "이름"
 
-#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:295 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "날짜"
 
-#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:301 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "수정됨"
 
-#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:307 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "크기"
 
-#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:313 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "형식"
 
-#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
+#: views/editor/EditorView.qml:325 views/editor/EditorView.qml:483
 #, kde-format
 msgid "Go to Line"
 msgstr "줄로 이동"
 
-#: views/editor/EditorView.qml:325
+#: views/editor/EditorView.qml:327
 #, kde-format
 msgid "Line number"
 msgstr "줄 번호"
 
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:339 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "파일을 삭제하시겠습니까?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:340 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -218,57 +214,57 @@ msgstr ""
 "다음 항목을 삭제하시겠습니까?\n"
 "%1"
 
-#: views/editor/EditorView.qml:364
+#: views/editor/EditorView.qml:366
 #, kde-format
 msgid "Undo"
 msgstr "실행 취소"
 
-#: views/editor/EditorView.qml:372
+#: views/editor/EditorView.qml:374
 #, kde-format
 msgid "Redo"
 msgstr "다시 실행"
 
-#: views/editor/EditorView.qml:380
+#: views/editor/EditorView.qml:382
 #, kde-format
 msgid "Save"
 msgstr "저장"
 
-#: views/editor/EditorView.qml:389
+#: views/editor/EditorView.qml:391
 #, kde-format
 msgid "Save as"
 msgstr "다른 이름으로 저장"
 
-#: views/editor/EditorView.qml:399
+#: views/editor/EditorView.qml:401
 #, kde-format
 msgid "Find and Replace"
 msgstr "찾기 및 바꾸기"
 
-#: views/editor/EditorView.qml:412
+#: views/editor/EditorView.qml:420
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "줄/단어 카운터"
 
-#: views/editor/EditorView.qml:430
+#: views/editor/EditorView.qml:440
 #, kde-format
 msgid "UnFav it"
 msgstr "책갈피 해제"
 
-#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:455 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "정보"
 
-#: views/editor/EditorView.qml:458 views/RecentView.qml:134
+#: views/editor/EditorView.qml:468 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "공유"
 
-#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:496 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "포함하는 폴더 열기"
 
-#: views/editor/EditorView.qml:493
+#: views/editor/EditorView.qml:506
 #, kde-format
 msgid "Delete File"
 msgstr "파일 삭제"
@@ -585,6 +581,9 @@ msgstr "탭 찾기"
 #, kde-format
 msgid "Select All"
 msgstr "모두 선택"
+
+#~ msgid "Places"
+#~ msgstr "위치"
 
 #~ msgid "Nota"
 #~ msgstr "Nota"
