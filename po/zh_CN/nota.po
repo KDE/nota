@@ -121,7 +121,6 @@ msgstr "您可以创建或打开一个新文档。"
 
 #: views/editor/EditorView.qml:118
 #, fuzzy, kde-format
-#| msgid "Toogle SideBar"
 msgid "Toggle side bar"
 msgstr "显示/隐藏侧边栏"
 
