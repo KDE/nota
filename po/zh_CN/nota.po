@@ -120,9 +120,9 @@ msgid "You can create or open a new document."
 msgstr "您可以创建或打开一个新文档。"
 
 #: views/editor/EditorView.qml:118
-#, fuzzy, kde-format
+#, kde-format
 msgid "Toggle side bar"
-msgstr "显示/隐藏侧边栏"
+msgstr ""
 
 #: views/editor/EditorView.qml:167
 #, kde-format
@@ -577,6 +577,3 @@ msgstr "查找标签页"
 #, kde-format
 msgid "Select All"
 msgstr "全部选择"
-
-#~ msgid "Places"
-#~ msgstr "位置"
