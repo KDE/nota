@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-14 01:51+0000\n"
-"PO-Revision-Date: 2024-07-07 09:55+0200\n"
+"PO-Revision-Date: 2024-11-14 09:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -125,8 +125,7 @@ msgid "You can create or open a new document."
 msgstr "Podeu crear o obrir un document nou."
 
 #: views/editor/EditorView.qml:118
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "Alterna la barra lateral"
 
@@ -586,6 +585,3 @@ msgstr "Busca la pestanya"
 #, kde-format
 msgid "Select All"
 msgstr "Selecciona-ho tot"
-
-#~ msgid "Places"
-#~ msgstr "Llocs"

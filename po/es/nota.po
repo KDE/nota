@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the nota package.
 #
 # Automatically generated, 2020.
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2020, 2021, 2022, 2023, 2024, %Y.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-14 01:51+0000\n"
-"PO-Revision-Date: 2024-07-20 17:54+0200\n"
+"PO-Revision-Date: 2024-11-16 20:10+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -125,8 +125,7 @@ msgid "You can create or open a new document."
 msgstr "Puede crear o abrir un nuevo documento."
 
 #: views/editor/EditorView.qml:118
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "Alternar la barra lateral"
 
@@ -586,6 +585,3 @@ msgstr "Encontrar pestaña"
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar todo"
-
-#~ msgid "Places"
-#~ msgstr "Lugares"
