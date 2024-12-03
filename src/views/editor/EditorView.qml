@@ -42,7 +42,9 @@ Pane
     {
         id: _openRecentFileAction
         icon.name: "folder-recent"
-        text: i18n("Open Recent Files")
+        text: i18n("Recent Files")
+        shortcut: "Ctrl+Shift+R"
+
         onTriggered:
         {
             _stackView.push(historyViewComponent)
