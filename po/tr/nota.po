@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 01:51+0000\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
 "PO-Revision-Date: 2024-11-15 22:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -102,109 +102,110 @@ msgid "Open Files"
 msgstr "Dosyalar Aç"
 
 #: views/editor/EditorView.qml:45
-#, kde-format
-msgid "Open Recent Files"
-msgstr "Son Dosyaları Aç"
+#, fuzzy, kde-format
+#| msgid "No Recent Files!"
+msgid "Recent Files"
+msgstr "Son Dosya Yok!"
 
-#: views/editor/EditorView.qml:56
+#: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
 msgstr "Yeni"
 
-#: views/editor/EditorView.qml:82
+#: views/editor/EditorView.qml:84
 #, kde-format
 msgid "Create a New Document"
 msgstr "Yeni Belge Oluştur"
 
-#: views/editor/EditorView.qml:83
+#: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Yeni bir belge oluşturabilir veya açabilirsiniz."
 
-#: views/editor/EditorView.qml:118
+#: views/editor/EditorView.qml:120
 #, kde-format
 msgid "Toggle side bar"
 msgstr "Kenar Çubuğunu Aç/Kapat"
 
-#: views/editor/EditorView.qml:167
+#: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
 msgstr "Odak"
 
-#: views/editor/EditorView.qml:175 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Uçbirim"
 
-#: views/editor/EditorView.qml:186
+#: views/editor/EditorView.qml:188
 #, kde-format
 msgid "Split View"
 msgstr "Bölünmüş Görünüm"
 
-#: views/editor/EditorView.qml:207 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: views/editor/EditorView.qml:218
+#: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: views/editor/EditorView.qml:229 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Eklentiler"
 
-#: views/editor/EditorView.qml:240
+#: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
 msgstr "Hakkında"
 
-#: views/editor/EditorView.qml:289 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Ad"
 
-#: views/editor/EditorView.qml:295 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Tarih"
 
-#: views/editor/EditorView.qml:301 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Değiştirilme"
 
-#: views/editor/EditorView.qml:307 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Boyut"
 
-#: views/editor/EditorView.qml:313 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Tür"
 
-#: views/editor/EditorView.qml:325 views/editor/EditorView.qml:483
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
 msgstr "Satıra Git"
 
-#: views/editor/EditorView.qml:327
+#: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
 msgstr "Satır numarası"
 
-#: views/editor/EditorView.qml:339 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Dosyayı Sil?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:340 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -213,57 +214,57 @@ msgstr ""
 "%1 \n"
 "dosyasını silmek istediğinizden emin misiniz?"
 
-#: views/editor/EditorView.qml:366
+#: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
 msgstr "Geri Al"
 
-#: views/editor/EditorView.qml:374
+#: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
 msgstr "Yinele"
 
-#: views/editor/EditorView.qml:382
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
 msgstr "Kaydet"
 
-#: views/editor/EditorView.qml:391
+#: views/editor/EditorView.qml:393
 #, kde-format
 msgid "Save as"
 msgstr "Farklı Kaydet"
 
-#: views/editor/EditorView.qml:401
+#: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
 msgstr "Bul ve Değiştir"
 
-#: views/editor/EditorView.qml:420
+#: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Satır/Sözcük Sayacı"
 
-#: views/editor/EditorView.qml:440
+#: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
 msgstr "Sık Kullanılanlardan Kaldır"
 
-#: views/editor/EditorView.qml:455 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Bilgi"
 
-#: views/editor/EditorView.qml:468 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Paylaş"
 
-#: views/editor/EditorView.qml:496 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Klasörde Göster"
 
-#: views/editor/EditorView.qml:506
+#: views/editor/EditorView.qml:508
 #, kde-format
 msgid "Delete File"
 msgstr "Dosyayı Sil"
@@ -581,6 +582,9 @@ msgstr "Sekme Bul"
 #, kde-format
 msgid "Select All"
 msgstr "Tümünü Seç"
+
+#~ msgid "Open Recent Files"
+#~ msgstr "Son Dosyaları Aç"
 
 #~ msgid "Places"
 #~ msgstr "Yerler"

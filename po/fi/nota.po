@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 01:51+0000\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
 "PO-Revision-Date: 2024-10-17 10:55+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -102,110 +102,111 @@ msgid "Open Files"
 msgstr "Avaa tiedostoja"
 
 #: views/editor/EditorView.qml:45
-#, kde-format
-msgid "Open Recent Files"
-msgstr "Ei viimeaikaisia tiedostoja"
+#, fuzzy, kde-format
+#| msgid "Recent File"
+msgid "Recent Files"
+msgstr "Viimeaikainen tiedosto"
 
-#: views/editor/EditorView.qml:56
+#: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
 msgstr "Uusi"
 
-#: views/editor/EditorView.qml:82
+#: views/editor/EditorView.qml:84
 #, kde-format
 msgid "Create a New Document"
 msgstr "Luo uusi tiedosto"
 
-#: views/editor/EditorView.qml:83
+#: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Voit luodata tai avata uuden tiedoston."
 
-#: views/editor/EditorView.qml:118
+#: views/editor/EditorView.qml:120
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle side bar"
 msgstr "Näytä tai piilota sivupaneeli"
 
-#: views/editor/EditorView.qml:167
+#: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
 msgstr "Kohdistus"
 
-#: views/editor/EditorView.qml:175 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Pääte"
 
-#: views/editor/EditorView.qml:186
+#: views/editor/EditorView.qml:188
 #, kde-format
 msgid "Split View"
 msgstr "Jaa näkymä"
 
-#: views/editor/EditorView.qml:207 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Pikanäppäimet"
 
-#: views/editor/EditorView.qml:218
+#: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
 msgstr "Asetukset"
 
-#: views/editor/EditorView.qml:229 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Liitännäiset"
 
-#: views/editor/EditorView.qml:240
+#: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
 msgstr "Tietoa"
 
-#: views/editor/EditorView.qml:289 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nimi"
 
-#: views/editor/EditorView.qml:295 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Päiväys"
 
-#: views/editor/EditorView.qml:301 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Muutettu"
 
-#: views/editor/EditorView.qml:307 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Koko"
 
-#: views/editor/EditorView.qml:313 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Tyyppi"
 
-#: views/editor/EditorView.qml:325 views/editor/EditorView.qml:483
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
 msgstr "Siirry riville"
 
-#: views/editor/EditorView.qml:327
+#: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
 msgstr "Rivinumero"
 
-#: views/editor/EditorView.qml:339 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Poistetaanko tiedosto?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:340 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -214,57 +215,57 @@ msgstr ""
 "Haluatko varmasti poistaa tiedoston\n"
 "%1"
 
-#: views/editor/EditorView.qml:366
+#: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
 msgstr "Kumoa"
 
-#: views/editor/EditorView.qml:374
+#: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
 msgstr "Tee uudelleen"
 
-#: views/editor/EditorView.qml:382
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
 msgstr "Tallenna"
 
-#: views/editor/EditorView.qml:391
+#: views/editor/EditorView.qml:393
 #, kde-format
 msgid "Save as"
 msgstr "Tallenna nimellä"
 
-#: views/editor/EditorView.qml:401
+#: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
 msgstr "Etsi ja korvaa"
 
-#: views/editor/EditorView.qml:420
+#: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Rivi- ja sanalaskuri"
 
-#: views/editor/EditorView.qml:440
+#: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
 msgstr "Poista suosikeista"
 
-#: views/editor/EditorView.qml:455 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Tietoa"
 
-#: views/editor/EditorView.qml:468 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Jaa"
 
-#: views/editor/EditorView.qml:496 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Näytä kansiossa"
 
-#: views/editor/EditorView.qml:506
+#: views/editor/EditorView.qml:508
 #, kde-format
 msgid "Delete File"
 msgstr "Poista tiedosto"
@@ -584,6 +585,9 @@ msgstr "Etsi välilehti"
 msgid "Select All"
 msgstr "Valitse kaikki"
 
+#~ msgid "Open Recent Files"
+#~ msgstr "Ei viimeaikaisia tiedostoja"
+
 #~ msgid "Places"
 #~ msgstr "Sijainnit"
 
@@ -679,9 +683,6 @@ msgstr "Valitse kaikki"
 
 #~ msgid "Tags"
 #~ msgstr "Tunnisteet"
-
-#~ msgid "Recent File"
-#~ msgstr "Viimeaikainen tiedosto"
 
 #~ msgid "Rich Text File"
 #~ msgstr "Muotoiltu tekstitiedosto"

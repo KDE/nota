@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 01:51+0000\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
 "PO-Revision-Date: 2024-04-22 16:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -100,109 +100,110 @@ msgid "Open Files"
 msgstr "打开文件"
 
 #: views/editor/EditorView.qml:45
-#, kde-format
-msgid "Open Recent Files"
-msgstr "打开最近文件"
+#, fuzzy, kde-format
+#| msgid "No Recent Files!"
+msgid "Recent Files"
+msgstr "没有最近文件"
 
-#: views/editor/EditorView.qml:56
+#: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
 msgstr ""
 
-#: views/editor/EditorView.qml:82
+#: views/editor/EditorView.qml:84
 #, kde-format
 msgid "Create a New Document"
 msgstr ""
 
-#: views/editor/EditorView.qml:83
+#: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "您可以创建或打开一个新文档。"
 
-#: views/editor/EditorView.qml:118
+#: views/editor/EditorView.qml:120
 #, kde-format
 msgid "Toggle side bar"
 msgstr ""
 
-#: views/editor/EditorView.qml:167
+#: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
 msgstr "聚焦"
 
-#: views/editor/EditorView.qml:175 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "终端"
 
-#: views/editor/EditorView.qml:186
+#: views/editor/EditorView.qml:188
 #, kde-format
 msgid "Split View"
 msgstr ""
 
-#: views/editor/EditorView.qml:207 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: views/editor/EditorView.qml:218
+#: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
 msgstr "设置"
 
-#: views/editor/EditorView.qml:229 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "插件"
 
-#: views/editor/EditorView.qml:240
+#: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
 msgstr "关于"
 
-#: views/editor/EditorView.qml:289 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "名称"
 
-#: views/editor/EditorView.qml:295 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "日期"
 
-#: views/editor/EditorView.qml:301 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "修改日期"
 
-#: views/editor/EditorView.qml:307 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "大小"
 
-#: views/editor/EditorView.qml:313 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "类型"
 
-#: views/editor/EditorView.qml:325 views/editor/EditorView.qml:483
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
 msgstr "转到行号"
 
-#: views/editor/EditorView.qml:327
+#: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
 msgstr "行号"
 
-#: views/editor/EditorView.qml:339 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr ""
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:340 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -211,57 +212,57 @@ msgstr ""
 "您确定要删除 \n"
 "%1 吗？"
 
-#: views/editor/EditorView.qml:366
+#: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
 msgstr ""
 
-#: views/editor/EditorView.qml:374
+#: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
 msgstr "重做"
 
-#: views/editor/EditorView.qml:382
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
 msgstr "保存"
 
-#: views/editor/EditorView.qml:391
+#: views/editor/EditorView.qml:393
 #, kde-format
 msgid "Save as"
 msgstr "另存为"
 
-#: views/editor/EditorView.qml:401
+#: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
 msgstr "查找与替换"
 
-#: views/editor/EditorView.qml:420
+#: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "行/单词计数器"
 
-#: views/editor/EditorView.qml:440
+#: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
 msgstr "取消收藏"
 
-#: views/editor/EditorView.qml:455 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "信息"
 
-#: views/editor/EditorView.qml:468 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "分享"
 
-#: views/editor/EditorView.qml:496 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr ""
 
-#: views/editor/EditorView.qml:506
+#: views/editor/EditorView.qml:508
 #, kde-format
 msgid "Delete File"
 msgstr ""
@@ -577,3 +578,6 @@ msgstr "查找标签页"
 #, kde-format
 msgid "Select All"
 msgstr "全部选择"
+
+#~ msgid "Open Recent Files"
+#~ msgstr "打开最近文件"

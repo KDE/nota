@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 01:51+0000\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
 "PO-Revision-Date: 2021-05-01 23:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -109,106 +109,106 @@ msgstr "ਫਾਇਲ ਖੋਲ੍ਹੋ"
 #: views/editor/EditorView.qml:45
 #, fuzzy, kde-format
 #| msgid "Text file"
-msgid "Open Recent Files"
+msgid "Recent Files"
 msgstr "ਲਿਖਤ ਫਾਇਲ"
 
-#: views/editor/EditorView.qml:56
+#: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
 msgstr ""
 
-#: views/editor/EditorView.qml:82
+#: views/editor/EditorView.qml:84
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Create a New Document"
 msgstr "ਨਵਾਂ ਦਸਤਾਵੇਜ਼ ਬਣਾਓ"
 
-#: views/editor/EditorView.qml:83
+#: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
 msgstr ""
 
-#: views/editor/EditorView.qml:118
+#: views/editor/EditorView.qml:120
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle side bar"
 msgstr "ਬਾਹੀ ਨੂੰ ਬਦਲੋ"
 
-#: views/editor/EditorView.qml:167
+#: views/editor/EditorView.qml:169
 #, fuzzy, kde-format
 #| msgid "Focus Mode"
 msgid "Focus"
 msgstr "ਫੋਕਸ ਢੰਗ"
 
-#: views/editor/EditorView.qml:175 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "ਟਰਮੀਨਲ"
 
-#: views/editor/EditorView.qml:186
+#: views/editor/EditorView.qml:188
 #, fuzzy, kde-format
 #| msgid "Split Vertically"
 msgid "Split View"
 msgstr "ਲੇਟਵੇ ਰੂਪ ਵਿੱਚ ਵੰਡੋ"
 
-#: views/editor/EditorView.qml:207 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr ""
 
-#: views/editor/EditorView.qml:218
+#: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
 msgstr "ਸੈਟਿੰਗਾਂ"
 
-#: views/editor/EditorView.qml:229 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr ""
 
-#: views/editor/EditorView.qml:240
+#: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
 msgstr ""
 
-#: views/editor/EditorView.qml:289 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "ਨਾਂ"
 
-#: views/editor/EditorView.qml:295 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "ਤਾਰੀਖ"
 
-#: views/editor/EditorView.qml:301 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "ਸੋਧਾਂ ਕੀਤੀਆਂ"
 
-#: views/editor/EditorView.qml:307 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "ਆਕਾਰ"
 
-#: views/editor/EditorView.qml:313 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "ਕਿਸਮ"
 
-#: views/editor/EditorView.qml:325 views/editor/EditorView.qml:483
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
 msgstr ""
 
-#: views/editor/EditorView.qml:327
+#: views/editor/EditorView.qml:329
 #, fuzzy, kde-format
 #| msgid "Line Numbers"
 msgid "Line number"
 msgstr "ਲਾਈਨ ਦਾ ਨੰਬਰ"
 
-#: views/editor/EditorView.qml:339 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, fuzzy, kde-format
 #| msgid "Delete file?"
 msgid "Delete File?"
@@ -216,66 +216,66 @@ msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:340 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
 
-#: views/editor/EditorView.qml:366
+#: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
 msgstr ""
 
-#: views/editor/EditorView.qml:374
+#: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
 msgstr ""
 
-#: views/editor/EditorView.qml:382
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
 msgstr "ਸੰਭਾਲੋ"
 
-#: views/editor/EditorView.qml:391
+#: views/editor/EditorView.qml:393
 #, fuzzy, kde-format
 #| msgid "Save as..."
 msgid "Save as"
 msgstr "...ਵਜੋਂ ਸੰਭਾਲੋ"
 
-#: views/editor/EditorView.qml:401
+#: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
 msgstr ""
 
-#: views/editor/EditorView.qml:420
+#: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
 msgstr ""
 
-#: views/editor/EditorView.qml:440
+#: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
 msgstr "ਇਹ ਨਾ-ਪਸੰਦ"
 
-#: views/editor/EditorView.qml:455 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "ਜਾਣਕਾਰੀ"
 
-#: views/editor/EditorView.qml:468 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
 
-#: views/editor/EditorView.qml:496 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, fuzzy, kde-format
 #| msgid "Show in folder"
 msgid "Show in Folder"
 msgstr "ਫੋਲਡਰ ਵਿੱਚ ਵੇਖੋ"
 
-#: views/editor/EditorView.qml:506
+#: views/editor/EditorView.qml:508
 #, fuzzy, kde-format
 #| msgid "Delete file?"
 msgid "Delete File"
