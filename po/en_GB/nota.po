@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 01:45+0000\n"
-"PO-Revision-Date: 2024-08-03 13:38+0100\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
+"PO-Revision-Date: 2024-11-16 15:28+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "steve.allewell@gmail.com"
 
-#: main.cpp:46
+#: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Browse, create and edit text files."
 
-#: main.cpp:51 main.cpp:52
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
 msgstr "Developer"
@@ -101,115 +101,111 @@ msgstr "Cancel"
 msgid "Open Files"
 msgstr "Open Files"
 
-#: views/editor/EditorView.qml:43
-#, kde-format
-msgid "Open Recent Files"
-msgstr "Open Recent Files"
+#: views/editor/EditorView.qml:45
+#, fuzzy, kde-format
+#| msgid "Recent File"
+msgid "Recent Files"
+msgstr "Recent File"
 
-#: views/editor/EditorView.qml:54
+#: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
 msgstr "New"
 
-#: views/editor/EditorView.qml:79
+#: views/editor/EditorView.qml:84
 #, kde-format
 msgid "Create a New Document"
 msgstr "Create a New Document"
 
-#: views/editor/EditorView.qml:80
+#: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "You can create or open a new document."
 
-#: views/editor/EditorView.qml:108
+#: views/editor/EditorView.qml:120
 #, kde-format
-msgid "Places"
-msgstr "Places"
+msgid "Toggle side bar"
+msgstr "Toggle side bar"
 
-#: views/editor/EditorView.qml:116
-#, kde-format
-msgid "Toogle SideBar"
-msgstr "Toogle SideBar"
-
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
 msgstr "Focus"
 
-#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminal"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:188
 #, kde-format
 msgid "Split View"
 msgstr "Split View"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Shortcuts"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
 msgstr "Settings"
 
-#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Plugins"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
 msgstr "About"
 
-#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Name"
 
-#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Date"
 
-#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modified"
 
-#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Size"
 
-#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Type"
 
-#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
 msgstr "Go to Line"
 
-#: views/editor/EditorView.qml:325
+#: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
 msgstr "Line number"
 
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Delete File?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -218,57 +214,57 @@ msgstr ""
 "Are sure you want to delete \n"
 "%1"
 
-#: views/editor/EditorView.qml:364
+#: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
 msgstr "Undo"
 
-#: views/editor/EditorView.qml:372
+#: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
 msgstr "Redo"
 
-#: views/editor/EditorView.qml:380
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
 msgstr "Save"
 
-#: views/editor/EditorView.qml:389
+#: views/editor/EditorView.qml:393
 #, kde-format
 msgid "Save as"
 msgstr "Save as"
 
-#: views/editor/EditorView.qml:399
+#: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
 msgstr "Find and Replace"
 
-#: views/editor/EditorView.qml:412
+#: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Line/Word Counter"
 
-#: views/editor/EditorView.qml:430
+#: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
 msgstr "UnFav it"
 
-#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Info"
 
-#: views/editor/EditorView.qml:458 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Share"
 
-#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Show in Folder"
 
-#: views/editor/EditorView.qml:493
+#: views/editor/EditorView.qml:508
 #, kde-format
 msgid "Delete File"
 msgstr "Delete File"
@@ -587,6 +583,12 @@ msgstr "Find Tab"
 msgid "Select All"
 msgstr "Select All"
 
+#~ msgid "Open Recent Files"
+#~ msgstr "Open Recent Files"
+
+#~ msgid "Places"
+#~ msgstr "Places"
+
 #~ msgid "Nota"
 #~ msgstr "Nota"
 
@@ -683,9 +685,6 @@ msgstr "Select All"
 
 #~ msgid "Tags"
 #~ msgstr "Tags"
-
-#~ msgid "Recent File"
-#~ msgstr "Recent File"
 
 #~ msgid "Rich Text File"
 #~ msgstr "Rich Text File"

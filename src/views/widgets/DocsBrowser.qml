@@ -99,7 +99,7 @@ Maui.AltBrowser
             iconSource: model.icon
             template.fillMode: Image.PreserveAspectFit
             iconSizeHint: height * 0.6
-            checkable: control.selectionMode
+            checkable: control.selectionMode || checked
             checked: _selectionbar.contains(model.path)
 
             onToggled: addToSelection(control.model.get(index))
@@ -182,7 +182,7 @@ Maui.AltBrowser
     label4.text: model.mime
     iconSource: model.icon
     iconSizeHint: Maui.Style.iconSizes.medium
-    checkable: control.selectionMode
+    checkable: control.selectionMode || checked
     checked: _selectionbar.contains(model.path)
     onToggled: addToSelection(control.model.get(index))
 

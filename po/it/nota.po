@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 01:45+0000\n"
-"PO-Revision-Date: 2024-07-07 13:29+0200\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
+"PO-Revision-Date: 2024-11-15 13:11+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -27,12 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "smart2128vr@gmail.com"
 
-#: main.cpp:46
+#: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Soglia, crea e modifica file di testo."
 
-#: main.cpp:51 main.cpp:52
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
 msgstr "Sviluppatore"
@@ -101,115 +101,111 @@ msgstr "Annulla"
 msgid "Open Files"
 msgstr "Apri file"
 
-#: views/editor/EditorView.qml:43
-#, kde-format
-msgid "Open Recent Files"
-msgstr "Apri file recenti"
+#: views/editor/EditorView.qml:45
+#, fuzzy, kde-format
+#| msgid "Recent File"
+msgid "Recent Files"
+msgstr "File recente"
 
-#: views/editor/EditorView.qml:54
+#: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
 msgstr "Nuovo"
 
-#: views/editor/EditorView.qml:79
+#: views/editor/EditorView.qml:84
 #, kde-format
 msgid "Create a New Document"
 msgstr "Crea un nuovo documento"
 
-#: views/editor/EditorView.qml:80
+#: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Puoi creare o aprire un nuovo documento."
 
-#: views/editor/EditorView.qml:108
+#: views/editor/EditorView.qml:120
 #, kde-format
-msgid "Places"
-msgstr "Risorse"
-
-#: views/editor/EditorView.qml:116
-#, kde-format
-msgid "Toogle SideBar"
+msgid "Toggle side bar"
 msgstr "Commuta la barra laterale"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
 msgstr "Fuoco"
 
-#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminale"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:188
 #, kde-format
 msgid "Split View"
 msgstr "Dividi la vista"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Scorciatoie"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Estensioni"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
 msgstr "Informazioni"
 
-#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nome"
 
-#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modificato"
 
-#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Dimensione"
 
-#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Tipo"
 
-#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
 msgstr "Vai alla riga"
 
-#: views/editor/EditorView.qml:325
+#: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
 msgstr "Numero di riga"
 
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Vuoi eliminare il file?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -218,57 +214,57 @@ msgstr ""
 "Sei sicuro di volerlo eliminare\n"
 "%1"
 
-#: views/editor/EditorView.qml:364
+#: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
 msgstr "Annulla"
 
-#: views/editor/EditorView.qml:372
+#: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
 msgstr "Rifai"
 
-#: views/editor/EditorView.qml:380
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
 msgstr "Salva"
 
-#: views/editor/EditorView.qml:389
+#: views/editor/EditorView.qml:393
 #, kde-format
 msgid "Save as"
 msgstr "Salva come"
 
-#: views/editor/EditorView.qml:399
+#: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
 msgstr "Trova e sostituisci"
 
-#: views/editor/EditorView.qml:412
+#: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Contatore righe/parole"
 
-#: views/editor/EditorView.qml:430
+#: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
 msgstr "Rimuovi dai preferiti"
 
-#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Informazioni"
 
-#: views/editor/EditorView.qml:458 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Condividi"
 
-#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Mostra nella cartella"
 
-#: views/editor/EditorView.qml:493
+#: views/editor/EditorView.qml:508
 #, kde-format
 msgid "Delete File"
 msgstr "Elimina file"
@@ -588,6 +584,12 @@ msgstr "Trova scheda"
 msgid "Select All"
 msgstr "Seleziona tutto"
 
+#~ msgid "Open Recent Files"
+#~ msgstr "Apri file recenti"
+
+#~ msgid "Places"
+#~ msgstr "Risorse"
+
 #~ msgid "Nota"
 #~ msgstr "Nota"
 
@@ -684,9 +686,6 @@ msgstr "Seleziona tutto"
 
 #~ msgid "Tags"
 #~ msgstr "Etichette"
-
-#~ msgid "Recent File"
-#~ msgstr "File recente"
 
 #~ msgid "Rich Text File"
 #~ msgstr "File di testo formattato"

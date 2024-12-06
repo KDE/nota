@@ -30,6 +30,8 @@ Pane
         id: _openFileAction
         icon.name: "folder-open"
         text: i18n("Open Files")
+        shortcut: "Ctrl+O"
+
         onTriggered:
         {
             openFileDialog()
@@ -40,7 +42,9 @@ Pane
     {
         id: _openRecentFileAction
         icon.name: "folder-recent"
-        text: i18n("Open Recent Files")
+        text: i18n("Recent Files")
+        shortcut: "Ctrl+Shift+R"
+
         onTriggered:
         {
             _stackView.push(historyViewComponent)
@@ -52,6 +56,7 @@ Pane
         id: _newFileAction
         icon.name: "list-add"
         text: i18n("New")
+        shortcut: "Ctrl+N"
         onTriggered:
         {
             editorView.openTab("")
@@ -105,7 +110,6 @@ Pane
                     icon.name: _sideBarView.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
                     onClicked: _sideBarView.sideBar.toggle()
 
-                    text: i18n("Places")
                     display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
 
                     checked: _sideBarView.sideBar.visible
@@ -113,7 +117,7 @@ Pane
                     ToolTip.delay: 1000
                     ToolTip.timeout: 5000
                     ToolTip.visible: hovered
-                    ToolTip.text: i18n("Toogle SideBar")
+                    ToolTip.text: i18n("Toggle side bar")
                 }
             }
 
@@ -398,7 +402,10 @@ Pane
                             icon.name: "edit-find"
                             text: i18n("Find and Replace")
                             checkable: true
-
+                            action: Action
+                            {
+                                shortcut: "Ctrl+R"
+                            }
                             onTriggered:
                             {
                                 currentEditor.showFindBar = !currentEditor.showFindBar
@@ -408,16 +415,21 @@ Pane
 
                         MenuItem
                         {
-                            icon.name: "document-edit"
-                            text: i18n("Line/Word Counter")
-                            checkable: true
 
-                            onTriggered:
+                            action: Action
                             {
-                                settings.showWordCount = !settings.showWordCount
+                                icon.name: "document-edit"
+                                text: i18n("Line/Word Counter")
+                                checkable: true
+                                shortcut: "Ctrl+J"
+                                checked: settings.showWordCount
+
+                                onTriggered:
+                                {
+                                    settings.showWordCount = !settings.showWordCount
+                                }
                             }
 
-                            checked: settings.showWordCount
                         }
 
                         MenuSeparator {}
@@ -467,13 +479,16 @@ Pane
 
                         MenuItem
                         {
+                            action: Action
+                            {
                             icon.name: "go-jump"
                             text: i18n("Go to Line")
-
+                            shortcut: "Ctrl+L"
                             onTriggered:
                             {
                                 _dialogLoader.sourceComponent = _goToLineDialogComponent
                                 dialog.open()
+                            }
                             }
                         }
 
@@ -493,7 +508,7 @@ Pane
                             text: i18n("Delete File")
                             icon.name: "edit-delete"
                             enabled: currentFileExistsLocally
-                            Maui.Theme.textColor: Maui.Theme.negativeTextColor
+                            Maui.Controls.status: Maui.Controls.Negative
 
                             onTriggered:
                             {

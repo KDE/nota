@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 01:45+0000\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
 "PO-Revision-Date: 2024-07-06 16:50+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "olivermkellogg@gmail.com"
 
-#: main.cpp:46
+#: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
 msgstr "Foliumi, krei kaj redakti tekstajn dosierojn."
 
-#: main.cpp:51 main.cpp:52
+#: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
 msgstr "Ellaboranto"
@@ -102,115 +102,112 @@ msgstr "Nuligi"
 msgid "Open Files"
 msgstr "Malfermi dosierojn"
 
-#: views/editor/EditorView.qml:43
-#, kde-format
-msgid "Open Recent Files"
-msgstr "Malfermi Lastaj Dosieroj"
+#: views/editor/EditorView.qml:45
+#, fuzzy, kde-format
+#| msgid "No Recent Files!"
+msgid "Recent Files"
+msgstr "Neniuj Lastaj Dosieroj!"
 
-#: views/editor/EditorView.qml:54
+#: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
 msgstr "Nova"
 
-#: views/editor/EditorView.qml:79
+#: views/editor/EditorView.qml:84
 #, kde-format
 msgid "Create a New Document"
 msgstr "Krei Novan Dokumenton"
 
-#: views/editor/EditorView.qml:80
+#: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "Vi povas krei aŭ malfermi novan dokumenton."
 
-#: views/editor/EditorView.qml:108
-#, kde-format
-msgid "Places"
-msgstr "Lokoj"
-
-#: views/editor/EditorView.qml:116
-#, kde-format
-msgid "Toogle SideBar"
+#: views/editor/EditorView.qml:120
+#, fuzzy, kde-format
+#| msgid "Toogle SideBar"
+msgid "Toggle side bar"
 msgstr "Baskuligi Flankbaron"
 
-#: views/editor/EditorView.qml:165
+#: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
 msgstr "Fokuso"
 
-#: views/editor/EditorView.qml:173 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "Terminalo"
 
-#: views/editor/EditorView.qml:184
+#: views/editor/EditorView.qml:188
 #, kde-format
 msgid "Split View"
 msgstr "Dividita rigardo"
 
-#: views/editor/EditorView.qml:205 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "Ŝparvojoj"
 
-#: views/editor/EditorView.qml:216
+#: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
 msgstr "Agordoj"
 
-#: views/editor/EditorView.qml:227 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "Kromprogramoj"
 
-#: views/editor/EditorView.qml:238
+#: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
 msgstr "Pri"
 
-#: views/editor/EditorView.qml:287 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
 msgstr "Nomo"
 
-#: views/editor/EditorView.qml:293 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
 msgstr "Dato"
 
-#: views/editor/EditorView.qml:299 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
 msgstr "Modifita"
 
-#: views/editor/EditorView.qml:305 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
 msgstr "Grandeco"
 
-#: views/editor/EditorView.qml:311 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
 msgstr "Tipo"
 
-#: views/editor/EditorView.qml:323 views/editor/EditorView.qml:471
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
 msgstr "Iri al Linio"
 
-#: views/editor/EditorView.qml:325
+#: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
 msgstr "Linia numero"
 
-#: views/editor/EditorView.qml:337 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
 msgstr "Ĉu forigi dosieron?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:338 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -219,57 +216,57 @@ msgstr ""
 "Ĉu vi certas, ke vi volas forigi \n"
 "%1"
 
-#: views/editor/EditorView.qml:364
+#: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
 msgstr "Malfari"
 
-#: views/editor/EditorView.qml:372
+#: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
 msgstr "Refari"
 
-#: views/editor/EditorView.qml:380
+#: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
 msgstr "Konservi"
 
-#: views/editor/EditorView.qml:389
+#: views/editor/EditorView.qml:393
 #, kde-format
 msgid "Save as"
 msgstr "Konservi kiel"
 
-#: views/editor/EditorView.qml:399
+#: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
 msgstr "Trovi kaj Anstataŭigi"
 
-#: views/editor/EditorView.qml:412
+#: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "Linio/Vortkalkulilo"
 
-#: views/editor/EditorView.qml:430
+#: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
 msgstr "MalFavi ĝin"
 
-#: views/editor/EditorView.qml:445 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
 msgstr "Informo"
 
-#: views/editor/EditorView.qml:458 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
 msgstr "Kunhavigi"
 
-#: views/editor/EditorView.qml:483 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
 msgstr "Montri en Dosierujo"
 
-#: views/editor/EditorView.qml:493
+#: views/editor/EditorView.qml:508
 #, kde-format
 msgid "Delete File"
 msgstr "Forigu dosieron"
@@ -587,3 +584,9 @@ msgstr "Trovi Tab"
 #, kde-format
 msgid "Select All"
 msgstr "Elekti Ĉion"
+
+#~ msgid "Open Recent Files"
+#~ msgstr "Malfermi Lastaj Dosieroj"
+
+#~ msgid "Places"
+#~ msgstr "Lokoj"
