@@ -100,10 +100,9 @@ msgid "Open Files"
 msgstr "打开文件"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "没有最近文件"
+msgstr ""
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -578,6 +577,3 @@ msgstr "查找标签页"
 #, kde-format
 msgid "Select All"
 msgstr "全部选择"
-
-#~ msgid "Open Recent Files"
-#~ msgstr "打开最近文件"

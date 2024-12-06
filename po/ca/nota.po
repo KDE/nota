@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-14 09:53+0100\n"
+"PO-Revision-Date: 2024-12-05 10:08+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -105,10 +105,9 @@ msgid "Open Files"
 msgstr "Obre fitxers"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Ni hi ha cap fitxer recent!"
+msgstr "Fitxers recents"
 
 #: views/editor/EditorView.qml:58
 #, kde-format

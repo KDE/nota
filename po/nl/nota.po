@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-14 13:46+0100\n"
+"PO-Revision-Date: 2024-12-05 11:59+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -102,10 +102,9 @@ msgid "Open Files"
 msgstr "Bestanden openen"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "Recent File"
+#, kde-format
 msgid "Recent Files"
-msgstr "Recent bestand"
+msgstr "Recente bestanden"
 
 #: views/editor/EditorView.qml:58
 #, kde-format

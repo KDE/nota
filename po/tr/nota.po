@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-15 22:50+0300\n"
+"PO-Revision-Date: 2024-12-05 21:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -102,10 +102,9 @@ msgid "Open Files"
 msgstr "Dosyalar Aç"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Son Dosya Yok!"
+msgstr "Son Kullanılan Dosyalar"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
