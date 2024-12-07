@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-14 22:18+0100\n"
+"PO-Revision-Date: 2024-12-06 11:48+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -102,10 +102,9 @@ msgid "Open Files"
 msgstr "Abrir ficheiros"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Non hai ficheiros recentes!"
+msgstr "Ficheiros recentes"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
