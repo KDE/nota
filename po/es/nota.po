@@ -4,13 +4,12 @@
 #
 # Automatically generated, 2020.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
-# SPDX-FileCopyrightText: 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-16 20:10+0100\n"
+"PO-Revision-Date: 2024-12-07 19:34+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -105,10 +104,9 @@ msgid "Open Files"
 msgstr "Abrir archivos"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "¡No hay archivos recientes!"
+msgstr "Archivos recientes"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -586,6 +584,3 @@ msgstr "Encontrar pestaña"
 #, kde-format
 msgid "Select All"
 msgstr "Seleccionar todo"
-
-#~ msgid "Open Recent Files"
-#~ msgstr "Abrir archivos recientes"
