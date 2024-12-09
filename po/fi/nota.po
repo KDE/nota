@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-10-17 10:55+0300\n"
+"PO-Revision-Date: 2024-12-01 14:58+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -123,8 +123,7 @@ msgid "You can create or open a new document."
 msgstr "Voit luodata tai avata uuden tiedoston."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "Näytä tai piilota sivupaneeli"
 
