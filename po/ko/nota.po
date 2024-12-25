@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-08-19 23:37+0200\n"
+"PO-Revision-Date: 2024-12-24 18:07+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -102,8 +102,7 @@ msgid "Open Files"
 msgstr "파일 열기"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "Recent File"
+#, kde-format
 msgid "Recent Files"
 msgstr "최근 파일"
 
@@ -123,8 +122,7 @@ msgid "You can create or open a new document."
 msgstr "문서를 열거나 새 문서를 만들 수 있습니다."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "사이드바 전환"
 
