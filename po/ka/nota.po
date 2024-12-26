@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-02-11 02:27+0100\n"
+"PO-Revision-Date: 2024-12-25 22:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -103,10 +103,9 @@ msgid "Open Files"
 msgstr "ფაილების გახსნა"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "უკანასკნელი ფაილების გარეშე!"
+msgstr "უახლესი ფაილები"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -124,8 +123,7 @@ msgid "You can create or open a new document."
 msgstr "შექმენით ან გახსენით ახალი დოკუმენტი."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "გვერდითი პანელის გადართვა"
 
@@ -444,12 +442,12 @@ msgstr "მარცხენა მხარეს ხაზის ნომრ
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "ტექსტის გადატანა"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "ტექსტის გადატანა ახალ ხაზებზე."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -477,15 +475,12 @@ msgid "Colors"
 msgstr "ფერები"
 
 #: views/widgets/SettingsDialog.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the color scheme of the syntax highlighting. This configuration "
-#| "in not applied for rich text formats."
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
-"მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
+"მოირგეთ სინტაქსის გამოკვეთის სტილი. ეს კონფიგურაცია არ ეხება მდიდარი ტექსტის "
 "ფორმატებს."
 
 #: views/widgets/SettingsDialog.qml:141
