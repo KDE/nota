@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-08-16 18:38+0200\n"
+"PO-Revision-Date: 2024-12-26 20:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -105,10 +105,9 @@ msgid "Open Files"
 msgstr "Ireki fitxategiak"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Ez dago azken aldiko fitxategirik!"
+msgstr "Azken aldiko fitxategiak"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -126,8 +125,7 @@ msgid "You can create or open a new document."
 msgstr "Dokumentu berri bat sortu edo ireki dezakezu."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "Txandakatu alboko-barra"
 
