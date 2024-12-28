@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-01-03 14:57+0100\n"
+"PO-Revision-Date: 2024-12-27 12:31+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -48,6 +48,8 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
+"Tu ha files non salveguardate. Tu pote vader retro e salveguardar los o "
+"seliger a annullar omne modificationes e exir."
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -100,10 +102,9 @@ msgid "Open Files"
 msgstr "Aperi file"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Nulle Files recente!"
+msgstr "Files recente"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -121,8 +122,7 @@ msgid "You can create or open a new document."
 msgstr "Tu pote crea o aperir  un nove documento."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "Commuta barra de latere"
 
@@ -246,7 +246,7 @@ msgstr "Computator de rango/parola"
 #: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "UnFav lo (levar lo ex favoritos)"
 
 #: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
@@ -351,7 +351,7 @@ msgstr "QML Scene"
 #: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr ""
+msgstr "Carga le file currente in un scena QML."
 
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
@@ -361,7 +361,7 @@ msgstr "Agenda o De Facer"
 #: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
-msgstr ""
+msgstr "Lista le cargas a facer."
 
 #: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
@@ -371,17 +371,17 @@ msgstr "Constructor"
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr ""
+msgstr "Configura un projecto per construer e executar."
 
 #: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
-msgstr ""
+msgstr "Monstrator HTML de vista preliminari"
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
-msgstr ""
+msgstr "Vista preliminar del codice live de HTML."
 
 #: views/widgets/PluginsDialog.qml:95
 #, kde-format
@@ -391,7 +391,7 @@ msgstr "Carga Plugins"
 #: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr ""
+msgstr "Activa o remove le plugins d tertie partes"
 
 #: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
@@ -411,7 +411,7 @@ msgstr "Barra lateral de placias"
 #: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr ""
+msgstr "Naviga tu systema de file ex le barra lateral."
 
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
@@ -421,7 +421,7 @@ msgstr "Auto Salveguarda"
 #: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr ""
+msgstr "Salveguarda automaticamente tu files cate pauc secundas,"
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
@@ -436,27 +436,27 @@ msgstr "Numeros de linea"
 #: views/widgets/SettingsDialog.qml:75
 #, kde-format
 msgid "Display the line numbers on the left side."
-msgstr ""
+msgstr "Monstra le numero de lineas sur le latere sinistre"
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Inveloppa texto"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Inveloppa le texto in nove lineas."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting Languages"
-msgstr ""
+msgstr "Linguages de Evidentiar de syntaxe"
 
 #: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
-msgstr ""
+msgstr "Monstra Linguages Disponibile."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
@@ -466,7 +466,7 @@ msgstr "Evidentiar syntaxe"
 #: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr ""
+msgstr "HAbilita Evidentiar de syntaxe per linguages supportate."
 
 #: views/widgets/SettingsDialog.qml:126
 #, kde-format
@@ -479,6 +479,8 @@ msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
+"Configura le schema de color delevidentiare de syntaxe. Le configiuration "
+"non es applicate per formator de texto ric (rich text format)."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
@@ -488,7 +490,7 @@ msgstr "Monstrator"
 #: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
-msgstr ""
+msgstr "Familia e grandor de Font"
 
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
@@ -498,7 +500,7 @@ msgstr "Spatio de Tab"
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
-msgstr ""
+msgstr "Optiones de terminal incorporate"
 
 #: views/widgets/SettingsDialog.qml:178
 #, kde-format
@@ -508,27 +510,27 @@ msgstr "Sync Terminal"
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Sync le terminal al direstorio de travalio currente de navigator."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Schema de color adaptative"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Colores basate sur le stilo curente"
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Schema de color"
 
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Cambia le schema de color del terminal."
 
 #: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
@@ -538,7 +540,7 @@ msgstr "Navigation"
 #: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
-msgstr ""
+msgstr "Navigation de navigator (browser)."
 
 #: views/widgets/ShortcutsDialog.qml:26
 #, kde-format

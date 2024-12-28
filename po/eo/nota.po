@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-07-06 16:50+0200\n"
+"PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -103,10 +103,9 @@ msgid "Open Files"
 msgstr "Malfermi dosierojn"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Neniuj Lastaj Dosieroj!"
+msgstr "Lasttempaj Dosieroj"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -124,10 +123,9 @@ msgid "You can create or open a new document."
 msgstr "Vi povas krei aŭ malfermi novan dokumenton."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
-msgstr "Baskuligi Flankbaron"
+msgstr "Baskuligi flankbreton"
 
 #: views/editor/EditorView.qml:169
 #, kde-format
@@ -584,9 +582,3 @@ msgstr "Trovi Tab"
 #, kde-format
 msgid "Select All"
 msgstr "Elekti Ĉion"
-
-#~ msgid "Open Recent Files"
-#~ msgstr "Malfermi Lastaj Dosieroj"
-
-#~ msgid "Places"
-#~ msgstr "Lokoj"
