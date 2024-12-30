@@ -31,6 +31,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="pl">Nota</name>
   <name xml:lang="pt">Nota</name>
   <name xml:lang="pt-BR">Nota</name>
+  <name xml:lang="sa">नोता</name>
   <name xml:lang="sk">Nota</name>
   <name xml:lang="sl">Nota</name>
   <name xml:lang="sv">Nota</name>
@@ -62,6 +63,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="pl">Przeglądaj, twórz i zmieniaj pliki tekstowe</summary>
   <summary xml:lang="pt">Navegue, crie e edite ficheiros de texto</summary>
   <summary xml:lang="pt-BR">Navegar, criar e editar arquivos de texto</summary>
+  <summary xml:lang="sa">पाठसञ्चिकाः ब्राउज् कुर्वन्तु, रचयन्तु, सम्पादयन्तु च</summary>
   <summary xml:lang="sk">Prehliadanie, vytváranie a editovanie textových súborov</summary>
   <summary xml:lang="sl">Brskajte, ustvarjajte in urejajte besedilne datoteke</summary>
   <summary xml:lang="sv">Bläddra bland, skapa och redigera textfiler</summary>
@@ -98,6 +100,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pl">Nota jest prostym edytorem tekstu dla stacjonarnych i przenośnych urządzeń.</p>
     <p xml:lang="pt">O Nota é um editor de texto simples para computadores e dispositivos móveis.</p>
     <p xml:lang="pt-BR">O Nota é um editor de texto simples para a área de trabalho e celulares.</p>
+    <p xml:lang="sa">नोटा इति डेस्कटॉप्, मोबाईल् सङ्गणकानां कृते सरलः पाठसम्पादकः अस्ति ।</p>
     <p xml:lang="sk">Nota je jednoduchý editor pre desktopové a mobilné počítače.</p>
     <p xml:lang="sl">Nota je enostaven urejevalnik besedil za namizne in prenosne računalnike.</p>
     <p xml:lang="sv">Nota är en enkel texteditor för skrivbords- och bärbara datorer.</p>
@@ -135,6 +138,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="pl">Nota, edytor tekstu</caption>
       <caption xml:lang="pt">Nota, um editor de texto</caption>
       <caption xml:lang="pt-BR">Nota, um editor de texto</caption>
+      <caption xml:lang="sa">नोटा इति पाठसम्पादकः</caption>
       <caption xml:lang="sk">Nota, textový editor</caption>
       <caption xml:lang="sl">Nota, urejevalnik besedil</caption>
       <caption xml:lang="sv">Nota, en texteditor</caption>
@@ -169,6 +173,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="pl">Nota, okno wyszukiwania</caption>
       <caption xml:lang="pt">Nota - janela de pesquisa</caption>
       <caption xml:lang="pt-BR">Nota, janela Encontrar</caption>
+      <caption xml:lang="sa">नोट, संवादं अन्वेष्टुम्</caption>
       <caption xml:lang="sk">Nota, dialóg vyhľadávania</caption>
       <caption xml:lang="sl">Nota, najdi dialog</caption>
       <caption xml:lang="sv">Nota, sökdialogruta</caption>
