@@ -1,47 +1,45 @@
+# Sanskrit translations for nota package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
-# Tommi Nieminen <translator@legisign.org>, 2024.
+# Kali <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-12-09 21:32+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
-"Language: fi\n"
+"PO-Revision-Date: 2024-12-29 16:06+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tommi Nieminen"
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "translator@legisign.org"
+msgstr "भवतः ईमेलपत्राणि"
 
 #: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
-msgstr "Selaa, luo ja muokkaa tekstitiedostoja."
+msgstr "पाठसञ्चिकाः ब्राउज् कुर्वन्तु, रचयन्तु, सम्पादयन्तु च ।"
 
 #: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
-msgstr "Kehittäjä"
+msgstr "विकासकः"
 
 #: main.qml:111
 #, kde-format
 msgid "Unsaved files"
-msgstr "Tallentamattomat tiedostot"
+msgstr "असरक्षिताः सञ्चिकाः"
 
 #: main.qml:112
 #, kde-format
@@ -49,159 +47,159 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
-"Tiedostoja on tallentamatta. Voit palata takaisin ja tallentaa ne tai hylätä "
-"muutokset ja lopettaa."
+"भवतः अरक्षिताः सञ्चिकाः सन्ति । भवान् पुनः गत्वा तान् रक्षितुं शक्नोति अथवा सर्वान् "
+"परिवर्तनान् परित्यज्य निर्गन्तुं चयनं कर्तुं शक्नोति ।"
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
 msgid "Run"
-msgstr "Suorita"
+msgstr "धावनं करोतु"
 
 #: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
 #, kde-format
 msgid "Run & Debug"
-msgstr "Suorita ja paikanna virheet"
+msgstr "चालयन्तु & त्रुटिनिवारणं कुर्वन्तु"
 
 #: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
 #, kde-format
 msgid "Run in Terminal"
-msgstr "Suorita päätteessä"
+msgstr "टर्मिनल् मध्ये चालयन्तु"
 
 #: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
 #, kde-format
 msgid "Mobile"
-msgstr "Mobiili"
+msgstr "निष्तन्त्री"
 
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr "Uusi tehtävä… aargh!"
+msgstr "New ToDo... अर्घ्!"
 
 #: views/editor/Editor.qml:111
 #, kde-format
 msgid "Open Here"
-msgstr "Avaa tähän"
+msgstr "अत्र उद्घाटयतु"
 
 #: views/editor/Editor.qml:121
 #, kde-format
 msgid "Open in New Tab"
-msgstr "Avaa uuteen välilehteen"
+msgstr "New Tab इत्यत्र उद्घाटयन्तु"
 
 #: views/editor/Editor.qml:132
 #, kde-format
 msgid "Open in New Split"
-msgstr "Avaa uuteen jakoon"
+msgstr "न्यू स्प्लिट् इत्यत्र उद्घाटितम्"
 
 #: views/editor/Editor.qml:144
 #, kde-format
 msgid "Cancel"
-msgstr "Peru"
+msgstr "निरसयतु"
 
 #: views/editor/EditorView.qml:32
 #, kde-format
 msgid "Open Files"
-msgstr "Avaa tiedostoja"
+msgstr "सञ्चिकाः उद्घाटयन्तु"
 
 #: views/editor/EditorView.qml:45
 #, kde-format
 msgid "Recent Files"
-msgstr "Viimeisimmät tiedostot"
+msgstr "अद्यतनसञ्चिकाः"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
 msgid "New"
-msgstr "Uusi"
+msgstr "नूतनम्‌"
 
 #: views/editor/EditorView.qml:84
 #, kde-format
 msgid "Create a New Document"
-msgstr "Luo uusi tiedosto"
+msgstr "नूतनं दस्तावेजं रचयन्तु"
 
 #: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
-msgstr "Voit luodata tai avata uuden tiedoston."
+msgstr "नूतनं दस्तावेजं निर्मातुं वा उद्घाटयितुं वा शक्नुवन्ति ।"
 
 #: views/editor/EditorView.qml:120
 #, kde-format
 msgid "Toggle side bar"
-msgstr "Näytä tai piilota sivupaneeli"
+msgstr "पार्श्वपट्टिकां टॉगलं कुर्वन्तु"
 
 #: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
-msgstr "Kohdistus"
+msgstr "केंद्रबिन्दुः"
 
 #: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
-msgstr "Pääte"
+msgstr "टर्मिनल्"
 
 #: views/editor/EditorView.qml:188
 #, kde-format
 msgid "Split View"
-msgstr "Jaa näkymä"
+msgstr "विभक्त दृश्य"
 
 #: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
-msgstr "Pikanäppäimet"
+msgstr "शॉर्टकट"
 
 #: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
-msgstr "Asetukset"
+msgstr "सेटिंग्स्"
 
 #: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
-msgstr "Liitännäiset"
+msgstr "प्लगिन्स्"
 
 #: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
-msgstr "Tietoa"
+msgstr "विषये"
 
 #: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
-msgstr "Nimi"
+msgstr "नामः"
 
 #: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
-msgstr "Päiväys"
+msgstr "दिनाङ्कः"
 
 #: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
-msgstr "Muutettu"
+msgstr "परिवर्तित"
 
 #: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
-msgstr "Koko"
+msgstr "आकृति"
 
 #: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
-msgstr "Tyyppi"
+msgstr "प्रकारः"
 
 #: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
-msgstr "Siirry riville"
+msgstr "Line इति गच्छन्तु"
 
 #: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
-msgstr "Rivinumero"
+msgstr "रेखासङ्ख्या"
 
 #: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
 #, kde-format
 msgid "Delete File?"
-msgstr "Poistetaanko tiedosto?"
+msgstr "सञ्चिकां विलोपयन्तु?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
@@ -210,269 +208,267 @@ msgstr "Poistetaanko tiedosto?"
 msgid ""
 "Are sure you want to delete \n"
 "%1"
-msgstr ""
-"Haluatko varmasti poistaa tiedoston\n"
-"%1"
+msgstr "%1 विलोपयितुम् इच्छति इति निश्चितम्"
 
 #: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
-msgstr "Kumoa"
+msgstr "पूर्ववत"
 
 #: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
-msgstr "Tee uudelleen"
+msgstr "पुनः करो"
 
 #: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
-msgstr "Tallenna"
+msgstr "रक्ष्"
 
 #: views/editor/EditorView.qml:393
 #, kde-format
 msgid "Save as"
-msgstr "Tallenna nimellä"
+msgstr "यथा रक्षतु"
 
 #: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
-msgstr "Etsi ja korvaa"
+msgstr "अन्वेषणं प्रतिस्थापनं च"
 
 #: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
-msgstr "Rivi- ja sanalaskuri"
+msgstr "रेखा/शब्दगणकः"
 
 #: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
-msgstr "Poista suosikeista"
+msgstr "UnFav it"
 
 #: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
 #, kde-format
 msgid "Info"
-msgstr "Tietoa"
+msgstr "Info"
 
 #: views/editor/EditorView.qml:470 views/RecentView.qml:134
 #, kde-format
 msgid "Share"
-msgstr "Jaa"
+msgstr "संविभागः"
 
 #: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
 #, kde-format
 msgid "Show in Folder"
-msgstr "Näytä kansiossa"
+msgstr "Folder इत्यत्र दर्शयतु"
 
 #: views/editor/EditorView.qml:508
 #, kde-format
 msgid "Delete File"
-msgstr "Poista tiedosto"
+msgstr "सञ्चिकां विलोपयतु"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
 msgid "Previous"
-msgstr "Edellinen"
+msgstr "पूर्वतनम्‌"
 
 #: views/PlacesSidebar.qml:68
 #, kde-format
 msgid "Up"
-msgstr "Ylemmäs"
+msgstr "उपरि"
 
 #: views/PlacesSidebar.qml:76
 #, kde-format
 msgid "Next"
-msgstr "Seuraava"
+msgstr "अग्रिम"
 
 #: views/PlacesSidebar.qml:100
 #, kde-format
 msgid "Show Folders First"
-msgstr "Näytä kansiot ensin"
+msgstr "प्रथमं पुटं दर्शयतु"
 
 #: views/PlacesSidebar.qml:158
 #, kde-format
 msgid "Group"
-msgstr "Ryhmä"
+msgstr "समूह"
 
 #: views/RecentView.qml:20
 #, kde-format
 msgid "No Recent Files!"
-msgstr "Ei viimeaikaisia tiedostoja!"
+msgstr "अद्यतनसञ्चिकाः नास्ति!"
 
 #: views/RecentView.qml:21
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr "Tässä näkyvät äskettäin auki olleet tiedostot"
+msgstr "अत्र भवन्तः स्वस्य सद्यः उद्घाटिताः सञ्चिकाः पश्यन्ति"
 
 #: views/RecentView.qml:120
 #, kde-format
 msgid "Open"
-msgstr "Avaa"
+msgstr "उद्घाटित"
 
 #: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Export"
-msgstr "Vie"
+msgstr "निर्यात"
 
 #: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
-msgstr "Suodata…"
+msgstr "फ़िल्टर..."
 
 #: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
-msgstr "Valitse"
+msgstr "विचि"
 
 #: views/widgets/ItemMenu.qml:110
 #, kde-format
 msgid "Copy"
-msgstr "Kopioi"
+msgstr "प्रतिलिपि"
 
 #: views/widgets/ItemMenu.qml:120
 #, kde-format
 msgid "Remove"
-msgstr "Poista"
+msgstr "अपाकरोति"
 
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
-msgstr "Oletusliitännäiset"
+msgstr "पूर्वनिर्धारित प्लगिन्"
 
 #: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr "Aktivoi tai poista oletusliitännäisiä"
+msgstr "पूर्वनिर्धारितप्लगिन्स् सक्रियं कुर्वन्तु अथवा निष्कासयन्तु"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
-msgstr "QML-näkymä"
+msgstr "क्यूएमएल दृश्य"
 
 #: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr "Lataa nykyinen tiedosto QML-näkymään."
+msgstr "वर्तमानसञ्चिकां QML दृश्ये लोड् कुर्वन्तु ।"
 
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "ToDo"
-msgstr "Tehtävä"
+msgstr "ToDo"
 
 #: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
-msgstr "Tehtäväluettelo."
+msgstr "कर्तव्यकार्यस्य सूची ।"
 
 #: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
 msgid "Builder"
-msgstr "Koostaja"
+msgstr "निर्माता"
 
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr "Määritä koostettava projekti ja suorita."
+msgstr "परियोजनां निर्मातुं चालयितुं च विन्यस्यताम् ।"
 
 #: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
-msgstr "HTML-esikatselu"
+msgstr "HTML पूर्वावलोकनकर्ता"
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
-msgstr "Esikatsele HTML-koodia ajonaikaisesti."
+msgstr "HTML कोड लाइव पूर्वावलोकन।"
 
 #: views/widgets/PluginsDialog.qml:95
 #, kde-format
 msgid "Load Plugins"
-msgstr "Lataa liitännäisiä"
+msgstr "प्लगिन्स् लोड् कुर्वन्तु"
 
 #: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr "Aktivoi tai poista kolmannen osapuolen liitännäisiä"
+msgstr "तृतीयपक्षस्य प्लगिन्स् सक्रियं कुर्वन्तु अथवा निष्कासयन्तु"
 
 #: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Font"
-msgstr "Fontti"
+msgstr "फॉन्ट्"
 
 #: views/widgets/SettingsDialog.qml:37
 #, kde-format
 msgid "General"
-msgstr "Perusasetukset"
+msgstr "सामान्य"
 
 #: views/widgets/SettingsDialog.qml:42
 #, kde-format
 msgid "Places Sidebar"
-msgstr "Sijaintisivupaneeli"
+msgstr "स्थानानि पार्श्वपट्टिका"
 
 #: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Selaa tiedostojärjestelmää sivupaneelista."
+msgstr "पार्श्वपट्टिकातः स्वस्य सञ्चिकातन्त्रं ब्राउज् कुर्वन्तु ।"
 
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
-msgstr "Automaattitallennus"
+msgstr "स्वतः रक्षतु"
 
 #: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Automaattitallentaa tiedoston muutaman sekunnin välein."
+msgstr "स्वयमेव भवतः सञ्चिकां कतिपयसेकेण्ड् मध्ये रक्षति ।"
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
 msgid "Editor"
-msgstr "Muokkain"
+msgstr "सम्पादक"
 
 #: views/widgets/SettingsDialog.qml:74
 #, kde-format
 msgid "Line Numbers"
-msgstr "Rivinumerot"
+msgstr "रेखासङ्ख्याः"
 
 #: views/widgets/SettingsDialog.qml:75
 #, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "Näyttää rivinumerot vasemmalla puolen."
+msgstr "वामभागे रेखासङ्ख्याः प्रदर्शयन्तु ।"
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr "Rivitä teksti"
+msgstr "पाठं लपेटयतु"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr "Rivitä teksti."
+msgstr "पाठं नूतनपङ्क्तौ वेष्टयन्तु।"
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting Languages"
-msgstr "Syntaksikorostuskielet"
+msgstr "वाक्यविन्यासः भाषाः प्रकाशयन्"
 
 #: views/widgets/SettingsDialog.qml:101
 #, kde-format
 msgid "Display available languages."
-msgstr "Näytä käytettävissä olevat kielet."
+msgstr "उपलब्धभाषाः प्रदर्शयन्तु।"
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
-msgstr "Syntaksikorostus"
+msgstr "वाक्य रचना प्रकाशनम्"
 
 #: views/widgets/SettingsDialog.qml:114
 #, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Käytä tuetuille kielille syntaksikorostusta."
+msgstr "समर्थितभाषाणां कृते वाक्यविन्यासप्रकाशनं सक्षमं कुर्वन्तु ।"
 
 #: views/widgets/SettingsDialog.qml:126
 #, kde-format
 msgid "Colors"
-msgstr "Värit"
+msgstr "वर्णाः"
 
 #: views/widgets/SettingsDialog.qml:127
 #, kde-format
@@ -480,286 +476,105 @@ msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
-"Aseta syntaksikorostuksen tyyli. Asetusta ei käytetä muotoiltuun tekstiin."
+"वाक्यविन्यासस्य प्रकाशनस्य वर्णयोजनां विन्यस्यताम् । समृद्धपाठस्वरूपेषु एतत् विन्यासः न प्रयुक्तः "
+"।"
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
-msgstr "Näkymä"
+msgstr "प्रदर्शन"
 
 #: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
-msgstr "Fonttiperhe ja -koko."
+msgstr "फन्ट् परिवारः आकारः च ।"
 
-# *** TARKISTA: Voi merkitä jotain muutakin!
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
-msgstr "Välilehtien väli"
+msgstr "ट्याब् स्पेस"
 
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
-msgstr "Upotetun päätteen valinnat."
+msgstr "एम्बेडेड् टर्मिनल् विकल्पाः ।"
 
 #: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
-msgstr "Tahdista pääte"
+msgstr "समन्वयन टर्मिनल"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr "Tahdista päätteen työkansio ja selaimen työkansio."
+msgstr "टर्मिनल् ब्राउजर् वर्तमानकार्यनिर्देशिकायां समन्वययन्तु ।"
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr "Mukautuva väriteema"
+msgstr "अनुकूली रंग योजना"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr "Nykyiseen tyyliin perustuvat värit."
+msgstr "वर्तमानशैल्याः आधारेण वर्णाः।"
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
-msgstr "Väriteema"
+msgstr "रङ्ग योजना"
 
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr "Vaihda päätteen väriteemaa."
+msgstr "टर्मिनलस्य वर्णयोजनां परिवर्तयन्तु ।"
 
 #: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
 msgid "Navigation"
-msgstr "Liikkuminen"
+msgstr "नौकायानम्"
 
 #: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
-msgstr "Selainnavigointi."
+msgstr "ब्राउजर नेविगेशन।"
 
 #: views/widgets/ShortcutsDialog.qml:26
 #, kde-format
 msgid "New Tab"
-msgstr "Uusi välilehti"
+msgstr "नवीन ट्याब्"
 
 #: views/widgets/ShortcutsDialog.qml:46
 #, kde-format
 msgid "Close Tab"
-msgstr "Sulje välilehti"
+msgstr "ट्याब् बन्दं कुर्वन्तु"
 
 #: views/widgets/ShortcutsDialog.qml:66
 #, kde-format
 msgid "Path Edit"
-msgstr "Sijainnin muokkaus"
+msgstr "पथ सम्पादन"
 
 #: views/widgets/ShortcutsDialog.qml:101
 #, kde-format
 msgid "Split"
-msgstr "Jaa"
+msgstr "भंज"
 
 #: views/widgets/ShortcutsDialog.qml:116
 #, kde-format
 msgid "New File"
-msgstr "Uusi tiedosto"
+msgstr "नवीन सञ्चिका"
 
 #: views/widgets/ShortcutsDialog.qml:136
 #, kde-format
 msgid "Preview"
-msgstr "Esikatselu"
+msgstr "पूर्वावलोकनम्"
 
-# *** TARKISTA: Voi merkitä jotain muutakin!
 #: views/widgets/ShortcutsDialog.qml:151
 #, kde-format
 msgid "Find Tab"
-msgstr "Etsi välilehti"
+msgstr "ट्याब् अन्वेष्यताम्"
 
 #: views/widgets/ShortcutsDialog.qml:171
 #, kde-format
 msgid "Select All"
-msgstr "Valitse kaikki"
-
-#~ msgid "Open Recent Files"
-#~ msgstr "Ei viimeaikaisia tiedostoja"
-
-#~ msgid "Places"
-#~ msgstr "Sijainnit"
-
-#~ msgid "Nota"
-#~ msgstr "Nota"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 Maui-kehitysryhmä"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
-
-#~ msgid "Anupam Basak"
-#~ msgstr "Anupam Basak"
-
-#~ msgid "Dark Mode"
-#~ msgstr "Tumma tila"
-
-#~ msgid "Switch between light and dark colorscheme."
-#~ msgstr "Vaihda vaalean ja tumman värimallin välillä."
-
-#~ msgid ""
-#~ "Configure the style of the syntax highliting. This configuration in not "
-#~ "applied for rich text formats."
-#~ msgstr ""
-#~ "Aseta syntaksikorostuksen tyyli. Asetusta ei käytetä muotoiltuun tekstiin."
-
-#~ msgid "Color"
-#~ msgstr "Väri"
-
-#~ msgid "Editor background color."
-#~ msgstr "Muokkaimen taustaväri."
-
-#~ msgid "Theme"
-#~ msgstr "Teema"
-
-#~ msgid "Editor color scheme style."
-#~ msgstr "Muokkaimen värimalli."
-
-#~ msgid "Configure the app UI, behaviour and plugins."
-#~ msgstr "Aseta sovelluksen käyttöliittymä, toiminta ja liitännäiset."
-
-#~ msgid ""
-#~ "Configure the look and feel of the editor. The settings are applied "
-#~ "globally."
-#~ msgstr ""
-#~ "Aseta muokkaimen ulkoasu ja toiminta. Asetuksia käytetään yleisesti."
-
-#~ msgid "Configure the font and display options."
-#~ msgstr "Aseta fontti ja näyttövalinnat."
-
-#~ msgid "Go back"
-#~ msgstr "Palaa takaisin"
-
-#~ msgid "Discard"
-#~ msgstr "Hylkää"
-
-#~ msgid "Accept"
-#~ msgstr "Hyväksy"
-
-#~ msgid "Family"
-#~ msgstr "Perhe"
-
-#~ msgid "Follows the system color scheme."
-#~ msgstr "Seuraa järjestelmän väriteemaa."
-
-#~ msgid "Style"
-#~ msgstr "Tyyli"
-
-#~ msgid "New file"
-#~ msgstr "Uusi tiedosto"
-
-#~ msgid "Open one or multiple files"
-#~ msgstr "Avaa yksi tai useampia tiedostoja"
-
-#~ msgid "Open recently used files"
-#~ msgstr "Avaa äskettäin käytetty tiedosto"
-
-#~ msgid "New Text File"
-#~ msgstr "Uusi tekstitiedosto"
-
-#~ msgid "Simple text file with syntax highlighting"
-#~ msgstr "Yksinkertainen tekstitiedosto syntaksikorostuksella"
-
-#~ msgid "Focus Mode"
-#~ msgstr "Korostustapa"
-
-#~ msgid "Split Horizontally"
-#~ msgstr "Jaa vaakasuuntaan"
-
-#~ msgid "Split Vertically"
-#~ msgstr "Jaa pystysuuntaan"
-
-#~ msgid "Tags"
-#~ msgstr "Tunnisteet"
-
-#~ msgid "Rich Text File"
-#~ msgstr "Muotoiltu tekstitiedosto"
-
-#~ msgid "With support for basic text format editing"
-#~ msgstr "Perustekstimuotoilutuella"
-
-#, fuzzy
-#~| msgid "Open here"
-#~ msgid "Open with"
-#~ msgstr "Avaa tähän"
-
-#~ msgid "Recent"
-#~ msgstr "Viimeaikaiset"
-
-#~ msgid "Open with Blank File"
-#~ msgstr "Avaa tyhjään tiedostoon"
-
-#~ msgid "Creates a blank file by default"
-#~ msgstr "Luo oletuksena tyhjän tiedoston"
-
-#~ msgid "Enabled an embedded terminal"
-#~ msgstr "Otettiin upotettu pääte käyttöön"
-
-#~ msgid "No Documents!"
-#~ msgstr "Ei tiedostoja!"
-
-#~ msgid "Add a new source to browse your text files"
-#~ msgstr "Lisää uuden lähteen tekstitiedostojen selaamiseen"
-
-#~ msgid "New template"
-#~ msgstr "Uusi mallipohja"
-
-#~ msgid "HTML text file"
-#~ msgstr "HTML-tekstitiedosto"
-
-#~ msgid "Text file with HTML markup support"
-#~ msgstr "Tekstitiedosto HTML-merkintätuella"
-
-#~ msgid "Interface"
-#~ msgstr "Liitäntä"
-
-#~ msgid "Configure the application UI"
-#~ msgstr "Aseta sovelluksen käyttöliittymä"
-
-#~ msgid "List"
-#~ msgstr "Luettelo"
-
-#~ msgid "Grid"
-#~ msgstr "Ruudukko"
-
-#, fuzzy
-#~| msgid ""
-#~| "You can create a new document by clicking the New File button, or here."
-#~| "<br>"
-#~ msgid ""
-#~ "You can create a new document by clicking the New File button, or here."
-#~ "<br>Alternative you can open existing files from the left places sidebar "
-#~ "or by clicking the Open button"
-#~ msgstr ""
-#~ "Uuden tiedoston voi luoda napsauttamalla Uusi tiedosto -painiketta tai "
-#~ "tässä.<br>"
-
-#, fuzzy
-#~| msgid "Replace"
-#~ msgid "Replace All"
-#~ msgstr "Korvaa"
-
-#~ msgid "Documents"
-#~ msgstr "Tiedostot"
-
-#~ msgid ""
-#~ "Load a plugin. The file must be a QML file, this file can access Nota "
-#~ "properties and functionality to extend its features or add even more."
-#~ msgstr ""
-#~ "Lataa liitännäinen. Tiedoston on oltava QML-tiedosto. Sillä on pääsy "
-#~ "Notan ominaisuuksiin ja toimintoihin, ja se voi täydentää ominaisuuksia "
-#~ "tai lisätä uusia."
-
-#~ msgid "Translucent Sidebar"
-#~ msgstr "Läpikuultava sivupaneeli"
+msgstr "सर्वं चिनोतु"
