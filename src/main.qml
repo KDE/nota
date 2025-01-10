@@ -211,6 +211,7 @@ Maui.ApplicationWindow
 
     function openFileDialog()
     {
+        _dialogLoader.sourceComponent = null
         _dialogLoader.sourceComponent = _fileDialogComponent
         dialog.mode = FB.FileDialog.Modes.Open
 

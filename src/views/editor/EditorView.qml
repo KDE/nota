@@ -624,9 +624,11 @@ Pane
                 item.document.saveAs(path)
             } else
             {
+                _dialogLoader.sourceComponent = null
                 _dialogLoader.sourceComponent = _fileDialogComponent
-                dialog.mode = FB.FileDialog.Modes.Save;
-                //            fileDialog.settings.singleSelection = true
+                dialog.mode = FB.FileDialog.Save;
+                dialog.singleSelection = true
+                dialog.suggestedFileName = FB.FM.getFileInfo(item.fileUrl).label
                 dialog.callback = function (paths)
                 {
                     item.document.saveAs(paths[0])

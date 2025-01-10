@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
 
 import org.maui.nota as Nota
 import "widgets"
@@ -142,18 +143,13 @@ DocsBrowser
             icon.name: "document-export"
             onTriggered:
             {
-                _dialogLoader.sourceComponent= _fileDialogComponent
-                dialog.mode = dialog.modes.OPEN
-                dialog.settings.onlyDirs = true
+                _dialogLoader.sourceComponent = null
+                _dialogLoader.sourceComponent = _fileDialogComponent
+                dialog.browser.settings.onlyDirs = true
+                dialog.singleSelection = true
                 dialog.callback = function(paths)
                 {
-                    for(var url of _selectionbar.uris)
-                    {
-                        for(var i in paths)
-                        {
-                            FB.FM.copy(url, paths[i])
-                        }
-                    }
+                    FB.FM.copy(_selectionbar.uris, paths[0])
                 };
 
                 dialog.open()
