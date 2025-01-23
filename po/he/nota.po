@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-12-28 10:57+0200\n"
+"PO-Revision-Date: 2025-01-22 14:26+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -100,7 +100,7 @@ msgstr "ביטול"
 #: views/editor/EditorView.qml:32
 #, kde-format
 msgid "Open Files"
-msgstr "פתיחת  קבצים"
+msgstr "פתיחת קבצים"
 
 #: views/editor/EditorView.qml:45
 #, kde-format
