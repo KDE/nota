@@ -64,7 +64,11 @@ Maui.ApplicationWindow
     {
         _dialogLoader.sourceComponent = _unsavedDialogComponent
 
-        dialog.callback = function () {root.close()}
+        dialog.callback = function ()
+        {
+            dialog.discard = true
+            root.close()
+        }
 
         if(!dialog.discard)
         {
@@ -117,7 +121,6 @@ Maui.ApplicationWindow
             standardButtons: Dialog.Ok | Dialog.Discard
             onDiscarded:
             {
-                discard = true
                 close()
 
                 if(callback instanceof Function)
