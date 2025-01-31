@@ -349,7 +349,7 @@ Pane
                         onRejected: close()
                         onAccepted:
                         {
-                            FB.FM.deleteFile(currentEditor.fileUrl)
+                            FB.FM.removeFiles([currentEditor.fileUrl])
                         }
                     }
                 }
