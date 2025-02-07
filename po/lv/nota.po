@@ -1,0 +1,584 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the nota package.
+#
+# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: nota\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-05 01:51+0000\n"
+"PO-Revision-Date: 2025-02-05 09:35+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.12.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Toms Trasūns"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toms.trasuns@posteo.net"
+
+#: main.cpp:44
+#, kde-format
+msgid "Browse, create and edit text files."
+msgstr "Pārlūkojiet, rakstiet un rediģējiet teksta datnes."
+
+#: main.cpp:49 main.cpp:50
+#, kde-format
+msgid "Developer"
+msgstr "Izstrādātājs"
+
+#: main.qml:111
+#, kde-format
+msgid "Unsaved files"
+msgstr "Nesaglabātas datnes"
+
+#: main.qml:112
+#, kde-format
+msgid ""
+"You have unsaved files. You can go back and save them or choose to discard "
+"all changes and exit."
+msgstr ""
+"Jums ir nesaglabātas datnes. Varat atgriezties un tās saglabāt vai "
+"izvēlēties izmest visas izmaiņas un iziet."
+
+#: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
+#, kde-format
+msgid "Run"
+msgstr "Palaist"
+
+#: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
+#, kde-format
+msgid "Run & Debug"
+msgstr "Palaist un atkļūdot"
+
+#: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
+#, kde-format
+msgid "Run in Terminal"
+msgstr "Palaist terminālī"
+
+#: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
+#, kde-format
+msgid "Mobile"
+msgstr "Mobilais"
+
+#: plugins/ToDos.qml:39
+#, kde-format
+msgid "New ToDo... Argh!"
+msgstr "Jauns uzdevums.... ai!"
+
+#: views/editor/Editor.qml:111
+#, kde-format
+msgid "Open Here"
+msgstr "Atvērt te"
+
+#: views/editor/Editor.qml:121
+#, kde-format
+msgid "Open in New Tab"
+msgstr "Atvērt jaunā cilnē"
+
+#: views/editor/Editor.qml:132
+#, kde-format
+msgid "Open in New Split"
+msgstr "Atvērt sadalītā skatā"
+
+#: views/editor/Editor.qml:144
+#, kde-format
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: views/editor/EditorView.qml:32
+#, kde-format
+msgid "Open Files"
+msgstr "Atvērt datnes"
+
+#: views/editor/EditorView.qml:45
+#, kde-format
+msgid "Recent Files"
+msgstr "Nesenās datnes"
+
+#: views/editor/EditorView.qml:58
+#, kde-format
+msgid "New"
+msgstr "Jauns"
+
+#: views/editor/EditorView.qml:84
+#, kde-format
+msgid "Create a New Document"
+msgstr "Izveidot jaunu dokumentu"
+
+#: views/editor/EditorView.qml:85
+#, kde-format
+msgid "You can create or open a new document."
+msgstr "Varat izveidot vai atvērt jaunu dokumentu."
+
+#: views/editor/EditorView.qml:120
+#, kde-format
+msgid "Toggle side bar"
+msgstr "Pārslēgt sānu joslu"
+
+#: views/editor/EditorView.qml:169
+#, kde-format
+msgid "Focus"
+msgstr "Fokuss"
+
+#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
+#: views/widgets/ShortcutsDialog.qml:86
+#, kde-format
+msgid "Terminal"
+msgstr "Terminālis"
+
+#: views/editor/EditorView.qml:188
+#, kde-format
+msgid "Split View"
+msgstr "Dalīts skats"
+
+#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
+#, kde-format
+msgid "Shortcuts"
+msgstr "Saīsnes"
+
+#: views/editor/EditorView.qml:220
+#, kde-format
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
+#, kde-format
+msgid "Plugins"
+msgstr "Spraudņi"
+
+#: views/editor/EditorView.qml:242
+#, kde-format
+msgid "About"
+msgstr "Par"
+
+#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
+#, kde-format
+msgid "Name"
+msgstr "Nosaukums"
+
+#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
+#, kde-format
+msgid "Date"
+msgstr "Datums"
+
+#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
+#, kde-format
+msgid "Modified"
+msgstr "Modificēts"
+
+#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
+#, kde-format
+msgid "Size"
+msgstr "Izmērs"
+
+#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
+#, kde-format
+msgid "Type"
+msgstr "Tips"
+
+#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
+#, kde-format
+msgid "Go to Line"
+msgstr "Iet uz rindu"
+
+#: views/editor/EditorView.qml:329
+#, kde-format
+msgid "Line number"
+msgstr "Rindas numurs"
+
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
+#, kde-format
+msgid "Delete File?"
+msgstr "Vai dzēst datni?"
+
+#. i18n("Accept")
+#. rejectButton.text: i18n("Cancel")
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"Vai tiešām vēlaties dēst \n"
+"%1"
+
+#: views/editor/EditorView.qml:368
+#, kde-format
+msgid "Undo"
+msgstr "Atsaukt"
+
+#: views/editor/EditorView.qml:376
+#, kde-format
+msgid "Redo"
+msgstr "Atatsaukt"
+
+#: views/editor/EditorView.qml:384
+#, kde-format
+msgid "Save"
+msgstr "Saglabāt"
+
+#: views/editor/EditorView.qml:393
+#, kde-format
+msgid "Save as"
+msgstr "Saglabāt kā"
+
+#: views/editor/EditorView.qml:403
+#, kde-format
+msgid "Find and Replace"
+msgstr "Meklēt un aizstāt"
+
+#: views/editor/EditorView.qml:422
+#, kde-format
+msgid "Line/Word Counter"
+msgstr "Rindu/vārdu skaitītājs"
+
+#: views/editor/EditorView.qml:442
+#, kde-format
+msgid "UnFav it"
+msgstr "Noņemt no iecienītajiem"
+
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
+#, kde-format
+msgid "Info"
+msgstr "Informācija"
+
+#: views/editor/EditorView.qml:470 views/RecentView.qml:134
+#, kde-format
+msgid "Share"
+msgstr "Kopīgot"
+
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
+#, kde-format
+msgid "Show in Folder"
+msgstr "Parādīt mapē"
+
+#: views/editor/EditorView.qml:508
+#, kde-format
+msgid "Delete File"
+msgstr "Dzēst datni"
+
+#: views/PlacesSidebar.qml:61
+#, kde-format
+msgid "Previous"
+msgstr "Iepriekšējais"
+
+#: views/PlacesSidebar.qml:68
+#, kde-format
+msgid "Up"
+msgstr "Augšup"
+
+#: views/PlacesSidebar.qml:76
+#, kde-format
+msgid "Next"
+msgstr "Nākamais"
+
+#: views/PlacesSidebar.qml:100
+#, kde-format
+msgid "Show Folders First"
+msgstr "Mapes rādīt augšā"
+
+#: views/PlacesSidebar.qml:158
+#, kde-format
+msgid "Group"
+msgstr "Grupa"
+
+#: views/RecentView.qml:20
+#, kde-format
+msgid "No Recent Files!"
+msgstr "Nav neseno datņu!"
+
+#: views/RecentView.qml:21
+#, kde-format
+msgid "Here you will see your recently opened files"
+msgstr "Te varēsiet redzēt nesen atvērtās datnes"
+
+#: views/RecentView.qml:120
+#, kde-format
+msgid "Open"
+msgstr "Atvērt"
+
+#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
+#, kde-format
+msgid "Export"
+msgstr "Eksportēt"
+
+#: views/widgets/DocsBrowser.qml:67
+#, kde-format
+msgid "Filter..."
+msgstr "Filtrēt..."
+
+#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
+#, kde-format
+msgid "Select"
+msgstr "Atlasīt"
+
+#: views/widgets/ItemMenu.qml:110
+#, kde-format
+msgid "Copy"
+msgstr "Kopēt"
+
+#: views/widgets/ItemMenu.qml:120
+#, kde-format
+msgid "Remove"
+msgstr "Noņemt"
+
+#: views/widgets/PluginsDialog.qml:14
+#, kde-format
+msgid "Default Plugins"
+msgstr "Noklusējuma spraudņi"
+
+#: views/widgets/PluginsDialog.qml:15
+#, kde-format
+msgid "Activate or remove the default plugins"
+msgstr "Aktivizēt vai noņemt noklusējuma spraudņus"
+
+#: views/widgets/PluginsDialog.qml:23
+#, kde-format
+msgid "QML Scene"
+msgstr "QML aina"
+
+#: views/widgets/PluginsDialog.qml:24
+#, kde-format
+msgid "Load the current file in a QML scene."
+msgstr "Pašreizējo datni ielādē QML ainā."
+
+#: views/widgets/PluginsDialog.qml:53
+#, kde-format
+msgid "ToDo"
+msgstr "Uzdevumi"
+
+#: views/widgets/PluginsDialog.qml:54
+#, kde-format
+msgid "List of to-do tasks."
+msgstr "Uzskaita uzdevumus."
+
+#: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
+#, kde-format
+msgid "Builder"
+msgstr "Būvētājs"
+
+#: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
+#, kde-format
+msgid "Configure a project to build and run."
+msgstr "Konfigurē projektu būvēšanai un palaišanai."
+
+#: views/widgets/PluginsDialog.qml:88
+#, kde-format
+msgid "HTML Previewer"
+msgstr "HTML priekšskatījums"
+
+#: views/widgets/PluginsDialog.qml:89
+#, kde-format
+msgid "Preview HTML code live."
+msgstr "Priekšskata HTML kodu, to rakstot"
+
+#: views/widgets/PluginsDialog.qml:95
+#, kde-format
+msgid "Load Plugins"
+msgstr "Ielādēt spraudņus"
+
+#: views/widgets/PluginsDialog.qml:96
+#, kde-format
+msgid "Activate or remove the third party plugins"
+msgstr "Aktivizēt vai noņemt trešo pušu spraudņus"
+
+#: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
+#, kde-format
+msgid "Font"
+msgstr "Fonts"
+
+#: views/widgets/SettingsDialog.qml:37
+#, kde-format
+msgid "General"
+msgstr "Pamata"
+
+#: views/widgets/SettingsDialog.qml:42
+#, kde-format
+msgid "Places Sidebar"
+msgstr "Vietu sānu josla"
+
+#: views/widgets/SettingsDialog.qml:43
+#, kde-format
+msgid "Browse your file system from the sidebar."
+msgstr "Pārlūkojiet ierīces datņu sistēmu no sānu joslas."
+
+#: views/widgets/SettingsDialog.qml:55
+#, kde-format
+msgid "Auto Save"
+msgstr "Saglabāt automātiski"
+
+#: views/widgets/SettingsDialog.qml:56
+#, kde-format
+msgid "Auto saves your file every few seconds."
+msgstr "Ik pēc dažām sekundēm darbu saglabā automātiski."
+
+#: views/widgets/SettingsDialog.qml:69
+#, kde-format
+msgid "Editor"
+msgstr "Redaktors"
+
+#: views/widgets/SettingsDialog.qml:74
+#, kde-format
+msgid "Line Numbers"
+msgstr "Rindu numuri"
+
+#: views/widgets/SettingsDialog.qml:75
+#, kde-format
+msgid "Display the line numbers on the left side."
+msgstr "Programmas kreisajā pusē parāda rindu numurus."
+
+#: views/widgets/SettingsDialog.qml:87
+#, kde-format
+msgid "Wrap Text"
+msgstr "Aplauzt tekstu"
+
+#: views/widgets/SettingsDialog.qml:88
+#, kde-format
+msgid "Wrap the text into new lines."
+msgstr "Aplauzt tekstu jaunās rindās"
+
+#: views/widgets/SettingsDialog.qml:100
+#, kde-format
+msgid "Syntax Highlighting Languages"
+msgstr "Valodas sintakses izcelšanai"
+
+#: views/widgets/SettingsDialog.qml:101
+#, kde-format
+msgid "Display available languages."
+msgstr "Parādīt pieejamās valodas."
+
+#: views/widgets/SettingsDialog.qml:113
+#, kde-format
+msgid "Syntax Highlighting"
+msgstr "Sintakses izcelšana"
+
+#: views/widgets/SettingsDialog.qml:114
+#, kde-format
+msgid "Enable syntax highlighting for supported languages."
+msgstr "Ieslēgt sintakses izcelšanu atbalstītām valodām."
+
+#: views/widgets/SettingsDialog.qml:126
+#, kde-format
+msgid "Colors"
+msgstr "Krāsas"
+
+#: views/widgets/SettingsDialog.qml:127
+#, kde-format
+msgid ""
+"Configure the color scheme of the syntax highlighting. This configuration is "
+"not applied for rich text formats."
+msgstr ""
+"Konfigurēt krāsu shēmu sintakses izcelšanai. Šī konfigurācija nav spēkā "
+"formatētiem tekstiem."
+
+#: views/widgets/SettingsDialog.qml:141
+#, kde-format
+msgid "Display"
+msgstr "Izskats"
+
+#: views/widgets/SettingsDialog.qml:147
+#, kde-format
+msgid "Font family and size."
+msgstr "Fonta saime un izmērs."
+
+#: views/widgets/SettingsDialog.qml:159
+#, kde-format
+msgid "Tab Space"
+msgstr "Tabulatoru atstarpes"
+
+#: views/widgets/SettingsDialog.qml:173
+#, kde-format
+msgid "Embedded terminal options."
+msgstr "Iegultā termināļa opcijas."
+
+#: views/widgets/SettingsDialog.qml:178
+#, kde-format
+msgid "Sync Terminal"
+msgstr "Sinhronizēt termināli"
+
+#: views/widgets/SettingsDialog.qml:179
+#, kde-format
+msgid "Sync the terminal to the browser current working directory."
+msgstr "Sinhronizēt termināli ar datņu pārlūka mapi."
+
+#: views/widgets/SettingsDialog.qml:191
+#, kde-format
+msgid "Adaptive Color Scheme"
+msgstr "Adaptīva krāsu shēma"
+
+#: views/widgets/SettingsDialog.qml:192
+#, kde-format
+msgid "Colors based on the current style."
+msgstr "Krāsas balstās uz pašreizējo stilu."
+
+#: views/widgets/SettingsDialog.qml:203
+#, kde-format
+msgid "Color Scheme"
+msgstr "Krāsu shēma"
+
+#: views/widgets/SettingsDialog.qml:204
+#, kde-format
+msgid "Change the color scheme of the terminal."
+msgstr "Mainīt termināļa krāsu shēmu."
+
+#: views/widgets/ShortcutsDialog.qml:21
+#, kde-format
+msgid "Navigation"
+msgstr "Navigācija"
+
+#: views/widgets/ShortcutsDialog.qml:22
+#, kde-format
+msgid "Browser navigation."
+msgstr "Pārlūka navigācija."
+
+#: views/widgets/ShortcutsDialog.qml:26
+#, kde-format
+msgid "New Tab"
+msgstr "Jauna cilne"
+
+#: views/widgets/ShortcutsDialog.qml:46
+#, kde-format
+msgid "Close Tab"
+msgstr "Aizvērt cilni"
+
+#: views/widgets/ShortcutsDialog.qml:66
+#, kde-format
+msgid "Path Edit"
+msgstr "Ceļa rediģēšana"
+
+#: views/widgets/ShortcutsDialog.qml:101
+#, kde-format
+msgid "Split"
+msgstr "Sadalīt"
+
+#: views/widgets/ShortcutsDialog.qml:116
+#, kde-format
+msgid "New File"
+msgstr "Jauna datne"
+
+#: views/widgets/ShortcutsDialog.qml:136
+#, kde-format
+msgid "Preview"
+msgstr "Priekšskatījums"
+
+#: views/widgets/ShortcutsDialog.qml:151
+#, kde-format
+msgid "Find Tab"
+msgstr "Meklēt cilni"
+
+#: views/widgets/ShortcutsDialog.qml:171
+#, kde-format
+msgid "Select All"
+msgstr "Atlasīt visu"
