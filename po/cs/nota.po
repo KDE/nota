@@ -578,9 +578,3 @@ msgstr "Najít kartu"
 #, kde-format
 msgid "Select All"
 msgstr "Vybrat vše"
-
-#~ msgid "Open Recent Files"
-#~ msgstr "Otevřít nedávné soubory"
-
-#~ msgid "Places"
-#~ msgstr "Místa"
