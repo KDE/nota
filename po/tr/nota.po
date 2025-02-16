@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-12-05 21:03+0300\n"
+"PO-Revision-Date: 2025-02-15 21:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -74,7 +74,7 @@ msgstr "Taşınabilir"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr "Yeni Yapılacak... Uff!"
+msgstr "Yeni Yapılacak… Uff!"
 
 #: views/editor/Editor.qml:111
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "Dışa Aktar"
 #: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
-msgstr "Süz..."
+msgstr "Süz…"
 
 #: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
@@ -490,7 +490,7 @@ msgstr "Ekran"
 #: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
-msgstr "Yazıtipi ailesi ve boyutu,"
+msgstr "Yazıtipi ailesi ve boyutu."
 
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
