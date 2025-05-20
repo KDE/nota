@@ -13,7 +13,7 @@ DocsBrowser
     id: control
 
     altHeader: Maui.Handy.isMobile
-
+    headerMargins: Maui.Style.defaultPadding
     headBar.forceCenterMiddleContent: false
     floatingFooter: true
     holder.visible: historyList.count === 0
@@ -25,7 +25,7 @@ DocsBrowser
     {
         icon.name: "go-previous"
         onClicked: control.StackView.view.pop()
-    }  
+    }
 
     model: Maui.BaseModel
     {
@@ -141,19 +141,8 @@ DocsBrowser
         {
             text: i18n("Export")
             icon.name: "document-export"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = null
-                _dialogLoader.sourceComponent = _fileDialogComponent
-                dialog.browser.settings.onlyDirs = true
-                dialog.singleSelection = true
-                dialog.callback = function(paths)
-                {
-                    FB.FM.copy(_selectionbar.uris, paths[0])
-                };
+            onTriggered: copyFilesTo(_selectionBar.uris)
 
-                dialog.open()
-            }
         }
     }
 

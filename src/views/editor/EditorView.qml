@@ -24,6 +24,7 @@ Pane
     readonly property alias tabView : _tabView
 
     padding: 0
+    background: null
 
     Action
     {
@@ -78,6 +79,9 @@ Pane
             Maui.Controls.showCSD: true
 
             altTabBar: !root.isWide
+            tabBarMargins: Maui.Style.contentMargins
+
+            background: null
 
             holder.emoji: "qrc:/img/document-edit.svg"
 
@@ -210,7 +214,7 @@ Pane
                             icon.name: "configure-shortcuts"
                             onTriggered:
                             {
-                                _dialogLoader.sourceComponent = _shortcutsDialogComponent
+                                var dialog = _shortcutsDialogComponent.createObject(root)
                                 dialog.open()
                             }
                         }
@@ -221,7 +225,7 @@ Pane
                             icon.name: "settings-configure"
                             onTriggered:
                             {
-                                _dialogLoader.sourceComponent = _settingsDialogComponent
+                                var dialog = _settingsDialogComponent.createObject(root)
                                 dialog.open()
                             }
                         }
@@ -232,7 +236,7 @@ Pane
                             icon.name: "system-run"
                             onTriggered:
                             {
-                                _dialogLoader.sourceComponent = _plugingsDialogComponent
+                                var dialog = _plugingsDialogComponent.createObject(root)
                                 dialog.open()
                             }
                         }
@@ -328,6 +332,7 @@ Pane
                         textEntry.text: currentEditor.document.currentLineIndex+1
                         textEntry.placeholderText: i18n("Line number")
                         onFinished: currentEditor.goToLine(text)
+                        onClosed: destroy()
                     }
                 }
 
@@ -338,7 +343,7 @@ Pane
                     Maui.InfoDialog
                     {
 
-                        title: i18n("Delete File?")
+                        // title: i18n("Delete File?")
                         message: i18n("Are sure you want to delete \n%1", currentEditor.fileUrl)
 
                         standardButtons: Dialog.Yes | Dialog.Cancel
@@ -351,6 +356,8 @@ Pane
                         {
                             FB.FM.removeFiles([currentEditor.fileUrl])
                         }
+
+                        onClosed: destroy()
                     }
                 }
 
@@ -481,14 +488,14 @@ Pane
                         {
                             action: Action
                             {
-                            icon.name: "go-jump"
-                            text: i18n("Go to Line")
-                            shortcut: "Ctrl+L"
-                            onTriggered:
-                            {
-                                _dialogLoader.sourceComponent = _goToLineDialogComponent
-                                dialog.open()
-                            }
+                                icon.name: "go-jump"
+                                text: i18n("Go to Line")
+                                shortcut: "Ctrl+L"
+                                onTriggered:
+                                {
+                                    var dialog = _goToLineDialogComponent.createObject(root)
+                                    dialog.open()
+                                }
                             }
                         }
 
@@ -512,7 +519,7 @@ Pane
 
                             onTriggered:
                             {
-                                _dialogLoader.sourceComponent = _removeDialogComponent
+                                var dialog = _removeDialogComponent.createObject(root)
                                 dialog.open()
                             }
                         }
@@ -522,23 +529,22 @@ Pane
 
             onNewTabClicked: control.openTab("")
             onCloseTabClicked: (index) =>
-            {
-                if( tabHasUnsavedFiles(index))
-                {
-                    _dialogLoader.sourceComponent = _unsavedDialogComponent
-                    dialog.callback = function () { closeTab(index) }
+                               {
+                                   if( tabHasUnsavedFiles(index))
+                                   {
+                                       _closeDialog.callback = function () { closeTab(index) }
 
-                    if(tabHasUnsavedFiles(index))
-                    {
-                        dialog.open()
-                        return
-                    }
-                }
-                else
-                {
-                    closeTab(index)
-                }
-            }
+                                       if(tabHasUnsavedFiles(index))
+                                       {
+                                           _closeDialog.open()
+                                           return
+                                       }
+                                   }
+                                   else
+                                   {
+                                       closeTab(index)
+                                   }
+                               }
         }
     }
 
@@ -619,24 +625,23 @@ Pane
         if(!item)
             return
 
-            if (path && FB.FM.fileExists(path))
-            {
-                item.document.saveAs(path)
-            } else
-            {
-                _dialogLoader.sourceComponent = null
-                _dialogLoader.sourceComponent = _fileDialogComponent
-                dialog.mode = FB.FileDialog.Save;
-                dialog.singleSelection = true
-                dialog.suggestedFileName = FB.FM.getFileInfo(item.fileUrl).label
-                dialog.callback = function (paths)
-                {
-                    item.document.saveAs(paths[0])
-                    historyList.append(paths[0])
-                };
+        if (path && FB.FM.fileExists(path))
+        {
+            item.document.saveAs(path)
+        } else
+        {
+            var props = ({'mode' : FB.FileDialog.Save,
+                             'singleSelection' : true,
+                             'suggestedFileName' : FB.FM.getFileInfo(item.fileUrl).label,
+                             'callback' : function (paths)
+                             {
+                                 item.document.saveAs(paths[0])
+                                 historyList.append(paths[0])
+                             }})
 
-                dialog.open()
-            }
+            var dialog = _fileDialogComponent.createObject(root, props)
+            dialog.open()
+        }
     }
 
     function isUrlOpen(url : string) : bool

@@ -32,9 +32,13 @@ Maui.ContextualMenu
             icon.name: "tag"
             onTriggered:
             {
-                _dialogLoader.sourceComponent = _tagsDialogComponent
-                dialog.composerList.urls = [control.model.get(index).path]
-                dialog.open()
+                if(!root.tagsDialog)
+                {
+                    root.tagsDialog = _tagsDialogComponent.createObject(root)
+                }
+
+                root.tagsDialog.composerList.urls = [control.model.get(index).path]
+                root.tagsDialog.open()
             }
         }
 
@@ -67,20 +71,7 @@ Maui.ContextualMenu
     {
         text: i18n("Save as")
         icon.name: "document-save-as"
-        onTriggered:
-        {
-            var pic = control.model.get(index).path
-            _dialogLoader.sourceComponent = null
-            _dialogLoader.sourceComponent = _fileDialogComponent
-            dialog.mode = FB.FileDialog.Save
-            dialog.singleSelection = true
-            dialog.suggestedFileName = FB.FM.getFileInfo(control.model.get(index).path).label
-            dialog.callback = function(paths)
-            {
-                FB.FM.copy([pic], paths[0])
-            }
-            dialog.open()
-        }
+        onTriggered: copyFilesTo([control.model.get(index).path])
     }
 
     MenuItem

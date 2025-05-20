@@ -16,6 +16,7 @@ Maui.SplitViewItem
 
     Maui.Controls.title : title
     Maui.Controls.badgeText: editor.document.modified ? "*" : ""
+    clip: false
 
     TE.TextEditor
     {
