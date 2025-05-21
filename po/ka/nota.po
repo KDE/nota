@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:42+0000\n"
 "PO-Revision-Date: 2024-12-25 22:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -38,12 +38,12 @@ msgstr "იპოვეთ, შექმენით და ჩაასწო�
 msgid "Developer"
 msgstr "პროგრამისტი"
 
-#: main.qml:115
+#: main.qml:104
 #, kde-format
 msgid "Unsaved files"
 msgstr "შეუნახავი ფაილები"
 
-#: main.qml:116
+#: main.qml:105
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -77,135 +77,131 @@ msgstr "მობაილი"
 msgid "New ToDo... Argh!"
 msgstr "ახალი განრიგი...!"
 
-#: views/editor/Editor.qml:111
+#: views/editor/Editor.qml:112
 #, kde-format
 msgid "Open Here"
 msgstr "აქ გახსნა"
 
-#: views/editor/Editor.qml:121
+#: views/editor/Editor.qml:122
 #, kde-format
 msgid "Open in New Tab"
 msgstr "ახალ ჩანართში გახსნა"
 
-#: views/editor/Editor.qml:132
+#: views/editor/Editor.qml:133
 #, kde-format
 msgid "Open in New Split"
 msgstr "ახალ დაყოფილ ხედში გახსნა"
 
-#: views/editor/Editor.qml:144
+#: views/editor/Editor.qml:145
 #, kde-format
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: views/editor/EditorView.qml:32
+#: views/editor/EditorView.qml:33
 #, kde-format
 msgid "Open Files"
 msgstr "ფაილების გახსნა"
 
-#: views/editor/EditorView.qml:45
+#: views/editor/EditorView.qml:46
 #, kde-format
 msgid "Recent Files"
 msgstr "უახლესი ფაილები"
 
-#: views/editor/EditorView.qml:58
+#: views/editor/EditorView.qml:59
 #, kde-format
 msgid "New"
 msgstr "ახალი"
 
-#: views/editor/EditorView.qml:84
+#: views/editor/EditorView.qml:88
 #, kde-format
 msgid "Create a New Document"
 msgstr "ახალი დოკუმენტის შექმნა"
 
-#: views/editor/EditorView.qml:85
+#: views/editor/EditorView.qml:89
 #, kde-format
 msgid "You can create or open a new document."
 msgstr "შექმენით ან გახსენით ახალი დოკუმენტი."
 
-#: views/editor/EditorView.qml:120
+#: views/editor/EditorView.qml:124
 #, kde-format
 msgid "Toggle side bar"
 msgstr "გვერდითი პანელის გადართვა"
 
-#: views/editor/EditorView.qml:169
+#: views/editor/EditorView.qml:173
 #, kde-format
 msgid "Focus"
 msgstr "ფოკუსი"
 
-#: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
+#: views/editor/EditorView.qml:181 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
 msgstr "ტერმინალი"
 
-#: views/editor/EditorView.qml:188
+#: views/editor/EditorView.qml:192
 #, kde-format
 msgid "Split View"
 msgstr "ხედის გაყოფა"
 
-#: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
+#: views/editor/EditorView.qml:213 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
 msgstr "მალსახმობები"
 
-#: views/editor/EditorView.qml:220
+#: views/editor/EditorView.qml:224
 #, kde-format
 msgid "Settings"
 msgstr "მორგება"
 
-#: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
+#: views/editor/EditorView.qml:235 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
 msgstr "დამატებები"
 
-#: views/editor/EditorView.qml:242
+#: views/editor/EditorView.qml:246
 #, kde-format
 msgid "About"
 msgstr "შესახებ"
 
-#: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
+#: views/editor/EditorView.qml:295 views/PlacesSidebar.qml:148
 #, kde-format
 msgid "Name"
 msgstr "სახელი"
 
-#: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
+#: views/editor/EditorView.qml:301 views/PlacesSidebar.qml:121
 #, kde-format
 msgid "Date"
 msgstr "თარიღი"
 
-#: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
+#: views/editor/EditorView.qml:307 views/PlacesSidebar.qml:130
 #, kde-format
 msgid "Modified"
 msgstr "შეცვლილია"
 
-#: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
+#: views/editor/EditorView.qml:313 views/PlacesSidebar.qml:139
 #, kde-format
 msgid "Size"
 msgstr "ზომა"
 
-#: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
+#: views/editor/EditorView.qml:319 views/PlacesSidebar.qml:112
 #, kde-format
 msgid "Type"
 msgstr "ტიპი"
 
-#: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
+#: views/editor/EditorView.qml:331 views/editor/EditorView.qml:492
 #, kde-format
 msgid "Go to Line"
 msgstr "ხაზზე გადასვლა"
 
-#: views/editor/EditorView.qml:329
+#: views/editor/EditorView.qml:333
 #, kde-format
 msgid "Line number"
 msgstr "ხაზის ნომერი"
 
-#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
-#, kde-format
-msgid "Delete File?"
-msgstr "წავშალო ფაილი?"
-
+#. i18n("Delete File?")
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:136
+#: views/editor/EditorView.qml:347 views/widgets/ItemMenu.qml:127
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -214,82 +210,82 @@ msgstr ""
 "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ\n"
 " %1"
 
-#: views/editor/EditorView.qml:368
+#: views/editor/EditorView.qml:375
 #, kde-format
 msgid "Undo"
 msgstr "დაბრუნება"
 
-#: views/editor/EditorView.qml:376
+#: views/editor/EditorView.qml:383
 #, kde-format
 msgid "Redo"
 msgstr "თავიდან"
 
-#: views/editor/EditorView.qml:384
+#: views/editor/EditorView.qml:391
 #, kde-format
 msgid "Save"
 msgstr "შენახვა"
 
-#: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
+#: views/editor/EditorView.qml:400 views/widgets/ItemMenu.qml:72
 #, kde-format
 msgid "Save as"
 msgstr "შენახვა როგორც"
 
-#: views/editor/EditorView.qml:403
+#: views/editor/EditorView.qml:410
 #, kde-format
 msgid "Find and Replace"
 msgstr "ძებნა და ჩანაცვლება"
 
-#: views/editor/EditorView.qml:422
+#: views/editor/EditorView.qml:429
 #, kde-format
 msgid "Line/Word Counter"
 msgstr "ხაზების/სიტყვების რაოდენობა"
 
-#: views/editor/EditorView.qml:442
+#: views/editor/EditorView.qml:449
 #, kde-format
 msgid "UnFav it"
 msgstr "რჩეულებიდან ამოღება"
 
-#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
+#: views/editor/EditorView.qml:464 views/widgets/ItemMenu.qml:90
 #, kde-format
 msgid "Info"
 msgstr "ინფორმაცია"
 
-#: views/editor/EditorView.qml:470 views/RecentView.qml:135
+#: views/editor/EditorView.qml:477 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
 msgstr "გაზიარება"
 
-#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
+#: views/editor/EditorView.qml:505 views/widgets/ItemMenu.qml:80
 #, kde-format
 msgid "Show in Folder"
 msgstr "საქაღალდეში ჩვენება"
 
-#: views/editor/EditorView.qml:508
+#: views/editor/EditorView.qml:515
 #, kde-format
 msgid "Delete File"
 msgstr "ფაილის წაშლა"
 
-#: views/PlacesSidebar.qml:61
+#: views/PlacesSidebar.qml:63
 #, kde-format
 msgid "Previous"
 msgstr "წინა"
 
-#: views/PlacesSidebar.qml:68
+#: views/PlacesSidebar.qml:70
 #, kde-format
 msgid "Up"
 msgstr "მაღლა"
 
-#: views/PlacesSidebar.qml:76
+#: views/PlacesSidebar.qml:78
 #, kde-format
 msgid "Next"
 msgstr "შემდეგი"
 
-#: views/PlacesSidebar.qml:100
+#: views/PlacesSidebar.qml:102
 #, kde-format
 msgid "Show Folders First"
 msgstr "ჯერ საქაღალდეების ჩვენება"
 
-#: views/PlacesSidebar.qml:158
+#: views/PlacesSidebar.qml:160
 #, kde-format
 msgid "Group"
 msgstr "ჯგუფი"
@@ -319,20 +315,25 @@ msgstr "გატანა"
 msgid "Filter..."
 msgstr "გაფილტვრა..."
 
-#: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
+#: views/widgets/ItemMenu.qml:57 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
 msgstr "აირჩიეთ"
 
-#: views/widgets/ItemMenu.qml:111
+#: views/widgets/ItemMenu.qml:102
 #, kde-format
 msgid "Copy"
 msgstr "კოპირება"
 
-#: views/widgets/ItemMenu.qml:121
+#: views/widgets/ItemMenu.qml:112
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
+
+#: views/widgets/ItemMenu.qml:124
+#, kde-format
+msgid "Delete File?"
+msgstr "წავშალო ფაილი?"
 
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
