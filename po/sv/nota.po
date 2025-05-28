@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-23 17:11+0100\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"PO-Revision-Date: 2025-01-11 12:24+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,12 +37,12 @@ msgstr "Bläddra bland, skapa, och redigera textfiler"
 msgid "Developer"
 msgstr "Utvecklare"
 
-#: main.qml:111
+#: main.qml:115
 #, kde-format
 msgid "Unsaved files"
 msgstr "Osparade filer"
 
-#: main.qml:112
+#: main.qml:116
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -102,8 +102,7 @@ msgid "Open Files"
 msgstr "Öppna filer"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "Recent File"
+#, kde-format
 msgid "Recent Files"
 msgstr "Senaste filer"
 
@@ -198,14 +197,14 @@ msgstr "Gå till rad"
 msgid "Line number"
 msgstr "Radnummer"
 
-#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
 #, kde-format
 msgid "Delete File?"
 msgstr "Ta bort fil?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:136
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -229,7 +228,7 @@ msgstr "Gör om"
 msgid "Save"
 msgstr "Spara"
 
-#: views/editor/EditorView.qml:393
+#: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Save as"
 msgstr "Spara som"
@@ -249,17 +248,17 @@ msgstr "Rad- och ordräknare"
 msgid "UnFav it"
 msgstr "Ta bort från favoriter"
 
-#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
 #, kde-format
 msgid "Info"
 msgstr "Information"
 
-#: views/editor/EditorView.qml:470 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
 msgstr "Dela"
 
-#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
 #, kde-format
 msgid "Show in Folder"
 msgstr "Visa i katalog"
@@ -294,22 +293,22 @@ msgstr "Visa kataloger först"
 msgid "Group"
 msgstr "Grupp"
 
-#: views/RecentView.qml:20
+#: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
 msgstr "Inga senaste filer."
 
-#: views/RecentView.qml:21
+#: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
 msgstr "Här visas listan med senaste öppnade filer"
 
-#: views/RecentView.qml:120
+#: views/RecentView.qml:121
 #, kde-format
 msgid "Open"
 msgstr "Öppna"
 
-#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:142
 #, kde-format
 msgid "Export"
 msgstr "Exportera"
@@ -324,12 +323,12 @@ msgstr "Filtrera..."
 msgid "Select"
 msgstr "Markera"
 
-#: views/widgets/ItemMenu.qml:110
+#: views/widgets/ItemMenu.qml:111
 #, kde-format
 msgid "Copy"
 msgstr "Kopiera"
 
-#: views/widgets/ItemMenu.qml:120
+#: views/widgets/ItemMenu.qml:121
 #, kde-format
 msgid "Remove"
 msgstr "Ta bort"

@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
 
 import org.maui.nota as Nota
 import "widgets"
@@ -12,7 +13,7 @@ DocsBrowser
     id: control
 
     altHeader: Maui.Handy.isMobile
-
+    headerMargins: Maui.Style.defaultPadding
     headBar.forceCenterMiddleContent: false
     floatingFooter: true
     holder.visible: historyList.count === 0
@@ -24,7 +25,7 @@ DocsBrowser
     {
         icon.name: "go-previous"
         onClicked: control.StackView.view.pop()
-    }  
+    }
 
     model: Maui.BaseModel
     {
@@ -140,24 +141,8 @@ DocsBrowser
         {
             text: i18n("Export")
             icon.name: "document-export"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent= _fileDialogComponent
-                dialog.mode = dialog.modes.OPEN
-                dialog.settings.onlyDirs = true
-                dialog.callback = function(paths)
-                {
-                    for(var url of _selectionbar.uris)
-                    {
-                        for(var i in paths)
-                        {
-                            FB.FM.copy(url, paths[i])
-                        }
-                    }
-                };
+            onTriggered: copyFilesTo(_selectionBar.uris)
 
-                dialog.open()
-            }
         }
     }
 

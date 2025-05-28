@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-08-16 18:38+0200\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"PO-Revision-Date: 2024-12-26 20:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,12 +40,12 @@ msgstr "Testu fitxategiak sortu, eta editatu."
 msgid "Developer"
 msgstr "Garatzailea"
 
-#: main.qml:111
+#: main.qml:115
 #, kde-format
 msgid "Unsaved files"
 msgstr "Gorde gabeko fitxategiak"
 
-#: main.qml:112
+#: main.qml:116
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -105,10 +105,9 @@ msgid "Open Files"
 msgstr "Ireki fitxategiak"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Ez dago azken aldiko fitxategirik!"
+msgstr "Azken aldiko fitxategiak"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -126,8 +125,7 @@ msgid "You can create or open a new document."
 msgstr "Dokumentu berri bat sortu edo ireki dezakezu."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "Txandakatu alboko-barra"
 
@@ -202,14 +200,14 @@ msgstr "Joan lerrora"
 msgid "Line number"
 msgstr "Lerro-zenbakia"
 
-#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
 #, kde-format
 msgid "Delete File?"
 msgstr "Fitxategia ezabatu?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:136
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -233,7 +231,7 @@ msgstr "Berregin"
 msgid "Save"
 msgstr "Gorde"
 
-#: views/editor/EditorView.qml:393
+#: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Save as"
 msgstr "Gorde honela"
@@ -253,17 +251,17 @@ msgstr "Lerro/Hitz zenbatzailea"
 msgid "UnFav it"
 msgstr "Kendu gogokoetatik"
 
-#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
 #, kde-format
 msgid "Info"
 msgstr "Informazioa"
 
-#: views/editor/EditorView.qml:470 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
 msgstr "Partekatu"
 
-#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
 #, kde-format
 msgid "Show in Folder"
 msgstr "Erakutsi karpetan"
@@ -298,22 +296,22 @@ msgstr "Erakutsi karpetak lehenengo"
 msgid "Group"
 msgstr "Taldea"
 
-#: views/RecentView.qml:20
+#: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
 msgstr "Ez dago azken aldiko fitxategirik!"
 
-#: views/RecentView.qml:21
+#: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
 msgstr "Hemen ikusiko dituzu azken aldian ireki dituzun fitxategiak"
 
-#: views/RecentView.qml:120
+#: views/RecentView.qml:121
 #, kde-format
 msgid "Open"
 msgstr "Ireki"
 
-#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:142
 #, kde-format
 msgid "Export"
 msgstr "Esportatu"
@@ -328,12 +326,12 @@ msgstr "Iragazkia..."
 msgid "Select"
 msgstr "Hautatu"
 
-#: views/widgets/ItemMenu.qml:110
+#: views/widgets/ItemMenu.qml:111
 #, kde-format
 msgid "Copy"
 msgstr "Kopiatu"
 
-#: views/widgets/ItemMenu.qml:120
+#: views/widgets/ItemMenu.qml:121
 #, kde-format
 msgid "Remove"
 msgstr "Kendu"

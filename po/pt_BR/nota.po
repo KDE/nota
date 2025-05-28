@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 01:51+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2024-01-11 20:59-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr "Navegar, criar e editar arquivos de texto."
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: main.qml:111
+#: main.qml:115
 #, kde-format
 msgid "Unsaved files"
 msgstr "Arquivos não salvos"
 
-#: main.qml:112
+#: main.qml:116
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -199,14 +199,14 @@ msgstr "Ir para a linha"
 msgid "Line number"
 msgstr "Número da linha"
 
-#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
 #, kde-format
 msgid "Delete File?"
 msgstr "Excluir arquivo?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:136
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -230,7 +230,7 @@ msgstr "Refazer"
 msgid "Save"
 msgstr "Salvar"
 
-#: views/editor/EditorView.qml:393
+#: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Save as"
 msgstr "Salvar como"
@@ -250,17 +250,17 @@ msgstr "Contador de linha/palavra"
 msgid "UnFav it"
 msgstr "Desfavoritar"
 
-#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
 #, kde-format
 msgid "Info"
 msgstr "Informações"
 
-#: views/editor/EditorView.qml:470 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
 msgstr "Compartilhar"
 
-#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
 #, kde-format
 msgid "Show in Folder"
 msgstr "Mostrar na pasta"
@@ -295,22 +295,22 @@ msgstr "Mostrar primeiro as pastas"
 msgid "Group"
 msgstr "Grupo"
 
-#: views/RecentView.qml:20
+#: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
 msgstr "Nenhum arquivo recente!"
 
-#: views/RecentView.qml:21
+#: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
 msgstr "Aqui você verá seus arquivos recentemente abertos"
 
-#: views/RecentView.qml:120
+#: views/RecentView.qml:121
 #, kde-format
 msgid "Open"
 msgstr "Abrir"
 
-#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:142
 #, kde-format
 msgid "Export"
 msgstr "Exportar"
@@ -325,12 +325,12 @@ msgstr "Filtro..."
 msgid "Select"
 msgstr "Selecionar"
 
-#: views/widgets/ItemMenu.qml:110
+#: views/widgets/ItemMenu.qml:111
 #, kde-format
 msgid "Copy"
 msgstr "Copiar"
 
-#: views/widgets/ItemMenu.qml:120
+#: views/widgets/ItemMenu.qml:121
 #, kde-format
 msgid "Remove"
 msgstr "Remover"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-28 12:08+0400\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"PO-Revision-Date: 2024-12-06 07:33+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -38,12 +38,12 @@ msgstr "تصفح وأنشئ وحرر الملفات النصية."
 msgid "Developer"
 msgstr "مطوّر"
 
-#: main.qml:111
+#: main.qml:115
 #, kde-format
 msgid "Unsaved files"
 msgstr "ملفات غير المحفوظة"
 
-#: main.qml:112
+#: main.qml:116
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -103,10 +103,9 @@ msgid "Open Files"
 msgstr "افتح ملفّات"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "لا يوجد ملفات حديثة!"
+msgstr "الملفات الحديثة"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -199,14 +198,14 @@ msgstr "انتقل إلى سطر"
 msgid "Line number"
 msgstr "رقم السطر"
 
-#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
 #, kde-format
 msgid "Delete File?"
 msgstr "أأحذف الملفّ؟"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:136
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -230,7 +229,7 @@ msgstr "كرّر"
 msgid "Save"
 msgstr "احفظ"
 
-#: views/editor/EditorView.qml:393
+#: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Save as"
 msgstr "احفظ ك‍"
@@ -250,17 +249,17 @@ msgstr "عداد السطور/الكلمات"
 msgid "UnFav it"
 msgstr "أزل التفضيل"
 
-#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
 #, kde-format
 msgid "Info"
 msgstr "معلومات"
 
-#: views/editor/EditorView.qml:470 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
 msgstr "شارك"
 
-#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
 #, kde-format
 msgid "Show in Folder"
 msgstr "أظهر في مجلد"
@@ -295,22 +294,22 @@ msgstr "أظهر المجلدات أولًا"
 msgid "Group"
 msgstr "المجموعة"
 
-#: views/RecentView.qml:20
+#: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
 msgstr "لا يوجد ملفات حديثة!"
 
-#: views/RecentView.qml:21
+#: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
 msgstr "هنا يمكنك رؤية ملفاتك المفتوحة حديثاً"
 
-#: views/RecentView.qml:120
+#: views/RecentView.qml:121
 #, kde-format
 msgid "Open"
 msgstr "افتح"
 
-#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:142
 #, kde-format
 msgid "Export"
 msgstr "صدّر"
@@ -325,12 +324,12 @@ msgstr "رشّح..."
 msgid "Select"
 msgstr "اختر"
 
-#: views/widgets/ItemMenu.qml:110
+#: views/widgets/ItemMenu.qml:111
 #, kde-format
 msgid "Copy"
 msgstr "انسخ"
 
-#: views/widgets/ItemMenu.qml:120
+#: views/widgets/ItemMenu.qml:121
 #, kde-format
 msgid "Remove"
 msgstr "أزل"

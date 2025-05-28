@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Ignacy Kajdan <ignacy.kajdan@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-11-30 10:01+0100\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"PO-Revision-Date: 2025-02-01 12:47+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,12 +39,12 @@ msgstr "Przeglądaj, twórz i zmieniaj pliki tekstowe."
 msgid "Developer"
 msgstr "Programista"
 
-#: main.qml:111
+#: main.qml:115
 #, kde-format
 msgid "Unsaved files"
 msgstr "Niezapisane pliki"
 
-#: main.qml:112
+#: main.qml:116
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -103,10 +103,9 @@ msgid "Open Files"
 msgstr "Otwórz pliki"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "Recent File"
+#, kde-format
 msgid "Recent Files"
-msgstr "Ostatni plik"
+msgstr "Ostatnie pliki"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -199,14 +198,14 @@ msgstr "Przejdź do wiersza"
 msgid "Line number"
 msgstr "Numer wiersza"
 
-#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
 #, kde-format
 msgid "Delete File?"
 msgstr "Usunąć plik?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:136
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -230,7 +229,7 @@ msgstr "Powtórz"
 msgid "Save"
 msgstr "Zapisz"
 
-#: views/editor/EditorView.qml:393
+#: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Save as"
 msgstr "Zapisz jako"
@@ -250,17 +249,17 @@ msgstr "Licznik wierszy/słów"
 msgid "UnFav it"
 msgstr "Usuń z ulubionych"
 
-#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
 #, kde-format
 msgid "Info"
 msgstr "Dane"
 
-#: views/editor/EditorView.qml:470 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
 msgstr "Udostępnij"
 
-#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
 #, kde-format
 msgid "Show in Folder"
 msgstr "Pokaż w katalogu"
@@ -295,22 +294,22 @@ msgstr "Najpierw pokaż katalogi"
 msgid "Group"
 msgstr "Grupa"
 
-#: views/RecentView.qml:20
+#: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
 msgstr "Brak ostatnich plików!"
 
-#: views/RecentView.qml:21
+#: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
 msgstr "Tutaj pojawią się ostatnio otwierane pliki"
 
-#: views/RecentView.qml:120
+#: views/RecentView.qml:121
 #, kde-format
 msgid "Open"
 msgstr "Otwórz"
 
-#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:142
 #, kde-format
 msgid "Export"
 msgstr "Wyeksportuj"
@@ -325,12 +324,12 @@ msgstr "Odfiltruj…"
 msgid "Select"
 msgstr "Zaznacz"
 
-#: views/widgets/ItemMenu.qml:110
+#: views/widgets/ItemMenu.qml:111
 #, kde-format
 msgid "Copy"
 msgstr "Skopiuj"
 
-#: views/widgets/ItemMenu.qml:120
+#: views/widgets/ItemMenu.qml:121
 #, kde-format
 msgid "Remove"
 msgstr "Usuń"

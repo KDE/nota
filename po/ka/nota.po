@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 01:51+0000\n"
-"PO-Revision-Date: 2024-02-11 02:27+0100\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"PO-Revision-Date: 2024-12-25 22:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,12 +38,12 @@ msgstr "იპოვეთ, შექმენით და ჩაასწო�
 msgid "Developer"
 msgstr "პროგრამისტი"
 
-#: main.qml:111
+#: main.qml:115
 #, kde-format
 msgid "Unsaved files"
 msgstr "შეუნახავი ფაილები"
 
-#: main.qml:112
+#: main.qml:116
 #, kde-format
 msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
@@ -103,10 +103,9 @@ msgid "Open Files"
 msgstr "ფაილების გახსნა"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "უკანასკნელი ფაილების გარეშე!"
+msgstr "უახლესი ფაილები"
 
 #: views/editor/EditorView.qml:58
 #, kde-format
@@ -124,8 +123,7 @@ msgid "You can create or open a new document."
 msgstr "შექმენით ან გახსენით ახალი დოკუმენტი."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "გვერდითი პანელის გადართვა"
 
@@ -200,14 +198,14 @@ msgstr "ხაზზე გადასვლა"
 msgid "Line number"
 msgstr "ხაზის ნომერი"
 
-#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:132
+#: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
 #, kde-format
 msgid "Delete File?"
 msgstr "წავშალო ფაილი?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
-#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:135
+#: views/editor/EditorView.qml:342 views/widgets/ItemMenu.qml:136
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -231,7 +229,7 @@ msgstr "თავიდან"
 msgid "Save"
 msgstr "შენახვა"
 
-#: views/editor/EditorView.qml:393
+#: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Save as"
 msgstr "შენახვა როგორც"
@@ -251,17 +249,17 @@ msgstr "ხაზების/სიტყვების რაოდენო�
 msgid "UnFav it"
 msgstr "რჩეულებიდან ამოღება"
 
-#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:98
+#: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
 #, kde-format
 msgid "Info"
 msgstr "ინფორმაცია"
 
-#: views/editor/EditorView.qml:470 views/RecentView.qml:134
+#: views/editor/EditorView.qml:470 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
 msgstr "გაზიარება"
 
-#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:88
+#: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
 #, kde-format
 msgid "Show in Folder"
 msgstr "საქაღალდეში ჩვენება"
@@ -296,22 +294,22 @@ msgstr "ჯერ საქაღალდეების ჩვენება"
 msgid "Group"
 msgstr "ჯგუფი"
 
-#: views/RecentView.qml:20
+#: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
 msgstr "უკანასკნელი ფაილების გარეშე!"
 
-#: views/RecentView.qml:21
+#: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
 msgstr "აქ ნახავთ უახლეს გახსნილ ფაილებს"
 
-#: views/RecentView.qml:120
+#: views/RecentView.qml:121
 #, kde-format
 msgid "Open"
 msgstr "გახსნა"
 
-#: views/RecentView.qml:141 views/widgets/ItemMenu.qml:68
+#: views/RecentView.qml:142
 #, kde-format
 msgid "Export"
 msgstr "გატანა"
@@ -326,12 +324,12 @@ msgstr "გაფილტვრა..."
 msgid "Select"
 msgstr "აირჩიეთ"
 
-#: views/widgets/ItemMenu.qml:110
+#: views/widgets/ItemMenu.qml:111
 #, kde-format
 msgid "Copy"
 msgstr "კოპირება"
 
-#: views/widgets/ItemMenu.qml:120
+#: views/widgets/ItemMenu.qml:121
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
@@ -444,12 +442,12 @@ msgstr "მარცხენა მხარეს ხაზის ნომრ
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "ტექსტის გადატანა"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "ტექსტის გადატანა ახალ ხაზებზე."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -477,15 +475,12 @@ msgid "Colors"
 msgstr "ფერები"
 
 #: views/widgets/SettingsDialog.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the color scheme of the syntax highlighting. This configuration "
-#| "in not applied for rich text formats."
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
-"მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
+"მოირგეთ სინტაქსის გამოკვეთის სტილი. ეს კონფიგურაცია არ ეხება მდიდარი ტექსტის "
 "ფორმატებს."
 
 #: views/widgets/SettingsDialog.qml:141

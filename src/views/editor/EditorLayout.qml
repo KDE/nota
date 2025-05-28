@@ -29,37 +29,39 @@ Item
 
     Keys.enabled: true
     Keys.onPressed: (event) =>
-    {
-        if(event.key === Qt.Key_F3)
-        {
-            if(control.count === 2)
-            {
-                pop()
-                return
-            }//close the inactive split
+                    {
+                        if(event.key === Qt.Key_F3)
+                        {
+                            if(control.count === 2)
+                            {
+                                pop()
+                                return
+                            }//close the inactive split
 
-            split("")
-            event.accepted = true
-        }
+                            split("")
+                            event.accepted = true
+                        }
 
-        if((event.key === Qt.Key_Space) && (event.modifiers & Qt.ControlModifier))
-        {
-            tabView.findTab()
-            event.accepted = true
-        }
+                        if((event.key === Qt.Key_Space) && (event.modifiers & Qt.ControlModifier))
+                        {
+                            tabView.findTab()
+                            event.accepted = true
+                        }
 
 
-        if(event.key === Qt.Key_F4)
-        {
-            toggleTerminal()
-            event.accepted = true
-        }
-    }
+                        if(event.key === Qt.Key_F4)
+                        {
+                            toggleTerminal()
+                            event.accepted = true
+                        }
+                    }
 
     Maui.SplitView
     {
         anchors.fill: parent
         orientation: Qt.Vertical
+        background: null
+        clip: false
 
         Maui.SplitView
         {
@@ -73,19 +75,36 @@ Item
             onCurrentItemChanged: syncTerminal(control.editor.fileUrl)
 
             Component.onCompleted: split(control.path)
+            background: null
+            clip: false
         }
 
-        Loader
+        Maui.SplitViewItem
         {
-            id: terminalLoader
-            asynchronous: true
-            active: Maui.Handy.isLinux
-            visible: active && control.terminalVisible
             SplitView.fillWidth: true
             SplitView.preferredHeight: 200
             SplitView.maximumHeight: parent.height * 0.5
             SplitView.minimumHeight : 100
-            source: "../Terminal.qml"
+            background: null
+            autoClose: false
+            visible: control.terminalVisible
+            focus: false
+            focusPolicy: Qt.NoFocus
+
+            Loader
+            {
+                id: terminalLoader
+                asynchronous: true
+                active: Maui.Handy.isLinux
+                visible: active && control.terminalVisible
+                anchors.fill: parent
+                source: "../Terminal.qml"
+                onLoaded:
+                {
+                    control.forceActiveFocus()
+                    syncTerminal(control.editor.fileUrl)
+                }
+            }
         }
     }
 
@@ -158,9 +177,8 @@ Item
         const item = _splitView.itemAt(index)
         if( item.editor.document.modified)
         {
-            _dialogLoader.sourceComponent = _unsavedDialogComponent
-            dialog.callback = function () { destroyItem(index) }
-            dialog.open()
+            _closeDialog.callback = function () { destroyItem(index) }
+            _closeDialog.open()
             return
         } else
         {

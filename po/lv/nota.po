@@ -1,46 +1,47 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# Kristóf Kiszel <kiszel.kristof@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-26 00:40+0000\n"
-"PO-Revision-Date: 2021-10-29 14:10+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
-"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
-"Language: hu\n"
+"PO-Revision-Date: 2025-02-05 09:35+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kiszel Kristóf"
+msgstr "Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kiszel.kristof@gmail.com"
+msgstr "toms.trasuns@posteo.net"
 
 #: main.cpp:44
 #, kde-format
 msgid "Browse, create and edit text files."
-msgstr "Szövegfájlok böngészése, létrehozása és szerkesztése."
+msgstr "Pārlūkojiet, rakstiet un rediģējiet teksta datnes."
 
 #: main.cpp:49 main.cpp:50
 #, kde-format
 msgid "Developer"
-msgstr "Fejlesztő"
+msgstr "Izstrādātājs"
 
 #: main.qml:115
 #, kde-format
 msgid "Unsaved files"
-msgstr "Nem mentett fájlok"
+msgstr "Nesaglabātas datnes"
 
 #: main.qml:116
 #, kde-format
@@ -48,168 +49,159 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
-"Nem mentett fájljai vannak. Visszaléphet és mentheti azokt, vagy eldobhatja "
-"az összes változtatást és kiléphet."
+"Jums ir nesaglabātas datnes. Varat atgriezties un tās saglabāt vai "
+"izvēlēties izmest visas izmaiņas un iziet."
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
 msgid "Run"
-msgstr "Futtatás"
+msgstr "Palaist"
 
 #: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
 #, kde-format
 msgid "Run & Debug"
-msgstr "Futtatás és hibakeresés"
+msgstr "Palaist un atkļūdot"
 
 #: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
 #, kde-format
 msgid "Run in Terminal"
-msgstr "Futtatás terminálban"
+msgstr "Palaist terminālī"
 
 #: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
 #, kde-format
 msgid "Mobile"
-msgstr "Mobil"
+msgstr "Mobilais"
 
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr "Új tennivaló… Neee!"
+msgstr "Jauns uzdevums.... ai!"
 
 #: views/editor/Editor.qml:111
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
-msgstr "Megnyitás itt"
+msgstr "Atvērt te"
 
 #: views/editor/Editor.qml:121
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
-msgstr "Megnyitás új lapon"
+msgstr "Atvērt jaunā cilnē"
 
 #: views/editor/Editor.qml:132
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
-msgstr "Megnyitás új osztott nézetben"
+msgstr "Atvērt sadalītā skatā"
 
 #: views/editor/Editor.qml:144
 #, kde-format
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Atcelt"
 
 #: views/editor/EditorView.qml:32
 #, kde-format
 msgid "Open Files"
-msgstr "Fájlok megnyitása"
+msgstr "Atvērt datnes"
 
 #: views/editor/EditorView.qml:45
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Nincsenek legutóbbi fájlok"
+msgstr "Nesenās datnes"
 
 #: views/editor/EditorView.qml:58
-#, fuzzy, kde-format
-#| msgid "New Tab"
+#, kde-format
 msgid "New"
-msgstr "Új lap"
+msgstr "Jauns"
 
 #: views/editor/EditorView.qml:84
-#, fuzzy, kde-format
-#| msgid "Create a new document"
+#, kde-format
 msgid "Create a New Document"
-msgstr "Új dokumentum létrehozása"
+msgstr "Izveidot jaunu dokumentu"
 
 #: views/editor/EditorView.qml:85
 #, kde-format
 msgid "You can create or open a new document."
-msgstr "Létrehozhat vagy megnyithat új dokumentumot."
+msgstr "Varat izveidot vai atvērt jaunu dokumentu."
 
 #: views/editor/EditorView.qml:120
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
-msgstr "Oldalsáv be/ki"
+msgstr "Pārslēgt sānu joslu"
 
 #: views/editor/EditorView.qml:169
 #, kde-format
 msgid "Focus"
-msgstr "Fókusz"
+msgstr "Fokuss"
 
 #: views/editor/EditorView.qml:177 views/widgets/SettingsDialog.qml:172
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
-msgstr "Terminál"
+msgstr "Terminālis"
 
 #: views/editor/EditorView.qml:188
-#, fuzzy, kde-format
-#| msgid "Split"
+#, kde-format
 msgid "Split View"
-msgstr "Felosztás"
+msgstr "Dalīts skats"
 
 #: views/editor/EditorView.qml:209 views/widgets/ShortcutsDialog.qml:10
 #, kde-format
 msgid "Shortcuts"
-msgstr "Gyorsbillentyűk"
+msgstr "Saīsnes"
 
 #: views/editor/EditorView.qml:220
 #, kde-format
 msgid "Settings"
-msgstr "Beállítások"
+msgstr "Iestatījumi"
 
 #: views/editor/EditorView.qml:231 views/widgets/PluginsDialog.qml:10
 #, kde-format
 msgid "Plugins"
-msgstr "Bővítmények"
+msgstr "Spraudņi"
 
 #: views/editor/EditorView.qml:242
 #, kde-format
 msgid "About"
-msgstr "Névjegy"
+msgstr "Par"
 
 #: views/editor/EditorView.qml:291 views/PlacesSidebar.qml:146
 #, kde-format
 msgid "Name"
-msgstr "Név"
+msgstr "Nosaukums"
 
 #: views/editor/EditorView.qml:297 views/PlacesSidebar.qml:119
 #, kde-format
 msgid "Date"
-msgstr "Dátum"
+msgstr "Datums"
 
 #: views/editor/EditorView.qml:303 views/PlacesSidebar.qml:128
 #, kde-format
 msgid "Modified"
-msgstr "Módosítva"
+msgstr "Modificēts"
 
 #: views/editor/EditorView.qml:309 views/PlacesSidebar.qml:137
 #, kde-format
 msgid "Size"
-msgstr "Méret"
+msgstr "Izmērs"
 
 #: views/editor/EditorView.qml:315 views/PlacesSidebar.qml:110
 #, kde-format
 msgid "Type"
-msgstr "Típus"
+msgstr "Tips"
 
 #: views/editor/EditorView.qml:327 views/editor/EditorView.qml:485
 #, kde-format
 msgid "Go to Line"
-msgstr "Ugrás egy sorra"
+msgstr "Iet uz rindu"
 
 #: views/editor/EditorView.qml:329
 #, kde-format
 msgid "Line number"
-msgstr "Sorszám"
+msgstr "Rindas numurs"
 
 #: views/editor/EditorView.qml:341 views/widgets/ItemMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete File?"
-msgstr "Törli ezt a fájlt?"
+msgstr "Vai dzēst datni?"
 
 #. i18n("Accept")
 #. rejectButton.text: i18n("Cancel")
@@ -219,572 +211,374 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
-"Biztosan törli ezt? \n"
+"Vai tiešām vēlaties dēst \n"
 "%1"
 
 #: views/editor/EditorView.qml:368
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Atsaukt"
 
 #: views/editor/EditorView.qml:376
 #, kde-format
 msgid "Redo"
-msgstr "Újra"
+msgstr "Atatsaukt"
 
 #: views/editor/EditorView.qml:384
 #, kde-format
 msgid "Save"
-msgstr "Mentés"
+msgstr "Saglabāt"
 
 #: views/editor/EditorView.qml:393 views/widgets/ItemMenu.qml:68
 #, kde-format
 msgid "Save as"
-msgstr "Mentés másként"
+msgstr "Saglabāt kā"
 
 #: views/editor/EditorView.qml:403
 #, kde-format
 msgid "Find and Replace"
-msgstr "Keresés és csere"
+msgstr "Meklēt un aizstāt"
 
 #: views/editor/EditorView.qml:422
 #, kde-format
 msgid "Line/Word Counter"
-msgstr "Sor/szószámláló"
+msgstr "Rindu/vārdu skaitītājs"
 
 #: views/editor/EditorView.qml:442
 #, kde-format
 msgid "UnFav it"
-msgstr "Nem kedvenc"
+msgstr "Noņemt no iecienītajiem"
 
 #: views/editor/EditorView.qml:457 views/widgets/ItemMenu.qml:99
 #, kde-format
 msgid "Info"
-msgstr "Információ"
+msgstr "Informācija"
 
 #: views/editor/EditorView.qml:470 views/RecentView.qml:135
 #, kde-format
 msgid "Share"
-msgstr "Megosztás"
+msgstr "Kopīgot"
 
 #: views/editor/EditorView.qml:498 views/widgets/ItemMenu.qml:89
-#, fuzzy, kde-format
-#| msgid "Show in folder"
+#, kde-format
 msgid "Show in Folder"
-msgstr "Megjelenítés mappában"
+msgstr "Parādīt mapē"
 
 #: views/editor/EditorView.qml:508
-#, fuzzy, kde-format
-#| msgid "Delete file"
+#, kde-format
 msgid "Delete File"
-msgstr "Fájl törlése"
+msgstr "Dzēst datni"
 
 #: views/PlacesSidebar.qml:61
 #, kde-format
 msgid "Previous"
-msgstr "Előző"
+msgstr "Iepriekšējais"
 
 #: views/PlacesSidebar.qml:68
 #, kde-format
 msgid "Up"
-msgstr "Fel"
+msgstr "Augšup"
 
 #: views/PlacesSidebar.qml:76
 #, kde-format
 msgid "Next"
-msgstr "Következő"
+msgstr "Nākamais"
 
 #: views/PlacesSidebar.qml:100
 #, kde-format
 msgid "Show Folders First"
-msgstr "Mappák előre"
+msgstr "Mapes rādīt augšā"
 
 #: views/PlacesSidebar.qml:158
 #, kde-format
 msgid "Group"
-msgstr "Csoport"
+msgstr "Grupa"
 
 #: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
-msgstr "Nincsenek legutóbbi fájlok"
+msgstr "Nav neseno datņu!"
 
 #: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr "Itt láthatja a legutóbb megnyitott fájljait"
+msgstr "Te varēsiet redzēt nesen atvērtās datnes"
 
 #: views/RecentView.qml:121
 #, kde-format
 msgid "Open"
-msgstr "Megnyitás"
+msgstr "Atvērt"
 
 #: views/RecentView.qml:142
 #, kde-format
 msgid "Export"
-msgstr "Exportálás"
+msgstr "Eksportēt"
 
 #: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
-msgstr "Szűrő…"
+msgstr "Filtrēt..."
 
 #: views/widgets/ItemMenu.qml:53 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
-msgstr "Kijelölés"
+msgstr "Atlasīt"
 
 #: views/widgets/ItemMenu.qml:111
 #, kde-format
 msgid "Copy"
-msgstr "Másolás"
+msgstr "Kopēt"
 
 #: views/widgets/ItemMenu.qml:121
 #, kde-format
 msgid "Remove"
-msgstr "Eltávolítás"
+msgstr "Noņemt"
 
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
-msgstr "Alapértelmezett bővítmények"
+msgstr "Noklusējuma spraudņi"
 
 #: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr "Alapértelmezett bővítmények aktiválása vagy eltávolítása"
+msgstr "Aktivizēt vai noņemt noklusējuma spraudņus"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
-msgstr "QML nézet"
+msgstr "QML aina"
 
 #: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr "Jelenlegi fájl betöltése egy QML nézetben."
+msgstr "Pašreizējo datni ielādē QML ainā."
 
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
 msgid "ToDo"
-msgstr "Tennivaló"
+msgstr "Uzdevumi"
 
 #: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
-msgstr "Tennivalók listája."
+msgstr "Uzskaita uzdevumus."
 
 #: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
 msgid "Builder"
-msgstr "Építő"
+msgstr "Būvētājs"
 
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr "Projekt fordításának és futtatásának beállítása."
+msgstr "Konfigurē projektu būvēšanai un palaišanai."
 
 #: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
-msgstr "HTML előnézet"
+msgstr "HTML priekšskatījums"
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
-msgstr "HTML-kód élő előnézete."
+msgstr "Priekšskata HTML kodu, to rakstot"
 
 #: views/widgets/PluginsDialog.qml:95
 #, kde-format
 msgid "Load Plugins"
-msgstr "Bővítmények betöltése"
+msgstr "Ielādēt spraudņus"
 
 #: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr "Harmadik féltől származó bővítmények aktiválása vagy eltávolítása"
+msgstr "Aktivizēt vai noņemt trešo pušu spraudņus"
 
 #: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
-#, fuzzy, kde-format
-#| msgid "Fonts"
+#, kde-format
 msgid "Font"
-msgstr "Betűkészletek"
+msgstr "Fonts"
 
 #: views/widgets/SettingsDialog.qml:37
 #, kde-format
 msgid "General"
-msgstr "Általános"
+msgstr "Pamata"
 
 #: views/widgets/SettingsDialog.qml:42
 #, kde-format
 msgid "Places Sidebar"
-msgstr "Helyek oldalsáv"
+msgstr "Vietu sānu josla"
 
 #: views/widgets/SettingsDialog.qml:43
-#, fuzzy, kde-format
-#| msgid "Browse your file system from the sidebar"
+#, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "A fájlrendszer böngészése az oldalsávon"
+msgstr "Pārlūkojiet ierīces datņu sistēmu no sānu joslas."
 
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
-msgstr "Automatikus mentés"
+msgstr "Saglabāt automātiski"
 
 #: views/widgets/SettingsDialog.qml:56
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "A fájlok automatikus mentése minden néhány másodpercben"
+msgstr "Ik pēc dažām sekundēm darbu saglabā automātiski."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
 msgid "Editor"
-msgstr "Szerkesztő"
+msgstr "Redaktors"
 
 #: views/widgets/SettingsDialog.qml:74
 #, kde-format
 msgid "Line Numbers"
-msgstr "Sorszámok"
+msgstr "Rindu numuri"
 
 #: views/widgets/SettingsDialog.qml:75
-#, fuzzy, kde-format
-#| msgid "Display the line numbers on the left side"
+#, kde-format
 msgid "Display the line numbers on the left side."
-msgstr "A sorok számának megjelenítése a bal oldalon"
+msgstr "Programmas kreisajā pusē parāda rindu numurus."
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Aplauzt tekstu"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Aplauzt tekstu jaunās rindās"
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting Languages"
-msgstr "A kiemelhető szintaxisú nyelvek"
+msgstr "Valodas sintakses izcelšanai"
 
 #: views/widgets/SettingsDialog.qml:101
-#, fuzzy, kde-format
-#| msgid "Display available languages"
+#, kde-format
 msgid "Display available languages."
-msgstr "Elérhető nyelvek megjelenítése"
+msgstr "Parādīt pieejamās valodas."
 
 #: views/widgets/SettingsDialog.qml:113
 #, kde-format
 msgid "Syntax Highlighting"
-msgstr "Szintaxiskiemelés"
+msgstr "Sintakses izcelšana"
 
 #: views/widgets/SettingsDialog.qml:114
-#, fuzzy, kde-format
-#| msgid "Enable syntax highlighting for supported languages"
+#, kde-format
 msgid "Enable syntax highlighting for supported languages."
-msgstr "Szintaxiskiemelés bekapcsolása a támogatott nyelvekhez"
+msgstr "Ieslēgt sintakses izcelšanu atbalstītām valodām."
 
 #: views/widgets/SettingsDialog.qml:126
-#, fuzzy, kde-format
-#| msgid "Color"
+#, kde-format
 msgid "Colors"
-msgstr "Szín"
+msgstr "Krāsas"
 
 #: views/widgets/SettingsDialog.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats"
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
-"A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
-"RTF-formátumokra"
+"Konfigurēt krāsu shēmu sintakses izcelšanai. Šī konfigurācija nav spēkā "
+"formatētiem tekstiem."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
 msgid "Display"
-msgstr ""
+msgstr "Izskats"
 
 #: views/widgets/SettingsDialog.qml:147
-#, fuzzy, kde-format
-#| msgid "Configure the global font family and size"
+#, kde-format
 msgid "Font family and size."
-msgstr "A globális betűkészletek és betűméretek beállítása"
+msgstr "Fonta saime un izmērs."
 
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
-msgstr "Tabulátorméret"
+msgstr "Tabulatoru atstarpes"
 
 #: views/widgets/SettingsDialog.qml:173
-#, fuzzy, kde-format
-#| msgid "Embedded Terminal"
+#, kde-format
 msgid "Embedded terminal options."
-msgstr "Beágyazott terminál"
+msgstr "Iegultā termināļa opcijas."
 
 #: views/widgets/SettingsDialog.qml:178
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Terminál"
+msgstr "Sinhronizēt termināli"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Sinhronizēt termināli ar datņu pārlūka mapi."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Adaptīva krāsu shēma"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Krāsas balstās uz pašreizējo stilu."
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Krāsu shēma"
 
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Mainīt termināļa krāsu shēmu."
 
 #: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
 msgid "Navigation"
-msgstr "Navigáció"
+msgstr "Navigācija"
 
 #: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
-msgstr "Böngészőnavigáció."
+msgstr "Pārlūka navigācija."
 
 #: views/widgets/ShortcutsDialog.qml:26
 #, kde-format
 msgid "New Tab"
-msgstr "Új lap"
+msgstr "Jauna cilne"
 
 #: views/widgets/ShortcutsDialog.qml:46
 #, kde-format
 msgid "Close Tab"
-msgstr "Lap bezárása"
+msgstr "Aizvērt cilni"
 
 #: views/widgets/ShortcutsDialog.qml:66
 #, kde-format
 msgid "Path Edit"
-msgstr "Elérési út szerkesztése"
+msgstr "Ceļa rediģēšana"
 
 #: views/widgets/ShortcutsDialog.qml:101
 #, kde-format
 msgid "Split"
-msgstr "Felosztás"
+msgstr "Sadalīt"
 
 #: views/widgets/ShortcutsDialog.qml:116
 #, kde-format
 msgid "New File"
-msgstr "Új fájl"
+msgstr "Jauna datne"
 
 #: views/widgets/ShortcutsDialog.qml:136
 #, kde-format
 msgid "Preview"
-msgstr "Előnézet"
+msgstr "Priekšskatījums"
 
 #: views/widgets/ShortcutsDialog.qml:151
 #, kde-format
 msgid "Find Tab"
-msgstr "Lap keresése"
+msgstr "Meklēt cilni"
 
 #: views/widgets/ShortcutsDialog.qml:171
 #, kde-format
 msgid "Select All"
-msgstr "Összes kijelölése"
-
-#~ msgid "Open Recent Files"
-#~ msgstr "Legutóbbi fájlok megnyitása"
-
-#~ msgid "Places"
-#~ msgstr "Helyek"
-
-#~ msgid "Nota"
-#~ msgstr "Nota"
-
-#, fuzzy
-#~| msgid "© 2019-%1 Maui Development Team"
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© A Maui fejlesztői, 2019-%1."
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
-
-#~ msgid "Anupam Basak"
-#~ msgstr "Anupam Basak"
-
-#~ msgid "Dark Mode"
-#~ msgstr "Sötét mód"
-
-#, fuzzy
-#~| msgid ""
-#~| "Configure the style of the syntax highliting. This configuration in not "
-#~| "applied for rich text formats"
-#~ msgid ""
-#~ "Configure the style of the syntax highliting. This configuration in not "
-#~ "applied for rich text formats."
-#~ msgstr ""
-#~ "A szintaxiskiemelés stílusának beállítása. Ez a beállítás nem érvényes az "
-#~ "RTF-formátumokra"
-
-#~ msgid "Color"
-#~ msgstr "Szín"
-
-#, fuzzy
-#~| msgid "Editor background color"
-#~ msgid "Editor background color."
-#~ msgstr "A szerkesző háttérszíne"
-
-#~ msgid "Theme"
-#~ msgstr "Téma"
-
-#, fuzzy
-#~| msgid "Editor color scheme style"
-#~ msgid "Editor color scheme style."
-#~ msgstr "A szerkesztő színsémája"
-
-#~ msgid "Configure the app UI, behaviour and plugins."
-#~ msgstr ""
-#~ "Az alkalmazás felületének, működésének és bővítményeinek beállítása."
-
-#, fuzzy
-#~| msgid ""
-#~| "Configure the look and feel of the editor. The settings are applied "
-#~| "globally"
-#~ msgid ""
-#~ "Configure the look and feel of the editor. The settings are applied "
-#~ "globally."
-#~ msgstr ""
-#~ "A szerkesztő megjelenésének beállítása. Ezek a beállítások globálisak"
-
-#, fuzzy
-#~| msgid "Configure the global font family and size"
-#~ msgid "Configure the font and display options."
-#~ msgstr "A globális betűkészletek és betűméretek beállítása"
-
-#~ msgid "Go back"
-#~ msgstr "Vissza"
-
-#~ msgid "Discard"
-#~ msgstr "Eldobás"
-
-#~ msgid "Accept"
-#~ msgstr "Elfogadás"
-
-#~ msgid "Family"
-#~ msgstr "Család"
-
-#~ msgid "Style"
-#~ msgstr "Stílus"
-
-#~ msgid "New file"
-#~ msgstr "Új fájl"
-
-#~ msgid "Open one or multiple files"
-#~ msgstr "Egy vagy több fájl megnyitása"
-
-#~ msgid "Open recently used files"
-#~ msgstr "Nemrég használt fájlok megnyitása"
-
-#~ msgid "New Text File"
-#~ msgstr "Új szövegfájl"
-
-#~ msgid "Simple text file with syntax highlighting"
-#~ msgstr "Egyszerű szövegfájl szintaxiskiemeléssel"
-
-#, fuzzy
-#~| msgid "Split horizontal"
-#~ msgid "Split Horizontally"
-#~ msgstr "Felosztás vízszintesen"
-
-#, fuzzy
-#~| msgid "Split vertical"
-#~ msgid "Split Vertically"
-#~ msgstr "Felosztás függőlegesen"
-
-#~ msgid "Tags"
-#~ msgstr "Címkék"
-
-#, fuzzy
-#~| msgid "Rich text file"
-#~ msgid "Rich Text File"
-#~ msgstr "RTF-fájl"
-
-#~ msgid "With support for basic text format editing"
-#~ msgstr "Egyszerű szövegformázások támogatása"
-
-#, fuzzy
-#~| msgid "Open here"
-#~ msgid "Open with"
-#~ msgstr "Megnyitás itt"
-
-#~ msgid "Recent"
-#~ msgstr "Legutóbbiak"
-
-#~ msgid "Open with Blank File"
-#~ msgstr "Megnyitás üres fájllal"
-
-#~ msgid "Creates a blank file by default"
-#~ msgstr "Üres fájl létrehozása alapértelmezetten"
-
-#~ msgid "Enabled an embedded terminal"
-#~ msgstr "Bekapcsolja a beágyazott terminált"
-
-#~ msgid "No Documents!"
-#~ msgstr "Nincsenek dokumentumok"
-
-#~ msgid "Add a new source to browse your text files"
-#~ msgstr "Új forrás hozzáadása szövegfájlok böngészéséhez"
-
-#~ msgid "New template"
-#~ msgstr "Új sablon"
-
-#~ msgid "HTML text file"
-#~ msgstr "HTML szövegfájl"
-
-#~ msgid "Text file with HTML markup support"
-#~ msgstr "Szövegfájl HTML-jelölés támogatással"
-
-#~ msgid "Interface"
-#~ msgstr "Felület"
-
-#~ msgid "Configure the application UI"
-#~ msgstr "Az alkalmazás felületének beállítása"
-
-#~ msgid "List"
-#~ msgstr "Lista"
-
-#~ msgid "Grid"
-#~ msgstr "Rács"
-
-#, fuzzy
-#~| msgid ""
-#~| "You can create a new document by clicking the New File button, or here."
-#~| "<br>"
-#~ msgid ""
-#~ "You can create a new document by clicking the New File button, or here."
-#~ "<br>Alternative you can open existing files from the left places sidebar "
-#~ "or by clicking the Open button"
-#~ msgstr ""
-#~ "Új dokumentumot az Új fájl gombra vagy ide kattintva hozhat létre.<br>"
-
-#, fuzzy
-#~| msgid "Replace"
-#~ msgid "Replace All"
-#~ msgstr "Csere"
-
-#~ msgid "Documents"
-#~ msgstr "Dokumentumok"
+msgstr "Atlasīt visu"

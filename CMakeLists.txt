@@ -5,8 +5,8 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(NOTA_VERSION 4.0.1)
-add_compile_definitions(APP_COPYRIGHT_NOTICE="© 2019-2024 Maui Development Team")
+set(NOTA_VERSION 4.0.2)
+add_compile_definitions(APP_COPYRIGHT_NOTICE="© 2019-2025 Maui Development Team")
 
 project(nota VERSION ${NOTA_VERSION})
 

@@ -21,7 +21,6 @@ Maui.ApplicationWindow
 
     readonly property alias currentTab : editorView.currentTab
     readonly property alias currentEditor: editorView.currentEditor
-    readonly property alias dialog : _dialogLoader.item
 
     readonly property font defaultFont : Maui.Style.monospacedFont
     readonly property alias appSettings: settings
@@ -53,34 +52,36 @@ Maui.ApplicationWindow
         property alias sideBarWidth : _sideBarView.sideBar.preferredWidth
         property font font : defaultFont
         property bool syncTerminal: true
-         property bool terminalFollowsColorScheme: true
+        property bool terminalFollowsColorScheme: true
         property string terminalColorScheme: "Maui-Dark"
         property bool wrapText: true
     }
 
-//    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
+    //    onCurrentEditorChanged: syncSidebar(currentEditor.fileUrl)
 
     onClosing: (close) =>
-    {
-        _dialogLoader.sourceComponent = _unsavedDialogComponent
+               {
+                   _closeDialog.callback = function ()
+                   {
+                       _closeDialog.discard = true
+                       root.close()
+                   }
 
-        dialog.callback = function () {root.close()}
+                   if(!_closeDialog.discard)
+                   {
+                       for(var i = 0; i < editorView.count; i++)
+                       {
+                           if(editorView.tabHasUnsavedFiles(i))
+                           {
+                               close.accepted = false
+                               _closeDialog.open()
+                               return
+                           }
+                       }
+                   }
 
-        if(!dialog.discard)
-        {
-            for(var i = 0; i < editorView.count; i++)
-            {
-                if(editorView.tabHasUnsavedFiles(i))
-                {
-                    close.accepted = false
-                    dialog.open()
-                    return
-                }
-            }
-        }
-
-        close.accepted = true
-    }
+                   close.accepted = true
+               }
 
     Nota.History
     {
@@ -94,51 +95,48 @@ Maui.ApplicationWindow
         Widgets.PluginsDialog {}
     }
 
-    Loader
+    Maui.InfoDialog
     {
-        id: _dialogLoader
+        id: _closeDialog
+        property bool discard : false
+        property var callback : ({})
+
+        title: i18n("Unsaved files")
+        message: i18n("You have unsaved files. You can go back and save them or choose to discard all changes and exit.")
+
+        template.iconSource: "dialog-warning"
+        template.iconVisible: true
+
+        standardButtons: Dialog.Ok | Dialog.Discard
+        onDiscarded:
+        {
+            close()
+
+            if(callback instanceof Function)
+            {
+                callback()
+            }
+        }
+        onAccepted: close()
     }
+
 
     Component
     {
-        id: _unsavedDialogComponent
-
-        Maui.InfoDialog
+        id: _settingsDialogComponent
+        Widgets.SettingsDialog
         {
-            property bool discard : false
-            property var callback : ({})
-
-            title: i18n("Unsaved files")
-            message: i18n("You have unsaved files. You can go back and save them or choose to discard all changes and exit.")
-
-            template.iconSource: "dialog-warning"
-            template.iconVisible: true
-
-            standardButtons: Dialog.Ok | Dialog.Discard
-            onDiscarded:
-            {
-                discard = true
-                close()
-
-                if(callback instanceof Function)
-                {
-                    callback()
-                }
-            }
-            onAccepted: close()
+            onClosed: destroy()
         }
     }
 
     Component
     {
-        id: _settingsDialogComponent
-        Widgets.SettingsDialog {}
-    }
-
-    Component
-    {
         id: _shortcutsDialogComponent
-        Widgets.ShortcutsDialog {}
+        Widgets.ShortcutsDialog
+        {
+            onClosed: destroy()
+        }
     }
 
     Component
@@ -149,9 +147,12 @@ Maui.ApplicationWindow
             browser.settings.onlyDirs: false
             browser.settings.filterType: FB.FMList.TEXT
             browser.settings.sortBy: FB.FMList.MODIFIED
+
+            onClosed: destroy()
         }
     }
 
+    property FB.TagsDialog tagsDialog : null
     Component
     {
         id: _tagsDialogComponent
@@ -181,12 +182,18 @@ Maui.ApplicationWindow
             {
                 id : _drawer
                 anchors.fill: parent
+                anchors.margins: Maui.Style.contentMargins
             }
 
             EditorView
             {
                 id: editorView
                 anchors.fill: parent
+            }
+
+            background: Rectangle
+            {
+                color: currentEditor.document.backgroundColor
             }
         }
     }
@@ -208,17 +215,29 @@ Maui.ApplicationWindow
 
     function openFileDialog()
     {
-        _dialogLoader.sourceComponent = _fileDialogComponent
-        dialog.mode = FB.FileDialog.Modes.Open
+        var props = ({'mode' : FB.FileDialog.Modes.Open,
+                         'currentPath' : FB.FM.fileDir(root.currentEditor.fileUrl),
+                         'callback' : (urls) =>
+                                      {
+                             console.log("ASKIGN TO OPEN URLS", urls)
+                             root.openFiles(urls)
+                         }})
 
-        if(root.currentEditor && editorView.currentFileExistsLocally)
-            dialog.currentPath = FB.FM.fileDir(root.currentEditor.fileUrl)
+        var dialog = _fileDialogComponent.createObject(root, props)
+        dialog.open()
+    }
 
-        dialog.callback = (urls) =>
-        {
-            console.log("ASKIGN TO OPEN URLS", urls)
-            root.openFiles(urls)
-        }
+    function copyFilesTo(urls)
+    {
+        var props = ({'browser.settings.onlyDirs' : true,
+                         'mode' : FB.FileDialog.Modes.Save,
+                         'singleSelection' : true,
+                         'suggestedFileName' : FB.FM.getFileInfo(urls[0]).label,
+                         'callback' : function(paths)
+                         {
+                             FB.FM.copy(urls, paths[0])
+                         }})
+        var dialog = _fileDialogComponent.createObject(root, props)
         dialog.open()
     }
 
@@ -252,8 +271,8 @@ Maui.ApplicationWindow
         return editorView.isUrlOpen(url)
     }
 
-        function focusFile(url : string)
-        {
+    function focusFile(url : string)
+    {
         editorView.openTab(url)
     }
-    }
+}
