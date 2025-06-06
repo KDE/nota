@@ -193,7 +193,7 @@ Maui.ApplicationWindow
 
             background: Rectangle
             {
-                color: currentEditor.document.backgroundColor
+                color: currentEditor ? currentEditor.document.backgroundColor : Maui.Theme.backgroundColor
             }
         }
     }
@@ -204,7 +204,7 @@ Maui.ApplicationWindow
 
         RecentView {}
     }
-    
+
     function syncSidebar(path)
     {
         if(path && FB.FM.fileExists(path) && settings.enableSidebar)
