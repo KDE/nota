@@ -1,15 +1,15 @@
 # Spanish translations for nota.po package.
-# Copyright (C) 2020 This file is copyright:
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the nota package.
-#
 # Automatically generated, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2024 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+#
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:42+0000\n"
-"PO-Revision-Date: 2024-12-07 19:34+0100\n"
+"PO-Revision-Date: 2025-06-09 02:19+0100\n"
 "Last-Translator: Víctor Rodrigo Córdoba <vrcordoba@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -76,7 +76,7 @@ msgstr "Móvil"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr "Nueva tarea pendiente... Buff!"
+msgstr "Nueva tarea pendiente… Buff!"
 
 #: views/editor/Editor.qml:112
 #, kde-format
@@ -314,7 +314,7 @@ msgstr "Exportar"
 #: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
-msgstr "Filtro..."
+msgstr "Filtro…"
 
 #: views/widgets/ItemMenu.qml:57 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
