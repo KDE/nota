@@ -338,12 +338,12 @@ msgstr "წავშალო ფაილი?"
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
-msgstr "&ნაგულისხმები დამატებები"
+msgstr "&ნაგულისხმევი დამატებები"
 
 #: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr "ნაგულისხმები დამატებების აქტივაცია ან წაშლა"
+msgstr "ნაგულისხმევი დამატებების აქტივაცია ან წაშლა"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
