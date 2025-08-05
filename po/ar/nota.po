@@ -418,12 +418,12 @@ msgstr "تصفح ملفات نظامك من الشريط الجانبي."
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
 msgid "Auto Save"
-msgstr "حفظ تلقائي"
+msgstr "حفظ آليّ"
 
 #: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "حفظ تلقائي كلّ عدة ثواني."
+msgstr "حفظ آليّ كلّ عدة ثواني."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
