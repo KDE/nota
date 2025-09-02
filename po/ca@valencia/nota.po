@@ -320,7 +320,7 @@ msgstr "Filtre…"
 #: views/widgets/ItemMenu.qml:57 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
-msgstr "Selecciona"
+msgstr "Tria"
 
 #: views/widgets/ItemMenu.qml:102
 #, kde-format
@@ -410,7 +410,7 @@ msgstr "General"
 #: views/widgets/SettingsDialog.qml:42
 #, kde-format
 msgid "Places Sidebar"
-msgstr "Barra lateral de llocs"
+msgstr "Barra lateral Llocs"
 
 #: views/widgets/SettingsDialog.qml:43
 #, kde-format
