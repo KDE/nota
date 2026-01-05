@@ -1,21 +1,22 @@
 # SPDX-FileCopyrightText: 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2021 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2022 Frank Steinmetzger <dev-kde@felsenfleischer.de>
+# SPDX-FileCopyrightText: 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2023-04-15 01:50+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2026-01-01 20:11+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,7 +41,7 @@ msgstr "Entwickler"
 #: main.qml:104
 #, kde-format
 msgid "Unsaved files"
-msgstr "Ungespeicherte Dateien"
+msgstr "Nicht gespeicherte Dateien"
 
 #: main.qml:105
 #, kde-format
@@ -77,20 +78,17 @@ msgid "New ToDo... Argh!"
 msgstr "Neue Aufgabe!"
 
 #: views/editor/Editor.qml:112
-#, fuzzy, kde-format
-#| msgid "Open here"
+#, kde-format
 msgid "Open Here"
 msgstr "Hier öffnen"
 
 #: views/editor/Editor.qml:122
-#, fuzzy, kde-format
-#| msgid "Open in new tab"
+#, kde-format
 msgid "Open in New Tab"
 msgstr "In neuem Unterfenster öffnen"
 
 #: views/editor/Editor.qml:133
-#, fuzzy, kde-format
-#| msgid "Open in new split"
+#, kde-format
 msgid "Open in New Split"
 msgstr "In neuer geteilter Ansicht öffnen"
 
@@ -105,10 +103,9 @@ msgid "Open Files"
 msgstr "Dateien öffnen"
 
 #: views/editor/EditorView.qml:46
-#, fuzzy, kde-format
-#| msgid "No Recent Files!"
+#, kde-format
 msgid "Recent Files"
-msgstr "Keine zuletzt geöffnete Dateien"
+msgstr "Zuletzt geöffnete Dateien"
 
 #: views/editor/EditorView.qml:59
 #, kde-format
@@ -123,11 +120,10 @@ msgstr "Neues Dokument erstellen"
 #: views/editor/EditorView.qml:89
 #, kde-format
 msgid "You can create or open a new document."
-msgstr "Sie können ein neues Dokument erstellen oder öffnen"
+msgstr "Sie können ein neues Dokument erstellen oder öffnen."
 
 #: views/editor/EditorView.qml:124
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle side bar"
 msgstr "Seitenleiste umschalten"
 
@@ -297,7 +293,7 @@ msgstr "Gruppe"
 #: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
-msgstr "Keine zuletzt geöffnete Dateien"
+msgstr "Keine zuletzt geöffneten Dateien"
 
 #: views/RecentView.qml:22
 #, kde-format
@@ -317,12 +313,12 @@ msgstr "Exportieren"
 #: views/widgets/DocsBrowser.qml:67
 #, kde-format
 msgid "Filter..."
-msgstr "Filter ..."
+msgstr "Filter …"
 
 #: views/widgets/ItemMenu.qml:57 views/widgets/ShortcutsDialog.qml:191
 #, kde-format
 msgid "Select"
-msgstr "Auswahl"
+msgstr "Auswählen"
 
 #: views/widgets/ItemMenu.qml:102
 #, kde-format
@@ -387,7 +383,7 @@ msgstr "HTML-Vorschau"
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
-msgstr "Vorschau für HTML-Quelltext"
+msgstr "Live-Vorschau für HTML-Quelltext."
 
 #: views/widgets/PluginsDialog.qml:95
 #, kde-format
@@ -417,7 +413,7 @@ msgstr "Orte-Navigationsbereich"
 #: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr "Durchsuchen Ihres Dateisystems von der Seitenleiste aus."
+msgstr "Durchsuchen Sie Ihr Dateisystem von der Seitenleiste aus."
 
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
@@ -425,10 +421,9 @@ msgid "Auto Save"
 msgstr "Automatisch speichern"
 
 #: views/widgets/SettingsDialog.qml:56
-#, fuzzy, kde-format
-#| msgid "Auto saves your file every few seconds"
+#, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr "Speichert Ihre Datei automatisch alle paar Sekunden"
+msgstr "Speichert Ihre Datei alle paar Sekunden automatisch."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
@@ -448,12 +443,12 @@ msgstr "Zeilennummern an der linken Seite anzeigen."
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
 msgid "Wrap Text"
-msgstr ""
+msgstr "Text umbrechen"
 
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Den Text in neue Zeilen umbrechen."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -481,16 +476,13 @@ msgid "Colors"
 msgstr "Farben"
 
 #: views/widgets/SettingsDialog.qml:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the color scheme of the syntax highlighting. This configuration "
-#| "in not applied for rich text formats."
+#, kde-format
 msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
-"Farbschema der Syntaxhervorhebung einrichten. Diese Einstellungen werden "
-"nicht für Rich-Textformate angewendet."
+"Farbschema der Syntaxhervorhebung einrichten. Diese Einstellungen werden bei "
+"Rich-Text-Formaten nicht angewendet."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
@@ -500,7 +492,7 @@ msgstr "Anzeige"
 #: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
-msgstr "Schriftfamilie und -größe"
+msgstr "Schriftfamilie und -größe."
 
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
@@ -508,41 +500,40 @@ msgid "Tab Space"
 msgstr "Tabulator-Abstand"
 
 #: views/widgets/SettingsDialog.qml:173
-#, fuzzy, kde-format
-#| msgid "Embedded Terminal"
+#, kde-format
 msgid "Embedded terminal options."
-msgstr "Eingebettetes Terminal"
+msgstr "Einstellungen für das eingebettete Terminal."
 
 #: views/widgets/SettingsDialog.qml:178
-#, fuzzy, kde-format
-#| msgid "Terminal"
+#, kde-format
 msgid "Sync Terminal"
-msgstr "Terminal"
+msgstr "Terminal synchronisieren"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
 msgstr ""
+"Das Arbeitsverzeichnis des Terminals mit dem Dateibaum synchronisieren."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
 msgid "Adaptive Color Scheme"
-msgstr ""
+msgstr "Adaptives Farbschema"
 
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Auf dem aktuellen Stil basierende Farben."
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
 msgid "Color Scheme"
-msgstr ""
+msgstr "Farbschema"
 
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Das Farbschema des Terminals ändern."
 
 #: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
