@@ -65,7 +65,7 @@ msgstr "شغل ونقح"
 #: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
 #, kde-format
 msgid "Run in Terminal"
-msgstr "شغّل في الطّرفيّة"
+msgstr "شغّل في الطرفية"
 
 #: plugins/ActionBar.qml:79 plugins/Dicto.qml:103 plugins/QMLLive.qml:103
 #, kde-format
@@ -136,7 +136,7 @@ msgstr "التركيز"
 #: views/widgets/ShortcutsDialog.qml:86
 #, kde-format
 msgid "Terminal"
-msgstr "الطّرفيّة"
+msgstr "الطرفية"
 
 #: views/editor/EditorView.qml:192
 #, kde-format
@@ -507,7 +507,7 @@ msgstr "خيارات الطرفية المضمنة."
 #: views/widgets/SettingsDialog.qml:178
 #, kde-format
 msgid "Sync Terminal"
-msgstr "زامن الطّرفيّة"
+msgstr "زامن الطرفية"
 
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
