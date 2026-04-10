@@ -46,6 +46,8 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
+"Máte neuložené súbory. Môžete sa vrátiť a uložiť ich alebo zahodiť všetky "
+"zmeny a ukončiť."
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -55,7 +57,7 @@ msgstr "Spustiť"
 #: plugins/ActionBar.qml:52 plugins/Dicto.qml:76 plugins/QMLLive.qml:76
 #, kde-format
 msgid "Run & Debug"
-msgstr ""
+msgstr "Spustiť a ladiť"
 
 #: plugins/ActionBar.qml:59 plugins/Dicto.qml:83 plugins/QMLLive.qml:83
 #, kde-format
@@ -70,7 +72,7 @@ msgstr "Mobil"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr ""
+msgstr "Nová úloha... Ach!"
 
 #: views/editor/Editor.qml:112
 #, kde-format
@@ -202,6 +204,8 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+"Naozaj chcete odstrániť \n"
+"%1"
 
 #: views/editor/EditorView.qml:375
 #, kde-format
@@ -231,12 +235,12 @@ msgstr "Nájsť a Nahradiť"
 #: views/editor/EditorView.qml:429
 #, kde-format
 msgid "Line/Word Counter"
-msgstr ""
+msgstr "Počítadlo riadkov/slov"
 
 #: views/editor/EditorView.qml:449
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Odstrániť z obľúbených"
 
 #: views/editor/EditorView.qml:464 views/widgets/ItemMenu.qml:90
 #, kde-format
@@ -291,7 +295,7 @@ msgstr "Žiadne Nedávne Súbory!"
 #: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr ""
+msgstr "Tu uvidíte vaše nedávno otvorené súbory"
 
 #: views/RecentView.qml:121
 #, kde-format
@@ -336,17 +340,17 @@ msgstr "Default Plugins"
 #: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr ""
+msgstr "Aktivovať alebo odstrániť predvolené moduly"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
-msgstr ""
+msgstr "QML scéna"
 
 #: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr ""
+msgstr "Načítať aktuálny súbor v QML scéne."
 
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
@@ -356,7 +360,7 @@ msgstr "Úloha"
 #: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
-msgstr ""
+msgstr "Zoznam úloh na vykonanie."
 
 #: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
@@ -366,17 +370,17 @@ msgstr "Zostavenie"
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr ""
+msgstr "Nastaviť projekt na zostavenie a spustenie."
 
 #: views/widgets/PluginsDialog.qml:88
 #, kde-format
 msgid "HTML Previewer"
-msgstr ""
+msgstr "Prehliadač HTML"
 
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
-msgstr ""
+msgstr "Zobraziť ukážku HTML kódu naživo."
 
 #: views/widgets/PluginsDialog.qml:95
 #, kde-format
@@ -386,7 +390,7 @@ msgstr "Načítať pluginy"
 #: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr ""
+msgstr "Aktivovať alebo odstrániť moduly tretích strán"
 
 #: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
@@ -406,7 +410,7 @@ msgstr "Places Sidebar"
 #: views/widgets/SettingsDialog.qml:43
 #, kde-format
 msgid "Browse your file system from the sidebar."
-msgstr ""
+msgstr "Prechádzajte súborový systém z bočného panela."
 
 #: views/widgets/SettingsDialog.qml:55
 #, kde-format
@@ -416,7 +420,7 @@ msgstr "Automatické ukladanie"
 #: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr ""
+msgstr "Automaticky uloží váš súbor každých niekoľko sekúnd."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
@@ -431,7 +435,7 @@ msgstr "Čísla riadkov"
 #: views/widgets/SettingsDialog.qml:75
 #, kde-format
 msgid "Display the line numbers on the left side."
-msgstr ""
+msgstr "Zobraziť čísla riadkov na ľavej strane."
 
 #: views/widgets/SettingsDialog.qml:87
 #, kde-format
@@ -441,7 +445,7 @@ msgstr "Zalomiť text"
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Zalomiť text na nové riadky."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
@@ -474,6 +478,8 @@ msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
+"Nastaviť farebnú schému zvýrazňovania syntaxe. Táto konfigurácia sa "
+"nepoužíva pri úprave formátovaného textu."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
@@ -483,7 +489,7 @@ msgstr "Obrazovka"
 #: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
-msgstr ""
+msgstr "Rodina písma a veľkosť."
 
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
@@ -493,7 +499,7 @@ msgstr "Tab Space"
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
 msgid "Embedded terminal options."
-msgstr ""
+msgstr "Možnosti vstavaného terminálu."
 
 #: views/widgets/SettingsDialog.qml:178
 #, kde-format
@@ -503,7 +509,7 @@ msgstr "Terminál"
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Synchronizovať terminál s aktuálnym pracovným adresárom prehliadača."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
@@ -513,7 +519,7 @@ msgstr "Adaptive Color Scheme"
 #: views/widgets/SettingsDialog.qml:192
 #, kde-format
 msgid "Colors based on the current style."
-msgstr ""
+msgstr "Farby založené na aktuálnom štýle."
 
 #: views/widgets/SettingsDialog.qml:203
 #, kde-format
@@ -523,7 +529,7 @@ msgstr "Farebná schéma"
 #: views/widgets/SettingsDialog.qml:204
 #, kde-format
 msgid "Change the color scheme of the terminal."
-msgstr ""
+msgstr "Zmeniť farebnú schému terminálu."
 
 #: views/widgets/ShortcutsDialog.qml:21
 #, kde-format
@@ -533,7 +539,7 @@ msgstr "Navigácia"
 #: views/widgets/ShortcutsDialog.qml:22
 #, kde-format
 msgid "Browser navigation."
-msgstr ""
+msgstr "Navigácia prehliadača."
 
 #: views/widgets/ShortcutsDialog.qml:26
 #, kde-format
