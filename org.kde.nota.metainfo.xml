@@ -37,6 +37,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="sl">Nota</name>
   <name xml:lang="sv">Nota</name>
   <name xml:lang="tr">Nota</name>
+  <name xml:lang="ug">Nota</name>
   <name xml:lang="uk">Нота</name>
   <name xml:lang="zh-CN">Nota</name>
   <name xml:lang="zh-TW">Nota</name>
@@ -69,6 +70,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="sl">Brskajte, ustvarjajte in urejajte besedilne datoteke</summary>
   <summary xml:lang="sv">Bläddra bland, skapa och redigera textfiler</summary>
   <summary xml:lang="tr">Metin dosyaları oluşturun, onlara göz atın ve düzenleyin</summary>
+  <summary xml:lang="ug">تېكىست ھۆججىتىنى كۆرسىتىپ، قۇرۇپ ۋە تەھرىرلەيدۇ</summary>
   <summary xml:lang="uk">Перегляд, створення та редагування текстових файлів</summary>
   <summary xml:lang="zh-CN">浏览、创建和编辑文本文件</summary>
   <summary xml:lang="zh-TW">瀏覽、建立並編輯文字檔案</summary>
