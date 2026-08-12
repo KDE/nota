@@ -207,7 +207,7 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
-"هل تريد فعلاً حذف\n"
+"هل تريد فعلًا حذف\n"
 "%1"
 
 #: views/editor/EditorView.qml:375
@@ -298,7 +298,7 @@ msgstr "لا يوجد ملفات حديثة!"
 #: views/RecentView.qml:22
 #, kde-format
 msgid "Here you will see your recently opened files"
-msgstr "هنا يمكنك رؤية ملفاتك المفتوحة حديثاً"
+msgstr "هنا يمكنك رؤية ملفاتك المفتوحة حديثًا"
 
 #: views/RecentView.qml:121
 #, kde-format
