@@ -1,31 +1,32 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2024-11-14 14:10+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-08-23 22:53+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák"
+msgstr "Vít Pelčák,Libor Filípek"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org"
+msgstr "vit@pelcak.org,libor.filipek@gmail.com"
 
 #: main.cpp:44
 #, kde-format
@@ -48,6 +49,8 @@ msgid ""
 "You have unsaved files. You can go back and save them or choose to discard "
 "all changes and exit."
 msgstr ""
+"Máte neuložené soubory. Můžete se vrátit a soubory uložit, nebo se "
+"rozhodnout všechny změny zahodit a ukončit program."
 
 #: plugins/ActionBar.qml:39 plugins/Dicto.qml:55 plugins/QMLLive.qml:55
 #, kde-format
@@ -72,7 +75,7 @@ msgstr "Mobilní"
 #: plugins/ToDos.qml:39
 #, kde-format
 msgid "New ToDo... Argh!"
-msgstr ""
+msgstr "Nový úkol... Ach jo!"
 
 #: views/editor/Editor.qml:112
 #, kde-format
@@ -87,7 +90,7 @@ msgstr "Otevřít v nové kartě"
 #: views/editor/Editor.qml:133
 #, kde-format
 msgid "Open in New Split"
-msgstr ""
+msgstr "Otevřít v novém rozdělení"
 
 #: views/editor/Editor.qml:145
 #, kde-format
@@ -117,7 +120,7 @@ msgstr "Vytvořit nový dokument"
 #: views/editor/EditorView.qml:89
 #, kde-format
 msgid "You can create or open a new document."
-msgstr ""
+msgstr "Můžete vytvořit nebo otevřít nový dokument."
 
 #: views/editor/EditorView.qml:124
 #, kde-format
@@ -206,7 +209,7 @@ msgid ""
 "%1"
 msgstr ""
 "Opravdu si přejete smazat \n"
-"%1?"
+"%1"
 
 #: views/editor/EditorView.qml:375
 #, kde-format
@@ -241,7 +244,7 @@ msgstr "Čítač řádků/slov"
 #: views/editor/EditorView.qml:449
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Z oblíbených"
 
 #: views/editor/EditorView.qml:464 views/widgets/ItemMenu.qml:90
 #, kde-format
@@ -291,7 +294,7 @@ msgstr "Skupina"
 #: views/RecentView.qml:21
 #, kde-format
 msgid "No Recent Files!"
-msgstr "Žádné nedávné soubory."
+msgstr "Žádné nedávné soubory!"
 
 #: views/RecentView.qml:22
 #, kde-format
@@ -336,22 +339,22 @@ msgstr "Smazat soubor?"
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
-msgstr ""
+msgstr "Výchozí moduly"
 
 #: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr ""
+msgstr "Aktivovat nebo odebrat výchozí moduly"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
 msgid "QML Scene"
-msgstr ""
+msgstr "Scéna QML"
 
 #: views/widgets/PluginsDialog.qml:24
 #, kde-format
 msgid "Load the current file in a QML scene."
-msgstr ""
+msgstr "Načíst aktuální soubor do scény QML."
 
 #: views/widgets/PluginsDialog.qml:53
 #, kde-format
@@ -361,17 +364,17 @@ msgstr "Úlohy"
 #: views/widgets/PluginsDialog.qml:54
 #, kde-format
 msgid "List of to-do tasks."
-msgstr ""
+msgstr "Seznam úkolů k vyřízení."
 
 #: views/widgets/PluginsDialog.qml:82 views/widgets/PluginsDialog.qml:104
 #, kde-format
 msgid "Builder"
-msgstr ""
+msgstr "Překladač"
 
 #: views/widgets/PluginsDialog.qml:83 views/widgets/PluginsDialog.qml:105
 #, kde-format
 msgid "Configure a project to build and run."
-msgstr ""
+msgstr "Nastavte projekt tak, aby se dal zkompilovat a spustit."
 
 #: views/widgets/PluginsDialog.qml:88
 #, kde-format
@@ -381,7 +384,7 @@ msgstr "Náhled HTML"
 #: views/widgets/PluginsDialog.qml:89
 #, kde-format
 msgid "Preview HTML code live."
-msgstr ""
+msgstr "Náhled HTML kódu v reálném čase."
 
 #: views/widgets/PluginsDialog.qml:95
 #, kde-format
@@ -391,7 +394,7 @@ msgstr "Načíst přídavné moduly"
 #: views/widgets/PluginsDialog.qml:96
 #, kde-format
 msgid "Activate or remove the third party plugins"
-msgstr ""
+msgstr "Aktivujte nebo odstraňte moduly třetích stran"
 
 #: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
@@ -421,7 +424,7 @@ msgstr "Automatické ukládání"
 #: views/widgets/SettingsDialog.qml:56
 #, kde-format
 msgid "Auto saves your file every few seconds."
-msgstr ""
+msgstr "Soubor se automaticky ukládá každých několik sekund."
 
 #: views/widgets/SettingsDialog.qml:69
 #, kde-format
@@ -446,12 +449,12 @@ msgstr "Zalomit text"
 #: views/widgets/SettingsDialog.qml:88
 #, kde-format
 msgid "Wrap the text into new lines."
-msgstr ""
+msgstr "Zalamujte text na nové řádky."
 
 #: views/widgets/SettingsDialog.qml:100
 #, kde-format
 msgid "Syntax Highlighting Languages"
-msgstr ""
+msgstr "Jazyky pro zvýrazňování syntaxe"
 
 #: views/widgets/SettingsDialog.qml:101
 #, kde-format
@@ -479,6 +482,8 @@ msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
+"Nastavte barevné schéma zvýraznění syntaxe. Toto nastavení se neuplatňuje u "
+"formátů formátovaného textu."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
@@ -493,7 +498,7 @@ msgstr "Rodina písma a velikost."
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
 msgid "Tab Space"
-msgstr ""
+msgstr "Mezerník"
 
 #: views/widgets/SettingsDialog.qml:173
 #, kde-format
@@ -508,7 +513,7 @@ msgstr "Synchronizovat Terminál"
 #: views/widgets/SettingsDialog.qml:179
 #, kde-format
 msgid "Sync the terminal to the browser current working directory."
-msgstr ""
+msgstr "Synchronizujte terminál s aktuálním pracovním adresářem prohlížeče."
 
 #: views/widgets/SettingsDialog.qml:191
 #, kde-format
