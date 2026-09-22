@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the nota package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2026 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2024-12-27 12:31+0100\n"
+"PO-Revision-Date: 2026-09-21 12:11+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -480,8 +480,8 @@ msgid ""
 "Configure the color scheme of the syntax highlighting. This configuration is "
 "not applied for rich text formats."
 msgstr ""
-"Configura le schema de color delevidentiare de syntaxe. Le configiuration "
-"non es applicate per formator de texto ric (rich text format)."
+"Configura le schema de color del evidentiar de syntaxe. Le configuration non "
+"es applicate per formatos de texto ric (rich text format)."
 
 #: views/widgets/SettingsDialog.qml:141
 #, kde-format
