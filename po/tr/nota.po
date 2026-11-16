@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2026-11-10 21:39+0300\n"
+"PO-Revision-Date: 2026-11-15 20:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -397,7 +397,7 @@ msgstr "Üçüncü parti eklentileri etkinleştire veya kaldır"
 #: views/widgets/SettingsDialog.qml:18 views/widgets/SettingsDialog.qml:146
 #, kde-format
 msgid "Font"
-msgstr "Yazıtipi"
+msgstr "Yazı Tipi"
 
 #: views/widgets/SettingsDialog.qml:37
 #, kde-format
@@ -491,7 +491,7 @@ msgstr "Ekran"
 #: views/widgets/SettingsDialog.qml:147
 #, kde-format
 msgid "Font family and size."
-msgstr "Yazıtipi ailesi ve boyutu."
+msgstr "Yazı tipi ailesi ve boyutu."
 
 #: views/widgets/SettingsDialog.qml:159
 #, kde-format
