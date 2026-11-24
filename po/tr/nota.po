@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: nota\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2026-11-16 19:30+0300\n"
+"PO-Revision-Date: 2026-11-23 17:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -337,12 +337,12 @@ msgstr "Dosyayı Sil?"
 #: views/widgets/PluginsDialog.qml:14
 #, kde-format
 msgid "Default Plugins"
-msgstr "Öntanımlı Eklentiler"
+msgstr "Varsayılan Eklentiler"
 
 #: views/widgets/PluginsDialog.qml:15
 #, kde-format
 msgid "Activate or remove the default plugins"
-msgstr "Öntanımlı eklentileri etkinleştirin veya kaldırın"
+msgstr "Varsayılan eklentileri etkinleştirin veya kaldırın"
 
 #: views/widgets/PluginsDialog.qml:23
 #, kde-format
